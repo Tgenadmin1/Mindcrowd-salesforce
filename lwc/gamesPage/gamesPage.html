@@ -1,0 +1,348 @@
+<!--
+  @author            : Anjali Bhatt
+  @UI author         : Raj
+  @last modified on  : 24-05-2021
+  @apex controller   : CustomLoginController
+  @description       : This is the Games Page for the Research Community Login User.
+ -->
+<template>
+  <!-- <h1 class="text-center marginT30" ><p class="title">{label.games_text_1}</p></h1> -->
+  <div class="l-title text-center text-normal">{games_text_1}</div>
+  
+  <p>{games_text_2}   </p>
+  <p><span class="opened icon-in-text game-tiles remove-border"><lightning-icon icon-name="utility:unlock" class="game-tiles-lock-icon"  alternative-text="check"></lightning-icon>&nbsp; </span>  =   {games_text_2_1} </p>
+  <p><span class="completed icon-in-text game-tiles remove-border"><lightning-icon icon-name="utility:check" class="game-tiles-lock-icon"  alternative-text="check"></lightning-icon>&nbsp; </span>  =   {games_text_2_4} </p>
+  <p><span class="locked icon-in-text  game-tiles remove-border"><lightning-icon icon-name="utility:lock" class="game-tiles-lock-icon"  alternative-text="check"></lightning-icon>&nbsp;</span>  =  {games_text_2_2}</p>
+
+  <lightning-formatted-rich-text value={games_text_2_3}></lightning-formatted-rich-text>
+  <!-- <lightning-formatted-rich-text value={label.games_text_2a}></lightning-formatted-rich-text>   -->
+
+
+
+  <lightning-card class="game-tiles-box ">
+    <lightning-layout multiple-rows class="mt35">
+       <div class="slds-backdrop-game-tiles" if:true={restrictGame}>
+        <div class="j-center text-center game-blocked slds-text-heading_medium slds-hyphenate">
+        <lightning-formatted-rich-text value={game_block_error} ></lightning-formatted-rich-text>  
+        </div>  
+    </div>
+    <template for:each={gameItems} for:item="game">
+        <lightning-layout-item  key={game.id}  size="12"  small-device-size="12" medium-device-size="12" large-device-size="4"
+          padding="around-small">
+          <a class={game.classname} onclick={gameClick} href="#">
+            <div class="status">
+              <template if:true={game.open}>
+                <lightning-icon icon-name="utility:unlock" class="game-tiles-lock-icon" alternative-text="check"></lightning-icon>
+              </template>
+              <template if:true={game.complete}>
+                <lightning-icon icon-name="action:check" alternative-text="check"></lightning-icon>
+              </template>
+              <template if:true={game.lock}>
+                <lightning-icon icon-name="utility:lock" class="game-tiles-lock-icon" alternative-text="check"></lightning-icon>
+              </template>
+              <div class="btn__game-time-center">{game.gametime}</div>
+            </div>
+            <div class="title"><span>{game.gamename}</span></div>
+          </a>
+        </lightning-layout-item>
+    </template>
+      <!--lightning-layout-item size="12" small-device-size="12" medium-device-size="12" large-device-size="4"
+        padding="around-small">
+        <a class="game4 locked game-tiles" onclick={flankergameClick} href="#">
+          <div class="status">
+            <template if:true={openGame4}>
+              <lightning-icon icon-name="utility:unlock" class="game-tiles-lock-icon"  alternative-text="check"></lightning-icon>
+          </template>
+          <template if:true={completeGame4}>
+            <lightning-icon icon-name="action:check" alternative-text="check"></lightning-icon>
+          </template>
+          <template if:true={lockGame4}>
+              <lightning-icon icon-name="utility:lock" class="game-tiles-lock-icon" alternative-text="check"></lightning-icon>
+          </template>
+            <div class="btn__game-time-center">{game_three_min}</div>
+          </div>
+        <div class="title"><span>{game_name_4}</span></div>
+        </a>
+      </lightning-layout-item>
+      <lightning-layout-item size="12" small-device-size="12" medium-device-size="12" large-device-size="4"
+        padding="around-small">
+        <a class="game8 locked game-tiles" onclick={objectsClick} href="#">
+        <div class="status">
+          <template if:true={openGame8}>
+            <lightning-icon icon-name="utility:unlock" class="game-tiles-lock-icon"  alternative-text="check"></lightning-icon>
+        </template>
+        <template if:true={completeGame8}>
+          <lightning-icon icon-name="action:check" alternative-text="check"></lightning-icon>
+        </template>
+        <template if:true={lockGame8}>
+            <lightning-icon icon-name="utility:lock" class="game-tiles-lock-icon" alternative-text="check"></lightning-icon>
+        </template>
+          <div class="btn__game-time-center">{game_five_min} </div>
+        </div>
+
+        <div class="title"><span>{game_name_8}</span></div>
+        </a>
+      </lightning-layout-item>
+      <lightning-layout-item size="12" small-device-size="12" medium-device-size="12" large-device-size="4"
+        padding="around-small">
+        <a class="game9 locked game-tiles" onclick={objects_timeClick} href="#">
+        <div class="status">
+          <template if:true={openGame9}>
+            <lightning-icon icon-name="utility:unlock" class="game-tiles-lock-icon"  alternative-text="check"></lightning-icon>
+        </template>
+        <template if:true={completeGame9}>
+            <lightning-icon icon-name="action:check" alternative-text="check"></lightning-icon>
+        </template>
+        <template if:true={lockGame9}>
+            <lightning-icon icon-name="utility:lock" class="game-tiles-lock-icon" alternative-text="check"></lightning-icon>
+        </template>
+          <div class="btn__game-time-center">{game_ten_min}</div>
+        </div>
+
+        <div class="title"><span>{game_name_9}</span></div>
+        </a>
+      </lightning-layout-item>
+      <lightning-layout-item size="12" small-device-size="12" medium-device-size="12" large-device-size="4"
+        padding="around-small">
+        <a class="game10 locked game-tiles" onclick={objects_spaceClick} href="#">
+        <div class="status">
+          <template if:true={openGame10}>
+            <lightning-icon icon-name="utility:unlock" class="game-tiles-lock-icon"  alternative-text="check"></lightning-icon>
+        </template>
+        <template if:true={completeGame10}>
+            <lightning-icon icon-name="action:check" alternative-text="check"></lightning-icon>
+        </template>
+        <template if:true={lockGame10}>
+            <lightning-icon icon-name="utility:lock" class="game-tiles-lock-icon" alternative-text="check"></lightning-icon>
+        </template>
+          <div class="btn__game-time-center">{game_five_min} </div>
+        </div>
+
+        <div class="title"><span>{game_name_10}</span></div>
+        </a>
+      </lightning-layout-item>
+      <lightning-layout-item size="12" small-device-size="12" medium-device-size="12" large-device-size="4"
+        padding="around-small" >
+        <a class="game1 opened game-tiles" onclick={wordpairsgameClick} href="#" title="">
+          <div class="status">
+            <template if:true={openGame1}>
+              <lightning-icon icon-name="utility:unlock" class="game-tiles-lock-icon"  alternative-text="check"></lightning-icon>
+          </template>
+          <template if:true={completeGame1}>
+              <lightning-icon icon-name="action:check" alternative-text="check"></lightning-icon>
+          </template>
+          <template if:true={lockGame1}>
+              <lightning-icon icon-name="utility:lock" class="game-tiles-lock-icon" alternative-text="check"></lightning-icon>
+          </template>
+            <div class="btn__game-time-center">{game_five_min}</div>
+          </div>
+          <div class="title"><span>{game_name_1}</span></div>
+        </a>
+      </lightning-layout-item>
+      <lightning-layout-item size="12" small-device-size="12" medium-device-size="12" large-device-size="4"
+        padding="around-small">
+        <a class="game2 opened game-tiles" onclick={reactgameClick}  href="#">
+          <div class="status">
+            <template if:true={openGame2}>
+              <lightning-icon icon-name="utility:unlock" class="game-tiles-lock-icon"  alternative-text="check"></lightning-icon>
+          </template>
+          <template if:true={completeGame2}>
+              <lightning-icon icon-name="action:check" alternative-text="check"></lightning-icon>
+          </template>
+          <template if:true={lockGame2}>
+              <lightning-icon icon-name="utility:lock" class="game-tiles-lock-icon" alternative-text="check"></lightning-icon>
+          </template>
+            <div class="btn__game-time-center">{game_five_min} </div>
+          </div>
+          <div class="title"><span>{game_name_2}</span></div>
+        </a>
+      </lightning-layout-item>
+      <lightning-layout-item size="12" small-device-size="12" medium-device-size="12" large-device-size="4"
+      padding="around-small">
+      <a class="game5 locked game-tiles" onclick={namesandfacesgameClick} href="#">
+      <div class="status">
+        <template if:true={openGame5}>
+          <lightning-icon icon-name="utility:unlock" class="game-tiles-lock-icon"  alternative-text="check"></lightning-icon>
+        </template>
+        <template if:true={completeGame5}>
+          <lightning-icon icon-name="action:check" alternative-text="check"></lightning-icon>
+        </template>
+        <template if:true={lockGame5}>
+          <lightning-icon icon-name="utility:lock" class="game-tiles-lock-icon" alternative-text="check"></lightning-icon>
+        </template>
+        <div class="btn__game-time-center">{game_twentyFive} </div>
+      </div>
+
+      <div class="title"><lightning-formatted-rich-text value={game_name_5}></lightning-formatted-rich-text></div>
+      </a>
+      </lightning-layout-item>
+      <lightning-layout-item size="12" small-device-size="12" medium-device-size="12" large-device-size="4"
+        padding="around-small">
+        <a class="game6 locked game-tiles" onclick={switchinggameClick} href="#">
+          <div class="status">
+            <template if:true={openGame6}>
+              <lightning-icon icon-name="utility:unlock" class="game-tiles-lock-icon"  alternative-text="check"></lightning-icon>
+            </template>
+            <template if:true={completeGame6}>
+              <lightning-icon icon-name="action:check" alternative-text="check"></lightning-icon>
+            </template>
+            <template if:true={lockGame6}>
+              <lightning-icon icon-name="utility:lock" class="game-tiles-lock-icon" alternative-text="check"></lightning-icon>
+            </template>
+            <div class="btn__game-time-center">{game_fifteen_min}</div>
+          </div>
+          <div class="title"><span>{game_name_6}</span></div>
+        </a>
+      </lightning-layout-item>
+
+      <lightning-layout-item size="12" small-device-size="12" medium-device-size="12" large-device-size="4"
+        padding="around-small">
+        <a class="game7 locked game-tiles" onclick={keeptrackgameClick}  href="#">
+          <div class="status">
+            <template if:true={openGame7}>
+              <lightning-icon icon-name="utility:unlock" class="game-tiles-lock-icon"  alternative-text="check"></lightning-icon>
+            </template>
+            <template if:true={completeGame7}>
+              <lightning-icon icon-name="action:check" alternative-text="check"></lightning-icon>
+            </template>
+            <template if:true={lockGame7}>
+              <lightning-icon icon-name="utility:lock" class="game-tiles-lock-icon" alternative-text="check"></lightning-icon>
+            </template>
+            <div class="btn__game-time-center">{game_fifteen_min}</div>
+          </div>
+
+          <div class="title"><span>{game_name_7}</span></div>
+        </a>
+      </lightning-layout-item>
+      <lightning-layout-item size="12" small-device-size="12" medium-device-size="12" large-device-size="4"
+        padding="around-small">
+        <a class="game3 locked game-tiles" onclick={shapesgameClick} href="#">
+          <div class="status">
+            <template if:true={openGame3}>
+              <lightning-icon icon-name="utility:unlock" class="game-tiles-lock-icon"  alternative-text="check"></lightning-icon>
+            </template>
+            <template if:true={completeGame3}>
+              <lightning-icon icon-name="action:check" alternative-text="check"></lightning-icon>
+            </template>
+            <template if:true={lockGame3}>
+              <lightning-icon icon-name="utility:lock" class="game-tiles-lock-icon" alternative-text="check"></lightning-icon>
+            </template>
+            <div class="btn__game-time-center">{game_fifteen_min} </div>
+          </div>
+          <div class="title"><span>{game_name_3}</span></div>
+        </a>
+      </lightning-layout-item>
+      
+      <lightning-layout-item size="12" small-device-size="12" medium-device-size="12" large-device-size="4"
+      padding="around-small">
+      <a class="game14 locked game-tiles" onclick={FakenewstestClick} href="#">
+        <div class="status">
+          <template if:true={openGame14}>
+            <lightning-icon icon-name="utility:unlock" class="game-tiles-lock-icon"  alternative-text="check"></lightning-icon>
+          </template>
+          <template if:true={completeGame14}>
+            <lightning-icon icon-name="action:check" alternative-text="check"></lightning-icon>
+          </template>
+          <template if:true={lockGame14}>
+            <lightning-icon icon-name="utility:lock" class="game-tiles-lock-icon" alternative-text="check"></lightning-icon>
+          </template>
+          <div class="btn__game-time-center">{game_fifteen_min} </div>
+        </div>
+        <div class="title"><span>{game_name_14}</span></div>
+      </a>
+    </lightning-layout-item>
+    
+    <lightning-layout-item size="12" small-device-size="12" medium-device-size="12" large-device-size="4"
+      padding="around-small">
+      <a class="game15 locked game-tiles" onclick={speechTaskClick} href="#">
+        <div class="status">
+          <template if:true={openGame15}>
+            <lightning-icon icon-name="utility:unlock" class="game-tiles-lock-icon"  alternative-text="check"></lightning-icon>
+          </template>
+          <template if:true={completeGame15}>
+            <lightning-icon icon-name="action:check" alternative-text="check"></lightning-icon>
+          </template>
+          <template if:true={lockGame15}>
+            <lightning-icon icon-name="utility:lock" class="game-tiles-lock-icon" alternative-text="check"></lightning-icon>
+          </template>
+          <div class="btn__game-time-center">{game_fifteen_min} </div>
+        </div>
+        <div class="title"><span>{game_name_15}</span></div>
+      </a>
+    </lightning-layout-item>
+
+      <lightning-layout-item size="12" small-device-size="12" medium-device-size="12" large-device-size="4"
+        padding="around-small">
+        <a class = "game11 opened game-tiles" onclick={BeangameClick} href="#">
+          <div class="status">
+            <template if:true={openGame11}>
+              <lightning-icon icon-name="utility:unlock" class="game-tiles-lock-icon"  alternative-text="check"></lightning-icon>
+            </template>
+            <template if:true={completeGame11}>
+              <lightning-icon icon-name="action:check" alternative-text="check"></lightning-icon>
+            </template>
+            <template if:true={lockGame11}>
+              <lightning-icon icon-name="utility:lock" class="game-tiles-lock-icon" alternative-text="check"></lightning-icon>
+            </template>
+             <div class="btn__game-time-center">{game_Remote} </div>
+          </div>
+          <div class="title"><span>{game_name_11}</span></div>
+          </a>
+      </lightning-layout-item>
+
+      <template if:false={hideGame12}>
+      <lightning-layout-item size="12"  small-device-size="12" medium-device-size="12" large-device-size="4"
+        padding="around-small">
+        <a class="game12 opened game-tiles" onclick={DBSgameClick} href="#">
+          <div class="status">
+            <template if:true={openGame12}>
+              <lightning-icon icon-name="utility:unlock" class="game-tiles-lock-icon"  alternative-text="check"></lightning-icon>
+            </template>
+            <template if:true={completeGame12}>
+              <lightning-icon icon-name="action:check" alternative-text="check"></lightning-icon>
+            </template>
+            <template if:true={lockGame12}>
+              <lightning-icon icon-name="utility:lock" class="game-tiles-lock-icon" alternative-text="check"></lightning-icon>
+            </template>
+            <div class="btn__game-time-center">{game_Remote} </div>
+          </div>
+          <div class="title"><span>{game_name_12}</span></div>
+        </a>
+      </lightning-layout-item>
+    </template>
+    <template if:false={hideGame13}>
+      <lightning-layout-item size="12" small-device-size="12" medium-device-size="12" large-device-size="4"
+        padding="around-small">
+        <a class="game13 opened game-tiles" onclick={APOEgameClick} href="#">
+          <div class="status">
+            <template if:true={openGame13}>
+              <lightning-icon icon-name="utility:unlock" class="game-tiles-lock-icon"  alternative-text="check"></lightning-icon>
+            </template>
+            <template if:true={completeGame13}>
+              <lightning-icon icon-name="action:check" alternative-text="check"></lightning-icon>
+            </template>
+            <template if:true={lockGame13}>
+              <lightning-icon icon-name="utility:lock" class="game-tiles-lock-icon" alternative-text="check"></lightning-icon>
+            </template>
+            <div class="btn__game-time-center">{game_Remote} </div>
+          </div>
+          <div class="title"><span>{game_name_13}</span></div>
+        </a>
+      </lightning-layout-item>
+    </template-->
+    <template if:false={hideGame16}>
+      <lightning-layout-item size="12" small-device-size="12" medium-device-size="12" large-device-size="4"
+        padding="around-small">
+        <div class="game-tiles locked game16">
+          <div class="status">
+            <lightning-icon icon-name="utility:lock" class="game-tiles-lock-icon" alternative-text="check">
+            </lightning-icon>
+            <div class="btn__game-time-center"></div>
+            </div>
+            <div class="title"><span>{game_name_c}</span></div>
+        </div>
+      </lightning-layout-item>    
+    </template>
+    </lightning-layout>
+  </lightning-card>
+</template>

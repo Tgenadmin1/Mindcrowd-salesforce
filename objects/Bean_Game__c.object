@@ -1,0 +1,676 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>true</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <enableActivities>true</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableLicensing>false</enableLicensing>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <externalSharingModel>Private</externalSharingModel>
+    <fields>
+        <fullName>Bean_Game_Created_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Bean Game Created Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>Contact__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Contact</label>
+        <referenceTo>Contact</referenceTo>
+        <relationshipLabel>Bean Games</relationshipLabel>
+        <relationshipName>Bean_Games</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>DryRunTime__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Be sure to record as minutes:seconds up to two decimal places. For example, 1 minute and 45.03 seconds would be entered as 1:45.03. If your score was less than a minute, please enter your score starting with 0: (e.g., 0:52.31)</inlineHelpText>
+        <label>DryRunTime</label>
+        <length>56</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LeftHand_1_ExerciseDrops__c</fullName>
+        <externalId>false</externalId>
+        <label>LeftHand_1_ExerciseDrops</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LeftHand_1_ExerciseGoing__c</fullName>
+        <externalId>false</externalId>
+        <label>LeftHand_1_ExerciseGoing</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Yes, I forgot</fullName>
+                    <default>false</default>
+                    <label>Yes, I forgot</label>
+                </value>
+                <value>
+                    <fullName>No, I remembered the whole sequence</fullName>
+                    <default>false</default>
+                    <label>No, I remembered the whole sequence</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>LeftHand_1_ExerciseTime__c</fullName>
+        <externalId>false</externalId>
+        <label>LeftHand_1_ExerciseTime</label>
+        <length>56</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LeftHand_2_ExerciseDrops__c</fullName>
+        <externalId>false</externalId>
+        <label>LeftHand_2_ExerciseDrops</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LeftHand_2_ExerciseGoing__c</fullName>
+        <externalId>false</externalId>
+        <label>LeftHand_2_ExerciseGoing</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Yes, I forgot</fullName>
+                    <default>false</default>
+                    <label>Yes, I forgot</label>
+                </value>
+                <value>
+                    <fullName>No, I remembered the whole sequence</fullName>
+                    <default>false</default>
+                    <label>No, I remembered the whole sequence</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>LeftHand_2_ExerciseTime__c</fullName>
+        <externalId>false</externalId>
+        <label>LeftHand_2_ExerciseTime</label>
+        <length>56</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LeftHand_3_ExerciseDrops__c</fullName>
+        <externalId>false</externalId>
+        <label>LeftHand_3_ExerciseDrops</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LeftHand_3_ExerciseGoing__c</fullName>
+        <externalId>false</externalId>
+        <label>LeftHand_3_ExerciseGoing</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Yes, I forgot</fullName>
+                    <default>false</default>
+                    <label>Yes, I forgot</label>
+                </value>
+                <value>
+                    <fullName>No, I remembered the whole sequence</fullName>
+                    <default>false</default>
+                    <label>No, I remembered the whole sequence</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>LeftHand_3_ExerciseTime__c</fullName>
+        <externalId>false</externalId>
+        <label>LeftHand_3_ExerciseTime</label>
+        <length>56</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LeftHand_4_ExerciseDrops__c</fullName>
+        <externalId>false</externalId>
+        <label>LeftHand_4_ExerciseDrops</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LeftHand_4_ExerciseGoing__c</fullName>
+        <externalId>false</externalId>
+        <label>LeftHand_4_ExerciseGoing</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Yes, I forgot</fullName>
+                    <default>false</default>
+                    <label>Yes, I forgot</label>
+                </value>
+                <value>
+                    <fullName>No, I remembered the whole sequence</fullName>
+                    <default>false</default>
+                    <label>No, I remembered the whole sequence</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>LeftHand_4_ExerciseTime__c</fullName>
+        <externalId>false</externalId>
+        <label>LeftHand_4_ExerciseTime</label>
+        <length>56</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Left_Hand_Average__c</fullName>
+        <externalId>false</externalId>
+        <formula>(
+        VALUE(LEFT(LeftHand_1_ExerciseTime__c, FIND(&quot;:&quot;, LeftHand_1_ExerciseTime__c) - 1)) +
+        VALUE(LEFT(LeftHand_2_ExerciseTime__c, FIND(&quot;:&quot;, LeftHand_2_ExerciseTime__c) - 1)) +
+        VALUE(LEFT(LeftHand_3_ExerciseTime__c, FIND(&quot;:&quot;, LeftHand_3_ExerciseTime__c) - 1)) +
+        VALUE(LEFT(LeftHand_4_ExerciseTime__c, FIND(&quot;:&quot;, LeftHand_4_ExerciseTime__c) - 1))
+    )*60 / 4
++
+
+    (
+        VALUE(MID(LeftHand_1_ExerciseTime__c, FIND(&quot;:&quot;, LeftHand_1_ExerciseTime__c) + 1, LEN(LeftHand_1_ExerciseTime__c))) +
+        VALUE(MID(LeftHand_2_ExerciseTime__c, FIND(&quot;:&quot;, LeftHand_2_ExerciseTime__c) + 1, LEN(LeftHand_2_ExerciseTime__c))) +
+        VALUE(MID(LeftHand_3_ExerciseTime__c, FIND(&quot;:&quot;, LeftHand_3_ExerciseTime__c) + 1, LEN(LeftHand_3_ExerciseTime__c))) +
+        VALUE(MID(LeftHand_4_ExerciseTime__c, FIND(&quot;:&quot;, LeftHand_4_ExerciseTime__c) + 1, LEN(LeftHand_4_ExerciseTime__c)))
+    ) / 4</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Left Hand Average</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>OneLastThing__c</fullName>
+        <externalId>false</externalId>
+        <label>OneLastThing</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>I timed myself</fullName>
+                    <default>false</default>
+                    <label>I timed myself</label>
+                </value>
+                <value>
+                    <fullName>Someone else timed me</fullName>
+                    <default>false</default>
+                    <label>Someone else timed me</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Participant_Id__c</fullName>
+        <externalId>false</externalId>
+        <label>Participant Id</label>
+        <length>20</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>RightHand_1_ExerciseDrops__c</fullName>
+        <externalId>false</externalId>
+        <label>RightHand_1_ExerciseDrops</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>RightHand_1_ExerciseGoing__c</fullName>
+        <externalId>false</externalId>
+        <label>RightHand_1_ExerciseGoing</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Yes, I forgot</fullName>
+                    <default>false</default>
+                    <label>Yes, I forgot</label>
+                </value>
+                <value>
+                    <fullName>No, I remembered the whole sequence</fullName>
+                    <default>false</default>
+                    <label>No, I remembered the whole sequence</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>RightHand_1_ExerciseTime__c</fullName>
+        <externalId>false</externalId>
+        <label>RightHand_1_ExerciseTime</label>
+        <length>56</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>RightHand_2_ExerciseDrops__c</fullName>
+        <externalId>false</externalId>
+        <label>RightHand_2_ExerciseDrops</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>RightHand_2_ExerciseGoing__c</fullName>
+        <externalId>false</externalId>
+        <label>RightHand_2_ExerciseGoing</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Yes, I forgot</fullName>
+                    <default>false</default>
+                    <label>Yes, I forgot</label>
+                </value>
+                <value>
+                    <fullName>No, I remembered the whole sequence</fullName>
+                    <default>false</default>
+                    <label>No, I remembered the whole sequence</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>RightHand_2_ExerciseTime__c</fullName>
+        <externalId>false</externalId>
+        <label>RightHand_2_ExerciseTime</label>
+        <length>56</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>RightHand_3_ExerciseDrops__c</fullName>
+        <externalId>false</externalId>
+        <label>RightHand_3_ExerciseDrops</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>RightHand_3_ExerciseGoing__c</fullName>
+        <externalId>false</externalId>
+        <label>RightHand_3_ExerciseGoing</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Yes, I forgot</fullName>
+                    <default>false</default>
+                    <label>Yes, I forgot</label>
+                </value>
+                <value>
+                    <fullName>No, I remembered the whole sequence</fullName>
+                    <default>false</default>
+                    <label>No, I remembered the whole sequence</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>RightHand_3_ExerciseTime__c</fullName>
+        <externalId>false</externalId>
+        <label>RightHand_3_ExerciseTime</label>
+        <length>56</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>RightHand_4_ExerciseDrops__c</fullName>
+        <externalId>false</externalId>
+        <label>RightHand_4_ExerciseDrops</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>RightHand_4_ExerciseGoing__c</fullName>
+        <externalId>false</externalId>
+        <label>RightHand_4_ExerciseGoing</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Yes, I forgot</fullName>
+                    <default>false</default>
+                    <label>Yes, I forgot</label>
+                </value>
+                <value>
+                    <fullName>No, I remembered the whole sequence</fullName>
+                    <default>false</default>
+                    <label>No, I remembered the whole sequence</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>RightHand_4_ExerciseTime__c</fullName>
+        <externalId>false</externalId>
+        <label>RightHand_4_ExerciseTime</label>
+        <length>56</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Right_Hand_Average__c</fullName>
+        <externalId>false</externalId>
+        <formula>(
+VALUE(Left(RightHand_1_ExerciseTime__c, FIND(&quot;:&quot;, RightHand_1_ExerciseTime__c) - 1)) +
+VALUE(Left(RightHand_2_ExerciseTime__c, FIND(&quot;:&quot;, RightHand_2_ExerciseTime__c) - 1)) +
+VALUE(Left(RightHand_3_ExerciseTime__c, FIND(&quot;:&quot;, RightHand_3_ExerciseTime__c) - 1)) +
+VALUE(Left(RightHand_4_ExerciseTime__c, FIND(&quot;:&quot;, RightHand_4_ExerciseTime__c) - 1))
+)*60 / 4
+
++
+
+(
+VALUE(MID(RightHand_1_ExerciseTime__c, FIND(&quot;:&quot;, RightHand_1_ExerciseTime__c) + 1, LEN(RightHand_1_ExerciseTime__c))) +
+VALUE(MID(RightHand_2_ExerciseTime__c, FIND(&quot;:&quot;, RightHand_2_ExerciseTime__c) + 1, LEN(RightHand_2_ExerciseTime__c))) +
+VALUE(MID(RightHand_3_ExerciseTime__c, FIND(&quot;:&quot;, RightHand_3_ExerciseTime__c) + 1, LEN(RightHand_3_ExerciseTime__c))) +
+VALUE(MID(RightHand_4_ExerciseTime__c, FIND(&quot;:&quot;, RightHand_4_ExerciseTime__c) + 1, LEN(RightHand_4_ExerciseTime__c)))
+) / 4</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Right Hand Average</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <label>Bean Game</label>
+    <nameField>
+        <displayFormat>BGN-{00000000}</displayFormat>
+        <label>Bean Game Number</label>
+        <trackHistory>false</trackHistory>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Bean Games</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>ReadWrite</sharingModel>
+    <visibility>Public</visibility>
+</CustomObject>

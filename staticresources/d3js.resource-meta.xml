@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StaticResource xmlns="http://soap.sforce.com/2006/04/metadata">
+    <cacheControl>Public</cacheControl>
+    <contentType>text/javascript</contentType>
+    <description>D3 JS lib to draw gauge chart
+
+// https://d3js.org v5.9.2 Copyright 2019 Mike Bostock</description>
+</StaticResource>

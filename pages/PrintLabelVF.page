@@ -1,0 +1,136 @@
+<!-- Created By: {Girikon(ShwetaKhunteta)}
+ Created On: 03/08/2021 (dd/mm/yyyy)
+ //tm-186
+ Description/Purpose:.Print Labels 
+ -->
+
+<apex:page standardController="Shipping_Detail__c"  applyHtmlTag="false" showHeader="false" recordSetVar="Shipping"
+    extensions="PrintLabelController">
+
+    <head>
+        <!--Added by Mukesh Start-->
+        <apex:includeScript value="{!$Resource.jquery_min}"/>
+        <apex:includeScript value="{!$Resource.tiff_lib}"/>
+        <!-- <apex:slds />      -->
+        <style>
+        body {
+                font-size: 24px;
+                font-family: 'Whitneybook', Helvetica, Arial, sans-serif;
+                font-weight: 400;
+
+                color: #000;
+                background-color: #fff;
+                hyphens: none;
+                word-break: break-word;
+                padding: 0;
+                margin: 0;
+            }
+        /* .content{text-align:center;zoom: 80%;} */
+        .content{width: 100%; }
+        .main-label-box{width: 100%;  }
+        .label-box {
+                margin: 5px;
+                width: 48.5%;
+                float: left;
+            }
+        canvas{width: 100%;}
+        
+
+        .print {
+
+                background-color: #0176d3;
+                color: #fff;
+                font-size: 14px;
+                text-align: center;
+                padding: 5px 10px;
+                border-radius: 5px;
+                text-decoration: none;
+                margin: 5px;
+                display: inline-block;
+
+                }
+                .print:hover {
+                text-decoration: none;
+                color: #fff;
+                background-color: #01569c;
+                }
+
+
+        @media print {
+            .print{display: none}
+            
+            .label-box {
+                margin: 0px;
+                width: 100%;
+                height: 100vh
+                float: left;
+            }
+            .content{width: 100%; height: 100vh; text-align: center;}
+            canvas{height:100vh; width: auto; margin: auto;}
+
+
+        }
+        </style>
+      
+    
+    </head>
+    <!-- selected values {!selShipLstForLabelPrint}
+    USPS Label id {!labels} -->
+    <body class="slds-scope">
+        <a href="#" onclick="printBarcode()" class=" print">Print</a>
+       
+        <div class="content"></div>
+
+        <script>
+            function _base64ToArrayBuffer(base64) {   
+                //console.log(base64);
+                var binary_string =  window.atob(base64);                                           
+                var len = binary_string.length;                                                                
+                var bytes = new Uint8Array( len );                                                          
+                for (var i = 0; i < len; i++)        {                                                
+                    bytes[i] = binary_string.charCodeAt(i);                                                
+                }                                                                                                                       
+                return bytes.buffer;                                                                                     
+            } 
+            
+            var $row = $('<div class="main-label-box"></div>');
+            var buffer;
+            var tiff;
+            var canvas;
+            var $col;
+            </script>
+            <apex:repeat value="{!shippingDetailList}" var="item">
+                <!--Simple way-->
+                <apex:outputPanel rendered="{!IF(item.USPSLabelImage__c!=null && item.USPSLabelImage__c!='',true,false)}">
+                <script>                    
+                    buffer =  _base64ToArrayBuffer("{!item.USPSLabelImage__c}"); 
+                    tiff = new Tiff({buffer: buffer});
+                    canvas = tiff.toCanvas();
+                    if (canvas) {
+                        $col = $('<div class="label-box"></div>');                        
+                        $col.append(canvas);                        
+                        $row.append($col);
+                    }
+                </script>                
+                </apex:outputPanel>
+                <apex:outputPanel rendered="{!IF(item.USPSReturnLabelImage__c!=null && item.USPSReturnLabelImage__c!='',true,false)}">
+                <script>                    
+                    buffer =  _base64ToArrayBuffer("{!item.USPSReturnLabelImage__c}"); 
+                    tiff = new Tiff({buffer: buffer});
+                    canvas = tiff.toCanvas();                    
+                    if (canvas) {
+                        $col = $('<div class="label-box"></div>');                        
+                        $col.append(canvas);                        
+                        $row.append($col);
+                    }
+                </script>                
+                </apex:outputPanel>
+            </apex:repeat>
+        <script>
+            $('.content').append($row);
+            function printBarcode() {
+                window.print();
+            }
+        </script>
+    </body>
+</apex:page>

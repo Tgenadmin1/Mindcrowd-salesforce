@@ -1,0 +1,13 @@
+.phone::placeholder {
+    font-size: 0.9em;
+  } 
+  @media (max-width: 480px) {
+    .phone1{
+      width:105%;
+    }
+  }
+  @media (min-width: 481px) and (max-width: 1024px) {
+    .phone1 {
+      width:102%;
+    }
+  }

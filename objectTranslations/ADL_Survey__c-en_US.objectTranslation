@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>ADL</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>ADLs</value>
+    </caseValues>
+    <fields>
+        <help><!-- Attend community activities. --></help>
+        <label><!-- ADL_v1.0.3 --></label>
+        <name>Attend_community_activities__c</name>
+    </fields>
+    <fields>
+        <help><!-- Attend cultural events (e.g.,concerts, shows, exhibitions, theater). --></help>
+        <label><!-- ADL_v1.0.5 --></label>
+        <name>Attend_cultural_events__c</name>
+    </fields>
+    <fields>
+        <help><!-- Attend social gatherings --></help>
+        <label><!-- ADL_v1.0.4 --></label>
+        <name>Attend_social_gatherings__c</name>
+    </fields>
+    <fields>
+        <label><!-- Contact Name --></label>
+        <name>Contact_Name__c</name>
+        <relationshipLabel><!-- ADLs --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Contact --></label>
+        <name>Contact__c</name>
+    </fields>
+    <fields>
+        <help><!-- Do you currently need assistance with any of the following activities? --></help>
+        <label><!-- ADL_v1.0.12 --></label>
+        <name>Currently_need_assistance_with_activity__c</name>
+    </fields>
+    <fields>
+        <help><!-- Do volunteer work. --></help>
+        <label><!-- ADL_v1.0.9 --></label>
+        <name>Do_volunteer_work__c</name>
+    </fields>
+    <fields>
+        <help><!-- Drive a car --></help>
+        <label><!-- ADL_v1.0.6 --></label>
+        <name>Drive_a_car__c</name>
+    </fields>
+    <fields>
+        <label><!-- Email --></label>
+        <name>Email__c</name>
+    </fields>
+    <fields>
+        <help><!-- Hold social gatherings at your house. --></help>
+        <label><!-- ADL_v1.0.2 --></label>
+        <name>Hold_social_gatherings_at_your_house__c</name>
+    </fields>
+    <fields>
+        <help><!-- Participate in community activities (e.g., committees, associations). --></help>
+        <label><!-- ADL_v1.0.11 --></label>
+        <name>Participate_in_community_activities__c</name>
+    </fields>
+    <fields>
+        <help><!-- Attend social gatherings at other people’s houses. --></help>
+        <label><!-- ADL_v1.0.1 --></label>
+        <name>Social_gatherings_at_other_people_house__c</name>
+    </fields>
+    <fields>
+        <help><!-- Take longer trips out of town or the country. --></help>
+        <label><!-- ADL_v1.0.8 --></label>
+        <name>Take_longer_trips_out_of_town__c</name>
+    </fields>
+    <fields>
+        <help><!-- Take short trips out of town. --></help>
+        <label><!-- ADL_v1.0.7 --></label>
+        <name>Take_short_trips_out_of_town__c</name>
+    </fields>
+    <fields>
+        <help><!-- Work at a paid job position. --></help>
+        <label><!-- ADL_v1.0.10 --></label>
+        <name>Work_at_a_paid_job_position__c</name>
+    </fields>
+    <layouts>
+        <layout>ADL Survey Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

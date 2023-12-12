@@ -1,0 +1,68 @@
+<!-- @description       : 
+  @author            : Raj  
+  @UI author         : Raj
+  @last modified on  : 05-07-2021
+  @last modified by  : ChangeMeIn@UserSettingsUnder.SFDoc
+  Modifications Log 
+  Ver   Date         Author         Modification
+  1.0   06-07-2021   Raj Kumar      Initial Version 
+  Ver   Date         Author         Modification
+  2.0   15-09-2022   Vidushi Agarwal  Implemented design attribute -->
+  
+  <aura:component controller="CustomLoginController" extends="forceCommunity:navigationMenuBase" access="global" implements="forceCommunity:availableForAllPageTypes">
+    <aura:attribute name="baseUrl" type="String"/>    
+    <aura:attribute name="ContactId" type="String"/>
+    <aura:attribute name="Language" type="String"/>
+    <aura:attribute name="community_nav_text_1" type="String" default = "My Games" access="global" />
+    <aura:attribute name="community_nav_text_2" type="String" default = "My Results" access="global" />
+    <aura:attribute name="community_nav_text_3" type="String" default = "Notifications" access="global" />
+    <aura:attribute name="community_nav_text_4" type="String" default = "My Profile" access="global" />
+    <aura:attribute name="community_nav_text_5" type="String" default = "Blog" access="global" />
+    <aura:attribute name="community_nav_text_6" type="String" default = "Logout" access="global" />
+    <aura:attribute name="community_nav_text_7" type="String" default = "My Surveys" access="global" />
+    <aura:attribute name="macTouch" type="Boolean" default="false"  access="global" />
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    <!--<lightning:navigation aura:id="navService"/>-->
+    <lightning:navigation aura:id="navService"/>
+              <div class="slds-builder-header__utilities-item">
+                <a href="" class="slds-builder-header__item-action slds-media slds-media_center gameLink paddingL0" onclick="{!c.gameNav}">
+                  <div class="slds-media__body">{!v.community_nav_text_1}</div>
+                </a>
+              </div>
+              <div class="slds-builder-header__utilities-item">
+                <a href="#" class="slds-builder-header__item-action slds-media slds-media_center" onclick="{!c.surveysNav}">
+                    <div class="slds-media__body">{!v.community_nav_text_7}</div>
+                </a>
+              </div>
+              <div class="slds-builder-header__utilities-item">
+                <a href="" class="slds-builder-header__item-action slds-media slds-media_center" onclick="{!c.myresults}">
+                   <div class="slds-media__body">{!v.community_nav_text_2}</div>
+                </a>
+              </div>
+              <aura:if isTrue ="{!v.macTouch}">
+              <div class="slds-builder-header__utilities-item">
+                <a href="" class="slds-builder-header__item-action slds-media slds-media_center nav-notification-link" onclick="{!c.notificationNav}">
+                  <div class="slds-media__body" id="notification">{!v.community_nav_text_3} <forceCommunity:notifications aura:id="notifLib"/></div>
+                </a>
+              </div>
+              </aura:if>
+              <div class="slds-builder-header__utilities-item">
+                <a href="" class="slds-builder-header__item-action slds-media slds-media_center" onclick="{!c.myprofileNav}">
+                  <div class="slds-media__body">{!v.community_nav_text_4}</div>
+                </a>
+              </div>
+                <div class="slds-builder-header__utilities-item">
+                <!-- <a href="https://staging-mindcrowd.kinsta.cloud/"  target="_blank" class="slds-builder-header__item-action slds-media slds-media_center" >
+                  <div class="slds-media__body">Blog</div>
+                </a> -->
+                <a href="{!$Label.c.live_URL_9}"  target="_blank" class="slds-builder-header__item-action slds-media slds-media_center" >
+                  <div class="slds-media__body">{!v.community_nav_text_5}</div>
+                </a>
+              </div>
+              <div class="slds-builder-header__utilities-item m-logout-link">
+                <a href="{!$Label.c.Community_Url+'/secur/logout.jsp?retUrl='+$Label.c.Community_Url}"   class="slds-builder-header__item-action slds-media slds-media_center" >
+                  <div class="slds-media__body">{!v.community_nav_text_6}</div>
+                </a>
+              </div>
+                            
+</aura:component>

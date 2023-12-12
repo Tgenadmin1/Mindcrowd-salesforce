@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Womens Hormones Menopause survey</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Womens Hormones Menopause surveys</value>
+    </caseValues>
+    <fields>
+        <label><!-- Contact --></label>
+        <name>Contact__c</name>
+        <relationshipLabel><!-- Womens Hormones Menopause surveys --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Do you currently take hormone --></label>
+        <name>Do_you_currently_take_hormone__c</name>
+    </fields>
+    <fields>
+        <label><!-- Email --></label>
+        <name>Email__c</name>
+    </fields>
+    <fields>
+        <label><!-- Have you ever used hormonal --></label>
+        <name>Have_you_ever_used_hormonal__c</name>
+    </fields>
+    <fields>
+        <label><!-- Have you had one or both of your ovaries --></label>
+        <name>Have_you_had_one_or_both_of_your_ovaries__c</name>
+    </fields>
+    <fields>
+        <label><!-- Have you had part or all of your uterus --></label>
+        <name>Have_you_had_part_or_all_of_your_uterus__c</name>
+    </fields>
+    <fields>
+        <label><!-- Other --></label>
+        <name>Other__c</name>
+    </fields>
+    <fields>
+        <label><!-- Please estimate in years how long you --></label>
+        <name>Please_estimate_in_years_how_long_you__c</name>
+    </fields>
+    <fields>
+        <label><!-- Please estimate in years how long you to --></label>
+        <name>Please_estimate_in_years_how_long_you_to__c</name>
+    </fields>
+    <fields>
+        <label><!-- What brand of hormone replacement --></label>
+        <name>What_brand_of_hormone_replacement__c</name>
+    </fields>
+    <fields>
+        <label><!-- What dose of hormone replacement therapy --></label>
+        <name>What_dose_of_hormone_replacement_therapy__c</name>
+    </fields>
+    <fields>
+        <label><!-- What hormonal birth control --></label>
+        <name>What_hormonal_birth_control__c</name>
+    </fields>
+    <fields>
+        <label><!-- What year did you have your hysterectomy --></label>
+        <name>What_year_did_you_have_your_hysterectomy__c</name>
+    </fields>
+    <fields>
+        <label><!-- What year did you have your oophorectomy --></label>
+        <name>What_year_did_you_have_your_oophorectomy__c</name>
+    </fields>
+    <layouts>
+        <layout>Womens Hormones Menopause Survey Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Survey Response --></label>
+            <section>Survey Response</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

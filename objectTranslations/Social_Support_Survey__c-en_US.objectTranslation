@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>SOCSUPP</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>SOCSUPPs</value>
+    </caseValues>
+    <fields>
+        <label><!-- Contact Name --></label>
+        <name>Contact_Name__c</name>
+        <relationshipLabel><!-- SOCSUPPs --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Contact --></label>
+        <name>Contact__c</name>
+    </fields>
+    <fields>
+        <help><!-- I can count on my friend when things go wrong. --></help>
+        <label><!-- SOCSUPP_v1.0.10 --></label>
+        <name>Count_on_my_friend_when_things_go_wrong__c</name>
+    </fields>
+    <fields>
+        <label><!-- Email --></label>
+        <name>Email__c</name>
+    </fields>
+    <fields>
+        <help><!-- I get the emotional help and support I need from my family --></help>
+        <label><!-- SOCSUPP_v1.0.7 --></label>
+        <name>Emotional_help_and_support_from_family__c</name>
+    </fields>
+    <fields>
+        <help><!-- How often do you feel isolated from others? --></help>
+        <label><!-- SOCSUPP_v1.0.3 --></label>
+        <name>Feel_isolated_from_others__c</name>
+    </fields>
+    <fields>
+        <help><!-- I have friends with whom I can share my joys and sorrows. --></help>
+        <label><!-- SOCSUPP_v1.0.12 --></label>
+        <name>Friends_to_share_my_joys_and_sorrows__c</name>
+    </fields>
+    <fields>
+        <help><!-- How often do you feel left out? --></help>
+        <label><!-- SOCSUPP_v1.0.2 --></label>
+        <name>How_often_do_you_feel_left_out__c</name>
+    </fields>
+    <fields>
+        <help><!-- How often do you feel you lack companionship? --></help>
+        <label><!-- SOCSUPP_v1.0.1 --></label>
+        <name>Lack_companionship__c</name>
+    </fields>
+    <fields>
+        <help><!-- My family is willing to help me make decisions. --></help>
+        <label><!-- SOCSUPP_v1.0.14 --></label>
+        <name>My_family_help_me_make_decisions__c</name>
+    </fields>
+    <fields>
+        <help><!-- My family really tries to help me. --></help>
+        <label><!-- SOCSUPP_v1.0.6 --></label>
+        <name>My_family_really_tries_to_help_me__c</name>
+    </fields>
+    <fields>
+        <help><!-- My friends really try to help me. --></help>
+        <label><!-- SOCSUPP_v1.0.9 --></label>
+        <name>My_friends_really_try_to_help_me__c</name>
+    </fields>
+    <fields>
+        <help><!-- There is a special person who is around when I need them. --></help>
+        <label><!-- SOCSUPP_v1.0.4 --></label>
+        <name>Special_Person__c</name>
+    </fields>
+    <fields>
+        <help><!-- I have a special person who is a real source of comfort to me. --></help>
+        <label><!-- SOCSUPP_v1.0.8 --></label>
+        <name>Special_Person_source_of_comfort__c</name>
+    </fields>
+    <fields>
+        <help><!-- There is a special person with whom I can share my joys and sorrows. --></help>
+        <label><!-- SOCSUPP_v1.0.5 --></label>
+        <name>Special_Person_to_share_joys_and_sorrows__c</name>
+    </fields>
+    <fields>
+        <help><!-- There is a special person in my life who cares about my feelings --></help>
+        <label><!-- SOCSUPP_v1.0.13 --></label>
+        <name>Special_Person_who_care_about_Feelings__c</name>
+    </fields>
+    <fields>
+        <help><!-- I can talk about my problems with my family. --></help>
+        <label><!-- SOCSUPP_v1.0.11 --></label>
+        <name>Talk_about_my_problems_with_my_family__c</name>
+    </fields>
+    <fields>
+        <help><!-- I can talk about my problems with my friends --></help>
+        <label><!-- SOCSUPP_v1.0.15 --></label>
+        <name>Talk_about_my_problems_with_my_friends__c</name>
+    </fields>
+    <layouts>
+        <layout>Social Support Survey Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

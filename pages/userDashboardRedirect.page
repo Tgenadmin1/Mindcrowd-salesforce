@@ -1,0 +1,6 @@
+<apex:page controller="RountingController" action="{!RountingPath}">
+    <script>
+    window.location.href =  '{!url}' ; 
+    </script>
+    
+</apex:page>

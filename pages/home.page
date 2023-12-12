@@ -1,0 +1,899 @@
+<apex:page sidebar="false" showHeader="false" applyHtmlTag="false" standardStylesheets="false" controller="ProgressBarControllerMC">
+<!--<apex:page language="es-ES" sidebar="false" showHeader="false" applyHtmlTag="false" standardStylesheets="false" controller="ProgressBarControllerMC">-->
+    <head>
+        <title>MindCrowd Memory Test • Online Brain Scientific Research</title>
+        <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, minimal-ui" />
+
+
+        <meta name="description" content="Discover more about your brain - in 10 short minutes - by taking our free online MindCrowd memory test. Play and help us reach one million participants."
+        />
+        <meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' />
+        <link rel="canonical" href="https://mindcrowd.org" />
+
+        <meta property="og:locale" content="en_US" />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="MindCrowd Memory Test • Online Brain Scientific Research" />
+        <meta property="og:description" content="Discover more about your brain - in 10 short minutes - by taking our free online MindCrowd memory test. Play and help us reach one million participants. "
+        />
+        <meta property="og:url" content="https://mindcrowd.org/" />
+        <meta property="article:publisher" content="https://www.facebook.com/Mindcrowd/" />
+        <meta property="article:published_time" content="2022-06-04T08:30:36+00:00" />
+        <meta property="article:modified_time" content="2022-06-04T08:30:36+00:00" />
+        <meta property="og:image" content="https://mindcrowd2--uat.sandbox.my.site.com/MindCrowdES/resource/FeaturedImages/mindcrowd-memory-game-online.jpg"
+        />
+        <meta property="og:site_name" content="MindCrowd" />
+        <meta property="og:image:width" content="810" />
+        <meta property="og:image:height" content="456" />
+        <meta property="og:image:type" content="image/jpeg" />
+        <meta property="twitter:card" content="summary_large_image" />
+        <meta property="twitter:url" content="https://mindcrowd.org/" />
+        <meta property="twitter:title" content="Memory Test Online • MindCrowd • Brain & Cognition Study" />
+        <meta property="twitter:description" content="Discover more about your brain - in 10 short minutes - by taking the free online memory and attention test by MindCrowd."
+        />
+        <meta property="twitter:image" content="https://mindcrowd2--uat.sandbox.my.site.com/MindCrowdES/resource/FeaturedImages/mindcrowd-memory-game-online.jpg"
+        />
+        <meta name="twitter:creator" content="@tgenmindcrowd" />
+        <meta name="twitter:site" content="@tgenmindcrowd" />
+
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <link rel="shortcut icon" href="/sfsites/c/resource/favicon" />
+        <link type="text/css" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Varela+Round&amp;font-display: swap;"
+        />
+        <link rel="shortcut icon" href="{!URLFOR($Resource.favicon)}" />
+        <link href="/sfsites/c/resource/fontawesome/css/all.css" rel="stylesheet" />
+        <link href="/sfsites/c/resource/mindCrowdVFTheme?v=6" rel="stylesheet" />
+
+
+    </head>
+
+    <body class="b-hide">
+        <div class="header_container ">
+            <header class="mc-header">
+                <div class="mc-header-container">
+                    <a href="/">
+                        <div class="logo-container">
+                            <img src="{!$Resource.mindcrowd_style + '/images/mindcrowd.png'}" sizes="(max-width: 328px) 100vw, 328px" height="100" width="300"
+                                alt="MindCrowd" title="MindCrowd" />
+                        </div>
+                    </a>
+                    <div class="top-banner-button d-button ">
+                        <a href="{!$Label.Community_Url+'/s/'+$Label.url_testlanguage}" id="testLink" class="pink-btn  text-center" title="Click to take the MindCrowd Memory Test">
+                            {!$Label.Banner_Text_6n}
+
+                        </a>
+                    </div>
+                    <!-- <lightning:icon   class="apply-cursor m-menu-btn" iconName="utility:rows" size="medium" alternativeText="Menu"/> -->
+
+
+                    <span class="slds-icon_container slds-icon-utility-rows apply-cursor m-menu-btn " onclick="openMobileNav()">
+                        <svg aria-hidden="true" class="slds-icon slds-icon-text-default" id="rowIcon">
+                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/apexpages/slds/latest/assets/icons/utility-sprite/svg/symbols.svg#rows">
+                            </use>
+                        </svg>
+                        <svg aria-hidden="true" class="slds-icon slds-icon-text-default m-hide" id="closeIcon">
+                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/apexpages/slds/latest/assets/icons/utility-sprite/svg/symbols.svg#close">
+                            </use>
+                        </svg>
+
+
+                    </span>
+
+
+
+
+                </div>
+
+            </header>
+            <div class="slds-builder-header m-hide">
+                <div class="navStrip">
+                    <ul class="navItem">
+                        <li class="m-button">
+                            <a href="{!$Label.Community_Url+'/s/'+$Label.url_testlanguage}" title="Click to take the MindCrowd Memory Test"
+                                class="pink-btn slds-button text-center" data-aura-rendered-by="280:0">START THE TEST</a>
+                        </li>
+                        <li>
+                            <a href="{!$Label.live_URL_1}" title="{!$Label.nav_text_8_t}" class="top-nav-btn slds-builder-header__item-action slds-media slds-media_center">
+                                <div class="slds-media__body">{!$Label.nav_text_8}</div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{!$Label.live_URL_2}" title="{!$Label.nav_text_9_t}" class="top-nav-btn slds-builder-header__item-action slds-media slds-media_center">
+                                <div class="slds-media__body">{!$Label.nav_text_9}</div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{!$Label.live_URL_3}" title="{!$Label.nav_text_10_t}" class="top-nav-btn slds-builder-header__item-action slds-media slds-media_center">
+                                <div class="slds-media__body">{!$Label.nav_text_10}</div>
+                            </a>
+                        </li>
+                        <li class="nav-right-buttons">
+                            <a href="{!'/s/'+$Label.url_login}" class="login-btn" title="Vip Access">
+                                <!-- {!$Label.c.Banner_Text_6n} -->Vip Access
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="home_section1">
+            <div class="h-top-text">{!$Label.homesection1001}</div>
+            <h1 class="h-top-heading">{!$Label.homesection1002}</h1>
+            <div class="h-top-text3">{!$Label.homesection1003}</div>
+            <div class="text-center marginT2p d-inlineBlock">
+                <a href="{!'/s/'}" class="pink-btn d-inlineBlock text-center" title="Click to Take the MindCrowd Memory Test">{!$Label.homesection1004}</a>
+            </div>
+            <div class="text-center privacy-link">{!$Label.homesection1005}
+                <a href="{!$label.live_URL_5}">{!$Label.homesection1006}</a>
+            </div>
+
+            <div class="home_promo_sponsors text-center ">
+                <p>
+                    <img class="d-img" src="{!$Resource.mindcrowd_style + '/images/mindcrowd-contributors.jpg'}" alt="MindCrowd Contributors"
+                        title="MindCrowd Contributors" width="750" height="150" />
+                    <img class="m-img" src="{!$Resource.mindcrowd_style + '/images/MindCrowd-contributors-sq.jpg'}" alt="MindCrowd Contributors"
+                        title="MindCrowd Contributors" width="500" height="500" />
+                </p>
+
+            </div>
+        </div>
+
+        <div class="home_section2">
+            <div class="home_section2-content">
+                <p class="blue-box-heading1">{!$label.homesection2001}</p>
+                <p>{!$label.homesection2002}</p>
+                <div class="text-center ">
+                    <a href="{!'/s/'}" title="Click to Take the MindCrowd Memory Test" class="pink-btn d-inlineBlock marginT2p">Take The Test</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="home_promo1 home_section3">
+            <div class="home_progress">
+                <div class="progress_wrapper ">
+                    <div class="progress_bar" style="width: {!rtMap['Percentage']}%;">
+                        <span>
+                        </span>
+                    </div>
+                    <div class="progress_goal">
+                    </div>
+                    <div class="progress_count" id="myprogress_count">
+                        <br />
+                    </div>
+                    <div class="progress_count right">
+                    </div>
+                    <div class="total-progress">1 {!$label.banner_Text_10}</div>
+                </div>
+
+                <p class="homepage-text"> {!$label.homesection3002}</p>
+                <p class="marginB30 homepage-text" style="font-size: 22px;">
+                    <!-- {homepageText} -->
+                    {!$label.homesection3003}
+                </p>
+
+
+                <div class="social_icons footer-s-icon  slider">
+                    <ul class="text-center">
+                        <li class="social_bookmarks_facebook ">
+                            <a class="facebook-btn" target="_blank" aria-label="Link to Facebook" aria-hidden="false" data-av_icon="" data-av_iconfont="entypo-fontello"
+                                title="Facebook" rel="noopener">
+                                <span class="avia_hidden_link_text">Facebook</span>
+                            </a>
+                        </li>
+                        <li class="social_bookmarks_twitter">
+                            <a class="twitter-btn" target="_blank" title="Twitter">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                        </li>
+                        <li class="social_bookmarks_pinterest">
+                            <a target="_blank" class="pinterest-btn" aria-label="Link to Pinterest" aria-hidden="false" data-av_icon="" data-av_iconfont="entypo-fontello"
+                                title="Pinterest" rel="noopener">
+                                <span class="avia_hidden_link_text">Pinterest</span>
+                            </a>
+                        </li>
+                        <li class="social_bookmarks_linkedin">
+                            <a class="linkedin-btn" target="_blank" title="Linkedin">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                        </li>
+                        <li class="social_bookmarks_mail">
+                            <a class="twitter" href="mailto:?subject=Check out the MindCrowd Memory Game! 🧠&body=I thought this would interest you. You can take the MindCrowd memory test to discover how your brain compares with others like you and help scientists find ways to delay memory loss as we age. Check it out! Here is the link: https://mindcrowd.org  %0D%0A %0D%0A"
+                                target="_blank" title="Mail">
+                                <i class="fa fa-envelope"></i>
+                            </a>
+
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="home_section4 opacity">
+            <div class="content">
+                <h2>{!$label.homesection4001}</h2>
+                <table border="0" width="100%" class="marginT30 desktop-table">
+                    <tbody>
+                        <tr>
+                            <td class="home_section4-col1">
+                                <div class="main-img">
+                                    <div class="video-box image1 fade-in">
+                                        <iframe id="player" class="player opacity player1" title="Lynda Carter, Wonder Woman &amp; Alzheimer's research advocate wants you to take MindCrowd Memory test"
+                                            width="100%" height="385" border="0" src="https://www.youtube.com/embed/ZwiWI1q-vv8?enablejsapi=1&version=3&playerapiid=ytplayer"
+                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                            allowfullscreen=""></iframe>
+                                        <div id="videoOverlay" class="video-overlay video-overlay2" onclick="handleClick()">
+
+                                            <img class=" overlay-img2 m-overlay-img2 " id="image1" width="735" height="377" src="" alt="" title="" />
+                                        </div>
+                                        <img width="735" height="377" id="image2" class="image2 fade-in slds-hide" src="" alt="DINA PARISE" title="DINA PARISE" />
+                                        <img width="735" height="377" id="image3" class="image3 fade-in slds-hide" src="" alt="ERIC GARCIA" title="ERIC GARCIA" />
+                                        <img width="735" height="377" id="image4" class="image4 fade-in slds-hide" src="" alt="LESLIE MARTIN" title="LESLIE MARTIN"
+                                        />
+                                    </div>
+                                </div>
+
+
+                            </td>
+                            <td class="home_section4-col2 ">
+                                <div class="img-text desktop-text1 ">
+                                    <div class="text1 fade-in">
+                                        <p>{!$label.homesection4002}</p>
+                                        <p>{!$label.homesection4003}</p>
+                                        <p class="paddingB0 marginB0">{!$label.homesection4004}</p>
+                                    </div>
+                                    <div class="text2 fade-in slds-hide">
+                                        <apex:outputText value="{!$Label.homesection4005}" escape="false"></apex:outputText>
+                                        <p class="paddingB0 marginB0 ">
+                                            <strong class="upperCase">
+                                                <apex:outputText value="{!$Label.homesection4006}" escape="false"></apex:outputText>
+                                            </strong>
+                                            <span class="name-blow-text">
+                                                <apex:outputText value="{!$Label.homesection4007}" escape="false"></apex:outputText>
+                                            </span>
+                                        </p>
+                                    </div>
+                                    <div class="text3 fade-in slds-hide">
+                                        <p>
+                                            <apex:outputText value="{!$Label.homesection4008}" escape="false"></apex:outputText>
+                                        </p>
+                                        <p>
+                                            <apex:outputText value="{!$Label.homesection4009}" escape="false"></apex:outputText>
+                                        </p>
+                                        <p class="paddingB0 marginB0">
+                                            <strong>
+                                                <apex:outputText value="{!$Label.homesection4010}" escape="false"></apex:outputText>
+
+                                            </strong>
+                                            <br/>
+                                            <span class="name-blow-text">
+                                                <apex:outputText value="{!$Label.homesection4011}" escape="false"></apex:outputText>
+
+                                            </span>
+                                        </p>
+                                    </div>
+                                    <div class="text4 fade-in slds-hide">
+                                        <p>
+                                            <apex:outputText value="{!$Label.homesection4012}" escape="false"></apex:outputText>
+
+                                        </p>
+                                        <p>
+                                            <apex:outputText value="{!$Label.homesection4014}" escape="false"></apex:outputText>
+
+                                        </p>
+                                        <p class="paddingB0 marginB0">
+                                            <apex:outputText value="{!$Label.homesection4015}" escape="false"></apex:outputText>
+
+                                            <span class="name-blow-text">
+                                                <apex:outputText value="{!$Label.homesection4016}" escape="false"></apex:outputText>
+
+                                            </span>
+                                        </p>
+
+                                    </div>
+                                </div>
+
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="slds-grid slds-gutters marginT20 gall-thumb-img">
+                                    <div class="slds-col 1 paddingL0">
+                                        <span>
+                                            <img onclick="setImage1()" width="177" height="100" src="/sfsites/c/resource/mindcrowd_style/images/lynda-carter-wonder-woman.jpg"
+                                                alt="Lynda Carter’s" title="Lynda Carter’s" />
+                                        </span>
+                                    </div>
+                                    <div class="slds-col 2">
+                                        <span>
+                                            <img onclick="setImage2()" width="177" height="100" src="/sfsites/c/resource/mindcrowd_style/images/dina-parise-racing.jpg"
+                                                alt="DINA PARISE" title="DINA PARISE" />
+                                        </span>
+                                    </div>
+                                    <div class="slds-col 3">
+                                        <span>
+                                            <img onclick="setImage3()" width="177" height="100" src="/sfsites/c/resource/mindcrowd_style/images/eric-garcia-uncle-scotchy.jpg"
+                                                alt="ERIC GARCIA " title="ERIC GARCIA" />
+                                        </span>
+                                    </div>
+                                    <div class="slds-col 4 paddingR0">
+                                        <span>
+                                            <img onclick="setImage4()" width="177" height="100" src="/sfsites/c/resource/mindcrowd_style/images/leslie-martin-author.jpg"
+                                                alt="LESLIE MARTIN" title="LESLIE MARTIN" />
+                                        </span>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="possition-r">
+                                <a href="{!'/s/'}" class="pink-btn slds-button text-center gall-button " title="Click to Take the MindCrowd Memory Test">{!$label.homesection4013}</a>
+                            </td>
+                        </tr>
+                    </tbody>
+
+                </table>
+                <table border="0" width="100%" class="marginT30 mobile-table">
+                    <tr>
+                        <td class="home_section4-col1">
+                            <div class="main-img">
+                                <div class="video-box m-image1 fade-in">
+                                    <iframe id="player2" class="player opacity player2" title="Lynda Carter, Wonder Woman &amp; Alzheimer's research advocate wants you to take MindCrowd Memory test"
+                                        width="100%" height="385" src="https://www.youtube.com/embed/ZwiWI1q-vv8?enablejsapi=1&version=3&playerapiid=ytplayer"
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                        frameborder="0" allowfullscreen=""></iframe>
+                                    <div id="videoOverlay2" class="video-overlay video-overlay2" onclick="handleClick()">
+
+                                        <img class=" overlay-img2 m-overlay-img2 " id="mimage1" width="735" height="377" src="" alt="" title="" />
+                                    </div>
+                                    <img width="735" height="377" id="mimage2" class="image2 m-image2 fade-in slds-hide" src="" alt="DINA PARISE" title="DINA PARISE"
+                                    />
+                                    <img width="735" height="377" id="mimage3" class="image3 m-image2 fade-in slds-hide" src="" alt="ERIC GARCIA" title="ERIC GARCIA"
+                                    />
+                                    <img width="735" height="377" id="mimage4" class="image4 m-image2 fade-in slds-hide" src="" alt="LESLIE MARTIN" title="LESLIE MARTIN"
+                                    />
+                                </div>
+                            </div>
+                        </td>
+
+                    </tr>
+                    <tr>
+                        <td>
+
+                            <div class="slds-grid slds-gutters marginT10 gall-thumb-img">
+                                <div class="slds-col 1 paddingL0">
+                                    <span>
+                                        <img onclick="setImage1()" width="177" height="100" src="/sfsites/c/resource/mindcrowd_style/images/lynda-carter-wonder-woman.jpg"
+                                            alt="Lynda Carter’s" title="Lynda Carter’s" />
+                                    </span>
+                                </div>
+                                <div class="slds-col 2">
+                                    <span>
+                                        <img onclick="setImage2()" width="177" height="100" src="/sfsites/c/resource/mindcrowd_style/images/dina-parise-racing.jpg"
+                                            alt="DINA PARISE" title="DINA PARISE" />
+                                    </span>
+                                </div>
+                                <div class="slds-col 3">
+                                    <span>
+                                        <img onclick="setImage3()" width="177" height="100" src="/sfsites/c/resource/mindcrowd_style/images/eric-garcia-uncle-scotchy.jpg"
+                                            alt="ERIC GARCIA " title="ERIC GARCIA" />
+                                    </span>
+                                </div>
+                                <div class="slds-col 4 paddingR0">
+                                    <span>
+                                        <img onclick="setImage4()" width="177" height="100" src="/sfsites/c/resource/mindcrowd_style/images/leslie-martin-author.jpg"
+                                            alt="LESLIE MARTIN" title="LESLIE MARTIN" />
+                                    </span>
+                                </div>
+                            </div>
+
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="home_section4-col2 ">
+                            <div class="img-text desktop-text1 ">
+                                <div class="m-text1 fade-in">
+                                    <p>{!$label.homesection4002}</p>
+                                    <p>{!$label.homesection4003}</p>
+                                    <p class="paddingB0 marginB0">{!$label.homesection4004}</p>
+                                </div>
+                                <div class="m-text2 fade-in slds-hide">
+                                    <apex:outputText value="{!$Label.homesection4005}" escape="false"></apex:outputText>
+                                    <p class="paddingB0 marginB0 ">
+                                        <strong class="upperCase">
+                                            <apex:outputText value="{!$Label.homesection4006}" escape="false"></apex:outputText>
+                                        </strong>
+                                        <span class="name-blow-text">
+                                            <apex:outputText value="{!$Label.homesection4007}" escape="false"></apex:outputText>
+                                        </span>
+                                    </p>
+                                </div>
+                                <div class="m-text3 fade-in slds-hide">
+                                    <p>
+                                        <apex:outputText value="{!$Label.homesection4008}" escape="false"></apex:outputText>
+                                    </p>
+                                    <p>
+                                        <apex:outputText value="{!$Label.homesection4009}" escape="false"></apex:outputText>
+                                    </p>
+                                    <p class="paddingB0 marginB0">
+                                        <strong>
+                                            <apex:outputText value="{!$Label.homesection4010}" escape="false"></apex:outputText>
+
+                                        </strong>
+                                        <br/>
+                                        <span class="name-blow-text">
+                                            <apex:outputText value="{!$Label.homesection4011}" escape="false"></apex:outputText>
+
+                                        </span>
+                                    </p>
+                                </div>
+                                <div class="m-text4 fade-in slds-hide">
+                                    <p>
+                                        <apex:outputText value="{!$Label.homesection4012}" escape="false"></apex:outputText>
+
+                                    </p>
+                                    <p>
+                                        <apex:outputText value="{!$Label.homesection4014}" escape="false"></apex:outputText>
+
+                                    </p>
+                                    <p class="paddingB0 marginB0">
+                                        <apex:outputText value="{!$Label.homesection4015}" escape="false"></apex:outputText>
+
+                                        <span class="name-blow-text">
+                                            <apex:outputText value="{!$Label.homesection4016}" escape="false"></apex:outputText>
+
+                                        </span>
+                                    </p>
+
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="possition-r">
+                            <a href="{!'/s/'}" class="pink-btn slds-button text-center gall-button " title="Click to Take the MindCrowd Memory Test">{!$label.homesection4013}</a>
+                        </td>
+                    </tr>
+                </table>
+
+
+
+            </div>
+
+
+        </div>
+        <div class="home_promo">
+            <div class="slds-grid slds-gutters home-col">
+                <div class="slds-col slds-size_1-of-2 padding0 banner-col-left">
+                    <div class="bannder-text1">{!$label.h_Banner_h3} </div>
+                    <h2 class="home-h2">{!$label.banner_Text_2}
+                        <br/>{!$label.banner_Text_3}</h2>
+                    <p class="home_promo_n">{!$label.banner_Text_4}</p>
+                    <p>{!$label.homesection6001}</p>
+                    <div class="marginT20 d-block">
+                        <a href="{!'/s/'}" class="pink-btn d-inlineBlock text-center">JOIN THE STUDY</a>
+                    </div>
+                </div>
+                <div class="slds-col slds-size_1-of-2 homepage-right-col">
+                    <div>
+                        <p>
+                            <a href="{!'/s/'}" title="Take the MindCrowd memory test discover how your brain compares with others like you.">
+                                <img width="317" height="369" alt="Take the MindCrowd memory test discover how your brain compares with others like you."
+                                    src="{!$Resource.mindcrowd_style + '/images/home_compare_graphic.png'}" />
+                            </a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="home_section5">
+            <div class="slds-grid slds-gutters">
+                <div class="slds-col home-grid-col-1">
+                    <span class="av_font_icon av-k8jmexyk-e8ca79ad7d13fa63c9485369c75261c5 avia_animate_when_visible av-icon-style- avia-icon-pos-center avia_start_animation avia_start_delayed_animation">
+                        <span class="av-icon-char av-icon" aria-hidden="true" data-av_icon="" data-av_iconfont="flaticon"></span>
+                    </span>
+                    <h3 class="marginT10">{!$label.homesection5001}</h3>
+                    <p>{!$label.homesection5002}</p>
+                    <p>
+                        <a href="{!$label.live_URL_8}" class="slds-button1 avia-button avia-color-light">{!$label.homesection5003}</a>
+                    </p>
+                </div>
+                <div class="slds-col home-grid-col-2">
+                    <span class="av_font_icon av-k8jmexyk-02d1941adf37f73f648f31ad52d1cd8b avia_animate_when_visible av-icon-style- avia-icon-pos-center avia_start_animation avia_start_delayed_animation">
+                        <span class="av-icon-char av-icon" aria-hidden="true" data-av_icon="" data-av_iconfont="flaticon"></span>
+                    </span>
+                    <h3 class="marginT10">{!$label.homesection5004}</h3>
+                    <p>{!$label.homesection5005}</p>
+                    <p>
+                        <a href="{!$label.live_URL_1}" class="slds-button1 avia-button avia-color-light">{!$label.homesection5006}</a>
+                    </p>
+                </div>
+                <div class="slds-col home-grid-col-3">
+                    <span class="av_font_icon av-k8jmexyk-6540364130af5a89a493244ec1c32c67 avia_animate_when_visible av-icon-style- avia-icon-pos-center avia_start_animation avia_start_delayed_animation">
+                        <span class="av-icon-char av-icon2" aria-hidden="true" data-av_icon="" data-av_iconfont="entypo-fontello"></span>
+                    </span>
+                    <h3 class="marginT10">{!$label.homesection5007}</h3>
+                    <p>{!$label.homesection5008}</p>
+                    <p>
+                        <a href="{!$label.live_URL_4}" class="slds-button1 avia-button avia-color-light">{!$label.homesection5009}</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="footerArea">
+
+            <div class="slds-docked-form-footer footer_wrapper">
+                <footer class="print">
+                    <div class="slds-grid slds-gutters">
+                        <div class="slds-col slds-size_1-of-3 av_one_fourth marginL0 padding0">
+                            <div class="f-content">
+                                <h3>ABOUT MINDCROWD®</h3>
+                                <p class="marginT20">First crowdsourced scientific research to understand how the brain ages to prevent diseases
+                                    like dementia. We need one million people to take a Memory and Attention Test.</p>
+                            </div>
+
+                        </div>
+
+                        <div class="slds-col slds-size_1-of-3 av_one_fourth padding0">
+                            <div class="f-content">
+                                <h3>FOLLOW US</h3>
+                                <div class="social_icons footer-s-icon marginT20">
+                                    <ul class="text-center essb-social-followers-variables essb-fc-grid essb-followers essb-fc-template-metro essb-fc-columns-3 essb-fc-notextvalue">
+                                        <li class="social_bookmarks_facebook ">
+                                            <a target="_blank" aria-label="Link to Facebook" href="https://www.facebook.com/Mindcrowd/" aria-hidden="false" data-av_icon=""
+                                                data-av_iconfont="entypo-fontello" title="Facebook" rel="noopener">
+                                                <span class="avia_hidden_link_text">Facebook</span>
+                                            </a>
+                                        </li>
+                                        <li class="social_bookmarks_twitter">
+                                            <a class="facebook" href="https://twitter.com/TGenMINDCROWD" target="_blank" title="Twitter">
+                                                <i class="fab fa-twitter"></i>
+                                            </a>
+                                        </li>
+                                        <li class="social_bookmarks_pinterest">
+                                            <a target="_blank" aria-label="Link to Pinterest" href="https://www.pinterest.com/tgenmindcrowd/" aria-hidden="false" data-av_icon=""
+                                                data-av_iconfont="entypo-fontello" title="Pinterest" rel="noopener">
+                                                <span class="avia_hidden_link_text">Pinterest</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                            </div>
+                        </div>
+                        <!-- <div class="slds-col slds-size_1-of-4 av_one_fourth"> -->
+                        <div class="slds-col slds-size_1-of-3 av_one_fourth">
+                            <div class="f-content">
+                                <h3>OFFICE</h3>
+                                <p class="marginT20">445 N 5th St
+                                    <br />Phoenix, Arizona 85004 </p>
+                                <!-- <p>Phoenix, Arizona 85004</p> -->
+                                <p>theteam@mindcrowd.org</p>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </footer>
+            </div>
+
+
+            <!--render facet: 128:0-->
+            <div class="copyright">
+                <div class="copyright-content">
+                    <p style="margin: 0; float:left;">
+                        <span id="copyrightyear"></span> © All Rights Reserved MindCrowd •
+                        <a href="https://staging-mindcrowd.kinsta.cloud/privacy-policy/">Cookie &amp; Privacy Policy</a>
+                    </p>
+                    <div class="social_icons ">
+                        <ul class="text-center">
+                            <li class="social_bookmarks_twitter">
+                                <a class="facebook" href="https://twitter.com/TGenMINDCROWD" target="_blank" title="Twitter">
+                                    <i class="fab fa-twitter"></i>
+                                </a>
+                            </li>
+                            <li class="social_bookmarks_facebook">
+                                <!-- <a class="twitter " href="https://www.facebook.com/Mindcrowd" target="_blank"><i class="fab fa-facebook"></i></a> -->
+                                <a target="_blank" aria-label="Link to Facebook" href="https://www.facebook.com/Mindcrowd/" aria-hidden="false" data-av_icon=""
+                                    data-av_iconfont="entypo-fontello" title="Facebook" rel="noopener">
+                                    <span class="avia_hidden_link_text">Facebook</span>
+                                </a>
+                            </li>
+                            <li class="social_bookmarks_pinterest">
+                                <a target="_blank" aria-label="Link to Pinterest" href="https://www.pinterest.com/tgenmindcrowd/" aria-hidden="false" data-av_icon=""
+                                    data-av_iconfont="entypo-fontello" title="Pinterest" rel="noopener">
+                                    <span class="avia_hidden_link_text">Pinterest</span>
+                                </a>
+                            </li>
+                            <li class="social_bookmarks_youtube ">
+                                <a class="twitter " href="https://www.youtube.com/channel/UCUAh-6FzUVf0aAZm5TMehYQ" target="_blank" title="Youtube">
+                                    <i class="fab fa-youtube"></i>
+                                </a>
+                            </li>
+                            <li class="social_bookmarks_rss">
+                                <a class="twitter " href="{!$Label.live_URL_6}" target="_blank" title="Rss">
+                                    <i class="fas fa-rss "></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+        <div class="c-cookie-consent" id="cookieConsent">
+            <div class="slds-m-around_medium cookies-content ">
+                <div>
+                    <p class="avia_cookie_text">We use cookies to improve your experience and support our mission.
+                        <a style="color:#fff7f7;border-bottom: 1px dotted #fff7f7;"
+                            href="{!$label.live_URL_5}">Read more about it here.</a> By using our sites, you agree to our use of cookies.</p>
+                </div>
+                <div style="display: inherit;">
+                    <a onclick="handleClickSetConsent()" title="Allow use of cookies, you can modify used cookies in settings" class="pink-btn slds-button text-center marginL30">ACCEPT</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- <input autocomplete="off" type="text" name="solution" id="inputsolution" class="txt_input"/> -->
+    </body>
+    <script>
+        var countValue='{!rtMap['count']}';
+        console.log('countValue:',countValue);
+        var pcount=parseInt(countValue).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+        console.log('pcount:',pcount);
+        const list = document.getElementById('myprogress_count');
+        list.innerHTML=pcount;
+        
+        window.addEventListener('DOMContentLoaded', (event) => {
+
+            var surl = "window.open('https://www.facebook.com/sharer/sharer.php?u=" + "{!$Label.Community_Url}" + "','targetWindow','toolbar=no,location=0,status=no,menubar=no,scrollbars=yes,resizable=yes,width=600,height=650'); return false;"
+            var turl = "window.open('https://twitter.com/intent/tweet?&url=" + "{!$Label.Community_Url}" + "','targetWindow','toolbar=no,location=0,status=no,menubar=no,scrollbars=yes,resizable=yes,width=600,height=650'); return false;"
+            var lurl = "window.open('https://www.linkedin.com/sharing/share-offsite/?url=" + "{!$Label.Community_Url}" + "','targetWindow','toolbar=no,location=0,status=no,menubar=no,scrollbars=yes,resizable=yes,width=600,height=650'); return false;"
+            var purl = "window.open('https://www.pinterest.com/pin/create/button/?url=" + "{!$Label.Community_Url}" + "','targetWindow','toolbar=no,location=0,status=no,menubar=no,scrollbars=yes,resizable=yes,width=600,height=650'); return false;"
+            var hsrul = "'https://www.facebook.com/sharer/sharer.php?u=" + "{!$Label.Community_Url}" + "','targetWindow','toolbar=no,location=0,status=no,menubar=no,scrollbars=yes,resizable=yes,width=600,height=650'";
+            var hturl = "https://twitter.com/intent/tweet?&url=" + "{!$Label.Community_Url}" + "','targetWindow','toolbar=no,location=0,status=no,menubar=no,scrollbars=yes,resizable=yes,width=600,height=650";
+            var hlurl = "https://www.linkedin.com/sharing/share-offsite/?url=" + "{!$Label.Community_Url}" + "','targetWindow','toolbar=no,location=0,status=no,menubar=no,scrollbars=yes,resizable=yes,width=600,height=650";
+            var plurl = "https://in.pinterest.com/pin-builder/?url=" + "{!$Label.Community_Url}" + "','targetWindow','toolbar=no,location=0,status=no,menubar=no,scrollbars=yes,resizable=yes,width=600,height=650"
+
+
+            var mainId = document.querySelector('.facebook-btn');
+            var tmainId = document.querySelector('.twitter-btn');
+            var lmainId = document.querySelector('.linkedin-btn');
+            var pmainId = document.querySelector('.pinterest-btn');
+
+            //     console.log('mainId = ', mainId);
+            mainId.setAttribute('href', hsrul);
+            tmainId.setAttribute('href', hturl);
+            lmainId.setAttribute('href', hlurl);
+            pmainId.setAttribute('href', plurl);
+            mainId.setAttribute('onclick', surl);
+            tmainId.setAttribute('onclick', turl);
+            lmainId.setAttribute('onclick', lurl);
+            pmainId.setAttribute('onclick', purl);
+
+
+            var today = new Date();
+            document.getElementById('copyrightyear').innerHTML = today.getFullYear();
+            setTimeout(() => {
+                console.log('overlay-img height2 = ', document.getElementById('image1').offsetHeight);
+                if (screen.width < 821) {
+                    document.querySelector('.player2').setAttribute('height', document.getElementById('mimage1').offsetHeight + 'px');
+                } else {
+                    document.querySelector('.player1').setAttribute('height', document.getElementById('image1').offsetHeight + 'px');
+                }
+                document.querySelector('.home_section4').classList.remove('opacity');
+
+            }, 2000);
+
+        });
+        window.addEventListener('resize', function (event) {
+            if (screen.width < 821) {
+                document.querySelector('.player2').setAttribute('height', document.getElementById('mimage1').offsetHeight + 'px');
+            } else {
+                document.querySelector('.player1').setAttribute('height', document.getElementById('image1').offsetHeight + 'px');
+
+            }
+        });
+
+
+        function openMobileNav() {
+            var nav = document.querySelector('.slds-builder-header');
+            if (nav.classList.contains('m-hide')) {
+                document.getElementById('rowIcon').classList.add('m-hide');
+                document.getElementById('closeIcon').classList.remove('m-hide');
+            }
+            else {
+                document.getElementById('rowIcon').classList.remove('m-hide');
+                document.getElementById('closeIcon').classList.add('m-hide');
+            }
+            nav.classList.toggle('m-hide');
+
+        }
+
+        document.getElementById('image1').setAttribute('src', '/sfsites/c/resource/mindcrowd_style/images/lynda-carter.jpg');
+        document.getElementById('image2').setAttribute('src', '/sfsites/c/resource/mindcrowd_style/images/dina-parise.jpg');
+        document.getElementById('image3').setAttribute('src', '/sfsites/c/resource/mindcrowd_style/images/eric-garcia.jpg');
+        document.getElementById('image4').setAttribute('src', '/sfsites/c/resource/mindcrowd_style/images/leslie-martin.jpg');
+
+        document.getElementById('mimage1').setAttribute('src', '/sfsites/c/resource/mindcrowd_style/images/lynda-carter.jpg');
+        document.getElementById('mimage2').setAttribute('src', '/sfsites/c/resource/mindcrowd_style/images/dina-parise.jpg');
+        document.getElementById('mimage3').setAttribute('src', '/sfsites/c/resource/mindcrowd_style/images/eric-garcia.jpg');
+        document.getElementById('mimage4').setAttribute('src', '/sfsites/c/resource/mindcrowd_style/images/leslie-martin.jpg');
+
+
+        function handleClick() {
+            if (screen.width < 821) {
+                document.getElementById('videoOverlay2').classList.add('slds-hide');
+                document.getElementById('player2').classList.remove('opacity');
+                document.getElementById('player2').contentWindow.postMessage('{"event":"command","func":"' + 'playVideo' + '","args":""}', '*');
+
+            } else {
+                document.getElementById('videoOverlay').classList.add('slds-hide');
+                iframeId = document.getElementById('player');
+                document.getElementById('player').classList.remove('opacity');
+                document.getElementById('player').contentWindow.postMessage('{"event":"command","func":"' + 'playVideo' + '","args":""}', '*');
+            }
+
+        }
+
+        function setImage1() {
+            if (screen.width < 821) {
+                document.getElementById('player2').classList.remove('slds-hide');
+                document.getElementById('mimage1').classList.remove('slds-hide');
+                document.getElementById('mimage2').classList.add('slds-hide');
+                document.getElementById('mimage3').classList.add('slds-hide');
+                document.getElementById('mimage4').classList.add('slds-hide');
+                document.getElementById('videoOverlay2').classList.remove('slds-hide');
+
+                document.querySelector('.m-text1').classList.remove('slds-hide');
+                document.querySelector('.m-text2').classList.add('slds-hide');
+                document.querySelector('.m-text3').classList.add('slds-hide');
+                document.querySelector('.m-text4').classList.add('slds-hide');
+                // iframeId = document.querySelector('.player2');
+                // iframeId.src = "";
+                document.getElementById('player2').contentWindow.postMessage('{"event":"command","func":"' + 'stopVideo' + '","args":""}', '*');
+                iframeId.classList.add('opacity');
+            } else {
+                document.getElementById('player').classList.remove('slds-hide');
+                document.getElementById('image1').classList.remove('slds-hide');
+                document.getElementById('image2').classList.add('slds-hide');
+                document.getElementById('image3').classList.add('slds-hide');
+                document.getElementById('image4').classList.add('slds-hide');
+                document.getElementById('videoOverlay').classList.remove('slds-hide');
+
+                document.querySelector('.text1').classList.remove('slds-hide');
+                document.querySelector('.text2').classList.add('slds-hide');
+                document.querySelector('.text3').classList.add('slds-hide');
+                document.querySelector('.text4').classList.add('slds-hide');
+                // iframeId = document.querySelector('.player');
+                // iframeId.src = "";
+                document.getElementById('player').contentWindow.postMessage('{"event":"command","func":"' + 'stopVideo' + '","args":""}', '*');
+                iframeId.classList.add('opacity');
+            }
+
+        }
+        function setImage2() {
+            if (screen.width < 821) {
+                document.getElementById('player2').classList.add('slds-hide');
+                document.getElementById('mimage1').classList.add('slds-hide');
+                document.getElementById('mimage2').classList.remove('slds-hide');
+                document.getElementById('mimage3').classList.add('slds-hide');
+                document.getElementById('mimage4').classList.add('slds-hide');
+
+                document.querySelector('.m-text1').classList.add('slds-hide');
+                document.querySelector('.m-text2').classList.remove('slds-hide');
+                document.querySelector('.m-text3').classList.add('slds-hide');
+                document.querySelector('.m-text4').classList.add('slds-hide');
+                // iframeId = document.querySelector('.player2');
+                // iframeId.src = "";
+                document.getElementById('player2').contentWindow.postMessage('{"event":"command","func":"' + 'stopVideo' + '","args":""}', '*');
+                iframeId.classList.add('opacity');
+
+            } else {
+                document.getElementById('player').classList.add('slds-hide');
+                document.getElementById('image1').classList.add('slds-hide');
+                document.getElementById('image2').classList.remove('slds-hide');
+                document.getElementById('image3').classList.add('slds-hide');
+                document.getElementById('image4').classList.add('slds-hide');
+
+                document.querySelector('.text1').classList.add('slds-hide');
+                document.querySelector('.text2').classList.remove('slds-hide');
+                document.querySelector('.text3').classList.add('slds-hide');
+                document.querySelector('.text4').classList.add('slds-hide');
+                // iframeId = document.querySelector('.player');
+                // iframeId.src = "";
+                document.getElementById('player').contentWindow.postMessage('{"event":"command","func":"' + 'stopVideo' + '","args":""}', '*');
+                iframeId.classList.add('opacity');
+            }
+
+        }
+        function setImage3() {
+            if (screen.width < 821) {
+                document.getElementById('player2').classList.add('slds-hide');
+                document.getElementById('mimage1').classList.add('slds-hide');
+                document.getElementById('mimage2').classList.add('slds-hide');
+                document.getElementById('mimage3').classList.remove('slds-hide');
+                document.getElementById('mimage4').classList.add('slds-hide');
+
+                document.querySelector('.m-text1').classList.add('slds-hide');
+                document.querySelector('.m-text2').classList.add('slds-hide');
+                document.querySelector('.m-text3').classList.remove('slds-hide');
+                document.querySelector('.m-text4').classList.add('slds-hide');
+                // iframeId = document.querySelector('.player2');
+                // iframeId.src = "";
+                document.getElementById('player2').contentWindow.postMessage('{"event":"command","func":"' + 'stopVideo' + '","args":""}', '*');
+                iframeId.classList.add('opacity');
+            } else {
+                document.getElementById('player').classList.add('slds-hide');
+                document.getElementById('image1').classList.add('slds-hide');
+                document.getElementById('image2').classList.add('slds-hide');
+                document.getElementById('image3').classList.remove('slds-hide');
+                document.getElementById('image4').classList.add('slds-hide');
+
+                document.querySelector('.text1').classList.add('slds-hide');
+                document.querySelector('.text2').classList.add('slds-hide');
+                document.querySelector('.text3').classList.remove('slds-hide');
+                document.querySelector('.text4').classList.add('slds-hide');
+                // iframeId = document.querySelector('.player');
+                // iframeId.src = "";
+                document.getElementById('player').contentWindow.postMessage('{"event":"command","func":"' + 'stopVideo' + '","args":""}', '*');
+                iframeId.classList.add('opacity');
+            }
+
+        }
+        function setImage4() {
+            if (screen.width < 821) {
+                document.getElementById('player2').classList.add('slds-hide');
+                document.getElementById('mimage1').classList.add('slds-hide');
+                document.getElementById('mimage2').classList.add('slds-hide');
+                document.getElementById('mimage3').classList.add('slds-hide');
+                document.getElementById('mimage4').classList.remove('slds-hide');
+
+                document.querySelector('.m-text1').classList.add('slds-hide');
+                document.querySelector('.m-text2').classList.add('slds-hide');
+                document.querySelector('.m-text3').classList.add('slds-hide');
+                document.querySelector('.m-text4').classList.remove('slds-hide');
+                // iframeId = document.querySelector('.player2');
+                // iframeId.src = "";
+                document.getElementById('player2').contentWindow.postMessage('{"event":"command","func":"' + 'stopVideo' + '","args":""}', '*');
+                iframeId.classList.add('opacity');
+            } else {
+                document.getElementById('player').classList.add('slds-hide');
+                document.getElementById('image1').classList.add('slds-hide');
+                document.getElementById('image2').classList.add('slds-hide');
+                document.getElementById('image3').classList.add('slds-hide');
+                document.getElementById('image4').classList.remove('slds-hide');
+
+                document.querySelector('.text1').classList.add('slds-hide');
+                document.querySelector('.text2').classList.add('slds-hide');
+                document.querySelector('.text3').classList.add('slds-hide');
+                document.querySelector('.text4').classList.remove('slds-hide');
+                // iframeId = document.querySelector('.player');
+                // iframeId.src = "";
+                document.getElementById('player').contentWindow.postMessage('{"event":"command","func":"' + 'stopVideo' + '","args":""}', '*');
+                iframeId.classList.add('opacity');
+            }
+
+        }
+        if (getCookie('cookieAccept')) {
+            document.getElementById('cookieConsent').remove();
+        }
+
+        function handleClickSetConsent() {
+            document.cookie = 'cookieAccept = ' + true;
+            document.cookie = 'preferences = ' + true;
+            document.getElementById('cookieConsent').remove();
+        }
+        function getCookie(name) {
+            var cookieString = "; " + document.cookie;
+            cookieString = cookieString.replace('LSKey-c$', '');
+            var parts = cookieString.split("; " + name + "=");
+
+            if (parts.length === 2) {
+                return parts.pop().split(";").shift();
+            }
+            return null;
+        }
+    </script>
+</apex:page>

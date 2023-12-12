@@ -1,0 +1,27 @@
+@media (min-width: 1116px) {
+    .longitgraph{
+        width:70vw !important; 
+        height:60vh !important;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1115px) {
+    .longitgraph{
+        width:80vw !important; 
+        height:60vh !important;
+    }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+    .longitgraph{
+        width:80vw !important; 
+        height:40vh !important;
+    }
+}
+
+@media (min-width: 0px) and (max-width: 480px) {
+    .longitgraph{
+        width:70vw !important; 
+        height:40vh !important;
+    }
+}

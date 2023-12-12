@@ -1,0 +1,9 @@
+<design:component label="mindCrowdFooter">
+    <design:attribute name="aboutMindcrowd" label="ABOUT MINDCROWD®" description="ABOUT MINDCROWD®"/>
+    <design:attribute name="firstCrowdSourceText" label="First crowdsourced scientific research to understand how the brain ages to prevent diseases like dementia. We need one million people to take a Memory and Attention Test." description="First crowdsourced scientific research to understand how the brain ages to prevent diseases like dementia. We need one million people to take a Memory and Attention Test."/>
+    <design:attribute name="followUs" label="FOLLOW US" description="FOLLOW US"/>
+    <design:attribute name="office" label="OFFICE" description="OFFICE"/>
+    <design:attribute name="addressOne" label="445 N 5th St" description="445 N 5th St"/>
+    <design:attribute name="addressTwo" label="Phoenix, Arizona 85004" description="Phoenix, Arizona 85004"/>
+
+</design:component>

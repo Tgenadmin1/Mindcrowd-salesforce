@@ -1,0 +1,270 @@
+<template>
+    <lightning-layout class="home_section4">
+        <lightning-layout-item size="12" small-device-size="12" medium-device-size="12" large-device-size="12"
+            class="content">
+            <h2>{label.homesection4001}</h2>
+
+            <table border="0" class="marginT30 desktop-table">
+                <tr>
+                    <td class="home_section4-col1">
+                        <div class="main-img">
+                            <div class="video-box image1 fade-in">
+                                <iframe class="player opacity player1"
+                                    title="Lynda Carter, Wonder Woman &amp; Alzheimer's research advocate wants you to take MindCrowd Memory test"
+                                    width="100%" height="385" src={fullUrl} frameborder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                    allowfullscreen=""></iframe>
+                                <div class="video-overlay" onclick={handleClick}>
+                                    <img class="overlay-img" width="735" height="377" src={image1} alt="Lynda Carter’s" title="Lynda Carter’s">
+                                </div>
+                            </div>
+                            <img width="735" height="377" class="image2 fade-in slds-hide" src={image2} alt="DINA PARISE" title="DINA PARISE">
+                            <img width="735" height="377" class="image3 fade-in slds-hide" src={image3} alt="ERIC GARCIA" title="ERIC GARCIA">
+                            <img width="735" height="377" class="image4 fade-in slds-hide" src={image4} alt="LESLIE MARTIN" title="LESLIE MARTIN">
+                        </div>
+                    </td>
+                    <td class="home_section4-col2 ">
+                        <div class="img-text desktop-text1 ">
+                            <div class="text1 fade-in">
+                                <p>
+                                    <lightning-formatted-rich-text value={label.homesection4002}></lightning-formatted-rich-text>
+                                    
+                                </p>
+                                <p>
+                                    
+                                    <lightning-formatted-rich-text value={label.homesection4003}></lightning-formatted-rich-text>
+                                </p>
+                                <p class="paddingB0 marginB0">
+                                    
+                                    <lightning-formatted-rich-text value={label.homesection4004}></lightning-formatted-rich-text>
+                                </p>
+                            </div>
+                            <div class="text2 fade-in slds-hide">
+                                <p>
+                                   
+                                    <lightning-formatted-rich-text value={label.homesection4005}></lightning-formatted-rich-text>
+                                </p>
+    
+    
+                                <p class="paddingB0 marginB0 "><strong class="upperCase">
+                                    
+                                    <lightning-formatted-rich-text value={label.homesection4006}></lightning-formatted-rich-text>
+                                
+                                </strong>
+                                   
+                                    <span class="name-blow-text">
+                                        
+                                        <lightning-formatted-rich-text value={label.homesection4007}></lightning-formatted-rich-text>
+                                    
+                                    </span>
+                                </p>
+    
+    
+                            </div>
+                            <div class="text3 fade-in slds-hide">
+                                <p>
+                                    <lightning-formatted-rich-text value={label.homesection4008}></lightning-formatted-rich-text>
+                                </p>
+                                <p>
+                                    
+                                    <lightning-formatted-rich-text value={label.homesection4009}></lightning-formatted-rich-text>
+                                </p>
+                                <p class="paddingB0 marginB0"><strong>
+                                    
+                                    <lightning-formatted-rich-text value={label.homesection4010}></lightning-formatted-rich-text>
+                                </strong> <br>
+                                    <span class="name-blow-text">
+                                        
+                                        <lightning-formatted-rich-text value={label.homesection4011}></lightning-formatted-rich-text>
+                                    </span>
+                                </p>
+    
+    
+                            </div>
+                            <div class="text4 fade-in slds-hide">
+                                <p>
+                                    
+                                    <lightning-formatted-rich-text value={label.homesection4012}></lightning-formatted-rich-text>
+                                </p>
+                                <p>
+                                    
+                                    <lightning-formatted-rich-text value={label.homesection4014}></lightning-formatted-rich-text>
+                                </p>
+                                <p class="paddingB0 marginB0">
+                                   
+                                     <lightning-formatted-rich-text value={label.homesection4015}></lightning-formatted-rich-text>
+                                   
+                              
+                                    <span class="name-blow-text">
+                                       
+                                        <lightning-formatted-rich-text value={label.homesection4016}></lightning-formatted-rich-text>
+                                    </span>
+                                </p>
+    
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td> <div class="slds-grid slds-gutters marginT20 gall-thumb-img">
+                        <div class="slds-col 1 paddingL0" onclick={imageChange1}>
+                            <span><img width="177" height="100" src={image1Thamb1} alt="Lynda Carter’s" title="Lynda Carter’s"></span>
+                        </div>
+                        <div class="slds-col 2" onclick={imageChange2}>
+                            <span><img width="177" height="100" src={image1Thamb2} alt="DINA PARISE" title="DINA PARISE"></span>
+                        </div>
+                        <div class="slds-col 3" onclick={imageChange3}>
+                            <span><img width="177" height="100" src={image1Thamb3} alt="ERIC GARCIA " title="ERIC GARCIA "></span>
+                        </div>
+                        <div class="slds-col 4 paddingR0" onclick={imageChange4}>
+                            <span><img width="177" height="100" src={image1Thamb4} alt="LESLIE MARTIN" title="LESLIE MARTIN"></span>
+                        </div>
+                    </div></td>
+                    <td class="possition-r">
+                        <a href={Community_Url_consent} class="pink-btn slds-button text-center gall-button "
+                            title="Click to Take the MindCrowd Memory Test">{label.homesection4013}</a>
+                    </td>
+                </tr>
+            </table>
+
+
+            <table border="0" class="marginT30 mobile-table">
+                <tr>
+                    <td class="home_section4-col1">
+                        <div class="main-img">
+                            <div class="video-box m-image1 fade-in">
+                                <iframe class="player opacity player2"
+                                    title="Lynda Carter, Wonder Woman &amp; Alzheimer's research advocate wants you to take MindCrowd Memory test"
+                                    width="100%" height="385" src={fullUrl} frameborder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                    allowfullscreen=""></iframe>
+                                <div class="video-overlay video-overlay2" onclick={handleClick}>
+                                    <img class=" overlay-img2 m-overlay-img2 " width="735" height="377" src={image1} alt="" title="">
+                                </div>
+                            </div>
+                            <img width="735" height="377" class="image2 m-image2 fade-in slds-hide" src={image2} alt="DINA PARISE" title="DINA PARISE">
+                            <img width="735" height="377" class="image3 m-image3 fade-in slds-hide" src={image3} alt="ERIC GARCIA " title="ERIC GARCIA ">
+                            <img width="735" height="377" class="image4 m-image4 fade-in slds-hide" src={image4} alt="LESLIE MARTIN" title="LESLIE MARTIN">
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td> <div class="slds-grid slds-gutters marginT10 gall-thumb-img">
+                        <div class="slds-col 1 paddingL0" onclick={imageChange1}>
+                            <span><img width="177" height="100" src={image1Thamb1} alt="Lynda Carter’s" title="Lynda Carter’s"></span>
+                        </div>
+                        <div class="slds-col 2" onclick={imageChange2}>
+                            <span><img width="177" height="100" src={image1Thamb2} alt="DINA PARISE" title="DINA PARISE"></span>
+                        </div>
+                        <div class="slds-col 3" onclick={imageChange3}>
+                            <span><img width="177" height="100" src={image1Thamb3} alt="ERIC GARCIA" title="ERIC GARCIA"></span>
+                        </div>
+                        <div class="slds-col 4 paddingR0" onclick={imageChange4}>
+                            <span><img width="177" height="100" src={image1Thamb4} alt="LESLIE MARTIN" title="LESLIE MARTIN"></span>
+                        </div>
+                    </div></td>
+                    
+                    
+                </tr>
+                <tr>
+                    <td class="home_section4-col2 ">
+                        <div class="img-text desktop-text1 ">
+                            <div class="m-text1 fade-in">
+                                <p>
+                                    <lightning-formatted-rich-text value={label.homesection4002}></lightning-formatted-rich-text>
+                                    
+                                </p>
+                                <p>
+                                    
+                                    <lightning-formatted-rich-text value={label.homesection4003}></lightning-formatted-rich-text>
+                                </p>
+                                <p class="paddingB0 marginB0">
+                                    
+                                    <lightning-formatted-rich-text value={label.homesection4004}></lightning-formatted-rich-text>
+                                </p>
+                            </div>
+                            <div class="m-text2 fade-in slds-hide">
+                                <p>
+                                   
+                                    <lightning-formatted-rich-text value={label.homesection4005}></lightning-formatted-rich-text>
+                                </p>
+    
+    
+                                <p class="paddingB0 marginB0 "><strong class="upperCase">
+                                    
+                                    <lightning-formatted-rich-text value={label.homesection4006}></lightning-formatted-rich-text>
+                                
+                                </strong>
+                                   
+                                    <span class="name-blow-text">
+                                        
+                                        <lightning-formatted-rich-text value={label.homesection4007}></lightning-formatted-rich-text>
+                                    
+                                    </span>
+                                </p>
+    
+    
+                            </div>
+                            <div class="m-text3 fade-in slds-hide">
+                                <p>
+                                    <lightning-formatted-rich-text value={label.homesection4008}></lightning-formatted-rich-text>
+                                </p>
+                                <p>
+                                    
+                                    <lightning-formatted-rich-text value={label.homesection4009}></lightning-formatted-rich-text>
+                                </p>
+                                <p class="paddingB0 marginB0"><strong>
+                                    
+                                    <lightning-formatted-rich-text value={label.homesection4010}></lightning-formatted-rich-text>
+                                </strong> <br>
+                                    <span class="name-blow-text">
+                                        
+                                        <lightning-formatted-rich-text value={label.homesection4011}></lightning-formatted-rich-text>
+                                    </span>
+                                </p>
+    
+    
+                            </div>
+                            <div class="m-text4 fade-in slds-hide">
+                                <p>
+                                    
+                                    <lightning-formatted-rich-text value={label.homesection4012}></lightning-formatted-rich-text>
+                                </p>
+                                <p>
+                                    
+                                    <lightning-formatted-rich-text value={label.homesection4014}></lightning-formatted-rich-text>
+                                </p>
+                                <p class="paddingB0 marginB0">
+                                    <strong>
+                                     <lightning-formatted-rich-text value={label.homesection4015}></lightning-formatted-rich-text>
+                                    </strong><br>
+                              
+                                    <span class="name-blow-text">
+                                        <lightning-formatted-rich-text value={label.homesection4016}></lightning-formatted-rich-text>
+                                    </span>
+                                </p>
+    
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                
+                    <tr>
+                        <td class="possition-r">
+                            <a href={Community_Url_consent} class="pink-btn slds-button text-center gall-button "
+                                title="Click to Take the MindCrowd Memory Test">{label.homesection4013}</a>
+                        </td>
+                    </tr>
+              
+               
+                    
+               
+            </table>
+
+         
+
+        </lightning-layout-item>
+
+    </lightning-layout>
+
+</template>

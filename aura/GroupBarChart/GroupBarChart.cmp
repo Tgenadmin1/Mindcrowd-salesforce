@@ -1,0 +1,9 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global">
+	<ltng:require scripts="{!$Resource.Chartsjs  + '/Chart.min.js'}" afterScriptsLoaded="{!c.ctr}"/>
+    <aura:attribute name="chartData" type="Map" access="global" />
+    <aura:attribute name="chartLabel" type="String" access="global" />
+  	<aura:attribute name="bg-colors" type="Map" access="global" />
+    <div class="slds-col slds-size--1-of-1 slds-small-size--1-of-2 slds-medium-size--3-of-4">
+        <canvas aura:id="barChart" id="barChart" />
+    </div>
+</aura:component>

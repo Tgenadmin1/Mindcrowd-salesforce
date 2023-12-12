@@ -1,0 +1,55 @@
+<aura:component controller="ParticipantResultsControllerES" implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+    <aura:attribute name="attScore" type="String"  access="global" />
+    <aura:attribute name="contactId" type="String"  access="global" />
+    <aura:attribute name="gameName" type="String"  access="global" />
+    <aura:attribute name="memScore" type="String"  access="global" />
+    <aura:attribute name="attImg" type="String"  access="global" />
+    <aura:attribute name="memImg" type="String"  access="global" />
+    <aura:attribute name="lValue" type="Integer" access="global" />
+    <aura:attribute name="hValue" type="Integer" access="global" />
+    <aura:attribute name="mValue" type="Integer" access="global" />
+    <aura:attribute name="yourScore" type="Integer" access="global" default="0" />
+    <aura:attribute name="peopleLikeYou" type="Integer" access="global" />
+    <aura:attribute name="overallAverage" type="Integer" access="global" />
+    <aura:attribute name="correctAnswers" type="Integer" access="global" />
+    <aura:attribute name="reactionTime" type="Integer" access="global" />
+    <aura:attribute name="isScoreReactionTime" type="Boolean"  access="global" />
+    
+    
+<!-- <ltng:require scripts="{!join(',',
+    $Resource.JQuery + '/jquery.min.js',
+    $Resource.JQuery + '/html2canvas.js')}" afterScriptsLoaded="{!c.myAction}"/> -->
+    <ltng:require scripts="{!join(',', $Resource.JQuery + '/jquery.min.js', $Resource.JQuery + '/html2canvas.js')}" afterScriptsLoaded="{!c.myAction}" />
+
+        <!-- <ltng:require scripts="{!$Resource.JQuery + '/jquery.min.js'}" afterScriptsLoaded="{!c.myAction}" />
+        <ltng:require scripts="{!$Resource.JQuery + '/html2canvas.js'}" /> -->
+
+    <div>
+        <div class="pngBox-main-box" id="pngBoxAttentionBox">
+            <div id="pngBoxAttention">
+                <div class="png-title1">{!v.attScore}</div>
+                <div class="bg-img">
+                    <img src="{!v.attImg}" height="450" width="810" />
+                  </div>
+            </div>
+        </div>
+        <div class="pngBox-main-box" id="pngBoxMemoryBox">
+            <div id="pngBoxMemory">
+                <div class="png-title1">{!v.memScore}</div>
+                <div class="bg-img">
+                    <img src="{!v.memImg}" height="450" width="810" />
+                  </div>
+            </div>
+        </div>
+       
+        
+
+
+        <div id="previewImage"></div>
+        <!-- <a id="btn-Convert-Html2Image" href="#">sss</a> -->
+    </div>
+
+
+
+
+</aura:component>

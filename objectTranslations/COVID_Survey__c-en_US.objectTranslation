@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>C19</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>C19s</value>
+    </caseValues>
+    <fields>
+        <label><!-- C19_v1.0.30 --></label>
+        <name>Acid_Reflux__c</name>
+    </fields>
+    <fields>
+        <label><!-- C19_v1.0.9 --></label>
+        <name>Are_you_currently_experiencing__c</name>
+    </fields>
+    <fields>
+        <label><!-- C19_v1.0.34 --></label>
+        <name>Are_you_currently_participating__c</name>
+    </fields>
+    <fields>
+        <label><!-- C19_v1.0.17 --></label>
+        <name>Asthma__c</name>
+    </fields>
+    <fields>
+        <label><!-- C19_v1.0.8 --></label>
+        <name>At_any_time_in_the_hospital_were_you__c</name>
+    </fields>
+    <fields>
+        <label><!-- C19_v1.0.18 --></label>
+        <name>COPD__c</name>
+    </fields>
+    <fields>
+        <label><!-- C19_v1.0.31 --></label>
+        <name>Cancer__c</name>
+    </fields>
+    <fields>
+        <label><!-- Contact --></label>
+        <name>Contact__c</name>
+        <relationshipLabel><!-- C19s --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- C19_v1.0.27 --></label>
+        <name>Crohns_Disease__c</name>
+    </fields>
+    <fields>
+        <label><!-- C19_v1.0.11 --></label>
+        <name>Did_you_experience_any_flu_like_symptoms__c</name>
+    </fields>
+    <fields>
+        <label><!-- C19_v1.0.35 --></label>
+        <name>Did_you_receive_a_COVID_19_vaccine__c</name>
+    </fields>
+    <fields>
+        <label><!-- C19_v1.0.1 --></label>
+        <name>Did_you_receive_a_diagnosis_of_COVID_19__c</name>
+    </fields>
+    <fields>
+        <label><!-- C19_v1.0.32 --></label>
+        <name>Do_you_currently_smoke_tobacco__c</name>
+    </fields>
+    <fields>
+        <label><!-- C19_v1.0.26 --></label>
+        <name>Eczema__c</name>
+    </fields>
+    <fields>
+        <label><!-- Email --></label>
+        <name>Email__c</name>
+    </fields>
+    <fields>
+        <label><!-- C19_v1.0.16 --></label>
+        <name>Epilepsy__c</name>
+    </fields>
+    <fields>
+        <label><!-- C19_v1.0.5 --></label>
+        <name>For_how_many_days_were_you_hospitalized__c</name>
+    </fields>
+    <fields>
+        <label><!-- C19_v1.0.39 --></label>
+        <name>Have_u_received_a_COVID_19_booster_shot__c</name>
+    </fields>
+    <fields>
+        <label><!-- C19_v1.0.12 --></label>
+        <name>Have_you_been_tested_for_coronavirus__c</name>
+    </fields>
+    <fields>
+        <label><!-- C19_v1.0.33 --></label>
+        <name>Have_you_ever_smoked_tobacco__c</name>
+    </fields>
+    <fields>
+        <label><!-- C19_v1.0.14 --></label>
+        <name>Heart_Disease__c</name>
+    </fields>
+    <fields>
+        <label><!-- C19_v1.0.13 --></label>
+        <name>High_blood_pressure__c</name>
+    </fields>
+    <fields>
+        <label><!-- C19_v1.0.24 --></label>
+        <name>Lupus__c</name>
+    </fields>
+    <fields>
+        <label><!-- C19_v1.0.22 --></label>
+        <name>Multiple_Sclerosis__c</name>
+    </fields>
+    <fields>
+        <label><!-- C19_v1.0.19 --></label>
+        <name>Other_lung_disease__c</name>
+    </fields>
+    <fields>
+        <label><!-- C19_v1.0.10 --></label>
+        <name>Please_check_all_that_apply__c</name>
+    </fields>
+    <fields>
+        <label><!-- C19_v1.0.3 --></label>
+        <name>Please_select_the_symptoms__c</name>
+    </fields>
+    <fields>
+        <label><!-- C19_v1.0.25 --></label>
+        <name>Psoriasis__c</name>
+    </fields>
+    <fields>
+        <label><!-- C19_v1.0.23 --></label>
+        <name>Rheumatoid_arthritis__c</name>
+    </fields>
+    <fields>
+        <label><!-- C19_v1.0.15 --></label>
+        <name>Stroke__c</name>
+    </fields>
+    <fields>
+        <label><!-- C19_v1.0.21 --></label>
+        <name>Type_1_Diabetes__c</name>
+    </fields>
+    <fields>
+        <label><!-- C19_v1.0.20 --></label>
+        <name>Type_2_Diabetes__c</name>
+    </fields>
+    <fields>
+        <label><!-- C19_v1.0.28 --></label>
+        <name>Ulcerative_Colitis__c</name>
+    </fields>
+    <fields>
+        <label><!-- C19_v1.0.29 --></label>
+        <name>Ulcers__c</name>
+    </fields>
+    <fields>
+        <label><!-- C19_v1.0.6 --></label>
+        <name>Were_you_admitted_to_the_ICU__c</name>
+    </fields>
+    <fields>
+        <label><!-- C19_v1.0.4 --></label>
+        <name>Were_you_hospitalized_for_COVID_19__c</name>
+    </fields>
+    <fields>
+        <label><!-- C19_v1.0.7 --></label>
+        <name>Were_you_intubated_and_put_on_a__c</name>
+    </fields>
+    <fields>
+        <label><!-- C19_v1.0.2 --></label>
+        <name>What_date_did_you_receive_your_COVID_19__c</name>
+    </fields>
+    <fields>
+        <label><!-- C19_v1.0.36 --></label>
+        <name>What_vaccine_brand_did_you_receive__c</name>
+    </fields>
+    <fields>
+        <label><!-- C19_v1.0.40 --></label>
+        <name>What_vaccine_brand_u_receive_for_booster__c</name>
+    </fields>
+    <fields>
+        <label><!-- C19_v1.0.41 --></label>
+        <name>When_was_the_date_of_your_booster_shoot__c</name>
+    </fields>
+    <fields>
+        <label><!-- C19_v1.0.37 --></label>
+        <name>When_was_the_date_of_your_first_dose__c</name>
+    </fields>
+    <fields>
+        <label><!-- C19_v1.0.38 --></label>
+        <name>When_was_the_date_of_your_second_dose__c</name>
+    </fields>
+    <layouts>
+        <layout>COVID Survey Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Survey Response --></label>
+            <section>Survey Response</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

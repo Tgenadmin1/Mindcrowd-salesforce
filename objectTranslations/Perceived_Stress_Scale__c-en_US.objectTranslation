@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>STRESS</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>STRESSs</value>
+    </caseValues>
+    <fields>
+        <label><!-- Contact --></label>
+        <name>Contact__c</name>
+        <relationshipLabel><!-- STRESSs --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Email --></label>
+        <name>Email__c</name>
+    </fields>
+    <fields>
+        <label><!-- STRESS_v1.0.9 --></label>
+        <name>In_the_last_month_how_often_angered__c</name>
+    </fields>
+    <fields>
+        <label><!-- STRESS_v1.0.4 --></label>
+        <name>In_the_last_month_how_often_confident__c</name>
+    </fields>
+    <fields>
+        <label><!-- STRESS_v1.0.7 --></label>
+        <name>In_the_last_month_how_often_control__c</name>
+    </fields>
+    <fields>
+        <label><!-- STRESS_v1.0.6 --></label>
+        <name>In_the_last_month_how_often_cope__c</name>
+    </fields>
+    <fields>
+        <label><!-- STRESS_v1.0.2 --></label>
+        <name>In_the_last_month_how_often_have_felt__c</name>
+    </fields>
+    <fields>
+        <label><!-- STRESS_v1.0.1 --></label>
+        <name>In_the_last_month_how_often_have_you__c</name>
+    </fields>
+    <fields>
+        <label><!-- STRESS_v1.0.3 --></label>
+        <name>In_the_last_month_how_often_nervous__c</name>
+    </fields>
+    <fields>
+        <label><!-- STRESS_v1.0.10 --></label>
+        <name>In_the_last_month_how_often_overcome__c</name>
+    </fields>
+    <fields>
+        <label><!-- STRESS_v1.0.5 --></label>
+        <name>In_the_last_month_how_often_things__c</name>
+    </fields>
+    <fields>
+        <label><!-- STRESS_v1.0.8 --></label>
+        <name>In_the_last_month_how_often_top__c</name>
+    </fields>
+    <layouts>
+        <layout>Perceived Stress Scale Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Survey Response --></label>
+            <section>Survey Response</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

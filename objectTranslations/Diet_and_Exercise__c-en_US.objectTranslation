@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Diet and Exercise</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Diet and Exercises</value>
+    </caseValues>
+    <fields>
+        <label><!-- Contact --></label>
+        <name>Contact__c</name>
+        <relationshipLabel><!-- Diet and Exercises --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- During the past month which statement --></label>
+        <name>During_the_past_month_which_statement__c</name>
+    </fields>
+    <fields>
+        <label><!-- Email --></label>
+        <name>Email__c</name>
+    </fields>
+    <fields>
+        <label><!-- How many years have you practiced --></label>
+        <name>How_many_years_have_you_practiced__c</name>
+    </fields>
+    <fields>
+        <label><!-- How would you best describe your diet --></label>
+        <name>How_would_you_best_describe_your_diet__c</name>
+    </fields>
+    <layouts>
+        <layout>Diet Excercise Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Survey Response --></label>
+            <section>Survey Response</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

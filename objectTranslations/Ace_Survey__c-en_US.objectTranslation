@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Ace Survey</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Ace Surveys</value>
+    </caseValues>
+    <fields>
+        <label><!-- Contact --></label>
+        <name>Contact__c</name>
+        <relationshipLabel><!-- Ace Surveys --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Did a household member go to prison --></label>
+        <name>Did_a_household_member_go_to_prison__c</name>
+    </fields>
+    <fields>
+        <label><!-- Did you live with anyone who was a --></label>
+        <name>Did_you_live_with_anyone_who_was_a__c</name>
+    </fields>
+    <fields>
+        <label><!-- Email --></label>
+        <name>Email__c</name>
+    </fields>
+    <fields>
+        <label><!-- No one in your family loved you --></label>
+        <name>No_one_in_your_family_loved_you__c</name>
+    </fields>
+    <fields>
+        <label><!-- Often pushed grabbed slapped or had some --></label>
+        <name>Often_pushed_grabbed_slapped_or_had_some__c</name>
+    </fields>
+    <fields>
+        <label><!-- Push grab slap or throw something at you --></label>
+        <name>Push_grab_slap_or_throw_something_at_you__c</name>
+    </fields>
+    <fields>
+        <label><!-- Swear at you insult you put you down --></label>
+        <name>Swear_at_you_insult_you_put_you_down__c</name>
+    </fields>
+    <fields>
+        <label><!-- Touch or fondle you or have you touch --></label>
+        <name>Touch_or_fondle_you_or_have_you_touch__c</name>
+    </fields>
+    <fields>
+        <label><!-- Was a household member depressed --></label>
+        <name>Was_a_household_member_depressed__c</name>
+    </fields>
+    <fields>
+        <label><!-- Were your parents ever separated --></label>
+        <name>Were_your_parents_ever_separated__c</name>
+    </fields>
+    <fields>
+        <label><!-- You didnt have enough to eat had to wear --></label>
+        <name>You_didnt_have_enough_to_eat_had_to_wear__c</name>
+    </fields>
+    <layouts>
+        <layout>ACE Survey Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Survey Response --></label>
+            <section>Survey Response</section>
+        </sections>
+    </layouts>
+    <startsWith>Vowel</startsWith>
+</CustomObjectTranslation>

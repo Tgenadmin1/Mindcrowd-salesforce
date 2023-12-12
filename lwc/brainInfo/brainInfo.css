@@ -1,0 +1,20 @@
+input.slds-input {
+    opacity: 1 !important;
+}
+.inputrequire:after {
+    content: '*';
+    font-size: 20px;
+    color: red;
+
+    display: contents;
+
+}
+.input-invalid {
+    border: solid 1px red;
+    border-radius: 5px;
+}
+  .input-invalid_speaklangage {
+    border: solid 1px red;
+    border-radius: 5px;
+    height: 50%;
+}

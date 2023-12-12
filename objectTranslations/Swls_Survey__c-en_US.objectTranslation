@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>SWLS</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>SWLSs</value>
+    </caseValues>
+    <fields>
+        <label><!-- Contact Name --></label>
+        <name>Contact_Name__c</name>
+        <relationshipLabel><!-- SWLSs --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Contact --></label>
+        <name>Contact__c</name>
+    </fields>
+    <fields>
+        <help><!-- created for marketing cloud --></help>
+        <label><!-- Email --></label>
+        <name>Email__c</name>
+    </fields>
+    <fields>
+        <help><!-- I am satisfied with my life. --></help>
+        <label><!-- SWLS_v1.0.3 --></label>
+        <name>I_am_satisfied_with_my_life__c</name>
+    </fields>
+    <fields>
+        <help><!-- So far, I have gotten the important things I want in life. --></help>
+        <label><!-- SWLS_v1.0.4 --></label>
+        <name>I_have_gotten_important_things_in_life__c</name>
+    </fields>
+    <fields>
+        <help><!-- If I could live my life over, I would change almost nothing. --></help>
+        <label><!-- SWLS_v1.0.5 --></label>
+        <name>If_I_live_my_life_over_I_change_nothing__c</name>
+    </fields>
+    <fields>
+        <help><!-- In most ways my life is close to my ideal. --></help>
+        <label><!-- SWLS_v1.0.1 --></label>
+        <name>In_most_ways_my_life_is_close_to_my_idea__c</name>
+    </fields>
+    <fields>
+        <help><!-- The conditions of my life are excellent. --></help>
+        <label><!-- SWLS_v1.0.2 --></label>
+        <name>The_conditions_of_my_life_are_excellent__c</name>
+    </fields>
+    <layouts>
+        <layout>Swls Survey Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

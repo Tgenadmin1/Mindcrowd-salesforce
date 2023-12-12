@@ -1,0 +1,22 @@
+<apex:page standardController="Shipping_Detail__c" recordSetVar="Shipping_Detail" extensions="ShippingDetailsController">
+      <apex:includeLightning />
+	<div id="lightningvf" />
+    <script>
+        $Lightning.use("c:ShipmentApp", function() {
+          $Lightning.createComponent("c:ReceiveShipment",
+              { label : "Press Me!",
+               	recordId: '{!$CurrentPage.parameters.id}' 
+              },
+              "lightningvf",
+              function(cmp) {
+                console.log("receive button was created");
+                // do some stuff
+              }
+          );
+        });
+     
+    </script>
+    
+  
+	
+</apex:page>

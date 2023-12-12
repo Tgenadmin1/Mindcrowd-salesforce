@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Participant Game Response</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Participant Game Responses</value>
+    </caseValues>
+    <fields>
+        <label><!-- Contact Name --></label>
+        <name>Contact_Name__c</name>
+        <relationshipLabel><!-- Participant Game Responses --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Don&apos;t Know --></label>
+        <name>Don_t_Know__c</name>
+    </fields>
+    <fields>
+        <label><!-- First Input Time --></label>
+        <name>First_Input_Time__c</name>
+    </fields>
+    <fields>
+        <label><!-- Game Name --></label>
+        <name>Game_Name__c</name>
+        <relationshipLabel><!-- Participant Game Responses --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Generic Responses Id --></label>
+        <name>Generic_Responses_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- ImageName --></label>
+        <name>ImageName__c</name>
+    </fields>
+    <fields>
+        <label><!-- ImageType --></label>
+        <name>ImageType__c</name>
+    </fields>
+    <fields>
+        <label><!-- Is Correct --></label>
+        <name>Is_Correct__c</name>
+    </fields>
+    <fields>
+        <label><!-- Is Practice Question --></label>
+        <name>Is_Practice_Question__c</name>
+    </fields>
+    <fields>
+        <label><!-- LeftImageIndex --></label>
+        <name>LeftImageIndex__c</name>
+    </fields>
+    <fields>
+        <label><!-- Order of Answers --></label>
+        <name>Order_of_Answers__c</name>
+    </fields>
+    <fields>
+        <label><!-- Participant First Response --></label>
+        <name>Participant_First_Response__c</name>
+    </fields>
+    <fields>
+        <label><!-- Participant Game InfoID --></label>
+        <name>Participant_Game_InfoID__c</name>
+        <relationshipLabel><!-- Participant Game Responses --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Participant Response --></label>
+        <name>Participant_Response__c</name>
+    </fields>
+    <fields>
+        <label><!-- Question Number --></label>
+        <name>Question_Number__c</name>
+    </fields>
+    <fields>
+        <label><!-- Question --></label>
+        <name>Question__c</name>
+    </fields>
+    <fields>
+        <label><!-- Reaction Time --></label>
+        <name>Reaction_Time__c</name>
+    </fields>
+    <fields>
+        <label><!-- Reaction Time in ms --></label>
+        <name>Reaction_Time_in_ms__c</name>
+    </fields>
+    <fields>
+        <label><!-- Response Times Id --></label>
+        <name>Response_Times_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- Result Id --></label>
+        <name>Result_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- RightImageIndex --></label>
+        <name>RightImageIndex__c</name>
+    </fields>
+    <fields>
+        <label><!-- Right Answer --></label>
+        <name>Right_Answer__c</name>
+    </fields>
+    <fields>
+        <label><!-- Round --></label>
+        <name>Round__c</name>
+    </fields>
+    <fields>
+        <label><!-- StudyImageCoordinate --></label>
+        <name>StudyImageCoordinate__c</name>
+    </fields>
+    <fields>
+        <label><!-- TestImageCoordinate --></label>
+        <name>TestImageCoordinate__c</name>
+    </fields>
+    <fields>
+        <label><!-- Test Session Id --></label>
+        <name>Test_Session_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- Time To First Key Stroke --></label>
+        <name>Time_To_First_Key_Stroke__c</name>
+    </fields>
+    <fields>
+        <label><!-- Time for Each Box --></label>
+        <name>Time_for_Each_Box__c</name>
+    </fields>
+    <fields>
+        <label><!-- Total Time for All Boxes --></label>
+        <name>Total_Time_for_All_Boxes__c</name>
+    </fields>
+    <fields>
+        <label><!-- User Id --></label>
+        <name>User_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- Version --></label>
+        <name>Version__c</name>
+    </fields>
+    <layouts>
+        <layout>Participant Game Response Layout</layout>
+        <sections>
+            <label><!-- Additional Details --></label>
+            <section>Additional Details</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

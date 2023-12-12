@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LightningComponentBundle xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>52.0</apiVersion>
+    <isExposed>true</isExposed>
+        <targets>
+            <target>lightning__AppPage</target>
+            <target>lightning__RecordPage</target>
+            <target>lightning__HomePage</target>
+            <target>lightningCommunity__Page</target>
+            <target>lightningCommunity__Default</target>
+        </targets>
+        <targetConfigs>  
+            <targetConfig targets="lightning__HomePage,lightning__RecordPage,lightningCommunity__Default">
+                <property name="consent_text_1" type="String" default="WHICH LANGUAGE WOULD YOU LIKE TO TAKE THE TEST IN? TAKE YOUR PICK!" label="consent_text_1"/>
+                <property name="consent_text_2" type="String" default="The test is currently available in English and Spanish." label="consent_text_2"/>
+                <property name="consent_text_3" type="String" default="Note: Some bilingual people have reported that taking the test in their maternal language was easier than taking it in their second language." label="consent_text_3"/>
+                <property name="consent_text_5" type="String" default="CLICK HERE TO START" label="consent_text_5"/>
+            </targetConfig>
+        </targetConfigs>
+</LightningComponentBundle>

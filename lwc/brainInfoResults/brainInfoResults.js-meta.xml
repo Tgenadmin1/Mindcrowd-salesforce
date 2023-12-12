@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LightningComponentBundle xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>51.0</apiVersion>
+    <isExposed>true</isExposed>
+    <targets>
+        <target>lightning__AppPage</target>
+        <target>lightning__RecordPage</target>
+        <target>lightning__HomePage</target>
+        <target>lightningCommunity__Page</target>
+        <target>lightningCommunity__Default</target>
+    </targets>
+
+    <targetConfigs>  
+        <targetConfig targets="lightning__HomePage,lightning__RecordPage,lightningCommunity__Default">
+            <property name="finish" type="String" default="Want more MindCrowd?" label="Want more MindCrowd?"/>
+            <property name="finish_text_4" type="String" default="You can make a difference and learn about your brain." label="You can make a difference and learn about your brain."/>
+            <property name="braininfo01" type="String" default="Last Chance to Get a Copy of Your Results!" label="Last Chance to Get a Copy of Your Results!"/>
+            <property name="braininfo02" type="String" default="We can still email you your results plus a VIP invitation to play more free brain games, and updates about brain research and other studies you can join." label="braininfo02"/>
+            <property name="finish_text_12" type="String" default="Please Enter your Email." label="Please Enter your Email."/>
+            <property name="finish_text_11" type="String" default="Email address" label="Email address"/>
+            <property name="finish_text_6" type="String" default="First Name" label="First Name"/>
+            <property name="finish_text_3" type="String" default="Would you like to receive:A copy of your results to keep and share with your friends,A VIP invitation  to play even more brain games, and Updates about brain research and other studies you can join." label="finish_text_3"/>
+            <property name="finish_text_7" type="String" default="Numbers are not allowed" label="Numbers are not allowed"/>
+            <property name="finish_text_8" type="String" default="Please Enter your First Name." label="Please Enter your First Name."/>
+            <property name="finish_text_9" type="String" default="Last Name" label="Last Name"/>
+            <property name="finish_text_10" type="String" default="Please Enter your Last Name." label="Please Enter your Last Name."/>
+            <property name="finish_text_13" type="String" default="YES, PLEASE AND LET'S SEE MY RESULTS" label="YES, PLEASE AND LET'S SEE MY RESULTS"/>
+            <property name="finish_text_13a" type="String" default="Yes, Please" label="Yes, Please"/>
+            <property name="finish_text_15" type="String" default="No, take me to my results" label="No, take me to my results"/>
+            <property name="finish_text_16" type="String" default="You may opt-out anytime" label="You may opt-out anytime"/>
+            <property name="finish_text_17" type="String" default="Please check your email address and try again." label="Please check your email address and try again."/>
+            <property name="finish_text_18" type="String" default="Please, make certain that all required information has been entered. Thank you.​" label="finish_test_18"/>
+            
+            <property name="strTitle" type="String" default="Welcome in Salesforce" label="Enter the title"/>
+            
+        </targetConfig>
+    </targetConfigs>
+    
+    
+</LightningComponentBundle>

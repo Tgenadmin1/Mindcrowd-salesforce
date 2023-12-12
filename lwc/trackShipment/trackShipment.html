@@ -1,0 +1,23 @@
+<template>
+  
+   <template if:true={spinner}>
+     <lightning-spinner variant="brand" size="medium" alternative-text="Loading"></lightning-spinner>
+   </template>
+<!--  <lightning-card>
+        <lightning-layout multiple-rows="true" class="participation-form">
+      
+         <lightning-layout-item size="12" small-device-size="12" medium-device-size="12" large-device-size="12">
+           
+            <p> Record id from shipping detail:{recordId}</p>
+             <lightning-button variant="brand" label="Track Now" title="Submit" onclick={getTrackingId} class="magenta-btn slds-float_left">
+            </lightning-button> 
+            
+          </lightning-layout-item>
+      
+        </lightning-layout>
+        
+        </lightning-card>-->
+<template if:false={spinner}>
+  Delivery has been updated with tracking details
+</template>   
+</template>

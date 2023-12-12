@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>SOCSTRESS</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>SOCSTRESSs</value>
+    </caseValues>
+    <fields>
+        <help><!-- Did a close friend or family member die or have a serious illness( other than your spouse or partner) --></help>
+        <label><!-- SOCSTRESS_v1.0.3 --></label>
+        <name>A_close_friend_or_family_member_die__c</name>
+    </fields>
+    <fields>
+        <label><!-- Contact Name --></label>
+        <name>Contact_Name__c</name>
+        <relationshipLabel><!-- SOCSTRESSs --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Contact --></label>
+        <name>Contact__c</name>
+    </fields>
+    <fields>
+        <help><!-- Did a pet die? --></help>
+        <label><!-- SOCSTRESS_v1.0.12 --></label>
+        <name>Did_a_pet_die__c</name>
+    </fields>
+    <fields>
+        <help><!-- Did your spouse or partner have a serious illness? --></help>
+        <label><!-- SOCSTRESS_v1.0.2 --></label>
+        <name>Did_your_spouse_have_a_serious_illness__c</name>
+    </fields>
+    <fields>
+        <help><!-- Did your spouse or partner die? --></help>
+        <label><!-- SOCSTRESS_v1.0.1 --></label>
+        <name>Did_your_spouse_or_partner_die__c</name>
+    </fields>
+    <fields>
+        <label><!-- Email --></label>
+        <name>Email__c</name>
+    </fields>
+    <fields>
+        <help><!-- Did a family member or close friend have a divorce or breakup? --></help>
+        <label><!-- SOCSTRESS_v1.0.6 --></label>
+        <name>Family_member_have_divorce__c</name>
+    </fields>
+    <fields>
+        <help><!-- Did you have a divorce or breakup with your spouse or partner? --></help>
+        <label><!-- SOCSTRESS_v1.0.5 --></label>
+        <name>Have_a_divorce_or_breakup_with_spouse__c</name>
+    </fields>
+    <fields>
+        <help><!-- Did you have a major conflict with children or grandchildren? --></help>
+        <label><!-- SOCSTRESS_v1.0.7 --></label>
+        <name>Have_a_major_conflict_with_children__c</name>
+    </fields>
+    <fields>
+        <help><!-- Did you have any major accidents,disasters,mugging,unwanted sexual experiences,robberies, similar events --></help>
+        <label><!-- SOCSTRESS_v1.0.8 --></label>
+        <name>Have_any_major_accidents__c</name>
+    </fields>
+    <fields>
+        <help><!-- Did you have any major problems with money? --></help>
+        <label><!-- SOCSTRESS_v1.0.4 --></label>
+        <name>Have_any_major_problems_with_money__c</name>
+    </fields>
+    <fields>
+        <help><!-- Were you physically abused by being hit,slapped,pushed,shoved,punched or threatened with a weapon by a fmily member or close friend? --></help>
+        <label><!-- SOCSTRESS_v1.0.10 --></label>
+        <name>Were_you_physically_abused__c</name>
+    </fields>
+    <fields>
+        <help><!-- Were you verbally abused by being made fun of,severely criticized,told you were a stupid or worthless person or threatened with harm to yourself,your possessions,or your pets,by a familymember or a close friend? --></help>
+        <label><!-- SOCSTRESS_v1.0.11 --></label>
+        <name>Were_you_verbally_abused__c</name>
+    </fields>
+    <fields>
+        <help><!-- Did you or a family member or close friend lose their job or retire? --></help>
+        <label><!-- SOCSTRESS_v1.0.9 --></label>
+        <name>You_or_family_member_lose_job__c</name>
+    </fields>
+    <layouts>
+        <layout>Social Stressor Survey Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

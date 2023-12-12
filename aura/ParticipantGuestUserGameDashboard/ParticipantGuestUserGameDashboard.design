@@ -1,0 +1,10 @@
+<design:component>
+<design:attribute name="Catcme_text_1b" label="Your Speed" description="Your Speed"/>
+    <design:attribute name="Catcme_text_16" label="Average Number of Correct Answers for All Participants" description="Average Number of Correct Answers for All Participants"/>	
+    <design:attribute name="Catcme_text_1" label="Your Score" description="Your Score"/>	
+    <design:attribute name="Catcme_text_14" label="Average Number of Correct Answers for People Like You" description="Average Number of Correct Answers for People Like You"/>	
+    <design:attribute name="Catcme_text_2" label="People Like You" description="People Like You"/>	
+    <design:attribute name="Catcme_text_3" label="Average for All Participants" description="Average for All Participants"/>	
+    <design:attribute name="Catcme_text_15" label="Average Number of Correct Answers for All Participants" description="Average Number of Correct Answers for All Participants"/>	
+    <design:attribute name="Catcme_text_17" label="Average Speed for All Participants" description="Average Speed for All Participants"/>	
+</design:component>

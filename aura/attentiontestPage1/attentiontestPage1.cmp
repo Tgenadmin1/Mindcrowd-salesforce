@@ -1,0 +1,59 @@
+<!--
+   @description       : This 
+  @author            : Raj
+  @UI author         : Raj
+  @last modified on  : 12-12-2021
+  @last modified by  : ChangeMeIn@UserSettingsUnder.SFDoc
+  Modifications Log 
+  Ver   Date         Author         Modification
+  1.0   12-12-2021   Raj      Initial Version
+-->
+
+<aura:component controller="GamesController"
+    implements="forceCommunity:availableForAllPageTypes,lightning:isUrlAddressable,lightning:hasPageReference"
+    access="global">
+    <aura:attribute name="ParticipantGameResponse" type="Object" />
+    <aura:attribute name="myAttribute" type="String" access="global" />
+    <aura:attribute name="participantGameid" type="String" access="global" />
+    <aura:attribute name="ipAddress" type="String" access="global" />
+    <aura:attribute name="browser" type="String" access="global" />
+    <aura:attribute name="goNextPage" type="String" default="false" access="global" />
+    <aura:attribute name="timeZone" type="String" access="global" />
+    <aura:attribute name="latitude" type="String" access="global" />
+    <aura:attribute name="longitude" type="String" access="global" />
+    <aura:attribute name="city" type="String" access="global" />
+    <aura:attribute name="country" type="String" access="global" />
+    <aura:attribute name="region" type="String" access="global" />
+    <aura:attribute name="zip" type="String" access="global" />
+    <aura:attribute name="fullIpData" type="String" access="global" />
+    <!--aura:handler name="init" value="{!this}" action="{!c.startgame1}"/-->
+    <ltng:require scripts="" afterScriptsLoaded="{!c.myAction}" />
+    <div class="main-content-outer marginB30 test opacity" id="mainContent">
+        <div id="steps" class="steps">
+            <div class="step-grid slds-grid slds-gutters text-center">
+                <div class="slds-col  current tick">
+                    <div class="step-number ">{!$Label.c.step_1}</div>
+                </div>
+                <div class="slds-col current">
+                    <div class="step-number">{!$Label.c.step_2}</div>
+                </div>
+                <div class="slds-col">
+                    <div class="step-number">{!$Label.c.step_3}</div>
+                </div>
+                <div class="slds-col">
+                    <div class="step-number">{!$Label.c.step_4a}</div>
+                </div>
+                <div class="slds-col">
+                    <div class="step-number">{!$Label.c.step_4}</div>
+                </div>
+            </div>
+        </div>
+        <div class="main-content-inner marginB90" id="mainContent">
+            <div class="game_panel instructionsLeft">
+                <div class="game_block" id="game_block">
+                    <div class="datablock" aura:id="datablock" id="datablock"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</aura:component>

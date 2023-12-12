@@ -1,0 +1,360 @@
+<template>
+  <lightning-layout multiple-rows="true" class="participation-form">
+    <lightning-layout-item size="12" small-device-size="12" medium-device-size="12" large-device-size="12"
+      class="Participation-header-box">
+      
+      <a href="#">
+
+        <img alt="Mind Crowd" src={logoimage2} />
+      </a>
+    </lightning-layout-item>
+    <lightning-layout-item size="12" small-device-size="12" medium-device-size="12" large-device-size="12"
+      class="Participation-title-box">
+      <div class="freebirdFormviewerViewHeaderThemeStripe freebirdSolidBackground exportThemeStripe"></div>
+      <h1 class="title main-title">Covid Form for Participation in Research</h1>
+      <div class="freebirdFormviewerViewHeaderRequiredLegend " aria-hidden="true" dir="auto">
+        * Required
+      </div>
+    </lightning-layout-item>
+    <!-- for code-->
+
+    <!-- <lightning-layout-item size="12" small-device-size="12" medium-device-size="12" large-device-size="12" class="paddingB20 participation-form-item-row marginB20"> -->
+    <!-- </lightning-layout-item>  -->
+    <!--for address-->
+
+    <lightning-layout-item size="12" small-device-size="12" medium-device-size="12" large-device-size="12"
+      class="participation-form-item-row">
+      <fieldset class="slds-form--compound">
+        
+        <div class="form-element__group">
+          <div class="slds-grid slds-gutters">
+            <div class="slds-col slds-size_6-of-12">
+              <lightning-input type="hidden" id="sample1" class="slds-is-absolute" name="participant"
+                onchange={handleParticipantChange} disabled value={participantcode} placeholder="Enter your code here">
+              </lightning-input>
+
+              <lightning-input type="text" class="streetAddress consentrequired1 require"  form="novalidatedform" name="input1" label="Street Address" placeholder="Street Address"
+                value={address2} onchange={handleAddress2Change}></lightning-input>
+            </div>
+            <div class="slds-col slds-size_6-of-12">
+              <lightning-input type="text" name="input1" label="Suite/APT No." value={address1}
+                onchange={handleAddress1Change} placeholder="Suite/APT No."></lightning-input>
+            </div>
+          </div>
+          <div class="slds-grid slds-gutters">
+            <div class="slds-col slds-size_6-of-12">
+              <lightning-input type="text" class="city consentrequired1 require" name="input1" label="City"   value={city} onchange={handleCityChange}
+                placeholder="City"></lightning-input>
+            </div>
+            <div class="slds-col slds-size_6-of-12">
+              <lightning-input type="text" class="zipcode consentrequired1 require" name="input1" label="ZIP Code"  value={zipcode}
+                onchange={handleZipcodeChange} placeholder="ZIP Code"></lightning-input>
+            </div>
+          </div>
+        </div>
+        <div class="slds-grid slds-gutters">
+          <div class="slds-col slds-size_6-of-12">
+            <lightning-combobox label="Country" class="country require" name="country"  required onchange={handleCountryChange}
+              options={controllingValues} placeholder="--None--" value={selectedCountry}></lightning-combobox><br />
+
+            <!-- <div if:true={selectedCountry}>
+              Selected Country: <b>{selectedCountry}</b>
+            </div> -->
+          </div>
+          <template if:true={isStateVisible}>
+            <div class="slds-col slds-size_6-of-12">
+              <lightning-combobox label="State" class="state require" name="state" required onchange={handleStateChange} options={dependentValues}
+                placeholder="--None--" value={selectedState} disabled={isEmpty}>
+              </lightning-combobox><br />
+              <!-- <div if:true={selectedState}>
+                Selected State: <b>{selectedState}</b>
+              </div> -->
+            </div>
+          </template>
+        </div>
+      </fieldset>
+      <template if:true={isValidateAddressButtonVisible}>
+        <lightning-button variant="brand" label="Validate Address" title="Validate" onclick={validateAddress}
+          class="magenta-btn ">
+        </lightning-button>
+      </template>
+      <div if:true={showText}>{textValue}</div>
+      <div if:false={showText}>{responseAddress}</div>
+    </lightning-layout-item>
+
+    <!--for -->
+
+    <lightning-layout-item if:true={error} size="12" small-device-size="12" medium-device-size="12"
+      large-device-size="12" class="participation-form-item-row">
+      <div>
+        <p>{error}</p>
+      </div>
+    </lightning-layout-item>
+
+    <!--for text area-->
+
+    <lightning-layout-item>
+      <div class="slds-form-element">
+        <!-- <span class="slds-form-element__label">Textarea Label</span> -->
+        <div class="slds-form-element__control">
+          <div class="slds-form-element__static participation-form-item-row participation-form-text-aria">
+            <div class="white_wrapper_content">
+              <p>
+                Please read the following information carefully before deciding whether to participate in this research study. Your participation is voluntary.
+              </p>
+              <p>You are being asked to participate in a research study that is being carried out by Dr. Matt Huentelman at the non-profit Translational Genomics Research Institute (or TGen) in Phoenix, Arizona. This is a research study to understand the long-term effects of SARS-CoV-2, the virus that causes COVID-19, on how the human brain remembers things.</p>
+              <p>To participate in this phase of the study, you will be asked to collect dried blood samples using a finger prick device (lancet) and a kit that we will provide you. We will then ask you to mail your samples to researchers at TGen in a prepaid return envelope. The researchers will analyze your samples and screen them for antibodies against SARS-CoV-2 (the virus that causes COVID-19), determine the levels of molecules in your blood called cytokines, and test your DNA to determine your APOE genotype. 
+
+              </p>
+              <p>You may also be asked to complete online cognitive tests that will require approximately 15 minutes, much like the MindCrowd test that you have already taken. We may request that you complete this testing multiple times throughout your participation in this study.</p>
+              
+             <h3>What are antibodies?</h3>
+             <p>Antibodies circulate in your blood and act as sensors to detect and inactivate viruses and other microscopic infections. Typically, after exposure to a virus, these antibodies are present for many months, or even years, and their presence can serve as an indicator that you were exposed to a specific virus. In this study we will search for antibodies that are present and indicate that you were exposed to the virus that causes COVID-19.</p>
+             <h3>What are cytokines?</h3>
+             <p>Cytokines are substances in your blood that help your immune system respond to and fight off infections. In this study we will measure several of these cytokines to better understand the state of your immune system.</p>
+              <h3>What is DNA and what is an APOE genotype?
+
+              </h3>
+              <p>DNA is a substance that is found in every cell in the human body. Your DNA contains “genes” which predict things like physical characteristics (eye color, hair color, height, etc.) or disease risk. APOE is one of these genes and the presence of a certain form of the APOE gene has been linked to higher risk for COVID-19. In this study we will determine what type of APOE you have.</p>
+             <h3>How many people will take part in the study?
+
+            </h3>
+            <p>It is expected that about 10,000 individuals will participate in the study.</p>
+            <h3>What will I have to do?</h3>
+            <p>You will be asked to complete this consent form if you choose to participate. If you decide to participate, a dried blood sample collection kit will be provided to you by the study team. You will be given instructions on how to collect dried blood samples from your finger. Your sample will be analyzed and stored at TGen. </p>
+            <p>Following your screening, we may ask you to complete online cognitive testing, much like the MindCrowd test that you have already taken. We anticipate asking you to complete this testing periodically, for up to five years after your enrollment. You can choose to decline the testing requests at any time.</p>
+             <p>In addition, demographic, medical, and lifestyle information that was already collected when you first completed the MindCrowd study will be linked to your sample and data. This information and your sample will be coded with a research specific number by the study coordinator in order to protect your identity. </p>
+             <h3>How old do I have to be to participate?
+
+            </h3> 
+            <p>You must be 18 years or older to participate in this study.
+
+            </p>
+            <h3>Will my samples be stored and used for other studies?
+
+            </h3>
+            <p>Your samples will be stored at TGen indefinitely. The researchers may later decide that they want to perform additional tests on your samples. If your samples are used in future research, they may be shared with researchers who are not a part of TGen. The study investigators will approve the use of the samples for future research. All samples will be stored with no identifying information attached to the sample.</p>
+            <h3>Will you share my information with other people?</h3> 
+            <p>Data collected from this study may be shared with collaborating scientists, such as our collaborators at the University of Arizona. We will not share any identifiable information that you give us. All of your information is stored in a database. All of our databases are password-protected and secure. No one can identify you without access to both of these data sources.</p>
+            <h3>Who else will have access to my genetic information?
+
+            </h3>
+            <p>The researchers may decide to share data gathered from your samples to help further research. One way we do this is by putting information into scientific databases, where it is stored along with information from other studies. Researchers can then study the combined information to learn even more about diseases. If you agree to take part in the study, some of your genetic and health information might be placed into one or more scientific databases. There are many different kinds of scientific databases; some are maintained by private companies or the National Institutes of Health (an agency of the federal government). A researcher who wants to study the information must apply to the database. Different databases may have different ways of reviewing such requests. Researchers with approval may be able to see and use your de-identified information, along with information from many other people.</p>
+            <p>Your name and other information that could directly identify you will never be placed into a scientific database. However, because your genetic information is unique to you, there is a small chance that someone could trace it back to you. The risk of this happening is very small, but may grow in the future. There are many safeguards in place to protect your information while it is stored in repositories and used for research.</p>
+            <h3>Will the researchers need to contact me in the future?
+
+            </h3>
+            <p>The researchers may decide later that they want more information about you and your health. By completing this consent form, you are giving the research team permission to contact you in the future. If the research team contacts you, you may decline to provide any information.</p>
+            <h3>How long will I be in the study?</h3>
+            <p>Your part in this phase of the study includes completion of the study consent (typically less than 15 minutes), a one-time collection of dried blood samples (typically less than 15 minutes), and periodic cognitive online testing (approximately 15 minutes for each test).
+
+            </p>
+            <h3>What are the risks?</h3>
+            <p>Physical Risk</p>
+            <p>There is a slight risk of excess bleeding, bruising, or infection after a dried blood sample collection. However, this risk is very low. Care will be taken to help you avoid these problems. </p>
+            <p>Privacy Risk</p>
+            <p>We will take many steps to protect your privacy, but because your DNA is unique to you, it is possible that someone could trace it back to you. There is also a risk that someone could get access to the data we have stored about you. If those data suggested something serious about your health, it could be misused. For example, it could be used to make it harder for you to get or keep a job or insurance. There are laws against this kind of misuse, but they may not give full protection. There may also be other unforeseen privacy risks.</p>
+            <p>We believe the chance these things will happen is small, but we cannot make guarantees. Your privacy and the confidentiality of your data are very important to us; we will make every effort to protect them. These efforts are described below under the section “How will my privacy be protected?”</p>  
+            <h3>How will my privacy be protected?</h3>
+            <p>Federal privacy rules give safeguards for privacy, security, and authorized access. We will not give information that identifies you to anyone without your permission, except as required by law. This study takes many steps to protect the privacy of people who take part.</p>
+            <p>We will remove your name and any other information that could directly identify you from your samples and information. We will replace this information with a study code number. We will create a master list linking your code number to your name. We keep this list separate from your coded samples and information. The master list will be maintained by the TGen study coordinator.
+
+            </p>
+            <p>We will keep the samples in locked buildings. We will keep health information and research data on secure computers. These computers have many levels of protection.</p>
+            <p>There is a Federal law called the Genetic Information Nondiscrimination Act (GINA). In general, this law makes it illegal for health insurance companies, group health plans, and most employers to discriminate against you based on your genetic information. However, it does not protect you against discrimination by companies that sell life insurance, disability insurance, or long-term care insurance.
+
+            </p>
+            <h3>Are there any benefits?</h3>
+            <p>There is no direct benefit to you by being in this study. However, what we learn from this study may help others in the future.
+
+            </p>
+            <h3>What are my alternatives if I don’t want to participate in the research?</h3>
+            <p>This is not a treatment study. Your other option is to not give your samples to TGen.
+
+            </p>
+            <h3>Can I leave the study once I’m in it?</h3>
+            <p>Your participation in this study is voluntary. You may decide not to participate or you may leave the study at any time. Your decision will not result in any penalty or loss of benefits to which you are otherwise entitled.</p>
+            <p>If you complete this form but then change your mind later, you will need to contact the study coordinator at MindCrowdQuestion@tgen.org or 602-343-8653.
+
+            </p>
+            <p>You may discontinue your participation at any time. If you decide you would like to discontinue participating in the study, we may ask that you send us any study samples and/or data that you have collected and not yet contributed, and answer some follow-up questions, if applicable. You can decline to provide these. 
+
+            </p>
+            <p>If you withdraw from the study, TGen will retain your samples and data but completely erase all identifying information and codes from your samples so they will not be able to be traced back to you in any manner. This means that the samples will be made anonymous. </p>
+            <h3>What about my privacy/confidentiality?</h3>
+            <p>Your privacy is very important to us and we will use many safety measures to protect your privacy. However, in spite of all of the safety measures that we will use we cannot guarantee that your identity will never become known. Although your genetic information is unique to you, you do share some genetic information with your blood relatives. Consequently, it may be possible that genetic information from them could be used to help identity you. Similarly, it may be possible that genetic information from you could be used to help identify them.</p>
+            <p>All information collected about you during the course of this study will be kept confidential to the extent permitted by law. Absolute confidentiality cannot be promised. You will be identified in the research records by a code name or number. Information that identifies you personally will not be released without your written permission. However, the Translational Genomics Research Institute (TGen) or federal agencies with appropriate regulatory oversight such as the Food and Drug Administration (FDA), Office for Human Research Protections (OHRP), Office of Civil Rights (OCR), National Institutes of Health (NIH), Western Institutional Review Board® (WIRB®), may review or copy your records for research purposes.</p>
+            <p>When the results of this research are published or discussed in conferences, no information will be included that would reveal your identity.
+
+            </p>
+            <h3>What are the costs?</h3>
+            <p>There are no costs to you to participate in this study.
+
+            </p>
+            <h3>Will I be paid?</h3>
+            <p>You will not be paid to participate in this study.</p>
+            <h3>Will I be paid if the sponsor makes money or profits from my samples?</h3>
+            <p>It is possible results will come from this study that may help develop new treatments or tests. This may result in commercial products that will be sold for a profit. There are no plans to pay you for any products developed from this study.</p>
+            <h3>What if there is a breach of privacy or I am injured?
+
+            </h3>
+            <p>There are no plans to pay you if there is a breach of privacy or if you are hurt in any way as a result of being in this study. This does not take away or waive any of your legal rights in the event of negligence or misconduct.
+
+            </p>
+            <h3>Who do I call if I have any questions or issues?
+
+            </h3>
+            <p>If you have questions about your participation in this study, you feel you have had a research-related injury, or you have questions, concerns, or complaints about the research, you may contact the study coordinator at 602-343-8653.
+
+            </p>
+            <p>If you have questions about your rights as a research participant in this study or if you have questions, concerns, or complaints about the research, you may contact:
+
+            </p>
+
+
+
+
+            <p>Western Institutional Review Board® (WIRB®)
+                1019 39th Avenue SE Suite 120
+                Puyallup, Washington 98374-2115
+                Telephone: 1-800-562-4789 or 360-252-2500
+                <a href="mailto:Help@wirb.com">Help@wirb.com</a>
+               
+                </p>
+            <p>WIRB is a group of people who perform independent review of research.
+
+            </p> 
+            <p>WIRB will not be able to answer some study-specific questions, such as questions about appointment times. However, you may contact WIRB if the research staff cannot be reached or if you wish to talk to someone other than the research staff.</p>   
+            <p>Do not complete this consent form unless you have had a chance to ask questions and have received satisfactory answers to all of your questions.
+
+            </p>
+            <p>If you agree to be in this study, you will have access to a completed copy of this consent form for your records.</p>
+            <h3>How do I agree to participate?
+
+            </h3>
+            <p>There will be questions and check boxes at the end of this form. Once you have reviewed all the statements, you will either check the button that states: “I Consent” or the button that says “I Decline.”
+
+            </p>
+            
+
+
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </lightning-layout-item>
+
+    <!--for consent-->
+    <!-- <fieldset class="slds-form-element slds-has-error">
+      <legend class="slds-form-element__legend slds-form-element__label">
+      <abbr class="slds-required" title="required">*</abbr> Checkbox Group Label</legend>
+      <div class="slds-form-element__control">
+      <div class="slds-checkbox">
+      <input type="checkbox" name="options" id="checkbox-unique-id-76" value="checkbox-unique-id-76" aria-describedby="error_01" checked="" />
+      <label class="slds-checkbox__label" for="checkbox-unique-id-76">
+      <span class="slds-checkbox_faux"></span>
+      <span class="slds-form-element__label">Checkbox Label</span>
+      </label>
+      </div>
+      <div class="slds-checkbox">
+      <input type="checkbox" name="options" id="checkbox-unique-id-77" value="checkbox-unique-id-77" aria-describedby="error_01" />
+      <label class="slds-checkbox__label" for="checkbox-unique-id-77">
+      <span class="slds-checkbox_faux"></span>
+      <span class="slds-form-element__label">Checkbox Label</span>
+      </label>
+      </div>
+      </div>
+      <div id="error_01" class="slds-form-element__help">This field is required</div>
+      </fieldset> -->
+
+    <lightning-layout-item class="participation-form-item-row">
+      <fieldset class="slds-form-element slds-form-element_stacked slds-is-required"> 
+        <!-- <legend class="slds-form-element__legend slds-form-element__label">
+          <abbr class="slds-required" title="required">*</abbr>By checking this box :</legend>
+          <lightning-checkbox-group name="shippingconsent" class="consentrequired" 
+          options={options}
+              value={value} onchange={handleShipmentConsentChange}>
+              
+          </lightning-checkbox-group> -->
+
+
+          <div class="slds-grid slds-gutters">
+            <div class="slds-col slds-size_1-of-10 paddingL0 paddingR0 remove-label ">
+              <lightning-checkbox-group name="shippingconsent" class="consentrequired" 
+              options={options}
+                  value={value} onchange={handleShipmentConsentChange}>
+              </lightning-checkbox-group>
+            </div>
+            <div class="slds-col paddingL0">
+                <p style="margin-top: 0; margin-bottom: 0;"><abbr class="slds-required" title="required">*</abbr>By checking this box : 
+                </p>
+                <span>
+                  <ul style="margin-left: 20px; list-style: disc;">
+                    <li>
+                      I understand that if I have questions I should contact the Clinical Research Coordinator at 602-343-8653 or MindCrowdQuestion@tgen.org before I complete this page.
+                    </li>
+                  </ul>
+                </span>
+              </div>
+          </div>
+
+
+          <!-- <lightning-layout-item size="12" small-device-size="12" medium-device-size="12" large-device-size="12" class=" consent-form-item-row consent_form">
+                     
+            <div class="slds-grid slds-gutters">
+                
+                <div class="slds-col slds-size_1-of-10 paddingL0 paddingR0 remove-label ">
+                    <lightning-input class="information remove-label" message-when-value-missing="Select" onchange={handleShipmentConsentChange} type="checkbox" name="termandcondition"></lightning-input>
+                </div>
+                <div class="slds-col ">
+                    <p><lightning-formatted-rich-text name="shippingconsent" class="consentrequired" options={options} value={value}></lightning-formatted-rich-text> </p>
+                  </div>
+              </div>
+         
+            
+             
+        </lightning-layout-item> -->
+
+
+
+
+
+          <!-- <span class="concent-check-label">By checking this box I confirm that:</span><ul><li>I am 18 years of age or older,</li><li>I have read and understand the information above and I want to participate in this research study, and</li><li>​I realize that this test cannot diagnose or predict future risk of cognitive decline, Alzheimer’s disease, or any other dementia.​</li></ul> -->
+          <!-- <div id="error_01" class="slds-form-element__help">This field is required</div> -->
+      <!-- </template> -->
+         
+
+        <!-- </div> -->
+      </fieldset>
+    </lightning-layout-item>
+    <lightning-layout-item size="12" small-device-size="12" medium-device-size="12" large-device-size="12">
+      <template if:true={isAgreeVisible}>
+      <lightning-button variant="brand" label="I Consent" title="Submit" onclick={updateContactFields}
+        class="magenta-btn slds-float_left">
+      </lightning-button></template>
+      <!-- <lightning-button variant="brand" label="I Decline" title="Submit" onclick={decline}
+        class="magenta-btn slds-float_right">
+      </lightning-button> -->
+    </lightning-layout-item>
+  </lightning-layout>
+
+  <template if:true={ErrorModalOpen}>
+    <section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-modal="true" aria-describedby="modal-content-id-1" class="slds-modal slds-modal_small ssm slds-fade-in-open">
+        <div class="slds-modal__container">
+            <!-- Modal/Popup Box LWC header here -->
+             <!-- Modal/Popup Box LWC body starts here -->
+             <header class="slds-modal__header slds-modal__header_empty">
+                <lightning-button-icon icon-name="utility:close" alternative-text={label.close_btn}   variant="bare-inverse" onclick={closeModal} class="slds-modal__close ">  
+                </lightning-button-icon> 
+              </header>
+            <div class="slds-modal__content slds-p-around_medium" id="modal-content-id-2">
+                <P  class="text-center">{label.requiredFieldValidationError}</P>
+             </div>
+        </div>
+    </section>
+    <div class="slds-backdrop slds-backdrop_open"></div>
+</template>
+
+
+</template>

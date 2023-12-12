@@ -1,0 +1,34 @@
+<!-- Created By: {Girikon(ShwetaKhunteta)}
+ Created On: 12/07/2021 (dd/mm/yyyy)
+ Description/Purpose:created to test the GetTrackingDetails function  -->
+
+ 
+
+<apex:page standardController="Shipping_Detail__c" recordSetVar="Shipping_Detail" extensions="SendShipmentVF" action="{!sendshippingId}">
+  Laoading........
+  <script type="text/javascript">
+    window.history.back();
+  //setTimeout(()=>{ window.history.back(); }, 2000);
+  </script> 
+<!-- <apex:includeLightning />
+  <div id="lightningvf" />
+  <script>
+    $Lightning.use("c:ShipmentApp", function () {
+      $Lightning.createComponent("c:SendShipment",
+        {
+          label: "Press Me!",
+          recordId: '{!$CurrentPage.parameters.id}'
+        },
+        "lightningvf",
+        function (cmp) {
+          console.log(" send button was created");
+          
+        }
+      );
+    });
+
+  </script>
+
+ -->
+
+</apex:page>

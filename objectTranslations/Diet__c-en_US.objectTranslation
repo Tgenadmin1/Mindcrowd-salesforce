@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>DIET</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>DIETs</value>
+    </caseValues>
+    <fields>
+        <label><!-- Contact Name --></label>
+        <name>Contact_Name__c</name>
+        <relationshipLabel><!-- DIETs --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Contact --></label>
+        <name>Contact__c</name>
+    </fields>
+    <fields>
+        <label><!-- Email --></label>
+        <name>Email__c</name>
+    </fields>
+    <fields>
+        <help><!-- How many servings of fresh, canned, frozen, or dried vegetables did you eat each day? --></help>
+        <label><!-- DIET_v1.0.3 --></label>
+        <name>Fresh_vegetables_you_eat_each_day__c</name>
+    </fields>
+    <fields>
+        <help><!-- Approximately how many years do you think you’ve eaten the diet you described above? --></help>
+        <label><!-- DIET_v1.0.11 --></label>
+        <name>How_many_years_you_ve_eaten_diet__c</name>
+    </fields>
+    <fields>
+        <help><!-- How would you best describe your diet? --></help>
+        <label><!-- DIET_v1.0.10 --></label>
+        <name>How_would_you_best_describe_your_diet__c</name>
+    </fields>
+    <fields>
+        <help><!-- How many times a day did you eat dairy products (milk, yogurt, cheese)? --></help>
+        <label><!-- DIET_v1.0.8 --></label>
+        <name>No_of_times_dairy_products_eaten_a_day__c</name>
+    </fields>
+    <fields>
+        <help><!-- How many times a day did you eat fish or beans? --></help>
+        <label><!-- DIET_v1.0.9 --></label>
+        <name>No_of_times_fish_or_beans_eaten_a_day__c</name>
+    </fields>
+    <fields>
+        <help><!-- How many times a day did you eat fried food or packaged snacks high in fat, salt, or sugar? --></help>
+        <label><!-- DIET_v1.0.4 --></label>
+        <name>No_of_times_fried_food_eaten_in_a_day__c</name>
+    </fields>
+    <fields>
+        <help><!-- How many servings (1 serving = 3 to 6 ounces) of meat (beef, pork, chicken) did you eat each day? --></help>
+        <label><!-- DIET_v1.0.7 --></label>
+        <name>No_of_times_meat_eaten_in_a_day__c</name>
+    </fields>
+    <fields>
+        <help><!-- How many times a day did you eat sweet foods (not the low-fat kind) or desserts, like chocolate or ice cream, and other sweets? --></help>
+        <label><!-- DIET_v1.0.5 --></label>
+        <name>No_of_times_sweet_foods_eaten_in_a_day__c</name>
+    </fields>
+    <fields>
+        <help><!-- How would you rate your overall habits of eating healthy foods? --></help>
+        <label><!-- DIET_v1.0.1 --></label>
+        <name>Rate_your_healthy_eating_habits__c</name>
+    </fields>
+    <fields>
+        <help><!-- How many servings (1serving = 1/2 cup) of fresh, canned, frozen, or dried fruit did you eat each day? --></help>
+        <label><!-- DIET_v1.0.2 --></label>
+        <name>Servings_of_fresh_fruit_you_eat_each_day__c</name>
+    </fields>
+    <fields>
+        <help><!-- How many regular soda, sweet tea, juice, energy/sports drinks, sweetened coffee, or other sugar sweetened beverages did you drink each day? --></help>
+        <label><!-- DIET_v1.0.6 --></label>
+        <name>Sweetened_beverages_eaten_in_a_day__c</name>
+    </fields>
+    <layouts>
+        <layout>Diet Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

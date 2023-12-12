@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Test Result</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Test Results</value>
+    </caseValues>
+    <fields>
+        <label><!-- Data Category --></label>
+        <name>Data_Category__c</name>
+        <picklistValues>
+            <masterLabel>Kits Delivered</masterLabel>
+            <translation><!-- Kits Delivered --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Kits not received in 30 days</masterLabel>
+            <translation><!-- Kits not received in 30 days --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Kits returned</masterLabel>
+            <translation><!-- Kits returned --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other</masterLabel>
+            <translation><!-- Other --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Ready to send</masterLabel>
+            <translation><!-- Ready to send --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>kit sent</masterLabel>
+            <translation><!-- kit sent --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>subscription</masterLabel>
+            <translation><!-- subscription --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Data Name --></label>
+        <name>Data_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Data Value --></label>
+        <name>Data_Value__c</name>
+    </fields>
+    <fields>
+        <label><!-- Order --></label>
+        <name>Order__c</name>
+    </fields>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

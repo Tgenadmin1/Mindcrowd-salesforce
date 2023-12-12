@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LightningComponentBundle xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>51.0</apiVersion>
+    <isExposed>true</isExposed>
+    <targets>
+        <target>lightning__AppPage</target>
+        <target>lightning__RecordPage</target>
+        <target>lightning__HomePage</target>
+        <target>lightningCommunity__Page</target>
+        <target>lightningCommunity__Default</target>
+    </targets>
+    <targetConfigs>
+        <targetConfig targets="lightning__HomePage,lightning__RecordPage,lightningCommunity__Default">
+            <property name="step_1" type="String" default="About You" label="step_1"/>
+            <property name="step_2" type="String" default="ATTENTION TEST" label="step_2"/>
+            <property name="step_3" type="String" default="MEMORY TEST" label="step_3"/>
+            <property name="step_4" type="String" default="YOUR RESULTS" label="step_4"/>
+            <property name="step_4a" type="String" default="Your Brain" label="step_4a"/>
+            <property name="brainee_1" type="String" default="LET'S COMPARE YOUR BRAIN!" label="brainee_1"/>
+            <property name="brainee_2" type="String" default="These additional details will help compare your results to other people like you." label="brainee_2"/>
+            <property name="completepageq1" type="String" default="Have you taken the Mindcrowd test before?" label="completepageq1"/>
+            <property name="complete3" type="String" default="Which option best describes your race?" label="complete3"/>
+            <property name="complete4_a" type="String" default="Would you like to share your family’s origin with us? (check as many as apply)" label="complete4_a"/>
+            <property name="complete5" type="String" default="How many prescription medications do you take on a daily basis?" label="complete5"/>
+            <property name="complete6" type="String" default="Which of the following have you personally experienced or are you currently experiencing?" label="complete6"/>
+            <property name="complete7" type="String" default="Has one of your siblings or one of your parents been diagnosed with Alzheimer’s disease?" label="complete7"/>
+            <property name="complete8" type="String" default="	Was your sibling or parent diagnosed with Alzheimer's disease before the age of 55?" label="complete8"/>
+            <property name="complete9" type="String" default="Do you have any second-degree relatives (grandparents, grandchildren, aunts, uncles, nephews, nieces, or half-siblings) that have been diagnosed with Alzheimer’s disease?" label="complete9"/>
+            <property name="Brain_Info_Results" type="String" default="	View Your Results" label="Brain_Info_Results"/>
+            <property name="brainInfo_text_choose" type="String" default="Please Choose" label="brainInfo_text_choose"/>
+            <property name="Hispanic_Latino" type="String" default="Do you consider yourself Hispanic or Latino?" label="Hispanic_Latino"/>
+            <property name="campylete2" type="String" default="Are you left or right hand dominant?" label="campylete2"/>  
+            <property name="strTitle" type="String" default="Welcome in Salesforce" label="Enter the title"/> 
+        </targetConfig>
+    </targetConfigs>
+</LightningComponentBundle>

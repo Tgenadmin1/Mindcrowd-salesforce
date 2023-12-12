@@ -1,0 +1,380 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>Created for Marketing Cloud Survey</description>
+    <enableActivities>true</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableLicensing>false</enableLicensing>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <externalSharingModel>Private</externalSharingModel>
+    <fields>
+        <fullName>Contact_Name__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Contact Name</label>
+        <referenceTo>Contact</referenceTo>
+        <relationshipLabel>SOCSUPPs</relationshipLabel>
+        <relationshipName>Social_Support_Surveys</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Contact__c</fullName>
+        <description>created for marketing cloud survey.</description>
+        <externalId>false</externalId>
+        <label>Contact</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Count_on_my_friend_when_things_go_wrong__c</fullName>
+        <description>I can count on my friend when things go wrong.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>I can count on my friend when things go wrong.</inlineHelpText>
+        <label>SOCSUPP_v1.0.10</label>
+        <length>100</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Email__c</fullName>
+        <description>created for marketing cloud survey.</description>
+        <externalId>false</externalId>
+        <label>Email</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Email</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Emotional_help_and_support_from_family__c</fullName>
+        <description>I get the emotional help and support I need from my family</description>
+        <externalId>false</externalId>
+        <inlineHelpText>I get the emotional help and support I need from my family</inlineHelpText>
+        <label>SOCSUPP_v1.0.7</label>
+        <length>100</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Feel_isolated_from_others__c</fullName>
+        <description>How often do you feel isolated from others?</description>
+        <externalId>false</externalId>
+        <inlineHelpText>How often do you feel isolated from others?</inlineHelpText>
+        <label>SOCSUPP_v1.0.3</label>
+        <length>100</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Friends_to_share_my_joys_and_sorrows__c</fullName>
+        <description>I have friends with whom I can share my joys and sorrows.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>I have friends with whom I can share my joys and sorrows.</inlineHelpText>
+        <label>SOCSUPP_v1.0.12</label>
+        <length>100</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>How_often_do_you_feel_left_out__c</fullName>
+        <description>How often do you feel left out?</description>
+        <externalId>false</externalId>
+        <inlineHelpText>How often do you feel left out?</inlineHelpText>
+        <label>SOCSUPP_v1.0.2</label>
+        <length>100</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Lack_companionship__c</fullName>
+        <description>How often do you feel you lack companionship?</description>
+        <externalId>false</externalId>
+        <inlineHelpText>How often do you feel you lack companionship?</inlineHelpText>
+        <label>SOCSUPP_v1.0.1</label>
+        <length>100</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>My_family_help_me_make_decisions__c</fullName>
+        <description>My family is willing to help me make decisions.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>My family is willing to help me make decisions.</inlineHelpText>
+        <label>SOCSUPP_v1.0.14</label>
+        <length>100</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>My_family_really_tries_to_help_me__c</fullName>
+        <description>My family really tries to help me.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>My family really tries to help me.</inlineHelpText>
+        <label>SOCSUPP_v1.0.6</label>
+        <length>100</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>My_friends_really_try_to_help_me__c</fullName>
+        <description>My friends really try to help me.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>My friends really try to help me.</inlineHelpText>
+        <label>SOCSUPP_v1.0.9</label>
+        <length>100</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Special_Person__c</fullName>
+        <description>There is a special person who is around when I need them.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>There is a special person who is around when I need them.</inlineHelpText>
+        <label>SOCSUPP_v1.0.4</label>
+        <length>100</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Special_Person_source_of_comfort__c</fullName>
+        <description>I have a special person who is a real source of comfort to me.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>I have a special person who is a real source of comfort to me.</inlineHelpText>
+        <label>SOCSUPP_v1.0.8</label>
+        <length>100</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Special_Person_to_share_joys_and_sorrows__c</fullName>
+        <description>There is a special person with whom I can share my joys and sorrows.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>There is a special person with whom I can share my joys and sorrows.</inlineHelpText>
+        <label>SOCSUPP_v1.0.5</label>
+        <length>100</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Special_Person_who_care_about_Feelings__c</fullName>
+        <description>There is a special person in my life who cares about my feelings</description>
+        <externalId>false</externalId>
+        <inlineHelpText>There is a special person in my life who cares about my feelings</inlineHelpText>
+        <label>SOCSUPP_v1.0.13</label>
+        <length>100</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Talk_about_my_problems_with_my_family__c</fullName>
+        <description>I can talk about my problems with my family.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>I can talk about my problems with my family.</inlineHelpText>
+        <label>SOCSUPP_v1.0.11</label>
+        <length>100</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Talk_about_my_problems_with_my_friends__c</fullName>
+        <description>I can talk about my problems with my friends</description>
+        <externalId>false</externalId>
+        <inlineHelpText>I can talk about my problems with my friends</inlineHelpText>
+        <label>SOCSUPP_v1.0.15</label>
+        <length>100</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <label>SOCSUPP</label>
+    <nameField>
+        <displayFormat>SOCSUPP-{0000000000}</displayFormat>
+        <label>SOCSUPP Name</label>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>SOCSUPPs</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>ReadWrite</sharingModel>
+    <visibility>Public</visibility>
+</CustomObject>

@@ -1,0 +1,324 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>BD</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>BDs</value>
+    </caseValues>
+    <fields>
+        <label><!-- BD_v1.0.1 --></label>
+        <name>Addiction_All_Types__c</name>
+    </fields>
+    <fields>
+        <label><!-- BD_v1.0.2 --></label>
+        <name>Alzheimers_Disease__c</name>
+    </fields>
+    <fields>
+        <label><!-- BD_v1.0.3 --></label>
+        <name>Amyotrophic_Lateral_Sclerosis__c</name>
+    </fields>
+    <fields>
+        <label><!-- BD_v1.0.4 --></label>
+        <name>Aneurysm__c</name>
+    </fields>
+    <fields>
+        <label><!-- BD_v1.0.6 --></label>
+        <name>Anorexia_Nervosa__c</name>
+    </fields>
+    <fields>
+        <label><!-- BD_v1.0.5 --></label>
+        <name>Aphasia__c</name>
+    </fields>
+    <fields>
+        <label><!-- BD_v1.0.7 --></label>
+        <name>Arteriovenous_Malformation__c</name>
+    </fields>
+    <fields>
+        <label><!-- BD_v1.0.8 --></label>
+        <name>Attention_Deficit_Hyperactivity_Disorder__c</name>
+    </fields>
+    <fields>
+        <label><!-- BD_v1.0.9 --></label>
+        <name>Autism__c</name>
+    </fields>
+    <fields>
+        <label><!-- BD_v1.0.10 --></label>
+        <name>Batten_Disease__c</name>
+    </fields>
+    <fields>
+        <label><!-- BD_v1.0.11 --></label>
+        <name>Behcets_Disease__c</name>
+    </fields>
+    <fields>
+        <label><!-- BD_v1.0.12 --></label>
+        <name>Bipolar_Disorder__c</name>
+    </fields>
+    <fields>
+        <label><!-- BD_v1.0.13 --></label>
+        <name>Brain_Tumor_or_Brain_Cancer__c</name>
+    </fields>
+    <fields>
+        <label><!-- BD_v1.0.14 --></label>
+        <name>Bulimia__c</name>
+    </fields>
+    <fields>
+        <label><!-- BD_v1.0.15 --></label>
+        <name>Chiari_Malformation__c</name>
+    </fields>
+    <fields>
+        <label><!-- BD_v1.0.16 --></label>
+        <name>Chronic_Inflammatory_Demyelinating__c</name>
+    </fields>
+    <fields>
+        <label><!-- BD_v1.0.17 --></label>
+        <name>Cluster_Headache__c</name>
+    </fields>
+    <fields>
+        <label><!-- BD_v1.0.18 --></label>
+        <name>Concussion__c</name>
+    </fields>
+    <fields>
+        <label><!-- Contact --></label>
+        <name>Contact__c</name>
+        <relationshipLabel><!-- BDs --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- BD_v1.0.19 --></label>
+        <name>Creutzfeldt_Jakob_Disease__c</name>
+    </fields>
+    <fields>
+        <label><!-- BD_v1.0.20 --></label>
+        <name>Dementia_Non_Alzheimer_type__c</name>
+    </fields>
+    <fields>
+        <label><!-- BD_v1.0.21 --></label>
+        <name>Depression__c</name>
+    </fields>
+    <fields>
+        <label><!-- BD_v1.0.22 --></label>
+        <name>Down_Syndrome__c</name>
+    </fields>
+    <fields>
+        <label><!-- BD_v1.0.23 --></label>
+        <name>Dyslexia__c</name>
+    </fields>
+    <fields>
+        <label><!-- BD_v1.0.24 --></label>
+        <name>Dyspraxia__c</name>
+    </fields>
+    <fields>
+        <label><!-- BD_v1.0.25 --></label>
+        <name>Dystonia__c</name>
+    </fields>
+    <fields>
+        <label><!-- Email --></label>
+        <name>Email__c</name>
+    </fields>
+    <fields>
+        <label><!-- BD_v1.0.26 --></label>
+        <name>Encephalitis__c</name>
+    </fields>
+    <fields>
+        <label><!-- BD_v1.0.27 --></label>
+        <name>Epilepsy_Seizures__c</name>
+    </fields>
+    <fields>
+        <label><!-- BD_v1.0.28 --></label>
+        <name>Essential_Tremor__c</name>
+    </fields>
+    <fields>
+        <label><!-- BD_v1.0.29 --></label>
+        <name>Friedreichs_Ataxia__c</name>
+    </fields>
+    <fields>
+        <label><!-- BD_v1.0.30 --></label>
+        <name>Gaucher_Disease__c</name>
+    </fields>
+    <fields>
+        <label><!-- BD_v1.0.31 --></label>
+        <name>Generalized_Anxiety_Disorder__c</name>
+    </fields>
+    <fields>
+        <label><!-- BD_v1.0.32 --></label>
+        <name>Guillain_Barre_Syndrome__c</name>
+    </fields>
+    <fields>
+        <label><!-- BD_v1.0.33 --></label>
+        <name>Headaches__c</name>
+    </fields>
+    <fields>
+        <label><!-- BD_v1.0.34 --></label>
+        <name>Huntingtons_Disease__c</name>
+    </fields>
+    <fields>
+        <label><!-- BD_v1.0.35 --></label>
+        <name>Hydrocephalus__c</name>
+    </fields>
+    <fields>
+        <label><!-- BD_v1.0.36 --></label>
+        <name>Leukodystrophy__c</name>
+    </fields>
+    <fields>
+        <label><!-- BD_v1.0.37 --></label>
+        <name>Lewy_Body_Dementia__c</name>
+    </fields>
+    <fields>
+        <label><!-- BD_v1.0.38 --></label>
+        <name>Locked_in_Syndrome__c</name>
+    </fields>
+    <fields>
+        <label><!-- BD_v1.0.39 --></label>
+        <name>Menieres_Disease__c</name>
+    </fields>
+    <fields>
+        <label><!-- BD_v1.0.40 --></label>
+        <name>Meningitis__c</name>
+    </fields>
+    <fields>
+        <label><!-- BD_v1.0.41 --></label>
+        <name>Meningococcal_Disease__c</name>
+    </fields>
+    <fields>
+        <label><!-- BD_v1.0.42 --></label>
+        <name>Migraine__c</name>
+    </fields>
+    <fields>
+        <label><!-- BD_v1.0.43 --></label>
+        <name>Motor_Neuron_Disease__c</name>
+    </fields>
+    <fields>
+        <label><!-- BD_v1.0.44 --></label>
+        <name>Multiple_Sclerosis__c</name>
+    </fields>
+    <fields>
+        <label><!-- BD_v1.0.45 --></label>
+        <name>Multiple_System_Atrophy__c</name>
+    </fields>
+    <fields>
+        <label><!-- BD_v1.0.46 --></label>
+        <name>Muscular_Dystrophy__c</name>
+    </fields>
+    <fields>
+        <label><!-- BD_v1.0.47 --></label>
+        <name>Myasthenia_Gravis__c</name>
+    </fields>
+    <fields>
+        <label><!-- BD_v1.0.48 --></label>
+        <name>Narcolepsy__c</name>
+    </fields>
+    <fields>
+        <label><!-- BD_v1.0.49 --></label>
+        <name>Obsessive_Compulsive_Disorder__c</name>
+    </fields>
+    <fields>
+        <label><!-- BD_v1.0.50 --></label>
+        <name>Parkinsons_Disease__c</name>
+    </fields>
+    <fields>
+        <label><!-- BD_v1.0.51 --></label>
+        <name>Peripheral_Neuropathy__c</name>
+    </fields>
+    <fields>
+        <label><!-- BD_v1.0.52 --></label>
+        <name>Personality_Disorder__c</name>
+    </fields>
+    <fields>
+        <label><!-- BD_v1.0.53 --></label>
+        <name>Picks_Disease__c</name>
+    </fields>
+    <fields>
+        <label><!-- BD_v1.0.54 --></label>
+        <name>Post_Traumatic_Stress_Disorder__c</name>
+    </fields>
+    <fields>
+        <label><!-- BD_v1.0.55 --></label>
+        <name>Prader_Willi_Syndrome__c</name>
+    </fields>
+    <fields>
+        <label><!-- BD_v1.0.56 --></label>
+        <name>Progressive_Supranuclear_Palsy__c</name>
+    </fields>
+    <fields>
+        <label><!-- BD_v1.0.57 --></label>
+        <name>Restless_Legs_Syndrome__c</name>
+    </fields>
+    <fields>
+        <label><!-- BD_v1.0.58 --></label>
+        <name>Rett_Syndrome__c</name>
+    </fields>
+    <fields>
+        <label><!-- BD_v1.0.59 --></label>
+        <name>Schizophrenia__c</name>
+    </fields>
+    <fields>
+        <label><!-- BD_v1.0.60 --></label>
+        <name>Shy_Drager_Syndrome__c</name>
+    </fields>
+    <fields>
+        <label><!-- BD_v1.0.61 --></label>
+        <name>Sleep_Disorders__c</name>
+    </fields>
+    <fields>
+        <label><!-- BD_v1.0.62 --></label>
+        <name>Spasmodic_Dysphonia__c</name>
+    </fields>
+    <fields>
+        <label><!-- BD_v1.0.63 --></label>
+        <name>Stroke__c</name>
+    </fields>
+    <fields>
+        <label><!-- BD_v1.0.64 --></label>
+        <name>Subarachnoid_Haemorrhage__c</name>
+    </fields>
+    <fields>
+        <label><!-- BD_v1.0.65 --></label>
+        <name>Sydenhams_Chorea__c</name>
+    </fields>
+    <fields>
+        <label><!-- BD_v1.0.66 --></label>
+        <name>Tay_Sachs_Disease__c</name>
+    </fields>
+    <fields>
+        <label><!-- BD_v1.0.67 --></label>
+        <name>Tourette_Syndrome__c</name>
+    </fields>
+    <fields>
+        <label><!-- BD_v1.0.68 --></label>
+        <name>Transient_Ischemic_Attack__c</name>
+    </fields>
+    <fields>
+        <label><!-- BD_v1.0.69 --></label>
+        <name>Transverse_Myelitis__c</name>
+    </fields>
+    <fields>
+        <label><!-- BD_v1.0.70 --></label>
+        <name>Traumatic_Brain_Injury__c</name>
+    </fields>
+    <fields>
+        <label><!-- BD_v1.0.71 --></label>
+        <name>Trigeminal_Neuralgia__c</name>
+    </fields>
+    <fields>
+        <label><!-- BD_v1.0.72 --></label>
+        <name>Tuberous_Sclerosis__c</name>
+    </fields>
+    <fields>
+        <label><!-- BD_v1.0.73 --></label>
+        <name>Von_Hippel_Lindau_Syndrome__c</name>
+    </fields>
+    <layouts>
+        <layout>Personal and Family History of Brain Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Survey Response --></label>
+            <section>Survey Response</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>
