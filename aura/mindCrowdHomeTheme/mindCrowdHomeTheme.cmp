@@ -1,0 +1,121 @@
+<!--
+  @description       : 
+  @author            : Raj  
+  @UI author         : Raj
+  @last modified on  : 05-07-2021
+  @last modified by  : ChangeMeIn@UserSettingsUnder.SFDoc
+  Modifications Log 
+  Ver   Date         Author         Modification
+  1.0   06-07-2021   Raj Kumar      Initial Version
+-->
+<!-- <aura:component implements="forceCommunity:themeLayout"> -->
+<aura:component controller="GamesController" implements="forceCommunity:themeLayout" access="global"
+  description="mindCrowd Custom Theme Layout">
+  <aura:attribute name="sidebarFooter" type="Aura.Component[]" />
+  <aura:attribute name="navMindcrowd" type="Aura.Component[]" required="false" />
+  <aura:attribute name="languageSection" type="Aura.Component[]" />
+  <aura:attribute name="body" type="Aura.Component[]" />
+  <aura:attribute name="footer" type="Aura.Component[]" />
+  <aura:handler event="forceCommunity:routeChange" action="{!c.handleRouteChange}" />
+  <aura:attribute name="isLoginShow" type="Boolean" default="false" />
+  <aura:attribute name="resultUrl" type="String" />
+  <aura:attribute name="isModalOpen" type="boolean" default="false" />
+  <aura:attribute name="vipAccess" type="String" default="VIP ACCESS" access="global"/> 
+  <aura:attribute name="startTestT" type="String" default="Click to take the MindCrowd Memory Test" access="global"/> 
+  <aura:attribute name="browser" type="String" access="global"/>
+  <aura:attribute name="isModalOpenFR" type="boolean" default="false" />
+  <aura:attribute name="appError" type="String" access="global"/>
+
+  <aura:attribute name="strone" type="string" />
+  <lightning:navigation aura:id="navService" />
+  <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+  <div class="main-container-box">
+    <div class="slds-builder-header_container">
+      <div class="mc-header">
+        <div class="mc-header-container">
+          <a href="{!$Label.c.Logo_Link}">
+            <div class="logo-container">
+              <img src="{!$Resource.mindcrowd_style + '/images/mindcrowd.png'}" sizes="(max-width: 328px) 100vw, 328px"
+                height="100" width="300" alt="MindCrowd" title="MindCrowd" />
+            </div>
+          </a>
+          <div class="slds-global-header__item top-banner-button d-button slds-grid ">
+            <!-- <a href="{!$Label.c.Community_Url+'/s/'+$Label.c.url_testlanguage}"   class="pink-btn slds-button text-center"  title="Click to take the MindCrowd Memory Test">
+                  {!$Label.c.Banner_Text_6n}
+                </a> -->
+            <a href="{!$Label.c.Community_Url+'/s/'+$Label.c.url_testlanguage}" id="testLink" class="pink-btn slds-button text-center"
+              title="{!$Label.c.Banner_Text_6T}">
+              {!$Label.c.Banner_Text_6n}
+            </a>
+          </div>
+          <lightning:icon aura:id="navicon" onclick="{!c.openMobileNav}" class="apply-cursor m-menu-btn"
+            iconName="utility:rows" size="medium" alternativeText="Menu" />
+        </div>
+      </div>
+
+      <div class="slds-builder-header m-hide" onclick="{!c.handleRouteChange}">
+        <nav class="slds-builder-header__item slds-builder-header__nav top-nav-strip">
+          <div class="slds-builder-header__item slds-builder-header__utilities" styel="width:100%;">
+            {!v.navMindcrowd}
+          </div>
+          <aura:if isTrue="{!v.isLoginShow}">
+            <div class="m-right-buttons">
+              <div class="nav-right-buttons">
+                {!v.languageSection}
+                <div class="login-button">
+                  <a href="{!$Label.c.Community_Url+'/s/'+$Label.c.url_login}"
+                    class="slds-button slds-button_success text-center" title="{!v.vipAccess}">
+                    {!v.vipAccess}
+                  </a>
+                </div>
+              </div>
+            </div>
+          </aura:if>
+        </nav>
+      </div>
+
+    </div>
+    <div class="mainContentArea">
+      {!v.body}
+    </div>
+    <div class="footerArea">
+      {!v.footer}
+    </div>
+  </div>
+
+ <aura:if isTrue="{!v.isModalOpenFR}">
+    <section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-modal="true"
+      aria-describedby="modal-content-id-1" class="slds-modal slds-fade-in-open ">
+      <div class="slds-modal__container">
+        <header class="slds-modal__header  paddingT0" style="background-color: transparent;" >
+          <!-- <lightning:buttonIcon iconName="utility:close"
+          onclick="{! c.closeModel }"
+          alternativeText="close"
+          variant="bare-inverse"
+          class="slds-modal__close"/> -->
+        </header>
+          <div class="slds-modal__content slds-p-around_medium border-radius" id="modal-content-id-1">
+            <ui:outputRichText value="{!v.appError}"></ui:outputRichText>
+          </div>
+      </div>
+    </section>
+    <div class="slds-backdrop slds-backdrop_open" ></div>
+  </aura:if>
+
+
+
+  <!-- <aura:if isTrue="{!v.isModalOpen}">
+    <section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-modal="true"
+      aria-describedby="modal-content-id-1" class="slds-modal slds-fade-in-open">
+      <div class="slds-modal__container">
+        <header class="slds-modal__header paddingT0" >
+         
+          <div class="slds-modal__content slds-p-around_medium" id="modal-content-id-1">
+            <p class="text-center"><b>Please Accept the cookies below to proceed.</b></p>
+          </div>
+        </header>
+      </div>
+    </section>
+    <div class="slds-backdrop slds-backdrop_open" ></div>
+  </aura:if> -->
+</aura:component>

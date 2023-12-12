@@ -1,0 +1,97 @@
+<template >
+    <!-- <h1>Current Record Id is {contactId}</h1> -->
+    <div class="mainCrowd-outer-box marginB30 paddingT0" if:true={opacity} onload={checkSteps}>
+        <div id="steps" class="steps">
+            <div class="step-grid slds-grid slds-gutters text-center">
+                <div class="slds-col current tick">
+                    <div class="step-number ">{step_1}</div>
+                    <!-- <div class="lable-s1">{label.step_1}</div> -->
+                </div>
+                <div class="slds-col current tick">
+                    <div class="step-number">{step_2}</div>
+                    <!-- <div class="lable-s1">{label.step_2}</div> -->
+                </div>
+                <div class="slds-col current tick">
+                    <div class="step-number">{step_3}</div>
+                    <!-- <div class="lable-s1">{label.step_3}</div> -->
+                </div>
+                <div class="slds-col current">
+                    <div class="step-number ">{step_4a}</div>
+                    <!-- <div class="lable-s1">Compare Your Brain</div> -->
+                </div>
+                <div class="slds-col">
+                    <div class="step-number">{step_4}</div>
+                    <!-- <div class="lable-s1">{label.step_4}</div> -->
+                  </div>
+              </div>
+        </div>
+        <div class="mainCrowd-inner-box compare_form  brainInfo ">
+             <!-- <h1 class="text-center marginB20"><p class="title">Let's compare your brain!</p></h1>  -->
+             <div class="text-center marginB20 inner-title">{brainee_1}</div>
+             <p class="marginB20 text-center">{brainee_2}</p>
+             <!-- <p class="marginB20 text-center">Please provide us with these additional details to help compare your results to people like you.</p> -->
+            <template if:true={repeattesttaker.data}>
+                <lightning-radio-group name="repeattesttaker" label={completepageq1}
+                    options={repeattesttaker.data.values} type="radio" class="biological-sex-radioGroup"
+                    onchange={handleRepeatTestTaker}>
+                </lightning-radio-group>
+            </template>
+            <template if:true={race.data}>
+                <lightning-combobox name="race" label={complete3} placeholder={brainInfo_text_choose}
+                    options={race.data.values}  onchange={handleRace} dropdown-alignment="auto">
+                </lightning-combobox>
+            </template>
+            <template if:true={HispanicLatinoPicklist.data}>
+                <lightning-radio-group name="hispanic" label={Hispanic_Latino} options={HispanicLatinoPicklist.data.values} 
+                type="radio" class="biological-sex-radioGroup" onchange={handleHispanic} value={hispanicLatinoValueSet}>
+                </lightning-radio-group>
+            </template>
+            <template if:true={hispanicCountry}>
+                <lightning-checkbox-group name="hispanic_country"
+                    label={complete4_a}
+                    options={hispanicorigin.data.values} value={selectedCountry} onchange={hispanicCountriesChange}
+                    class="radio-button-group-brainee medicalConditionsChange">
+                </lightning-checkbox-group>
+            </template>
+            <template if:true={health.data}>
+                <lightning-checkbox-group name="medical_conditions" label={complete6} options={health.data.values}
+                    value={selectedmedicalConditions} onchange={medicalConditionsChange}
+                    class="radio-button-group-brainee medicalConditionsChange">
+                </lightning-checkbox-group>
+            </template>
+            <template if:true={firstdegree.data}>
+                <lightning-radio-group name="firstdegree" label={complete7} class="biological-sex-radioGroup"
+                    type="radio" options={firstdegree.data.values} onchange={handleFirstDegree}>
+                </lightning-radio-group>
+            </template>
+            <template if:true={isFirstDegreeEOVisible}>
+                <lightning-radio-group name="firstdegreeeo" label={complete8} class="biological-sex-radioGroup"
+                    type="radio" options={firstdegreeeo.data.values} onchange={handleFirstDegreeEO}>
+                </lightning-radio-group>         
+            </template>
+            <template if:true={seconddegree.data}>
+            <lightning-radio-group name="seconddegree" label={complete9} class="biological-sex-radioGroup"
+                    type="radio" options={seconddegree.data.values} onchange={handleSecondDegree}>
+            </lightning-radio-group>
+            </template>
+            <template if:true={handedness.data}>
+                <lightning-radio-group name="handedness" label={campylete2} options={handedness.data.values}
+                    type="radio" class="biological-sex-radioGroup" onchange={handleHandedness}>
+                </lightning-radio-group>
+            </template>
+            <template if:true={medications.data}>
+                <lightning-combobox name="medications" label={complete5} placeholder={brainInfo_text_choose}
+                    options={medications.data.values} onchange={handleMedications} dropdown-alignment="bottom-left">
+                </lightning-combobox>
+            </template>
+            <div class="slds-align_absolute-center">
+                <lightning-button class="btn-sm pink-btn-box big" type="submit" name="Next"
+                    label={Brain_Info_Results} onclick={updateContact}>
+                </lightning-button>
+            </div>
+
+
+        </div>
+    </div>
+
+</template>

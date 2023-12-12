@@ -1,0 +1,12 @@
+<design:component>
+	<design:attribute name="Results_ThankYou" label="Results_ThankYou" default="Gracias por ayudar al avance de la investigación de MindCrowd sobre el neuroenvejecimiento."/>
+    <design:attribute name="results_text_1" label="results_text_1" default="Tus Resultados"/>
+    <design:attribute name="Paired_catcme_game_text3" label="Paired_catcme_game_text3" default="Test de Memoria"/>
+    <design:attribute name="Paired_catcme_game_text1" label="Paired_catcme_game_text1" default="El primer gráfico muestra el número de pares de palabras que has respondido correctamente. Un puntaje perfecto es de 36 pares de palabras correctas.El segundo gráfico muestra el puntaje promedio logrado por gente como tú. O sea, personas de similar edad, sexo biológico y educación que han tomado el test de MindCrowd. El tercer gráfico muestra el resultado promedio obtenido por todos los participantes de MindCrowd hasta hoy."/>
+    <design:attribute name="Paired_catcme_game_text1a" label="Paired_catcme_game_text1a" default="The second gauge shows how people like you scored. These are previous MindCrowd participants who are similar to you in age, biological sex, and education."/>
+    <design:attribute name="Paired_catcme_game_text1b" label="Paired_catcme_game_text1b" default="The third gauge shows the overall average for all previous MindCrowd participants."/>
+    <design:attribute name="Dltrs_catcme_game_text3" label="Dltrs_catcme_game_text3" default="Prueba de Atención"/>
+    <design:attribute name="Dltrs_catcme_game_text1" label="Dltrs_catcme_game_text1" default="La primer gráfica muestra tu velocidad de respuesta a la prueba en milisegundos. Mientras menor sea el número, mayor es la velocidad y mejor el resultado.La segunda gráfica muestra el puntaje promedio de otros como tú. Estas son personas que han hecho el test de MindCrowd similares a ti en edad, sexo biológico y educación.El tercer gráfico muestra el promedio de todos los resultados logrados por los participantes de MindCrowd hasta hoy."/>
+    <design:attribute name="Dltrs_catcme_game_text1a" label="Dltrs_catcme_game_text1a"/>
+    <design:attribute name="Dltrs_catcme_game_text1b" label="Dltrs_catcme_game_text1b"/>    
+</design:component>

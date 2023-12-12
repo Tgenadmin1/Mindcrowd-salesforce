@@ -1,0 +1,14 @@
+<apex:page contentType="text/xml" showHeader="false">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <url>
+    <loc>https://project.mindcrowd.org/s/accesovip</loc>
+    <lastmod>2023-03-03T17:05:01+00:00</lastmod>
+      <apex:outputText value="<xhtml:link rel=&quot;alternate&quot; hreflang=&quot;es&quot; href=&quot;https://project.mindcrowd.org/s/accesovip&quot;/>" escape="false"/>
+      <apex:outputText value="<xhtml:link rel=&quot;alternate&quot; hreflang=&quot;en&quot; href=&quot;https://project.mindcrowd.org/es/s/vipaccess&quot;/>" escape="false"/>
+      <apex:outputText value="<xhtml:link rel=&quot;alternate&quot; hreflang=&quot;x-default&quot; href=&quot;https://project.mindcrowd.org/s/accesovip&quot;/>" escape="false"/>
+      <apex:outputText value="<image:image>"  escape="false"/>
+        <apex:outputText value="<image:loc>https://project.mindcrowd.org/es/resource/FeaturedImages/acceso-vip-mindcrowd.jpg</image:loc>" escape="false"/>
+      <apex:outputText value="</image:image>"  escape="false"/>
+  </url>
+</urlset>
+</apex:page>

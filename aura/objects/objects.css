@@ -1,0 +1,232 @@
+/* .THIS .game_panel{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color:#000;
+    color: #FFF;
+    position: relative;
+} */
+.THIS .gamebody{
+    margin:0px;
+    padding:0px;
+}
+/* .THIS .game_block {
+    max-width: 725px;
+    font-size: 20px;
+    width: 200%;
+    font-weight: bold;
+    padding: 25px;
+    position: relative;
+} */
+.THIS .game_block p {
+    line-height: 50px;
+}
+.THIS .centers{
+    text-align: center;
+}
+.THIS .bolds{
+    font-weight: bold;
+}
+.THIS .mb10{
+    margin-bottom: 10px;
+}
+.THIS .mb35 {
+    margin-bottom: 35px;
+}
+.THIS .w50 {
+    width: 50%;
+    display: inline-block;
+}
+.THIS .ortext{
+    position: relative;
+}
+.THIS .ortext::after{
+    position: absolute;
+    content: "OR";
+    top: 33%;
+    right: -15px;
+}
+.THIS .w100 {
+    width: 100%;
+    display: inline-block;
+}
+
+/* .THIS .blobsimg .bl1{ background-image: url("/s/sfsites/c/resource/mindGamesImages/objects/blobs1.png?v=4"); background-size: auto; background-position: center;} */
+.THIS .blobsimg .bl1{ background-image: url("../s/sfsites/c/resource/mindGamesImages/objects/blobs1.png?v=4"); background-size: contain; background-position: center;background-repeat: no-repeat;}
+.THIS .blobsimg .bl2{ background-image: url("../s/sfsites/c/resource/mindGamesImages/objects/blobs2.png?v=4"); background-size: contain; background-position: center;background-repeat: no-repeat;}
+.THIS .sqrimg .bl1{ background-image: url("../s/sfsites/c/resource/mindGamesImages/objects/sqr1.png?v=4");     background-size: contain; background-position: center;background-repeat: no-repeat;}
+.THIS .sqrimg .bl2{ background-image: url("../s/sfsites/c/resource/mindGamesImages/objects/sqr2.png?v=4"); background-size: contain; background-position: center;background-repeat: no-repeat;}
+
+/* .THIS .blobsimg .bl1_2{ background-image: url("/s/sfsites/c/resource/mindGamesImages/objects/blobs1_2.png?v=4"); background-size: auto; background-position: center;background-repeat: no-repeat;}
+.THIS .sqrimg .bl1_2{ background-image: url("/s/sfsites/c/resource/mindGamesImages/objects/sqr1_2.png?v=4");     background-size: auto; background-position: center;background-repeat: no-repeat;}
+.THIS .blobsimg2 .bl1_2{ background-image: url("/s/sfsites/c/resource/mindGamesImages/objects/ppattern_3.png?v=4"); background-size: auto; background-position: center;background-repeat: no-repeat;}
+.THIS .cenimg .sqi1_2{ background-image: url("/s/sfsites/c/resource/mindGamesImages/objects/sqr1_2.png?v=4"); background-size:contain; padding: 24px 30px;background-repeat: no-repeat;background-position: center;} */
+
+.THIS .blobsimg .bl1_2{ background-size: contain; background-position: center;background-repeat: no-repeat;}
+.THIS .sqrimg .bl1_2{ background-size: contain; background-position: center;background-repeat: no-repeat;}
+.THIS .blobsimg2 .bl1_2{  background-size: contain; background-position: center;background-repeat: no-repeat;}
+.THIS .cenimg .sqi1_2{  background-size:contain; padding: 24px 30px;background-repeat: no-repeat;background-position: center;}
+
+
+
+.THIS .cenimg .sqi1{ background-image: url("../s/sfsites/c/resource/mindGamesImages/objects/sqi1.png?v=4"); background-size:contain; padding: 24px 30px;background-repeat: no-repeat;}
+.THIS .cenimg .sqi2{ background-image: url("../s/sfsites/c/resource/mindGamesImages/objects/sqi2.png?v=4"); background-size:contain; padding:50px 50px;background-repeat: no-repeat;}
+
+
+
+.THIS .pinner {
+    background-image: url(../s/sfsites/c/resource/mindGamesImages/objects/pinner.png?v=4);
+    background-size:contain; 
+    padding: 50px 60px;
+    display: inline-block;
+    background-repeat: no-repeat;
+    background-position:center;
+}
+
+.THIS .pouter {
+    background-image: url(../s/sfsites/c/resource/mindGamesImages/objects/pouter.png?v=4);
+    background-size:contain; 
+    padding: 50px 60px;
+    display: inline-block;
+    background-repeat: no-repeat;
+    background-position:center;
+}
+.THIS .ppattern {
+    background-image: url(../s/sfsites/c/resource/mindGamesImages/objects/ppattern.png?v=4);
+    background-size:contain; 
+    padding: 50px 60px;
+    display: inline-block;
+    background-repeat: no-repeat;
+    background-position:center;
+}
+.THIS .arrowdt {
+    text-align: center;
+    padding: 15px 0px;
+}
+
+.THIS .arrowdt ul {
+    list-style: none;
+    display: block;
+    margin: 0px;
+    padding: 0px;
+}
+.THIS .arrowdt ul li {
+    list-style: none;
+    /* display: inline-block; */
+    margin: 0px 5px;
+    /* padding: 70px; */
+    height: 175px;
+}
+
+.THIS .errorblock{
+    display: none;
+}
+
+.THIS .objque {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    height: 100%;
+}
+.THIS .objque ul {
+    display: inline-block;
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+    height: 100%;
+}
+.THIS .objque ul li {
+    list-style: none;
+    display: inline-block;
+    /* margin: 0px 4px; */
+    /* padding: 100px 95px; */
+    /* background-size: auto; */
+    width:50%;
+    height: 256px;
+    background-position: center center;
+    background-size: contain;
+    height: 100%;
+    background-repeat: no-repeat;
+}
+
+.THIS .duration {
+    margin-top:10px;
+    font-size: 12px;
+    text-align: center;
+    color: #f50202;
+    padding: 5px;
+}
+.THIS .d_title {
+    color: #000;
+}
+.THIS .duration .d_txt{
+    display: inline-block;
+    margin-right: 15px;
+}
+.THIS .duration .d_status{
+    display: inline-block;
+    margin-left: 15px;
+}
+.THIS .errormsg {
+    color: #F00;
+    font-size: 12px;
+    text-align: center;
+    font-weight: normal;
+}
+.THIS .btninputbox {
+    display: inline-block;
+    margin-top: 10px;
+    position: absolute;
+    bottom: 5px;
+    text-align: center;
+    width: 100%;
+    left: 0;
+}
+.THIS .btninputbx {
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+}
+.THIS .btninputbx li {
+    display: inline-block;
+    font-size: 18px;
+    text-align: center;
+}
+.THIS .btninputf{
+    background-image: url(../s/sfsites/c/resource/mindcrowd_style/images/F.png);
+    height:60px;
+    width: 60px;
+    background-size: contain;
+    display: block;
+    text-align: center;
+    padding: 15px;
+    font-size: 34px;
+    margin:0px 5px;
+    /* display: none; */
+}
+.THIS .btninputj{
+    background-image: url(../s/sfsites/c/resource/mindcrowd_style/images/j.png);
+    height:60px;
+    width: 60px;
+    background-size: contain;
+    display: block;
+    text-align: center;
+    padding: 15px;
+    font-size: 34px;
+    margin:0px 5px;
+    /* display: none; */
+}
+.THIS .instructionsLeft .btninputj,
+.THIS .instructionsLeft .btninputf{
+    margin:0px auto;
+}
+.THIS .black.main-content-inner, .THIS .black .game-title{
+
+    background-color: #000;
+    color: #fff;
+    border-color:#000 ;
+}
+.THIS .mb20{margin-bottom: 20px;}

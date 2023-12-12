@@ -1,0 +1,28 @@
+<!-- // Created By: {Girikon(Sunil)}
+// Created On: 20/10/2021 (dd/mm/yyyy)
+// Description/Purpose:created to send the selected QR code. 
+
+ -->
+
+ <apex:page standardController="Shipping_Detail__c" recordSetVar="Shipping_Detail" showHeader="false" extensions="PassQRCodeToVF">
+    <!-- The selected id is : {!QRCodes}       -->
+  <apex:includeLightning />
+      <div id="lightningvf" />
+      <script>
+       
+      console.log('print qr code.');
+          $Lightning.use("c:ShipmentApp", function() {
+            $Lightning.createComponent("c:qrCodeGeneration",
+                { 
+                  "qrcodeIds": {!QRCode}
+                },
+                "lightningvf",
+                function(cmp) {
+                  console.log("generate QR code button was created");
+                  
+                }
+            );
+          });
+       
+      </script>
+  </apex:page>

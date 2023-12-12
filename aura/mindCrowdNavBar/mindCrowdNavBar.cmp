@@ -1,0 +1,48 @@
+<!--
+  @description       : 
+  @author            : Raj  
+  @UI author         : Raj
+  @last modified on  : 05-07-2021
+  @last modified by  : ChangeMeIn@UserSettingsUnder.SFDoc
+  Modifications Log 
+  Ver   Date         Author         Modification
+  1.0   06-07-2021   Raj Kumar      Initial Version
+-->
+<aura:component  extends="forceCommunity:navigationMenuBase" access="global" implements="forceCommunity:availableForAllPageTypes">
+    <aura:attribute name="baseUrl" type="String"/> 
+    <aura:attribute name="aboutMindcrowdTab" type="String" default="ABOUT MINDCROWD" access="global" />
+    <aura:attribute name="cogAndBrain" type="String" default="COGNITION &#38; BRAIN AGING ARTICLES" access="global" />
+    <aura:attribute name="faq" type="String" default="FAQ" access="global"/>  
+    <aura:attribute name="Espnol" type="String" default="ESPAÑOL" access="global"/>
+
+    <!--<lightning:navigation aura:id="navService"/>-->
+    <aura:handler event="forceCommunity:routeChange" action="{!c.handleRouteChange}"/>
+
+    <lightning:navigation aura:id="navService"/>
+    <div class="slds-builder-header__utilities-item top-banner-button m-button  ">
+      <a href="{!$Label.c.Community_Url+'/s/'+$Label.c.url_testlanguage}"  class="pink-btn slds-button text-center"  title="Click to take the MindCrowd Memory Test">
+        {!$Label.c.Banner_Text_6n}
+      </a>
+     </div>
+
+            <div class="slds-builder-header__utilities-item">
+              <a href="{!$Label.c.live_URL_1}"  title="{!$Label.c.nav_text_8_t}" class="top-nav-btn slds-builder-header__item-action slds-media slds-media_center">
+                <div class="slds-media__body">{!v.aboutMindcrowdTab}</div>
+              </a>
+              </div>
+              <div class="slds-builder-header__utilities-item">
+                <a href="{!$Label.c.live_URL_2}"  title="{!$Label.c.nav_text_9_t}" class="top-nav-btn slds-builder-header__item-action slds-media slds-media_center">
+                    <div class="slds-media__body">{!v.cogAndBrain}</div>
+                  </a>
+              </div>
+              <div class="slds-builder-header__utilities-item">
+                <a href="{!$Label.c.live_URL_3}"  title="{!$Label.c.faq}" class="top-nav-btn slds-builder-header__item-action slds-media slds-media_center">
+                    <div class="slds-media__body">{!v.faq}</div>
+                  </a>
+              </div>
+             <div class="slds-builder-header__utilities-item">
+                <a href="{!$Label.c.live_URL_10}"  title="{!$Label.c.ESPA_OL}" class="top-nav-btn slds-builder-header__item-action slds-media slds-media_center">
+                   <div class="slds-media__body">{!$Label.c.ESPA_OL}</div>
+                  </a>
+              </div>
+</aura:component>

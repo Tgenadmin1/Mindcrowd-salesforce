@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LightningComponentBundle xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>52.0</apiVersion>
+    <isExposed>true</isExposed>
+    <targets>
+        <target>lightning__AppPage</target>
+        <target>lightning__RecordPage</target>
+        <target>lightning__HomePage</target>
+        <target>lightningCommunity__Page</target>
+        <target>lightningCommunity__Default</target>
+    </targets>
+
+    <targetConfigs>  
+        <targetConfig targets="lightning__HomePage,lightning__RecordPage,lightningCommunity__Default">
+            
+            <property name="Studies_text1" type="String" default="Welcome to" label="Studies_text1"/>
+            <property name="Studies_text2" type="String" default="MindCrowd!" label="Studies_text2"/>
+            <property name="Studies_text3" type="String" default="MindCrowd is a web-based study of how the brain works with the goal of enrolling 1 million people to help us learn more about brain-related diseases." label="Studies_text3"/>
+            <property name="Studies_text4" type="String" default="You have been referred to join this study by one of our scientific collaborators because we believe that combining data from different studies will help us learn more about your brain." label="Studies_text4"/>
+            <property name="Studies_text5" type="String" default="To get started, please fill out the fields below using the information that was provided to you." label="Studies_text5"/>
+            <property name="Studies_text6" type="String" default="Study" label="Studies_text6"/>
+            <property name="Studies_text7" type="String" default="Participant ID:" label="Studies_text7"/>
+            <property name="Studies_text8" type="String" default="Event" label="Studies_text8"/>
+            <property name="Studies_text9" type="String" default="Event ID:" label="Studies_text9"/>
+            <property name="Studies_text10" type="String" default="Join the Study" label="Studies_text10"/>
+            <property name="Studies_error1" type="String" default="Please fill the required fields." label="Studies_error1"/>
+            <property name="Studies_error2" type="String" default="Please select the Event Id." label="Studies_error2"/>
+            <property name="Studies_error3" type="String" default="This URL is invalid!" label="Studies_error3"/>
+            <property name="Studies_error4" type="String" default="Please select the Study OR the Event!" label="Studies_error4"/>
+            <property name="Studies_error5" type="String" default="The Participant ID you have entered appear to be invalid !" label="Studies_error5"/>
+            <property name="Studies_error6" type="String" default="The Participant ID you have entered is invalid! Please check the ID and enter it again. Note that Participant IDs are case-sensitive and for that reason we recommend using copy and paste to ensure that the ID matches what was provided to you." label="Studies_error6"/>
+            <property name="Select_Event" type="String" default="Choose Event ID" label="Select_Event"/>
+            
+            <property name="strTitle" type="String" default="Welcome in Salesforce" label="Enter the title"/>
+            
+        </targetConfig>
+    </targetConfigs>
+</LightningComponentBundle>

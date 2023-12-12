@@ -1,0 +1,312 @@
+<!-- @description       : 
+    @author            : Vicky Kumar
+    @UI author         : Raj
+    @last modified on  : 24-05-2021
+    @apex controller   : CustomLoginController
+    @description       : This is the Profile Page for the Research Community Login User.
+        -->
+
+        <template >
+            <div class="l-title text-center text-normal">{My_Profile}</div>
+            <div class="mainCrowd-outer-box my-profile">
+               
+            <div class="mainCrowd-inner-box brainInfo">
+                <div class="right-link">
+                    <a id="Password" onclick={onChangePasswordClick}>{change_password}</a>
+                </div>
+                <div if:true={contactId}>
+                    <lightning-record-edit-form record-id={contactId} object-api-name="Contact">
+                    <template if:true={rec}>                    
+                        <lightning-input type="text" class="profile-row two-cal require "  name="firstname" label={finish_text_6} value={rec.FirstName} 
+                        onchange={handleFirstName} required>
+                        </lightning-input>
+                        <lightning-input type="text" class="profile-row two-cal require " name="lastname" label={finish_text_9} value={rec.LastName} 
+                            onchange={handleLastName} required>
+                        </lightning-input>        
+                        <lightning-input type="email" class="profile-row two-cal email require " name="email" label={myprofile_text_03} value={rec.Email} 
+                            onchange={handleEmail} required>
+                        </lightning-input>
+                        <!-- <lightning-input type="text" class="profile-row two-cal phone " name="phone" label={myprofile_text_13} value={rec.Phone} onchange={handlePhone}
+                            onkeyup={setPhoneType} >
+                        </lightning-input> -->
+                        <lightning-input type="text" class="profile-row two-cal phone" name="phone" label={myprofile_text_13}  onchange={handlePhone}
+              onkeyup={setPhoneType} >             
+          </lightning-input>
+
+                        <lightning-combobox  class="profile-row two-cal " name="country" label={myprofile_text_10} onchange={handleCountryChange}
+                        options={controllingValues} placeholder={selectedCountry} value={selectedCountry} dropdown-alignment="auto">
+                        </lightning-combobox>
+                        <template if:true={isStateVisible}>
+                            <div class="profile-row tow-col slds-form-element bt-0  ">
+                                <label for="Address" class="slds-form-element__label slds-no-flex">{maillingAddress}</label>
+                                <div class=" paddingL30 j-right set-w-100" >
+                                    <lightning-combobox label={state_text}  name="state" onchange={handleStateChange} options={dependentValues}
+                                    placeholder={selectedState} value={selectedState} disabled={isEmpty} dropdown-alignment="auto">
+                                </lightning-combobox>
+                                </div>   
+                            </div>     
+                            <div class="profile-row tow-col paddingL30 j-right bt-0 ">
+                                <lightning-textarea type="text" name="input1" label={address_text} value={address1}
+                                onchange={handleAddress1Change} placeholder={discription_p_text} ></lightning-textarea>
+                            </div>     
+                            <div class="profile-row tow-col paddingL30 j-right bt-0 ">
+                                <lightning-input type="text" name="input1" label={city_p_text}  value={city} onchange={handleCityChange}
+                                placeholder={city_p_text}></lightning-input>
+                            </div>
+                            <div class="profile-row tow-col paddingL30 j-right">
+                                <lightning-input pattern="[0-9]*" class="zipcode" type="text" name="input1" label={zip_text}  value={zipcode}
+                                onchange={handleZipcodeChange} placeholder={zipCode_p_text} max-length="9"></lightning-input>
+                            </div>
+                        </template>      
+                        <template if:true={gender.data}>
+                            <lightning-combobox name="gender" label={brainInfo_text_4} value={rec.Gender__c}
+                                placeholder={brainInfo_text_choose} options={gender.data.values} onchange={handleGender}
+                                dropdown-alignment="auto" class="profile-row two-cal">
+                            </lightning-combobox>
+                        </template>
+                        <template if:true={renderOptionalField}>
+                            <lightning-input type="text" name="otherGender" label={brainInfo_text_14} value={rec.Other_Gender__c} onchange={handleOtherGender} class="profile-row two-cal">
+                            </lightning-input>
+                        </template>
+                        <template if:true={education.data}>
+                            <lightning-combobox name="education" class="profile-row two-cal education require " label={brainInfo_text_5}
+                                value={rec.Highest_level_of_education_completed__c} placeholder={brainInfo_text_choose}
+                                options={education.data.values} onchange={handleChangeFieldeducation} dropdown-alignment="auto"
+                                required>
+                            </lightning-combobox>
+                        </template>
+                        <template if:true={speakLanguages.data}>
+                            <lightning-combobox name="speakLanguages" label={brainInfo_text_6}
+                                value={rec.Number_of_fluent_languages_spoken__c} placeholder={brainInfo_text_choose}
+                                options={speakLanguages.data.values} onchange={handleChangeFieldspeakLanguages}
+                                dropdown-alignment="auto" class="profile-row two-cal ">
+                            </lightning-combobox>
+                        </template>
+                        <template if:true={writeLanguages.data}>
+                            <lightning-combobox name="writeLanguages" label={brainInfo_text_7}
+                                value={rec.Number_of_fluent_languages_written__c} placeholder={brainInfo_text_choose}
+                                options={writeLanguages.data.values} onchange={handleChangeFieldwriteLanguages}
+                                dropdown-alignment="auto" class="profile-row two-cal ">
+                            </lightning-combobox>
+                        </template>
+                        <template if:true={isSecondLanguageAgeVisible}>
+                            <div class="profile-row two-cal slds-form-element set-input-width  ">
+                                <label class="slds-form-element__label slds-no-flex" for="AgeAtSecondSpokenLanguage">{brainInfo_text_11}</label>
+                                <lightning-input id="AgeAtSecondSpokenLanguage" onchange={handleAge} type="Number" class = "age"
+                                    field-name="Age_at_second_spoken_language__c" label={brainInfo_text_9} value={rec.Age_at_second_spoken_language__c}
+                                    variant="label-hidden" max-length="3">
+                                </lightning-input>
+                            </div>
+                        </template>
+                        <template if:true={fluentLanguage.data}>
+                            <lightning-combobox name="fluentLanguage" class="profile-row two-cal " label={brainInfo_text_10}
+                                value={rec.Most_fluent_language__c} placeholder={brainInfo_text_choose} options={fluentLanguage.data.values}
+                                onchange={handleChangeFieldfluentLanguage} dropdown-alignment="auto">
+                            </lightning-combobox>
+                        </template>
+                    </template>       
+                <template if:true={rec}>
+                        <template if:true={firstdegree.data}> 
+                                <div class="">
+                                <lightning-radio-group name="firstdegree"  class="biologicalSex biological-sex-radioGroup mr-4"
+                                            label={complete7}
+                                            value={rec.First_degree_family_history_of_AD__c}   
+                                            type="radio"
+                                            options={firstdegree.data.values}
+                                            onchange={handleFirstDegree}>
+                                </lightning-radio-group>
+                            </div>
+                        </template>     
+                        <template  if:true={renderFirstDegreeField}>
+                            <template if:true={firstdegreeeo.data}> 
+                                <div >
+                                    <lightning-radio-group
+                                                        name="firstdegreeeo"
+                                                        label={complete8}
+                                                        value={rec.First_degree_family_history_of_EO_AD__c}
+                                                        class="biologicalSex  biological-sex-radioGroup mr-4"
+                                                        type="radio"
+                                                        options={firstdegreeeo.data.values}
+                                                        onchange={handleFirstDegreeEO} >
+                                    </lightning-radio-group>
+                                        
+                                </div>
+                            </template>
+                        </template>
+                        <template if:true={seconddegree.data}> 
+                            <div class="">
+                                <lightning-radio-group
+                                        name="seconddegree"
+                                        label={complete9}
+                                        value={rec.Second_degree_family_history_of_AD__c}
+                                        class="biologicalSex  biological-sex-radioGroup mr-4"
+                                        type="radio"
+                                        options={seconddegree.data.values}
+                                        onchange={handleSecondDegree} >
+                                </lightning-radio-group>   
+                        </div>     
+                        </template>
+                        <template if:true={healthOptions}>
+                        <div class="profile-row1"> 
+                            <lightning-checkbox-group  name="medical_conditions" 
+                            label={complete6} options={healthOptions}
+                            value={selectedmedicalConditions}
+                            onchange={medicalConditionsChange} class="biologicalSex  biological-sex-radioGroup mr-4">
+                            </lightning-checkbox-group> 
+                        </div>
+                    </template>
+                </template>               
+                <template if:true={medications.data}>
+                    <lightning-combobox  name="medications" 
+                    label={myprofile_text_12} 
+                    value={rec.Number_of_daily_medications__c}
+                    placeholder={brainInfo_text_choose}
+                    options={medications.data.values} onchange={handleMedications}
+                    class="profile-row two-cal "  
+                    dropdown-alignment="auto"
+                    >
+                    </lightning-combobox>
+                </template>
+                </lightning-record-edit-form>       
+                <div class="slds-align_absolute-center">
+                    <lightning-button class="magenta-btn slds-m-top_small " variant="brand" type="submit"
+                        name="save" label={save} onclick={onSave}>
+                    </lightning-button>
+                </div>
+             </div>
+             </div>
+            </div>        
+            <template if:true={openModal}>  
+                <section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-modal="true" aria-describedby="modal-content-id-1" class="slds-modal slds-modal_small slds-fade-in-open">
+                    <div class="slds-modal__container">
+                        <!-- Modal/Popup Box LWC header here -->
+                        <header class="slds-modal__header">
+                            <!-- <lightning-button-icon icon-name="utility:close" alternative-text="Close this window"   variant="bare-inverse" onclick={closeModal} class="slds-modal__close ">  
+                            </lightning-button-icon>  -->
+                            <div  class="modal-title">{chngePassword}</div>
+                        </header>
+                        <!-- Modal/Popup Box LWC body starts here -->
+                        <div class="slds-modal__content slds-p-around_large" id="modal-content-id-1">
+                            
+                                <lightning-layout multiple-rows="true">
+                                    <lightning-layout-item size="12" small-device-size="12" medium-device-size="12" large-device-size="12" class="pwd-instractions" >
+                                        <p> {rule}</p>
+                                        <p>  {rule_1}</p>
+                                        <p>  {rule_2}</p>
+                    
+                                    </lightning-layout-item>
+                                    
+                                        <lightning-layout-item size="12" small-device-size="12" medium-device-size="12" large-device-size="12"  >
+                                            <lightning-input type="password" title="" name="newPassword" value={newPassword} class="newPassword" onchange={onChangeNewPwd} label={new_c_Password} pattern="^(?=.*[A-Za-z])(?=.*\d).{8,}$" message-when-pattern-mismatch={password_validation} required></lightning-input>
+                                        </lightning-layout-item>
+                                        <lightning-layout-item size="12" small-device-size="12" medium-device-size="12" large-device-size="12" >
+                                            <lightning-input type="password" title="" name="confirmPassword" value={confirmPassword} class="confirmPassword" onchange={onChangeConfirmPwd} required label={confirm_c_Password}></lightning-input>
+                                        </lightning-layout-item>
+                                    <lightning-layout-item size="12" small-device-size="12" medium-device-size="12" large-device-size="12" >
+                                            <lightning-input type="password" title="" name="oldPassword"  value={oldPassword} class="oldPassword"  onchange={onChangeOldPwd} required label={old_c_Password} ></lightning-input>
+                                        </lightning-layout-item>         
+                            </lightning-layout> 
+                            
+                        </div>
+                        <!-- Modal/Popup Box LWC footer starts here -->
+                        <footer class="slds-modal__footer">
+                            <lightning-button  class="magenta-btn  btn-sm" label={cancel_text} variant="brand" onclick={closeModal}>  
+                            </lightning-button>  
+                            <lightning-button variant="brand"  name="change" label={chngePassword} title="" onclick={clickChange} class="magenta-btn btn-sm"></lightning-button>
+                        </footer>
+                    </div>
+                </section>
+                <div class="slds-backdrop slds-backdrop_open"></div>
+            </template>
+            <template if:true={ErrorModalOpen}>
+                <section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-modal="true" aria-describedby="modal-content-id-1" class="slds-modal slds-modal_small ssm slds-fade-in-open change-pwd-error-window">
+                    <div class="slds-modal__container">
+                        <!-- Modal/Popup Box LWC header here -->
+                         <!-- Modal/Popup Box LWC body starts here -->
+                         <header class="slds-modal__header">
+                            <lightning-button-icon icon-name="utility:close" alternative-text={label.close_btn}    variant="bare-inverse" onclick={closeModal1} class="slds-modal__close ">  
+                            </lightning-button-icon> 
+                            <span class="title slds-hyphenate" id="modal-heading-01">{reuiredField}</span>
+                          </header>
+                        <div class="slds-modal__content slds-p-around_medium" id="modal-content-id-2">
+                            
+                          
+                            <ul class="p-list">
+                                <li if:true={mPwdRequirment} class="required1 ">{pwdMatchError3}</li>
+                                <li if:true={mNewPasswordLength} class="required1 ">{mNewPasswordLengthCheck}</li>
+                                <li if:true={mNewPasswordError} class="required1 ">{requiredFieldError1}</li> 
+                                <li if:true={mNewConfirmPasswordError} class="required1 ">{requiredFieldError2}</li>
+                                <li if:true={mPwdMatch} class="required1 ">{pwdMatchError2}</li>
+                                <li if:true={mOldPasswordError} class="required1 ">{requiredFieldError3}</li>                 
+                            </ul>
+         
+                        </div>
+        
+                    </div>
+                </section>
+                <div class="slds-backdrop slds-backdrop_open change-pwd-error-bg"></div>
+            </template>
+            <!--Modal window to show that profile is updated successfully-->
+            <template if:true={ProfileUpdateModal}>
+                <section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-modal="true" aria-describedby="modal-content-id-1" class="slds-modal slds-modal_small ssm slds-fade-in-open change-pwd-error-window">
+                    <div class="slds-modal__container">
+                        <!-- Modal/Popup Box LWC header here -->
+                         <!-- Modal/Popup Box LWC body starts here -->
+                         <header class="slds-modal__header">
+                            <lightning-button-icon icon-name="utility:close" alternative-text={label.close_btn}    variant="bare-inverse" onclick={closeModal2} class="slds-modal__close ">  
+                            </lightning-button-icon> 
+                            <!-- <span class="title slds-hyphenate" id="modal-heading-03"></span> -->
+                            <div >{profileUpdated}</div>
+                        </header>
+                        <div class="slds-modal__content slds-p-around_medium" >
+                            
+                         </div>
+                       
+                    </div>
+                </section>
+                <div class="slds-backdrop slds-backdrop_open change-pwd-error-bg"></div>
+            </template>
+            <!--modal created for required fields of myProfile Page  -->
+            <template if:true={hasRequiredFieldError}>
+                <section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-modal="true" aria-describedby="modal-content-id-1" class="slds-modal slds-modal_small ssm slds-fade-in-open change-pwd-error-window">
+                    <div class="slds-modal__container">
+                        <!-- Modal/Popup Box LWC header here -->
+                         <!-- Modal/Popup Box LWC body starts here -->
+                         <header class="slds-modal__header">
+                            <lightning-button-icon icon-name="utility:close" alternative-text={label.close_btn}    variant="bare-inverse" onclick={closeModal3} class="slds-modal__close ">  
+                            </lightning-button-icon> 
+                            <span class="title slds-hyphenate" id="modal-heading-04">{validation_mandatory}</span>
+                          </header>
+                        <div class="slds-modal__content slds-p-around_medium" id="modal-content-id-4">
+                            
+                          
+                            <ul class="p-list"> 
+                               
+                                <li if:true={mEmailError} class="required1 ">{emailrequire}</li>
+                                <!-- <li if:true={mNewConfirmPasswordError} class="required1 ">{requiredFieldError2}</li> -->
+                                
+                            </ul>
+         
+                        </div>
+        
+                    </div>
+                </section>
+                <div class="slds-backdrop slds-backdrop_open change-pwd-error-bg"></div>
+            </template>
+            <template if:true={ErrorModalOpenAge}>
+                <section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-modal="true" aria-describedby="modal-content-id-1" class="slds-modal slds-modal_small ssm slds-fade-in-open">
+                    <div class="slds-modal__container">
+                        <!-- Modal/Popup Box LWC header here -->
+                         <!-- Modal/Popup Box LWC body starts here -->
+                         <header class="slds-modal__header">
+                            <lightning-button-icon icon-name="utility:close" alternative-text={label.close_btn}   variant="bare-inverse" onclick={closeModalAge} class="slds-modal__close ">  
+                            </lightning-button-icon> 
+                            <span class="title slds-hyphenate" id="modal-heading-02">{age_validation}</span>
+                          </header>
+                          <div class="slds-modal__content slds-p-around_medium" id="modal-content-id-3">
+                          </div>
+                    </div>
+                </section>
+                <div class="slds-backdrop slds-backdrop_open"></div>
+            </template>
+        </template>

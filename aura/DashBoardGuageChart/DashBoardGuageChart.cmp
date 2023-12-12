@@ -1,0 +1,17 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global">
+	<!--<ltng:require scripts="{!$Resource.Chartsjs  + '/Chart.min.js'}" afterScriptsLoaded="{!c.ctr}"/>-->
+    <ltng:require scripts="{!join(',', 
+    $Resource.Chartsjs + '/Chart.min.js', 
+    $Resource.Guage_ChartJs)}" afterScriptsLoaded="{!c.ctr}"/>
+    
+    <aura:attribute name="value" type="Integer" access="global" default="0" />
+    <aura:attribute name="chartLabel" type="String" access="global" />
+    <aura:attribute name="lowAverage" type="Integer" access="global" />
+    <aura:attribute name="highAverage" type="Integer" access="global" />
+    <aura:attribute name="maxValue" type="Integer" access="global" />
+    <aura:attribute name="guageColor" type="List" access="global" default="['#FF5833','#FFB833','#33FF38']"/>
+
+    <div class="slds-col slds-size--1-of-1 slds-small-size--2-of-2 slds-medium-size--4-of-4">
+        <canvas aura:id="guageChart" id="guageChart" width="100%"  />
+    </div>
+</aura:component>

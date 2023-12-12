@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LightningComponentBundle xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>52.0</apiVersion>
+    <isExposed>true</isExposed>
+    <targets>
+            <target>lightning__AppPage</target>
+            <target>lightning__RecordPage</target>
+            <target>lightning__HomePage</target>
+            <target>lightningCommunity__Page</target>
+            <target>lightningCommunity__Default</target>
+    </targets>
+    <targetConfigs>  
+        <targetConfig targets="lightning__HomePage,lightning__RecordPage,lightningCommunity__Default">
+        
+        <property name="BeanGame_text1" type="String" default="MindCrowd Bean Game Scoresheet" label="BeanGame_text1"/>
+        <property name="BeanGame_text2" type="String" default="*Required" label="BeanGame_text2"/>
+        <property name="BeanGame_text3" type="String" default="Participant Code:" label="BeanGame_text3"/>
+        <property name="BeanGame_text4" type="String" default="DRY RUN" label="BeanGame_text4"/>
+        <property name="BeanGame_text5" type="String" default="Time: Be sure to record as minutes:seconds up to two decimal places. For example, 1 minute and 45.03 seconds would be entered as 1:45.03. If your score was less than a minute, please enter your score starting with 0: (e.g., 0:52.31)" label="BeanGame_text5"/>
+        <property name="BeanGame_text6" type="String" default="Next" label="BeanGame_text6"/>
+        <property name="BeanGame_text7" type="String" default="Left Hand" label="BeanGame_text7"/>
+        <property name="BeanGame_text8" type="String" default="1" label="BeanGame_text8"/>
+        <property name="BeanGame_text9" type="String" default="Time: Be sure to record as minutes:seconds up to two decimal place (e.g. 01:45.03)" label="BeanGame_text9"/>
+        <property name="BeanGame_text10" type="String" default="Number of Drops:" label="BeanGame_text10"/>
+        <property name="BeanGame_text11" type="String" default="I forgot where I was going" label="BeanGame_text11"/>
+        <property name="BeanGame_text12" type="String" default="2" label="BeanGame_text12"/>
+        <property name="BeanGame_text13" type="String" default="3" label="BeanGame_text13"/>
+        <property name="BeanGame_text14" type="String" default="4" label="BeanGame_text14"/>
+        <property name="BeanGame_text15" type="String" default="BACK" label="BeanGame_text15"/>
+        <property name="BeanGame_text16" type="String" default="NEXT" label="BeanGame_text16"/>
+        <property name="BeanGame_text17" type="String" default="Right Hand" label="BeanGame_text17"/>
+        <property name="BeanGame_text18" type="String" default="One last thing:" label="BeanGame_text18"/>
+        <property name="BeanGame_text19" type="String" default="If you have any questions or comments, please email:" label="BeanGame_text19"/>
+        <property name="BeanGame_text20" type="String" default="SUBMIT" label="BeanGame_text20"/>
+        <property name="BeanGame_text22" type="String" default="Your answer" label="BeanGame_text22"/>
+        <property name="BeanGame_text21" type="String" default="Thank you for your participation!" label="BeanGame_text21"/>
+        <property name="BeanGame_text23" type="String" default="Wrong Participant Code." label="BeanGame_text23"/>
+        <property name="BeanGame_text24" type="String" default="Success" label="BeanGame_text24"/>
+        <property name="BeanGame_text25" type="String" default="BeanGame created" label="BeanGame_text25"/>
+        <property name="BeanGame_text26" type="String" default="Please fill the required fields." label="BeanGame_text26"/>
+        <property name="BeanGame_text27" type="String" default="Submit" label="BeanGame_text27"/>
+        <property name="BeanGame_text28" type="String" default="List has no rows for assignment to SObject" label="BeanGame_text28"/>
+         <property name="BeanGame_text29" type="String" default="My Games" label="BeanGame_text29"/>
+                
+        </targetConfig>
+       </targetConfigs>
+</LightningComponentBundle>

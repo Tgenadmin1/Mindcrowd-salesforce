@@ -1,0 +1,193 @@
+<!--   @description       : This Component works for creating contact record. 
+  @author            : Sunil Kumar
+  @UI author         : Raj
+  @last modified on  : 26-05-2021
+  @apex controller   : CustomLoginController
+  @description       : This is the Profile Page for the Research Community Login User.
+  @apexclass         : ContactController
+ -->
+
+ <template >
+    <div class="mainCrowd-outer-box marginB30 marginT0 paddingT0 " if:true={opacity}>
+        <div id="steps" class="steps">
+            <div class="step-grid slds-grid slds-gutters text-center">
+                <div class="slds-col current">
+                    <div class="step-number">{step_1}</div>
+                </div>
+                <div class="slds-col">
+                    <div class="step-number">{step_2}</div>
+                </div>
+                <div class="slds-col">
+                    <div class="step-number">{step_3}</div>
+                </div>
+                <div class="slds-col">
+                    <div class="step-number">{step_4a}</div>
+                </div>
+                <div class="slds-col">
+                    <div class="step-number">{step_4}</div>
+                  </div>
+              </div>
+        </div>
+        <div class="mainCrowd-inner-box" >
+            <div class="text-center marginB20 inner-title">{brainInfo_text_1}</div>
+            <div class="brainInfo">
+                <template if:true={rec}>
+                    <template if:true={biologicalSex.data}>
+                        <lightning-radio-group class="biologicalSex require biological-sex-radioGroup" name="biologicalSex"
+                            label={brainInfo_text_2} options={biologicalSex.data.values} value={rec.Sex__c} type="radio"
+                            onchange={handleBiologicalSex} required="true" >
+                        </lightning-radio-group>
+                    </template>
+
+                    <!--Commented by Sibi for TSS-22-for field alignment issue
+                    <lightning-input onkeyup={setType}  class="age require" type="Number" name="age1" label={brainInfo_text_3}
+                        value={rec.Age__c} onchange={handleAge}  max-length="3"> 
+                    </lightning-input>
+                    -->
+
+                    <!--Added by Sibi for TSS-22-for field alignment issue-->
+                    <div class="slds-form-element">
+                        <label class="slds-form-element__label inputrequire"  for="age">{brainInfo_text_3}</label>
+                        <div class="slds-form-element__control"  data-recid="agediv">
+                        <input type="number"  id="age" name="age1" class="slds-input age require"  onkeyup={setType} oninput={handleInputAge} value={rec.Age__c} onchange={handleAge} 
+                        />
+                        </div>
+                    </div>
+                    <!--End-For TSS-22-for field alignment issue-->
+
+                    <lightning-input type="text" name="lastName" label="Last Name:" value={rec.LastName} style="display:none;"
+                        onchange={handleBiologicalSex}>
+                    </lightning-input>
+        
+                    <template if:true={gender.data}>
+                        <lightning-combobox name="gender" label={brainInfo_text_4} value={rec.Gender__c}
+                            placeholder={brainInfo_text_choose} options={gender.data.values} onchange={handleGender}
+                            dropdown-alignment="auto">
+                        </lightning-combobox>
+                    </template>
+
+                    <template if:true={renderOptionalField}>
+                        <lightning-input type="text" name="otherGender" label={brainInfo_text_14} value={rec.Other_Gender__c} onchange={handleOtherGender}>
+                        </lightning-input>
+                    </template>
+
+                    
+        
+                    <template if:true={education.data}>
+                        
+                        <lightning-combobox name="education" class="education require" label={brainInfo_text_5}
+                            value={rec.Highest_level_of_education_completed__c} placeholder={brainInfo_text_choose}
+                            options={education.data.values} onchange={handleChangeFieldeducation} dropdown-alignment="auto" required="true">
+                        </lightning-combobox>
+                    </template>
+        
+                    <template if:true={speakLanguages.data}>
+                        <lightning-combobox name="speakLanguages" label={brainInfo_text_6}
+                            value={rec.Number_of_fluent_languages_spoken__c} placeholder={brainInfo_text_choose}
+                            options={speakLanguages.data.values} onchange={handleChangeFieldspeakLanguages}
+                            dropdown-alignment="auto">
+                        </lightning-combobox>
+                    </template>
+                    <template if:true={writeLanguages.data}>
+                        <lightning-combobox name="writeLanguages" label={brainInfo_text_7}
+                            value={rec.Number_of_fluent_languages_written__c} placeholder={brainInfo_text_choose}
+                            options={writeLanguages.data.values} onchange={handleChangeFieldwriteLanguages}
+                            dropdown-alignment="auto">
+                        </lightning-combobox>
+                    </template>
+                    <template if:true={firstLanguage.data}>
+                        <lightning-combobox name="firstLanguage" label={brainInfo_text_8}
+                            value={rec.First_spoken_language__c} placeholder={brainInfo_text_choose} options={firstLanguage.data.values}
+                            onchange={handleChangeFieldfirstLanguage} dropdown-alignment="auto">
+                        </lightning-combobox>
+                    </template>
+
+                    <!--Commented by Sibi for TSS-22-for field alignment issue
+                    <template if:true={isSecondLanguageAgeVisible}>
+                    <lightning-input onkeyup={setTypeAge} class="speakingLanguageAge " type="number" name="speakingLanguageAge"
+                        value={rec.Age_at_second_spoken_language__c} label={brainInfo_text_9}
+                        onchange={handleChangeFieldspeakingLanguageAge} max-length="3">
+                    </lightning-input>
+                    </template>
+                    -->
+
+                    <!--Added by Sibi for TSS-22-for field alignment issue-->
+                    <template if:true={isSecondLanguageAgeVisible}>
+                        <div class="slds-form-element">
+                            <label class="slds-form-element__label"  for="speakingLanguageAge">{brainInfo_text_9}</label>
+                            <div class="slds-form-element__control"  data-recid="agespeaklangdiv">
+                            <input type="number" id="speakingLanguageAge" name="speakingLanguageAge" class="slds-input speakingLanguageAge"  onkeyup={setTypeAge} oninput={handInpSpekLanguage} value={rec.Age_at_second_spoken_language__c} onchange={handleChangeFieldspeakingLanguageAge} 
+                            />
+                            </div>
+                        </div>
+                    </template>
+                    <!--End-For TSS-22-for field alignment issue-->
+
+                    <template if:true={fluentLanguage.data}>
+                        <lightning-combobox name="fluentLanguage" label={brainInfo_text_10}
+                            value={rec.Most_fluent_language__c} placeholder={brainInfo_text_choose} options={fluentLanguage.data.values}
+                            onchange={handleChangeFieldfluentLanguage} dropdown-alignment="bottom-left">
+                        </lightning-combobox>
+                    </template>
+                    <lightning-combobox label={brainInfo_text_11} name="country" onchange={handleCountryChange}
+                        options={controllingValues} placeholder={brainInfo_text_choose} value={selectedCountry}
+                        dropdown-alignment="bottom-left">
+                    </lightning-combobox>
+
+                    <template if:true={isStateVisible}>
+                        <lightning-input pattern="[0-9]*" type="text" class="zipcode" name="zipcode" label={brainInfo_text_13} value={rec.MailingCity}
+                            onchange={handleCity} max-length="9">
+                        </lightning-input>
+                    </template>
+                    <div class="slds-align_absolute-center postion-relative m-setting-bInfo-button">
+                        
+                        <p >{brainInfo_text_required}<abbr class="slds-required">*</abbr></p>
+                        
+                        <lightning-button class="btn-sm pink-btn-box big " type="submit" name="Next"
+                            label={next_button_text} onclick={startGame}>
+                        </lightning-button>
+                    </div>
+                    
+                </template>
+            </div>
+        </div>
+    </div>
+
+
+    <template if:true={ErrorModalOpen}>
+        <section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-modal="true" aria-describedby="modal-content-id-1" class="slds-modal slds-modal_small ssm slds-fade-in-open">
+            <div class="slds-modal__container">
+                <!-- Modal/Popup Box LWC header here -->
+                 <!-- Modal/Popup Box LWC body starts here -->
+                 <header class="slds-modal__header">
+                    <lightning-button-icon icon-name="utility:close" alternative-text={label.close_btn}     variant="bare-inverse" onclick={closeModal} class="slds-modal__close ">  
+                    </lightning-button-icon> 
+                    <span class="title slds-hyphenate" id="modal-heading-01">{brainInfo_text_error}</span>
+                  </header>
+                <div class="slds-modal__content slds-p-around_medium" id="modal-content-id-2">
+
+ 
+                </div>
+
+            </div>
+        </section>
+        <div class="slds-backdrop slds-backdrop_open"></div>
+    </template>
+    <template if:true={ErrorModalOpenAge}>
+        <section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-modal="true" aria-describedby="modal-content-id-1" class="slds-modal slds-modal_small ssm slds-fade-in-open">
+            <div class="slds-modal__container">
+                <!-- Modal/Popup Box LWC header here -->
+                 <!-- Modal/Popup Box LWC body starts here -->
+                 <header class="slds-modal__header">
+                    <lightning-button-icon icon-name="utility:close" alternative-text={label.close_btn}    variant="bare-inverse" onclick={closeModalAge} class="slds-modal__close ">  
+                    </lightning-button-icon> 
+                    <span class="title slds-hyphenate" id="modal-heading-02">{brainInfo_error_age}</span>
+                  </header>
+                  <div class="slds-modal__content slds-p-around_medium" id="modal-content-id-3">
+                  </div>
+            </div>
+        </section>
+        <div class="slds-backdrop slds-backdrop_open"></div>
+    </template>
+  
+</template>

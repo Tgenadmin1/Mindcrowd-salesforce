@@ -1,0 +1,229 @@
+<aura:component controller="GamesController"
+    implements="forceCommunity:availableForAllPageTypes,lightning:isUrlAddressable,lightning:hasPageReference,force:appHostable"
+    access="global">
+    <aura:attribute name="participantGameid" type="String" access="global"/>   
+    <aura:attribute name="currentScreen" type="String" default="screen1" />
+    <aura:handler name="init" value="{!this}" action="{!c.myAction}" />
+    <aura:attribute name="partGameInfo" type="Object" access="global"/>   
+    <aura:attribute name="isInputDisabled" type="Boolean" default="false"/>
+
+<aura:if isTrue="{!v.currentScreen == 'screen1'}">                        
+    <p class="card-header">{!$Label.c.Fake_News_Test_Form_1}</p>
+    <lightning:card>
+    <p class="card-title">{!$Label.c.Fake_News_Test_Form_2}</p>
+    <div class="input-container">     
+        <lightning:input type="number" label="" min="0" placeholder="{!$Label.c.catchment_placeholder}" onchange="{!c.handleInputChange}" name="ballcost"/>
+    </div>
+    </lightning:card>
+
+    <lightning:card>
+        <p class="card-title">{!$Label.c.Fake_News_Test_Form_3}</p>
+        <div class="input-container">
+            <lightning:input type="number" label="" min="0" placeholder="{!$Label.c.catchment_placeholder}" onchange="{!c.handleInputChange}" name="widget" />
+        </div>
+    </lightning:card>
+    <lightning:card>
+        <p class="card-title">{!$Label.c.Fake_News_Test_Form_4}</p>
+        <div class="input-container">
+            <lightning:input type="number" label="" min="0" placeholder="{!$Label.c.catchment_placeholder}" onchange="{!c.handleInputChange}"  name="halflake" />
+        </div>
+    </lightning:card>
+    <p id="continue" class="centers magenta-btn  btn-xlarge marginT20">
+        <button class="slds-button"  onclick="{!c.goToScreen2}">{!$Label.c.fakenews_Continue}</button>
+    </p> 
+</aura:if>
+<aura:if isTrue="{!v.currentScreen == 'screen2'}">
+
+<lightning:card>
+        <p class="card-title">{!$Label.c.Fake_News_Test_Form_8}</p>
+        <fieldset class="slds-form-element">
+            <div class="slds-form-element__control">
+                <div style="display: inline-block; padding-left: 10px">
+                    <span class="slds-radio">
+                        <input type="radio" id="radio-71" value="Democratic party" name="politaffi" onchange="{!c.handlePolAffiliation}"/>
+                        <label class="slds-radio__label" for="radio-71">
+                            <span class="slds-radio_faux"></span>
+                            <span class="slds-form-element__label radio-label">{!$Label.c.Fake_News_Test_Form_8_A1}</span>
+                        </label>
+                    </span>
+                </div>
+                <div style="display: inline-block; margin-left: 10px; ">
+                    <span class="slds-radio">
+                        <input type="radio" id="radio-72" value="Republican party" name="politaffi" onchange="{!c.handlePolAffiliation}"/>
+                        <label class="slds-radio__label" for="radio-72">
+                            <span class="slds-radio_faux"></span>
+                            <span class="slds-form-element__label radio-label">{!$Label.c.Fake_News_Test_Form_8_A2}</span>
+                        </label>
+                    </span>
+                </div>
+                <div style="display: inline-block; margin-left: 10px;">
+                    <span class="slds-radio">
+                        <input type="radio" id="radio-73" value="Other (please specify)" name="politaffi" onchange="{!c.handlePolAffiliation}"/>
+                        <label class="slds-radio__label" for="radio-73">
+                            <span class="slds-radio_faux"></span>
+                            <span class="slds-form-element__label radio-label">{!$Label.c.Fake_News_Test_Form_8_A3}</span>
+                        </label>
+                    </span>
+                </div>
+                <div class="input-container" style="display: inline-block; margin-left: 10px;">
+                    <lightning:input type="text" label="" min="0" placeholder="{!$Label.c.catchment_placeholder}" name="other" disabled="{!v.isInputDisabled}" onchange="{!c.handlePolAffiliationOther}"/>
+                </div>
+            </div>
+        </fieldset>
+</lightning:card>
+
+<lightning:card>
+    <p class="card-title">{!$Label.c.Fake_News_Test_Form_9}</p>
+        <fieldset class="slds-form-element">
+            <div class="slds-form-element__control">
+                <div style="display: inline-block; padding-left: 10px">
+                <span class="slds-radio">
+                <input type="radio" id="radio-75" value="Urban" name="Survey 9" checked="" onchange="{!c.handleArea}"/>
+                <label class="slds-radio__label" for="radio-75">
+                <span class="slds-radio_faux"></span>
+                <span class="slds-form-element__label radio-label">{!$Label.c.Fake_News_Test_Form_9_A1}</span>
+                </label>
+                </span>
+            </div>
+            <div style="display: inline-block; margin-left: 10px; ">
+                <span class="slds-radio">
+                <input type="radio" id="radio-76" value="Suburban" name="Survey 9" onchange="{!c.handleArea}"/>
+                <label class="slds-radio__label" for="radio-76">
+                <span class="slds-radio_faux"></span>
+                <span class="slds-form-element__label radio-label">{!$Label.c.Fake_News_Test_Form_9_A2}</span>
+                </label>
+                </span>
+            </div>
+            <div style="display: inline-block; margin-left: 10px;">
+                <span class="slds-radio">
+                <input type="radio" id="radio-77" value="Rural" name="Survey 9" onchange="{!c.handleArea}"/>
+                <label class="slds-radio__label" for="radio-77">
+                <span class="slds-radio_faux"></span>
+                <span class="slds-form-element__label radio-label">{!$Label.c.Fake_News_Test_Form_9_A3}</span>
+                </label>
+                </span>
+            </div>
+        </div>
+    </fieldset>
+</lightning:card>
+<p id="continue" class="centers magenta-btn  btn-xlarge marginT20">
+    <button class="slds-button"  onclick="{!c.goToScreen3 }">{!$Label.c.fakenews_Continue}</button>
+</p> 
+</aura:if>
+<aura:if isTrue="{!v.currentScreen == 'screen3'}">
+    <lightning:card>
+        <p class="card-title">{!$Label.c.Fake_News_Test_Form_5}</p>
+        <div class="input-container">         
+        <lightning:input type="number" label="" min="0" placeholder="{!$Label.c.catchment_placeholder}" onchange="{!c.handleNews}" name="handleNews" />
+        </div>
+    </lightning:card>            
+    <lightning:card>
+        <p class="card-title">{!$Label.c.Fake_News_Test_Form_6}</p>
+        <fieldset class="slds-form-element">       
+            <div class="slds-form-element__control">
+                <div style="display: inline-block; padding-left: 10px">
+                    <span class="slds-radio">
+                    <input type="radio" id="radio-61" value="Never" name="Survey 6" checked="" onchange="{!c.handleSocialMedia}"/>
+                    <label class="slds-radio__label" for="radio-61">
+                    <span class="slds-radio_faux"></span>
+                    <span class="slds-form-element__label radio-label">{!$Label.c.Fake_News_Test_Form_6_A1}</span>
+                    </label>
+                    </span>
+                </div>
+                <div style="display: inline-block; margin-left: 10px; ">
+                    <span class="slds-radio">
+                    <input type="radio" id="radio-62" value="Rarely" name="Survey 6" onchange="{!c.handleSocialMedia}"/>
+                    <label class="slds-radio__label" for="radio-62">
+                    <span class="slds-radio_faux"></span>
+                    <span class="slds-form-element__label radio-label">{!$Label.c.Fake_News_Test_Form_6_A2}</span>
+                    </label>
+                    </span>
+                </div>
+                <div style="display: inline-block; margin-left: 10px;">
+                    <span class="slds-radio">
+                    <input type="radio" id="radio-63" value="Sometimes" name="Survey 6" onchange="{!c.handleSocialMedia}"/>
+                    <label class="slds-radio__label" for="radio-63">
+                    <span class="slds-radio_faux"></span>
+                    <span class="slds-form-element__label radio-label">{!$Label.c.Fake_News_Test_Form_6_A3}</span>
+                    </label>
+                    </span>
+                </div>
+                <div style="display: inline-block; margin-left: 10px;">
+                    <span class="slds-radio">
+                    <input type="radio" id="radio-64" value="Very often" name="Survey 6" onchange="{!c.handleSocialMedia}"/>
+                    <label class="slds-radio__label" for="radio-64">
+                    <span class="slds-radio_faux"></span>
+                    <span class="slds-form-element__label radio-label">{!$Label.c.Fake_News_Test_Form_6_A4}</span>
+                    </label>
+                    </span>
+                </div>
+                <div style="display: inline-block; margin-left: 10px;">
+                    <span class="slds-radio">
+                    <input type="radio" id="radio-65" value="Always" name="Survey 6" onchange="{!c.handleSocialMedia}"/>
+                    <label class="slds-radio__label" for="radio-65">
+                    <span class="slds-radio_faux"></span>
+                    <span class="slds-form-element__label radio-label">{!$Label.c.Fake_News_Test_Form_6_A5}</span>
+                    </label>
+                    </span>
+                </div>
+            </div>
+        </fieldset>
+    </lightning:card>
+    <lightning:card>
+        <p class="card-title">{!$Label.c.Fake_News_Test_Form_7}</p>
+        <fieldset class="slds-form-element">
+                <div class="slds-form-element__control">
+                <div style="display: inline-block; padding-left: 10px">
+                    <span class="slds-radio">
+                    <input type="radio" id="radio-66" value="Strongly Disagree" name="Survey 7" checked=""  onchange="{!c.handleTrustGovernment}"/>
+                    <label class="slds-radio__label" for="radio-66">
+                    <span class="slds-radio_faux"></span>
+                    <span class="slds-form-element__label radio-label">{!$Label.c.Fake_News_Test_Form_7_A1}</span>
+                    </label>
+                    </span>
+                </div>
+                <div style="display: inline-block; margin-left: 10px;">
+                    <span class="slds-radio">
+                    <input type="radio" id="radio-67" value="Disagree" name="Survey 7"  onchange="{!c.handleTrustGovernment}"/>
+                    <label class="slds-radio__label" for="radio-67">
+                    <span class="slds-radio_faux"></span>
+                    <span class="slds-form-element__label radio-label">{!$Label.c.Fake_News_Test_Form_7_A2}</span>
+                    </label>
+                    </span>
+                </div>
+                <div style="display: inline-block; margin-left: 10px;">
+                    <span class="slds-radio">
+                    <input type="radio" id="radio-68" value="Neutral" name="Survey 7" onchange="{!c.handleTrustGovernment}"/>
+                    <label class="slds-radio__label" for="radio-68">
+                    <span class="slds-radio_faux"></span>
+                    <span class="slds-form-element__label radio-label">{!$Label.c.Fake_News_Test_Form_7_A3}</span>
+                    </label>
+                    </span>
+                </div>
+                <div style="display: inline-block; margin-left: 10px;">
+                    <span class="slds-radio">
+                    <input type="radio" id="radio-69" value="Agree" name="Survey 7" onchange="{!c.handleTrustGovernment}"/>
+                    <label class="slds-radio__label" for="radio-69">
+                    <span class="slds-radio_faux"></span>
+                    <span class="slds-form-element__label radio-label">{!$Label.c.Fake_News_Test_Form_7_A4}</span>
+                    </label>
+                    </span>
+                </div>
+                <div style="display: inline-block; margin-left: 10px;">
+                    <span class="slds-radio">
+                    <input type="radio" id="radio-70" value="Strongly Agree" name="Survey 7" onchange="{!c.handleTrustGovernment}"/>
+                    <label class="slds-radio__label" for="radio-70">
+                    <span class="slds-radio_faux"></span>
+                    <span class="slds-form-element__label radio-label">{!$Label.c.Fake_News_Test_Form_7_A5}</span>
+                    </label>
+                    </span>
+                </div>
+            </div>
+        </fieldset>
+    </lightning:card>
+    <p id="nextBtton" class="centers magenta-btn  btn-xlarge marginT20">
+        <button class="slds-button"  onclick="{!c.goToMyResultsPage }">{!$Label.c.game_button_2}</button>
+        <button class="slds-button"  onclick="{!c.goToNextPage }">{!$Label.c.game_button_1}</button>
+    </p>
+</aura:if>
+</aura:component>

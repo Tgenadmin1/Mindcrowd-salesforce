@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>HEAT</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>HEATs</value>
+    </caseValues>
+    <fields>
+        <label><!-- HS_v1.0.11 --></label>
+        <name>Activity_during_overheat_easy_access_to__c</name>
+    </fields>
+    <fields>
+        <label><!-- Contact --></label>
+        <name>Contact__c</name>
+        <relationshipLabel><!-- HEATs --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- HS_v1.0.10 --></label>
+        <name>During_summer_a_heat_related_emergency__c</name>
+    </fields>
+    <fields>
+        <label><!-- HS_v1.0.6 --></label>
+        <name>During_summer_level_of_physical_activity__c</name>
+    </fields>
+    <fields>
+        <label><!-- HS_v1.0.5 --></label>
+        <name>During_summer_reason_outside_for_exercis__c</name>
+    </fields>
+    <fields>
+        <label><!-- HS_v1.0.4 --></label>
+        <name>During_summer_reason_outside_for_leisure__c</name>
+    </fields>
+    <fields>
+        <label><!-- HS_v1.0.3 --></label>
+        <name>During_summer_reason_outside_for_work__c</name>
+    </fields>
+    <fields>
+        <label><!-- HS_v1.0.2 --></label>
+        <name>During_summer_time_spend_out_each_day__c</name>
+    </fields>
+    <fields>
+        <label><!-- HS_v1.0.9_1.5 --></label>
+        <name>Experience_in_out_summer_Confusion__c</name>
+    </fields>
+    <fields>
+        <label><!-- HS_v1.0.9_1.3 --></label>
+        <name>Experience_in_out_summer_Dizziness__c</name>
+    </fields>
+    <fields>
+        <label><!-- HS_v1.0.9_1.6 --></label>
+        <name>Experience_in_out_summer_Fainting__c</name>
+    </fields>
+    <fields>
+        <label><!-- HS_v1.0.9_1.2 --></label>
+        <name>Experience_in_out_summer_Headache__c</name>
+    </fields>
+    <fields>
+        <label><!-- HS_v1.0.9_1.7 --></label>
+        <name>Experience_in_out_summer_Heavy_sweating__c</name>
+    </fields>
+    <fields>
+        <label><!-- HS_v1.0.9_1.8 --></label>
+        <name>Experience_in_out_summer_Muscle_cramp__c</name>
+    </fields>
+    <fields>
+        <label><!-- HS_v1.0.9_1.4 --></label>
+        <name>Experience_in_out_summer_Nausea__c</name>
+    </fields>
+    <fields>
+        <label><!-- HS_v1.0.9_1.9 --></label>
+        <name>Experience_in_out_summer_extr_tiredness__c</name>
+    </fields>
+    <fields>
+        <label><!-- HS_v1.0.9_1.1 --></label>
+        <name>Experience_in_out_summer_high_body_temp__c</name>
+    </fields>
+    <fields>
+        <label><!-- HS_v1.0.8 --></label>
+        <name>How_many_breaks_per_day_during_Summer__c</name>
+    </fields>
+    <fields>
+        <label><!-- HS_v1.0.14 --></label>
+        <name>Things_experience_exposure_heat_summer__c</name>
+    </fields>
+    <fields>
+        <label><!-- HS_v1.0.1 --></label>
+        <name>What_zipcode_live_during_majority_summer__c</name>
+    </fields>
+    <fields>
+        <label><!-- HS_v1.0.7 --></label>
+        <name>When_during_summer_protect_more_than_50__c</name>
+    </fields>
+    <fields>
+        <label><!-- HS_v1.0.13 --></label>
+        <name>Worried_about_the_heat_during_the_summer__c</name>
+    </fields>
+    <fields>
+        <label><!-- HS_v1.0.12 --></label>
+        <name>Worried_heat_during_the_summer_outside__c</name>
+    </fields>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

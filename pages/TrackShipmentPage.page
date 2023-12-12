@@ -1,0 +1,23 @@
+<!-- <apex:page standardController="Shipping_Detail__c" recordSetVar="Shipping_Detail" extensions="ShippingDetailsController"> -->
+  <apex:page standardController="Shipping_Detail__c"  extensions="ShippingDetailsController">
+      <apex:includeLightning />
+    <div id="lightningvf" />
+    <script>
+        $Lightning.use("c:ShipmentApp", function() {
+          $Lightning.createComponent("c:trackShipment",
+              { label : "Press Me!",
+                recordId: '{!$CurrentPage.parameters.id}' 
+              },
+              "lightningvf",
+              function(cmp) {
+                console.log("Track shipment was created");
+                // do some stuff
+              }
+          );
+        });
+     
+    </script>
+    
+  
+    
+</apex:page>

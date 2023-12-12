@@ -1,0 +1,458 @@
+/* .THIS .game_panel{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color:#E4DBC3;
+    position: relative;
+}
+.THIS .gamebody{
+    margin:0px;
+    padding:0px;
+}
+.THIS .game_block {
+    max-width: 625px;
+    font-size: 20px;
+    width: 100%;
+    font-weight: bold;
+    padding: 25px;
+    position: relative;
+} */
+/* .THIS .game_block p {
+    line-height: 30px;
+} */
+.THIS .centers{
+    text-align: center;
+}
+.THIS .bolds{
+    font-weight: bold;
+}
+.THIS .mb10{
+    margin-bottom: 10px;
+}
+.THIS .mb35 {
+    margin-bottom: 35px;
+} 
+.THIS .starbox {
+    width: 60px;
+    height: 60px;
+    margin: 0px auto;
+}
+.THIS .bl{ background-image: url("../s/sfsites/c/resource/mindcrowdGameImages/flanker/bl.svg"); background-size: cover; background-repeat: no-repeat;}
+.THIS .br{ background-image: url("../s/sfsites/c/resource/mindcrowdGameImages/flanker/br.svg"); background-size: cover; background-repeat: no-repeat;}
+.THIS .rl{ background-image: url("../s/sfsites/c/resource/mindcrowdGameImages/flanker/rl.svg"); background-size: cover; background-repeat: no-repeat;}
+.THIS .rr{ background-image: url("../s/sfsites/c/resource/mindcrowdGameImages/flanker/br.svg"); background-size: cover; background-repeat: no-repeat;}
+.THIS .staricon{ background-image: url("../sfsites/c/resource/mindcrowdGameImages/flanker/star.svg"); background-size: contain; background-repeat: no-repeat;}
+
+.THIS .centericon.br.fail{ background-image: url("../s/sfsites/c/resource/mindcrowdGameImages/flanker/rr.svg"); }
+.THIS .centericon.bl.fail{ background-image: url("../s/sfsites/c/resource/mindcrowdGameImages/flanker/rl.svg");}
+
+.THIS .centericon.br.ok{ background-image: url("../s/sfsites/c/resource/mindcrowdGameImages/flanker/gr.svg"); }
+.THIS .centericon.bl.ok{ background-image: url("../s/sfsites/c/resource/mindcrowdGameImages/flanker/gl.svg");}
+
+.THIS .arrowdt {
+    text-align: center;
+    padding: 15px 0px;
+}
+
+.THIS .arrowdt ul{
+    list-style: none;
+    display: inline;
+}
+.THIS .arrowdt ul li {
+    list-style: none;
+    display: inline-block;
+    margin: 0px 5px;
+}
+.THIS .arcenter {
+    /* width: 50px;
+    height: 11px; */
+    width: 80px;
+    height: 25px;
+}
+
+.THIS .errorblock{
+    display: none;
+}
+
+.THIS .duration {
+    margin-top:10px;
+    font-size: 12px;
+    text-align: center;
+    color: #f50202;
+    padding: 5px;
+}
+.THIS .d_title {
+    color: #000;
+}
+.THIS .duration .d_txt{
+    display: inline-block;
+    margin-right: 15px;
+}
+.THIS .duration .d_status{
+    display: inline-block;
+    margin-left: 15px;
+}
+.THIS .errormsg {
+    color: #F00;
+    font-size: 12px;
+    text-align: center;
+    font-weight: normal;
+}
+.THIS .btninputbox {
+    display: inline-block;
+    margin-top: 10px;
+    position: absolute;
+    bottom: 5px;
+    text-align: center;
+    width: 100%;
+    left: 0;
+}
+.THIS .btninputbx {
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+}
+.THIS .btninputbx li {
+    display: inline-block;
+    font-size: 18px;
+    text-align: center;
+}
+.THIS .btninputlshift{
+    background-image: url(../s/sfsites/c/resource/mindcrowd_style/images/lsift.png);
+    height:60px;
+    width: 125px;
+    background-size: contain;
+    display: block;
+    text-align: center;
+    padding: 15px;
+    font-size: 34px;
+    margin:0px 5px;
+    background-repeat: no-repeat;
+    /* display: none; */
+}
+.THIS .btninputrshift{
+    background-image: url(../s/sfsites/c/resource/mindcrowd_style/images/rsift.png);
+    height:60px;
+    width: 125px;
+    background-size: contain;
+    display: block;
+    text-align: center;
+    padding: 15px;
+    font-size: 34px;
+    margin:0px 5px;
+    background-repeat: no-repeat;
+    /* display: none; */
+}
+.THIS .btninput.img-f{
+    background-image: url(../s/sfsites/c/resource/mindcrowd_style/images/F.png);
+    height:60px;
+    width: 60px;
+    background-size: contain;
+    display: block;
+    text-align: center;
+    /* padding: 15px; */
+    font-size: 1px;
+    /* margin:0px 5px; */
+    background-repeat: no-repeat;
+    background-position: center;
+    justify-content: center;
+    margin: auto;
+    color: transparent;
+}
+.THIS .btninput.img-j{
+    background-image: url(../s/sfsites/c/resource/mindcrowd_style/images/j.png);
+    height:60px;
+    width: 60px;
+    background-size: contain;
+    display: block;
+    text-align: center;
+    /* padding: 15px; */
+    font-size: 1px;
+    /* margin:0px 5px; */
+    background-repeat: no-repeat;
+    background-position: center;
+    justify-content: center;
+    margin: auto;
+    color: transparent !important;
+}
+
+/*.THIS .game_panel_speechtask {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    /*justify-content: flex-start;  Change to flex-start to make it left-aligned */
+   /* justify-content: center;
+    align-items: center;
+    margin: auto;
+    padding-bottom: 50px;
+
+}
+.THIS .main-content-inner_speechtask {
+    background-color: #f7f7ff;
+    border: 1px #6a6797 solid;
+    border-radius: 7px;
+    padding: 0px;
+    position: relative;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 61.6555vh;
+    display: flex;
+    /*justify-content: flex-start; Change to flex-start to make it left-aligned */
+  
+/*}*/
+
+.THIS .title_speech {
+    font-size: 26px;
+    /* border-bottom: 1px #afafaf solid; */
+    margin-bottom: 10px;
+    text-align: left;
+    text-shadow: 0px 0px 2px rgb(0 0 0 / 24%);
+    line-height: 34px;
+    padding-bottom: 5px;
+    text-transform: none;
+    font-family: 'whitneylight', Helvetica, Arial, sans-serif;
+    font-weight: 300;
+    color: #163248;
+}
+
+.THIS .title_speech_task {
+    font-size: 22px;
+    /* border-bottom: 1px #afafaf solid; */
+    margin-bottom: 10px;
+    text-align: left;
+    text-shadow: 0px 0px 2px rgb(0 0 0 / 24%);
+    line-height: 24px;
+    padding-bottom: 5px;
+    text-transform: none;
+    font-family: 'whitneylight', Helvetica, Arial, sans-serif;
+    font-weight: 300;
+    color: #163248;
+}
+
+.THIS .title_speech_small {
+    font-size: 16px;
+    /* border-bottom: 1px #afafaf solid; */
+    margin-bottom: 10px;
+    text-align: left;
+    text-shadow: 0px 0px 2px rgb(0 0 0 / 24%);
+    padding-bottom: 5px;
+    line-height: 20px;
+    text-transform: none;
+    font-family: 'whitneylight', Helvetica, Arial, sans-serif;
+    font-weight: 300;
+    color: #163248;
+}
+
+
+.THIS .game_block_speechtask {
+    font-size: 25px;
+    width: 100%;
+    font-weight: 400;
+    padding: 20px;
+ }
+
+ .THIS .bullet-list {
+    list-style-type: disc;
+    margin-left: 40px;
+    font-size: 24px;
+  }
+
+  .THIS .welcome-heading {
+    font-size: 42px; /* Adjust the font size as needed */
+    font-family: 'whitneylight',Helvetica,Arial,sans-serif;
+    padding: 20px;
+  }
+
+  .THIS .bottom-right-button {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    margin: 20px;
+    padding: 20px;
+    z-index: 1;
+  }
+
+  .THIS .container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.THIS .column {
+    width: 48%; /* Adjust as needed */
+    padding: 10px;
+}
+
+.THIS .button-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.THIS .txtarea {
+    width: 100%;
+    height: 200px;
+}
+
+.THIS .recording-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%; /* Adjust the container width as needed */
+    height: 80px; /* Adjust the container height as needed */
+    background-color: #6a6797; /* Blue background color */
+    position: relative;
+}
+
+/* Style for the recording lines */
+.THIS .recording-line {
+    position: absolute;
+    width: 2px; /* Line width */
+     /*height: 30px; Adjust the line height as needed */
+    background-color: white; /* Line color */
+    animation: pulse 1s infinite alternate; /* Animation */
+}
+
+.THIS .line1 {
+    left: 40px;
+    height: 15px
+}
+
+.THIS .line2 {
+    left: 60px;
+    height: 20px
+}
+
+.THIS .line3 {
+    left: 80px;
+    height: 25px
+}
+
+.THIS .line4 {
+    left: 100px;
+    height: 30px
+}
+
+.THIS .line5 {
+    left: 120px;
+    height: 25px
+}
+
+.THIS .line6 {
+    left: 140px;
+    height: 20px
+}
+
+.THIS .line7 {
+    left: 160px;
+    height: 15px
+}
+
+.THIS .line8 {
+    left: 180px;
+   
+}
+
+.THIS .recording{
+    width: 100%;
+    height: 100px;
+}
+
+.THIS .recording audio {
+    width: 100%; /* Make the audio element fill its container horizontally */
+    height: 100%; /* Make the audio element fill its container vertically */
+}
+
+
+ @keyframes pulse {
+    0% {
+        transform: scaleY(1);
+        opacity: 0.8;
+    }
+    100% {
+        transform: scaleY(1.5);
+        opacity: 0.6;
+    }
+} 
+
+.THIS .slds-checkbox .slds-checkbox__label .slds-form-element__label {
+    font-size: 26px;
+    /* border-bottom: 1px #afafaf solid; */
+    margin-bottom: 10px;
+    text-align: left;
+    text-shadow: 0px 0px 2px rgb(0 0 0 / 24%);
+    line-height: 34px;
+    padding-bottom: 5px;
+    text-transform: none;
+    font-family: 'whitneylight', Helvetica, Arial, sans-serif;
+    font-weight: 300;
+    color: #163248;
+  }
+
+  .THIS .slds-checkbox .slds-checkbox_faux {
+    width: 24px; 
+    height: 24px; 
+  }
+  
+
+.THIS .timer {
+    font-size: 5em; /* Adjust the font size to make it larger */
+    color: #ea526e; /* Change the text color to make it flashy */
+    margin-bottom: 20px;
+    margin-top: 100px;
+    padding: 10px;
+
+}
+
+@media (max-width: 600px) {
+
+    .THIS .container {
+        flex-direction: column; /* Change to a single column layout */
+    }
+
+    .THIS .column {
+        width: 100%; /* Full width for mobile */
+    }
+
+    .THIS .timer {
+        font-size: 4em; /* Adjust the font size to make it larger */
+        color: #ea526e; /* Change the text color to make it flashy */
+        margin-bottom: 10px;
+        margin-top: 5px;
+        padding: 5px;
+   
+    }
+
+    .THIS .title_speech_task {
+        font-size: 22px;
+        /* border-bottom: 1px #afafaf solid; */
+        text-align: left;
+        text-shadow: 0px 0px 2px rgb(0 0 0 / 24%);
+        line-height: 24px;
+        padding-bottom: 5px;
+        text-transform: none;
+        font-family: 'whitneylight', Helvetica, Arial, sans-serif;
+        font-weight: 300;
+        color: #163248;
+    }
+
+    .THIS .recording-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%; /* Adjust the container width as needed */
+        height: 80px; /* Adjust the container height as needed */
+        background-color: #6a6797; /* Blue background color */
+        position: relative;
+    }
+    
+
+    
+    .THIS .recording audio {
+        width: 100%; /* Make the audio element fill its container horizontally */
+        height: 100%; /* Make the audio element fill its container vertically */
+    }
+    
+}

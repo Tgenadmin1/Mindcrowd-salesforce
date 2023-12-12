@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Participant Dashboard</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Participant Dashboards</value>
+    </caseValues>
+    <fields>
+        <label><!-- Data Category --></label>
+        <name>Data_Category__c</name>
+        <picklistValues>
+            <masterLabel>Age</masterLabel>
+            <translation><!-- Age --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Education</masterLabel>
+            <translation><!-- Education --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other</masterLabel>
+            <translation><!-- Other --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Data Name --></label>
+        <name>Data_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Data Value --></label>
+        <name>Data_Value__c</name>
+    </fields>
+    <fields>
+        <label><!-- Game Detail --></label>
+        <name>Game_Detail__c</name>
+        <relationshipLabel><!-- Participant Dashboards --></relationshipLabel>
+    </fields>
+    <layouts>
+        <layout>Participant Dashboard Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

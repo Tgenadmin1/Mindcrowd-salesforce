@@ -1,0 +1,14 @@
+<apex:page showHeader="false" sidebar="false" controller="ViewIPAddressController" action="{!getUserIPAddress}">
+    <div style="opacity: 0;" id='ipaddress'>{!myip}</div>
+    <!-- <input id='ipaddress' type="text" value={!myip} /> -->
+    <script>
+        const urlParams = new URLSearchParams(document.location.search.substring(1));
+        const product = urlParams.get('c__id');
+
+        var temp = document.getElementById('ipaddress').innerText;
+        document.cookie = 'cip = ' + btoa(temp);
+        window.location.href = '{!$Label.Community_Url}' + '/s/int-cip?c__id=' + product + '&cip=' + btoa(temp);
+      
+    </script>
+
+</apex:page>

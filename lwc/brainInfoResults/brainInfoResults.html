@@ -1,0 +1,176 @@
+<!--   @description       : 
+  @author            : Shweta Khunteta
+  @UI author         : Raj
+  @last modified on  : 26-05-2021
+  @apex controller   : ContactController
+  @description       : This is the form for Guest User(Profile Research)to update his contact details.
+ -->
+ <template>
+    <!-- <div class="mainCrowd-outer-box"  if:false={userinfo}> -->
+        <div class="mainCrowd-outer-box"  if:false={userinfo}>
+        <div class="mainCrowd-blue-box" >
+            <!-- if:false={isSuccessMessage} -->
+            <div class="blue-box-content welcome-b-box " >
+                <!-- <h1 class=" marginB20 finishpage-text"><p class="title color-w">{label.finish}</p></h1> -->
+                <div if:true={finishTshow} class="marginB20 finishpage-text w-title">{label.finish}</div>
+                <!-- <p class="finishpage-text">{label.finish_text_2}</p> -->
+                <p if:true={finishTshow} class="finishpage-text blue-box-heading1 marginT10 marginB10 blue-list-box"> <lightning-formatted-rich-text value={label.finish_text_3}></lightning-formatted-rich-text></p>
+                <p if:true={finishTshow} class="finishpage-text">{label.finish_text_4}</p>
+                <!-- <p>{label.finish_text_5}</p> -->
+
+                <!-- <h1 class=" marginB20 results-text"><p class="title color-w">{label.braininfo01}</p></h1> -->
+                <div if:true={resultsTshow} class="marginB20 results-text w-title">{label.braininfo01}</div>
+                <p if:true={resultsTshow} class="results-text">{label.braininfo02}</p>
+               
+            </div>
+           
+            <div class=" marginL0 marginR0 display-block result-form " >
+                <div class="slds-grid slds-gutters slds-size_12-of-12  paddingL0 m-full-width">
+                    <lightning-input type="email" name="Email"  variant="label-hidden"
+                        class="paddingL0  slds-col slds-size_4-of-12 email require"
+                        message-when-value-missing={label.finish_text_12} placeholder={label.finish_text_11}
+                        onchange={handleEmail}>
+                    </lightning-input>
+                    <lightning-input type="text" name="FirstName" 
+                        class="slds-col slds-size_4-of-12 paddingL0 FirstNamerequire fname require" variant="label-hidden"
+                        value={firstname} pattern="^([^0-9]*)$" message-when-pattern-mismatch={label.finish_text_7}
+                        placeholder={label.finish_text_6} message-when-value-missing={label.finish_text_8}
+                        onchange={handleFirstName}>
+                    </lightning-input>
+
+                    <lightning-input type="text" name="LasttName"  variant="label-hidden"
+                        class="paddingL0 paddingR0 slds-col slds-size_4-of-12 LastNamerequire lname require" pattern="^([^0-9]*)$"
+                        message-when-pattern-mismatch={label.finish_text_7} onchange={handleLastName}
+                        placeholder={label.finish_text_9} message-when-value-missing={label.finish_text_10}>
+                    </lightning-input>                    
+
+                </div>
+                
+                <!--div class="slds-grid slds-gutters slds-size_12-of-12  paddingL0 m-full-width slds-grid_align-center">
+                    <lightning-input type="phone" name="Phone" 
+                        class="slds-col slds-size_4-of-12 paddingL0 phone" variant="label-hidden" max-length="40"
+                        placeholder={label.finish_text_21} onchange={handlePhone}>
+                    </lightning-input>
+                </div-->
+
+                <!--div class="slds-form-element slds-grid slds-gutters  paddingR0 slds-grid_align-center">
+                    <div class="slds-col slds-size_4-of-12 paddingL0">
+                      <input type="text" placeholder={label.finish_text_21} class="slds-input phone" onchange={handlePhone} />
+                    </div>
+                  </div-->
+
+                  <template lwc:if={showPhoneNum}>
+                    <div class="slds-grid slds-gutters paddingL0 m-full-width slds-grid_align-center">
+                        <div class="slds-col slds-size_4-of-12 paddingL0 phone1">
+                            <div class="slds-form-element">
+                                <div class="slds-form-element__control">
+                                <input type="text" placeholder={label.finish_text_21} class="slds-input phone" onchange={handlePhone} />
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                </template>
+
+
+
+                <div class=" slds-m-top_large m-full-width pull-left">
+                    <div class="inline-block">
+                        <lightning-button if:true={finishTshow} class="btn-sm pink-btn-box big slds-float_left result-btn result-submit" variant="brand" type="submit"
+                         name="Next" label={label.finish_text_13} disabled={isDisabled} onclick={updateContactRes}>
+                        </lightning-button>
+
+                        <lightning-button if:true={resultsTshow} class="magenta-btn slds-float_left result-btn info-submit slds-hide" variant="brand" type="submit"
+                            name="Next" label={label.finish_text_13a} disabled={isDisabled} onclick={updateContactRes}>
+                        </lightning-button>
+
+                        <!-- <lightning-button class="magenta-btn slds-align_absolute-left chart-btn slds-hide" variant="brand"
+                            type="submit" name="Next" label={label.finish_text_14} onclick={updateContactRes}>
+                        </lightning-button> -->
+                        <div class="opt-out " >{label.finish_text_16}</div> 
+                    </div>
+                   
+                </div>
+                <div if:true={finishTshow} class=" slds-m-top_large m-full-width blue-btn  pull-right">
+                    <a href="#" onclick={goNextPage} class="link slds-button">{label.finish_text_15}</a>
+                </div>
+                
+                <div class="emailContributors-logo" if:true={finishTshow}>
+                    <!-- <img src={image11} alt="MindCrowd Contributors" title="MindCrowd Contributors" width="750" height="150"> -->
+                    <img class="d-img" src={image1} title="MindCrowd Contributors" width="100%" height="150"/>
+                    <img class="m-img" src={image2} alt="MindCrowd Contributors" title="MindCrowd Contributors" width="500" height="500"/>
+                </div>
+                
+                
+            </div>
+        </div>
+
+
+        <!-- <div class="mainCrowd-blue-box thank-you-box" >
+            <div class="blue-box-content  " >
+                <h1 class="color-w marginB20 subtitle">Thank you for helping advance MindCrowd’s scientific research.</h1>
+                
+                <P>Your participation helps us better understand how the brain changes with age and how we can use that information to fight brain disease.</P>
+                <P>As more people participate in MindCrowd we will keep seeking the knowledge needed to optimize brain performance throughout life. Please ask your friends and family to join the MindCrowd study by taking our memory and attention tests.</P>
+            </div>
+
+            </div> -->
+    </div>
+    <template if:true={ErrorModalOpen}>
+        <section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-modal="true" aria-describedby="modal-content-id-1" class="slds-modal slds-modal_small ssm slds-fade-in-open">
+            <div class="slds-modal__container">
+                 <header class="slds-modal__header ">
+                    <lightning-button-icon icon-name="utility:close" alternative-text={label.close_btn}    variant="bare-inverse" onclick={closeModal} class="slds-modal__close ">  
+                    </lightning-button-icon> 
+                    <span class="title slds-hyphenate" id="modal-heading-01">{label.finish_text_17}</span>
+                  </header>
+                <div class="slds-modal__content slds-p-around_medium" id="modal-content-id-2">
+                    
+                    <!-- <P class="text-center" >Please fill the required fields.</P> -->
+                     <!-- <ul class="p-list"> -->
+                        <!-- <template>
+
+                        </template> -->
+                        <!-- <li if:true={emailcheck} class="required1 ">{requiredField1}</li>
+                        <li if:true={fstName} class="required1 ">{requiredField2}</li>
+                        <li if:true={lstName} class="required1 ">{requiredField3}</li>     -->
+                  <!-- //  </ul> -->
+                    <!-- <p class="required1 margin0">{requiredField1}</p>
+                    <p class="required2 margin0">{requiredField2}</p>
+                    <p class="required3 margin0">{requiredField3}</p> -->
+ 
+                </div>
+
+            </div>
+        </section>
+        <div class="slds-backdrop slds-backdrop_open"></div>
+    </template>
+    <template if:true={ErrorModalOpenOther}>
+        <section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-modal="true" aria-describedby="modal-content-id-1" class="slds-modal slds-modal_small ssm slds-fade-in-open">
+            <div class="slds-modal__container">
+                 <header class="slds-modal__header ">
+                    <lightning-button-icon icon-name="utility:close" alternative-text={label.close_btn}     variant="bare-inverse" onclick={closeModalOthers} class="slds-modal__close ">  
+                    </lightning-button-icon> 
+                    <span class="title slds-hyphenate" id="modal-headings-01">{label.finish_text_18}</span>
+                  </header>
+                <div class="slds-modal__content slds-p-around_medium" id="modal-content-ids-2">
+                    
+                    <!-- <P class="text-center" >Please fill the required fields.</P> -->
+                     <!-- <ul class="p-list"> -->
+                        <!-- <template>
+
+                        </template> -->
+                        <!-- <li if:true={emailcheck} class="required1 ">{requiredField1}</li>
+                        <li if:true={fstName} class="required1 ">{requiredField2}</li>
+                        <li if:true={lstName} class="required1 ">{requiredField3}</li>     -->
+                  <!-- //  </ul> -->
+                    <!-- <p class="required1 margin0">{requiredField1}</p>
+                    <p class="required2 margin0">{requiredField2}</p>
+                    <p class="required3 margin0">{requiredField3}</p> -->
+ 
+                </div>
+
+            </div>
+        </section>
+        <div class="slds-backdrop slds-backdrop_open"></div>
+    </template>
+</template>

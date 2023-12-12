@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Integration Settings</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Integration Settings</value>
+    </caseValues>
+    <fields>
+        <label><!-- Client Ip --></label>
+        <name>Client_Ip__c</name>
+    </fields>
+    <fields>
+        <label><!-- Image Parameters --></label>
+        <name>Image_Parameters__c</name>
+    </fields>
+    <fields>
+        <label><!-- Label Service Api --></label>
+        <name>Label_Service_Api__c</name>
+    </fields>
+    <fields>
+        <label><!-- MindCrowdAddress2 --></label>
+        <name>MindCrowdAddress2__c</name>
+    </fields>
+    <fields>
+        <label><!-- MindCrowdCity --></label>
+        <name>MindCrowdCity__c</name>
+    </fields>
+    <fields>
+        <label><!-- MindCrowdFirmName --></label>
+        <name>MindCrowdFirmName__c</name>
+    </fields>
+    <fields>
+        <label><!-- MindCrowdName --></label>
+        <name>MindCrowdName__c</name>
+    </fields>
+    <fields>
+        <label><!-- MindCrowdPhone --></label>
+        <name>MindCrowdPhone__c</name>
+    </fields>
+    <fields>
+        <label><!-- MindCrowdState --></label>
+        <name>MindCrowdState__c</name>
+    </fields>
+    <fields>
+        <label><!-- MindCrowdZip5 --></label>
+        <name>MindCrowdZip5__c</name>
+    </fields>
+    <fields>
+        <label><!-- Source Id --></label>
+        <name>Source_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- USPS URL --></label>
+        <name>USPS_URL__c</name>
+    </fields>
+    <fields>
+        <label><!-- UserId --></label>
+        <name>UserId__c</name>
+    </fields>
+    <fields>
+        <label><!-- Weight --></label>
+        <name>Weight__c</name>
+    </fields>
+    <fields>
+        <label><!-- eVSLabelUrl --></label>
+        <name>eVSLabelUrl__c</name>
+    </fields>
+    <fields>
+        <label><!-- eVSLabel Service --></label>
+        <name>eVSLabel_Service__c</name>
+    </fields>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>SES</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>SESs</value>
+    </caseValues>
+    <fields>
+        <help><!-- Which category best describes your yearly household income before taxes? Include all income received from employment, social security, investments, retirement accounts, etc --></help>
+        <label><!-- SES_v1.0.7 --></label>
+        <name>Category_describe_yearly_household_incom__c</name>
+    </fields>
+    <fields>
+        <label><!-- Contact Name --></label>
+        <name>Contact_Name__c</name>
+        <relationshipLabel><!-- SESs --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Contact --></label>
+        <name>Contact__c</name>
+    </fields>
+    <fields>
+        <help><!-- Do you own a home (includes currently paying a mortgage)? --></help>
+        <label><!-- SES_v1.0.8 --></label>
+        <name>Do_you_own_a_home__c</name>
+    </fields>
+    <fields>
+        <help><!-- Do you own a working motor vehicle (car, truck, van, SUV) now? --></help>
+        <label><!-- SES_v1.0.11 --></label>
+        <name>Do_you_own_a_working_motor_vehicle__c</name>
+    </fields>
+    <fields>
+        <label><!-- Email --></label>
+        <name>Email__c</name>
+    </fields>
+    <fields>
+        <help><!-- How many bedrooms (including guest bedrooms, bedrooms used as offices etc…) are in the house or apartment which is your PRIMARY residence? --></help>
+        <label><!-- SES_v1.0.10 --></label>
+        <name>How_many_bedrooms_in_the_house__c</name>
+    </fields>
+    <fields>
+        <help><!-- If yes, how many do you own? --></help>
+        <label><!-- SES_v1.0.12 --></label>
+        <name>If_yes_how_many_do_you_own__c</name>
+    </fields>
+    <fields>
+        <help><!-- If yes, how many people (NOT including yourself) live in your home? --></help>
+        <label><!-- SES_v1.0.9 --></label>
+        <name>If_yes_how_many_people_live_in_your_home__c</name>
+    </fields>
+    <fields>
+        <help><!-- During the last year, did you take an out-of-town vacation? --></help>
+        <label><!-- SES_v1.0.13 --></label>
+        <name>Last_year_you_take_out_of_town_vacation__c</name>
+    </fields>
+    <fields>
+        <label><!-- SES_v1.0.2 --></label>
+        <name>Think_of_this_ladder_as_United_States__c</name>
+    </fields>
+    <fields>
+        <label><!-- SES_v1.0.1 --></label>
+        <name>Think_of_this_ladder_as_communities__c</name>
+    </fields>
+    <fields>
+        <help><!-- Which of the following best describes the highest level of education you have completed? --></help>
+        <label><!-- SES_v1.0.3 --></label>
+        <name>What_is_the_highest_degree_you_earned__c</name>
+    </fields>
+    <fields>
+        <help><!-- What is your current employment status? --></help>
+        <label><!-- SES_v1.0.5 --></label>
+        <name>What_is_your_current_employment_status__c</name>
+    </fields>
+    <fields>
+        <help><!-- What is your current marital status? --></help>
+        <label><!-- SES_v1.0.6 --></label>
+        <name>What_is_your_current_marital_status__c</name>
+    </fields>
+    <fields>
+        <help><!-- What is your primary occupation? --></help>
+        <label><!-- SES_v1.0.4 --></label>
+        <name>What_is_your_primary_occupation__c</name>
+    </fields>
+    <layouts>
+        <layout>SES Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Survey Response --></label>
+            <section>Survey Response</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

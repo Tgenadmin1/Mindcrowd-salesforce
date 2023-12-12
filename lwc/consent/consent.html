@@ -1,0 +1,329 @@
+<!--   @description  : This Component works for checking consent and languages for the guest user. 
+  @author            : Sunil Kumar
+  @UI author         : Raj
+  @last modified on  : 26-05-2021
+  @apex controller   : CustomLoginController
+  @description       : This is the consent web Page for guest User.
+  @last modified on  : 09-09-2022
+ -->
+ <template>
+    <template if:true={areDetailsVisibleA}>
+        <template if:true={ErrorModalOpen}>
+            <section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-modal="true" aria-describedby="modal-content-id-1" class="slds-modal slds-modal_small ssm slds-fade-in-open">
+                <div class="slds-modal__container">
+                    <!-- Modal/Popup Box LWC header here -->
+                    <!-- Modal/Popup Box LWC body starts here -->
+                    <header class="slds-modal__header slds-modal__header_empty">
+                        <lightning-button-icon icon-name="utility:close" alternative-text={label.close_btn}    variant="bare-inverse" onclick={closeModal} class="slds-modal__close ">  
+                        </lightning-button-icon> 
+                    </header>
+                    
+                    <div class="slds-modal__content slds-p-around_medium" id="modal-content-id-2">
+                        <P >{consent01}</P>
+                    </div>
+                </div>
+            </section>
+            <div class="slds-backdrop slds-backdrop_open"></div>
+        </template>
+
+        <!--template if:true={odd}-->
+            <div class="mainCrowd-outer-box marginB30">
+                <div class="mainCrowd-inner-box">
+                    <form  method="POST" name="ConcentStatus">     
+                        <lightning-layout multiple-rows="true" class="inner_content">
+                            
+                            <lightning-layout-item size="12" small-device-size="12" medium-device-size="12">
+                            <!-- <h1 class="text-center marginB20"><p class="title">{label.consent_text_6}</p></h1>            -->
+                            <div class="text-center marginB20 inner-title">{consent_text_6}</div>                                                 
+                            </lightning-layout-item>
+                            <lightning-layout-item size="12" small-device-size="12" medium-device-size="12">
+                                <div class="text-center  marginB20 subtitle">{consent_text_7}
+                                    <!-- <a  class="text-decoration-non subtitle" href="#"  onclick={faqClick}>
+                                    {label.consent_text_7}
+                                </a>  -->
+                                
+                                </div>
+                                                                                        
+                            </lightning-layout-item>
+                            <lightning-layout-item size="12" small-device-size="12" medium-device-size="12">
+                                <p style="text-align: justify;">{consent_text_8}</p>                                                           
+                            </lightning-layout-item>
+                        
+                            <lightning-layout-item size="12" small-device-size="12" medium-device-size="12" class="participation-form-item-row paddingR0">
+                                <div class="white_wrapper_content participation-form-text-aria printDiv">
+                                    
+                                    <p>{consent02}</p>
+                                    <p>{consent03}</p>
+                                    <p>{consent04}</p>
+                                    <p ><span class=" question-text"><b>{consent05}</b></span><br>
+                                        {consent06}
+                                        </p>
+                                        <p ><span class="question-text"><b>{consent07}</b></span><br>
+                                            {consent08}
+                                            </p>
+                                        <p>{consent09}</p>   
+                                        <p ><span class="question-text"><b>{consent10}</b></span><br>
+                                            {consent11}
+                                            </p>   
+                                            <p ><span class="question-text"><b>{consent12}</b></span><br>
+                                            {consent13}
+                                            </p>  
+                                            <p ><span class="question-text"><b>{consent14}</b></span><br>
+                                            {consent15}
+                                            </p>  
+                                            <p ><span class="question-text"><b>{consent16}</b></span><br>
+                                            {consent15} 
+                                            </p>  
+                                            <p ><span class="question-text"><b>{consent17}</b></span><br>
+                                            No. 
+                                            </p>  
+                                            <p ><span class="question-text"><b>{consent18}</b></span><br>
+                                            {consent19} 
+                                            </p>  
+                                            <p ><span class="question-text"><b>{consent20}</b></span><br>
+                                                {consent21}
+                                            </p>  
+                                        <p class="padding0">{consent22}
+                                            <br>
+                                            
+                                            
+                                        </p>  
+                                        <ul class="p-list">
+                                            <li>{consent23}</li>
+                                            <li>{consent24}</li>
+                                            <li>{consent25}</li>
+                            
+                                        </ul>
+                                        <p>{consent26}</p>  
+                                        <p ><span class="question-text"><b>{consent27}</b></span><br>
+                                            {consent28}
+                                            </p>  
+                                            <p ><span class="question-text"><b>{consent29}</b></span><br>
+                                            {consent30} 
+                                            </p>  
+                                            <p ><span class="question-text"><b>{consent31}</b></span><br>
+                                            {consent32}
+                                            </p>  
+                                            <p class="padding0"><span class="question-text"><b>{consent33}</b></span>
+                                            <br> {consent34}
+                                            
+                                            </p> 
+                                            <div class="paddingL30">
+                                                {consent35}
+                                            <br>{consent36}
+                                            <br>{consent37}
+                                            <br> {consent38}  <a href="mailto:?to=researchquestions@wcgirb.com">{consent39}</a>
+                                            </div>
+                                        <p></p>  
+                                        <p>{consent40}</p>  
+                                        <p>{consent41} <a href="mailto:?to=irb@tgen.org">{consent42}</a> </p> 
+                                        
+                                        
+                                </div>                                                           
+                            </lightning-layout-item>
+                            <!-- <lightning-layout-item size="12" small-device-size="12" medium-device-size="12">
+                                <p><br>{label.consent_text_10}</p>                                                           
+                            </lightning-layout-item>    -->
+                            <lightning-layout-item size="12" small-device-size="12" medium-device-size="12" large-device-size="12" class=" consent-form-item-row consent_form">
+                            
+                                <div class="slds-grid slds-gutters">
+                                    
+                                    <div class="slds-col slds-size_1-of-10 paddingL0 paddingR0 remove-label ">
+                                        <lightning-input class="information remove-label" message-when-value-missing="Select" onchange={checkTerm} type="checkbox" name="termandcondition"></lightning-input>
+                                    </div>
+                                    <div class="slds-col ">
+                                        <p><lightning-formatted-rich-text value={consent_text_11}></lightning-formatted-rich-text> </p>
+                                    </div>
+                                </div>
+                            
+                                
+                                
+                            </lightning-layout-item>
+                            <lightning-layout-item size="12" small-device-size="12" medium-device-size="12" large-device-size="12" class="marginB20 m-center">
+                                <lightning-button disabled={isSubmitBtnDisable} class=" btn-sm pink-btn-box big"  onclick={save} label={consent_text_15}></lightning-button>
+                            </lightning-layout-item>
+                        
+                        <lightning-layout-item size="12"  small-device-size="12" medium-device-size="12" >
+                            <!-- <p class="small">{label.consent_text_12} <a href="javascript:window.print()" onclick={printconsent}><b><u>{label.consent_text_13}</u></b></a> {label.consent_text_14}</p> -->
+                            <!-- <p class="small">{label.consent_text_12} <a class="pink-link" target="_blank" href={Community_Url_printconsent} >{label.consent_text_13}</a> {label.consent_text_14}</p> -->
+                            
+                                <p class="small">{consent_text_12} <a class="pink-link" target="_blank" download={label.consent} href={Community_Url_pdfconsent} >{label.consent_text_13}</a></p>
+                            
+                            
+
+                            
+                        </lightning-layout-item>
+                    </lightning-layout>  
+                </form>  
+                </div>
+            </div>     
+        <!--/template-->
+
+
+        <!-- Display when number is even -->
+
+        
+        <!-- <iframe src={fullUrl} id="cookieSet" class="cookieSet"></iframe> -->
+    </template>
+    <template if:true={areDetailsVisibleB}>
+        <template if:true={ErrorModalOpen}>
+            <section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-modal="true" aria-describedby="modal-content-id-1" class="slds-modal slds-modal_small ssm slds-fade-in-open">
+                <div class="slds-modal__container">
+                    <!-- Modal/Popup Box LWC header here -->
+                    <!-- Modal/Popup Box LWC body starts here -->
+                    <header class="slds-modal__header slds-modal__header_empty">
+                        <lightning-button-icon icon-name="utility:close" alternative-text={label.close_btn}    variant="bare-inverse" onclick={closeModal} class="slds-modal__close ">  
+                        </lightning-button-icon> 
+                    </header>
+                    
+                    <div class="slds-modal__content slds-p-around_medium" id="modal-content-id-3">
+                        <P >{consent01}</P>
+                    </div>
+                </div>
+            </section>
+            <div class="slds-backdrop slds-backdrop_open"></div>
+        </template>
+
+        <!--template if:true={odd}-->
+            <div class="mainCrowd-outer-box marginB30">
+                <div class="mainCrowd-inner-box">
+                    <form  method="POST" name="ConcentStatus">     
+                        <lightning-layout multiple-rows="true" class="inner_content">
+                            
+                            <lightning-layout-item size="12" small-device-size="12" medium-device-size="12">
+                            <!-- <h1 class="text-center marginB20"><p class="title">{label.consent_text_6}</p></h1>            -->
+                            <div class="text-center marginB20 inner-title">{consent_text_6}</div>                                                 
+                            </lightning-layout-item>
+                            <lightning-layout-item size="12" small-device-size="12" medium-device-size="12">
+                                <div class="text-center  marginB20 subtitle">{consent_text_7}
+                                    <!-- <a  class="text-decoration-non subtitle" href="#"  onclick={faqClick}>
+                                    {label.consent_text_7}
+                                </a>  -->
+                                
+                                </div>
+                                                                                        
+                            </lightning-layout-item>
+                            <lightning-layout-item size="12" small-device-size="12" medium-device-size="12">
+                                <p style="text-align: justify;">{consent_text_8}</p>                                                           
+                            </lightning-layout-item>
+                        
+                            <lightning-layout-item size="12" small-device-size="12" medium-device-size="12" class="participation-form-item-row paddingR0">
+                                <div class="white_wrapper_content participation-form-text-aria printDiv">
+                                    <div class="emailContributors-logo">
+                                        <!-- <img src={image11} alt="MindCrowd Contributors" title="MindCrowd Contributors" width="750" height="150"> -->
+                                        <img class="d-img" src={image1} title="MindCrowd Contributors" width="100%" height="150"/>
+                                    </div>
+                                    <p>{consent02}</p>
+                                    <p>{consent03}</p>
+                                    <p>{consent04}</p>
+                                    <p ><span class=" question-text"><b>{consent05}</b></span><br>
+                                        {consent06}
+                                        </p>
+                                        <p ><span class="question-text"><b>{consent07}</b></span><br>
+                                            {consent08}
+                                            </p>
+                                        <p>{consent09}</p>   
+                                        <p ><span class="question-text"><b>{consent10}</b></span><br>
+                                            {consent11}
+                                            </p>   
+                                            <p ><span class="question-text"><b>{consent12}</b></span><br>
+                                            {consent13}
+                                            </p>  
+                                            <p ><span class="question-text"><b>{consent14}</b></span><br>
+                                            {consent15}
+                                            </p>  
+                                            <p ><span class="question-text"><b>{consent16}</b></span><br>
+                                            {consent15} 
+                                            </p>  
+                                            <p ><span class="question-text"><b>{consent17}</b></span><br>
+                                            No. 
+                                            </p>  
+                                            <p ><span class="question-text"><b>{consent18}</b></span><br>
+                                            {consent19} 
+                                            </p>  
+                                            <p ><span class="question-text"><b>{consent20}</b></span><br>
+                                                {consent21}
+                                            </p>  
+                                        <p class="padding0">{consent22}
+                                            <br>
+                                            
+                                            
+                                        </p>  
+                                        <ul class="p-list">
+                                            <li>{consent23}</li>
+                                            <li>{consent24}</li>
+                                            <li>{consent25}</li>
+                            
+                                        </ul>
+                                        <p>{consent26}</p>  
+                                        <p ><span class="question-text"><b>{consent27}</b></span><br>
+                                            {consent28}
+                                            </p>  
+                                            <p ><span class="question-text"><b>{consent29}</b></span><br>
+                                            {consent30} 
+                                            </p>  
+                                            <p ><span class="question-text"><b>{consent31}</b></span><br>
+                                            {consent32}
+                                            </p>  
+                                            <p class="padding0"><span class="question-text"><b>{consent33}</b></span>
+                                            <br> {consent34}
+                                            
+                                            </p> 
+                                            <div class="paddingL30">
+                                                {consent35}
+                                            <br>{consent36}
+                                            <br>{consent37}
+                                            <br> {consent38}  <a href="mailto:?to=researchquestions@wcgirb.com">{consent39}</a>
+                                            </div>
+                                        <p></p>  
+                                        <p>{consent40}</p>  
+                                        <p>{consent41} <a href="mailto:?to=irb@tgen.org">{consent42}</a> </p> 
+                                        
+                                        
+                                </div>                                                           
+                            </lightning-layout-item>
+                            <!-- <lightning-layout-item size="12" small-device-size="12" medium-device-size="12">
+                                <p><br>{label.consent_text_10}</p>                                                           
+                            </lightning-layout-item>    -->
+                            <lightning-layout-item size="12" small-device-size="12" medium-device-size="12" large-device-size="12" class=" consent-form-item-row consent_form">
+                            
+                                <div class="slds-grid slds-gutters">
+                                    
+                                    <div class="slds-col slds-size_1-of-10 paddingL0 paddingR0 remove-label ">
+                                        <lightning-input class="information remove-label" message-when-value-missing="Select" onchange={checkTerm} type="checkbox" name="termandcondition"></lightning-input>
+                                    </div>
+                                    <div class="slds-col ">
+                                        <p><lightning-formatted-rich-text value={consent_text_11}></lightning-formatted-rich-text> </p>
+                                    </div>
+                                </div>
+                            
+                                
+                                
+                            </lightning-layout-item>
+                            <lightning-layout-item size="12" small-device-size="12" medium-device-size="12" large-device-size="12" class="marginB20 m-center">
+                                <lightning-button disabled={isSubmitBtnDisable} class=" btn-sm pink-btn-box big"  onclick={save} label={consent_text_15}></lightning-button>
+                            </lightning-layout-item>
+                        
+                        <lightning-layout-item size="12"  small-device-size="12" medium-device-size="12" >
+                            <!-- <p class="small">{label.consent_text_12} <a href="javascript:window.print()" onclick={printconsent}><b><u>{label.consent_text_13}</u></b></a> {label.consent_text_14}</p> -->
+                            <!-- <p class="small">{label.consent_text_12} <a class="pink-link" target="_blank" href={Community_Url_printconsent} >{label.consent_text_13}</a> {label.consent_text_14}</p> -->
+                            
+                                <p class="small">{consent_text_12} <a class="pink-link" target="_blank" download={label.consent} href={Community_Url_pdfconsent} >{label.consent_text_13}</a></p>
+                            
+                            
+
+                            
+                        </lightning-layout-item>
+                    </lightning-layout>  
+                </form>  
+                </div>
+            </div>     
+        <!--/template-->
+
+
+        <!-- Display when number is even -->
+
+        
+        <!-- <iframe src={fullUrl} id="cookieSet" class="cookieSet"></iframe> -->
+    </template>
+ </template>

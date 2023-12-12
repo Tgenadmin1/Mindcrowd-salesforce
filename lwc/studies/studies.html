@@ -1,0 +1,118 @@
+<template>
+    
+    
+    <div class="studies" if:true={participantFromUrl}>
+    <h1 class=" text-center marginT30"><p class="title">{Studies_text1} <span class="nomal-text">{Studies_text2}</span></p></h1> 
+    <!-- <h2>MindCrowd!</h2> -->
+    <p >{Studies_text3}</p>
+    <p >{Studies_text4}</p>
+    <p >{Studies_text5}</p>
+  
+        
+
+        <div class="form marginT30 marginB30 mainCrowd-inner-box">
+            <template if:true={checkStudyEvent}>
+                <div class="slds-grid slds-gutters std-j-center paddingL0 std-f-row">
+                    <div class="slds-col slds-size_2-of-12 paddingL0">
+                        <lightning-input class=" study  paddingT0 marginT0 marginB0 paddingB0 " type="radio" data-id="study" label={Studies_text6} onchange={handleStudy} ></lightning-input>
+                        </div>
+                        <div class="slds-col slds-size_10-of-12">
+                            <template if:true={studyTrue}>
+
+                                <div class="std-j-center paddingL0">
+                                    <div class="slds-col  slds-size_6-of-12 mb-20">
+                                  
+                                            <lightning-input type="text" class="participantId  slds-form-element__control  paddingT0 marginT0 marginB0 paddingB0" label={Studies_text7} value={stu.Participant_Id__c} onchange={handleParticipantId}>
+                                            </lightning-input>
+                                       
+                                    </div>
+                                    
+                                  </div>    
+                            </template>  
+                        </div>
+                </div>      
+            </template>
+            <template if:true={checkStudyEvent}>
+                <div class="slds-grid slds-gutters std-j-center paddingL0 std-f-row">
+                    <div class="slds-col slds-size_2-of-12 paddingL0">
+                        <lightning-input class=" event  paddingT0 marginT0 paddingB0  mb-0 " type="radio" data-id="event" label={Studies_text8} onchange={handleEvent} ></lightning-input>
+                        </div>
+                        <div class="slds-col slds-size_6-of-12">
+                            <template if:true={eventTrue}>
+                
+                                <template if:true={eventPicklist} >
+                                    <div class="slds-grid std-j-center slds-gutters paddingL0">
+                                        <div class="slds-col slds-size_12-of-12  paddingT0 marginT0">
+                                            <lightning-combobox name="progress" class="eventId  paddingT0 marginT0 marginB0 " label={Studies_text9} value={stu.Event_Id__c} 
+                                            placeholder={Select_Event}  options={eventlist} onchange={handleEventId}>
+                                            </lightning-combobox>
+                                        </div>
+                                    </div>
+                                   
+                                </template>
+                            </template>
+                        </div>
+                </div>        
+            </template>           
+            <div class="slds-align_absolute-center result-btn display-flex ">
+                <lightning-button class="magenta-btn " variant="brand" type="submit" name="Join the Study"
+                    label={Studies_text10} onclick={joinTheStudy}>
+                </lightning-button>
+            </div>
+        </div>              
+    </div>
+    <template if:true={ErrorModalOpen}>
+        <section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-modal="true" aria-describedby="modal-content-id-1" class="slds-modal slds-modal_small ssm slds-fade-in-open">
+            <div class="slds-modal__container">
+                 <header class="slds-modal__header">
+                    <lightning-button-icon icon-name="utility:close" alternative-text="Close this window"   variant="bare-inverse" onclick={closeModal} class="slds-modal__close ">  
+                    </lightning-button-icon> 
+                    <span class="title slds-hyphenate" id="modal-heading-01">{Studies_error1}</span>
+                  </header>
+                <div class="slds-modal__content slds-p-around_medium" id="modal-content-id-2">          
+                    <ul class="p-list">
+                        <li if:true={studyRequiredField1} class="required1 ">{requiredField1}</li>
+                        <!-- <li if:true={partRequiredField2} class="required1 ">{requiredField2}</li> -->
+                        <li if:true={eventRequiredField3} class="required1 ">{requiredField3}</li>
+                        <li if:true={chooseOne} class="required1 ">{requiredField4}</li>
+                        <li if:true={chooseContact} class="required1 ">{requiredField5}</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <div class="slds-backdrop slds-backdrop_open"></div>
+    </template>
+    <template if:true={ErrorModalOpenForBlankParticipantId}>
+        <section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-modal="true" aria-describedby="modal-content-id-1" class="slds-modal slds-modal_small ssm slds-fade-in-open">
+            <div class="slds-modal__container">
+                 <header class="slds-modal__header">
+                    <lightning-button-icon icon-name="utility:close" alternative-text="Close this window"   variant="bare-inverse" onclick={closeModalError} class="slds-modal__close ">  
+                    </lightning-button-icon> 
+                    <span class="title slds-hyphenate" id="modal-heading-02">{Studies_error1}</span>
+                  </header>
+                <div class="slds-modal__content slds-p-around_medium" id="modal-content-id-3">          
+                    <ul class="p-list">
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <div class="slds-backdrop slds-backdrop_open"></div>
+    </template>
+    <template if:true={ErrorModalOpenForWrongParticipantId}>
+        <section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-modal="true" aria-describedby="modal-content-id-1" class="slds-modal slds-modal_small ssm slds-fade-in-open">
+            <div class="slds-modal__container">
+                 <header class="slds-modal__header">
+                    <lightning-button-icon icon-name="utility:close" alternative-text="Close this window"   variant="bare-inverse" onclick={closeModalWrongPi} class="slds-modal__close ">  
+                    </lightning-button-icon> 
+                    <span class="title slds-hyphenate" id="modal-heading-03">{Studies_error6}</span>
+                  </header>
+                <div class="slds-modal__content slds-p-around_medium" id="modal-content-id-4">          
+                    <ul class="p-list">
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <div class="slds-backdrop slds-backdrop_open"></div>
+    </template>
+    
+</template>

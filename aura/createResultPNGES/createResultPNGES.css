@@ -1,0 +1,60 @@
+.THIS .pngBox-main-box{
+    position: relative;
+
+}
+
+.THIS #pngBoxAttention{
+    width: 810px;
+    height: 450px;
+    z-index: 0;
+     position: relative;
+    
+}
+.THIS #pngBoxMemory{
+    width: 810px;
+    height: 450px;
+    z-index: 0;
+     position: relative;
+    
+}
+.THIS #pngBoxAttention .png-title1{
+    color: #fff;
+    position: absolute;
+
+    display: inline-block;
+    z-index: 1;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 23.2px;
+    font-weight: bolder;
+    left: 427px;
+    top: 156px;
+}
+
+.THIS #pngBoxMemory .png-title1{
+    color: #fff;
+    position: absolute;
+
+    display: inline-block;
+    z-index: 1;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 23.2px;
+    font-weight: bolder;
+    left: 404px;
+    top: 161px;
+}
+
+
+
+.THIS .png-title2{
+    color: #fff;
+    position: absolute;
+    top:120px;
+    padding-left: 50px;
+    width: 100%;
+    display: inline-block;
+    z-index: 1;
+    font-family: 'Whitneybook', Helvetica, Arial, sans-serif;
+    font-size: 40px;
+    font-weight: 400;
+    
+}

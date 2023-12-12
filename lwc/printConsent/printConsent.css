@@ -1,0 +1,33 @@
+@media print {
+    .slds-context-bar {
+        display :none;
+    }
+    .print {
+        display:none;
+    }
+    .copyright, .copyright-content  {
+        display:none !important;
+    }
+    .slds-global-header, .slds-global-footer{
+        display:none;
+    }
+    .slds-color__background_gray-1 {
+        display:none;
+    }
+    .slds-global-header_container, .slds-global-footer_container {
+        display:none;
+    }
+    .slds-no-print {
+        display:none;
+    }
+    .logo-container{display: none;}
+    .printDiv{
+        font-size: 14px;
+        line-height: normal;
+        margin: 0;
+        padding: 0;
+    }
+    .copyright, .copyright-content  {
+        display:none !important;
+    }
+}

@@ -1,0 +1,42 @@
+<!--
+  @description       : This 
+  @author(Controller)      : Sibi Sathyan
+  @UI author               : Sibi Sathyan
+  @last Updated by         : Sibi Sathyan
+  @last modified by        : Sibi Sathyan
+  Modifications Log 
+  Ver   Date         Author         Modification
+
+-->
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" controller="LongitudinalGraphController" >
+    <aura:attribute name="results_text" type="String" default = "Welcome to your personal MindCrowd results page" access="global" />
+    <aura:attribute name="results_text_1" type="String" default = "The gauges below show your results. The first gauge is your personal result. The second gauge shows results for people like you. The third gauge is the average for all MindCrowd participants." access="global" />
+    <aura:attribute name="results_text_2" type="String" default = "Gauges update as more people participate in MindCrowd. You can come back and see your results at any time." access="global" />
+    <aura:attribute name="results_text_3" type="String" default = "Gauges represent the percent correct for the game, except for the React game, which shows your speed in milliseconds." access="global" />
+    <aura:attribute name="results_text_4" type="String" default = "Remember that these games are not designed to predict your future for brain problems or disease. Some people are good at certain games but not at others – that is normal. Each game you finish helps to give a more complete picture of your brain performance. Keep playing the games and you may find the ones that you are best at." access="global" />
+    <aura:attribute name="chartNames" type="List" access="global"/>
+    <aura:attribute name="graphData" type="Object" access="global" />
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    <aura:if isTrue="{!v.graphData}"> 
+        <lightning:layout multipleRows="true">
+            <aura:iteration items="{!v.chartNames}" var="item">
+            <div class="mainCrowd-inner-box1 marginT30">    
+                <div class="game-dash-title" >{!item}</div> 
+                <div class="slds-m-top_medium1">
+                    <lightning:layout multipleRows ="true">
+                        <lightning:layoutItem padding="around-small" size ="12">
+                            <div class="mainCrowd-inner-box speed-m-chart-box"> 
+                                <lightning:layout multipleRows="true">                                            
+                                        <lightning:layoutItem size="0" class="graph-singel">														        
+                                            <c:longitudinalGraph chartName="{!item}" graphData="{!v.graphData}"></c:longitudinalGraph>
+                                        </lightning:layoutItem>                                      
+                                </lightning:layout>
+                            </div>
+                        </lightning:layoutItem>
+                    </lightning:layout>
+                </div>     
+            </div> 
+        </aura:iteration>
+     </lightning:layout>
+    </aura:if>
+</aura:component>

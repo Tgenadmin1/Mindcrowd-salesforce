@@ -1,0 +1,49 @@
+<!-- @description       : 
+  @author            :  Shweta Khunteta
+  
+  @last modified on  : 28-06-2021
+  Ticket no {TM-73}
+  Modifications Log 
+  Ver   Date         Author         Modification
+  1.0   28-06-2020   Shweta Khunteta      Initial Version -->
+
+<aura:component controller="ShippingDetailsController" access="global"
+    implements="flexipage:availableForAllPageTypes,force:appHostable">
+    <aura:dependency resource="markup://force:showToast" type="EVENT" />
+    <aura:attribute name="ShipmenttoReceive" type="Shipping_Detail__c"
+        default="{ 'sobjectType' : 'Shipping_Detail__c',Barcode__c:''}" />
+        
+    <ltng:require scripts="" afterScriptsLoaded="{!c.doInit}"  />
+    
+        <article class="slds-card slds-m-around--xxx-large slds-size_6-of-12" style="margin: auto;">
+            <div class="slds-card__header slds-grid slds-theme_shade slds-border_bottom">
+                <header class="slds-media slds-media_center slds-has-flexi-truncate   slds-p-bottom_medium">
+                    <div class="slds-media__body">
+                        <h2 class="slds-card__header-title">
+                            <div class="" onkeypress="{!c.callKeyUp}">
+                                <div class="form-group reauired-group">
+                                    
+                                    <label lightning-input_input="" class="slds-form-element__label slds-no-flex" for="input-0">
+                                        <abbr title="required" class="slds-required">*</abbr>Barcode</label>
+                                    <lightning:input name="input2"   aura:id="barcode" type="text" maxlength="50" 
+                                        label="" value="{!v.ShipmenttoReceive.Barcode__c}"/>
+                                       
+                                </div>
+                            </div>
+                        </h2>
+                    </div>
+                    <div class="slds-no-flex">
+                        <lightning:button variant="brand" disabled="{!v.isSpinner}" label="Save and New"
+                            onclick="{!c.submitDetails}" />
+                    </div>
+                </header>
+            </div>
+            <div class="slds-card__body" style="height:15rem; overflow: auto;">
+                <div aura:id="barcodeList" class="slds-size_12-of-12 slds-p-around_medium">
+                </div>
+            </div>
+    
+        </article>
+    
+       
+</aura:component>
