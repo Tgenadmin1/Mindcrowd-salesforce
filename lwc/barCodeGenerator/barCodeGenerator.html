@@ -1,0 +1,22 @@
+<template>
+  <lightning-button variant="brand" label="Print" title="Click to print" onclick={printBarcode} class="slds-m-left_x-small print"  ></lightning-button> 
+
+  <div class="slds-align_absolute-center slds-wrap barcode-box">
+
+       
+        <template if:true={boolShowSpinner}>
+          <div class="slds-p-around_small">
+          <lightning-spinner alternative-text="Loading" size="large"></lightning-spinner>
+        </div>
+        </template>
+      
+      <template for:each={barcodeIds} for:item="barcode">
+        
+        <div key={barcode} class="barcode slds-size_12-of-12 slds-small-size_12-of-12 slds-medium-size_12-of-12 slds-large-size_4-of-12">
+          <canvas data-id={barcode} lwc:dom="manual"></canvas>
+        </div>
+      </template>
+ 
+    </div>
+
+</template>

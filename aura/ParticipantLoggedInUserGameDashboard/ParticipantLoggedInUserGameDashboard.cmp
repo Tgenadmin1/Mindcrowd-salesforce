@@ -1,0 +1,135 @@
+<!--
+  @description       : This 
+  @author            : Manikumar Meruva(Girikon Solutions Pvt Ltd)
+  @UI author         : Mani
+  @last modified on  : 09-09-2021
+  @last modified by  : ManiKumar
+  Modifications Log 
+  Ver   Date         Author         Modification
+  1.0   18-08-2021   Manikumar      Initial Version
+-->
+
+
+
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" controller="ParticipantVIPResultsController" >
+    
+    <aura:attribute name="otherMap" type="Map"  access="global" /> 
+    <aura:attribute name="contactId" type="String"  access="global" />
+    <aura:attribute name="gameName" type="String"  access="global" />
+    <aura:attribute name="gameTitle" type="String"  access="global" />
+    <aura:attribute name="gameDesc1" type="String"  access="global" />
+    <aura:attribute name="gameDesc2" type="String"  access="global" />
+    <aura:attribute name="yourScore" type="Integer" access="global"  />
+    <aura:attribute name="age" type="Integer" access="global" />
+    <aura:attribute name="lValue" type="Integer" access="global" />
+    <aura:attribute name="hValue" type="Integer" access="global" />
+    <aura:attribute name="mValue" type="Integer" access="global" />
+    <aura:attribute name="isScoreReactionTime" type="Boolean" default="false" access="global" />
+    <aura:attribute name="correctAnswers" type="Integer" access="global" />
+    <aura:attribute name="reactionTime" type="Integer" access="global" />
+    <aura:attribute name="userDevice" type="Integer" access="global" />
+    <aura:attribute name="gameColor" type="List"  access="global" />
+    <aura:attribute name="isGamePlayed" type="Boolean"  access="global" />
+    <aura:attribute name="peopleLikeYou" type="Integer" access="global" />
+    <aura:attribute name="showpeopleLikeYou" type="Boolean" default="true" />
+    <aura:attribute name="overallAverage" type="Integer" access="global" />
+    <aura:attribute name="peopleLikeYouNoDataLabel" type="String" default="We currently don't have enough people like you to display 'People Like You' results. Check back in the future for an update." />
+     <aura:attribute name="scoreBasedCaption" type="String"  access="global" />
+     <aura:attribute name="spinner" type="boolean" default="false"/>  
+    
+    
+    
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    <aura:if isTrue="{!v.spinner}">
+        <div aura:id="spinnerId" class="slds-spinner_container">
+            <div class="slds-spinner--brand  slds-spinner slds-spinner--large slds-is-relative" role="alert">
+                <span class="slds-assistive-text">Loading...</span>
+                <div class="slds-spinner__dot-a"></div>
+                <div class="slds-spinner__dot-b"></div>
+            </div>
+        </div>
+    </aura:if>
+    
+    <lightning:layout multipleRows="true">
+        <aura:if isTrue ="{!v.isGamePlayed}">
+            <div class="mainCrowd-inner-box1 marginT30">    
+                <!-- <h1 class="game-dash-title" >{!v.gameTitle}</h1>   -->
+                <div class="game-dash-title" >{!v.gameTitle}</div>  
+                 
+                <div class="slds-m-top_medium1">
+                  <!--  <lightning:tabset variant="scoped"  selectedTabId="Overall">
+                        <lightning:tab label="{!$Label.c.results_text_7}" id="Overall"> -->
+                            <lightning:layout multipleRows ="true">
+                                <lightning:layoutItem padding="around-small" size ="12">  
+                                <!--    <div class="marginB20">
+                                        <p>
+                                            {!v.gameDesc1}
+                                        </p>
+                                        <p>
+                                            {!v.gameDesc2}
+                                        </p>
+                                    </div> -->
+                                    
+                                    <div class="mainCrowd-inner-box speed-m-chart-box"> 
+                                        <lightning:layout multipleRows="true">
+                                            <!-- <aura:iteration items="{!v.guageChartData}" var="guage" indexVar="key"> -->
+                                           <aura:if isTrue ="{!v.isScoreReactionTime}">
+                                            <lightning:layoutItem size="0" class="graph-singel">
+                                                    <c:ParticipantGaugeChart breakPoint ="{!v.reactionTime}" minValue = "0"  maxValue="{!v.mValue}" lowAverage ="{!v.lValue}" highAverage ="{!v.hValue}"
+                                                                             chartLabel ="{!$Label.c.Catcme_text_1}" gaugeColor="['#FF5833','#FFB833','#33FF38']" isPercentage="False"></c:ParticipantGaugeChart> 
+                                                    
+                                                    </lightning:layoutItem>
+                                               <lightning:layoutItem size="0" class="graph-double">
+                                                <aura:if isTrue ="{!v.showpeopleLikeYou}">
+                                                    <c:ParticipantGaugeChart breakPoint ="{!v.peopleLikeYou}" gaugeColor="['#FF5833','#FFB833','#33FF38']" lowAverage ="{!v.lValue}" highAverage ="{!v.hValue}"
+                                                                         minValue = "0"  maxValue="{!v.mValue}" chartLabel ="{!$Label.c.Catcme_text_2}" isPercentage="False"></c:ParticipantGaugeChart>
+                                               
+                                               <aura:set attribute="else"> 
+                                                <lightning:layoutItem >
+                                                    <lightning:formattedRichText value="{!v.peopleLikeYouNoDataLabel}"/>                                   
+                                                    </lightning:layoutItem>
+                                              </aura:set> 
+                                            </aura:if>
+                                            </lightning:layoutItem>
+                                                <aura:set attribute="else"> 
+                                                     <lightning:layoutItem size="0" class="graph-singel">
+                                                        <c:ParticipantGaugeChart breakPoint ="{!v.correctAnswers}" gaugeColor="['#33FF38','#FFB833','#FF5833']" lowAverage ="{!v.lValue}" highAverage ="{!v.hValue}"
+                                                                                 minValue = "0"  maxValue="{!v.mValue}" chartLabel ="{!$Label.c.Catcme_text_1}"  isPercentage="False"></c:ParticipantGaugeChart>
+                                                       <!--   <div class="scoreBasedCaption">{!v.scoreBasedCaption}	</div> -->
+                                                        </lightning:layoutItem>
+                                                    <lightning:layoutItem size="0" class="graph-double">
+                                                        <aura:if isTrue ="{!v.showpeopleLikeYou}">
+                                                         <c:ParticipantGaugeChart breakPoint ="{!v.peopleLikeYou}" gaugeColor="['#33FF38','#FFB833','#FF5833']" lowAverage ="{!v.lValue}" highAverage ="{!v.hValue}"
+                                                                         minValue = "0"  maxValue="{!v.mValue}" chartLabel ="{!$Label.c.Catcme_text_2}"  isPercentage="False" ></c:ParticipantGaugeChart>
+                                                          <aura:set attribute="else"> 
+                                                             <lightning:layoutItem>
+                                                                <lightning:formattedRichText value="{!v.peopleLikeYouNoDataLabel}"/>                   
+                                                    </lightning:layoutItem>
+                                                           </aura:set> 
+                                                        </aura:if>
+                                            </lightning:layoutItem>
+                                                    </aura:set> 
+                                                </aura:if> 
+                                           
+                                            <!-- <lightning:layoutItem size="4">
+                                                <c:ParticipantGaugeChart breakPoint ="{!v.peopleLikeYou}" gaugeColor="['#FF5833','#FFB833','#33FF38']" lowAverage ="{!v.lValue}" highAverage ="{!v.hValue}"
+                                                                         minValue = "0"  maxValue="{!v.mValue}" chartLabel ="{!$Label.c.Catcme_text_2}" ></c:ParticipantGaugeChart>
+                                                
+                                            </lightning:layoutItem> -->
+                                            <lightning:layoutItem size="0"  class="graph-double">
+                                                <c:ParticipantGaugeChart breakPoint ="{!v.overallAverage}" gaugeColor="['#cac8f0']" lowAverage ="0" highAverage ="0"
+                                                                         minValue = "0"  maxValue="{!v.mValue}" chartLabel ="{!$Label.c.Catcme_text_3}"   isPercentage="False" ></c:ParticipantGaugeChart>  
+                                                
+                                                
+                                            </lightning:layoutItem>
+                                        </lightning:layout>
+                                    </div>
+                                </lightning:layoutItem>
+                            </lightning:layout>
+                    <!--   </lightning:tab>
+                    </lightning:tabset> -->
+                </div>     
+            </div>  
+        </aura:if>
+    </lightning:layout>
+</aura:component>

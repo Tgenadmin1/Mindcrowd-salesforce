@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>WOM</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>WOMs</value>
+    </caseValues>
+    <fields>
+        <label><!-- Contact Name --></label>
+        <name>Contact_Name__c</name>
+        <relationshipLabel><!-- WOMs --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Contact --></label>
+        <name>Contact__c</name>
+    </fields>
+    <fields>
+        <label><!-- WOM_v1.0.5 --></label>
+        <name>Do_you_currently_take_hormone__c</name>
+    </fields>
+    <fields>
+        <label><!-- Email --></label>
+        <name>Email__c</name>
+    </fields>
+    <fields>
+        <label><!-- WOM_v1.0.1 --></label>
+        <name>Have_you_ever_used_hormonal__c</name>
+    </fields>
+    <fields>
+        <label><!-- WOM_v1.0.9 --></label>
+        <name>Have_you_had_one_or_both_of_your_ovaries__c</name>
+    </fields>
+    <fields>
+        <label><!-- WOM_v1.0.11 --></label>
+        <name>Have_you_had_part_or_all_of_your_uterus__c</name>
+    </fields>
+    <fields>
+        <label><!-- WOM_v1.0.4 --></label>
+        <name>Other__c</name>
+    </fields>
+    <fields>
+        <label><!-- WOM_v1.0.6 --></label>
+        <name>Please_estimate_in_years_how_long_you__c</name>
+    </fields>
+    <fields>
+        <label><!-- WOM_v1.0.2 --></label>
+        <name>Please_estimate_in_years_how_long_you_to__c</name>
+    </fields>
+    <fields>
+        <label><!-- WOM_v1.0.7 --></label>
+        <name>What_brand_of_hormone_replacement__c</name>
+    </fields>
+    <fields>
+        <label><!-- WOM_v1.0.8 --></label>
+        <name>What_dose_of_hormone_replacement_therapy__c</name>
+    </fields>
+    <fields>
+        <label><!-- WOM_v1.0.3 --></label>
+        <name>What_hormonal_birth_control__c</name>
+    </fields>
+    <fields>
+        <label><!-- WOM_v1.0.12 --></label>
+        <name>What_year_did_you_have_your_hysterectomy__c</name>
+    </fields>
+    <fields>
+        <label><!-- WOM_v1.0.10 --></label>
+        <name>What_year_did_you_have_your_oophorectomy__c</name>
+    </fields>
+    <layouts>
+        <layout>Womens Health Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

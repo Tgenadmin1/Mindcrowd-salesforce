@@ -1,0 +1,14 @@
+<!-- // Created By: {Girikon(ShwetaKhunteta)}
+// Created On: 14/07/2021 (dd/mm/yyyy)
+// Description/Purpose:. 
+
+ -->
+
+
+<apex:page standardController="Shipping_Detail__c"  recordSetVar="Shipping"  extensions="PassShippingIdToVF" action="{!shippingId}">
+    Laoading........
+    <script type="text/javascript">
+    	window.history.back();
+    //setTimeout(()=>{ window.history.back(); }, 2000);
+    </script>
+    </apex:page>

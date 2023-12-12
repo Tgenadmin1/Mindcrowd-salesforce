@@ -1,0 +1,9 @@
+<design:component label="Mindcrowd Nav">
+    <design:attribute name="community_nav_text_1" label="community_nav_text_1" description="My Games"/>
+    <design:attribute name="community_nav_text_2" label="community_nav_text_2" description="My Results"/>
+    <design:attribute name="community_nav_text_3" label="community_nav_text_3" description="Notifications"/>
+    <design:attribute name="community_nav_text_4" label="community_nav_text_4" description="My Profile"/>
+    <design:attribute name="community_nav_text_5" label="community_nav_text_5" description="Blog"/>
+    <design:attribute name="community_nav_text_6" label="community_nav_text_6" description="Logout"/>
+    
+</design:component>

@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Nicotine Alcohol Drugs</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Nicotine Alcohol Drugs</value>
+    </caseValues>
+    <fields>
+        <label><!-- A serving of alcohol is equivalent --></label>
+        <name>A_serving_of_alcohol_is_equivalent__c</name>
+    </fields>
+    <fields>
+        <label><!-- Are you unable to stop using drugs when --></label>
+        <name>Are_you_unable_to_stop_using_drugs_when__c</name>
+    </fields>
+    <fields>
+        <label><!-- Contact --></label>
+        <name>Contact__c</name>
+        <relationshipLabel><!-- Nicotine Alcohol Drugs --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Do you abuse more than one drug at a --></label>
+        <name>Do_you_abuse_more_than_one_drug_at_a__c</name>
+    </fields>
+    <fields>
+        <label><!-- Do you consume alcoholic beverages --></label>
+        <name>Do_you_consume_alcoholic_beverages__c</name>
+    </fields>
+    <fields>
+        <label><!-- Do you ever feel bad or guilty about you --></label>
+        <name>Do_you_ever_feel_bad_or_guilty_about_you__c</name>
+    </fields>
+    <fields>
+        <label><!-- Do you or have you ever used any other --></label>
+        <name>Do_you_or_have_you_ever_used_any_other__c</name>
+    </fields>
+    <fields>
+        <label><!-- Does your spouse or parents ever --></label>
+        <name>Does_your_spouse_or_parents_ever__c</name>
+    </fields>
+    <fields>
+        <label><!-- During the past 3 months how often --></label>
+        <name>During_the_past_3_months_how_often__c</name>
+    </fields>
+    <fields>
+        <label><!-- Email --></label>
+        <name>Email__c</name>
+    </fields>
+    <fields>
+        <label><!-- Have you engaged in illegal activities --></label>
+        <name>Have_you_engaged_in_illegal_activities__c</name>
+    </fields>
+    <fields>
+        <label><!-- Have you ever experienced withdrawal --></label>
+        <name>Have_you_ever_experienced_withdrawal__c</name>
+    </fields>
+    <fields>
+        <label><!-- Have you ever had blackouts or flashback --></label>
+        <name>Have_you_ever_had_blackouts_or_flashback__c</name>
+    </fields>
+    <fields>
+        <label><!-- Have you had medical problems as a --></label>
+        <name>Have_you_had_medical_problems_as_a__c</name>
+    </fields>
+    <fields>
+        <label><!-- Have you neglected your family because --></label>
+        <name>Have_you_neglected_your_family_because__c</name>
+    </fields>
+    <fields>
+        <label><!-- Have you used drugs other than those --></label>
+        <name>Have_you_used_drugs_other_than_those__c</name>
+    </fields>
+    <fields>
+        <label><!-- How many cigarettes do you smoke daily --></label>
+        <name>How_many_cigarettes_do_you_smoke_daily__c</name>
+    </fields>
+    <fields>
+        <label><!-- How many years did you smoke --></label>
+        <name>How_many_years_did_you_smoke__c</name>
+    </fields>
+    <fields>
+        <label><!-- How many years did you use these product --></label>
+        <name>How_many_years_did_you_use_these_product__c</name>
+    </fields>
+    <fields>
+        <label><!-- How many years have you been smoking --></label>
+        <name>How_many_years_have_you_been_smoking__c</name>
+    </fields>
+    <fields>
+        <label><!-- How many years have you been using these --></label>
+        <name>How_many_years_have_you_been_using_these__c</name>
+    </fields>
+    <fields>
+        <label><!-- How often do you use marijuana --></label>
+        <name>How_often_do_you_use_marijuana__c</name>
+    </fields>
+    <fields>
+        <label><!-- Were you a smoker at the time you --></label>
+        <name>Were_you_a_smoker_at_the_time_you__c</name>
+    </fields>
+    <fields>
+        <label><!-- What is your cigarette smoking status --></label>
+        <name>What_is_your_cigarette_smoking_status__c</name>
+    </fields>
+    <layouts>
+        <layout>Nicotine Alcohol Drugs Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Survey Response --></label>
+            <section>Survey Response</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LightningComponentBundle xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>52.0</apiVersion>
+    <isExposed>true</isExposed>
+    <targets>
+        <target>lightning__AppPage</target>
+        <target>lightning__RecordPage</target>
+        <target>lightning__HomePage</target>
+        <target>lightningCommunity__Page</target>
+        <target>lightningCommunity__Default</target>
+    </targets>
+    <targetConfigs>  
+        <targetConfig targets="lightning__HomePage,lightning__RecordPage,lightningCommunity__Default">
+            <property name="Catcme_text_11" type="String" default="Would you like to help fund scientific research?" label="Would you like to help fund scientific research?"/>
+            <property name="Catcme_text_12" type="String" default="Your donation is greatly appreciated (and tax deductible too). The TGen Foundation, a non-profit organization, fuels biomedical research that positively impacts the lives of patients and their families. Please, visit the TGen Foundation site and contribute to help further such research efforts. Thank you in advance for your support." label="Catcme_text_12"/>
+            <property name="Catcme_text_13" type="String" default="Yes, I'd Like To Know More" label="Yes, I'd Like To Know More"/>
+            
+            <property name="strTitle" type="String" default="Welcome in Salesforce" label="Enter the title"/>
+            
+        </targetConfig>
+    </targetConfigs>
+</LightningComponentBundle>

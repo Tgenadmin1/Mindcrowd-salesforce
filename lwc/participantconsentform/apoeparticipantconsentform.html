@@ -1,0 +1,214 @@
+<template>
+    <lightning-layout multiple-rows="true" class="participation-form">
+      <lightning-layout-item size="12" small-device-size="12" medium-device-size="12" large-device-size="12"
+        class="Participation-header-box">
+        <a href="#">
+          <img alt="Mind Crowd" src={logoimage2} />
+        </a>
+      </lightning-layout-item>
+      <lightning-layout-item size="12" small-device-size="12" medium-device-size="12" large-device-size="12"
+        class="Participation-title-box">
+        <div class="freebirdFormviewerViewHeaderThemeStripe freebirdSolidBackground exportThemeStripe"></div>
+        <h1 class="title">{APOE_text_1}</h1>
+        <div class="freebirdFormviewerViewHeaderRequiredLegend " aria-hidden="true" dir="auto">
+          * {DBS_text_2}
+        </div>
+      </lightning-layout-item>
+      <!-- for code-->
+  
+      <!-- <lightning-layout-item size="12" small-device-size="12" medium-device-size="12" large-device-size="12" class="paddingB20 participation-form-item-row marginB20"> -->
+      <!-- </lightning-layout-item>  -->
+      <!--for address-->
+  
+      <!--for text area-->
+  
+      <lightning-layout-item>
+        <div class="slds-form-element">
+          <!-- <span class="slds-form-element__label">Textarea Label</span> -->
+          <div class="slds-form-element__control">
+            <div class="slds-form-element__static participation-form-item-row participation-form-text-aria">
+              <div class="white_wrapper_content">
+                <p>
+                  <lightning-formatted-rich-text value={APOE_text_all}></lightning-formatted-rich-text>
+                </p>
+                
+              </div>
+            </div>
+          </div>
+        </div>
+      </lightning-layout-item>
+  
+      <!--for consent-->
+  
+      <lightning-layout-item class="participation-form-item-row">
+        <fieldset class="slds-form-element slds-form-element_stacked paddingL0">
+          <!-- <legend class="slds-form-element__legend slds-form-element__label">
+            <abbr class="slds-required" title="required">*</abbr>By checking this box :</legend>
+         <lightning-checkbox-group name="shippingconsent" class="consentrequired" 
+        options={options}
+              value={value} onchange={handleShipmentConsentChange}
+              >
+          </lightning-checkbox-group> -->
+  
+          
+  
+          <div class="slds-grid slds-gutters">
+            <div class="slds-col slds-size_1-of-10 paddingL0 paddingR0 remove-label ">
+              <lightning-checkbox-group name="shippingconsent" class="consentrequired" 
+              options={options}
+                  value={value} onchange={handleShipmentConsentChange}>
+              </lightning-checkbox-group>
+            </div>
+            <div class="slds-col paddingL0">{Bean_text_23}</div>
+            <!-- <div class="slds-col paddingL0">
+                <p style="margin-top: 0; margin-bottom: 0;"><abbr class="slds-required" title={DBS_text_2}>*</abbr>{DBS_text_83} 
+                </p>
+                <span>
+                  <ul style="margin-left: 20px; list-style: disc;">
+                    <li>
+                      <div class="slds-col paddingL0">{Bean_text_23}</div>
+                    </li>
+                  </ul>
+                </span>
+              </div> -->
+          </div>
+          <div class="slds-grid slds-gutters">
+            <div class="slds-col slds-size_1-of-10 paddingL0 paddingR0 remove-label ">
+              <lightning-checkbox-group name="shippingconsent2" class="consentrequired1" 
+              options={options}
+                  value={value} onchange={handleShipmentConsentChange2}>
+              </lightning-checkbox-group>
+            </div>
+            <div class="slds-col paddingL0">{Bean_text_24}</div>
+          </div>
+        </fieldset>
+      </lightning-layout-item>
+  
+      <lightning-layout-item size="12" small-device-size="12" medium-device-size="12" large-device-size="12"
+        class="participation-form-item-row">
+        <fieldset class="slds-form--compound">
+          <!-- <legend class="slds-form-element__label">Address</legend> -->
+          <div class="form-element__group">
+            <div class="slds-col slds-size_12-of-12">
+              <lightning-input type="text" read-only="true" name="firstName" label={Bean_text_25} placeholder={Bean_text_firstNameValue} ></lightning-input>
+            </div>
+          
+            <div class="slds-col slds-size_12-of-12">
+              <lightning-input type="text" read-only="true" name="lastName" label={Bean_text_26} placeholder={Bean_text_lastNameValue}></lightning-input>
+            </div>
+  
+            <div class="slds-col slds-size_12-of-12">
+              <p>{APOE_text_2}</p>
+            </div>
+  
+  
+            <!-- <div class="slds-grid slds-gutters"> -->
+              <div class="slds-col slds-size_12-of-12">
+                <lightning-input type="hidden" id="sample1" class="slds-is-absolute" name="participant"
+                  onchange={handleParticipantChange} disabled value={participantcode} placeholder={Bean_text_2}>
+                </lightning-input>
+                
+                <lightning-input type="text" name="input1" data-id="inputTextAddress" label={DBS_text_90} class="consentrequired1 require"   placeholder={Bean_text_33}
+                  value={address2} onchange={handleAddress2Change} ></lightning-input>
+                  
+              </div>
+              <!-- <div class="slds-col slds-size_6-of-12">
+                <lightning-input type="text" name="input1" label={DBS_text_4} value={address1}
+                  onchange={handleAddress1Change} placeholder={DBS_text_4}></lightning-input>
+              </div> -->
+            <!-- </div> -->
+            <!-- <div class="slds-grid slds-gutters"> -->
+              <div class="slds-col slds-size_12-of-12">
+                <lightning-input type="text" name="input1" data-id="inputTextCity" label={DBS_text_5} class="consentrequired1 require" value={city} onchange={handleCityChange}
+                  placeholder={Bean_text_29}></lightning-input>
+              </div>
+              <div class="slds-col slds-size_12-of-12">
+                <lightning-input type="text" name="input1" data-id="inputTextZipcode" label={DBS_text_6} class="consentrequired1 require" value={zipcode}
+                  onchange={handleZipcodeChange} placeholder={Bean_text_31}></lightning-input>
+              </div>
+              
+              <!--
+              <div class="slds-col slds-size_12-of-12">-->
+                <!--<lightning-input type="tel" name="phoneNumber" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}$" label={DBS_text_91} placeholder={DBS_text_92}  value={phoneNumber} onchange={handlePhoneNumberChange} ></lightning-input>-->
+               <!-- <lightning-input type="text" class="phone" data-id="inputTextPhone" name="phone" label={DBS_text_91} placeholder={DBS_text_92} 
+                onchange={setPhoneType} >             
+                </lightning-input>           
+              </div>-->
+            <!-- </div> -->
+
+          </div>
+          <!-- <div class="slds-grid slds-gutters"> -->
+            <div class="slds-col slds-size_12-of-12">
+              <lightning-combobox label={DBS_text_7} class="require width-full" name="country" data-id="inputTextCountry" required onchange={handleCountryChange}
+                options={controllingValues} placeholder={DBS_text_8} value={selectedCountry} dropdown-alignment="auto"></lightning-combobox><br />
+  
+              <div if:true={selectedCountry}>
+                {Bean_text_3}: <b>{selectedCountry}</b>
+              </div>
+            </div>
+            <template if:true={isStateVisible}>
+              <div class="slds-col slds-size_12-of-12">
+                <lightning-combobox label={DBS_text_9} class="width-full" name="state" data-id="inputTextState"  onchange={handleStateChange} options={dependentValues}
+                  placeholder={Bean_text_30} value={selectedState} disabled={isEmpty} dropdown-alignment="auto">
+                </lightning-combobox><br />
+                <div if:true={selectedState}>
+                  {Bean_text_4}: <b>{selectedState}</b>
+                </div>
+              </div>
+            </template>
+          <!-- </div> -->
+        </fieldset>
+        <template if:true={isValidateAddressButtonVisible}>
+          <lightning-button variant="brand" label={DBS_text_10} title={Bean_text_5} onclick={validateAddress}
+            class="magenta-btn ">
+          </lightning-button>
+        </template>
+        <div if:true={error1}>
+          <div if:true={showText}>{textValue}</div>
+        <div if:false={showText}>{responseAddress}</div>
+        </div>
+      </lightning-layout-item>
+  
+      <!--for -->
+  
+      <lightning-layout-item if:true={error} size="12" small-device-size="12" medium-device-size="12"
+        large-device-size="12" class="participation-form-item-row">
+        <div>
+          <p>{error}</p>
+        </div>
+      </lightning-layout-item>
+  
+      
+      <lightning-layout-item size="12" small-device-size="12" medium-device-size="12" large-device-size="12">
+        <lightning-button variant="brand" label={DBS_text_85} title={DBS_text_87} onclick={updateContactFields}
+          class="magenta-btn slds-float_left">
+        </lightning-button>
+        <!-- <lightning-button variant="brand" label="I Decline" title="Submit" onclick={decline}
+          class="magenta-btn slds-float_right">
+        </lightning-button> -->
+        <lightning-button variant="brand" label={DBS_text_93} title={DBS_text_93} onclick={decline}
+          class="magenta-btn slds-float_left slds-m-left_small m-paddingLR20">
+        </lightning-button>
+      </lightning-layout-item>
+    </lightning-layout>
+  
+  
+    <template if:true={ErrorModalOpen}>
+      <section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-modal="true" aria-describedby="modal-content-id-1" class="slds-modal slds-modal_small ssm slds-fade-in-open">
+          <div class="slds-modal__container">
+              <!-- Modal/Popup Box LWC header here -->
+               <!-- Modal/Popup Box LWC body starts here -->
+               <header class="slds-modal__header slds-modal__header_empty">
+                  <lightning-button-icon icon-name="utility:close" alternative-text={label.close_btn}   variant="bare-inverse" onclick={closeModal} class="slds-modal__close ">  
+                  </lightning-button-icon> 
+                </header>
+              <div class="slds-modal__content slds-p-around_medium" id="modal-content-id-2">
+                  <!--<P  class="text-center">Please Complete the Required Fields.</P>-->
+                  <P  class="text-center">{DBS_text_88}</P>
+               </div>
+          </div>
+      </section>
+      <div class="slds-backdrop slds-backdrop_open"></div>
+  </template>
+  
+  </template>

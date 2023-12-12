@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value><!-- Bean Game --></value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value><!-- Bean Game --></value>
+    </caseValues>
+    <fields>
+        <label><!-- Bean Game Created Date --></label>
+        <name>Bean_Game_Created_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Contact --></label>
+        <name>Contact__c</name>
+        <relationshipLabel><!-- Bean Games --></relationshipLabel>
+    </fields>
+    <fields>
+        <help><!-- Be sure to record as minutes:seconds up to two decimal places. For example, 1 minute and 45.03 seconds would be entered as 1:45.03. If your score was less than a minute, please enter your score starting with 0: (e.g., 0:52.31) --></help>
+        <label><!-- DryRunTime --></label>
+        <name>DryRunTime__c</name>
+    </fields>
+    <fields>
+        <label><!-- LeftHand_1_ExerciseDrops --></label>
+        <name>LeftHand_1_ExerciseDrops__c</name>
+    </fields>
+    <fields>
+        <label><!-- LeftHand_1_ExerciseGoing --></label>
+        <name>LeftHand_1_ExerciseGoing__c</name>
+        <picklistValues>
+            <masterLabel>No, I remembered the whole sequence</masterLabel>
+            <translation>No, si recordé la secuencia completa</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes, I forgot</masterLabel>
+            <translation>Sí, lo olvidé</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- LeftHand_1_ExerciseTime --></label>
+        <name>LeftHand_1_ExerciseTime__c</name>
+    </fields>
+    <fields>
+        <label><!-- LeftHand_2_ExerciseDrops --></label>
+        <name>LeftHand_2_ExerciseDrops__c</name>
+    </fields>
+    <fields>
+        <label><!-- LeftHand_2_ExerciseGoing --></label>
+        <name>LeftHand_2_ExerciseGoing__c</name>
+        <picklistValues>
+            <masterLabel>No, I remembered the whole sequence</masterLabel>
+            <translation>No, si recordé la secuencia completa</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes, I forgot</masterLabel>
+            <translation>Sí, lo olvidé</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- LeftHand_2_ExerciseTime --></label>
+        <name>LeftHand_2_ExerciseTime__c</name>
+    </fields>
+    <fields>
+        <label><!-- LeftHand_3_ExerciseDrops --></label>
+        <name>LeftHand_3_ExerciseDrops__c</name>
+    </fields>
+    <fields>
+        <label><!-- LeftHand_3_ExerciseGoing --></label>
+        <name>LeftHand_3_ExerciseGoing__c</name>
+        <picklistValues>
+            <masterLabel>No, I remembered the whole sequence</masterLabel>
+            <translation>No, si recordé la secuencia completa</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes, I forgot</masterLabel>
+            <translation>Sí, lo olvidé</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- LeftHand_3_ExerciseTime --></label>
+        <name>LeftHand_3_ExerciseTime__c</name>
+    </fields>
+    <fields>
+        <label><!-- LeftHand_4_ExerciseDrops --></label>
+        <name>LeftHand_4_ExerciseDrops__c</name>
+    </fields>
+    <fields>
+        <label><!-- LeftHand_4_ExerciseGoing --></label>
+        <name>LeftHand_4_ExerciseGoing__c</name>
+        <picklistValues>
+            <masterLabel>No, I remembered the whole sequence</masterLabel>
+            <translation>No, si recordé la secuencia completa</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes, I forgot</masterLabel>
+            <translation>Sí, lo olvidé</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- LeftHand_4_ExerciseTime --></label>
+        <name>LeftHand_4_ExerciseTime__c</name>
+    </fields>
+    <fields>
+        <label><!-- OneLastThing --></label>
+        <name>OneLastThing__c</name>
+        <picklistValues>
+            <masterLabel>I timed myself</masterLabel>
+            <translation>Yo tomé mi propiol tiempo</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Someone else timed me</masterLabel>
+            <translation>Otra persona me tomó el tiempo</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Participant Id --></label>
+        <name>Participant_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- RightHand_1_ExerciseDrops --></label>
+        <name>RightHand_1_ExerciseDrops__c</name>
+    </fields>
+    <fields>
+        <label><!-- RightHand_1_ExerciseGoing --></label>
+        <name>RightHand_1_ExerciseGoing__c</name>
+        <picklistValues>
+            <masterLabel>No, I remembered the whole sequence</masterLabel>
+            <translation>No, si recordé la secuencia completa</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes, I forgot</masterLabel>
+            <translation>Sí, lo olvidé</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- RightHand_1_ExerciseTime --></label>
+        <name>RightHand_1_ExerciseTime__c</name>
+    </fields>
+    <fields>
+        <label><!-- RightHand_2_ExerciseDrops --></label>
+        <name>RightHand_2_ExerciseDrops__c</name>
+    </fields>
+    <fields>
+        <label><!-- RightHand_2_ExerciseGoing --></label>
+        <name>RightHand_2_ExerciseGoing__c</name>
+        <picklistValues>
+            <masterLabel>No, I remembered the whole sequence</masterLabel>
+            <translation>No, si recordé la secuencia completa</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes, I forgot</masterLabel>
+            <translation>Sí, lo olvidé</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- RightHand_2_ExerciseTime --></label>
+        <name>RightHand_2_ExerciseTime__c</name>
+    </fields>
+    <fields>
+        <label><!-- RightHand_3_ExerciseDrops --></label>
+        <name>RightHand_3_ExerciseDrops__c</name>
+    </fields>
+    <fields>
+        <label><!-- RightHand_3_ExerciseGoing --></label>
+        <name>RightHand_3_ExerciseGoing__c</name>
+        <picklistValues>
+            <masterLabel>No, I remembered the whole sequence</masterLabel>
+            <translation>No, si recordé la secuencia completa</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes, I forgot</masterLabel>
+            <translation>Sí, lo olvidé</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- RightHand_3_ExerciseTime --></label>
+        <name>RightHand_3_ExerciseTime__c</name>
+    </fields>
+    <fields>
+        <label><!-- RightHand_4_ExerciseDrops --></label>
+        <name>RightHand_4_ExerciseDrops__c</name>
+    </fields>
+    <fields>
+        <label><!-- RightHand_4_ExerciseGoing --></label>
+        <name>RightHand_4_ExerciseGoing__c</name>
+        <picklistValues>
+            <masterLabel>No, I remembered the whole sequence</masterLabel>
+            <translation>No, si recordé la secuencia completa</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes, I forgot</masterLabel>
+            <translation>Sí, lo olvidé</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- RightHand_4_ExerciseTime --></label>
+        <name>RightHand_4_ExerciseTime__c</name>
+    </fields>
+    <gender><!-- Feminine --></gender>
+    <layouts>
+        <layout>Bean Game Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <nameFieldLabel><!-- Bean Game Number --></nameFieldLabel>
+</CustomObjectTranslation>

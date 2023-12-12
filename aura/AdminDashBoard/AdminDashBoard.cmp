@@ -1,0 +1,95 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes" access="global" controller="AdminDashBoardcontroller" >
+    
+    <aura:attribute name="startDate" type="Date" />
+    <aura:attribute name="endDate" type="Date" />
+    <aura:attribute name="options" type="List" default="[]"/>
+    <aura:attribute name="value" type="String" default=""/>
+    <aura:attribute name="chartData" type="Map"  access="global"/>
+    <aura:attribute name="otherChartData" type="Map"  access="global"/>
+    <aura:attribute name="otherColors" type="List"  access="global"/>
+    <aura:attribute name="showCharts" type="Boolean"  access="global" default="true"/>
+    <aura:attribute name="showSpinner" type="Boolean"  access="global" default="false"/>
+    <aura:attribute name="maxDate" type="Date" access="global"/>
+    <aura:attribute name="displayTabs" type="Boolean"  access="global" default="true"/>
+    
+    <aura:attribute name="maxScale" type="Integer" default="10" access="global"/>
+    <aura:attribute name="maxScaleOther" type="Integer" default="10" access="global"/>
+    <!-- Handlers Declaration -->
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    <lightning:card>
+        <div class="slds-m-horizontal_xx-large">
+            <span style="font-size:20px; font-weight:700; text-align:center" class="slds-align_absolute-center"> Admin DashBoard</span>
+            <div class="c-container">
+                <lightning:layout multipleRows="true">
+                    <lightning:layoutItem  size="5" padding="around-small" >
+                        <div class="header-column">
+                            <lightning:input type="date" aura:id="startDate" name="startDate" label="From Date" value="{!v.startDate}" max="{!v.maxDate}" messageWhenRangeOverflow ="From Date should not be greater than today"/>
+                        </div>
+                    </lightning:layoutItem>
+                    
+                    
+                    <lightning:layoutItem size="5" padding="around-small">
+                        <div class="header-column">
+                            <lightning:input type="date" aura:id="endDate" name="endDate" label="To Date" value="{!v.endDate}" max="{!v.maxDate}" messageWhenRangeOverflow ="To Date should not be greater than today"/>
+                        </div>
+                    </lightning:layoutItem>
+                    
+                    
+                    <lightning:layoutItem size="2"  padding="around-small">
+                        <div class="header-column slds-p-top_large">
+                            <lightning:button variant="brand" label="Show Chart" title="Show action" onclick="{! c.ShowCharts}"/>
+                        </div>
+                    </lightning:layoutItem>
+                </lightning:layout>
+                <br/>
+                <!--
+     <div class="slds-box slds-theme_default"> 
+      </div>   
+    -->
+                <div class="slds-m-horizontal_small">
+                    <aura:if isTrue ="{!v.displayTabs}">
+                        <lightning:tabset variant="scoped" selectedTabId="Shipment">
+                            <lightning:tab label="Shipment" id="Shipment">   
+                                <!--
+                                <lightning:radioGroup label="Choose Shipment Type"  
+                                                      options="{! v.options }"  
+                                                      value="{! v.value }"  
+                                                      type="radio"  
+                                                      variant="label-inline"  
+                                                      onchange ="{!c.shipmentChange}"
+                                                      style="display:inline-block !important"/> 
+        -->
+                                <lightning:layout>
+                                    <lightning:layoutItem size="8" padding="around-medium">
+                                        <lightning:combobox
+                                                            name="campaign"
+                                                            label="Choose Shipment Type"
+                                                            placeholder="Choose Shipment Type"
+                                                            value='{!v.value}'
+                                                            variant="label-inline"
+                                                            onchange='{!c.shipmentChange}'
+                                                            options='{!v.options}'>
+                                        </lightning:combobox>
+                                    </lightning:layoutItem>
+                                </lightning:layout>
+                                
+                                <aura:if isTrue ="{!v.showCharts}">
+                                    <c:BaseBarChart chartData ="{!v.chartData}" chartLabel ="Result" bgColors ="{!v.otherColors}" minScale ="0" maxScale ="{!v.maxScale}"></c:BaseBarChart>
+                                </aura:if>
+                            </lightning:tab>
+                            <lightning:tab label="Other" id="Other">   
+                                <aura:if isTrue ="{!v.showCharts}">
+                                    <c:BaseBarChart chartData ="{!v.otherChartData}" chartLabel ="Result" bgColors ="{!v.otherColors}" minScale ="0" maxScale ="{!v.maxScaleOther}"></c:BaseBarChart>
+                                </aura:if>
+                            </lightning:tab>
+                        </lightning:tabset>
+                    </aura:if>
+                    
+                    <aura:if isTrue ="{!v.showSpinner}">
+                        <lightning:spinner alternativeText="Loading" size="medium" />
+                    </aura:if>
+                </div>
+            </div>
+        </div>
+    </lightning:card>
+</aura:component>

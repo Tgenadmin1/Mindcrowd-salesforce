@@ -1,0 +1,100 @@
+<!--
+  @description       : 
+  @author            : Raj Kumar
+  @UI author         : Raj
+  @last modified on  : 02-06-2021
+  @last modified by  : ChangeMeIn@UserSettingsUnder.SFDoc
+  Modifications Log 
+  Ver   Date         Author         Modification
+  1.0   02-06-2021   Raj Kumar      Initial Version
+-->
+<template>
+    <lightning-layout class="home_promo">
+      <lightning-layout-item size="12" small-device-size="12" medium-device-size="12" large-device-size="12">
+        <div class="slds-grid slds-gutters">
+          <div class="slds-col slds-size_2-of-3 padding0">
+            <div class="home_promo_sponsors">
+              <ul>
+                <li> <a href="http://tgen.org"> <img alt="Sponsor tgen" src={image4}> </a>
+                </li>
+                <li> <a href="http://www.arizona.edu/"> <img alt="Sponsor uofa" src={image5}> </a>
+                </li>
+                 <!-- <li> <a
+                  href="https://www.endalznow.org/?utm_campaign=mindcrowd&amp;utm_medium=referral&amp;utm_source=mindcrowd.org"
+                  target="_blank"><img alt="Sponsor api" src={image3}> </a>
+              </li> -->
+              <li> <a
+                href="https://www.cityofhope.org/"
+                target="_blank"><img alt="Sponsor api" src={image3a}> </a>
+            </li>
+                <li> <a href="http://www.alz.org/trialmatch" target="_blank"> <img alt="Tmlogo small" src={image6}> </a>
+                </li>
+              </ul>
+            </div>
+            <h1 class="faq_asked_text">{label.faq_text_1}</h1>
+            <h1 class="faq_que_text">{label.faq_text_2}   </h1>
+            
+            <!-- this button for the take the test.  -->
+            <div id="faq_sec" class="faq_sec">
+                <h2 class="que">{label.faq_text_3}</h2>
+                <h2 class="ans">{label.faq_text_4}</h2>
+                <h2 class="que">{label.faq_text_5}</h2>
+                <h2 class="ans"><lightning-formatted-rich-text value={label.faq_text_6}></lightning-formatted-rich-text></h2>
+                <h2 class="que">{label.faq_text_7}</h2>
+                <h2 class="ans">{label.faq_text_8}</h2>
+                <h2 class="que">{label.faq_text_9}</h2>
+                <h2 class="ans">{label.faq_text_10}</h2>
+                <h2 class="que">{label.faq_text_11}</h2>
+                <h2 class="ans"><lightning-formatted-rich-text value={label.faq_text_12}></lightning-formatted-rich-text></h2></h2>
+                <h2 class="que">{label.faq_text_13}</h2>
+                <h2 class="ans">{label.faq_text_14}</h2>
+                <h2 class="que">{label.faq_text_15}</h2>
+                <h2 class="ans">{label.faq_text_16}</h2>
+                <h2 class="que">{label.faq_text_16a}</h2>
+                <h2 class="ans">{label.faq_text_17}</h2>
+                <h2 class="que">{label.faq_text_18}</h2>
+                <h2 class="ans">{label.faq_text_10}
+                  <br><br> 
+                  {label.faq_text_20}
+                </h2>
+                <h2 class="que">{label.faq_text_21}</h2>
+                <h2 class="ans">{label.faq_text_22}</h2>
+                <h2 class="que">{label.faq_text_23}</h2>
+                <h2 class="ans">{label.faq_text_24}</h2>
+                <h2 class="que">{label.faq_text_25}</h2>
+                <h2 class="ans">{label.faq_text_26}</h2>
+                
+            </div>
+           
+          </div>
+          <div class="slds-col slds-size_1-of-3 homepage-right-col">
+            <div class="position-fixed">
+              <p><a href="#" onclick={handleClick2}><img alt="Home compare graphic" src={image1}></a>  </p>
+              <!-- <div class="button">
+                                           <lightning-button variant="success" label="Take The Test" title="Looks like a link" onclick={handleClick2} class="slds-m-left_x-small"> </lightning-button>
+                                     </div> -->
+              <!-- <div class="button">
+                <a href="#" class="btn btn__test-time  btn--tertiary " onclick={handleClick2}>
+                  <div class="btn__test-time-left">{label.banner_Text_6}
+                    <span class="btn__fine-print">{label.banner_Text_7}</span>
+                  </div>
+                  <div class="btn__test-time-right">
+                        <span class="time__number">10</span>
+                    <span class="time__units">min </span>
+                  </div>
+                </a>
+              </div> -->
+  
+            </div>
+          </div>
+
+        </div>
+        
+      </lightning-layout-item>
+  
+      
+
+  
+    </lightning-layout>
+
+  </template>

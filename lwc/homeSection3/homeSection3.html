@@ -1,0 +1,86 @@
+<!--
+  @description       : 
+  @author            : Raj Kumar
+  @UI author         : Raj
+  @last modified on  : 08-05-2021
+  @last modified by  : ChangeMeIn@UserSettingsUnder.SFDoc
+  Modifications Log 
+  Ver   Date         Author         Modification
+  1.0   01-05-2021   Raj Kumar      Initial Version
+-->
+<template> 
+    <lightning-layout class="home_promo1 home_section3">
+
+  
+      <lightning-layout-item size="12" small-device-size="12" medium-device-size="12" large-device-size="12"
+        class="padding0">
+        <div class="home_progress">
+         
+          <div class="progress_wrapper ">
+            <div class="progress_bar" style="width: 2%;">
+              <span>
+              </span>
+            </div>
+            <div class="progress_goal">
+            </div>
+            <div class="progress_count">{count}<br />
+            </div>
+            <div class="progress_count right">
+            </div>
+            <div class="total-progress">1 {label.banner_Text_10}</div>
+          </div>
+
+          <p class="homepage-text" > {label.homesection3002}</p>
+          <p class="marginB30 homepage-text"  style="font-size: 22px;">
+            <!-- {label.homesection3003} -->
+            {homepageText}
+          </p>
+            <!-- <p class="resultpage-text " > Please, share to help us reach one million participants. Thank you.</p> -->
+            <!-- <p class="resultpage-text " >Please ask your friends and family to join the MindCrowd study by taking our memory and attention tests.</p> -->
+          <div class="social_icons footer-s-icon  slider">
+           
+            <ul class="text-center">
+             
+              <li class="social_bookmarks_facebook "> 
+              
+                  <a class="facebook-btn" href={facebookshare_Url}    target="_blank" aria-label="Link to Facebook" aria-hidden="false" data-av_icon="" data-av_iconfont="entypo-fontello" title="Facebook" rel="noopener"><span class="avia_hidden_link_text">Facebook</span></a>
+                <!-- <a data-href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdev-mindcrowd-game.cs194.force.com%2FMindCrowd%2Fresource%2F1639652898000%2Fmindcrowd_style%2Fimages%2Fdina-parise.jpg" onclick={facebookShare}  target="_blank" aria-label="Link to Facebook" aria-hidden="false" data-av_icon="" data-av_iconfont="entypo-fontello" title="Facebook" rel="noopener"><span class="avia_hidden_link_text">Facebook</span></a> -->
+              </li>
+              <li class="social_bookmarks_twitter"><a  class="twitter-btn" href={twitterShare_Url}  target="_blank" title="Twitter"><i class="fab fa-twitter"></i></a></li>
+            
+            <li class="social_bookmarks_pinterest">
+            
+              <a target="_blank" class="pinterest-btn" aria-label="Link to Pinterest"  aria-hidden="false" data-av_icon="" data-av_iconfont="entypo-fontello" title="Pinterest" rel="noopener"><span class="avia_hidden_link_text">Pinterest</span></a>
+            
+            </li>
+            <!-- <li class="social_bookmarks_instagram">
+            
+              <a href="https://www.linkedin.com/shareArticle?mini=true&amp;ro=true&amp;trk=EasySocialShareButtons&amp;title=Cardiovascular+Disease+%26+Smoking+Affect+Memory+Performance&amp;url=https%3A%2F%2Fstaging-mindcrowd.kinsta.cloud%2Fcardiovascular-disease-and-smoking-affect-memory-performance%2F" title="Share on LinkedIn"  target="_blank" rel="noreferrer noopener nofollow" class="nolightbox"><span class="essb_icon essb_icon_linkedin"></span><span class="essb_network_name essb_noname"><span class="essb_counter_inside" data-cnt="0" data-cnt-short="0">0</span></span></a>
+            
+            </li> -->
+              <li class="social_bookmarks_linkedin"> <a class="linkedin-btn" href={linkedinshare_Url} target="_blank" title="Linkedin"><i class="fab fa-linkedin-in" ></i></a></li>
+              <li  class="social_bookmarks_mail">
+                <!-- <a class="twitter" href="mailto:?bcc=theteam@mindcrowd.org&subject=Please, visit this page https://mindcrowd.org&body=I thought this would interest you. You can take the MindCrowd memory test to discover how your brain compares with others like you and help scientists find ways to delay memory loss as we age. Check it out! Here is the link: https://mindcrowd.org. &nbsp;" target="_blank" title="Mail"> -->
+                  <!-- <a class="twitter" href="mailto:?subject=Check out the MindCrowd Memory Game! 🧠&body=I thought you would find this interesting. You can play the memory game online and find out how your brain compares others like you. %0D%0A %0D%0ACheck it out! Here is the link: https://mindcrowd.org %0D%0A %0D%0A"  target="_blank" title="Mail"> -->
+                    <a class="twitter" href="mailto:?subject=Check out the MindCrowd Memory Game! 🧠&body=I thought this would interest you. You can take the MindCrowd memory test to discover how your brain compares with others like you and help scientists find ways to delay memory loss as we age. Check it out! Here is the link: https://mindcrowd.org  %0D%0A %0D%0A"  target="_blank" title="Mail">
+
+                  <i class="fa fa-envelope"></i>
+                </a>
+
+              </li>
+
+              
+              
+            </ul>
+           
+
+
+
+
+          </div>
+        </div>
+      </lightning-layout-item>
+
+  
+    </lightning-layout>
+  </template>

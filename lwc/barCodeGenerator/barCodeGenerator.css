@@ -1,0 +1,53 @@
+@media print {
+    .slds-context-bar {
+        display :none;
+    }
+    .print {
+        display:none;
+    }
+    .slds-global-header {
+        display:none;
+    }
+    .slds-color__background_gray-1 {
+        display:none;
+    }
+    .slds-global-header_container {
+        display:none;
+        margin-top: 40px;
+    }
+    .slds-no-print {
+        display:none;
+    }
+    .barcode-box{
+        
+        display: table;
+        /* margin-top: 40px; */
+     }
+    /* .barcode{
+        float: left;
+        display: table-cell;
+         width:230px; 
+        width: 252px;
+        height: 96px;
+        margin: 0px 13.44px 0px 0px ;
+        margin: 0px 16px .7px 16px ;
+ 
+    } */
+    .barcode{
+        float: left;
+        display: table-cell;
+         width:240px; 
+        /* width: 252px; */
+        height: 101px;
+        /* margin: 0px 13.44px 0px 0px ; */
+       /* margin: 0px 16px .7px 16px ; */
+				 margin: 0px 24px .7px 8px ;
+
+    }
+		.barcode:nth-child(3n){
+			 margin-right:0 !important;	
+		}
+    .barcode canvas{
+        width:100% !important;
+    }
+}

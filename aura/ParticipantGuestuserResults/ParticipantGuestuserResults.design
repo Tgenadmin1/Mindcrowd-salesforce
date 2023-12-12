@@ -1,0 +1,13 @@
+<design:component>
+	<design:attribute name="Results_ThankYou" label="Results_ThankYou" description="Thank you for helping advance MindCrowd’s scientific research."/>
+    <design:attribute name="results_text_1" label="results_text_1" description="Your Results"/>
+    <design:attribute name="Paired_catcme_game_text3" label="Paired_catcme_game_text3" description="Memory Test"/>
+    <design:attribute name="Paired_catcme_game_text1" label="Paired_catcme_game_text1" description="The first gauge shows the number of word pairs you answered correctly. A perfect score is 36 word pairs.The second gauge shows how people like you scored. These are previous MindCrowd participants who are similar to you in age, biological sex, and education.The third gauge shows the overall average for all previous MindCrowd participants.The second gauge shows how people like you scored. These are previous MindCrowd participants who are similar to you in age, biological sex, and educationThe third gauge shows the overall average for all previous MindCrowd participants."/>
+    <design:attribute name="Paired_catcme_game_text1a" label="Paired_catcme_game_text1a" description="The second gauge shows how people like you scored. These are previous MindCrowd participants who are similar to you in age, biological sex, and education."/>
+    <design:attribute name="Paired_catcme_game_text1b" label="Paired_catcme_game_text1b" description="The third gauge shows the overall average for all previous MindCrowd participants."/>
+    <design:attribute name="Dltrs_catcme_game_text3" label="Dltrs_catcme_game_text3" description="Attention Test"/>
+    <design:attribute name="Dltrs_catcme_game_text1" label="Dltrs_catcme_game_text1" description="The first gauge shows your speed on the attention test in milliseconds. Small numbers indicate a faster speed and a better score.The second gauge shows how people like you scored. These are previous MindCrowd participants who are similar to you in age, biological sex, and educationThe third gauge shows the overall average for all previous MindCrowd."/>
+    <design:attribute name="Dltrs_catcme_game_text1a" label="Dltrs_catcme_game_text1a" description="The second gauge shows how people like you scored. These are previous MindCrowd participants who are similar to you in age, biological sex, and education."/>
+    <design:attribute name="Dltrs_catcme_game_text1b" label="Dltrs_catcme_game_text1b" description="The third gauge shows the overall average for all previous MindCrowd"/>
+    
+</design:component>

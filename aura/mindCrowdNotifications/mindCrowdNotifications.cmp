@@ -1,0 +1,69 @@
+<!-- <aura:component implements="forceCommunity:themeLayout"> -->
+  <aura:component  implements="forceCommunity:themeLayout" access="global" description="mindCrowd Custom Theme Layout"> 
+    <aura:attribute name="search" type="Aura.Component[]"/>
+    <aura:attribute name="footer" type="Aura.Component[]"/>
+    <aura:attribute name="profileMenu" type="Aura.Component[]" />
+    <aura:attribute name="navMindcrowd" type="Aura.Component[]" required="false"/>
+    <aura:handler event="forceCommunity:routeChange" action="{!c.handleRouteChange}"/>
+    <aura:attribute name="isLoginTrue" type="Boolean" default="false"/>
+
+    <lightning:navigation aura:id="navService"/>
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    <aura:if isTrue="{!v.isLoginTrue}">
+    <div class="main-container-box" >
+    	<div class="slds-builder-header_container">
+      <div class="mc-header">
+        <div class="mc-header-container">
+          <a href="{!$Label.c.Community_Url+'/s/'+$Label.c.url_dashboard}">
+            <div class="logo-container">
+              <img src="{!$Resource.mindcrowd_style + '/images/mindcrowd.png'}" sizes="(max-width: 328px) 100vw, 328px" height="100" width="300" alt="MindCrowd" title="MindCrowd"/>
+            </div>
+          </a>
+			<div class="slds-global-header__item top-banner-button slds-grid marginT19 d-button ">
+            <div class="slds-col notifications" title="{!$Label.c.community_nav_text_3}">
+                <div onclick="{!c.macTouch}" >
+                    <forceCommunity:notifications/>
+                </div>
+            </div>
+                <div class="slds-col profileMenuRegion"  data-toggle="tooltip"  title="">
+                    {!v.profileMenu}
+                </div>
+            
+           </div>
+
+           <!-- <lightning:button aura:id="changeIt" class="m-menu-btn"  label="" iconName="utility:rows" onclick="{! c.mBtnhandleClick }" />
+
+
+           <lightning:buttonIconStateful iconName="utility:wifi" 
+              selected="{!v.enableWifi}" 
+              alternativeText="Wifi Enabled" 
+              onclick="{! c.handleToggle }"
+              class="stateIconClass"/> -->
+
+              <lightning:icon aura:id="navicon" onclick="{!c.openMobileNav}" class="apply-cursor m-menu-btn" iconName="utility:rows" size="medium" alternativeText="Menu"/>
+        </div>
+      </div>
+      <!-- <button class={cssClass}>
+        <lightning-icon icon-name={iconName} onclick={mBtnhandleClick}>Non Profit</lightning-icon>
+    </button> -->
+    
+
+      <div class="slds-builder-header m-hide">
+          <nav class="slds-builder-header__item slds-builder-header__nav top-nav-strip">
+            <div class="slds-builder-header__item slds-builder-header__utilities">
+                 {!v.navMindcrowd}
+              </div>
+          </nav>
+        </div>
+             
+        </div>
+       	<div class="mainContentArea">
+            {!v.body}
+        </div>
+        <div class="footerArea">
+            {!v.footer}
+        </div>
+    </div>
+    </aura:if>
+    
+</aura:component>

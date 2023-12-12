@@ -1,0 +1,175 @@
+<!--
+  @description       : This 
+  @author            : Manikumar Meruva(Girikon Solutions Pvt Ltd)
+  @UI author         : Mani
+  @last modified on  : 09-09-2021
+  @last modified by  : ManiKumar
+  Modifications Log 
+  Ver   Date         Author         Modification
+  1.0   18-08-2021   Manikumar      Initial Version
+-->
+
+
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" controller="ParticipantResultsController" >
+    
+    <aura:attribute name="otherMap" type="Map"  access="global" /> 
+    <aura:attribute name="contactId" type="String"  access="global" />
+    <aura:attribute name="gameName" type="String"  access="global" />
+    <aura:attribute name="gameTitle" type="String"  access="global" />
+    <!-- <aura:attribute name="bubbleScore" type="Integer" access="global" /> -->
+    <aura:attribute name="age" type="Integer" access="global" />
+    <aura:attribute name="showCharts" type="Boolean" default="false" access="global" />
+    <aura:attribute name="lValue" type="Integer" access="global" />
+    <aura:attribute name="hValue" type="Integer" access="global" />
+    <aura:attribute name="mValue" type="Integer" access="global" />
+    <aura:attribute name="gameDesc1" type="String"  access="global" />
+    <aura:attribute name="gameDesc2" type="String"  access="global" />
+    <aura:attribute name="yourScore" type="Integer" access="global" default="0" />
+    <aura:attribute name="peopleLikeYou" type="Integer" access="global" />
+    <aura:attribute name="overallAverage" type="Integer" access="global" />
+    <aura:attribute name="correctAnswers" type="Integer" access="global" />
+    <aura:attribute name="reactionTime" type="Integer" access="global" />
+    <aura:attribute name="userDevice" type="Integer" access="global" />
+    <aura:attribute name="gameColor" type="List"  access="global" />
+    <aura:attribute name="isScoreReactionTime" type="Boolean"  access="global" />
+    <aura:attribute name="scoreBasedCaption" type="String"  access="global" />
+    <aura:attribute name="measurement" type="id"  access="global" />
+    <aura:attribute name="Facebook_text" type="Boolean" default="false" access="global" />
+    <aura:attribute name="Twitter_text" type="Boolean" default="false" access="global" />
+    <aura:attribute name="shareButtons" type="Boolean" default="false" access="global" />
+    <aura:attribute name="Catcme_text_1b" type="Boolean" default="false" access="global" />
+    <aura:attribute name="Catcme_text_16" type="Boolean" default="false" access="global" />
+    <aura:attribute name="Catcme_text_1" type="Boolean" default="false" access="global" />
+    <aura:attribute name="Catcme_text_14" type="Boolean" default="false" access="global" />
+    <aura:attribute name="Catcme_text_2" type="Boolean" default="false" access="global" />
+    <aura:attribute name="Catcme_text_3" type="Boolean" default="false" access="global" />
+    <aura:attribute name="Catcme_text_15" type="Boolean" default="false" access="global" />
+	<aura:attribute name="Catcme_text_17" type="Boolean" default="false" access="global" />
+    
+    
+    <aura:attribute name="lstimg" type="Object[]"/>
+    
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    <!-- <ltng:require scripts="{!$Resource.jQuery + '/jquery.min.js'}" afterScriptsLoaded="{!c.handleAfterScriptsLoaded}" /> -->
+    
+    <lightning:layout multipleRows="true">
+        <aura:if isTrue ="{!v.showCharts}">
+            <div class="mainCrowd-inner-box1">    
+                <p class="game-dash-title" >{!v.gameTitle}</p>   
+                <div class="slds-m-top_medium1">
+                  <!--  <lightning:tabset variant="scoped"  selectedTabId="Overall">
+                        <lightning:tab label="{!v.results_text_7}" id="Overall"> -->
+                            
+                            <lightning:layout multipleRows ="true">
+                                <lightning:layoutItem padding="" size ="12" >
+                                    <div class="marginB20">
+                                        <p>
+                                        <lightning:formattedRichText value="{!v.gameDesc1}"></lightning:formattedRichText>
+                                        <lightning:formattedRichText value="{!v.gameDesc2}"></lightning:formattedRichText>
+                                        
+                                            <!-- {!v.gameDesc1}
+
+                                            {!v.gameDesc2} -->
+                                        </p>
+                                        <!-- <p>
+                                            {!v.gameDesc2}
+                                        </p> -->
+                                    </div> 
+                                    <div class="mainCrowd-inner-box speed-m-chart-box" id="speedChart"> 
+                                        <lightning:layout multipleRows="true">
+
+                                            <aura:if isTrue ="{!v.isScoreReactionTime}"> 
+                                            <lightning:layoutItem size="0" aura:id="measurement" class="graph-singel">
+                                                    <c:ParticipantGaugeChart breakPoint ="{!v.reactionTime}" minValue = "0"  maxValue="{!v.mValue}" lowAverage ="{!v.lValue}" highAverage ="{!v.hValue}"
+                                                                             chartLabel ="" gaugeColor="['#FF5833','#FFB833','#33FF38']" isPercentage="False" gaugeSize="40"></c:ParticipantGaugeChart> 
+                                                                             <!-- {!$Label.c.Catcme_text_1} -->
+                                                                            <!-- <div class="scoreBasedCaption title2b">My Speed in Milliseconds </div> -->
+                                                                              <div class="scoreBasedCaption title2b">{!$Label.c.Catcme_text_1b}</div>
+                                                                               <div class="scoreBasedCaption title2c">{!v.scoreBasedCaption}</div>
+                                                    </lightning:layoutItem>
+                                               <lightning:layoutItem size="0" class="graph-double">
+                                               <c:ParticipantGaugeChart breakPoint ="{!v.peopleLikeYou}" gaugeColor="['#FF5833','#FFB833','#33FF38']" lowAverage ="{!v.lValue}" highAverage ="{!v.hValue}"
+                                                                         minValue = "0"  maxValue="{!v.mValue}" chartLabel =""  isPercentage="False" gaugeSize="30"></c:ParticipantGaugeChart>
+                                                                         <!-- {!$Label.c.Catcme_text_2} -->
+                                                                         <div class="scoreBasedCaption title2b">{!$Label.c.Catcme_text_16} </div>
+                                            </lightning:layoutItem>
+                                                <aura:set attribute="else"> 
+                                                     <lightning:layoutItem size="0" class="graph-singel">
+                                                        <c:ParticipantGaugeChart breakPoint ="{!v.correctAnswers}" gaugeColor="['#33FF38','#FFB833','#FF5833']" lowAverage ="{!v.lValue}" highAverage ="{!v.hValue}"
+                                                                                 minValue = "0"  maxValue="{!v.mValue}" chartLabel =""  isPercentage="False" gaugeSize="40"></c:ParticipantGaugeChart>
+                                                                                 <div class="scoreBasedCaption title2b">{!$Label.c.Catcme_text_1}</div>
+                                                                                 <div class="scoreBasedCaption title2c">{!v.scoreBasedCaption}	</div>
+                                                        </lightning:layoutItem>
+                                                    <lightning:layoutItem size="0" class="graph-double">
+                                                         <c:ParticipantGaugeChart breakPoint ="{!v.peopleLikeYou}" gaugeColor="['#33FF38','#FFB833','#FF5833']" lowAverage ="{!v.lValue}" highAverage ="{!v.hValue}"
+                                                                         minValue = "0"  maxValue="{!v.mValue}" chartLabel =""  isPercentage="False" gaugeSize="30"></c:ParticipantGaugeChart>
+                                                                         <!-- {!$Label.c.Catcme_text_2} -->
+                                                                         <div class="scoreBasedCaption title2b">{!$Label.c.Catcme_text_14}</div>
+                                                
+                                            </lightning:layoutItem>
+                                                    </aura:set> 
+                                                </aura:if> 
+                                           
+                                           <!-- <lightning:layoutItem size="4">
+                                                <c:ParticipantGaugeChart breakPoint ="{!v.peopleLikeYou}" gaugeColor="['#FF5833','#FFB833','#33FF38']" lowAverage ="{!v.lValue}" highAverage ="{!v.hValue}"
+                                                                         minValue = "0"  maxValue="{!v.mValue}" chartLabel ="{!v.Catcme_text_2}"></c:ParticipantGaugeChart>
+                                                
+                                                
+                                            </lightning:layoutItem> -->
+                                            
+                                            <lightning:layoutItem size="0" class="graph-double">
+                                                
+                                                                         <aura:if isTrue ="{!v.isScoreReactionTime == false}">
+                                                                            <c:ParticipantGaugeChart breakPoint ="{!v.overallAverage}" gaugeColor="['#cac8f0']" lowAverage ="0" highAverage ="0"
+                                                                            minValue = "0"  maxValue="{!v.mValue}" chartLabel =""  isPercentage="False" gaugeSize="30"></c:ParticipantGaugeChart>  
+                                                                            <!-- {!v.Catcme_text_3} -->
+                                                                            <div class="scoreBasedCaption title2b ">{!$Label.c.Catcme_text_15}</div>
+                                                                         </aura:if> 
+                                                                         <aura:if isTrue ="{!v.isScoreReactionTime == true}">
+                                                                            <c:ParticipantGaugeChart breakPoint ="{!v.overallAverage}" gaugeColor="['#cac8f0']" lowAverage ="0" highAverage ="0"
+                                                                            minValue = "0"  maxValue="{!v.mValue}" chartLabel =""  isPercentage="False" gaugeSize="30"></c:ParticipantGaugeChart>  
+                                                                            <!-- {!v.Catcme_text_3} -->
+                                                                            <div class="scoreBasedCaption title2b">{!$Label.c.Catcme_text_17} </div>
+                                                                         </aura:if>                            
+                                                                         
+                                            </lightning:layoutItem>
+
+                                        </lightning:layout>
+                                        <aura:if isTrue ="{!v.shareButtons}">
+                                            <div class="text-right">
+                                                <aura:if isTrue ="{!v.Facebook_text == true}">
+                                                <a onclick="{!c.ShareonFacebook}"  href=""   title="Share on Facebook" class="Share-Facebook-btn slds-button slds-button_success text-center" >Share on Facebook  
+                                                </a>
+                                                <a onclick="{!c.ShareonTwiter}"  href="" title="Share on Twitter" class="Share-Twitter-btn slds-button slds-button_success text-center" >Share on Twitter
+                                                </a>
+                                               </aura:if>
+                                               <aura:if isTrue ="{!v.Facebook_text == false}">
+                                                <a onclick="{!c.ShareonFacebook}"  href=""   title="Share on Facebook" class="Share-Facebook-btn slds-button slds-button_success text-center" >
+                                                    <div class="facebook-btn"  target="_blank" aria-label="Link to Facebook" aria-hidden="false" data-av_icon="" data-av_iconfont="entypo-fontello" title="Facebook" rel="noopener"><span class="avia_hidden_link_text">Facebook</span></div>
+                                                </a>
+                                                <a onclick="{!c.ShareonTwiter}"  href="" title="Share on Twitter" class="Share-Twitter-btn slds-button slds-button_success text-center" >
+                                                    <div  class="twitter-btn color-w" target="_blank" title="Twitter"><i class="fab fa-twitter color-w"></i></div>
+                                                </a>
+                                               </aura:if>
+                                            </div>
+                                        </aura:if>
+                                        
+                                    </div>
+                                   
+                                </lightning:layoutItem>
+                            </lightning:layout>
+                       <!-- </lightning:tab>
+                         <lightning:tab label="salesforce" id="salesforce">
+                             <c:SalesforceIntigration></c:SalesforceIntigration>
+                        </lightning:tab> 
+                    </lightning:tabset> -->
+                     
+                </div>     
+            </div>  
+            
+            <aura:set attribute="else">
+                <lightning:spinner alternativeText="Loading" size="large" />
+            </aura:set>
+        </aura:if>
+    </lightning:layout>
+</aura:component>

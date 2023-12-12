@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Community Info</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Community Info</value>
+    </caseValues>
+    <fields>
+        <label><!-- Community Label --></label>
+        <name>Community_Label__c</name>
+    </fields>
+    <fields>
+        <label><!-- Games Reactivation Days --></label>
+        <name>Games_Reactivation_Days__c</name>
+    </fields>
+    <fields>
+        <help><!-- Check it if need to log exception in system. --></help>
+        <label><!-- Log Exception --></label>
+        <name>Log_Exception__c</name>
+    </fields>
+    <fields>
+        <label><!-- Org Wide Email Address --></label>
+        <name>OrgWideEmailAddress__c</name>
+    </fields>
+    <fields>
+        <label><!-- Profile Id --></label>
+        <name>Profile_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- Profile Name --></label>
+        <name>Profile_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- User Name Suffix --></label>
+        <name>User_Next_Suffix__c</name>
+    </fields>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

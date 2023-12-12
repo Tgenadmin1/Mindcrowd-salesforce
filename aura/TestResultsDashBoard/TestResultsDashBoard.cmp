@@ -1,0 +1,41 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes" access="global" controller="TestResultsController" >
+    <aura:attribute name="otherColors" type="List"  access="global" />
+    <aura:attribute name="otherMap" type="Map"  access="global" />
+    <aura:attribute name="subColors" type="List"  access="global" />
+    <aura:attribute name="subMap" type="Map"  access="global" />
+    <aura:attribute name="grpColors" type="Map"  access="global" />
+    <aura:attribute name="grpMap" type="Map"  access="global" />
+    <aura:attribute name="showCharts" type="Boolean" default="false" access="global" />
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    
+    <lightning:card>
+        <div class="slds-m-horizontal_xx-large">
+            <aura:if isTrue ="{!v.showCharts}">
+                <span style="font-size:20px; font-weight:700; text-align:center" class="slds-align_absolute-center"> Test Results View</span>
+                <lightning:tabset variant="scoped"   selectedTabId="KIT">
+                    <lightning:tab label="KIT" id="KIT">   
+                        <div class="slds-m-horizontal_xx-large">
+                            <c:GroupBarChart chartData ="{!v.grpMap}" chartLabel ="KIT" bg-colors ="{!v.grpColors}">
+                            </c:GroupBarChart>
+                        </div>
+                    </lightning:tab>
+                    
+                    <lightning:tab label="Subscription" id="Subscription">
+                        <div class="slds-m-horizontal_xx-large">
+                            <c:BaseBarChart chartData ="{!v.subMap}" chartLabel ="Subscription Result" bgColors ="{!v.subColors}"></c:BaseBarChart>
+                        </div>
+                    </lightning:tab>
+                    <lightning:tab label="Test Result" id="Test Result">
+                        <div class="slds-m-horizontal_xx-large">
+                            <c:BaseBarChart chartData ="{!v.otherMap}" chartLabel ="Test Result" bgColors ="{!v.otherColors}"></c:BaseBarChart>
+                        </div>
+                    </lightning:tab>
+                    
+                </lightning:tabset>
+                <aura:set attribute="else">
+                    <lightning:spinner alternativeText="Loading" size="large" />
+                </aura:set>
+            </aura:if>
+        </div>
+    </lightning:card>
+</aura:component>

@@ -1,0 +1,58 @@
+<!-- @description       : 
+  @author            : Raj  
+  @UI author         : Raj
+  @last modified on  : 17-08-2021
+  @last modified by  : ChangeMeIn@UserSettingsUnder.SFDoc
+  Modifications Log 
+  Ver   Date         Author         Modification
+  1.0   17-08-2021   Raj Kumar      Initial Version -->
+    <aura:component controller="CustomLoginController"  implements="forceCommunity:themeLayout" access="global" description="mindCrowd Custom Theme Layout"> 
+        <aura:attribute name="search" type="Aura.Component[]"/>
+        <aura:attribute name="footer" type="Aura.Component[]"/>
+        <aura:attribute name="profileMenu" type="Aura.Component[]" />
+        <aura:attribute name="navMindcrowd" type="Aura.Component[]" required="false"/>
+        <aura:handler event="forceCommunity:routeChange" action="{!c.handleRouteChange}"/>
+        <aura:attribute name="isLoginTrue" type="Boolean" default="false"/>
+    
+        <lightning:navigation aura:id="navService"/>
+        <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+        <aura:if isTrue="{!v.isLoginTrue}">
+        <div class="main-container-box" >
+            <!-- <div class="slds-builder-header_container">
+          <div class="mc-header">
+            <div class="mc-header-container">
+             
+                <div class="logo-container">
+                  <img src="{!$Resource.mindcrowd_style + '/images/MindCrowd-Logo-Color-White-Text.png'}"/>
+                </div>
+              
+                <div class="slds-global-header__item top-banner-button slds-grid ">
+               
+                    <div class="slds-col profileMenuRegion disabled"  data-toggle="tooltip"  title="">
+                        {!v.profileMenu}
+                    </div>
+                
+               </div>
+            </div>
+          </div>
+      
+    
+          <div class="slds-builder-header m-hide">
+              <nav class="slds-builder-header__item slds-builder-header__nav top-nav-strip">
+                <div class="slds-builder-header__item slds-builder-header__utilities">
+                     {!v.navMindcrowd}
+                  </div>
+              </nav>
+            </div>
+                 
+            </div> -->
+               <div class="mainContentArea">
+                {!v.body}
+            </div>
+            <!-- <div class="footerArea">
+                {!v.footer}
+            </div> -->
+        </div>
+        </aura:if>
+        
+    </aura:component>

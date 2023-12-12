@@ -1,0 +1,50 @@
+<apex:page sidebar="false" showHeader="false" applyHtmlTag="false">
+<html>
+    <head>
+        <!-- Google Tag Manager -->
+            <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+            })(window,document,'script','dataLayer','GTM-NVP4GM2');</script>
+        <!-- End Google Tag Manager -->
+
+        <title>MindCrowd Memory Test • Online Brain Scientific Research</title>
+        <meta name="description" content="Discover more about your brain - in 10 short minutes - by taking our free online MindCrowd memory test. Play and help us reach one million participants." />
+        <meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' />
+        <link rel="canonical" href="https://mindcrowd.org/" />
+
+        <meta property="og:locale" content="en_US" />
+        <meta property="og:type" content="website" />   
+        <meta property="og:title" content="MindCrowd Memory Test • Online Brain Scientific Research" />
+        <meta property="og:description" content="Discover more about your brain - in 10 short minutes - by taking our free online MindCrowd memory test. Play and help us reach one million participants." />
+        <meta property="og:url" content="https://mindcrowd.org"/>
+        <meta property="article:publisher" content="https://www.facebook.com/Mindcrowd/" />
+        <meta property="article:published_time" content="2022-06-04T08:30:36+00:00" />
+        <meta property="article:modified_time" content="2022-06-04T08:30:36+00:00" />
+        <meta property="og:image" content="https://mindcrowd.org/resource/FeaturedImages/mindcrowd-memory-game-online.jpg"/>
+        <meta property="og:site_name" content="MindCrowd" />
+        <meta property="og:image:width" content="810" />
+        <meta property="og:image:height" content="456" />
+        <meta property="og:image:type" content="image/jpeg" />
+        <meta property="twitter:card" content="summary_large_image"/> 
+        <meta property="twitter:url" content="https://mindcrowd.org/"/>
+        <meta property="twitter:title" content="Memory Test Online • MindCrowd • Brain & Cognition Study"/>
+        <meta property="twitter:description" content="Discover more about your brain - in 10 short minutes - by taking the free online memory and attention test by MindCrowd"/>
+        <meta property="twitter:image" content="https://mindcrowd.org/resource/FeaturedImages/mindcrowd-memory-game-online.jpg"/>
+        <meta name="twitter:creator" content="@tgenmindcrowd" />
+        <meta name="twitter:site" content="@tgenmindcrowd" />
+
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <link rel="shortcut icon" href="{!URLFOR($Resource.favicon)}" />
+    </head>
+    <body></body>
+    <script>
+        setTimeout(function() 
+        {
+          //500 = 0.5 seconds
+          window.location.href = "https://mindcrowd.org/s/"; 
+        }, 500);          
+    </script>
+</html>
+</apex:page>

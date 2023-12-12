@@ -1,0 +1,437 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>Created for Marketing Cloud Survey.</description>
+    <enableActivities>true</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableLicensing>false</enableLicensing>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <externalSharingModel>Private</externalSharingModel>
+    <fields>
+        <fullName>Cancer_considered_to_be_in_remission__c</fullName>
+        <description>Is your cancer considered to be in remission (no evidence of cancer)?</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Is your cancer considered to be in remission (no evidence of cancer)?</inlineHelpText>
+        <label>ONC_v1.0.3</label>
+        <length>20</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Chemotherapy_prescribed_by_doctor__c</fullName>
+        <description>What was the chemotherapy (“chemo”) that you were prescribed by your doctor? Please write the name of the drug(s) if you remember them.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>What was the chemotherapy (“chemo”) that you were prescribed by your doctor? Please write the name of the drug(s) if you remember them.</inlineHelpText>
+        <label>ONC_v1.0.13</label>
+        <length>10000</length>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>5</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Contact_Name__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Contact Name</label>
+        <referenceTo>Contact</referenceTo>
+        <relationshipLabel>ONCs</relationshipLabel>
+        <relationshipName>Cancers</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Contact__c</fullName>
+        <description>created for marketing cloud</description>
+        <externalId>false</externalId>
+        <label>Contact</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Did_your_cancer_come_back__c</fullName>
+        <description>Did your cancer come back (sometimes called &quot;relapse&quot;)?</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Did your cancer come back (sometimes called &quot;relapse&quot;)?</inlineHelpText>
+        <label>ONC_v1.0.5</label>
+        <length>20</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Do_you_complete_cancer_screenings__c</fullName>
+        <description>Do you complete recommended cancer screenings (mammography, colonoscopy, etc…)</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Do you complete recommended cancer screenings (mammography, colonoscopy, etc…)</inlineHelpText>
+        <label>ONC_v1.0.6</label>
+        <length>20</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Email__c</fullName>
+        <description>created for Marketing cloud</description>
+        <externalId>false</externalId>
+        <label>Email</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Email</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>First_degree_relative_diagnosed_cancer__c</fullName>
+        <description>Has a first-degree relative (biological mom, dad, or sibling) ever been diagnosed with the same cancer type?</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Has a first-degree relative (biological mom, dad, or sibling) ever been diagnosed with the same cancer type?</inlineHelpText>
+        <label>ONC_v1.0.12</label>
+        <length>20</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>First_degree_relative_other_cancer__c</fullName>
+        <description>Has a first-degree relative (biological mom, dad, or sibling) ever been diagnosed with any cancer type?</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Has a first-degree relative (biological mom, dad, or sibling) ever been diagnosed with any other cancer type?</inlineHelpText>
+        <label>ONC_v1.0.2</label>
+        <length>20</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Have_you_diagnosed_with_Cancer__c</fullName>
+        <description>Have you ever been diagnosed with malignant cancer?</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Have you ever been diagnosed with malignant cancer?</inlineHelpText>
+        <label>ONC_v1.0.1</label>
+        <length>10</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Have_you_ever_lived_on_a_farm__c</fullName>
+        <description>Have you ever lived on a farm?</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Have you ever lived on a farm?</inlineHelpText>
+        <label>ONC_v1.0.7</label>
+        <length>20</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Have_you_served_in_the_military__c</fullName>
+        <description>Have you served in the military?</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Have you served in the military?</inlineHelpText>
+        <label>ONC_v1.0.9</label>
+        <length>20</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Hormone_replacement_therapy__c</fullName>
+        <description>For all cancer patients and survivors: At the time of diagnosis, were you taking hormone replacement therapy?</description>
+        <externalId>false</externalId>
+        <inlineHelpText>For all cancer patients and survivors: At the time of diagnosis, were you taking hormone replacement therapy?</inlineHelpText>
+        <label>ONC_v1.0.18</label>
+        <length>100</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>How_many_chemo_cycles_did_you_receive__c</fullName>
+        <description>How many chemo “cycles” did you receive?</description>
+        <externalId>false</externalId>
+        <inlineHelpText>How many chemo “cycles” did you receive?</inlineHelpText>
+        <label>ONC_v1.0.14</label>
+        <length>20</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>If_yes_how_long_in_years__c</fullName>
+        <description>If yes, how long (in years)?</description>
+        <externalId>false</externalId>
+        <inlineHelpText>If yes, how long (in years)?</inlineHelpText>
+        <label>ONC_v1.0.4</label>
+        <length>20</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Memory_or_cognition_difficulty_on_chemo__c</fullName>
+        <description>Did you have memory or cognition difficulties while on chemotherapy (some patients refer to this as &quot;chemobrain&quot;)?</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Did you have memory or cognition difficulties while on chemotherapy (some patients refer to this as &quot;chemobrain&quot;)?</inlineHelpText>
+        <label>ONC_v1.0.15</label>
+        <length>10</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Post_Menopausal__c</fullName>
+        <description>For women cancer patients and survivors: At the time of diagnosis, were you post-menopausal (defined as no menstrual cycles – or “periods” – during the entire year preceding your diagnosis)?</description>
+        <externalId>false</externalId>
+        <inlineHelpText>For women cancer patients and survivors: At the time of diagnosis, were you post-menopausal (defined as no menstrual cycles – or “periods” – during the entire year preceding your diagnosis)?</inlineHelpText>
+        <label>ONC_v1.0.17</label>
+        <length>20</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Stop_hormone_replacement_prior_chemo__c</fullName>
+        <description>If taking hormone replacement at time of diagnosis, did you stop hormone replacement therapy prior to receiving any chemo?</description>
+        <externalId>false</externalId>
+        <inlineHelpText>If taking hormone replacement at time of diagnosis, did you stop hormone replacement therapy prior to receiving any chemo?</inlineHelpText>
+        <label>ONC_v1.0.19</label>
+        <length>10</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Type_of_cancer_you_diagnosed_with__c</fullName>
+        <description>What “type” of cancer(s) were you diagnosed with? Please check all that apply,</description>
+        <externalId>false</externalId>
+        <label>ONC_v1.0.10</label>
+        <length>10000</length>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>4</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Were_you_treated_with_radiation_therapy__c</fullName>
+        <description>Were you also treated with radiation therapy?</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Were you also treated with radiation therapy?</inlineHelpText>
+        <label>ONC_v1.0.16</label>
+        <length>20</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Worked_proximity_radioactive_material__c</fullName>
+        <description>Have you ever worked in proximity to radioactive materials or received a radiation exposure?</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Have you ever worked in proximity to radioactive materials or received a radiation exposure?</inlineHelpText>
+        <label>ONC_v1.0.8</label>
+        <length>20</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Your_age_in_years_at_time_of_diagnosis__c</fullName>
+        <description>What was your age in years at your time of diagnosis?</description>
+        <externalId>false</externalId>
+        <inlineHelpText>What was your age in years at your time of diagnosis?</inlineHelpText>
+        <label>ONC_v1.0.11</label>
+        <length>20</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>cancer_spread_to_more_than_one_organ__c</fullName>
+        <description>At the time of diagnosis, had the cancer spread to more than one organ (e.g. metastasized)?</description>
+        <externalId>false</externalId>
+        <inlineHelpText>At the time of diagnosis, had the cancer spread to more than one organ (e.g. metastasized)?</inlineHelpText>
+        <label>ONC_v1.0.20</label>
+        <length>20</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <label>ONC</label>
+    <nameField>
+        <displayFormat>ONC-{0000000000}</displayFormat>
+        <label>ONC Name</label>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>ONCs</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>ReadWrite</sharingModel>
+    <visibility>Public</visibility>
+</CustomObject>

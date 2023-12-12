@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LightningComponentBundle xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>51.0</apiVersion>
+    <isExposed>true</isExposed>
+    <targets>
+        <target>lightning__AppPage</target>
+        <target>lightning__RecordPage</target>
+        <target>lightning__HomePage</target>
+        <target>lightningCommunity__Page</target>
+        <target>lightningCommunity__Default</target>
+    </targets>
+    <targetConfigs>  
+        <targetConfig targets="lightning__HomePage,lightning__RecordPage,lightningCommunity__Default">
+            <property name="DBS_text_1" type="String" default="DBS Form for Participation in Research" label="DBS_text_1"/>
+            <property name="DBS_text_2" type="String" default="Required" label="DBS_text_2"/>
+            <property name="DBS_text_3" type="String" default="Street Address" label="DBS_text_3"/>
+            <property name="DBS_text_4" type="String" default="Suite/APT No." label="DBS_text_4"/>
+            <property name="DBS_text_5" type="String" default="City" label="DBS_text_5"/>
+            <property name="DBS_text_6" type="String" default="ZIP Code" label="DBS_text_6"/>
+            <property name="DBS_text_7" type="String" default="Country" label="DBS_text_7"/>
+            <property name="DBS_text_8" type="String" default="--None--" label="DBS_text_8"/>
+            <property name="DBS_text_9" type="String" default="State" label="DBS_text_9"/>
+            <property name="DBS_text_10" type="String" default="Validate Address" label="DBS_text_10"/>
+            <property name="DBS_text_11" type="String" default="Invalid State Code." label="DBS_text_11"/>
+            <property name="DBS_text_12" type="String" default="Invalid City." label="DBS_text_12"/>
+            <property name="DBS_text_13" type="String" default="Address Not Found." label="DBS_text_13"/>
+            <property name="DBS_text_14" type="String" default="Address Verified." label="DBS_text_14"/>
+            <property name="DBS_text_15" type="String" default="Please read the following information carefully before deciding whether to participate in this research study. Your participation is voluntary." label="DBS_text_15"/>
+            <property name="DBS_text_16" type="String" default="You are being asked to participate in a research study that is being carried out by Dr. Matt Huentelman at the non-profit Translational Genomics Research Institute (or TGen) in Phoenix, Arizona. This is a research study to understand how the human brain remembers things." label="DBS_text_16"/>
+            <property name="DBS_text_17" type="String" default="To participate in this phase of the study, you will be asked to collect dried blood samples using a finger prick device (lancet) and a kit that we will provide you. We will then ask you to mail your samples to researchers at TGen in a prepaid return envelope. The researchers will analyze DNA, RNA, and protein biomarkers in your blood and combine the measurements with the results from your MindCrowd test score and the information that you have provided through questionnaires." label="DBS_text_17"/>
+            <property name="DBS_text_18" type="String" default="What is DNA, and what are genes and genetics?" label="DBS_text_18"/>
+            <property name="DBS_text_19" type="String" default="DNA is a substance that is found in every cell in the human body.  Your DNA contains “genes” which predict things like physical characteristics (eye color, hair color, height, etc.) or disease risk." label="DBS_text_19"/>
+            <property name="DBS_text_20" type="String" default="What is RNA and protein?" label="DBS_text_20"/>
+            <property name="DBS_text_21" type="String" default="RNA delivers DNA’s genetic message to the part of a cell that makes proteins. RNA gives some information about which genes are turned on or off at one point in time." label="DBS_text_21"/>
+            <property name="DBS_text_22" type="String" default="Proteins are large molecules that play many critical roles in the body. They do most of the work in cells and are required for the structure and function of the body’s tissues and organs." label="DBS_text_22"/>
+            <property name="DBS_text_23" type="String" default="How many people will take part in the study?" label="DBS_text_23"/>
+            <property name="DBS_text_24" type="String" default="It is expected that up to 5,000 individuals will participate in the study." label="DBS_text_24"/>
+            <property name="DBS_text_25" type="String" default="What will I have to do?" label="DBS_text_25"/>
+            <property name="DBS_text_26" type="String" default="You will be asked to complete this consent form if you choose to participate. If you decide to participate, a dried blood sample collection kit will be provided to you by the study team. You will be given instructions on how to collect dried blood samples from your finger. If you are unable to donate a dried blood sample, then a saliva sample or buccal swab may be collected instead. Your sample will be looked at and stored at TGen." label="DBS_text_26"/>
+            <property name="DBS_text_27" type="String" default="In addition, demographic, medical, and lifestyle information that was already collected when you first completed the MindCrowd study will be linked to your sample. This information and your sample will be coded with a research specific number by the study coordinator in order to protect your identity." label="DBS_text_27"/>
+            <property name="DBS_text_28" type="String" default="How old do I have to be to participate?" label="DBS_text_28"/>
+            <property name="DBS_text_29" type="String" default="You must be 18 years or older to participate in this study." label="DBS_text_29"/>
+            <property name="DBS_text_30" type="String" default="Will my samples be stored and used for other studies?" label="DBS_text_30"/>
+            <property name="DBS_text_31" type="String" default="Your samples will be stored at TGen indefinitely. The researchers may later decide that they want to perform additional tests on your samples. If your samples are used in future research, they may be shared with researchers who are not a part of TGen. The study investigators will approve the use of the samples for future research. All samples will be stored with no identifying information attached to the sample." label="DBS_text_31"/>
+            <property name="DBS_text_32" type="String" default="Will you share my information with other people?" label="DBS_text_32"/>
+            <property name="DBS_text_33" type="String" default="We will not share any identifiable information that you give us. All of your information is stored in a database. All of our databases are password-protected and secure. No one can identify you without access to both of these data sources." label="DBS_text_33"/>
+            <property name="DBS_text_34" type="String" default="Who else will have access to my genetic information?" label="DBS_text_34"/>
+            <property name="DBS_text_35" type="String" default="The researchers may decide to share data gathered from your samples to help further research. One way we do this is by putting information into scientific databases, where it is stored along with information from other studies. Researchers can then study the combined information to learn even more about diseases. If you agree to take part in the study, some of your genetic and health information might be placed into one or more scientific databases. There are many different kinds of scientific databases; some are maintained by private companies or the National Institutes of Health (an agency of the federal government). A researcher who wants to study the information must apply to the database. Different databases may have different ways of reviewing such requests. Researchers with approval may be able to see and use your de-identified information, along with information from many other people." label="DBS_text_35"/>
+            <property name="DBS_text_36" type="String" default="Your name and other information that could directly identify you will never be placed into a scientific database. However, because your genetic information is unique to you, there is a small chance that someone could trace it back to you. The risk of this happening is very small, but may grow in the future. There are many safeguards in place to protect your information while it is stored in repositories and used for research." label="DBS_text_36"/>
+            <property name="DBS_text_37" type="String" default="Will the researchers need to contact me in the future?" label="DBS_text_37"/>
+            <property name="DBS_text_38" type="String" default="The researchers may decide later that they want more information about you and your health. By completing this consent form, you are giving the research team permission to contact you in the future. If the research team contacts you, you may decline to provide any information." label="DBS_text_38"/>
+            <property name="DBS_text_39" type="String" default="How long will I be in the study?" label="DBS_text_39"/>
+            <property name="DBS_text_40" type="String" default="Your part in this phase of the study includes completion of the study consent (typically less than 15 minutes) and a one-time collection of dried blood samples, a saliva sample, or a buccal swab (typically less than 15 minutes)." label="DBS_text_40"/>
+            <property name="DBS_text_41" type="String" default="What are the risks?" label="DBS_text_41"/>
+            <property name="DBS_text_42" type="String" default="Physical Risk" label="DBS_text_42"/>
+            <property name="DBS_text_43" type="String" default="There is a slight risk of excess bleeding, bruising, or infection after a dried blood sample collection, however, this risk is very low. Care will be taken to help you avoid these problems. There are no physical risks involved with the collection of saliva or buccal swab samples." label="DBS_text_43"/>
+            <property name="DBS_text_44" type="String" default="Privacy Risk" label="DBS_text_44"/>
+            <property name="DBS_text_45" type="String" default="We will take many steps to protect your privacy, but because your DNA is unique to you, it is possible that someone could trace it back to you. There is also a risk that someone could get access to the data we have stored about you. If those data suggested something serious about your health, it could be misused. For example, it could be used to make it harder for you to get or keep a job or insurance. There are laws against this kind of misuse, but they may not give full protection. There may also be other unforeseen privacy risks." label="DBS_text_45"/>
+            <property name="DBS_text_46" type="String" default="We believe the chance these things will happen is small, but we cannot make guarantees. Your privacy and the confidentiality of your data are very important to us; we will make every effort to protect them. These efforts are described below under the section “How will my privacy be protected?”" label="DBS_text_46"/>
+            <property name="DBS_text_47" type="String" default="How will my privacy be protected?" label="DBS_text_47"/>
+            <property name="DBS_text_48" type="String" default="Federal privacy rules give safeguards for privacy, security, and authorized access. We will not give information that identifies you to anyone without your permission, except as required by law. This study takes many steps to protect the privacy of people who take part." label="DBS_text_48"/>
+            <property name="DBS_text_49" type="String" default="We will remove your name and any other information that could directly identify you from your samples and information. We will replace this information with a study code number. We will create a master list linking your code number to your name. We keep this list separate from your coded samples and information. The master list will be maintained by the TGen study coordinator." label="DBS_text_49"/>
+            <property name="DBS_text_50" type="String" default="We will keep the samples in locked freezers in locked buildings. We will keep health information and research data on secure computers. These computers have many levels of protection." label="DBS_text_50"/>
+            <property name="DBS_text_51" type="String" default="There is a Federal law called the Genetic Information Nondiscrimination Act (GINA). In general, this law makes it illegal for health insurance companies, group health plans, and most employers to discriminate against you based on your genetic information. However, it does not protect you against discrimination by companies that sell life insurance, disability insurance, or long-term care insurance." label="DBS_text_51"/>
+            <property name="DBS_text_52" type="String" default="Are there any benefits?" label="DBS_text_52"/>
+            <property name="DBS_text_53" type="String" default="You will not receive any test results from the sample you donate for this study. There is no direct benefit to you by being in this study. However, what we learn from this study may help others in the future." label="DBS_text_53"/>
+            <property name="DBS_text_54" type="String" default="What are my alternatives if I don’t want to participate in the research?" label="DBS_text_54"/>
+            <property name="DBS_text_55" type="String" default="This is not a treatment study. Your other option is to not give your samples to TGen." label="DBS_text_55"/>
+            <property name="DBS_text_56" type="String" default="Can I leave the study once I’m in it?" label="DBS_text_56"/>
+            <property name="DBS_text_57" type="String" default="Your participation in this study is voluntary. You may decide not to participate or you may leave the study at any time. Your decision will not result in any penalty or loss of benefits to which you are entitled." label="DBS_text_57"/>
+            <property name="DBS_text_58" type="String" default="If you complete this form but then change your mind later, you will need to contact the study coordinator at MindCrowdQuestion@tgen.org or 602-343-8653." label="DBS_text_58"/>
+            <property name="DBS_text_59" type="String" default="If you withdraw from the study, TGen will retain your samples but completely erase all identifying information and codes from your samples so they will not be able to be traced back to you in any manner. This means that the samples will be made anonymous." label="DBS_text_59"/>
+            <property name="DBS_text_60" type="String" default="What about my privacy/confidentiality?" label="DBS_text_60"/>
+            <property name="DBS_text_61" type="String" default="Your privacy is very important to us and we will use many safety measures to protect your privacy. However, in spite of all of the safety measures that we will use we cannot guarantee that your identity will never become known. Although your genetic information is unique to you, you do share some genetic information with your blood relatives. Consequently, it may be possible that genetic information from them could be used to help identity you. Similarly, it may be possible that genetic information from you could be used to help identify them." label="DBS_text_61"/>
+            <property name="DBS_text_62" type="String" default="All information collected about you during the course of this study will be kept confidential to the extent permitted by law. You will be identified in the research records by a code name or number. Information that identifies you personally will not be released without your written permission. However, the Translational Genomics Research Institute (TGen) or federal agencies with appropriate regulatory oversight such as the Food and Drug Administration (FDA), Office for Human Research Protections (OHRP), Office of Civil Rights (OCR), National Institutes of Health (NIH), Western Institutional Review Board® (WIRB®), may review or copy your records for research purposes." label="DBS_text_62"/>
+            <property name="DBS_text_63" type="String" default="When the results of this research are published or discussed in conferences, no information will be included that would reveal your identity." label="DBS_text_63"/>
+            <property name="DBS_text_64" type="String" default="What are the costs?" label="DBS_text_64"/>
+            <property name="DBS_text_65" type="String" default="There are no costs to you to participate in this study." label="DBS_text_65"/>
+            <property name="DBS_text_66" type="String" default="Will I be paid?" label="DBS_text_66"/>
+            <property name="DBS_text_67" type="String" default="You will not be paid to participate in this study." label="DBS_text_67"/>
+            <property name="DBS_text_68" type="String" default="Will I be paid if the sponsor makes money or profits from my samples?" label="DBS_text_68"/>
+            <property name="DBS_text_69" type="String" default="It is possible results will come from this study that may help develop new treatments or tests. This may result in commercial products that will be sold for a profit. There are no plans to pay you for any products developed from this study." label="DBS_text_69"/>
+            <property name="DBS_text_70" type="String" default="What if there is a breach of privacy or I am injured?" label="DBS_text_70"/>
+            <property name="DBS_text_71" type="String" default="There are no plans to pay you if there is a breach of privacy or if you are hurt in any way as a result of being in this study. This does not take away or waive any of your legal rights in the event of negligence or misconduct." label="DBS_text_71"/>
+            <property name="DBS_text_72" type="String" default="Who do I call if I have any questions or issues?" label="DBS_text_72"/>
+            <property name="DBS_text_73" type="String" default="If you have questions about your participation in this study, you feel you have had a research-related injury, or you have questions, concerns, or complaints about the research, you may contact the study coordinator at 602-343-8653." label="DBS_text_73"/>
+            <property name="DBS_text_74" type="String" default="If you have questions about your rights as a research participant in this study or if you have questions, concerns, or complaints about the research, you may contact:" label="DBS_text_74"/>
+            <property name="DBS_text_75" type="String" default="Western Institutional Review Board® (WIRB®)" label="DBS_text_75"/>
+            <property name="DBS_text_75_a" type="String" default="1019 39th Avenue SE Suite 120" label="DBS_text_75_a"/>
+            <property name="DBS_text_75_b" type="String" default="Puyallup, Washington 98374-2115" label="DBS_text_75_b"/>
+            <property name="DBS_text_75_c" type="String" default="Telephone: 1-800-562-4789 or 360-252-2500" label="DBS_text_75_c"/>
+            <property name="DBS_text_76" type="String" default="Help@wirb.com" label="DBS_text_76"/>
+            <property name="DBS_text_77" type="String" default="WIRB is a group of people who perform independent review of research." label="DBS_text_77"/>
+            <property name="DBS_text_78" type="String" default="WIRB will not be able to answer some study-specific questions, such as questions about appointment times. However, you may contact WIRB if the research staff cannot be reached or if you wish to talk to someone other than the research staff." label="DBS_text_78"/>
+            <property name="DBS_text_79" type="String" default="Do not complete this consent form unless you have had a chance to ask questions and have received satisfactory answers to all of your questions." label="DBS_text_79"/>
+            <property name="DBS_text_80" type="String" default="If you agree to be in this study, you will have access to a completed copy of this consent form for your records." label="DBS_text_80"/>
+            <property name="DBS_text_81" type="String" default="How do I agree to participate?" label="DBS_text_81"/>
+            <property name="DBS_text_82" type="String" default="There will be questions and check boxes at the end of this form. Once you have reviewed all the statements, you will either check the button that states: “I Consent” or the button that says “I Decline.”" label="DBS_text_82"/>
+            <property name="DBS_text_83" type="String" default="By checking this box :" label="DBS_text_83"/>
+            <property name="DBS_text_84" type="String" default="I understand that if I have questions I should contact the Clinical Research Coordinator at 602-343-8653 or MindCrowdQuestion@tgen.org before I complete this page." label="DBS_text_84"/>
+            <property name="DBS_text_85" type="String" default="I Consent" label="DBS_text_85"/>
+            <property name="DBS_text_86" type="String" default="Please Enter Required Fields" label="DBS_text_86"/>
+            <property name="DBS_text_87" type="String" default="Submit" label="DBS_text_87"/>
+            <property name="DBS_text_88" type="String" default="Please Complete the Required Fields." label="DBS_text_88"/>
+            <property name="DBS_text_89" type="String" default="Please enter your mailing address below. The blood sample collection kit will be sent to this address." label="DBS_text_89"/>
+            <property name="DBS_text_90" type="String" default="Street" label="DBS_text_90"/>
+            <property name="DBS_text_91" type="String" default="Phone Number" label="DBS_text_91"/>
+            <property name="DBS_text_92" type="String" default="Enter Phone Number Here" label="DBS_text_92"/>
+            <property name="DBS_text_93" type="String" default="I Decline" label="DBS_text_93"/>
+            <property name="DBS_text_all" type="String" default="DBS Consent Text" label="DBS_text_all"/>
+
+            <property name="Bean_text_all" type="String" default="Bean Consent Text" label="Bean_text_all"/>
+            <property name="Bean_text_1" type="String" default="Bean Game Form for Participation in Research" label="Bean_text_1"/>
+            <property name="Bean_text_2" type="String" default="Enter your code here" label="Bean_text_2"/>
+            <property name="Bean_text_3" type="String" default="Selected Country" label="Bean_text_3"/>
+            <property name="Bean_text_4" type="String" default="Selected State" label="Bean_text_4"/>
+            <property name="Bean_text_5" type="String" default="Validate" label="Bean_text_5"/>
+            <property name="Bean_text_6" type="String" default="You are being invited to participate in a research study that is being carried out by Dr. Matt Huentelman at  the  non-profit  Translational  Genomic  Research  Institute  (TGen)  in  Phoenix,  Arizona. 
+            This  study  will measure the time that it takes you to play a movement game." label="Bean_text_6"/>
+            <property name="Bean_text_7" type="String" default="Your participation will involve timing yourself, or asking a friend to time you, as you complete a game. We will send you a game kit including all of the materials that you will need to complete the game. You will need to self-record your results and return the results to TGen. The amount of time that it takes you to complete the game will vary between people, but we expect it to take you approximately 20 minutes." label="Bean_text_7"/>
+            <property name="Bean_text_8" type="String" default="There are no known risks associated with being in this research. There is no direct benefit to you being in this study. However, what we learn from this study may help others in the future.
+            Your alternative is to not participate in this study." label="Bean_text_8"/>
+            <property name="Bean_text_9" type="String" default="If  you  have  questions  about  your  participation  in  this  study,  you  feel  you  have  had  a  research-related injury,  or  you  have  questions,  concerns,  or  complaints  about  the  research,  you  may  contact  the  study coordinator  at MindCrowdQuestion@tgen.org  or  602-343-8653.  Contact  the  Western  Institutional Review Board (WIRB) if you have questions about your rights as a research subject, concerns, complaints or input: 1-800-562-4789.
+WIRB is a group of people who perform independent review of research" label="Bean_text_9"/>
+            <property name="Bean_text_10" type="String" default="The  study  staff  may  be  required  to  share  the  records  generated  from  this  research  with  the  sponsor, regulatory agencies such as the US Food and Drug Administration, Health and Human Services, and the IRB.  This  information  is  shared  so  the  research  can  be  conducted  and  properly  monitored.  The  people receiving  this  information  may  not  be  required  to  protect  it  and  your  information  may  be  re-disclosed without your permission. If you do not provide permission to use your information, you cannot be in the study." label="Bean_text_10"/>
+            <property name="Bean_text_11" type="String" default="All  information  collected  about  you  during  the  course  of  this  study  will  be  kept  confidential.  When  the results  of  this  research  are  published  or  discussed  at  scientific  conferences,  no  information  will  be included that would reveal your identity." label="Bean_text_11"/>
+            <property name="Bean_text_12" type="String" default="Your  participation  in  this  study  is  completely  voluntary.  You  may  choose  not  to  participate  or  you  may stop  participation  at  any  time  during  the  research  activity  without  penalty.  You  can  contact  the  Study Coordinator at MindCrowdQuestion@tgen.org to withdraw from the study." label="Bean_text_12"/>
+            
+            <property name="Bean_text_13" type="String" default="This consent information sheet addendum has more information about the research study.  It may add to or change the information in the consent form you signed at the start of this study." label="Bean_text_13"/>
+            <property name="Bean_text_14" type="String" default="You will not be paid for being in this study." label="Bean_text_14"/>
+            <property name="Bean_text_15" type="String" default="If you have questions about your participation in this study, you feel you have had a research-related injury, or you have questions, concerns, or complaints about the research, you may contact the study coordinator at MindCrowdQuestion@tgen.org or 602-343-8653 (24 hours). Contact the WCG IRB if you have questions about your rights as a research subject, concerns, complaints or input: 855-818-2289. WCG IRB is a group of people who perform independent review of research." label="Bean_text_15"/>
+            <property name="Bean_text_16" type="String" default="All information collected about you during the course of this study will be kept confidential. When the results of this research are published or discussed at scientific conferences, no information will be included that would reveal your identity. To help protect your privacy, we have obtained a Certificate of Confidentiality from the National Institutes of Health. This means researchers may refuse to give out study information that identifies you. For example, if there were a court order requesting your study records, TGen would not give out information that identifies you, unless you have consented for this use. The Certificate &lt;u&gt;does&lt;/u&gt; permit TGen to disclose your information when:" label="Bean_text_16"/>
+            <property name="Bean_text_17" type="String" default="Required by Federal, State, or local laws. This excludes instances of Federal, State, or local civil, criminal, administrative, legislative, or other proceedings;" label="Bean_text_17"/>
+            <property name="Bean_text_18" type="String" default="You have consented to the disclosure, including for your medical treatment;" label="Bean_text_18"/>
+            <property name="Bean_text_19" type="String" default="Done as part of other approved research studies." label="Bean_text_19"/>
+            <property name="Bean_text_20" type="String" default="A Certificate of Confidentiality does not prevent you or someone else, like a member of your family, from voluntarily sharing information about yourself or your involvement in this research. If you want your research information released to an insurer, medical care provider, or any other person not connected with the research, you must provide consent to allow the researchers to release it." label="Bean_text_20"/>
+            <property name="Bean_text_21" type="String" default="Your participation in this study is completely voluntary. You may choose not to participate or you may stop participation at any time during the research activity without penalty or loss of benefits to which you are otherwise entitled. You can contact the Study Coordinator at MindCrowdQuestion@tgen.org to withdraw from the study." label="Bean_text_21"/>
+            <property name="Bean_text_22" type="String" default="How do I agree to participate?" label="Bean_text_22"/>
+            <property name="Bean_text_23" type="String" default="I understand that if I do not wish to participate I should not complete this page." label="Bean_text_23"/>
+            <property name="Bean_text_24" type="String" default="I understand that if I have questions I should contact the Clinical Research Coordinator at 602-343-8653 (24 hours) or MindCrowdQuestion@tgen.org before I complete this consent." label="Bean_text_24"/>
+            <property name="Bean_text_25" type="String" default="First Name" label="Bean_text_25"/>
+            <property name="Bean_text_26" type="String" default="Last Name" label="Bean_text_26"/>
+            <property name="Bean_text_27" type="String" default="Email Address" label="Bean_text_27"/>
+            <property name="Bean_text_25a" type="String" default="Enter First Name Here" label="Bean_text_25a"/>
+            <property name="Bean_text_26a" type="String" default="Enter Last Name Here" label="Bean_text_26a"/>
+            <property name="Bean_text_27a" type="String" default="Enter Email Address" label="Bean_text_27a"/>
+            <property name="Bean_text_28" type="String" default="Please enter your mailing address below. The motor activity kit will be sent to this address. Please note we can only ship to participants in the United States at this time." label="Bean_text_28"/>
+            <property name="Bean_text_29" type="String" default="Enter City Here" label="Bean_text_29"/>
+            <property name="Bean_text_30" type="String" default="Select a state…" label="Bean_text_30"/>
+            <property name="Bean_text_31" type="String" default="Enter Zip Code Here" label="Bean_text_31"/>
+            <property name="Bean_text_32" type="String" default="Street Address (including STE/APT)" label="Bean_text_32"/>
+            <property name="Bean_text_33" type="String" default="Enter Street Address (including STE/APT) Here" label="Bean_text_33"/>
+            <property name="APOE_text_1" type="String" default="POE Form for Participation in Research" label="APOE_text_1"/>
+            <property name="APOE_text_all" type="String" default="APOE_text_all" label="APOE_text_all"/>
+            <property name="APOE_text_2" type="String" default="Please enter your mailing address below. The sample collection kit will be sent to this address." label="APOE_text_2"/>
+            <property name="APOE_text_3" type="String" default="Enter First Name Here" label="APOE_text_3"/>
+            <property name="APOE_text_4" type="String" default="Enter Last Name Here" label="APOE_text_4"/>
+            <!-- <property name="Bean_text_34" type="String" default="Validate" label="Bean_text_34"/> -->
+
+            <property name="textValue" type="String" default="Your address information is verified!" label="textValue"/>
+            <property name="url_acceptance" type="String" default="add-acceptancepage" label="url_acceptance"/>
+            <property name="url_alreadysubmitted" type="String" default="add-already-submitted" label="url_alreadysubmitted"/>
+            <property name="strTitle" type="String" default="Welcome in Salesforce" label="Enter the title"/>
+            
+            
+        </targetConfig>
+    </targetConfigs>
+</LightningComponentBundle>

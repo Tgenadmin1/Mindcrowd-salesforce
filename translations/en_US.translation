@@ -1,0 +1,5612 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Translations xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <customApplications>
+        <description xsi:nil="true"/>
+        <label><!-- MindCrowd --></label>
+        <name>MindCrowd</name>
+    </customApplications>
+    <customLabels>
+        <label><!-- App block name --></label>
+        <name>App_block_name</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Banner Text 10 --></label>
+        <name>Banner_Text_10</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Banner Text 3 --></label>
+        <name>Banner_Text_3</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Banner Text 4 --></label>
+        <name>Banner_Text_4</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Banner Text 5 --></label>
+        <name>Banner_Text_5</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Banner Text 6 --></label>
+        <name>Banner_Text_6</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Banner Text 6T --></label>
+        <name>Banner_Text_6T</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Banner Text 6n --></label>
+        <name>Banner_Text_6n</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Banner Text 7 --></label>
+        <name>Banner_Text_7</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Banner Text 8 --></label>
+        <name>Banner_Text_8</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Banner Text 9 --></label>
+        <name>Banner_Text_9</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Banner image 1 --></label>
+        <name>Banner_image_1</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Brain Info Results --></label>
+        <name>Brain_Info_Results</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Catcme text 1 --></label>
+        <name>Catcme_text_1</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Catcme text 10 --></label>
+        <name>Catcme_text_10</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Catcme text 11 --></label>
+        <name>Catcme_text_11</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Catcme text 12 --></label>
+        <name>Catcme_text_12</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Catcme text 13 --></label>
+        <name>Catcme_text_13</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Catcme text 14 --></label>
+        <name>Catcme_text_14</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Catcme text 15 --></label>
+        <name>Catcme_text_15</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Catcme text 16 --></label>
+        <name>Catcme_text_16</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Catcme text 17 --></label>
+        <name>Catcme_text_17</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Catcme text 1b --></label>
+        <name>Catcme_text_1b</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Catcme text 2 --></label>
+        <name>Catcme_text_2</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Catcme text 3 --></label>
+        <name>Catcme_text_3</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Catcme text 4 --></label>
+        <name>Catcme_text_4</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Catcme text 5 --></label>
+        <name>Catcme_text_5</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Catcme text 6 --></label>
+        <name>Catcme_text_6</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Catcme text 7 --></label>
+        <name>Catcme_text_7</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Catcme text 8 --></label>
+        <name>Catcme_text_8</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Catcme text 9 --></label>
+        <name>Catcme_text_9</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Community Name Spanish --></label>
+        <name>Community_Name_Spanish</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Community Url --></label>
+        <name>Community_Url</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Community Url Spanish --></label>
+        <name>Community_Url_Spanish</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Community language Url --></label>
+        <name>Community_language_Url</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- DataAPIKey --></label>
+        <name>DataAPIKey</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Date --></label>
+        <name>Date</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- DltrsGamePart1v0.01 --></label>
+        <name>DltrsGamePart1v0_01</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Dltrs Game Text 001 --></label>
+        <name>Dltrs_Game_Text_001</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Dltrs Game Text 002 --></label>
+        <name>Dltrs_Game_Text_002</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Dltrs Game Text 003 --></label>
+        <name>Dltrs_Game_Text_003</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Dltrs Game Text 004 --></label>
+        <name>Dltrs_Game_Text_004</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Dltrs Game Text 005 --></label>
+        <name>Dltrs_Game_Text_005</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Dltrs Game Text 006 --></label>
+        <name>Dltrs_Game_Text_006</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Dltrs Game Text 1 --></label>
+        <name>Dltrs_Game_Text_1</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Dltrs Game Text 12 --></label>
+        <name>Dltrs_Game_Text_12</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Dltrs Game Text 12 a --></label>
+        <name>Dltrs_Game_Text_12_a</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Dltrs Game Text 12 b --></label>
+        <name>Dltrs_Game_Text_12_b</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Dltrs Game Text 13 --></label>
+        <name>Dltrs_Game_Text_13</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Dltrs Game Text 14 --></label>
+        <name>Dltrs_Game_Text_14</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Dltrs Game Text 17 --></label>
+        <name>Dltrs_Game_Text_17</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Dltrs Game Text 18 --></label>
+        <name>Dltrs_Game_Text_18</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Dltrs Game Text 19 --></label>
+        <name>Dltrs_Game_Text_19</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Dltrs Game Text 19a --></label>
+        <name>Dltrs_Game_Text_19a</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Dltrs Game Text 1a --></label>
+        <name>Dltrs_Game_Text_1a</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Dltrs Game Text 1b --></label>
+        <name>Dltrs_Game_Text_1b</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Dltrs Game Text 20 --></label>
+        <name>Dltrs_Game_Text_20</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Dltrs Game Text 20 a --></label>
+        <name>Dltrs_Game_Text_20_a</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Dltrs Game Text  20a --></label>
+        <name>Dltrs_Game_Text_20a</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Dltrs Game Text 20a 1 --></label>
+        <name>Dltrs_Game_Text_20a_1</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Dltrs Game Text 20a 2 --></label>
+        <name>Dltrs_Game_Text_20a_2</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Dltrs Game Text 20b --></label>
+        <name>Dltrs_Game_Text_20b</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Dltrs Game Text 23 --></label>
+        <name>Dltrs_Game_Text_23</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Dltrs Game Text 26 --></label>
+        <name>Dltrs_Game_Text_26</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Dltrs Game Text 26	a --></label>
+        <name>Dltrs_Game_Text_26_a</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Dltrs Game Text 26 b --></label>
+        <name>Dltrs_Game_Text_26_b</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Dltrs Game Text 26 c --></label>
+        <name>Dltrs_Game_Text_26_c</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Dltrs Game Text 4 --></label>
+        <name>Dltrs_Game_Text_4</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Dltrs Game Text 5 --></label>
+        <name>Dltrs_Game_Text_5</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Dltrs Game Text 6 --></label>
+        <name>Dltrs_Game_Text_6</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Dltrs Game Text 7 --></label>
+        <name>Dltrs_Game_Text_7</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Dltrs catcme game text1 --></label>
+        <name>Dltrs_catcme_game_text1</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Dltrs catcme game text2 --></label>
+        <name>Dltrs_catcme_game_text2</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Dltrs catcme game text3 --></label>
+        <name>Dltrs_catcme_game_text3</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- ESPAÑOL --></label>
+        <name>ESPA_OL</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Email Optout Message --></label>
+        <name>Email_Optout_Message</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Email address for password reset list --></label>
+        <name>Email_address_for_password_reset_list</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Error Report To Email --></label>
+        <name>Error_Report_To_Email</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Expan focus game user text 1 --></label>
+        <name>Expan_focus_game_user_text_1</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Expan focus game user text 2 --></label>
+        <name>Expan_focus_game_user_text_2</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Expan game user text 1 --></label>
+        <name>Expan_game_user_text_1</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Expan game user text 2 --></label>
+        <name>Expan_game_user_text_2</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Expan game user text 3 --></label>
+        <name>Expan_game_user_text_3</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Expan game user text 4 --></label>
+        <name>Expan_game_user_text_4</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Expan game user text 5 --></label>
+        <name>Expan_game_user_text_5</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Expan game user text 6 --></label>
+        <name>Expan_game_user_text_6</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Expan game user text 7 --></label>
+        <name>Expan_game_user_text_7</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Expan game user text 8 --></label>
+        <name>Expan_game_user_text_8</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Expan game user text 9 --></label>
+        <name>Expan_game_user_text_9</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Expan keeptrack game user text 1 --></label>
+        <name>Expan_keeptrack_game_user_text_1</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Expan keeptrack game user text 2 --></label>
+        <name>Expan_keeptrack_game_user_text_2</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Expan names&amp;faces game user text 1 --></label>
+        <name>Expan_names_faces_game_user_text_1</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Expan names&amp;faces game user text 2 --></label>
+        <name>Expan_names_faces_game_user_text_2</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Expan objects game user text 1 --></label>
+        <name>Expan_objects_game_user_text_1</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Expan objects game user text 2 --></label>
+        <name>Expan_objects_game_user_text_2</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Expan react game user text 1 --></label>
+        <name>Expan_react_game_user_text_1</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Expan react game user text 2 --></label>
+        <name>Expan_react_game_user_text_2</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Expan shapes game user text 1 --></label>
+        <name>Expan_shapes_game_user_text_1</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Expan shapes game user text 2 --></label>
+        <name>Expan_shapes_game_user_text_2</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Expan switching game user text 1 --></label>
+        <name>Expan_switching_game_user_text_1</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Expan switching game user text 2 --></label>
+        <name>Expan_switching_game_user_text_2</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Expan wordpair game user text 1 --></label>
+        <name>Expan_wordpair_game_user_text_1</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Expan wordpair game user text 2 --></label>
+        <name>Expan_wordpair_game_user_text_2</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- FaceAndName Artist 1 --></label>
+        <name>FaceAndName_Artist_1</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- FaceAndName Artist 1exa --></label>
+        <name>FaceAndName_Artist_1exa</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- FaceAndName Ready Text --></label>
+        <name>FaceAndName_Ready_Text</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- FaceAndName Ready Text2 --></label>
+        <name>FaceAndName_Ready_Text2</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- FaceAndName SpaceBar 2 --></label>
+        <name>FaceAndName_SpaceBar_2</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- FaceAndNames Wel --></label>
+        <name>FaceAndNames_Wel</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- FaceAndNames text 2 --></label>
+        <name>FaceAndNames_text_2</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- FaceAndNames text 3 --></label>
+        <name>FaceAndNames_text_3</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Forgot Password --></label>
+        <name>Forgot_Password</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- GameControllerLockLabel --></label>
+        <name>GameControllerLockLabel</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Hispanic/Latino --></label>
+        <name>Hispanic_Latino</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Logo Link --></label>
+        <name>Logo_Link</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Memory Game Name --></label>
+        <name>Memory_Game_Name</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Memory Game Practice Round --></label>
+        <name>Memory_Game_Practice_Round</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Memory Game Round 1 --></label>
+        <name>Memory_Game_Round_1</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Memory Game Round 2 --></label>
+        <name>Memory_Game_Round_2</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Memory Game Round 3 --></label>
+        <name>Memory_Game_Round_3</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Memory Game Text 00 --></label>
+        <name>Memory_Game_Text_00</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Memory Game Text 001 --></label>
+        <name>Memory_Game_Text_001</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Memory Game Text 002 --></label>
+        <name>Memory_Game_Text_002</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Memory Game Text 003 --></label>
+        <name>Memory_Game_Text_003</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Memory Game Text 004 --></label>
+        <name>Memory_Game_Text_004</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Memory Game Text 005 --></label>
+        <name>Memory_Game_Text_005</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Memory Game Text 006 --></label>
+        <name>Memory_Game_Text_006</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Memory Game Text 18 --></label>
+        <name>Memory_Game_Text_18</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Memory Game apple --></label>
+        <name>Memory_Game_apple</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Memory Game boat --></label>
+        <name>Memory_Game_boat</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Memory Game candle --></label>
+        <name>Memory_Game_candle</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Memory Game care --></label>
+        <name>Memory_Game_care</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Memory Game clean --></label>
+        <name>Memory_Game_clean</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Memory Game door --></label>
+        <name>Memory_Game_door</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Memory Game dress --></label>
+        <name>Memory_Game_dress</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Memory Game duck --></label>
+        <name>Memory_Game_duck</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Memory Game eat --></label>
+        <name>Memory_Game_eat</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Memory Game enter --></label>
+        <name>Memory_Game_enter</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Memory Game fast --></label>
+        <name>Memory_Game_fast</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Memory Game friend --></label>
+        <name>Memory_Game_friend</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Memory Game garden --></label>
+        <name>Memory_Game_garden</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Memory Game grass --></label>
+        <name>Memory_Game_grass</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Memory Game green --></label>
+        <name>Memory_Game_green</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Memory Game hair --></label>
+        <name>Memory_Game_hair</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Memory Game hard --></label>
+        <name>Memory_Game_hard</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Memory Game horse --></label>
+        <name>Memory_Game_horse</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Memory Game house --></label>
+        <name>Memory_Game_house</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Memory Game instruction text --></label>
+        <name>Memory_Game_instruction_text</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Memory Game life --></label>
+        <name>Memory_Game_life</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Memory Game money --></label>
+        <name>Memory_Game_money</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Memory Game mouth --></label>
+        <name>Memory_Game_mouth</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Memory Game night --></label>
+        <name>Memory_Game_night</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Memory Game poor --></label>
+        <name>Memory_Game_poor</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Memory Game public --></label>
+        <name>Memory_Game_public</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Memory Game ride --></label>
+        <name>Memory_Game_ride</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Memory Game screen text --></label>
+        <name>Memory_Game_screen_text</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Memory Game screen text 2 --></label>
+        <name>Memory_Game_screen_text_2</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Memory Game screen text 3 --></label>
+        <name>Memory_Game_screen_text_3</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Memory Game socks --></label>
+        <name>Memory_Game_socks</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Memory Game spacebar text 1 --></label>
+        <name>Memory_Game_spacebar_text_1</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Memory Game spacebar text 2 --></label>
+        <name>Memory_Game_spacebar_text_2</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Memory Game spoon --></label>
+        <name>Memory_Game_spoon</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Memory Game started text 1 --></label>
+        <name>Memory_Game_started_text_1</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Memory Game text 0a --></label>
+        <name>Memory_Game_text_0a</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Memory Game text 0b --></label>
+        <name>Memory_Game_text_0b</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Memory Game text 19 --></label>
+        <name>Memory_Game_text_19</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Memory Game text 19 1 --></label>
+        <name>Memory_Game_text_19_1</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Memory Game text 19 a --></label>
+        <name>Memory_Game_text_19_a</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Memory Game text 19 b --></label>
+        <name>Memory_Game_text_19_b</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Memory Game text 2 --></label>
+        <name>Memory_Game_text_2</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Memory Game text 20 --></label>
+        <name>Memory_Game_text_20</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Memory Game text 22 --></label>
+        <name>Memory_Game_text_22</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Memory Game text 23 --></label>
+        <name>Memory_Game_text_23</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Memory Game text 26 --></label>
+        <name>Memory_Game_text_26</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Memory Game text 27 --></label>
+        <name>Memory_Game_text_27</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Memory Game text 3 --></label>
+        <name>Memory_Game_text_3</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Memory Game text 5 --></label>
+        <name>Memory_Game_text_5</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Memory Game text 5 a --></label>
+        <name>Memory_Game_text_5_a</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Memory Game text 5 b --></label>
+        <name>Memory_Game_text_5_b</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Memory Game text 6 --></label>
+        <name>Memory_Game_text_6</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Memory Game text 8 --></label>
+        <name>Memory_Game_text_8</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Memory Game text 9 --></label>
+        <name>Memory_Game_text_9</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Memory Game text 9a --></label>
+        <name>Memory_Game_text_9a</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Memory Game time --></label>
+        <name>Memory_Game_time</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Memory Game under --></label>
+        <name>Memory_Game_under</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Memory Game write --></label>
+        <name>Memory_Game_write</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Memory Gmae Text 001 --></label>
+        <name>Memory_Gmae_Text_001</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Memory Gmae Text 002 --></label>
+        <name>Memory_Gmae_Text_002</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Memory Gmae Text 003 --></label>
+        <name>Memory_Gmae_Text_003</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Memory Gmae Text 004 --></label>
+        <name>Memory_Gmae_Text_004</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Memory Gmae Text 005 --></label>
+        <name>Memory_Gmae_Text_005</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Memory Gmae Text 006 --></label>
+        <name>Memory_Gmae_Text_006</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- MindCrowdNotificationURL --></label>
+        <name>MindCrowd</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- MindCrowd English --></label>
+        <name>MindCrowd_English</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- MindCrowd Spanish --></label>
+        <name>MindCrowd_Spanish</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Object Space screen text 2 --></label>
+        <name>Object_Space</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Object Space Text a --></label>
+        <name>Object_Space_Text_a</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Paired catcme game text1 --></label>
+        <name>Paired_catcme_game_text1</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Paired catcme game text2 --></label>
+        <name>Paired_catcme_game_text2</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Paired catcme game text3 --></label>
+        <name>Paired_catcme_game_text3</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Password --></label>
+        <name>Password</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Password Asterisk Error --></label>
+        <name>Password_Asterisk_Error</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Password_Asterisk_Error_Spanish --></label>
+        <name>Password_Asterisk_Error_Spanish</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Password Checkbox Error --></label>
+        <name>Password_Checkbox_Error</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Password Checkbox Error Spanish --></label>
+        <name>Password_Checkbox_Error_Spanish</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Password Error Message --></label>
+        <name>Password_Error_Message</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Password Error Message Spanish --></label>
+        <name>Password_Error_Message_Spanish</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Password Length Error --></label>
+        <name>Password_Length_Error</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Password Length Error Spanish --></label>
+        <name>Password_Length_Error_Spanish</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Password Reset --></label>
+        <name>Password_Reset</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Password Reset text --></label>
+        <name>Password_Reset_text</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Password Reset text 2 --></label>
+        <name>Password_Reset_text_2</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- PeopleLikeYouNoDataLabel --></label>
+        <name>PeopleLikeYouNoDataLabel</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Repeated Password Error --></label>
+        <name>Repeated_Password_Error</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Repeated Password Error Spanish --></label>
+        <name>Repeated_Password_Error_Spanish</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Required Fields Error Message --></label>
+        <name>Required_Fields_Error_Message</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Result_button_text_1 --></label>
+        <name>Result_button_text_1</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Result_button_text_2 --></label>
+        <name>Result_button_text_2</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Results_ThankYou --></label>
+        <name>Results_ThankYou</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Score --></label>
+        <name>Score</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Shapes Game Text 1 --></label>
+        <name>Shapes_Game_Text_1</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Shapes Game Text 10 --></label>
+        <name>Shapes_Game_Text_10</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Shapes Game Text 11 --></label>
+        <name>Shapes_Game_Text_11</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Shapes Game Text 12 --></label>
+        <name>Shapes_Game_Text_12</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Shapes Game Text 13 --></label>
+        <name>Shapes_Game_Text_13</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Shapes Game Text 14 --></label>
+        <name>Shapes_Game_Text_14</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Shapes Game Text 15 --></label>
+        <name>Shapes_Game_Text_15</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Shapes Game Text 16 --></label>
+        <name>Shapes_Game_Text_16</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Shapes Game Text 17 --></label>
+        <name>Shapes_Game_Text_17</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Shapes Game Text 18 --></label>
+        <name>Shapes_Game_Text_18</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Shapes Game Text 19 --></label>
+        <name>Shapes_Game_Text_19</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Shapes Game Text 2 --></label>
+        <name>Shapes_Game_Text_2</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Shapes Game Text 20 --></label>
+        <name>Shapes_Game_Text_20</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Shapes Game Text 21 --></label>
+        <name>Shapes_Game_Text_21</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Shapes Game Text 22 --></label>
+        <name>Shapes_Game_Text_22</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Shapes Game Text 23 --></label>
+        <name>Shapes_Game_Text_23</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Shapes Game Text 24 --></label>
+        <name>Shapes_Game_Text_24</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Shapes Game Text 25 --></label>
+        <name>Shapes_Game_Text_25</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Shapes Game Text 26 --></label>
+        <name>Shapes_Game_Text_26</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Shapes Game Text 27 --></label>
+        <name>Shapes_Game_Text_27</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Shapes Game Text 28 --></label>
+        <name>Shapes_Game_Text_28</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Shapes Game Text 29 --></label>
+        <name>Shapes_Game_Text_29</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Shapes Game Text 3 --></label>
+        <name>Shapes_Game_Text_3</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Shapes_Game_Text_30 --></label>
+        <name>Shapes_Game_Text_30</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Shapes Game Text 31 --></label>
+        <name>Shapes_Game_Text_31</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Shapes Game Text 32 --></label>
+        <name>Shapes_Game_Text_32</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Shapes Game Text 33 --></label>
+        <name>Shapes_Game_Text_33</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Shapes Game Text 34 --></label>
+        <name>Shapes_Game_Text_34</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Shapes Game Text 35 --></label>
+        <name>Shapes_Game_Text_35</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Shapes Game Text 36 --></label>
+        <name>Shapes_Game_Text_36</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Shapes Game Text 37 --></label>
+        <name>Shapes_Game_Text_37</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Shapes Game Text 38 --></label>
+        <name>Shapes_Game_Text_38</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Shapes Game Text 39 --></label>
+        <name>Shapes_Game_Text_39</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Shapes Game Text 4 --></label>
+        <name>Shapes_Game_Text_4</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Shapes Game Text 40 --></label>
+        <name>Shapes_Game_Text_40</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Shapes Game Text 5 --></label>
+        <name>Shapes_Game_Text_5</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Shapes Game Text 55 --></label>
+        <name>Shapes_Game_Text_55</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Shapes Game Text 56 --></label>
+        <name>Shapes_Game_Text_56</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Shapes Game Text 57 --></label>
+        <name>Shapes_Game_Text_57</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Shapes Game Text 58 --></label>
+        <name>Shapes_Game_Text_58</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Shapes Game Text 59 --></label>
+        <name>Shapes_Game_Text_59</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Shapes Game Text 6 --></label>
+        <name>Shapes_Game_Text_6</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Shapes Game Text 60 --></label>
+        <name>Shapes_Game_Text_60</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Shapes Game Text 61 --></label>
+        <name>Shapes_Game_Text_61</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Shapes Game Text 62 --></label>
+        <name>Shapes_Game_Text_62</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Shapes Game Text 63 --></label>
+        <name>Shapes_Game_Text_63</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Shapes Game Text 64 --></label>
+        <name>Shapes_Game_Text_64</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Shapes Game Text 7 --></label>
+        <name>Shapes_Game_Text_7</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Shapes Game Text 8 --></label>
+        <name>Shapes_Game_Text_8</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Shapes Game Text 9 --></label>
+        <name>Shapes_Game_Text_9</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Submit --></label>
+        <name>Submit</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Thank you! --></label>
+        <name>Thank_you</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- VIP ACCESS --></label>
+        <name>VIP_ACCESS</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- VIP Access ID --></label>
+        <name>VIP_Access_ID</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- acceptancePage01 --></label>
+        <name>acceptancePage01</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- acceptancePage02 --></label>
+        <name>acceptancePage02</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- address text --></label>
+        <name>address_text</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- app Error Android --></label>
+        <name>app_Error_Android</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- app Error iphone --></label>
+        <name>app_Error_iphone</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- banner Text 10b --></label>
+        <name>banner_Text_10b</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Banner Text 2 --></label>
+        <name>banner_Text_2</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- beangameScorer --></label>
+        <name>beangameScorer</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- brainInfo text 1 --></label>
+        <name>brainInfo_text_1</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- brainInfo text 10 --></label>
+        <name>brainInfo_text_10</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- brainInfo text 11 --></label>
+        <name>brainInfo_text_11</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- brainInfo text 12 --></label>
+        <name>brainInfo_text_12</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- brainInfo text 13 --></label>
+        <name>brainInfo_text_13</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- brainInfo_text_14 --></label>
+        <name>brainInfo_text_14</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- brainInfo text 2 --></label>
+        <name>brainInfo_text_2</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- brainInfo text 3 --></label>
+        <name>brainInfo_text_3</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- brainInfo text 4 --></label>
+        <name>brainInfo_text_4</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- brainInfo text 5 --></label>
+        <name>brainInfo_text_5</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- brainInfo text 6 --></label>
+        <name>brainInfo_text_6</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- brainInfo text 7 --></label>
+        <name>brainInfo_text_7</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- brainInfo text 8 --></label>
+        <name>brainInfo_text_8</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- brainInfo text 9 --></label>
+        <name>brainInfo_text_9</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- brain Info text choose --></label>
+        <name>brainInfo_text_choose</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- brain Info text error --></label>
+        <name>brainInfo_text_error</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- brain Info text required --></label>
+        <name>brainInfo_text_required</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- brainee_1 --></label>
+        <name>brainee_1</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- brainee_2 --></label>
+        <name>brainee_2</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- braininfo01 --></label>
+        <name>braininfo01</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- braininfo02 --></label>
+        <name>braininfo02</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- complete2 --></label>
+        <name>campylete2</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- cancel text --></label>
+        <name>cancel_text</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- catchment_placeholder --></label>
+        <name>catchment_placeholder</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- check password text 1 --></label>
+        <name>check_password_text_1</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- check password text 2 --></label>
+        <name>check_password_text_2</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- check password text 3 --></label>
+        <name>check_password_text_3</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- chngePassword --></label>
+        <name>chngePassword</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- city text --></label>
+        <name>city_text</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- close btn --></label>
+        <name>close_btn</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- close text --></label>
+        <name>close_text</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Community Name --></label>
+        <name>community_name</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- community nav text 1 --></label>
+        <name>community_nav_text_1</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- community nav text 2 --></label>
+        <name>community_nav_text_2</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- community nav text 3 --></label>
+        <name>community_nav_text_3</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- community nav text 4 --></label>
+        <name>community_nav_text_4</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- community nav text 5 --></label>
+        <name>community_nav_text_5</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- complete3 --></label>
+        <name>complete3</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- complete4 --></label>
+        <name>complete4</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- complete4&apos;a&apos; --></label>
+        <name>complete4_a</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- complete5 --></label>
+        <name>complete5</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- complete6 --></label>
+        <name>complete6</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- complete7 --></label>
+        <name>complete7</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- complete8 --></label>
+        <name>complete8</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- complete9 --></label>
+        <name>complete9</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- completebutton --></label>
+        <name>completebutton</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- 1question --></label>
+        <name>completepageq1</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- confirmPassword --></label>
+        <name>confirmPassword</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- consent --></label>
+        <name>consent</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- consent01 --></label>
+        <name>consent01</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- consent02 --></label>
+        <name>consent02</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- consent03 --></label>
+        <name>consent03</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- consent04 --></label>
+        <name>consent04</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- consent05 --></label>
+        <name>consent05</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- consent06 --></label>
+        <name>consent06</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- consent07 --></label>
+        <name>consent07</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- consent08 --></label>
+        <name>consent08</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- consent09 --></label>
+        <name>consent09</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- consent10 --></label>
+        <name>consent10</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- consent11 --></label>
+        <name>consent11</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- consent12 --></label>
+        <name>consent12</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- consent13 --></label>
+        <name>consent13</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- consent14 --></label>
+        <name>consent14</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- consent15 --></label>
+        <name>consent15</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- consent16 --></label>
+        <name>consent16</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- consent17 --></label>
+        <name>consent17</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- consent18 --></label>
+        <name>consent18</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- consent19 --></label>
+        <name>consent19</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- consent20 --></label>
+        <name>consent20</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- consent21 --></label>
+        <name>consent21</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- consent22 --></label>
+        <name>consent22</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- consent23 --></label>
+        <name>consent23</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- consent24 --></label>
+        <name>consent24</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- consent25 --></label>
+        <name>consent25</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- consent26 --></label>
+        <name>consent26</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- consent27 --></label>
+        <name>consent27</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- consent28 --></label>
+        <name>consent28</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- consent29 --></label>
+        <name>consent29</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- consent30 --></label>
+        <name>consent30</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- consent31 --></label>
+        <name>consent31</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- consent32 --></label>
+        <name>consent32</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- consent33 --></label>
+        <name>consent33</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- consent text 1 --></label>
+        <name>consent_text_1</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- consent text 10 --></label>
+        <name>consent_text_10</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- consent text 11 --></label>
+        <name>consent_text_11</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- consent text 12 --></label>
+        <name>consent_text_12</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- consent text 13 --></label>
+        <name>consent_text_13</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- consent text 14 --></label>
+        <name>consent_text_14</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- consent text 15 --></label>
+        <name>consent_text_15</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- consent text 2 --></label>
+        <name>consent_text_2</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- consent text 3 --></label>
+        <name>consent_text_3</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- consent text 4 --></label>
+        <name>consent_text_4</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- consent text 5 --></label>
+        <name>consent_text_5</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- consent text 6 --></label>
+        <name>consent_text_6</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- consent text 7 --></label>
+        <name>consent_text_7</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- consent text 8 --></label>
+        <name>consent_text_8</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- consent text 9 --></label>
+        <name>consent_text_9</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- consent text 9a --></label>
+        <name>consent_text_9a</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- cookie&amp;privacy --></label>
+        <name>cookie_privacy</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- copyright text --></label>
+        <name>copy</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- copyright_3 --></label>
+        <name>copyright3</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- copyright_1 --></label>
+        <name>copyright_1</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- copyright_2 --></label>
+        <name>copyright_2</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- dashboard page name ES --></label>
+        <name>dashboard_page_name_ES</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- debugConsole --></label>
+        <name>debugConsole</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- dlrts game text --></label>
+        <name>dlrts_game_text</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- face game first screen text 3 --></label>
+        <name>face_game_first_screen_text_3</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- face game name Actor --></label>
+        <name>face_game_name_Actor</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- face game name Athlete --></label>
+        <name>face_game_name_Athlete</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- face game name Chemist --></label>
+        <name>face_game_name_Chemist</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- face game name Designer --></label>
+        <name>face_game_name_Designer</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- face game name Gardener --></label>
+        <name>face_game_name_Gardener</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- face game name Lawyer --></label>
+        <name>face_game_name_Lawyer</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- face game name Pastor --></label>
+        <name>face_game_name_Pastor</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- face name game Actress --></label>
+        <name>face_name_game_Actress</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- face name game AmericanTVHost --></label>
+        <name>face_name_game_AmericanTVHost</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- face name game Americanactress --></label>
+        <name>face_name_game_Americanactress</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- face name game Architect --></label>
+        <name>face_name_game_Architect</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- face name game Cashier --></label>
+        <name>face_name_game_Cashier</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- face name game Celebrity --></label>
+        <name>face_name_game_Celebrity</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- face name game CivilRights --></label>
+        <name>face_name_game_CivilRights</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- face name game Comedian --></label>
+        <name>face_name_game_Comedian</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- face name game Conductor --></label>
+        <name>face_name_game_Conductor</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- face name game Detective --></label>
+        <name>face_name_game_Detective</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- face name game Doctor --></label>
+        <name>face_name_game_Doctor</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- face name game Dont Know --></label>
+        <name>face_name_game_Dont_Know</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- face name game Enter --></label>
+        <name>face_name_game_Enter</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- face name game Fireman --></label>
+        <name>face_name_game_Fireman</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- face name game FormerPresident --></label>
+        <name>face_name_game_FormerPresident</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- face name game Grocer --></label>
+        <name>face_name_game_Grocer</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- face name game Janitor --></label>
+        <name>face_name_game_Janitor</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- face name game Mechanic --></label>
+        <name>face_name_game_Mechanic</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- face name game Model --></label>
+        <name>face_name_game_Model</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- face name game Musician --></label>
+        <name>face_name_game_Musician</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- face name game Pilot --></label>
+        <name>face_name_game_Pilot</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- face name game Producer --></label>
+        <name>face_name_game_Producer</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- face name game Reporter --></label>
+        <name>face_name_game_Reporter</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- face name game Roman --></label>
+        <name>face_name_game_Roman</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- face name game Salesperson --></label>
+        <name>face_name_game_Salesperson</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- face name game Secretary --></label>
+        <name>face_name_game_Secretary</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- face name game Singersw --></label>
+        <name>face_name_game_Singersw</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- face name game Studioexecutive --></label>
+        <name>face_name_game_Studioexecutive</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- face name game Teacher --></label>
+        <name>face_name_game_Teacher</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- face name game Therapist --></label>
+        <name>face_name_game_Therapist</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- face name game USPresident --></label>
+        <name>face_name_game_USPresident</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- face name game Waiter --></label>
+        <name>face_name_game_Waiter</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- face name game WifeofUSPresident --></label>
+        <name>face_name_game_WifeofUSPresident</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- face name game text 0 --></label>
+        <name>face_name_game_text_0</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- face name game text 0a --></label>
+        <name>face_name_game_text_0a</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- face name game text 0a 1 --></label>
+        <name>face_name_game_text_0a_1</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- face name game text 0b --></label>
+        <name>face_name_game_text_0b</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- face name game text 0c --></label>
+        <name>face_name_game_text_0c</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- face name game text 1 --></label>
+        <name>face_name_game_text_1</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- face name game text 10 --></label>
+        <name>face_name_game_text_10</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- face name game text 11 --></label>
+        <name>face_name_game_text_11</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- face name game text 12 --></label>
+        <name>face_name_game_text_12</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- face name game text 12	a --></label>
+        <name>face_name_game_text_12_a</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- face_name_game_text_12_a tap --></label>
+        <name>face_name_game_text_12_a_tap</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- face name game text 13 --></label>
+        <name>face_name_game_text_13</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- face name game text 13 a --></label>
+        <name>face_name_game_text_13_a</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- face name game text 14 --></label>
+        <name>face_name_game_text_14</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- face name game text 14a --></label>
+        <name>face_name_game_text_14a</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- face_name_game_text_14a tap --></label>
+        <name>face_name_game_text_14a_tap</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- face name game text 14b --></label>
+        <name>face_name_game_text_14b</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- face name game text 15 --></label>
+        <name>face_name_game_text_15</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- face name game text 16 --></label>
+        <name>face_name_game_text_16</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- face name game text 17 --></label>
+        <name>face_name_game_text_17</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- face name game text 17 a --></label>
+        <name>face_name_game_text_17_a</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- face name game text 17 b --></label>
+        <name>face_name_game_text_17_b</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- face name game text 18 --></label>
+        <name>face_name_game_text_18</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- face name game text 19 --></label>
+        <name>face_name_game_text_19</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- face name game text 2 --></label>
+        <name>face_name_game_text_2</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- face name game text 20 --></label>
+        <name>face_name_game_text_20</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- face name game text 21 --></label>
+        <name>face_name_game_text_21</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- face name game text 21 a --></label>
+        <name>face_name_game_text_21_a</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- face_name_game_text_21_a tap --></label>
+        <name>face_name_game_text_21_a_tap</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- face name game text 22 --></label>
+        <name>face_name_game_text_22</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- face name game text 23 --></label>
+        <name>face_name_game_text_23</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- face_name_game_text_23 tap --></label>
+        <name>face_name_game_text_23_tap</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- face name game text 3 --></label>
+        <name>face_name_game_text_3</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- face name game text 4 --></label>
+        <name>face_name_game_text_4</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- face name game text 4 a --></label>
+        <name>face_name_game_text_4_a</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- face name game text 4 b --></label>
+        <name>face_name_game_text_4_b</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- face name game text 5 --></label>
+        <name>face_name_game_text_5</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- face name game text 5 a --></label>
+        <name>face_name_game_text_5_a</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- face_name_game_text_5_a tap --></label>
+        <name>face_name_game_text_5_a_tap</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- face name game text 6 --></label>
+        <name>face_name_game_text_6</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- face name game text 7 --></label>
+        <name>face_name_game_text_7</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- face_name_game_text_7 tap --></label>
+        <name>face_name_game_text_7_tap</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- face name game text 8 --></label>
+        <name>face_name_game_text_8</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- face name game text 9 --></label>
+        <name>face_name_game_text_9</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- face name instruction text 1 --></label>
+        <name>face_name_instruction_text_1</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- face name your Pattern --></label>
+        <name>face_name_your_Pattern</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- face stack Goal Pattern --></label>
+        <name>face_stack_Goal</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- facebook --></label>
+        <name>facebook</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- face name game config url --></label>
+        <name>facegame_config_url</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- faq --></label>
+        <name>faq</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- faq text 1 --></label>
+        <name>faq_text_1</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- faq text 10 --></label>
+        <name>faq_text_10</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- faq text 11 --></label>
+        <name>faq_text_11</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- faq text 12 --></label>
+        <name>faq_text_12</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- faq text 13 --></label>
+        <name>faq_text_13</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- faq text 14 --></label>
+        <name>faq_text_14</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- faq text 15 --></label>
+        <name>faq_text_15</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- faq text 16 --></label>
+        <name>faq_text_16</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- faq text 16a --></label>
+        <name>faq_text_16a</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- faq text 17 --></label>
+        <name>faq_text_17</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- faq text 18 --></label>
+        <name>faq_text_18</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- faq text 19 --></label>
+        <name>faq_text_19</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- faq text 2 --></label>
+        <name>faq_text_2</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- faq text 20 --></label>
+        <name>faq_text_20</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- faq text 21 --></label>
+        <name>faq_text_21</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- faq text 22 --></label>
+        <name>faq_text_22</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- faq text 23 --></label>
+        <name>faq_text_23</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- faq text 24 --></label>
+        <name>faq_text_24</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- faq text 25 --></label>
+        <name>faq_text_25</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- faq text 26 --></label>
+        <name>faq_text_26</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- faq text 3 --></label>
+        <name>faq_text_3</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- faq text 4 --></label>
+        <name>faq_text_4</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- faq text 5 --></label>
+        <name>faq_text_5</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- faq text 6 --></label>
+        <name>faq_text_6</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- faq text 7 --></label>
+        <name>faq_text_7</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- faq text 8 --></label>
+        <name>faq_text_8</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- faq text 9 --></label>
+        <name>faq_text_9</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- finish text 1 --></label>
+        <name>finish</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- finish text 10 --></label>
+        <name>finish_text_10</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- finish text 11 --></label>
+        <name>finish_text_11</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- finish text 12 --></label>
+        <name>finish_text_12</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- finish text 13 --></label>
+        <name>finish_text_13</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- finish text 13a --></label>
+        <name>finish_text_13a</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- finish text 14 --></label>
+        <name>finish_text_14</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- finish text 15 --></label>
+        <name>finish_text_15</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- finish text 16 --></label>
+        <name>finish_text_16</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- finish text 17 --></label>
+        <name>finish_text_17</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- finish text 18 --></label>
+        <name>finish_text_18</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- finish text 2 --></label>
+        <name>finish_text_2</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- finish_text_21 --></label>
+        <name>finish_text_21</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- finish text 3 --></label>
+        <name>finish_text_3</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- finish text 4 --></label>
+        <name>finish_text_4</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- finish text 5 --></label>
+        <name>finish_text_5</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- finish text 6 --></label>
+        <name>finish_text_6</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- finish text 7 --></label>
+        <name>finish_text_7</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- finish text 8 --></label>
+        <name>finish_text_8</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- finish text 9 --></label>
+        <name>finish_text_9</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- flanker Thanks --></label>
+        <name>flanker_Thanks</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- flanker correctText --></label>
+        <name>flanker_correctText</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- flanker errorText --></label>
+        <name>flanker_errorText</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- flanker firstScreen text3a --></label>
+        <name>flanker_firstScreen_text3a</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- flanker gameText 2 --></label>
+        <name>flanker_gameText_2</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- flanker gameText 3 --></label>
+        <name>flanker_gameText_3</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- flanker gameText 4 --></label>
+        <name>flanker_gameText_4</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- flanker gameText 5 --></label>
+        <name>flanker_gameText_5</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- flanker gameText 6 --></label>
+        <name>flanker_gameText_6</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- flanker gameText 6aa --></label>
+        <name>flanker_gameText_6aa</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- flanker gameText time --></label>
+        <name>flanker_gameText_time</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- flanker game text 0 --></label>
+        <name>flanker_game_text_0</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- flanker game text 1 --></label>
+        <name>flanker_game_text_1</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- flanker game text 10 --></label>
+        <name>flanker_game_text_10</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- flanker game text 11 --></label>
+        <name>flanker_game_text_11</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- flanker game text 12 --></label>
+        <name>flanker_game_text_12</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- flanker game text 13 --></label>
+        <name>flanker_game_text_13</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- flanker game text 13 tap --></label>
+        <name>flanker_game_text_13_tap</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- flanker game text 14 --></label>
+        <name>flanker_game_text_14</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- flanker game text 15 --></label>
+        <name>flanker_game_text_15</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- flanker game text 15a --></label>
+        <name>flanker_game_text_15a</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- flanker game text 16 --></label>
+        <name>flanker_game_text_16</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- flanker game text 16 a --></label>
+        <name>flanker_game_text_16_a</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- flanker_game_text_16_a tap --></label>
+        <name>flanker_game_text_16_a_tap</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- flanker_game_text_16 tap --></label>
+        <name>flanker_game_text_16_tap</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- flanker game text  19 --></label>
+        <name>flanker_game_text_19</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- flanker game text 3 --></label>
+        <name>flanker_game_text_3</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- flanker game text 4 --></label>
+        <name>flanker_game_text_4</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- flanker game text 4 a --></label>
+        <name>flanker_game_text_4_a</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- flanker_game_text_4_a tap --></label>
+        <name>flanker_game_text_4_a_tap</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- flanker game text 4 b --></label>
+        <name>flanker_game_text_4_b</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- flanker game text 4 b tap --></label>
+        <name>flanker_game_text_4_b_tap</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- flanker game text 5 --></label>
+        <name>flanker_game_text_5</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- flanker game text 6 --></label>
+        <name>flanker_game_text_6</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- flanker game text 7 --></label>
+        <name>flanker_game_text_7</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- flanker_game_text_7 tap --></label>
+        <name>flanker_game_text_7_tap</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- flanker game text 8 --></label>
+        <name>flanker_game_text_8</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- flanker_game_text_8 tap --></label>
+        <name>flanker_game_text_8_tap</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- flanker game text 9 --></label>
+        <name>flanker_game_text_9</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- flanker instruction text --></label>
+        <name>flanker_instruction_text</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- flanker myGames --></label>
+        <name>flanker_myGames</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- flanker myResult --></label>
+        <name>flanker_myResult</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- flanker resultRecordedText --></label>
+        <name>flanker_resultRecordedText</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- flanker resultRecordedText 1 --></label>
+        <name>flanker_resultRecordedText_1</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- flanker resultRecordedText 2 --></label>
+        <name>flanker_resultRecordedText_2</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- flanker spacebar text 1 --></label>
+        <name>flanker_spacebar_text_1</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- flanker spacebar text 2 --></label>
+        <name>flanker_spacebar_text_2</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- flanker welcomeText 1 --></label>
+        <name>flanker_welcomeText_1</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- focus game config url --></label>
+        <name>focus_game_config_url</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- game button 1 --></label>
+        <name>game_button_1</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- game button 2 --></label>
+        <name>game_button_2</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- game first screen Invalid key --></label>
+        <name>game_first_screen_Invalid_key</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- game first screen text --></label>
+        <name>game_first_screen_text</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- game first screen text 2 --></label>
+        <name>game_first_screen_text_2</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- game first screen text 3 --></label>
+        <name>game_first_screen_text_3</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- game first screen text 3 a --></label>
+        <name>game_first_screen_text_3_a</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- game first screen text 3 b --></label>
+        <name>game_first_screen_text_3_b</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- game first screen text 4 --></label>
+        <name>game_first_screen_text_4</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- game first screen text a --></label>
+        <name>game_first_screen_text_a</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- game name 1 --></label>
+        <name>game_name_1</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- game name 10 --></label>
+        <name>game_name_10</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- game name 2 --></label>
+        <name>game_name_2</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- game name 3 --></label>
+        <name>game_name_3</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- game name 4 --></label>
+        <name>game_name_4</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- game name 5 --></label>
+        <name>game_name_5</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- game name 6 --></label>
+        <name>game_name_6</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- game name 7 --></label>
+        <name>game_name_7</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- game name 8 --></label>
+        <name>game_name_8</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- game name 9 --></label>
+        <name>game_name_9</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- game name c --></label>
+        <name>game_name_c</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- game thanks text 1 --></label>
+        <name>game_thanks_text_1</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- game thanks text 2 --></label>
+        <name>game_thanks_text_2</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- game thanks text 2 a --></label>
+        <name>game_thanks_text_2_a</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- game thanks text 2 b --></label>
+        <name>game_thanks_text_2_b</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- game thanks text 2 c --></label>
+        <name>game_thanks_text_2_c</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- games get started text 1 --></label>
+        <name>games_get_started_text_1</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- games instruction text --></label>
+        <name>games_instruction_text</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- games ready text --></label>
+        <name>games_ready_text</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- games spacebar text 1 --></label>
+        <name>games_spacebar_text_1</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- games spacebar text 2 --></label>
+        <name>games_spacebar_text_2</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- games spacebar text 3 --></label>
+        <name>games_spacebar_text_3</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- games text 1 --></label>
+        <name>games_text_1</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- games text 2 --></label>
+        <name>games_text_2</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- games text 2_1 --></label>
+        <name>games_text_2_1</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- games text 2_2 --></label>
+        <name>games_text_2_2</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- games text 2_3 --></label>
+        <name>games_text_2_3</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- games text 2 4 --></label>
+        <name>games_text_2_4</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- games text 2a --></label>
+        <name>games_text_2a</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- games time 5 minute --></label>
+        <name>games_time_5_minute</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Home page Banner h3 --></label>
+        <name>h_Banner_h3</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- homesection1001 --></label>
+        <name>homesection1001</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- homesection1002 --></label>
+        <name>homesection1002</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- homesection1003 --></label>
+        <name>homesection1003</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- homesection1004 --></label>
+        <name>homesection1004</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- homesection1005 --></label>
+        <name>homesection1005</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- homesection1006 --></label>
+        <name>homesection1006</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- homesection2001 --></label>
+        <name>homesection2001</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- homesection2002 --></label>
+        <name>homesection2002</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- homesection2003 --></label>
+        <name>homesection2003</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- homesection3002 --></label>
+        <name>homesection3002</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- homesection3003 --></label>
+        <name>homesection3003</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- homesection3004 --></label>
+        <name>homesection3004</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- homesection4001 --></label>
+        <name>homesection4001</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- homesection4002 --></label>
+        <name>homesection4002</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- homesection4003 --></label>
+        <name>homesection4003</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- homesection4004 --></label>
+        <name>homesection4004</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- homesection4005 --></label>
+        <name>homesection4005</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- homesection4006 --></label>
+        <name>homesection4006</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- homesection4007 --></label>
+        <name>homesection4007</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- homesection4008 --></label>
+        <name>homesection4008</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- homesection4009 --></label>
+        <name>homesection4009</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- homesection4010 --></label>
+        <name>homesection4010</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- homesection4011 --></label>
+        <name>homesection4011</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- homesection4012 --></label>
+        <name>homesection4012</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- homesection4013 --></label>
+        <name>homesection4013</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- homesection4014 --></label>
+        <name>homesection4014</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- homesection4015 --></label>
+        <name>homesection4015</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- homesection4016 --></label>
+        <name>homesection4016</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- homesection5001 --></label>
+        <name>homesection5001</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- homesection5002 --></label>
+        <name>homesection5002</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- homesection5003 --></label>
+        <name>homesection5003</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- homesection5004 --></label>
+        <name>homesection5004</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- homesection5005 --></label>
+        <name>homesection5005</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- homesection5006 --></label>
+        <name>homesection5006</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- homesection5007 --></label>
+        <name>homesection5007</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- homesection5008 --></label>
+        <name>homesection5008</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- homesection5009 --></label>
+        <name>homesection5009</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- homesection6001 --></label>
+        <name>homesection6001</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- info faq text 1 --></label>
+        <name>info_faq_text_1</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- info faq text 10 --></label>
+        <name>info_faq_text_10</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- info faq text 11 --></label>
+        <name>info_faq_text_11</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- info faq text 12 --></label>
+        <name>info_faq_text_12</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- info faq text 12b --></label>
+        <name>info_faq_text_12b</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- info faq text 13 --></label>
+        <name>info_faq_text_13</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- info faq text 14 --></label>
+        <name>info_faq_text_14</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- info faq text 15 --></label>
+        <name>info_faq_text_15</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- info faq text 16 --></label>
+        <name>info_faq_text_16</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- info faq text 17 --></label>
+        <name>info_faq_text_17</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- info faq text 18 --></label>
+        <name>info_faq_text_18</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- info faq text 19 --></label>
+        <name>info_faq_text_19</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- info faq text 2 --></label>
+        <name>info_faq_text_2</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- info faq text 20 --></label>
+        <name>info_faq_text_20</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- info faq text 21 --></label>
+        <name>info_faq_text_21</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- info faq text 22 --></label>
+        <name>info_faq_text_22</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- info faq text 23 --></label>
+        <name>info_faq_text_23</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- info faq text 24 --></label>
+        <name>info_faq_text_24</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- info faq text 25 --></label>
+        <name>info_faq_text_25</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- info faq text 26 --></label>
+        <name>info_faq_text_26</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- info faq text 27 --></label>
+        <name>info_faq_text_27</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- info faq text 28 --></label>
+        <name>info_faq_text_28</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- info faq text 29 --></label>
+        <name>info_faq_text_29</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- info faq text 3 --></label>
+        <name>info_faq_text_3</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- info faq text 30 --></label>
+        <name>info_faq_text_30</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- info faq text 31 --></label>
+        <name>info_faq_text_31</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- info faq text 32 --></label>
+        <name>info_faq_text_32</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- info faq text 33 --></label>
+        <name>info_faq_text_33</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- info faq text 34 --></label>
+        <name>info_faq_text_34</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- info faq text 4 --></label>
+        <name>info_faq_text_4</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- info faq text 5 --></label>
+        <name>info_faq_text_5</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- info faq text 6 --></label>
+        <name>info_faq_text_6</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- info faq text 7 --></label>
+        <name>info_faq_text_7</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- info faq text 8 --></label>
+        <name>info_faq_text_8</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- info faq text 9 --></label>
+        <name>info_faq_text_9</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- keep track cat text 1 --></label>
+        <name>keep_track_cat_text_1</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- keep track cat text 2 --></label>
+        <name>keep_track_cat_text_2</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- keep track cat text 3 --></label>
+        <name>keep_track_cat_text_3</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- keep track cat text 4 --></label>
+        <name>keep_track_cat_text_4</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- keep track game config url --></label>
+        <name>keep_track_game_config_url</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- keep track game text 0 --></label>
+        <name>keep_track_game_text_0</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- keep track game text 1 --></label>
+        <name>keep_track_game_text_1</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- keep track game text 10 --></label>
+        <name>keep_track_game_text_10</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- keep track game text 11 --></label>
+        <name>keep_track_game_text_11</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- keep track game text 12 --></label>
+        <name>keep_track_game_text_12</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- keep track game text 13 --></label>
+        <name>keep_track_game_text_13</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- keep track game text  14 --></label>
+        <name>keep_track_game_text_14</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- keep track game text 15 --></label>
+        <name>keep_track_game_text_15</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- keep track game text 16 --></label>
+        <name>keep_track_game_text_16</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- keep track game text 17 --></label>
+        <name>keep_track_game_text_17</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- keep track game text 18 --></label>
+        <name>keep_track_game_text_18</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- keep track game text 19 --></label>
+        <name>keep_track_game_text_19</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- keep track game text 19 tap --></label>
+        <name>keep_track_game_text_19_tap</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- keep track game text 2 --></label>
+        <name>keep_track_game_text_2</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- keep track game text 20 --></label>
+        <name>keep_track_game_text_20</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- keep track game text 21 --></label>
+        <name>keep_track_game_text_21</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- keep track game text 22 --></label>
+        <name>keep_track_game_text_22</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- keep track game text 23 --></label>
+        <name>keep_track_game_text_23</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- keep track game text 24 --></label>
+        <name>keep_track_game_text_24</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- keep track game text 24 a --></label>
+        <name>keep_track_game_text_24_a</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- keep track game text 25 --></label>
+        <name>keep_track_game_text_25</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- keep track game text 26 --></label>
+        <name>keep_track_game_text_26</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- keep track game text 27 --></label>
+        <name>keep_track_game_text_27</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- keep track game text 28 --></label>
+        <name>keep_track_game_text_28</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- keep track game text 29 --></label>
+        <name>keep_track_game_text_29</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- keep track game text 2_tap --></label>
+        <name>keep_track_game_text_2_tap</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- keep track game text 3 --></label>
+        <name>keep_track_game_text_3</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- keep track game text 6 --></label>
+        <name>keep_track_game_text_6</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- keep track game text 7 --></label>
+        <name>keep_track_game_text_7</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- keep track game text 8 --></label>
+        <name>keep_track_game_text_8</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- keep track game text 9 --></label>
+        <name>keep_track_game_text_9</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- keep_track_game_text_correct --></label>
+        <name>keep_track_game_text_correct</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- live_URL_1 --></label>
+        <name>live_URL_1</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- live_URL_10 --></label>
+        <name>live_URL_10</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- live_URL_2 --></label>
+        <name>live_URL_2</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- live_URL_3 --></label>
+        <name>live_URL_3</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- live_URL_4 --></label>
+        <name>live_URL_4</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- live_URL_5 --></label>
+        <name>live_URL_5</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- live_URL_6 --></label>
+        <name>live_URL_6</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- live_URL_7 --></label>
+        <name>live_URL_7</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- live URL 8 --></label>
+        <name>live_URL_8</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- live URL 9 --></label>
+        <name>live_URL_9</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- maillingAddress --></label>
+        <name>maillingAddress</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- mdt0 game config url --></label>
+        <name>mdt0_game_config_url</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- mdts game config url --></label>
+        <name>mdts_game_config_url</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- mdtt game config url --></label>
+        <name>mdtt_game_config_url</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- memory Game Text 1 --></label>
+        <name>memory_Game_Text_1</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Memory Game Step 1 --></label>
+        <name>memory_Game_step_1</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Memory Game Step 2 --></label>
+        <name>memory_Game_step_2</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Memory Game Step 3 --></label>
+        <name>memory_Game_step_3</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Memory Game Step 4 --></label>
+        <name>memory_Game_step_4</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Memory Game Step 4a --></label>
+        <name>memory_Game_step_4a</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- mst_object_space_welcome --></label>
+        <name>mst_object_space_welcome</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- mst_object_time_50_pictures --></label>
+        <name>mst_object_time_50_pictures</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- mst_object_time_end --></label>
+        <name>mst_object_time_end</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- mst_object_time_final_part --></label>
+        <name>mst_object_time_final_part</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- mst_object_time_get_started --></label>
+        <name>mst_object_time_get_started</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- mst_object_time_last_round --></label>
+        <name>mst_object_time_last_round</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- mst_object_time_next_part --></label>
+        <name>mst_object_time_next_part</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- mst_object_time_picture_on_left --></label>
+        <name>mst_object_time_picture_on_left</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- mst_object_time_picture_on_right --></label>
+        <name>mst_object_time_picture_on_right</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- mst_object_time_play_again --></label>
+        <name>mst_object_time_play_again</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- mst_object_time_practice_round --></label>
+        <name>mst_object_time_practice_round</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- mst_object_time_thank_you --></label>
+        <name>mst_object_time_thank_you</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- mst_object_time_three_rounds --></label>
+        <name>mst_object_time_three_rounds</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- mst_object_time_two_pictures --></label>
+        <name>mst_object_time_two_pictures</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- mst_object_time_welcome --></label>
+        <name>mst_object_time_welcome</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- mst_object_time_welcometo --></label>
+        <name>mst_object_time_welcometo</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- mst_space_different_objects --></label>
+        <name>mst_space_different_objects</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- mst_space_index_fingers --></label>
+        <name>mst_space_index_fingers</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- mst_space_index_fingers_tap --></label>
+        <name>mst_space_index_fingers_tap</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- mst_space_indoor_object --></label>
+        <name>mst_space_indoor_object</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- mst_space_indoor_object_tap --></label>
+        <name>mst_space_indoor_object_tap</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- mst_space_last_time --></label>
+        <name>mst_space_last_time</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- mst_space_new_location --></label>
+        <name>mst_space_new_location</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- mst_space_outdoor_object --></label>
+        <name>mst_space_outdoor_object</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- mst_space_outdoor_object_tap --></label>
+        <name>mst_space_outdoor_object_tap</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- mst_space_same_location --></label>
+        <name>mst_space_same_location</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- mst_space_task_location --></label>
+        <name>mst_space_task_location</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- mst_space_text_indicate --></label>
+        <name>mst_space_text_indicate</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- mst_space_text_practice --></label>
+        <name>mst_space_text_practice</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- mst_space_text_practice_sessions --></label>
+        <name>mst_space_text_practice_sessions</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- mst_space_thank_you --></label>
+        <name>mst_space_thank_you</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- mst text 0 --></label>
+        <name>mst_text_0</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- mst text 0 a --></label>
+        <name>mst_text_0_a</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- mst text 0 b --></label>
+        <name>mst_text_0_b</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- mst text 1 --></label>
+        <name>mst_text_1</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- mst text 10 --></label>
+        <name>mst_text_10</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- mst text 11 --></label>
+        <name>mst_text_11</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- mst text 12 --></label>
+        <name>mst_text_12</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- mst text 12 a --></label>
+        <name>mst_text_12_a</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- mst text 13 --></label>
+        <name>mst_text_13</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- mst text 13_o --></label>
+        <name>mst_text_13_o</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- mst text 13_o 1 --></label>
+        <name>mst_text_13_o_1</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- mst text 13_o 2 --></label>
+        <name>mst_text_13_o_2</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- mst text 13_o	3 --></label>
+        <name>mst_text_13_o_3</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- mst text 13_s --></label>
+        <name>mst_text_13_s</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- mst text 13_s 1 --></label>
+        <name>mst_text_13_s_1</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- mst text 13_s 2 --></label>
+        <name>mst_text_13_s_2</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- mst text 13_s 3 --></label>
+        <name>mst_text_13_s_3</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- mst text 13_t --></label>
+        <name>mst_text_13_t</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- mst text 13_t 1 --></label>
+        <name>mst_text_13_t_1</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- mst text 13_t 2 --></label>
+        <name>mst_text_13_t_2</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- mst_text_13_t 3 --></label>
+        <name>mst_text_13_t_3</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- mst text 14 --></label>
+        <name>mst_text_14</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- mst text 15 --></label>
+        <name>mst_text_15</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- mst text 18 --></label>
+        <name>mst_text_18</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- mst text 18_b --></label>
+        <name>mst_text_18_b</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- mst text 18_c --></label>
+        <name>mst_text_18_c</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- mst text 19_a --></label>
+        <name>mst_text_19_a</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- mst text 19_b --></label>
+        <name>mst_text_19_b</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- mst text 1 a --></label>
+        <name>mst_text_1_a</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- mst text 1 a tap --></label>
+        <name>mst_text_1_a_tap</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- mst text 1 b --></label>
+        <name>mst_text_1_b</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- mst_text_1_b tap --></label>
+        <name>mst_text_1_b_tap</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- mst text 2 --></label>
+        <name>mst_text_2</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- mst text 20_a --></label>
+        <name>mst_text_20_a</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- mst text 20_a 1 --></label>
+        <name>mst_text_20_a_1</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- mst_text_20_a_1 tap --></label>
+        <name>mst_text_20_a_1_tap</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- mst text 20_a 2 --></label>
+        <name>mst_text_20_a_2</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- mst text 20_a 3 --></label>
+        <name>mst_text_20_a_3</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- mst text 20_a 4 --></label>
+        <name>mst_text_20_a_4</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- mst text 21_o --></label>
+        <name>mst_text_21_o</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- mst text 21_o	1 --></label>
+        <name>mst_text_21_o_1</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- mst_text_21_o_1 tap --></label>
+        <name>mst_text_21_o_1_tap</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- mst text 21_o 2 --></label>
+        <name>mst_text_21_o_2</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- mst_text_21_o_2 tap --></label>
+        <name>mst_text_21_o_2_tap</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- mst text 21_s --></label>
+        <name>mst_text_21_s</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- mst text 21_s 1 --></label>
+        <name>mst_text_21_s_1</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- mst_text_21_s_1_tap --></label>
+        <name>mst_text_21_s_1_tap</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- mst text 21_s 2 --></label>
+        <name>mst_text_21_s_2</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- mst text 21_s 2 tap --></label>
+        <name>mst_text_21_s_2_tap</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- mst text 21_t --></label>
+        <name>mst_text_21_t</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- mst text 21_t 1 --></label>
+        <name>mst_text_21_t_1</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- mst text 21_t 1 tap --></label>
+        <name>mst_text_21_t_1_tap</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- mst text 21_t 2 --></label>
+        <name>mst_text_21_t_2</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- mst text 21_t 2 tap --></label>
+        <name>mst_text_21_t_2_tap</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- mst text 25 --></label>
+        <name>mst_text_25</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- mst text 25 a --></label>
+        <name>mst_text_25_a</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- mst text 25 b --></label>
+        <name>mst_text_25_b</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- mst text 3 --></label>
+        <name>mst_text_3</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- mst text 4 --></label>
+        <name>mst_text_4</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- mst text 5 --></label>
+        <name>mst_text_5</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- mst text 6 --></label>
+        <name>mst_text_6</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- mst text 7 --></label>
+        <name>mst_text_7</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- mst text 8 --></label>
+        <name>mst_text_8</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- mst text 8 c --></label>
+        <name>mst_text_8_c</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- mst_text_8a --></label>
+        <name>mst_text_8a</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- mst_text_8b --></label>
+        <name>mst_text_8b</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- mst text 9 --></label>
+        <name>mst_text_9</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- mst text 9 0 --></label>
+        <name>mst_text_9_0</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- mst text 9 1 --></label>
+        <name>mst_text_9_1</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- mst_text_9_1 tap --></label>
+        <name>mst_text_9_1_tap</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- mst text 9 a --></label>
+        <name>mst_text_9_a</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- mst text 9 b --></label>
+        <name>mst_text_9_b</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- mst text 9 c --></label>
+        <name>mst_text_9_c</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- mst_text_Indoor --></label>
+        <name>mst_text_Indoor</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- mst_text_Left --></label>
+        <name>mst_text_Left</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- mst_text_My_Games --></label>
+        <name>mst_text_My_Games</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- mst text My results --></label>
+        <name>mst_text_My_results</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- mst_text_New --></label>
+        <name>mst_text_New</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- mst_text_Old --></label>
+        <name>mst_text_Old</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- mst_text_Outdoor --></label>
+        <name>mst_text_Outdoor</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- mst_text_Right --></label>
+        <name>mst_text_Right</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- mst_text_answer --></label>
+        <name>mst_text_answer</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- mst_text_complete --></label>
+        <name>mst_text_complete</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- mst text correct --></label>
+        <name>mst_text_correct</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- mst_text_different_objects --></label>
+        <name>mst_text_different_objects</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- mst_text_different_pictures --></label>
+        <name>mst_text_different_pictures</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- mst_text_final_part --></label>
+        <name>mst_text_final_part</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- mst_text_indicate --></label>
+        <name>mst_text_indicate</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- mst_text_indoor_object --></label>
+        <name>mst_text_indoor_object</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- mst_text_indoor_object_tap --></label>
+        <name>mst_text_indoor_object_tap</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- mst_text_last_time --></label>
+        <name>mst_text_last_time</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- mst_text_location --></label>
+        <name>mst_text_location</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- mst_text_next_part --></label>
+        <name>mst_text_next_part</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- mst_text_not_authorized --></label>
+        <name>mst_text_not_authorized</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- mst_text_object_Remember --></label>
+        <name>mst_text_object_Remember</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- mst_text_object_Remember1 --></label>
+        <name>mst_text_object_Remember1</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- mst_text_object_Remember2 --></label>
+        <name>mst_text_object_Remember2</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- mst_text_object_Remember2_1 --></label>
+        <name>mst_text_object_Remember2_1</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- mst_text_object_Remember2_2 --></label>
+        <name>mst_text_object_Remember2_2</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- mst_text_object_Remember2_tap --></label>
+        <name>mst_text_object_Remember2_tap</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- mst_text_object_correct --></label>
+        <name>mst_text_object_correct</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- mst_text_object_next_part --></label>
+        <name>mst_text_object_next_part</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- mst_text_object_next_part1 --></label>
+        <name>mst_text_object_next_part1</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- mst_text_object_next_part2 --></label>
+        <name>mst_text_object_next_part2</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- mst_text_object_picture2_new --></label>
+        <name>mst_text_object_picture2_new</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- mst_text_object_picture2_new_tap --></label>
+        <name>mst_text_object_picture2_new_tap</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- mst_text_object_picture2_old --></label>
+        <name>mst_text_object_picture2_old</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- mst_text_object_picture2_old_tap --></label>
+        <name>mst_text_object_picture2_old_tap</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- mst_text_object_picture3_new --></label>
+        <name>mst_text_object_picture3_new</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- mst_text_object_picture3_old --></label>
+        <name>mst_text_object_picture3_old</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- mst_text_object_picture_new --></label>
+        <name>mst_text_object_picture_new</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- mst_text_object_picture_new_tap --></label>
+        <name>mst_text_object_picture_new_tap</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- mst_text_object_picture_old --></label>
+        <name>mst_text_object_picture_old</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- mst_text_object_picture_old_tap --></label>
+        <name>mst_text_object_picture_old_tap</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- mst_text_object_play_again --></label>
+        <name>mst_text_object_play_again</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- mst_text_object_ready --></label>
+        <name>mst_text_object_ready</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- mst_text_object_ready2 --></label>
+        <name>mst_text_object_ready2</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- mst_text_object_ready3 --></label>
+        <name>mst_text_object_ready3</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- mst_text_object_recorded --></label>
+        <name>mst_text_object_recorded</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- mst_text_object_remember_1 --></label>
+        <name>mst_text_object_remember_1</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- mst_text_object_remember_2 --></label>
+        <name>mst_text_object_remember_2</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- mst_text_object_remember_3 --></label>
+        <name>mst_text_object_remember_3</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- mst_text_object_start --></label>
+        <name>mst_text_object_start</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- mst_text_object_task --></label>
+        <name>mst_text_object_task</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- mst_text_object_task2 --></label>
+        <name>mst_text_object_task2</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- mst_text_object_task2_new --></label>
+        <name>mst_text_object_task2_new</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- mst_text_object_task2_old --></label>
+        <name>mst_text_object_task2_old</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- mst_text_object_task_new --></label>
+        <name>mst_text_object_task_new</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- mst_text_object_task_old --></label>
+        <name>mst_text_object_task_old</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- mst_text_object_thankyou --></label>
+        <name>mst_text_object_thankyou</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- mst_text_object_welcome --></label>
+        <name>mst_text_object_welcome</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- mst_text_object_you_got --></label>
+        <name>mst_text_object_you_got</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- mst_text_outdoor_object --></label>
+        <name>mst_text_outdoor_object</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- mst_text_outdoor_object_tap --></label>
+        <name>mst_text_outdoor_object_tap</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- mst_text_pictures_presented --></label>
+        <name>mst_text_pictures_presented</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- mst_text_play_game --></label>
+        <name>mst_text_play_game</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- mst_text_practice --></label>
+        <name>mst_text_practice</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- mst_text_sapce_ready --></label>
+        <name>mst_text_sapce_ready</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- mst_text_space_New --></label>
+        <name>mst_text_space_New</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- mst_text_space_Remember --></label>
+        <name>mst_text_space_Remember</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- mst_text_space_remember_1 --></label>
+        <name>mst_text_space_remember_1</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- mst_text_space_remember_2 --></label>
+        <name>mst_text_space_remember_2</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- mst_text_space_remember_2_tap --></label>
+        <name>mst_text_space_remember_2_tap</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- mst_text_space_same --></label>
+        <name>mst_text_space_same</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- mst_text_thank_you --></label>
+        <name>mst_text_thank_you</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- mst text time 12a --></label>
+        <name>mst_text_time_12a</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- mst_text_time_take --></label>
+        <name>mst_text_time_take</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- mst text you got --></label>
+        <name>mst_text_you_got</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- myprofile text 03 --></label>
+        <name>myprofile_text_03</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- myprofile text 10 --></label>
+        <name>myprofile_text_10</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- myprofile text 12 --></label>
+        <name>myprofile_text_12</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- myprofile text 13 --></label>
+        <name>myprofile_text_13</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- nav text 1 --></label>
+        <name>nav_text_1</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- nav text 10 --></label>
+        <name>nav_text_10</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- nav text 10 t --></label>
+        <name>nav_text_10_t</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- nav text 11 --></label>
+        <name>nav_text_11</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- nav text 11 t --></label>
+        <name>nav_text_11_t</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- nav text 2 --></label>
+        <name>nav_text_2</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- nav text 3 --></label>
+        <name>nav_text_3</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- nav text 4 --></label>
+        <name>nav_text_4</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- nav text 5 --></label>
+        <name>nav_text_5</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- nav text 6 --></label>
+        <name>nav_text_6</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- nav text 7 --></label>
+        <name>nav_text_7</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- nav text 8 --></label>
+        <name>nav_text_8</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- nav text 8 t --></label>
+        <name>nav_text_8_t</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- nav text 9 --></label>
+        <name>nav_text_9</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- nav text 9 t --></label>
+        <name>nav_text_9_t</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- newPassword --></label>
+        <name>newPassword</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- next button text --></label>
+        <name>next_button_text</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- notification Body FacesNames --></label>
+        <name>notification_Body_FacesNames</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- notification Body Focus --></label>
+        <name>notification_Body_Focus</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- notification Body KeepTrack --></label>
+        <name>notification_Body_KeepTrack</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- notification Body Objects --></label>
+        <name>notification_Body_Objects</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- notification Body ObjectsSpace --></label>
+        <name>notification_Body_ObjectsSpace</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- notification Body ObjectsTime --></label>
+        <name>notification_Body_ObjectsTime</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- notification Body React --></label>
+        <name>notification_Body_React</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- notification Body Shapes --></label>
+        <name>notification_Body_Shapes</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- notification Body Switching --></label>
+        <name>notification_Body_Switching</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- notification Body Word Pairs --></label>
+        <name>notification_Body_Word_Pairs</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- notification Games Title --></label>
+        <name>notification_Games_Title</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- numberLetterGame_text_25 --></label>
+        <name>numberLetterGame_text25</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- numberLetterGame text 0 --></label>
+        <name>numberLetterGame_text_0</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- numberLetterGame text 0a --></label>
+        <name>numberLetterGame_text_0a</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- numberLetterGame text 0b --></label>
+        <name>numberLetterGame_text_0b</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- numberLetterGame text 1 --></label>
+        <name>numberLetterGame_text_1</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- numberLetterGame_text_11 --></label>
+        <name>numberLetterGame_text_11</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- numberLetterGame_text_12 --></label>
+        <name>numberLetterGame_text_12</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- numberLetterGame_text_12_a --></label>
+        <name>numberLetterGame_text_12_a</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- numberLetterGame_text_12 tap --></label>
+        <name>numberLetterGame_text_12_tap</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- numberLetterGame_text_14 --></label>
+        <name>numberLetterGame_text_14</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- numberLetterGame text 14a --></label>
+        <name>numberLetterGame_text_14a</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- numberLetterGame_text_15 --></label>
+        <name>numberLetterGame_text_15</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- numberLetterGame_text_15 tap --></label>
+        <name>numberLetterGame_text_15_tap</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- numberLetterGame_text_16 --></label>
+        <name>numberLetterGame_text_16</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- numberLetterGame_text_18 --></label>
+        <name>numberLetterGame_text_18</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- numberLetterGame_text_19 --></label>
+        <name>numberLetterGame_text_19</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- numberLetterGame text 1a --></label>
+        <name>numberLetterGame_text_1a</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- numberLetterGame text 2 --></label>
+        <name>numberLetterGame_text_2</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- numberLetterGame_text_22 --></label>
+        <name>numberLetterGame_text_22</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- numberLetterGame_text_22 tap --></label>
+        <name>numberLetterGame_text_22_tap</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- numberLetterGame_text_25 --></label>
+        <name>numberLetterGame_text_25</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- numberLetterGame_text_26 --></label>
+        <name>numberLetterGame_text_26</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- numberLetterGame_text_26_a --></label>
+        <name>numberLetterGame_text_26_a</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- numberLetterGame_text_26_a tap --></label>
+        <name>numberLetterGame_text_26_a_tap</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- numberLetterGame_text_27 --></label>
+        <name>numberLetterGame_text_27</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- numberLetterGame_text_27 tap --></label>
+        <name>numberLetterGame_text_27_tap</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- numberLetterGame_text_28 --></label>
+        <name>numberLetterGame_text_28</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- numberLetterGame_text_28 tap --></label>
+        <name>numberLetterGame_text_28_tap</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- numberLetterGame text 3 --></label>
+        <name>numberLetterGame_text_3</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- numberLetterGame text 4 --></label>
+        <name>numberLetterGame_text_4</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- numberLetterGame text 4_a --></label>
+        <name>numberLetterGame_text_4_a</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- numberLetterGame_text_4 tap --></label>
+        <name>numberLetterGame_text_4_tap</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- numberLetterGame text 7 --></label>
+        <name>numberLetterGame_text_7</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- numberLetterGame text 8 --></label>
+        <name>numberLetterGame_text_8</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- numberLetterGame text 9 --></label>
+        <name>numberLetterGame_text_9</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- numberLetterGame_text_9 tap --></label>
+        <name>numberLetterGame_text_9_tap</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- numberLetterGame text correct --></label>
+        <name>numberLetterGame_text_correct</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- numberLetterGame_text_incorrect --></label>
+        <name>numberLetterGame_text_incorrect</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- numberLetterGame_text_s332 --></label>
+        <name>numberLetterGame_text_s332</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- numberLetterGame_text_s332a --></label>
+        <name>numberLetterGame_text_s332a</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- numberLetterGame_text_s333a --></label>
+        <name>numberLetterGame_text_s333a</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- numberLetterGame time --></label>
+        <name>numberLetterGame_time</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- numberLetter game config url --></label>
+        <name>numberLetter_game_config_url</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- objTimefinalStudy01 --></label>
+        <name>objTimefinalStudy01</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- objTimefinalStudy01a --></label>
+        <name>objTimefinalStudy01a</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- objTimefinalStudy01b --></label>
+        <name>objTimefinalStudy01b</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- objTimefinalStudy02 --></label>
+        <name>objTimefinalStudy02</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- objTimefinalStudy03 --></label>
+        <name>objTimefinalStudy03</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- objTimefinalStudy04 --></label>
+        <name>objTimefinalStudy04</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- objTimefinalStudy04a --></label>
+        <name>objTimefinalStudy04a</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- objTimefinalStudy04b --></label>
+        <name>objTimefinalStudy04b</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- object game text 0 --></label>
+        <name>object_game_text_0</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- object game text 0 a --></label>
+        <name>object_game_text_0_a</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- object game text 0 b --></label>
+        <name>object_game_text_0_b</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- object game text 1 --></label>
+        <name>object_game_text_1</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- object game text 10 --></label>
+        <name>object_game_text_10</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- object game text 10	a --></label>
+        <name>object_game_text_10_a</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- object game text 11 --></label>
+        <name>object_game_text_11</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- object game text 11a --></label>
+        <name>object_game_text_11a</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- object game text 11b --></label>
+        <name>object_game_text_11b</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- object game text  12 --></label>
+        <name>object_game_text_12</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- object game text  13 --></label>
+        <name>object_game_text_13</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- object game text  14 --></label>
+        <name>object_game_text_14</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- object_game_text_14 tap --></label>
+        <name>object_game_text_14_tap</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- object game text  15 --></label>
+        <name>object_game_text_15</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- object_game_text_15 tap --></label>
+        <name>object_game_text_15_tap</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- object game text  16 --></label>
+        <name>object_game_text_16</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- object game text 16 a --></label>
+        <name>object_game_text_16_a</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- object game text 16 b --></label>
+        <name>object_game_text_16_b</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- object game text  17 --></label>
+        <name>object_game_text_17</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- object game text  18 --></label>
+        <name>object_game_text_18</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- object game text  19 --></label>
+        <name>object_game_text_19</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- object game text  2 --></label>
+        <name>object_game_text_2</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- object game text  20 --></label>
+        <name>object_game_text_20</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- object game text  21 --></label>
+        <name>object_game_text_21</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- object game text  22 --></label>
+        <name>object_game_text_22</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- object game text  23 --></label>
+        <name>object_game_text_23</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- object game text  24 --></label>
+        <name>object_game_text_24</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- object game text  25 --></label>
+        <name>object_game_text_25</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- object game text  27 --></label>
+        <name>object_game_text_27</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- object game text  28 --></label>
+        <name>object_game_text_28</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- object game text  2a --></label>
+        <name>object_game_text_2a</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- object game text 3 --></label>
+        <name>object_game_text_3</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- object game text 4 --></label>
+        <name>object_game_text_4</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- object game text 5 --></label>
+        <name>object_game_text_5</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- object game text 6 --></label>
+        <name>object_game_text_6</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- object game text 7 --></label>
+        <name>object_game_text_7</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- object game text 8 --></label>
+        <name>object_game_text_8</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- object_game_text_8 tap --></label>
+        <name>object_game_text_8_tap</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- object game text 9 --></label>
+        <name>object_game_text_9</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- object game text 9 a --></label>
+        <name>object_game_text_9_a</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- oldPassword --></label>
+        <name>oldPassword</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- opportunity image 1 --></label>
+        <name>opportunity_image_1</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- opportunity text 1 --></label>
+        <name>opportunity_text_1</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- opportunity text 2 --></label>
+        <name>opportunity_text_2</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- opportunity text 3 --></label>
+        <name>opportunity_text_3</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- opportunity text 4 --></label>
+        <name>opportunity_text_4</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- paired Game Text1 --></label>
+        <name>paired_Game_Text1</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- paired Game Text 00 --></label>
+        <name>paired_Game_Text_00</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- paired Game Text 10 --></label>
+        <name>paired_Game_Text_10</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- paired Game Text 13 --></label>
+        <name>paired_Game_Text_13</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- paired Game Text 16 --></label>
+        <name>paired_Game_Text_16</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- paired Game Text 18 --></label>
+        <name>paired_Game_Text_18</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- paired Game Text 2 --></label>
+        <name>paired_Game_Text_2</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- paired Game Text 20 --></label>
+        <name>paired_Game_Text_20</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- paired Game Text 21 --></label>
+        <name>paired_Game_Text_21</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- paired Game Text 22 --></label>
+        <name>paired_Game_Text_22</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- paired Game Text 23 --></label>
+        <name>paired_Game_Text_23</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- paired Game Text 24 --></label>
+        <name>paired_Game_Text_24</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- paired Game Text 28 --></label>
+        <name>paired_Game_Text_28</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- paired Game Text 3 --></label>
+        <name>paired_Game_Text_3</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- paired Game Text 32 --></label>
+        <name>paired_Game_Text_32</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- paired Game Text 33 --></label>
+        <name>paired_Game_Text_33</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- paired Game Text 34 --></label>
+        <name>paired_Game_Text_34</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- paired Game Text 35 --></label>
+        <name>paired_Game_Text_35</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- paired Game Text 4 --></label>
+        <name>paired_Game_Text_4</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- paired Game Text 5 --></label>
+        <name>paired_Game_Text_5</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- paired Game Text 6 --></label>
+        <name>paired_Game_Text_6</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- paired Game Text 60 --></label>
+        <name>paired_Game_Text_60</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- paired Game Text 61 --></label>
+        <name>paired_Game_Text_61</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- paired Game Text 62 --></label>
+        <name>paired_Game_Text_62</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- paired Game Text 62 a --></label>
+        <name>paired_Game_Text_62_a</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- paired_Game_Text_62 b --></label>
+        <name>paired_Game_Text_62_b</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- paired_Game_Text_62 c --></label>
+        <name>paired_Game_Text_62_c</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- paired_Game_Text_62 d --></label>
+        <name>paired_Game_Text_62_d</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- paired Game Text 62 e --></label>
+        <name>paired_Game_Text_62_e</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- paired Game Text 8 --></label>
+        <name>paired_Game_Text_8</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Game results text1 --></label>
+        <name>paired_game_results_text1</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- paired Game Text 0a --></label>
+        <name>paired_game_text_0a</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- problem image 1 --></label>
+        <name>problem_image_1</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- problem text 1 --></label>
+        <name>problem_text_1</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- problem text 2 --></label>
+        <name>problem_text_2</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- problem text 3 --></label>
+        <name>problem_text_3</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- problem text 4 --></label>
+        <name>problem_text_4</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- problem text 5 --></label>
+        <name>problem_text_5</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- problem text 6 --></label>
+        <name>problem_text_6</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- project image 1 --></label>
+        <name>project_image_1</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- project image 2 --></label>
+        <name>project_image_2</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- project image 3 --></label>
+        <name>project_image_3</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- project text 1 --></label>
+        <name>project_text_1</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- project text 2 --></label>
+        <name>project_text_2</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- project text 3 --></label>
+        <name>project_text_3</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- project text 4 --></label>
+        <name>project_text_4</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- project text 5 --></label>
+        <name>project_text_5</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- project text 6 --></label>
+        <name>project_text_6</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- project text 7 --></label>
+        <name>project_text_7</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- project text 8 --></label>
+        <name>project_text_8</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- react game config url --></label>
+        <name>react_game_config_url</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- react game text 0 --></label>
+        <name>react_game_text_0</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- react game text  0a --></label>
+        <name>react_game_text_0a</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- react game text 1 --></label>
+        <name>react_game_text_1</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- react game text 11 --></label>
+        <name>react_game_text_11</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- react game text 11 a --></label>
+        <name>react_game_text_11_a</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- react_game_text_11 tap --></label>
+        <name>react_game_text_11_tap</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- react game text 12 --></label>
+        <name>react_game_text_12</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- react game text 13 --></label>
+        <name>react_game_text_13</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- react game text 14 --></label>
+        <name>react_game_text_14</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- react game text 15 --></label>
+        <name>react_game_text_15</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- react game text 16 --></label>
+        <name>react_game_text_16</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- react game text 16 a --></label>
+        <name>react_game_text_16_a</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- react_game_text_16 tap --></label>
+        <name>react_game_text_16_tap</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- react game text 17 --></label>
+        <name>react_game_text_17</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- react game text 18 --></label>
+        <name>react_game_text_18</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- react_game_text_18 a --></label>
+        <name>react_game_text_18_a</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- react_game_text_18_a tap --></label>
+        <name>react_game_text_18_a_tap</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- react_game_text_18 tap --></label>
+        <name>react_game_text_18_tap</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- react game text 19 --></label>
+        <name>react_game_text_19</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- react_game_text_1_a --></label>
+        <name>react_game_text_1_a</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- react_game_text_1_a tap --></label>
+        <name>react_game_text_1_a_tap</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- react_game_text_1_tap --></label>
+        <name>react_game_text_1_tap</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- react game text 2 --></label>
+        <name>react_game_text_2</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- react game text 20 --></label>
+        <name>react_game_text_20</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- react game text 21 --></label>
+        <name>react_game_text_21</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- react game text  22 --></label>
+        <name>react_game_text_22</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- react game text  23 --></label>
+        <name>react_game_text_23</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- react game text  24 --></label>
+        <name>react_game_text_24</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- react game text  25 --></label>
+        <name>react_game_text_25</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- react game text  26 --></label>
+        <name>react_game_text_26</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- react game text  27 --></label>
+        <name>react_game_text_27</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- react game text 3 --></label>
+        <name>react_game_text_3</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- react game text 4 --></label>
+        <name>react_game_text_4</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- react_game_text_4 tap --></label>
+        <name>react_game_text_4_tap</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- react game text 6 --></label>
+        <name>react_game_text_6</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- react game text 7 --></label>
+        <name>react_game_text_7</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- react game text 8 --></label>
+        <name>react_game_text_8</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- redirection text 1 --></label>
+        <name>redirection_text_1</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- rejection1 --></label>
+        <name>rejection1</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- results text 1 --></label>
+        <name>results_text_1</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- results text 2 --></label>
+        <name>results_text_2</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- results text 3 --></label>
+        <name>results_text_3</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- results text 4 --></label>
+        <name>results_text_4</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- results text 5 --></label>
+        <name>results_text_5</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- results text 6 --></label>
+        <name>results_text_6</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- results text 7 --></label>
+        <name>results_text_7</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- results text 8 --></label>
+        <name>results_text_8</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- results text 9 --></label>
+        <name>results_text_9</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- rule --></label>
+        <name>rule</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- rule 1 --></label>
+        <name>rule_1</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- rule 2 --></label>
+        <name>rule_2</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- scientific game dearySimpleAndComplexReactionTime --></label>
+        <name>scientific_game_dearySimpleAndComplexReactionTime</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- scientific game faceNameAssociates --></label>
+        <name>scientific_game_faceNameAssociates</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- scientific game flanker --></label>
+        <name>scientific_game_flanker</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- scientific game keepTrack --></label>
+        <name>scientific_game_keepTrack</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- scientific game letterNumberSequencing --></label>
+        <name>scientific_game_letterNumberSequencing</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- scientific game objectDiscrimination --></label>
+        <name>scientific_game_objectDiscrimination</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- scientific game objectRecognitionAndSimilarity --></label>
+        <name>scientific_game_objectRecognitionAndSimilarity</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- scientific game objectSpatial --></label>
+        <name>scientific_game_objectSpatial</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- scientific game objectTemporal --></label>
+        <name>scientific_game_objectTemporal</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- scientific game verbalPairedAssociates --></label>
+        <name>scientific_game_verbalPairedAssociates</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- shapes game config url --></label>
+        <name>shapes_game_config_url</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- sharingmyresults text 1 --></label>
+        <name>sharingmyresults_text_1</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- sharingmyresults text 2 --></label>
+        <name>sharingmyresults_text_2</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- sharingmyresults_text_3 --></label>
+        <name>sharingmyresults_text_3</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- shrd title --></label>
+        <name>shrd_title</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- stack image --></label>
+        <name>stack_image</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- state text --></label>
+        <name>state_text</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- step 1 --></label>
+        <name>step_1</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- step 2 --></label>
+        <name>step_2</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- step 3 --></label>
+        <name>step_3</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- step 4 --></label>
+        <name>step_4</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- step_4a --></label>
+        <name>step_4a</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- tapjoy url --></label>
+        <name>tapjoy_url</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- team text 1 --></label>
+        <name>team_text_1</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- team text 2 --></label>
+        <name>team_text_2</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- team text 3 --></label>
+        <name>team_text_3</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- team text 4 --></label>
+        <name>team_text_4</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- team text 5 --></label>
+        <name>team_text_5</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- team text 6 --></label>
+        <name>team_text_6</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- team text 7 --></label>
+        <name>team_text_7</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- team text 8 --></label>
+        <name>team_text_8</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- team text 9 --></label>
+        <name>team_text_9</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- testlanguage EN --></label>
+        <name>testlanguage_EN</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- testlanguage ES --></label>
+        <name>testlanguage_ES</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- tower of London text 0 --></label>
+        <name>tower_of_London_text_0</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- tower of London text 1 --></label>
+        <name>tower_of_London_text_1</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- tower of London text 2 --></label>
+        <name>tower_of_London_text_2</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- tower_of_London_text_2 tap --></label>
+        <name>tower_of_London_text_2_tap</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- tower of London text 3 --></label>
+        <name>tower_of_London_text_3</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- tower of London text 4 --></label>
+        <name>tower_of_London_text_4</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- tower_of_London_text_4 tap --></label>
+        <name>tower_of_London_text_4_tap</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- tower of London text 5 --></label>
+        <name>tower_of_London_text_5</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- url Objects Space --></label>
+        <name>url_Objects_Space</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- url aboutyourbrain --></label>
+        <name>url_aboutyourbrain</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- url additionalquestions --></label>
+        <name>url_additionalquestions</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- url attentiontest --></label>
+        <name>url_attentiontest</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- url attentiontest page1 --></label>
+        <name>url_attentiontest_page1</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- url attentiontest page2 --></label>
+        <name>url_attentiontest_page2</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- url attentiontest page3 --></label>
+        <name>url_attentiontest_page3</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- url attentiontest page4 --></label>
+        <name>url_attentiontest_page4</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- url attentiontest page5 --></label>
+        <name>url_attentiontest_page5</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- url attentiontest page6 --></label>
+        <name>url_attentiontest_page6</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- url attentiontestcomplete --></label>
+        <name>url_attentiontestcomplete</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- url consent --></label>
+        <name>url_consent</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- url dashboard --></label>
+        <name>url_dashboard</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- url dashboard jump --></label>
+        <name>url_dashboard_jump</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- url emailrequestvipinvite --></label>
+        <name>url_emailrequestvipinvite</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- url flankergame --></label>
+        <name>url_flankergame</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- url keeptrackgame --></label>
+        <name>url_keeptrackgame</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- url login --></label>
+        <name>url_login</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- url me Objects - Time --></label>
+        <name>url_me_Objects_Time</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- url me-flankergame --></label>
+        <name>url_me_flankergame</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- url me-keeptrackgame --></label>
+        <name>url_me_keeptrackgame</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- url me-namesandfacesgame --></label>
+        <name>url_me_namesandfacesgame</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- url me-objects --></label>
+        <name>url_me_objects</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- url me-reactgame --></label>
+        <name>url_me_reactgame</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- url me-shapesgame --></label>
+        <name>url_me_shapesgame</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- url me-switchinggame --></label>
+        <name>url_me_switchinggame</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- url me-wordpairsgame --></label>
+        <name>url_me_wordpairsgame</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- url memorytest --></label>
+        <name>url_memorytest</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- url memorytest page 1 --></label>
+        <name>url_memorytest_page_1</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- url memorytest page 2 --></label>
+        <name>url_memorytest_page_2</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- url memorytest page 3 --></label>
+        <name>url_memorytest_page_3</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- url memorytest page 4 --></label>
+        <name>url_memorytest_page_4</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- url memorytest page 5 --></label>
+        <name>url_memorytest_page_5</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- url memorytest page 6 --></label>
+        <name>url_memorytest_page_6</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- url memorytest page 7 --></label>
+        <name>url_memorytest_page_7</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- url memorytest page 8 --></label>
+        <name>url_memorytest_page_8</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- url memorytest page 9 --></label>
+        <name>url_memorytest_page_9</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- url memorytestcompleted --></label>
+        <name>url_memorytestcompleted</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- url myresults --></label>
+        <name>url_myresults</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- url namesandfacesgame --></label>
+        <name>url_namesandfacesgame</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- url objects --></label>
+        <name>url_objects</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- url passwordrecovery --></label>
+        <name>url_passwordrecovery</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- url printconsent --></label>
+        <name>url_printconsent</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- url profile --></label>
+        <name>url_profile</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- url reactgame --></label>
+        <name>url_reactgame</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- url results --></label>
+        <name>url_results</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- url shapesgame --></label>
+        <name>url_shapesgame</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- url sharingmyresults --></label>
+        <name>url_sharingmyresults</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- url switchinggame --></label>
+        <name>url_switchinggame</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- url testlanguage --></label>
+        <name>url_testlanguage</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- url testlanguage jump LG --></label>
+        <name>url_testlanguage_jump_LG</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- url wordpairsgame --></label>
+        <name>url_wordpairsgame</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- wordPairs game config url --></label>
+        <name>wordPairs_game_config_url</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- word pairs game text 34 --></label>
+        <name>word_pairs_game_3</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- word pairs game 34 --></label>
+        <name>word_pairs_game_34</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- word pairs game 35 --></label>
+        <name>word_pairs_game_35</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- word pairs game 37 --></label>
+        <name>word_pairs_game_37</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- word pairs game 44 --></label>
+        <name>word_pairs_game_44</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- word pairs game 5 minutes --></label>
+        <name>word_pairs_game_5_minutes</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- word pairs game alone --></label>
+        <name>word_pairs_game_alone</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- word pairs game apple --></label>
+        <name>word_pairs_game_apple</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- word pairs game bird --></label>
+        <name>word_pairs_game_bird</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- word pairs game boat --></label>
+        <name>word_pairs_game_boat</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- word pairs game bring --></label>
+        <name>word_pairs_game_bring</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- word pairs game brown --></label>
+        <name>word_pairs_game_brown</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- word pairs game cake --></label>
+        <name>word_pairs_game_cake</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- word pairs game candle --></label>
+        <name>word_pairs_game_candle</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- word pairs game care --></label>
+        <name>word_pairs_game_care</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- word pairs game castle --></label>
+        <name>word_pairs_game_castle</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- word pairs game clean --></label>
+        <name>word_pairs_game_clean</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- word pairs game clothes --></label>
+        <name>word_pairs_game_clothes</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- word pairs game door --></label>
+        <name>word_pairs_game_door</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- word pairs game dress --></label>
+        <name>word_pairs_game_dress</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- word pairs game duck --></label>
+        <name>word_pairs_game_duck</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- word pairs game eat --></label>
+        <name>word_pairs_game_eat</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- word pairs game enter --></label>
+        <name>word_pairs_game_enter</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- word pairs game fast --></label>
+        <name>word_pairs_game_fast</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- word pairs game flag --></label>
+        <name>word_pairs_game_flag</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- word pairs game fly --></label>
+        <name>word_pairs_game_fly</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- word pairs game friend --></label>
+        <name>word_pairs_game_friend</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- word pairs game funny --></label>
+        <name>word_pairs_game_funny</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- word pairs game garden --></label>
+        <name>word_pairs_game_garden</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- word pairs game glue --></label>
+        <name>word_pairs_game_glue</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- word pairs game grass --></label>
+        <name>word_pairs_game_grass</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- word pairs game green --></label>
+        <name>word_pairs_game_green</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- word pairs game hair --></label>
+        <name>word_pairs_game_hair</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- word pairs game hard --></label>
+        <name>word_pairs_game_hard</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- word pairs game help --></label>
+        <name>word_pairs_game_help</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- word pairs game hope --></label>
+        <name>word_pairs_game_hope</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- word pairs game horse --></label>
+        <name>word_pairs_game_horse</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- word pairs game house --></label>
+        <name>word_pairs_game_house</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- word pairs game kind --></label>
+        <name>word_pairs_game_kind</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- word pairs game large --></label>
+        <name>word_pairs_game_large</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- word pairs game life --></label>
+        <name>word_pairs_game_life</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- word pairs game money --></label>
+        <name>word_pairs_game_money</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- word pairs game mouth --></label>
+        <name>word_pairs_game_mouth</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- word pairs game name --></label>
+        <name>word_pairs_game_name</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- word pairs game never --></label>
+        <name>word_pairs_game_never</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- word pairs game night --></label>
+        <name>word_pairs_game_night</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- word pairs game nose --></label>
+        <name>word_pairs_game_nose</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- word pairs game number --></label>
+        <name>word_pairs_game_number</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- word pairs game pair --></label>
+        <name>word_pairs_game_pair</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- word pairs game poor --></label>
+        <name>word_pairs_game_poor</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- word pairs game public --></label>
+        <name>word_pairs_game_public</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- word pairs game pumpkin --></label>
+        <name>word_pairs_game_pumpkin</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- word pairs game queen --></label>
+        <name>word_pairs_game_queen</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- word pairs game rain --></label>
+        <name>word_pairs_game_rain</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- word pairs game ride --></label>
+        <name>word_pairs_game_ride</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- word pairs game river --></label>
+        <name>word_pairs_game_river</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- word pairs game sister --></label>
+        <name>word_pairs_game_sister</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- word pairs game sit --></label>
+        <name>word_pairs_game_sit</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- word pairs game snow --></label>
+        <name>word_pairs_game_snow</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- word pairs game socks --></label>
+        <name>word_pairs_game_socks</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- word pairs game spoon --></label>
+        <name>word_pairs_game_spoon</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- word pairs game text  0 --></label>
+        <name>word_pairs_game_text_0</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- word pairs game text  0a --></label>
+        <name>word_pairs_game_text_0a</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- word pairs game text  0b --></label>
+        <name>word_pairs_game_text_0b</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- word_pairs_game_text_0b_tap --></label>
+        <name>word_pairs_game_text_0b_tap</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- word pairs game text 1 --></label>
+        <name>word_pairs_game_text_1</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- word pairs game text  11 --></label>
+        <name>word_pairs_game_text_11</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- word pairs game text  12 --></label>
+        <name>word_pairs_game_text_12</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- word pairs game text  19 --></label>
+        <name>word_pairs_game_text_19</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- word pairs game text 19 1 --></label>
+        <name>word_pairs_game_text_19_1</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- word pairs game text 19 a --></label>
+        <name>word_pairs_game_text_19_a</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- word pairs game text 19 b --></label>
+        <name>word_pairs_game_text_19_b</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- word pairs game text 2 --></label>
+        <name>word_pairs_game_text_2</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- word pairs game text  20 --></label>
+        <name>word_pairs_game_text_20</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- word pairs game text 21 --></label>
+        <name>word_pairs_game_text_21</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- word pairs game text  22 --></label>
+        <name>word_pairs_game_text_22</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- word pairs game text  23 --></label>
+        <name>word_pairs_game_text_23</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- word pairs game text  25 --></label>
+        <name>word_pairs_game_text_25</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- word pairs game text  26 --></label>
+        <name>word_pairs_game_text_26</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- word pairs game text  27 --></label>
+        <name>word_pairs_game_text_27</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- word pairs game text  3 --></label>
+        <name>word_pairs_game_text_3</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- word pairs game text 31 --></label>
+        <name>word_pairs_game_text_31</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- word pairs game text 33 --></label>
+        <name>word_pairs_game_text_33</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- word pairs game text 36 --></label>
+        <name>word_pairs_game_text_36</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- word pairs game text 38 --></label>
+        <name>word_pairs_game_text_38</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- word pairs game text 39 --></label>
+        <name>word_pairs_game_text_39</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- word pairs game text 40 --></label>
+        <name>word_pairs_game_text_40</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- word pairs game text 41 --></label>
+        <name>word_pairs_game_text_41</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- word pairs game text 42 --></label>
+        <name>word_pairs_game_text_42</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- word pairs game text 43 --></label>
+        <name>word_pairs_game_text_43</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- word pairs game text 46 --></label>
+        <name>word_pairs_game_text_46</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- word pairs game text 47 --></label>
+        <name>word_pairs_game_text_47</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- word pairs game text  5 --></label>
+        <name>word_pairs_game_text_5</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- word pairs game text 5 a --></label>
+        <name>word_pairs_game_text_5_a</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- word pairs game text 5 b --></label>
+        <name>word_pairs_game_text_5_b</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- word_pairs_game_text_5_b_tap --></label>
+        <name>word_pairs_game_text_5_b_tap</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- word pairs game text  6 --></label>
+        <name>word_pairs_game_text_6</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- word pairs game text  8 --></label>
+        <name>word_pairs_game_text_8</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- word pairs game text  9 --></label>
+        <name>word_pairs_game_text_9</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- word pairs game time --></label>
+        <name>word_pairs_game_time</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- word pairs game today --></label>
+        <name>word_pairs_game_today</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- word pairs game town --></label>
+        <name>word_pairs_game_town</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- word pairs game truck --></label>
+        <name>word_pairs_game_truck</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- word pairs game under --></label>
+        <name>word_pairs_game_under</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- word pairs game wash --></label>
+        <name>word_pairs_game_wash</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- word pairs game week --></label>
+        <name>word_pairs_game_week</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- word pairs game write --></label>
+        <name>word_pairs_game_write</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- zip text --></label>
+        <name>zip_text</name>
+    </customLabels>
+    <customTabs>
+        <label><!-- Admin Dashboard --></label>
+        <name>AdminDashBoard</name>
+    </customTabs>
+    <customTabs>
+        <label><!-- Receive Shipment --></label>
+        <name>Receive_Shipment</name>
+    </customTabs>
+    <customTabs>
+        <label><!-- TestResultsDashBoard --></label>
+        <name>TestResultsDashBoard</name>
+    </customTabs>
+    <flowDefinitions>
+        <flows/>
+        <fullName>ADL_Survey</fullName>
+    </flowDefinitions>
+    <flowDefinitions>
+        <flows/>
+        <fullName>ANXIETY_Survey</fullName>
+    </flowDefinitions>
+    <flowDefinitions>
+        <flows/>
+        <fullName>Brain_Disease_Survey</fullName>
+    </flowDefinitions>
+    <flowDefinitions>
+        <flows/>
+        <fullName>Cancer_Survey</fullName>
+    </flowDefinitions>
+    <flowDefinitions>
+        <flows/>
+        <fullName>Covid_Survey</fullName>
+    </flowDefinitions>
+    <flowDefinitions>
+        <flows/>
+        <fullName>DIET_Survey</fullName>
+    </flowDefinitions>
+    <flowDefinitions>
+        <flows/>
+        <fullName>FHAD_Survey</fullName>
+    </flowDefinitions>
+    <flowDefinitions>
+        <flows/>
+        <fullName>Health_Medical_Survey</fullName>
+    </flowDefinitions>
+    <flowDefinitions>
+        <flows/>
+        <fullName>Heat_Survey</fullName>
+    </flowDefinitions>
+    <flowDefinitions>
+        <flows/>
+        <fullName>PGI_Total_Reaction_Time</fullName>
+    </flowDefinitions>
+    <flowDefinitions>
+        <flows/>
+        <fullName>PGI_Version_Update</fullName>
+    </flowDefinitions>
+    <flowDefinitions>
+        <flows/>
+        <fullName>PGR_Removal_From_PGI</fullName>
+    </flowDefinitions>
+    <flowDefinitions>
+        <flows/>
+        <fullName>PGR_Version_Update</fullName>
+    </flowDefinitions>
+    <flowDefinitions>
+        <flows/>
+        <fullName>Percieved_Stress_Survey</fullName>
+    </flowDefinitions>
+    <flowDefinitions>
+        <flows/>
+        <fullName>QPAR_Survey</fullName>
+    </flowDefinitions>
+    <flowDefinitions>
+        <flows/>
+        <fullName>SWLS_Survey</fullName>
+    </flowDefinitions>
+    <flowDefinitions>
+        <flows/>
+        <fullName>Ses_Survey</fullName>
+    </flowDefinitions>
+    <flowDefinitions>
+        <flows/>
+        <fullName>Sleep_Survey</fullName>
+    </flowDefinitions>
+    <flowDefinitions>
+        <flows/>
+        <fullName>Social_Stressor_Survey</fullName>
+    </flowDefinitions>
+    <flowDefinitions>
+        <flows/>
+        <fullName>Social_Support_Surveys</fullName>
+    </flowDefinitions>
+    <flowDefinitions>
+        <flows/>
+        <fullName>Subjective_English_Survey</fullName>
+    </flowDefinitions>
+    <flowDefinitions>
+        <flows/>
+        <fullName>Unsubscribe_Child_Contact_Records</fullName>
+    </flowDefinitions>
+    <flowDefinitions>
+        <flows/>
+        <fullName>Update_Bean_game_created_date</fullName>
+    </flowDefinitions>
+    <flowDefinitions>
+        <flows/>
+        <fullName>Update_Disenrollment_Date</fullName>
+    </flowDefinitions>
+    <flowDefinitions>
+        <flows/>
+        <fullName>Update_Project_Enrolled</fullName>
+    </flowDefinitions>
+    <flowDefinitions>
+        <flows/>
+        <fullName>Womens_Health_Survey</fullName>
+    </flowDefinitions>
+    <quickActions>
+        <label><!-- Guest Community Case --></label>
+        <name>GuestCommunityCase</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- LogACall --></label>
+        <name>LogACall</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- NewAccount --></label>
+        <name>NewAccount</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- NewCase --></label>
+        <name>NewCase</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- New Community Case --></label>
+        <name>NewCommunityCase</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- NewContact --></label>
+        <name>NewContact</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- NewEvent --></label>
+        <name>NewEvent</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- NewGroup --></label>
+        <name>NewGroup</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- NewLead --></label>
+        <name>NewLead</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- NewNote --></label>
+        <name>NewNote</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- NewOpportunity --></label>
+        <name>NewOpportunity</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- NewTask --></label>
+        <name>NewTask</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- SendEmail --></label>
+        <name>SendEmail</name>
+    </quickActions>
+</Translations>

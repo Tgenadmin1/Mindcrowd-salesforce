@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Shipping Detail</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Shipping Details</value>
+    </caseValues>
+    <fields>
+        <label><!-- APOE Genotype --></label>
+        <name>APOE_Genotype__c</name>
+    </fields>
+    <fields>
+        <label><!-- Address --></label>
+        <name>Address__c</name>
+    </fields>
+    <fields>
+        <label><!-- Barcode (External) --></label>
+        <name>Barcode_External__c</name>
+    </fields>
+    <fields>
+        <label><!-- Barcode --></label>
+        <name>Barcode__c</name>
+    </fields>
+    <fields>
+        <label><!-- Campaign --></label>
+        <name>Campaign__c</name>
+        <relationshipLabel><!-- Shipping Details --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Contact Id --></label>
+        <name>Contact_Id__c</name>
+        <relationshipLabel><!-- Shipping Details --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Language --></label>
+        <name>Language__c</name>
+    </fields>
+    <fields>
+        <label><!-- Price --></label>
+        <name>Price__c</name>
+    </fields>
+    <fields>
+        <label><!-- QR Code --></label>
+        <name>QR_Code__c</name>
+    </fields>
+    <fields>
+        <label><!-- Return Status Code --></label>
+        <name>Return_Status_Code__c</name>
+    </fields>
+    <fields>
+        <label><!-- Return Status --></label>
+        <name>Return_Status__c</name>
+    </fields>
+    <fields>
+        <label><!-- Return Track Summary --></label>
+        <name>Return_Track_Summary__c</name>
+    </fields>
+    <fields>
+        <label><!-- Return TrackingId --></label>
+        <name>Return_TrackingId__c</name>
+    </fields>
+    <fields>
+        <label><!-- Sex --></label>
+        <name>Sex__c</name>
+    </fields>
+    <fields>
+        <label><!-- Shipment Received Date --></label>
+        <name>Shipment_Received_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Shipment Sent Date --></label>
+        <name>Shipment_Sent_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Shipment Status --></label>
+        <name>Shipment_Status__c</name>
+        <picklistValues>
+            <masterLabel>Consented</masterLabel>
+            <translation><!-- Consented --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Created</masterLabel>
+            <translation><!-- Created --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Delivered</masterLabel>
+            <translation><!-- Delivered --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Failed</masterLabel>
+            <translation><!-- Failed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Invalid Address</masterLabel>
+            <translation><!-- Invalid Address --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Received</masterLabel>
+            <translation><!-- Received --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sent</masterLabel>
+            <translation><!-- Sent --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Shipping Address --></label>
+        <name>Shipping_Address__c</name>
+    </fields>
+    <fields>
+        <label><!-- Track Shipment --></label>
+        <name>Track_Shipment__c</name>
+    </fields>
+    <fields>
+        <label><!-- Track Summary --></label>
+        <name>Track_Summary__c</name>
+    </fields>
+    <fields>
+        <label><!-- Tracking Id --></label>
+        <name>Tracking_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- USPSLabelImage --></label>
+        <name>USPSLabelImage__c</name>
+    </fields>
+    <fields>
+        <label><!-- USPSReturnLabelImage --></label>
+        <name>USPSReturnLabelImage__c</name>
+    </fields>
+    <fields>
+        <label><!-- USPS Status Code --></label>
+        <name>USPS_Status_Code__c</name>
+    </fields>
+    <fields>
+        <label><!-- USPS Status --></label>
+        <name>USPS_Status__c</name>
+    </fields>
+    <fields>
+        <label><!-- carrierRoute --></label>
+        <name>carrierRoute__c</name>
+    </fields>
+    <fields>
+        <label><!-- rdc --></label>
+        <name>rdc__c</name>
+    </fields>
+    <fields>
+        <label><!-- returnCarrierRoute --></label>
+        <name>returnCarrierRoute__c</name>
+    </fields>
+    <fields>
+        <label><!-- returnRdc --></label>
+        <name>returnRdc__c</name>
+    </fields>
+    <layouts>
+        <layout>Shipping Detail Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Shipment Tracking --></label>
+            <section>Shipment Tracking</section>
+        </sections>
+    </layouts>
+    <quickActions>
+        <label><!-- Track Shipment --></label>
+        <name>Track_Shipment</name>
+    </quickActions>
+    <startsWith>Consonant</startsWith>
+    <webLinks>
+        <label><!-- Bulk_update --></label>
+        <name>Bulk_update</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Get_USPS_Labels --></label>
+        <name>Get_USPS_Labels</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Print_Barcode --></label>
+        <name>Print_Barcode</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Print_Labels --></label>
+        <name>Print_Labels</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Print_QRcode --></label>
+        <name>Print_QRcode</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Receive_Shipment --></label>
+        <name>Receive_Shipment</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Send_Shipment --></label>
+        <name>Send_Shipment</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- TrackShipment --></label>
+        <name>TrackShipment</name>
+    </webLinks>
+</CustomObjectTranslation>

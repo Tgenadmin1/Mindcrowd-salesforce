@@ -1,0 +1,637 @@
+<!-- Created By: (Sunil Kumar)
+ Created On: 29/07/2021
+ Description/Purpose: this is the beangame form response TM-160  -->
+ <template>
+    <template if:true={viewForm}>
+        <lightning-layout multiple-rows="true" class="participation-form">
+            <template if:true={refOfBean}>
+                    <lightning-layout-item size="12" small-device-size="12" medium-device-size="12" large-device-size="12"
+                        class="Participation-header-box">
+                        <a href="#">
+                            <img alt="Mind Crowd" src={logoimage2}>
+                        </a>
+                    </lightning-layout-item>
+
+                    <lightning-layout-item size="12" small-device-size="12" medium-device-size="12" large-device-size="12"
+                        class="Participation-title-box">
+                        <div class="freebirdFormviewerViewHeaderThemeStripe freebirdSolidBackground exportThemeStripe"></div>
+                        <h1 class="title">{BeanGame_text1}</h1>
+                        <div class="freebirdFormviewerViewHeaderRequiredLegend marginT10" aria-hidden="true" dir="auto">{BeanGame_text2}</div>
+                    </lightning-layout-item>
+
+                    <lightning-layout-item size="12" small-device-size="12" medium-device-size="12" large-device-size="12" class="participation-form-item-row">
+                        <fieldset class="slds-form--compound">
+                        <div class="slds-grid slds-gutters">
+                            <div class="slds-col slds-size_12-of-12 slds-form-element">
+                                <template if:true={contactsURL}>
+                                    <label  class="slds-form-element__label slds-no-flex" for="input-13">{BeanGame_text3}</label>
+                                    <div >{contactsURL.ParticipantCode__c}</div>
+                                </template>
+                                <template if:true={error}>
+                                    <label  class="slds-form-element__label slds-no-flex" for="input-13">{BeanGame_text3}</label>
+                                    <div >{error}</div>
+                                </template>
+                            </div>
+                        </div>
+                        </fieldset>
+                    </lightning-layout-item>
+
+                    <lightning-layout-item size="12" small-device-size="12" medium-device-size="12" large-device-size="12" class="participation-form-item-row">
+                      
+                       
+                                <div class="form-section">{BeanGame_text4}</div>
+                            
+                       
+                    </lightning-layout-item>
+
+                    <lightning-layout-item size="12" small-device-size="12" medium-device-size="12" large-device-size="12" class="participation-form-item-row">
+                        <fieldset class="slds-form--compound">
+                        <div class="slds-grid slds-gutters">
+                            <div class="slds-col slds-size_12-of-12 width50 m-full-width">
+                                <lightning-input class="require dryRumTime" type="text" name="dryRumTime" onchange={handleTimeChange} value={refOfBean.DryRunTime__c}  label={BeanGame_text5} placeholder={BeanGame_text22} required >
+                                </lightning-input>
+                            </div>
+                        </div>
+                        </fieldset>
+                    </lightning-layout-item>
+                
+                    <lightning-layout-item size="2" small-device-size="2" medium-device-size="2" large-device-size="2">
+                       
+                    </lightning-layout-item>
+                    <lightning-layout-item size="12" class="marginT15" small-device-size="12" medium-device-size="12" large-device-size="12">
+                        <lightning-progress-bar  value="25" size="large"></lightning-progress-bar>
+                    </lightning-layout-item>
+                    <lightning-layout-item class="marginT15" size="12" small-device-size="2" medium-device-size="12" large-device-size="12">
+                        <lightning-button variant="brand" label={BeanGame_text6} title={BeanGame_text27} onclick={formSubmit1} class="magenta-btn " style="text-align:center;   display: block;"></lightning-button>
+                    </lightning-layout-item>
+
+                </template>
+                
+        </lightning-layout>
+    </template>
+
+<!-- start left hand exercise -->
+
+    <template if:true={leftformResponse}>
+        <lightning-layout multiple-rows="true" class="participation-form">
+            <template if:true={refOfBean}>
+                    <lightning-layout-item size="12" small-device-size="12" medium-device-size="12" large-device-size="12"
+                        class="Participation-header-box">
+                        <a href="#">
+                            <img alt="Mind Crowd" src={logoimage2}>
+                        </a>
+                    </lightning-layout-item>
+
+                    <lightning-layout-item size="12" small-device-size="12" medium-device-size="12" large-device-size="12"
+                        class="Participation-title-box">
+                        <div class="freebirdFormviewerViewHeaderThemeStripe freebirdSolidBackground exportThemeStripe"></div>
+                        <h1 class="title">{BeanGame_text1}</h1>
+                        <div class="freebirdFormviewerViewHeaderRequiredLegend marginT10" aria-hidden="true" dir="auto">{BeanGame_text2}</div>
+                    </lightning-layout-item>
+
+                    <lightning-layout-item size="12" small-device-size="12" medium-device-size="12" large-device-size="12" class="participation-form-item-row">
+                        <div class="form-section">{BeanGame_text7}</div>   
+                    </lightning-layout-item>
+                    
+                   <!-- Excercise 1 Starts from here -->
+                   
+                        <div class="text-center width-full"><span class="number-step ">{BeanGame_text8}</span></div>
+                  
+
+                    <lightning-layout-item size="12" small-device-size="12" medium-device-size="12" large-device-size="12" class="participation-form-item-row">
+                        <fieldset class="slds-form--compound">
+                        <div class="slds-grid slds-gutters">
+                            <div class="slds-col slds-size_12-of-12 width50 m-full-width">
+                                <lightning-input class="require left_1_Time" type="text" name="left_1_Time" onchange={Left_1_TimeChange} value={refOfBean.LeftHand_1_ExerciseTime__c}  label={BeanGame_text9} placeholder={BeanGame_text22} required >
+                                </lightning-input>
+                            </div>
+                        </div>
+                        </fieldset>
+                    </lightning-layout-item>
+
+                    <lightning-layout-item size="12" small-device-size="12" medium-device-size="12" large-device-size="12" class="participation-form-item-row">
+                        <fieldset class="slds-form--compound">
+                        <div class="slds-grid slds-gutters">
+                            <div class="slds-col slds-size_12-of-12 width50 m-full-width">
+                                <lightning-input class="require left_1_Drops" type="number" name="left_1_Drops" onchange={Left_1_DropsChange} value={refOfBean.LeftHand_1_ExerciseDrops__c}  label={BeanGame_text10} placeholder={BeanGame_text22} required >
+                                </lightning-input>
+                            </div>
+                        </div>
+                        </fieldset>
+                    </lightning-layout-item>
+
+                    <lightning-layout-item size="12" small-device-size="12" medium-device-size="12" large-device-size="12" class="participation-form-item-row">
+                        <fieldset class="slds-form--compound">
+                        <div class="slds-grid slds-gutters">
+                            <div class="slds-col slds-size_12-of-12 width50 m-full-width">
+                                <template if:true={left_1_BeanExerciseGoing.data}>
+                                    <lightning-radio-group    class="left_1_BeanExerciseGoing require"
+                                                              name="left_1_BeanExerciseGoing"
+                                                              label={BeanGame_text11}
+                                                              options={left_1_BeanExerciseGoing.data.values}
+                                                              value={refOfBean.LeftHand_1_ExerciseGoing__c}
+                                                              type="radio"
+                                                              onchange={left_1_BeanExerciseGoingHandle} required>
+                                    </lightning-radio-group>
+                                 </template>
+                            </div>
+                        </div>
+                        </fieldset>
+                    </lightning-layout-item>
+
+                     <!-- Excercise 2 Starts from here -->
+                    
+                        <div class="text-center width-full"><span class="number-step ">{BeanGame_text12}</span></div>
+
+
+                    <lightning-layout-item size="12" small-device-size="12" medium-device-size="12" large-device-size="12" class="participation-form-item-row">
+                        <fieldset class="slds-form--compound">
+                        <div class="slds-grid slds-gutters">
+                            <div class="slds-col slds-size_12-of-12 width50 m-full-width">
+                                <lightning-input class="require left_2_Time" type="text" name="left_2_Time" onchange={Left_2_TimeChange} value={refOfBean.LeftHand_2_ExerciseTime__c}  label={BeanGame_text9} placeholder={BeanGame_text22} required >
+                                </lightning-input>
+                            </div>
+                        </div>
+                        </fieldset>
+                    </lightning-layout-item>
+
+                    <lightning-layout-item size="12" small-device-size="12" medium-device-size="12" large-device-size="12" class="participation-form-item-row">
+                        <fieldset class="slds-form--compound">
+                        <div class="slds-grid slds-gutters">
+                            <div class="slds-col slds-size_12-of-12 width50 m-full-width">
+                                <lightning-input class="require left_2_Drops" type="number" name="left_2_Drops" onchange={Left_2_DropsChange} value={refOfBean.LeftHand_2_ExerciseDrops__c}  label={BeanGame_text10} placeholder={BeanGame_text22} required >
+                                </lightning-input>
+                            </div>
+                        </div>
+                        </fieldset>
+                    </lightning-layout-item>
+
+                    <lightning-layout-item size="12" small-device-size="12" medium-device-size="12" large-device-size="12" class="participation-form-item-row">
+                        <fieldset class="slds-form--compound">
+                        <div class="slds-grid slds-gutters">
+                            <div class="slds-col slds-size_12-of-12 width50 m-full-width">
+                                <template if:true={left_2_BeanExerciseGoing.data}>
+                                    <lightning-radio-group    class="left_2_BeanExerciseGoing require"
+                                                              name="left_2_BeanExerciseGoing"
+                                                              label={BeanGame_text11}
+                                                              options={left_2_BeanExerciseGoing.data.values}
+                                                              value={refOfBean.LeftHand_2_ExerciseGoing__c}
+                                                              type="radio"
+                                                              onchange={left_2_BeanExerciseGoingHandle} required>
+                                    </lightning-radio-group>
+                                 </template>
+                            </div>
+                        </div>
+                        </fieldset>
+                    </lightning-layout-item>
+
+                     <!-- Excercise 3 Starts from here -->
+                    
+                        <div class="text-center width-full"><span class="number-step ">{BeanGame_text13}</span></div>
+                    
+
+                    <lightning-layout-item size="12" small-device-size="12" medium-device-size="12" large-device-size="12" class="participation-form-item-row">
+                        <fieldset class="slds-form--compound">
+                        <div class="slds-grid slds-gutters">
+                            <div class="slds-col slds-size_12-of-12 width50 m-full-width">
+                                <lightning-input class="require left_3_Time" type="text" name="left_3_Time" onchange={Left_3_TimeChange} value={refOfBean.LeftHand_3_ExerciseTime__c}  label={BeanGame_text9} placeholder={BeanGame_text22} required >
+                                </lightning-input>
+                            </div>
+                        </div>
+                        </fieldset>
+                    </lightning-layout-item>
+
+                    <lightning-layout-item size="12" small-device-size="12" medium-device-size="12" large-device-size="12" class="participation-form-item-row">
+                        <fieldset class="slds-form--compound">
+                        <div class="slds-grid slds-gutters">
+                            <div class="slds-col slds-size_12-of-12 width50 m-full-width">
+                                <lightning-input class="require left_3_Drops" type="number" name="left_3_Drops" onchange={Left_3_DropsChange} value={refOfBean.LeftHand_3_ExerciseDrops__c}  label={BeanGame_text10} placeholder={BeanGame_text22} required >
+                                </lightning-input>
+                            </div>
+                        </div>
+                        </fieldset>
+                    </lightning-layout-item>
+
+                    <lightning-layout-item size="12" small-device-size="12" medium-device-size="12" large-device-size="12" class="participation-form-item-row">
+                        <fieldset class="slds-form--compound">
+                        <div class="slds-grid slds-gutters">
+                            <div class="slds-col slds-size_12-of-12 width50 m-full-width">
+                                <template if:true={left_3_BeanExerciseGoing.data}>
+                                    <lightning-radio-group    class="left_3_BeanExerciseGoing require"
+                                                              name="left_3_BeanExerciseGoing"
+                                                              label={BeanGame_text11}
+                                                              options={left_3_BeanExerciseGoing.data.values}
+                                                              value={refOfBean.LeftHand_3_ExerciseGoing__c}
+                                                              type="radio"
+                                                              onchange={left_3_BeanExerciseGoingHandle} required>
+                                    </lightning-radio-group>
+                                 </template>
+                            </div>
+                        </div>
+                        </fieldset>
+                    </lightning-layout-item>
+
+                    <!-- Excercise 4 Starts from here -->
+                    
+                        <div class="text-center width-full"><span class="number-step ">{BeanGame_text14}</span></div>
+                    
+
+                    <lightning-layout-item size="12" small-device-size="12" medium-device-size="12" large-device-size="12" class="participation-form-item-row">
+                        <fieldset class="slds-form--compound">
+                        <div class="slds-grid slds-gutters">
+                            <div class="slds-col slds-size_12-of-12 width50 m-full-width">
+    
+                                <lightning-input class="require left_4_Time" type="text" name="left_4_Time" onchange={Left_4_TimeChange} value={refOfBean.LeftHand_4_ExerciseTime__c}  label={BeanGame_text9} placeholder={BeanGame_text22} required >
+                                </lightning-input>
+                            </div>
+                        </div>
+                        </fieldset>
+                    </lightning-layout-item>
+
+                    <lightning-layout-item size="12" small-device-size="12" medium-device-size="12" large-device-size="12" class="participation-form-item-row">
+                        <fieldset class="slds-form--compound">
+                        <div class="slds-grid slds-gutters">
+                            <div class="slds-col slds-size_12-of-12 width50 m-full-width">
+                                <lightning-input class="require left_4_Drops" type="number" name="left_4_Drops" onchange={Left_4_DropsChange} value={refOfBean.LeftHand_4_ExerciseDrops__c}  label={BeanGame_text10} placeholder={BeanGame_text22} required >
+                                </lightning-input>
+                            </div>
+                        </div>
+                        </fieldset>
+                    </lightning-layout-item>
+
+                    <lightning-layout-item size="12" small-device-size="12" medium-device-size="12" large-device-size="12" class="participation-form-item-row">
+                        <fieldset class="slds-form--compound">
+                        <div class="slds-grid slds-gutters">
+                            <div class="slds-col slds-size_12-of-12 width50 m-full-width">
+                                <template if:true={left_4_BeanExerciseGoing.data}>
+                                    <lightning-radio-group    class="left_4_BeanExerciseGoing require"
+                                                              name="left_4_BeanExerciseGoing"
+                                                              label={BeanGame_text11}
+                                                              options={left_4_BeanExerciseGoing.data.values}
+                                                              value={refOfBean.LeftHand_4_ExerciseGoing__c}
+                                                              type="radio"
+                                                              onchange={left_4_BeanExerciseGoingHandle} required>
+                                    </lightning-radio-group>
+                                 </template>
+                            </div>
+                        </div>
+                        </fieldset>
+                    </lightning-layout-item>
+                    <!-- Excercise 4 end from here -->
+                    <!-- <lightning-layout-item size="2" small-device-size="2" medium-device-size="2" large-device-size="2">
+                        <lightning-button variant="brand" label="Back" title="Submit" onclick={formBack1} class="magenta-btn slds-float_left">
+                        </lightning-button>
+                    </lightning-layout-item> -->
+                    <lightning-layout-item size="12" class="marginT15" small-device-size="12" medium-device-size="12" large-device-size="12">
+                        <lightning-progress-bar  value="50" size="large"></lightning-progress-bar>
+                    </lightning-layout-item>
+
+                        <lightning-layout-item class="marginT15" size="12" small-device-size="12" medium-device-size="12" large-device-size="12">
+                            <lightning-button variant="brand" label={BeanGame_text15} title={BeanGame_text27} onclick={formBack1} class="magenta-btn slds-float_left"></lightning-button>
+                            <lightning-button variant="brand" label={BeanGame_text16} title={BeanGame_text27} onclick={formSubmit2} class="magenta-btn slds-float_right">
+                        </lightning-button>   
+                    </lightning-layout-item>
+            </template>
+        </lightning-layout>
+    </template>
+
+<!-- start right hand exercise -->
+    <template if:true={rightformResponse}>
+        <lightning-layout multiple-rows="true" class="participation-form">
+            <template if:true={refOfBean}>
+                <lightning-layout-item size="12" small-device-size="12" medium-device-size="12" large-device-size="12"
+                    class="Participation-header-box">
+                    <a href="#">
+                        <img alt="Mind Crowd" src={logoimage2}>
+                    </a>
+                </lightning-layout-item>
+                <lightning-layout-item size="12" small-device-size="12" medium-device-size="12" large-device-size="12"
+                        class="Participation-title-box">
+                        <div class="freebirdFormviewerViewHeaderThemeStripe freebirdSolidBackground exportThemeStripe"></div>
+                        <h1 class="title">{BeanGame_text1}</h1>
+                        <div class="freebirdFormviewerViewHeaderRequiredLegend marginT10" aria-hidden="true" dir="auto">{BeanGame_text2}</div>
+                    </lightning-layout-item>
+                    <lightning-layout-item size="12" small-device-size="12" medium-device-size="12" large-device-size="12" class="participation-form-item-row">
+                        <div class="form-section">{BeanGame_text17}</div>
+                        
+                    </lightning-layout-item>
+
+                    <!-- Excercise 1 Starts from here -->
+                   
+                        <div class="text-center width-full"><span class="number-step ">{BeanGame_text8}</span></div>
+                   
+                    <lightning-layout-item size="12" small-device-size="12" medium-device-size="12" large-device-size="12" class="participation-form-item-row">
+                        <fieldset class="slds-form--compound">
+                        <div class="slds-grid slds-gutters">
+                            <div class="slds-col slds-size_12-of-12 width50 m-full-width">
+                                <lightning-input class="require right_1_Time" type="text" name="right_1_Time" onchange={Right_1_TimeChange} value={refOfBean.RightHand_1_ExerciseTime__c}  label={BeanGame_text9} placeholder={BeanGame_text22} required >
+                                </lightning-input>
+                            </div>
+                        </div>
+                        </fieldset>
+                    </lightning-layout-item>
+
+                    <lightning-layout-item size="12" small-device-size="12" medium-device-size="12" large-device-size="12" class="participation-form-item-row">
+                        <fieldset class="slds-form--compound">
+                        <div class="slds-grid slds-gutters">
+                            <div class="slds-col slds-size_12-of-12 width50 m-full-width">
+                                <lightning-input class="require right_1_Drops" type="number" name="right_1_Drops" onchange={Right_1_DropsChange} value={refOfBean.RightHand_1_ExerciseDrops__c}  label={BeanGame_text10} placeholder={BeanGame_text22} required >
+                                </lightning-input>
+                            </div>
+                        </div>
+                        </fieldset>
+                    </lightning-layout-item>
+
+                    <lightning-layout-item size="12" small-device-size="12" medium-device-size="12" large-device-size="12" class="participation-form-item-row">
+                        <fieldset class="slds-form--compound">
+                        <div class="slds-grid slds-gutters">
+                            <div class="slds-col slds-size_12-of-12 width50 m-full-width">
+                                <template if:true={right_1_BeanExerciseGoing.data}>
+                                    <lightning-radio-group    class="require"
+                                                              name="right_1_BeanExerciseGoing"
+                                                              label={BeanGame_text11}
+                                                              options={right_1_BeanExerciseGoing.data.values}
+                                                              value={refOfBean.RightHand_1_ExerciseGoing__c}
+                                                              type="radio"
+                                                              onchange={Right_1_BeanExerciseGoingHandle} required>
+                                    </lightning-radio-group>
+                                 </template>
+                            </div>
+                        </div>
+                        </fieldset>
+                    </lightning-layout-item>
+
+                     <!-- Excercise 2 Starts from here -->
+                     
+                        <div class="text-center width-full"><span class="number-step ">2</span></div>
+                    
+
+                    <lightning-layout-item size="12" small-device-size="12" medium-device-size="12" large-device-size="12" class="participation-form-item-row">
+                        <fieldset class="slds-form--compound">
+                        <div class="slds-grid slds-gutters">
+                            <div class="slds-col slds-size_12-of-12 width50 m-full-width">
+                                <lightning-input class="require right_2_Time" type="text" name="right_2_Time" onchange={Right_2_TimeChange} value={refOfBean.RightHand_2_ExerciseTime__c}  label={BeanGame_text9} placeholder={BeanGame_text22} required >
+                                </lightning-input>
+                            </div>
+                        </div>
+                        </fieldset>
+                    </lightning-layout-item>
+
+                    <lightning-layout-item size="12" small-device-size="12" medium-device-size="12" large-device-size="12" class="participation-form-item-row">
+                        <fieldset class="slds-form--compound">
+                        <div class="slds-grid slds-gutters">
+                            <div class="slds-col slds-size_12-of-12 width50 m-full-width">
+                                <lightning-input class="require right_2_Drops" type="number" name="right_2_Drops" onchange={Right_2_DropsChange} value={refOfBean.RightHand_2_ExerciseDrops__c}  label={BeanGame_text10} placeholder={BeanGame_text22} required >
+                                </lightning-input>
+                            </div>
+                        </div>
+                        </fieldset>
+                    </lightning-layout-item>
+
+                    <lightning-layout-item size="12" small-device-size="12" medium-device-size="12" large-device-size="12" class="participation-form-item-row">
+                        <fieldset class="slds-form--compound">
+                        <div class="slds-grid slds-gutters">
+                            <div class="slds-col slds-size_12-of-12 width50 m-full-width">
+                                <template if:true={right_2_BeanExerciseGoing.data}>
+                                    <lightning-radio-group    class="require"
+                                                              name="right_2_BeanExerciseGoing"
+                                                              label={BeanGame_text11}
+                                                              options={right_2_BeanExerciseGoing.data.values}
+                                                              value={refOfBean.RightHand_2_ExerciseGoing__c}
+                                                              type="radio"
+                                                              onchange={Right_2_BeanExerciseGoingHandle} required>
+                                    </lightning-radio-group>
+                                 </template>
+                            </div>
+                        </div>
+                        </fieldset>
+                    </lightning-layout-item>
+
+                     <!-- Excercise 3 Starts from here -->
+                    
+                        <div class="text-center width-full"><span class="number-step ">3</span></div>
+                    
+
+                    <lightning-layout-item size="12" small-device-size="12" medium-device-size="12" large-device-size="12" class="participation-form-item-row">
+                        <fieldset class="slds-form--compound">
+                        <div class="slds-grid slds-gutters">
+                            <div class="slds-col slds-size_12-of-12 width50 m-full-width">
+                                <lightning-input class="require right_3_Time" type="text" name="right_3_Time" onchange={Right_3_TimeChange} value={refOfBean.RightHand_3_ExerciseTime__c}  label={BeanGame_text9} placeholder={BeanGame_text22} required >
+                                </lightning-input>
+                            </div>
+                        </div>
+                        </fieldset>
+                    </lightning-layout-item>
+
+                    <lightning-layout-item size="12" small-device-size="12" medium-device-size="12" large-device-size="12" class="participation-form-item-row">
+                        <fieldset class="slds-form--compound">
+                        <div class="slds-grid slds-gutters">
+                            <div class="slds-col slds-size_12-of-12 width50 m-full-width">
+                                <lightning-input class="require right_3_Drops" type="number" name="right_3_Drops" onchange={Right_3_DropsChange} value={refOfBean.RightHand_3_ExerciseDrops__c}  label={BeanGame_text10} placeholder={BeanGame_text22} required >
+                                </lightning-input>
+                            </div>
+                        </div>
+                        </fieldset>
+                    </lightning-layout-item>
+
+                    <lightning-layout-item size="12" small-device-size="12" medium-device-size="12" large-device-size="12" class="participation-form-item-row">
+                        <fieldset class="slds-form--compound">
+                        <div class="slds-grid slds-gutters">
+                            <div class="slds-col slds-size_12-of-12 width50 m-full-width">
+                                <template if:true={right_3_BeanExerciseGoing.data}>
+                                    <lightning-radio-group    class="require"
+                                                              name="right_3_BeanExerciseGoing"
+                                                              label={BeanGame_text11}
+                                                              options={right_3_BeanExerciseGoing.data.values}
+                                                              value={refOfBean.RightHand_3_ExerciseGoing__c}
+                                                              type="radio"
+                                                              onchange={Right_3_BeanExerciseGoingHandle} required>
+                                    </lightning-radio-group>
+                                 </template>
+                            </div>
+                        </div>
+                        </fieldset>
+                    </lightning-layout-item>
+
+                    <!-- Excercise 4 Starts from here -->
+                    
+                        <div class="text-center width-full"><span class="number-step ">4</span></div>
+                    
+
+                    <lightning-layout-item size="12" small-device-size="12" medium-device-size="12" large-device-size="12" class="participation-form-item-row">
+                        <fieldset class="slds-form--compound">
+                        <div class="slds-grid slds-gutters">
+                            <div class="slds-col slds-size_12-of-12 width50 m-full-width">
+                                <lightning-input class="require right_4_Time" type="text" name="right_4_Time" onchange={Right_4_TimeChange} value={refOfBean.RightHand_4_ExerciseTime__c}  label={BeanGame_text9} placeholder={BeanGame_text22} required >
+                                </lightning-input>
+                            </div>
+                        </div>
+                        </fieldset>
+                    </lightning-layout-item>
+
+                    <lightning-layout-item size="12" small-device-size="12" medium-device-size="12" large-device-size="12" class="participation-form-item-row">
+                        <fieldset class="slds-form--compound">
+                        <div class="slds-grid slds-gutters">
+                            <div class="slds-col slds-size_12-of-12 width50 m-full-width">
+                                <lightning-input class="require right_4_Drops" type="number" name="right_4_Drops" onchange={Right_4_DropsChange} value={refOfBean.RightHand_4_ExerciseDrops__c}  label={BeanGame_text10} placeholder={BeanGame_text22} required >
+                                </lightning-input>
+                            </div>
+                        </div>
+                        </fieldset>
+                    </lightning-layout-item>
+
+                    <lightning-layout-item size="12" small-device-size="12" medium-device-size="12" large-device-size="12" class="participation-form-item-row">
+                        <fieldset class="slds-form--compound">
+                        <div class="slds-grid slds-gutters">
+                            <div class="slds-col slds-size_12-of-12 width50 m-full-width">
+                                <template if:true={right_4_BeanExerciseGoing.data}>
+                                    <lightning-radio-group    class="require"
+                                                              name="right_4_BeanExerciseGoing"
+                                                              label={BeanGame_text11}
+                                                              options={right_4_BeanExerciseGoing.data.values}
+                                                              value={refOfBean.RightHand_4_ExerciseGoing__c}
+                                                              type="radio"
+                                                              onchange={Right_4_BeanExerciseGoingHandle} required>
+                                    </lightning-radio-group>
+                                 </template>
+                            </div>
+                        </div>
+                        </fieldset>
+                    </lightning-layout-item>
+                    <!-- Excercise 4 end from here -->
+
+                <!-- <lightning-layout-item size="2" small-device-size="2" medium-device-size="2" large-device-size="2">
+                    <lightning-button variant="brand" label="Back" title="Submit" onclick={formBack2} class="magenta-btn slds-float_left">
+                    </lightning-button> 
+
+                </lightning-layout-item>-->
+                <lightning-layout-item size="12" class="marginT15" small-device-size="12" medium-device-size="12" large-device-size="12">
+                    <lightning-progress-bar  value="75" size="large"></lightning-progress-bar>
+                </lightning-layout-item>
+
+                <lightning-layout-item class="marginT15" size="12" small-device-size="12" medium-device-size="12" large-device-size="12">
+
+                    <lightning-button variant="brand" label={BeanGame_text15} title={BeanGame_text27} onclick={formBack2} class="magenta-btn slds-float_left"></lightning-button>
+                    <lightning-button variant="brand" label={BeanGame_text16} title={BeanGame_text27} onclick={formSubmit3} class="magenta-btn slds-float_right">
+                    </lightning-button>     
+                </lightning-layout-item>
+            </template>
+        </lightning-layout>
+    </template>
+
+<!-- start one last thing -->
+    <template if:true={oneLastThing}>
+        <lightning-layout multiple-rows="true" class="participation-form">
+            <template if:true={refOfBean}>
+                <lightning-layout-item size="12" small-device-size="12" medium-device-size="12" large-device-size="12"
+                    class="Participation-header-box">
+                    <a href="#">
+                        <img alt="Mind Crowd" src={logoimage2}>
+                    </a>
+                </lightning-layout-item>
+                <lightning-layout-item size="12" small-device-size="12" medium-device-size="12" large-device-size="12"
+                        class="Participation-title-box">
+                        <div class="freebirdFormviewerViewHeaderThemeStripe freebirdSolidBackground exportThemeStripe"></div>
+                        <h1 class="title">{BeanGame_text1} </h1>
+                        <div class="freebirdFormviewerViewHeaderRequiredLegend marginT10" aria-hidden="true" dir="auto">{BeanGame_text2}</div>
+                </lightning-layout-item>
+                
+                <lightning-layout-item size="12" small-device-size="12" medium-device-size="12" large-device-size="12" class="participation-form-item-row">
+                    <fieldset class="slds-form--compound">
+                    <div class="slds-grid slds-gutters">
+                        <div class="slds-col slds-size_12-of-12 width50 m-full-width">
+                            <template if:true={oneLastThingBeanForm.data}>
+                                <lightning-radio-group      class="require"
+                                                            name="oneLastThingBeanForm"
+                                                            label={BeanGame_text18}
+                                                            options={oneLastThingBeanForm.data.values}
+                                                            value={refOfBean.OneLastThing__c}
+                                                            type="radio"
+                                                            onchange={oneLastThingBeanFormHandle} required>
+                                </lightning-radio-group>
+                                </template>
+                        </div>
+                    </div>
+                    </fieldset>
+                </lightning-layout-item>
+
+                <lightning-layout-item size="12" small-device-size="12" medium-device-size="12" large-device-size="12" class="participation-form-item-row">
+                    <fieldset class="slds-form--compound">
+                    <div class="slds-grid slds-gutters">
+                        <div class="slds-col slds-size_12-of-12 width50 m-full-width">
+                           <div>{BeanGame_text19} <a href="mailto:MindcrowdQuestion@tgen.org">MindcrowdQuestion@tgen.org</a></div>
+                        </div>
+                    </div>
+                    </fieldset>
+                </lightning-layout-item>
+
+                <!-- <lightning-layout-item size="2" small-device-size="2" medium-device-size="2" large-device-size="2">
+                    <lightning-button variant="brand" label="Back" title="Submit" onclick={formBack3} class="magenta-btn slds-float_left"></lightning-button>
+                </lightning-layout-item> -->
+                <lightning-layout-item size="12" class="marginT15" small-device-size="12" medium-device-size="12" large-device-size="12">
+                    <lightning-progress-bar  value="100" size="large"></lightning-progress-bar>
+                </lightning-layout-item>
+
+                <lightning-layout-item size="12" class="marginT15" small-device-size="12" medium-device-size="12" large-device-size="12">
+                    <lightning-button variant="brand" label={BeanGame_text15} title={BeanGame_text27} onclick={formBack3} class="magenta-btn slds-float_left"></lightning-button>
+                    <lightning-button variant="brand" label={BeanGame_text20} title={BeanGame_text27} onclick={formSubmit4} class="magenta-btn slds-float_right"></lightning-button>
+                </lightning-layout-item>
+            </template>
+        </lightning-layout>
+    </template>
+
+    <!-- Thank you page -->
+    <template if:true={thankYouPage}>
+        <lightning-layout multiple-rows="true" class="participation-form">
+                <lightning-layout-item size="12" small-device-size="12" medium-device-size="12" large-device-size="12"
+                    class="Participation-header-box">
+                    <a href="#">
+                        <img alt="Mind Crowd" src={logoimage2}>
+                    </a>
+                </lightning-layout-item>
+                <lightning-layout-item size="12" small-device-size="12" medium-device-size="12" large-device-size="12"
+                        class="Participation-title-box">
+                        <div class="freebirdFormviewerViewHeaderThemeStripe freebirdSolidBackground exportThemeStripe"></div>
+                        <h1 class="title">{BeanGame_text1} </h1>
+                        <!-- <h1 class="title" style="font-size: 14px;">Thank you for your participation! </h1> -->
+                        <div class="form-section">{BeanGame_text21}</div>
+                </lightning-layout-item>
+
+
+               
+        </lightning-layout>
+    </template>
+    <!--Error Model window-->
+    <template if:true={ErrorModalOpen}>
+        <section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-modal="true" aria-describedby="modal-content-id-1" class="slds-modal slds-modal_small ssm slds-fade-in-open">
+            <div class="slds-modal__container">
+                <!-- Modal/Popup Box LWC header here -->
+                 <!-- Modal/Popup Box LWC body starts here -->
+                 <header class="slds-modal__header">
+                    <lightning-button-icon icon-name="utility:close" alternative-text="Close this window"   variant="bare-inverse" onclick={closeModal} class="slds-modal__close ">  
+                    </lightning-button-icon> 
+                    <span class="title slds-hyphenate" id="modal-heading-02">{BeanGame_text26}</span>
+                  </header>
+                  <div class="slds-modal__content slds-p-around_medium" id="modal-content-id-3">
+                  </div>
+            </div>
+        </section>
+        <div class="slds-backdrop slds-backdrop_open"></div>
+    </template>
+    <template if:true={ErrorParticipantCode}>
+        <section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-modal="true" aria-describedby="modal-content-id-1" class="slds-modal slds-modal_small ssm slds-fade-in-open">
+            <div class="slds-modal__container">
+                <!-- Modal/Popup Box LWC header here -->
+                 <!-- Modal/Popup Box LWC body starts here -->
+                 <header class="slds-modal__header">
+                    <lightning-button-icon icon-name="utility:close" alternative-text="Close this window"   variant="bare-inverse" onclick={closeModalForCode} class="slds-modal__close ">  
+                    </lightning-button-icon> 
+                    <span class="title slds-hyphenate" id="modal-heading-03">{BeanGame_text23}</span>
+                  </header>
+                  <div class="slds-modal__content slds-p-around_medium" id="modal-content-id-4">
+                  </div>
+            </div>
+        </section>
+        <div class="slds-backdrop slds-backdrop_open"></div>
+    </template>
+  </template>

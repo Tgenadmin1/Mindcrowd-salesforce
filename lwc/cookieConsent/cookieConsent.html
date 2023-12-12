@@ -1,0 +1,27 @@
+<template >
+
+    <div class="slds-m-around_medium cookies-content " if:false={preferences}>
+        <div>
+            <p class="avia_cookie_text">We use cookies to improve your experience and support our mission. <a style="color:#fff7f7;border-bottom: 1px dotted #fff7f7;" href={label.live_URL_5}>Read more about it here.</a> By using our sites, you agree to our use of cookies.</p>
+        </div>
+        <div>
+            <a  onclick={handleClickSetConsent} title="Allow use of cookies, you can modify used cookies in settings" class="pink-btn slds-button text-center marginL30">ACCEPT</a>
+         </div>
+    </div>
+
+
+      <div if:false={isModalOpen}>
+    <section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-modal="true"
+      aria-describedby="modal-content-id-1" class="slds-modal slds-fade-in-open">
+      <div class="slds-modal__container">
+        <header class="slds-modal__header paddingT0" >
+         
+          <div class="slds-modal__content slds-p-around_medium" id="modal-content-id-1">
+            <p class="text-center" style="color: #000;">Oops, it looks like you haven't accepted our use of cookies yet. That is OK, but we need you to do this before starting our study. This is how we ensure the scientific integrity of your data. Please click the pink ACCEPT button below to proceed. Thank you!</p>
+          </div>
+        </header>
+      </div>
+    </section>
+    <div class="slds-backdrop slds-backdrop_open" ></div>
+</div>
+</template>

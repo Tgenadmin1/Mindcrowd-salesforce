@@ -1,0 +1,8 @@
+<apex:page contentType="text/xml" showHeader="false">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://project.mindcrowd.org/s/accesovip</loc>
+    <lastmod>2023-03-03T17:05:01+00:00</lastmod>
+  </url>
+</urlset>
+</apex:page>

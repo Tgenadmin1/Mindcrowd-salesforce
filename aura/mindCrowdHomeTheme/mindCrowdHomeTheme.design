@@ -1,0 +1,3 @@
+<design:component label="vipaccess">
+    <design:attribute name="vipAccess" label="VIP ACCESS" description="VIP ACCESS"/>
+</design:component>

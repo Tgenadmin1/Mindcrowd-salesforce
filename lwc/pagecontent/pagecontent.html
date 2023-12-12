@@ -1,0 +1,96 @@
+<!--
+  @description       : 
+  @author            : Raj Kumar
+  @UI author         : Raj
+  @last modified on  : 08-05-2021
+  @last modified by  : ChangeMeIn@UserSettingsUnder.SFDoc
+  Modifications Log 
+  Ver   Date         Author         Modification
+  1.0   01-05-2021   Raj Kumar      Initial Version
+-->
+<template> 
+  <lightning-layout class="home_promo">
+    <lightning-layout-item size="12" small-device-size="12" medium-device-size="12" large-device-size="12">
+      <div class="slds-grid slds-gutters home-col">
+        <div class="slds-col slds-size_2-of-3 padding0 banner-col-left">
+          <h3>{label.banner_h3} </h3>
+          <h1>
+            <p class="home_alzheimer">{label.banner_Text_2} </p>
+            <p class="home_research">{label.banner_Text_3} </p>
+          </h1>
+          <p class="home_p">{label.banner_Text_4}</p>
+          <p class="home_p2">{label.banner_Text_5}</p>
+        </div>
+        <div class="slds-col slds-size_1-of-3 homepage-right-col">
+          <div>
+            <p> <a href="#" onclick={handleClick2}> <img alt="Home compare graphic" src={image1}></a> </p>
+          </div>
+        </div>
+      </div>
+
+    </lightning-layout-item>
+
+    <lightning-layout-item size="12" small-device-size="12" medium-device-size="12" large-device-size="12"
+      class="padding0">
+      <div class="home_progress">
+        <h4>{label.banner_Text_9}</h4>
+
+        <div class="progress_wrapper">
+          <div class="progress_bar" style="width: 2%;">
+            <span>
+            </span>
+          </div>
+          <div class="progress_goal">
+          </div>
+          <div class="progress_count">{count}<br />
+          </div>
+          <div class="progress_count right">
+          </div>
+          <div class="total-progress">1 {label.banner_Text_10}</div>
+        </div>
+        <div class="social_icons">
+          <h5>{label.banner_Text_10b}
+          </h5>
+          <ul class="slds-float_left">
+            <li><a class="facebook" href="https://twitter.com/TGenMINDCROWD" target="_blank"><img src={twitter}
+                  title="twitter" /></a></li>
+            <li> <a class="twitter" href="https://www.facebook.com/Mindcrowd" target="_blank"><img src={facebook}
+                  title="facebook" /></a></li>
+            <!-- <li><a class="facebook" href="https://www.pinterest.com/tgenmindcrowd/" target="_blank"><img src={pinterest}
+                  title="pinterest" /></a></li>
+            <li> <a class="twitter" href="https://www.instagram.com/tgenresearch/" target="_blank"><img src={instagram}
+                  title="instagram" /></a></li>
+            <li>
+              <a class="twitter" href="https://www.instagram.com/tgenresearch/" target="_blank">
+                <lightning-icon icon-name="standard:email_chatter" alternative-text="time"></lightning-icon>
+              </a>
+            </li> -->
+          </ul>
+        </div>
+      </div>
+    </lightning-layout-item>
+    <lightning-layout-item size="12" small-device-size="12" medium-device-size="12" large-device-size="12">
+
+      <div class="home_promo_sponsors">
+        <ul>
+          <li> <a href="http://tgen.org" target="_blank"> <img alt="Sponsor tgen" src={image4}> </a>
+          </li>
+          <li> <a href="http://www.arizona.edu/" target="_blank"> <img alt="Sponsor uofa" src={image5}> </a>
+          </li>
+          <li> <a href="https://www.cityofhope.org/" target="_blank"><img alt="Sponsor api" src={image3a}> </a>
+          </li>
+          <li> <a href="http://www.alz.org/trialmatch" target="_blank"> <img alt="Tmlogo small" src={image6}> </a>
+          </li>
+        </ul>
+      </div>
+    </lightning-layout-item>
+    <lightning-layout-item size="12" small-device-size="12" medium-device-size="12" large-device-size="12"
+      class="padding0 go_arrow-box">
+      <a href="#problem" class="go_arrow">
+        <lightning-icon icon-name="utility:down" alternative-text="down"></lightning-icon>
+      </a>
+
+    </lightning-layout-item>
+
+  </lightning-layout>
+</template>

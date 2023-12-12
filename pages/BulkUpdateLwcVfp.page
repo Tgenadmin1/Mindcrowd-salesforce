@@ -1,0 +1,15 @@
+<apex:page standardController="Shipping_Detail__c" recordSetVar="Shipping_Detail__c" tabStyle="Shipping_Detail__c" >
+    <apex:includeLightning />    
+    <div id="LightningComponentid" />    
+    <script>
+    $Lightning.use("c:BulkUpdate", function() {
+        $Lightning.createComponent("c:BulkUpdateLwc",
+          { 
+          },
+          "LightningComponentid",
+          function(cmp) {
+             console.log('LWC Componenet added in VF page');
+          });
+    });
+    </script>
+</apex:page>

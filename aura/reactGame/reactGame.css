@@ -1,0 +1,159 @@
+.THIS .btninputbox {
+    display: inline-block;
+    margin-top: 10px;
+    position: absolute;
+    bottom: 5px;
+    text-align: center;
+    width: 100%;
+    left:0px;
+}
+.THIS .btninputbx {
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+}
+.THIS .btninputbx li {
+    display: inline-block;
+    font-size: 18px;
+    text-align: center;
+}
+.THIS .btninput1{
+    background-image: url(/s/sfsites/c/resource/mindcrowd_style/images/a.png);
+    height:60px;
+    width: 60px;
+    background-size: contain;
+    display: block;
+    text-align: center;
+    padding: 15px;
+    font-size: 34px;
+    margin:0px 5px;
+    display: none;
+}
+.THIS .btninputx{
+    background-image: url(/s/sfsites/c/resource/mindcrowd_style/images/xx.png);
+    height:60px;
+    width: 60px;
+    background-size: contain;
+    display: block;
+    text-align: center;
+    padding: 15px;
+    font-size: 34px;
+    margin:0px 5px;
+    display: none;
+}
+.THIS .btninputz{
+    background-image: url(/s/sfsites/c/resource/mindcrowd_style/images/z.png);
+    height:60px;
+    width: 60px;
+    background-size: contain;
+    display: block;
+    text-align: center;
+    padding: 15px;
+    font-size: 34px;
+    margin:0px 5px;
+    display: none;
+}
+.THIS .btninputdot{
+    background-image: url(/s/sfsites/c/resource/mindcrowd_style/images/do.png);
+    height:60px;
+    width: 60px;
+    background-size: contain;
+    display: block;
+    text-align: center;
+    padding: 15px;
+    font-size: 34px;
+    margin:0px 5px;
+    display: none;
+}
+.THIS .btninputcomma{
+    background-image: url(/s/sfsites/c/resource/mindcrowd_style/images/newcomma.png);
+    height:60px;
+    width: 60px;
+    background-size: contain;
+    display: block;
+    text-align: center;
+    padding: 15px;
+    font-size: 34px;
+    margin:0px 5px;
+    display: none;
+}
+.THIS .btninput.img-f{
+    background-image: url(/s/sfsites/c/resource/mindcrowd_style/images/F.png);
+    height:60px;
+    width: 60px;
+    background-size: contain;
+    display: block;
+    text-align: center;
+    /* padding: 15px; */
+    font-size: 1px;
+    /* margin:0px 5px; */
+    background-repeat: no-repeat;
+    background-position: center;
+    justify-content: center;
+    margin: auto;
+    color: transparent;
+}
+.THIS .btninput.img-j{
+    background-image: url(/s/sfsites/c/resource/mindcrowd_style/images/j.png);
+    height:60px;
+    width: 60px;
+    background-size: contain;
+    display: block;
+    text-align: center;
+    /* padding: 15px; */
+    font-size: 1px;
+    /* margin:0px 5px; */
+    background-repeat: no-repeat;
+    background-position: center;
+    justify-content: center;
+    margin: auto;
+    color: transparent !important;
+}
+.THIS .btninput.img-d{
+    background-image: url(/s/sfsites/c/resource/mindcrowd_style/images/consonant_key.png?t=1);
+    height:60px;
+    width: 60px;
+    background-size: contain;
+    display: block;
+    text-align: center;
+    /* padding: 15px; */
+    font-size: 1px;
+    /* margin:0px 5px; */
+    background-repeat: no-repeat;
+    background-position: center;
+    justify-content: center;
+    margin: auto;
+    color: transparent;
+}
+.THIS .btninput.img-k{
+    background-image: url(/s/sfsites/c/resource/mindcrowd_style/images/even_key.png?t=1);
+    height:60px;
+    width: 60px;
+    background-size: contain;
+    display: block;
+    text-align: center;
+    /* padding: 15px; */
+    font-size: 1px;
+    /* margin:0px 5px; */
+    background-repeat: no-repeat;
+    background-position: center;
+    justify-content: center;
+    margin: auto;
+    color: transparent;
+}
+.THIS .btninput.img-n{
+    background-image: url(/s/sfsites/c/resource/mindcrowd_style/images/n.png?t=1);
+    height:60px;
+    width: 60px;
+    background-size: contain;
+    display: block;
+    text-align: center;
+    /* padding: 15px; */
+    font-size: 1px;
+    /* margin:0px 5px; */
+    background-repeat: no-repeat;
+    background-position: center;
+    justify-content: center;
+    margin: auto;
+    color: transparent;
+}

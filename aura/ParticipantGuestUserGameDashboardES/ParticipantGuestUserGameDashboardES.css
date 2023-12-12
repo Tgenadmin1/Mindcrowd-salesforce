@@ -1,0 +1,53 @@
+.THIS .graph-double {
+    width:30%;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.THIS .graph-singel {
+    width:40%;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+@media (max-width: 768px), (max-width: 1000px){
+    
+    .THIS .graph-singel {
+        width:100%;
+    }
+    .THIS .graph-double {
+        width:50%;
+        top: 50px !important;
+        margin-bottom: 75px;
+    }
+
+}
+@media (max-width: 767px){
+
+    .THIS .graph-singel {
+        width:100%;
+        margin-top: 20px;
+        padding: 0;
+    }
+
+    .THIS .graph-double {
+        width:100%;
+        top: 50px !important;
+        margin-bottom: 75px;
+        padding: 0;
+    }
+    .THIS .graph-singel .scoreBasedCaption.title2c {
+        padding: 0;
+        
+    }
+    .THIS .graph-singel .scoreBasedCaption.title2b{
+        margin-top: 25px;
+    }
+    .THIS .graph-singel .scoreBasedCaption.title2b{
+        margin-top: 25px;
+    }
+    .THIS .Share-Facebook-btn,  .THIS .Share-Twitter-btn{
+        width: 49%;
+    }
+    
+
+}

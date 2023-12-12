@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>SLEEP</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>SLEEPs</value>
+    </caseValues>
+    <fields>
+        <label><!-- SLEEP_v1.0.16 --></label>
+        <name>After_minutes_I_get_up_Free_Days__c</name>
+    </fields>
+    <fields>
+        <label><!-- SLEEP_v1.0.15 --></label>
+        <name>After_minutes_I_get_up_Work_Days__c</name>
+    </fields>
+    <fields>
+        <label><!-- SLEEP_v1.0.20 --></label>
+        <name>Are_there_particular_reasons_why_you_can__c</name>
+    </fields>
+    <fields>
+        <label><!-- Contact --></label>
+        <name>Contact__c</name>
+        <relationshipLabel><!-- SLEEPs --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- SLEEP_v1.0.1 --></label>
+        <name>Do_you_consider_yourself_to_be_a_morning__c</name>
+    </fields>
+    <fields>
+        <label><!-- SLEEP_v1.0.3 --></label>
+        <name>Do_you_have_any_other_types_of_sleep__c</name>
+    </fields>
+    <fields>
+        <label><!-- SLEEP_v1.0.18 --></label>
+        <name>Do_you_regularly_wake_up_BEFORE__c</name>
+    </fields>
+    <fields>
+        <label><!-- SLEEP_v1.0.2 --></label>
+        <name>Do_you_suffer_from_insomnia__c</name>
+    </fields>
+    <fields>
+        <label><!-- Email --></label>
+        <name>Email__c</name>
+    </fields>
+    <fields>
+        <label><!-- SLEEP_v1.0.6 --></label>
+        <name>How_many_days_do_you_work_each_week__c</name>
+    </fields>
+    <fields>
+        <label><!-- SLEEP_v1.0.22 --></label>
+        <name>How_many_hours_u_sleep_during_past_4_wee__c</name>
+    </fields>
+    <fields>
+        <help><!-- How often during past 4 weeks did you awaken during your sleep time and have trouble falling asleep again? --></help>
+        <label><!-- SLEEP_v1.0.27 --></label>
+        <name>How_often_4_weeks_u_awake_during_sleep__c</name>
+    </fields>
+    <fields>
+        <help><!-- How often during past 4 weeks did you snore during your sleep? --></help>
+        <label><!-- SLEEP_v1.0.29 --></label>
+        <name>How_often_during_past_4_weeks_you_snore__c</name>
+    </fields>
+    <fields>
+        <help><!-- How often during past 4 weeks did you feel drowsy or sleepy during the day? --></help>
+        <label><!-- SLEEP_v1.0.32 --></label>
+        <name>How_often_past_4_weeks_you_feel_drowsy__c</name>
+    </fields>
+    <fields>
+        <help><!-- How often during the past 4 weeks did you get enough sleep to feel rested upon waking in the morning? --></help>
+        <label><!-- SLEEP_v1.0.24 --></label>
+        <name>How_often_past_4_weeks_you_get_sleep__c</name>
+    </fields>
+    <fields>
+        <help><!-- How often during past 4 weeks did you take naps (5 minutes or longer) during the day? --></help>
+        <label><!-- SLEEP_v1.0.30 --></label>
+        <name>How_often_past_4_weeks_you_take_naps__c</name>
+    </fields>
+    <fields>
+        <help><!-- How often during past 4 weeks did you awaken short of breath or with a headache? --></help>
+        <label><!-- SLEEP_v1.0.25 --></label>
+        <name>How_often_past_u_awake_short_breath__c</name>
+    </fields>
+    <fields>
+        <help><!-- How often during past 4 weeks did you have trouble staying awake during the day? --></help>
+        <label><!-- SLEEP_v1.0.28 --></label>
+        <name>How_often_trouble_stay_awake_during_day__c</name>
+    </fields>
+    <fields>
+        <help><!-- How often did you feel have trouble falling asleep? --></help>
+        <label><!-- SLEEP_v1.0.26 --></label>
+        <name>How_often_u_feel_trouble_falling_asleep__c</name>
+    </fields>
+    <fields>
+        <help><!-- How often during past 4 weeks did you get the amount of sleep you needed? --></help>
+        <label><!-- SLEEP_v1.0.31 --></label>
+        <name>How_often_u_get_amount_of_sleep_u_needed__c</name>
+    </fields>
+    <fields>
+        <help><!-- How often during the past 4 weeks did you feel that your sleep was not quiet (restless, feeling tense, speaking, etc… while sleeping)? --></help>
+        <label><!-- SLEEP_v1.0.23 --></label>
+        <name>How_often_your_sleep_was_not_quiet__c</name>
+    </fields>
+    <fields>
+        <label><!-- SLEEP_v1.0.8 --></label>
+        <name>I_go_to_bed_at_Free_Days__c</name>
+    </fields>
+    <fields>
+        <label><!-- SLEEP_v1.0.7 --></label>
+        <name>I_go_to_bed_at_Work_Days__c</name>
+    </fields>
+    <fields>
+        <label><!-- SLEEP_v1.0.12 --></label>
+        <name>I_typically_need_minutes_Free_Days__c</name>
+    </fields>
+    <fields>
+        <label><!-- SLEEP_v1.0.11 --></label>
+        <name>I_typically_need_minutes_Work_Days__c</name>
+    </fields>
+    <fields>
+        <label><!-- SLEEP_v1.0.19 --></label>
+        <name>I_use_an_alarm_clock_on_free_days__c</name>
+    </fields>
+    <fields>
+        <label><!-- SLEEP_v1.0.17 --></label>
+        <name>I_use_an_alarm_on_workdays__c</name>
+    </fields>
+    <fields>
+        <label><!-- SLEEP_v1.0.14 --></label>
+        <name>I_wake_up_at_Free_Days__c</name>
+    </fields>
+    <fields>
+        <label><!-- SLEEP_v1.0.13 --></label>
+        <name>I_wake_up_at_Work_Days__c</name>
+    </fields>
+    <fields>
+        <help><!-- Please check the reasons why you cannot freely choose your wake-up times on Free Days. Check all that apply. --></help>
+        <label><!-- SLEEP_v1.0.33 --></label>
+        <name>Other__c</name>
+    </fields>
+    <fields>
+        <label><!-- SLEEP_v1.0.21 --></label>
+        <name>Please_check_the_reasons_why_you_cannot__c</name>
+    </fields>
+    <fields>
+        <label><!-- SLEEP_v1.0.10 --></label>
+        <name>Some_people_stay_awake_for_some_Free_Day__c</name>
+    </fields>
+    <fields>
+        <label><!-- SLEEP_v1.0.9 --></label>
+        <name>Some_people_stay_awake_for_some_Work_Day__c</name>
+    </fields>
+    <fields>
+        <label><!-- SLEEP_v1.0.4 --></label>
+        <name>What_types_of_sleep_disorders_do_you__c</name>
+    </fields>
+    <fields>
+        <label><!-- SLEEP_v1.0.5 --></label>
+        <name>sleep_disorders_Other__c</name>
+    </fields>
+    <layouts>
+        <layout>Sleep Survey Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Survey Response --></label>
+            <section>Survey Response</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

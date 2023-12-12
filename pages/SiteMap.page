@@ -1,0 +1,8 @@
+<apex:page contentType="text/xml" showHeader="false">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" >
+  <url>
+    <loc>https://project.mindcrowd.org/s/vipaccess</loc>
+    <lastmod>2022-06-07T04:41:15+00:00</lastmod>
+  </url>
+ </urlset>
+</apex:page>

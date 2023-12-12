@@ -1,0 +1,71 @@
+.THIS .graph-double {
+    width:30%;
+    padding-left: 20px;
+    padding-right: 20px;
+
+}
+.THIS .graph-singel {
+    width:40%;
+    padding-left: 20px;
+    padding-right: 20px;
+    
+}
+
+.THIS .speed-m-chart-box {
+    padding-bottom: 95px ;
+    padding-right: 20px;
+}
+.THIS .graph-double .gauge{
+    margin-bottom: 1.555%;
+}
+@media (max-width: 1400px){
+    .THIS .graph-double .gauge{
+        margin-bottom: 3.555%;
+    }
+
+}
+@media (max-width: 1024px){
+    .THIS .graph-double .gauge{
+        margin-bottom: 7.555%;
+    }
+
+}
+@media (max-width: 768px), (max-width: 1000px){
+    
+    .THIS .graph-singel {
+        width:100%;
+        top: 50px !important;
+        margin-bottom: 50px;
+    }
+    .THIS .graph-double {
+        width:50%;
+        top: 50px !important;
+        margin-bottom: 100px;
+    }
+    .THIS .speed-m-chart-box {
+        padding-bottom: 30px ;
+ 
+    }
+
+}
+@media (max-width: 767px){
+
+    .THIS .graph-singel {
+        width:100%;
+        margin-top: 20px;
+        padding: 0;
+    }
+
+    .THIS .graph-double {
+        width:100%;
+        top: 50px !important;
+        margin-bottom: 100px;
+        padding: 0;
+    }
+    
+    .THIS .speed-m-chart-box {
+        padding-bottom: 30px ;
+ 
+    }
+
+}
