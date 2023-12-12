@@ -1,0 +1,354 @@
+/* .THIS .game_panel{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color:#E4DBC3;
+    position: relative;
+} */
+/* .THIS .gameblock {
+    width: 390px;
+    margin: 0px auto;
+} */
+.THIS .titlebox {
+    display: inline-block;
+    width: 75px;
+    font-size: 18px;
+    line-height: 23px;
+}
+.THIS .target_box1 {
+    display: inline-block;
+    width: 150px;
+    height: 160px;
+    background: #ccc5c5;
+    position: relative;
+    background-color: #fff;
+    border-radius: 7px;
+    border: 2px #ab9c68 solid;
+    padding: 5px 30px 15px;
+    font-size: 50px;
+    box-shadow: 0px 0px 10px 0px rgb(0 0 0 / 25%) inset;
+    -webkit-box-shadow: 0px 0px 10px 0px rgb(0 0 0 / 25%) inset;
+    -moz-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.25) inset;
+}
+
+.THIS .target_box2 {
+    display: inline-block;
+    width: 150px;
+    height: 160px;
+    background: #ccc5c5;
+    margin-left: 5px;
+    margin-right: 5px;
+    position: relative;
+    background-color: #fff;
+    border-radius: 7px;
+    border: 2px #ab9c68 solid;
+    padding: 5px 30px 15px;
+    font-size: 50px;
+    box-shadow: 0px 0px 10px 0px rgb(0 0 0 / 25%) inset;
+    -webkit-box-shadow: 0px 0px 10px 0px rgb(0 0 0 / 25%) inset;
+    -moz-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.25) inset;
+}
+
+.THIS .target_box3 {
+    display: inline-block;
+    width: 150px;
+    height: 160px;
+    background: #ccc5c5;
+    position: relative;
+    background-color: #fff;
+    border-radius: 7px;
+    border: 2px #ab9c68 solid;
+    padding: 5px 30px 15px;
+    font-size: 50px;
+    box-shadow: 0px 0px 10px 0px rgb(0 0 0 / 25%) inset;
+    -webkit-box-shadow: 0px 0px 10px 0px rgb(0 0 0 / 25%) inset;
+    -moz-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.25) inset;
+}
+
+.THIS .user_boxF {
+    display: inline-block;
+    width: 150px;
+    height: 160px;
+    background: #ccc5c5;
+    position: relative;
+    background-color: #fff;
+    border-radius: 7px;
+    border: 2px #ab9c68 solid;
+    padding: 5px 30px 15px;
+    font-size: 50px;
+    box-shadow: 0px 0px 10px 0px rgb(0 0 0 / 25%) inset;
+    -webkit-box-shadow: 0px 0px 10px 0px rgb(0 0 0 / 25%) inset;
+    -moz-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.25) inset;
+}
+
+.THIS .gameNote {
+
+    margin-top: 10px;
+    margin-bottom: 0 !important;
+    font-size: 22px;
+}
+
+.THIS .user_boxS {
+    display: inline-block;
+    width: 150px;
+    height: 160px;
+    background: #ccc5c5;
+    margin-left: 5px;
+    margin-right: 5px;
+    position: relative;
+    background-color: #fff;
+    border-radius: 7px;
+    border: 2px #ab9c68 solid;
+    padding: 5px 30px 15px;
+    font-size: 50px;
+    box-shadow: 0px 0px 10px 0px rgb(0 0 0 / 25%) inset;
+    -webkit-box-shadow: 0px 0px 10px 0px rgb(0 0 0 / 25%) inset;
+    -moz-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.25) inset;
+}
+
+.THIS .user_boxT {
+    display: inline-block;
+    width: 150px;
+    height: 160px;;
+    background: #ccc5c5;
+    position: relative;
+    background-color: #fff;
+    border-radius: 7px;
+    border: 2px #ab9c68 solid;
+    padding: 5px 30px 15px;
+    font-size: 50px;
+    box-shadow: 0px 0px 10px 0px rgb(0 0 0 / 25%) inset;
+    -webkit-box-shadow: 0px 0px 10px 0px rgb(0 0 0 / 25%) inset;
+    -moz-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.25) inset;
+}
+
+.THIS .gcomplete {
+    text-align: center;
+    padding: 25px 0px;
+}
+
+.THIS .catch_row {
+    margin-left: 70px;
+}
+.THIS .catch_box {
+    width: 100px;
+    height: 52px;
+    margin: 15px auto;
+    background-image: url(/s/sfsites/c/resource/towerGame/h2.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: relative;
+    
+}
+
+.THIS .bbx {
+
+    height: 35px;
+    position: absolute;
+    
+    background-image: url(/s/sfsites/c/resource/towerGame/b.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    left: 0;
+    width: 100%;
+    background-position: center;
+}
+
+.THIS .rbx {
+  
+    height: 35px;
+    position: absolute;
+    background-image: url(/s/sfsites/c/resource/towerGame/r.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    left: 0;
+    width: 100%;
+    background-position: center;
+}
+
+.THIS .gbx {
+
+    height: 36px;
+    position: absolute;
+    background-image: url(/s/sfsites/c/resource/towerGame/g.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    left: 0;
+    width: 100%;
+    background-position: center;
+}
+
+.THIS .ybx {
+    height: 36px;
+    position: absolute;
+    background-image: url(/s/sfsites/c/resource/towerGame/y.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    left: 0;
+    width: 100%;
+    background-position: center;
+}
+
+.THIS .cbx {
+    height: 36px;
+    position: absolute;
+    background-image: url(/s/sfsites/c/resource/towerGame/c.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    left: 0;
+    width: 100%;
+    background-position: center;
+}
+
+.THIS .gamePlayBox {
+    position: relative;
+}
+
+.THIS .gameContinue {
+    position: absolute;
+    font-size: 20px;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background: rgb(255 255 255 / 82%);
+    display:none;
+    text-align: center;
+    font-weight: 400;
+    justify-content: center;
+    border-radius: 10px;
+}
+.THIS .gameContinue span{
+    justify-content: center;
+    margin: auto;
+
+}
+.THIS .target_row, .THIS .user_row{
+    display: flex;
+    justify-content: center;
+}
+.THIS .titlebox{
+    justify-content: center;
+    margin: auto 0;
+}
+/* .THIS .user_time {
+    text-align: center;
+    margin-bottom: 15px;
+    font-size: 35px;
+} */
+
+
+/*.THIS .usrselect:active, .THIS .usrselect:focus {
+    background-color: #000;
+  }*/
+
+.THIS .usrselect:active, .THIS .usrselect.selected{
+    background-color: #000;
+  }
+
+
+.THIS .userselectres:active, .THIS .userselectres:focus {
+    background-color: #000;
+  }
+.THIS .cmdbtn {
+    padding: 5px 15px;
+    cursor: pointer;
+   
+}
+.THIS #idintbtn{
+    margin-top: 10px;
+}
+.THIS .gamebody{
+    margin:0px;
+    padding:0px;
+}
+.THIS .game_block {
+   
+    font-size: 22px;
+    width: 100%;
+    font-weight: bold;
+    padding: 10px 25px;
+    text-align: center;
+    /* position: relative; */
+}
+/* .THIS .faceImg{
+	width: 190px;
+    height: auto;
+
+} */
+/* .THIS .label{
+	font-weight: bold;
+    font-size: 22px;
+    margin: 5px;
+} */
+/* .THIS .text-input{
+	background-color: #dee1e2;
+    border: none;
+    height: 35px;
+    width: 240px;
+    text-align: center;
+    color: #000;
+} */
+.THIS .mr5{
+	margin:5px;
+}
+.THIS .mr2{
+	margin:2px;
+}
+.THIS .m20{
+	margin: 10px 10px;
+}
+.THIS ul{
+	list-style-type: none;
+}
+.THIS ul li{
+	float:left;
+}
+.THIS .face3Container{
+	margin: auto;
+    padding:0px 20px 20px 20px;
+    text-align: center;
+}
+.THIS .face3Container .faceImg{
+	width: 280px!important;
+    /* height: 250px; */
+
+}
+.THIS .face3Container .imgList{
+	/* height: 180px; */
+    display: flex;
+}
+/* .THIS .btn{
+	width: 115px;
+    height: 43px;
+    border-radius: 9px;
+    font-size: 18px;
+    font-weight: bold;
+} */
+/* .THIS .name .btn{
+	margin: 5px;
+    border-color: #FFF;
+} */
+/* .THIS .profession .btn{
+	margin: 5px;
+    border-color: #FFF;
+    width: 150px!important;
+} */
+
+/* .THIS .d_title {
+    color: #000;
+}
+.THIS .duration .d_txt{
+    display: inline-block;
+    margin-right: 15px;
+}
+.THIS .duration .d_status{
+    display: inline-block;
+    margin-left: 15px;
+}
+.THIS .duration .d_input{
+    display: inline-block;
+    margin-left: 15px;
+} */

@@ -1,0 +1,152 @@
+<!-- @description       : 
+  @author            : Raj  
+  @UI author         : Raj
+  @last modified on  : 05-07-2021
+  @last modified by  : ChangeMeIn@UserSettingsUnder.SFDoc
+  Modifications Log 
+  Ver   Date         Author         Modification
+  1.0   06-07-2021   Raj Kumar      Initial Version -->
+
+
+  <aura:component controller="ContactController" extends="forceCommunity:navigationMenuBase" access="global"
+  implements="forceCommunity:availableForAllPageTypes">
+
+  <!-- <aura:attribute name="emailSubscribe" type="sObject" default="{ 'sobjectType': 'sObject','Email__c': '',}"/> -->
+  <aura:attribute name="isModalOpen" type="boolean" default="false" />
+  <aura:attribute name="isModalOpenEmailSave" type="boolean" default="false" />
+  <aura:attribute name="message" type="String" default="" />
+  <aura:attribute name="svgUrl" type="String" default="" />
+  <aura:attribute name="year" type="date" />
+  <ltng:require scripts="" afterScriptsLoaded="{!c.myAction}"  />
+
+  <aura:attribute name="aboutMindcrowd" type="String" default="ABOUT MINDCROWD®" access="global" />
+  <aura:attribute name="firstCrowdSourceText" type="String" default="First crowdsourced scientific research to understand how the brain ages to prevent diseases like dementia. We need one million people to take a Memory and Attention Test." access="global" />
+  <aura:attribute name="followUs" type="String" default="FOLLOW US" access="global" />
+  <aura:attribute name="office" type="String" default="OFFICE" access="global" />
+  <aura:attribute name="addressOne" type="String" default="445 N 5th St" access="global" />
+  <aura:attribute name="addressTwo" type="String" default="Phoenix, Arizona 85004" access="global" /> 
+  <aura:attribute name="showRSS" type="Boolean" default="false" access="global" /> 
+
+
+  <div class="slds-docked-form-footer footer_wrapper">
+    <footer class="print">
+      <div class="slds-grid slds-gutters">
+        <!-- <div class="slds-col slds-size_1-of-4 av_one_fourth marginL0 padding0"> -->
+          <div class="slds-col slds-size_1-of-3 av_one_fourth marginL0 padding0">
+            <div class="f-content">
+              <h3>{!v.aboutMindcrowd}</h3>
+              <p class="marginT20">{!v.firstCrowdSourceText}</p>
+            </div>
+         
+          </div>
+          <div class="slds-col slds-size_1-of-3 av_one_fourth padding0">
+            <div class="f-content">
+              <h3>{!v.followUs}</h3>
+            <div class="social_icons footer-s-icon marginT20">
+            <ul
+              class="text-center essb-social-followers-variables essb-fc-grid essb-followers essb-fc-template-metro essb-fc-columns-3 essb-fc-notextvalue">
+              <li class="social_bookmarks_facebook ">
+                <a target="_blank" aria-label="Link to Facebook" href="{!$Label.c.facebook}"
+                  aria-hidden="false" data-av_icon="" data-av_iconfont="entypo-fontello" title="Facebook"
+                  rel="noopener"><span class="avia_hidden_link_text">Facebook</span></a>
+              </li>
+              <li class="social_bookmarks_twitter"><a class="facebook" href="https://twitter.com/TGenMINDCROWD"
+                  target="_blank" title="Twitter"><img src="{!v.svgUrl}" alt="Twitter" style="width: 2rem; height: 2rem;"/></a></li>
+              <li class="social_bookmarks_pinterest">
+                <a target="_blank" aria-label="Link to Pinterest" href="https://www.pinterest.com/tgenmindcrowd/"
+                  aria-hidden="false" data-av_icon="" data-av_iconfont="entypo-fontello" title="Pinterest"
+                  rel="noopener"><span class="avia_hidden_link_text">Pinterest</span></a>
+              </li>
+            </ul>
+            </div>
+          
+          </div>
+        </div>
+        <!-- <div class="slds-col slds-size_1-of-4 av_one_fourth"> -->
+          <div class="slds-col slds-size_1-of-3 av_one_fourth">
+            <div class="f-content">
+              <h3>{!v.office}</h3>
+          <p class="marginT20">{!v.addressOne}<br />{!v.addressTwo} </p>
+          <!-- <p>Phoenix, Arizona 85004</p> -->
+          <p>theteam@mindcrowd.org</p>
+            </div>
+          
+        </div>
+      </div>
+      
+    </footer>
+  </div>
+  <div class="copyright">
+    <div class="copyright-content">
+      <p style="margin: 0; float:left;">{!$Label.c.copyright_1}&nbsp;&nbsp;{!v.year}&nbsp;&nbsp;{!$Label.c.copyright_2}&nbsp;&nbsp;•&nbsp;&nbsp;<a
+          href="{!$Label.c.live_URL_5}">{!$Label.c.cookie_privacy}</a>
+      </p>
+      <div class="social_icons ">
+        <ul class="text-center">
+          <li class="social_bookmarks_twitter"><a class="facebook" href="https://twitter.com/TGenMINDCROWD"
+              target="_blank" title="Twitter"><img src="{!v.svgUrl}" alt="Twitter" style="width: 1rem; height: 1rem;"/></a></li>
+          <li class="social_bookmarks_facebook">
+            <!-- <a class="twitter " href="https://www.facebook.com/Mindcrowd" target="_blank"><i class="fab fa-facebook"></i></a> -->
+            <a target="_blank" aria-label="Link to Facebook" href="{!$Label.c.facebook}"
+              aria-hidden="false" data-av_icon="" data-av_iconfont="entypo-fontello" title="Facebook"
+              rel="noopener"><span class="avia_hidden_link_text">Facebook</span></a>
+          </li>
+          <li class="social_bookmarks_pinterest">
+            <a target="_blank" aria-label="Link to Pinterest" href="https://www.pinterest.com/tgenmindcrowd/"
+              aria-hidden="false" data-av_icon="" data-av_iconfont="entypo-fontello" title="Pinterest"
+              rel="noopener"><span class="avia_hidden_link_text">Pinterest</span></a>
+          </li>
+          <li class="social_bookmarks_youtube "> <a class="twitter "
+              href="https://www.youtube.com/@MindCrowd" target="_blank" title="Youtube"><i
+                class="fab fa-youtube"></i></a></li>
+          <aura:if isTrue="{!v.showRSS}">
+          <li class="social_bookmarks_rss"> <a class="twitter " href="{!$Label.c.live_URL_6}"
+              target="_blank" title="Rss"><i class="fas fa-rss "></i></a></li>
+          </aura:if>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!--Use aura:if tag to display/hide popup based on isModalOpen value-->
+  <aura:if isTrue="{!v.isModalOpen}">
+    <!-- Modal/Popup Box starts here-->
+    <section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-modal="true"
+      aria-describedby="modal-content-id-1" class="slds-modal slds-fade-in-open">
+      <div class="slds-modal__container">
+        <!-- Modal/Popup Box Header Starts here-->
+        <header class="slds-modal__header slds-modal__header_empty">
+          <lightning:buttonIcon iconName="utility:close" onclick="{! c.closeModel }" alternativeText="close"
+            variant="bare-inverse" class="slds-modal__close" />
+            
+        </header>
+        <!--Modal/Popup Box Body Starts here-->
+        <div class="slds-modal__content slds-p-around_medium" id="modal-content-id-1">
+          <p class="text-center"><b>Please check your email address and try again.</b></p>
+        </div>
+      </div>
+    </section>
+    <div class="slds-backdrop slds-backdrop_open"></div>
+  </aura:if>
+  <aura:if isTrue="{!v.isModalOpenEmailSave}">
+    <!-- Modal/Popup Box starts here-->
+    <section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-modal="true"
+      aria-describedby="modal-content-id-1" class="slds-modal slds-fade-in-open">
+      <div class="slds-modal__container">
+        <!-- Modal/Popup Box Header Starts here-->
+        <header class="slds-modal__header slds-modal__header_empty">
+          <lightning:buttonIcon iconName="utility:close" onclick="{! c.closeModel }" alternativeText="close"
+            variant="bare-inverse" class="slds-modal__close" />
+          <!-- <h2 id="modal-heading-01" class="slds-text-heading_medium slds-hyphenate"></h2> -->
+         
+        </header>
+        <div class="slds-modal__content slds-p-around_medium" id="modal-content-id-1">
+          <p class="text-center"><b>Thank you for subscribing to our newsletter!</b></p>
+        </div>
+        <!--Modal/Popup Box Body Starts here-->
+       
+      </div>
+    </section>
+    <div class="slds-backdrop slds-backdrop_open"></div>
+  </aura:if>
+</aura:component>

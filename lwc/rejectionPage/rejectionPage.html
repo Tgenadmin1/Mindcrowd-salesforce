@@ -1,0 +1,43 @@
+<template>
+  <lightning-layout multiple-rows="true" class="participation-form">
+    <lightning-layout-item
+      size="12"
+      small-device-size="12"
+      medium-device-size="12"
+      large-device-size="12"
+      class="Participation-header-box"
+    >
+      <a href="#">
+        <img alt="Mind Crowd" src={logoimage2} />
+      </a>
+    </lightning-layout-item>
+    <lightning-layout-item
+      size="12"
+      small-device-size="12"
+      medium-device-size="12"
+      large-device-size="12"
+      class="Participation-title-box"
+    >
+      <div
+        class="freebirdFormviewerViewHeaderThemeStripe freebirdSolidBackground exportThemeStripe"
+      ></div>
+      <h1 class="title">
+        {label.rejection1}
+      </h1>
+    </lightning-layout-item>
+    <lightning-layout-item
+      size="12"
+      small-device-size="12"
+      medium-device-size="12"
+      large-device-size="12"
+      class="text-center"
+    >
+      <lightning-button
+        label="Go to MindCrowd Website"
+        class="magenta-btn slds-m-left_x-small"
+        variant="brand"
+        onclick={navigateToWebPage}
+      ></lightning-button>
+    </lightning-layout-item>
+  </lightning-layout>
+</template>

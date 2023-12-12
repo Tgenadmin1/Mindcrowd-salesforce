@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LightningComponentBundle xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>55.0</apiVersion>
+    <isExposed>true</isExposed>
+    <targets>
+        <target>lightning__AppPage</target>
+        <target>lightning__RecordPage</target>
+        <target>lightning__HomePage</target>
+        <target>lightningCommunity__Page</target>
+        <target>lightningCommunity__Default</target>
+    </targets>
+    <targetConfigs>  
+        <targetConfig targets="lightning__HomePage,lightning__RecordPage,lightningCommunity__Default">
+            <property name="step_1" type="String" default="About You" label="Enter the title"/>
+            <property name="step_2" type="String" default="ATTENTION TEST" label="Enter the title"/>
+            <property name="step_3" type="String" default="MEMORY TEST" label="Enter the title"/>
+            <property name="step_4" type="String" default="YOUR RESULTS" label="Enter the title"/>
+            <property name="step_4a" type="String" default="Your Brain" label="Enter the title"/>
+            <property name="brainInfo_text_2" type="String" default="What is your biological sex?" label="Enter the title"/>
+            <property name="brainInfo_text_3" type="String" default="What is your current age?" label="Enter the title"/>
+            <property name="brainInfo_text_14" type="String" default="Please tell us what gender you identify as" label="Enter the title"/>
+            <property name="brainInfo_text_4" type="String" default="What gender do you identify as?" label="Enter the title"/>
+            <property name="brainInfo_text_5" type="String" default="What is the highest level of education you've completed?" label="Enter the title"/>
+            <property name="brainInfo_text_6" type="String" default="  How many languages do you speak fluently?" label="Enter the title"/>
+            <property name="brainInfo_text_7" type="String" default="  How many languages do you write fluently?" label="Enter the title"/>
+            <property name="brainInfo_text_8" type="String" default="  What was the first language you spoke?" label="Enter the title"/>
+            <property name="brainInfo_text_9" type="String" default="  If you speak a second language, at what age did you begin speaking that language?" label="Enter the title"/>
+            <property name="brainInfo_text_10" type="String" default="  In what language are you most fluent?" label="Enter the title"/>
+            <property name="brainInfo_text_11" type="String" default="  What country do you live in?" label="Enter the title"/>
+                        
+            <property name="brainInfo_text_1" type="String" default="Tell us a little about your brain" label="Enter the title"/>
+             <property name="strTitle" type="String" default="Welcome in Salesforce" label="Enter the title"/>
+            <property name="showImage" type="Boolean" default="true" label="Show Image ?"/>
+            <property name="imgUrl" type="String" default="" label="Enter Image URL"/>
+        </targetConfig>
+    </targetConfigs>
+</LightningComponentBundle>

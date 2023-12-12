@@ -1,0 +1,28 @@
+<!-- // Created By: {Girikon(ShwetaKhunteta)}
+// Created On: 19/05/2021 (dd/mm/yyyy)
+// Description/Purpose:created to send the selected barcodes. 
+
+ -->
+
+<apex:page standardController="Shipping_Detail__c" recordSetVar="Shipping_Detail" showHeader="false" extensions="PassBarCodeIdToVF">
+  <!-- The selected id is : {!barCodes}       -->
+<apex:includeLightning />
+	<div id="lightningvf" />
+    <script>
+     
+    
+        $Lightning.use("c:ShipmentApp", function() {
+          $Lightning.createComponent("c:barCodeGenerator",
+              { 
+                "barcodeIds": {!barCode}
+              },
+              "lightningvf",
+              function(cmp) {
+                console.log("generate barcode button was created");
+                
+              }
+          );
+        });
+     
+    </script>
+</apex:page>

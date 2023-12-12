@@ -1,0 +1,7 @@
+<design:component>
+    <design:attribute name="results_text" label="results_text" default="Bienvenido a su página personal de resultados de MindCrowd"/>
+	<design:attribute name="results_text_1" label="results_text_1" default="Los indicadores de abajo muestran sus resultados. El primer indicador es su resultado personal. El segundo indicador muestra los resultados de personas como usted. El tercer indicador es la media de todos los participantes de MindCrowd."/>
+    <design:attribute name="results_text_2" label="results_text_2" default="Los indicadores se actualizan a medida que más personas participan en MindCrowd. Puede volver y ver sus resultados en cualquier momento."/>
+	<design:attribute name="results_text_3" label="results_text_3" default="Los indicadores representan el porcentaje de aciertos para el juego, excepto para el juego React, que muestra su velocidad en milisegundos."/>
+    <design:attribute name="results_text_4" label="results_text_4" default="Recuerde que estos juegos no están diseñados para predecir problemas ni enfermedades cerebrales futuros. Algunas personas son buenas en ciertos juegos, pero no en otros, eso es normal. Cada juego que completa ayuda a dar una imagen más completa de su rendimiento mental. Siga jugando a los juegos y podrá encontrar aquellos en los que es mejor."/>
+</design:component>

@@ -1,0 +1,80 @@
+<!--
+  @description       : 
+  @author            : Raj  
+  @UI author         : Raj
+  @last modified on  : 05-07-2021
+  @last modified by  : ChangeMeIn@UserSettingsUnder.SFDoc
+  Modifications Log 
+  Ver   Date         Author         Modification
+  1.0   06-07-2021   Raj Kumar      Initial Version
+-->
+<!-- <aura:component implements="forceCommunity:themeLayout"> -->
+    <aura:component controller="GamesController" implements="forceCommunity:themeLayout" access="global" description="mindCrowd Custom Theme Layout"> 
+    <aura:attribute name="sidebarFooter" type="Aura.Component[]"/>
+    <aura:attribute name="navMindcrowd" type="Aura.Component[]" required="false"/>
+    <aura:attribute name="languageSection" type="Aura.Component[]" />
+    <aura:attribute name="body" type="Aura.Component[]"/>
+    <aura:attribute name="footer" type="Aura.Component[]"/>
+    <aura:handler event="forceCommunity:routeChange" action="{!c.handleRouteChange}"/>
+    <aura:attribute name="isLoginShow" type="Boolean" default="false"/>
+    <aura:attribute name="resultUrl" type="String"/>
+    <aura:attribute name="strone" type="string"/>
+    <aura:attribute name="year" type="date" />
+    <aura:attribute name="showConfirmDialog" type="boolean" default="false"/>
+    <lightning:navigation aura:id="navService"/>
+     <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+        <div class="main-container-box" >
+          <div class="slds-builder-header_container">
+            <div class="mc-header">
+              <div class="mc-header-container">
+              
+                  <div class="logo-container">
+                    <!-- <img src="{!$Resource.mindcrowd_style + '/images/mindcrowd-logo.png'}"/> -->
+                    <img src="{!$Resource.mindcrowd_style + '/images/mindcrowd.png'}" sizes="(max-width: 328px) 100vw, 328px" height="100" width="300" alt="MindCrowd" title="MindCrowd"/>
+                  </div>
+              </div>
+            </div>
+              </div>
+               <div class="mainContentArea">
+                {!v.body}
+            </div>
+          <div class="copyright">
+          <div class="copyright-content">
+            <p style="margin: 0; float:left;">{!v.year}&nbsp;&nbsp;©&nbsp;&nbsp;{!$Label.c.copyright3}</p>
+          </div> 
+         </div>
+        </div>
+
+
+        <aura:if isTrue="{!v.showConfirmDialog}">
+            <!--Modal Box Start-->
+            <div role="dialog" class="slds-modal slds-fade-in-open   ">
+                <div class="slds-modal__container paddingB20">
+                  <!-- <header class="slds-modal__header">
+                   
+                     <lightning:buttonIcon iconName="utility:close"
+                    onclick="{! c.closeModel }"
+                    alternativeText="close"
+                    variant="bare-inverse"
+                    class="slds-modal__close"/> 
+
+                </header> -->
+                    <div class="slds-modal__content slds-p-around--medium paddingB0 j-center">
+                       <ui:outputRichText value="{!$Label.c.redirection_text_1}"></ui:outputRichText>
+                        
+                    </div>
+                    <footer class="slds-modal__footer text-center paddingB20">
+                      <a   href="#"   class="pink-btn slds-button text-center marginT10" onclick="{!c.gameNav}">
+                        My Games
+                      </a>
+                      <a   href="{!$Label.c.Community_Url+'/secur/logout.jsp?retUrl='+$Label.c.Community_Url}"    class="pink-btn slds-button text-center marginT10" >
+                        Log Out
+                      </a>
+                      
+                    </footer>
+
+                </div>
+            </div>
+            <div class="slds-backdrop slds-backdrop--open"></div>            
+        </aura:if>
+    </aura:component>

@@ -1,0 +1,34 @@
+<!--
+  @description       : 
+  @author            : Raj Kumar
+  @UI author         : Raj
+  @last modified on  : 08-05-2021
+  @last modified by  : ChangeMeIn@UserSettingsUnder.SFDoc
+  Modifications Log 
+  Ver   Date         Author         Modification
+  1.0   01-05-2021   Raj Kumar      Initial Version
+-->
+<template> 
+    <lightning-layout class="home_promo">
+      <lightning-layout-item size="12" small-device-size="12" medium-device-size="12" large-device-size="12">
+        <div class="slds-grid slds-gutters home-col">
+          <div class="slds-col slds-size_1-of-2 padding0 banner-col-left">
+            <div class="bannder-text1">{label.banner_h3} </div>
+            <h2 class="home-h2">{label.banner_Text_2}<br>{label.banner_Text_3}</h2>
+            <!-- <h3>
+              <span  class="font50">{label.banner_Text_3}</span>
+            </h3> -->
+            <p class="home_promo_n">{label.banner_Text_4}</p>
+            <p >{label.homesection6001}</p>
+                <div class="marginT20"><a href={Community_Url_consent} class="pink-btn slds-button text-center">JOIN THE STUDY</a></div>
+          </div>
+          <div class="slds-col slds-size_1-of-2 homepage-right-col">
+            <div>
+              <p> <a href={Community_Url_consent}  title="Take the MindCrowd memory test discover how your brain compares with others like you." > <img width="317" height="369" alt="Take the MindCrowd memory test discover how your brain compares with others like you." src={image1}></a> </p>
+            </div>
+          </div>
+        </div>
+  
+      </lightning-layout-item>
+    </lightning-layout>
+  </template>

@@ -1,0 +1,135 @@
+<template>
+    <lightning-card>
+      <div class="demo-only" style="height:12rem">
+        <div class="slds-tabs_default">
+          <ul class="slds-tabs_default__nav" role="tablist">
+            <li class="slds-tabs_default__item slds-is-active" title="Opportunities" role="presentation">
+              <a class="slds-tabs_default__link" href="#" role="tab" tabindex="0" aria-selected="true" aria-controls="tab-default-1" id="tab-default-1__item">
+                <span class="slds-tabs__left-icon">
+                  <span class="slds-icon_container slds-icon-standard-opportunity" title="Opportunities">
+                    <svg class="slds-icon slds-icon_small" aria-hidden="true">
+                      <use xlink:href="/assets/icons/standard-sprite/svg/symbols.svg#opportunity"></use>
+                    </svg>
+                  </span>
+                </span>Opportunities </a>
+            </li>
+            <li class="slds-tabs_default__item" title="Cases" role="presentation">
+              <a class="slds-tabs_default__link" href="#" role="tab" tabindex="-1" aria-selected="false" aria-controls="tab-default-2" id="tab-default-2__item">
+                <span class="slds-tabs__left-icon">
+                  <span class="slds-icon_container slds-icon-standard-case" title="Cases">
+                    <svg class="slds-icon slds-icon_small" aria-hidden="true">
+                      <use xlink:href="/assets/icons/standard-sprite/svg/symbols.svg#case"></use>
+                    </svg>
+                  </span>
+                </span>Cases </a>
+            </li>
+            <li class="slds-tabs_default__item" title="Products" role="presentation">
+              <a class="slds-tabs_default__link" href="#" role="tab" tabindex="-1" aria-selected="false" aria-controls="tab-default-3" id="tab-default-3__item">
+                <span class="slds-tabs__left-icon">
+                  <span class="slds-icon_container slds-icon-standard-product" title="Products">
+                    <svg class="slds-icon slds-icon_small" aria-hidden="true">
+                      <use xlink:href="/assets/icons/standard-sprite/svg/symbols.svg#product"></use>
+                    </svg>
+                  </span>
+                </span>Products </a>
+            </li>
+            <li class="slds-tabs_default__item" title="Price Books" role="presentation">
+              <a class="slds-tabs_default__link" href="#" role="tab" tabindex="-1" aria-selected="false" aria-controls="tab-default-4" id="tab-default-4__item">
+                <span class="slds-tabs__left-icon">
+                  <span class="slds-icon_container slds-icon-standard-pricebook" title="Price Books">
+                    <svg class="slds-icon slds-icon_small" aria-hidden="true">
+                      <use xlink:href="/assets/icons/standard-sprite/svg/symbols.svg#pricebook"></use>
+                    </svg>
+                  </span>
+                </span>Price Books </a>
+            </li>
+            <li class="slds-tabs_default__item" title="Contacts" role="presentation">
+              <a class="slds-tabs_default__link" href="#" role="tab" tabindex="-1" aria-selected="false" aria-controls="tab-default-5" id="tab-default-5__item">
+                <span class="slds-tabs__left-icon">
+                  <span class="slds-icon_container slds-icon-standard-contact" title="Contacts">
+                    <svg class="slds-icon slds-icon_small" aria-hidden="true">
+                      <use xlink:href="/assets/icons/standard-sprite/svg/symbols.svg#contact"></use>
+                    </svg>
+                  </span>
+                </span>Contacts </a>
+            </li>
+            <li class="slds-tabs_default__item slds-tabs_default__overflow-button" title="More Tabs" role="presentation">
+              <div class="slds-dropdown-trigger slds-dropdown-trigger_click slds-is-open">
+                <button class="slds-button" aria-haspopup="true">More <svg class="slds-button__icon slds-button__icon_x-small slds-button__icon_right" aria-hidden="true">
+                    <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#down"></use>
+                  </svg>
+                </button>
+                <div class="slds-dropdown slds-dropdown_right">
+                  <ul class="slds-dropdown__list slds-dropdown_length-with-icon-10" role="menu">
+                    <li class="slds-dropdown__item" role="presentation">
+                      <a href="#" role="menuitem" tabindex="-1">
+                        <span class="slds-truncate" title="Accounts">
+                          <span class="slds-media slds-media_center">
+                            <span class="slds-media__figure">
+                              <span class="slds-icon_container slds-icon-standard-account" title="Description of icon when needed">
+                                <svg class="slds-icon slds-icon_small" aria-hidden="true">
+                                  <use xlink:href="/assets/icons/standard-sprite/svg/symbols.svg#account"></use>
+                                </svg>
+                              </span>
+                            </span>
+                            <span class="slds-media__body">Accounts</span>
+                          </span>
+                        </span>
+                      </a>
+                    </li>
+                    <li class="slds-dropdown__item" role="presentation">
+                      <a href="#" role="menuitem" tabindex="-1">
+                        <span class="slds-truncate" title="Approvals">
+                          <span class="slds-media slds-media_center">
+                            <span class="slds-media__figure">
+                              <span class="slds-icon_container slds-icon-standard-approval" title="Description of icon when needed">
+                                <svg class="slds-icon slds-icon_small" aria-hidden="true">
+                                  <use xlink:href="/assets/icons/standard-sprite/svg/symbols.svg#approval"></use>
+                                </svg>
+                              </span>
+                            </span>
+                            <span class="slds-media__body">Approvals</span>
+                          </span>
+                        </span>
+                      </a>
+                    </li>
+                    <li class="slds-dropdown__item" role="presentation">
+                      <a href="#" role="menuitem" tabindex="-1">
+                        <span class="slds-truncate" title="Lead">
+                          <span class="slds-media slds-media_center">
+                            <span class="slds-media__figure">
+                              <span class="slds-icon_container slds-icon-standard-lead" title="Description of icon when needed">
+                                <svg class="slds-icon slds-icon_small" aria-hidden="true">
+                                  <use xlink:href="/assets/icons/standard-sprite/svg/symbols.svg#lead"></use>
+                                </svg>
+                              </span>
+                            </span>
+                            <span class="slds-media__body">Leads</span>
+                          </span>
+                        </span>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </li>
+          </ul>
+          <div id="tab-default-1" class="slds-tabs_default__content slds-show" role="tabpanel" aria-labelledby="tab-default-1__item">
+            <h2>Item One Content</h2>
+          </div>
+          <div id="tab-default-2" class="slds-tabs_default__content slds-hide" role="tabpanel" aria-labelledby="tab-default-2__item">
+            <h2>Item Two Content</h2>
+          </div>
+          <div id="tab-default-3" class="slds-tabs_default__content slds-hide" role="tabpanel" aria-labelledby="tab-default-3__item">
+            <h2>Item Three Content</h2>
+          </div>
+          <div id="tab-default-4" class="slds-tabs_default__content slds-hide" role="tabpanel" aria-labelledby="tab-default-4__item">
+            <h2>Item Four Content</h2>
+          </div>
+          <div id="tab-default-5" class="slds-tabs_default__content slds-hide" role="tabpanel" aria-labelledby="tab-default-5__item">
+            <h2>Item Five Content</h2>
+          </div>
+        </div>
+      </div>
+    </lightning-card>
+  </template>

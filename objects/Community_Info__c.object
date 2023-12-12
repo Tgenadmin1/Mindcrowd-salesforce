@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customSettingsType>List</customSettingsType>
+    <description>This settings is to store dynamic values used for community user creation by automated process.</description>
+    <enableFeeds>false</enableFeeds>
+    <fields>
+        <fullName>Community_Label__c</fullName>
+        <description>Name of the MindCrowd community.</description>
+        <externalId>false</externalId>
+        <label>Community Label</label>
+        <length>25</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Games_Reactivation_Days__c</fullName>
+        <description>It is used to set the number of days in which games can be reactivated.</description>
+        <externalId>false</externalId>
+        <label>Games Reactivation Days</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Log_Exception__c</fullName>
+        <defaultValue>true</defaultValue>
+        <description>If this check box is checked only then exception will log in Exception_Log__c else not.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Check it if need to log exception in system.</inlineHelpText>
+        <label>Log Exception</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>OrgWideEmailAddress__c</fullName>
+        <externalId>false</externalId>
+        <label>Org Wide Email Address</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Email</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Profile_Id__c</fullName>
+        <externalId>false</externalId>
+        <label>Profile Id</label>
+        <length>18</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Profile_Name__c</fullName>
+        <description>Community user profile needed for user creation in automated process.</description>
+        <externalId>false</externalId>
+        <label>Profile Name</label>
+        <length>50</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Spanish_Profile_Id__c</fullName>
+        <externalId>false</externalId>
+        <label>Spanish Profile Id</label>
+        <length>18</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>User_Next_Suffix__c</fullName>
+        <description>Extension to use for unique username generation.</description>
+        <externalId>false</externalId>
+        <label>User Name Suffix</label>
+        <length>50</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <label>Community Info</label>
+    <visibility>Public</visibility>
+</CustomObject>

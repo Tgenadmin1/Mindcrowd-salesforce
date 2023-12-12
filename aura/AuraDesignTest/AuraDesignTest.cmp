@@ -1,0 +1,9 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+	<aura:attribute name="Name" type="String"/>
+    <aura:attribute name="Position" type="String" />
+    <h3>Design component demo</h3>
+    <p>
+    The of the component will be provided by Admin in App builder.
+    </p>
+    <p>The name provided by admin is {! v.Name}</p>
+</aura:component>

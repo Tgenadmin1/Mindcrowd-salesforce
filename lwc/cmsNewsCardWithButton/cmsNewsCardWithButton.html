@@ -1,0 +1,91 @@
+<template>
+    <template if:true={ErrorModalOpen}>
+        <section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-modal="true" aria-describedby="modal-content-id-1" class="slds-modal slds-modal_small ssm slds-fade-in-open">
+            <div class="slds-modal__container">
+                <!-- Modal/Popup Box LWC header here -->
+                 <!-- Modal/Popup Box LWC body starts here -->
+                 <header class="slds-modal__header slds-modal__header_empty">
+                    <lightning-button-icon icon-name="utility:close" alternative-text="Close this window"   variant="bare-inverse" onclick={closeModal} class="slds-modal__close ">  
+                    </lightning-button-icon> 
+                  </header>
+                  
+                <div class="slds-modal__content slds-p-around_medium" id="modal-content-id-2">
+                    <P >{label.consent01}</P>
+                 </div>
+            </div>
+        </section>
+        <div class="slds-backdrop slds-backdrop_open"></div>
+    </template>
+    <div class="mainCrowd-outer-box marginB30">
+        <div class="mainCrowd-inner-box">
+            <form  method="POST" name="ConcentStatus">     
+                <lightning-layout multiple-rows="true" class="inner_content">
+                     
+                    <lightning-layout-item size="12" small-device-size="12" medium-device-size="12">
+                     <!-- <h1 class="text-center marginB20"><p class="title">{label.consent_text_6}</p></h1>            -->
+                     <div class="text-center marginB20 inner-title">{label.consent_text_6}</div>                                                 
+                    </lightning-layout-item>
+                    <lightning-layout-item size="12" small-device-size="12" medium-device-size="12">
+                        <div class="text-center  marginB20 subtitle">{label.consent_text_7}
+                            <!-- <a  class="text-decoration-non subtitle" href="#"  onclick={faqClick}>
+                            {label.consent_text_7}
+                          </a>  -->
+                        
+                        </div>
+                                                                                  
+                    </lightning-layout-item>
+                    <lightning-layout-item size="12" small-device-size="12" medium-device-size="12">
+                        <p>{label.consent_text_8}</p>                                                           
+                    </lightning-layout-item>
+                
+                    <lightning-layout-item size="12" small-device-size="12" medium-device-size="12" class="participation-form-item-row paddingR0">
+                        <div class="white_wrapper_content participation-form-text-aria printDiv">
+
+                            
+
+                               <p >
+                                <!-- <span class="question-text">{body}</span> -->
+                                <lightning-formatted-rich-text value={body}></lightning-formatted-rich-text>
+                            </p>
+                                    
+                                
+                        </div>                                                           
+                    </lightning-layout-item>
+                    <!-- <lightning-layout-item size="12" small-device-size="12" medium-device-size="12">
+                        <p><br>{label.consent_text_10}</p>                                                           
+                    </lightning-layout-item>    -->
+                    <lightning-layout-item size="12" small-device-size="12" medium-device-size="12" large-device-size="12" class=" consent-form-item-row consent_form">
+                     
+                        <div class="slds-grid slds-gutters">
+                            
+                            <div class="slds-col slds-size_1-of-10 paddingL0 paddingR0 remove-label ">
+                                <lightning-input class="information remove-label" message-when-value-missing="Select" onchange={checkTerm} type="checkbox" name="termandcondition"></lightning-input>
+                            </div>
+                            <div class="slds-col ">
+                                <p><lightning-formatted-rich-text value={label.consent_text_11}></lightning-formatted-rich-text> </p>
+                              </div>
+                          </div>
+                     
+                        
+                         
+                    </lightning-layout-item>
+                    <lightning-layout-item size="12" small-device-size="12" medium-device-size="12" large-device-size="12" class="marginB20 m-center">
+                        <lightning-button disabled={isSubmitBtnDisable} class=" btn-sm pink-btn-box big"  onclick={save} label={label.consent_text_15}></lightning-button>
+                    </lightning-layout-item>
+                
+                <lightning-layout-item size="12"  small-device-size="12" medium-device-size="12" >
+                    <!-- <p class="small">{label.consent_text_12} <a href="javascript:window.print()" onclick={printconsent}><b><u>{label.consent_text_13}</u></b></a> {label.consent_text_14}</p> -->
+                    <!-- <p class="small">{label.consent_text_12} <a class="pink-link" target="_blank" href={Community_Url_printconsent} >{label.consent_text_13}</a> {label.consent_text_14}</p> -->
+
+                    <p class="small">{label.consent_text_12} <a class="pink-link" target="_blank" download="mhuentelman21-022-Amendment-1-Catchment-ICF-050522.pdf" href={Community_Url_pdfconsent} >{label.consent_text_13}</a> {label.consent_text_14}</p>
+
+
+
+                    
+                </lightning-layout-item>
+            </lightning-layout>  
+        </form>  
+        </div>
+    </div>     
+    
+</template>

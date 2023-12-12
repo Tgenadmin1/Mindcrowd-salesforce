@@ -1,0 +1,66 @@
+<!--
+  @description             : This Game having the word pair exercise. 
+  @author(Controller)      : Sunil Kumar Singh 
+  @UI author               : Raj
+  @last Updated by         : (Sunil Kr Singh//Date-Aug 1 2021)
+  @last modified by        : ChangeMeIn@UserSettingsUnder.SFDoc
+  Modifications Log 
+  Ver   Date         Author                  Modification
+  1.0   12-30-2021   Sunil Kumar Singh       Initial Version
+-->
+
+<aura:component controller="GamesController" implements="forceCommunity:availableForAllPageTypes,lightning:isUrlAddressable,lightning:hasPageReference" access="global">
+    
+    <aura:attribute name="ParticipantGameResponse" type="Object"/>
+    <aura:attribute name="myAttribute" type="String" access="global"/>
+    <aura:attribute name="participantGameid" type="String" access="global"/>
+    <aura:attribute name="ipAddress" type="String" access="global"/>
+    <aura:attribute name="browser" type="String" access="global"/>
+
+    <ltng:require scripts="" afterScriptsLoaded="{!c.myAction}"  />
+    <div class="main-content-outer marginB30 test">
+        <div id="steps" class="steps">
+            <div class="step-grid slds-grid slds-gutters text-center">
+                <div class="slds-col ">
+                    <div class="step-number">{!$Label.c.step_1}</div>
+                    <!-- <div class="lable-s1">{!$Label.c.step_1}</div> -->
+                </div>
+                <div class="slds-col ">
+                    <div class="step-number">{!$Label.c.step_2}</div>
+                    <!-- <div class="lable-s1">{!$Label.c.step_2}</div> -->
+                </div>
+                <div class="slds-col current">
+                    <div class="step-number">{!$Label.c.step_3}</div>
+                    <!-- <div class="lable-s1">{!$Label.c.step_2}</div> -->
+                </div>
+                <div class="slds-col">
+                    <div class="step-number">{!$Label.c.step_4}</div>
+                    <!-- <div class="lable-s1">Compare Your Brain</div> -->
+                </div>
+                <div class="slds-col">
+                    <div class="step-number">{!$Label.c.step_4}</div>
+                    <!-- <div class="lable-s1">{!$Label.c.step_4}</div> -->
+                  </div>
+              </div>
+            <!-- <ul>
+                <li class="step1"><span class="lable-s">{!$Label.c.step_1}</span><span>1</span><span>1</span></li>
+                <li class="step2 "><span class="lable-s">{!$Label.c.step_2}</span><span>2</span><span>2</span></li>
+                <li class="step3 current"><span class="lable-s">{!$Label.c.step_3}</span><span>3</span><span>3</span></li>
+                <li class="step4"><span class="lable-s">{!$Label.c.step_4}</span><span>4</span><span>4</span></li>
+            </ul> -->
+        </div>
+        <div class="main-content-inner marginB90">     
+            <div class="game_panel pairedgame">
+               <div class="game_block" id="game_block">
+                    <div class="datablock" id="datablock_pairedGame"></div>
+                    <p id="nextBtton" class="centers magenta-btn  btn-xlarge marginT20 slds-hide"><button class="slds-button" label="Next" title="Next" onclick="{!c.goToNextPage }">Next</button> </p>    
+                    <div class="duration">
+                        <div class="d_title" id="d_title"></div>
+                        <div class="d_txt" id="d_txt"></div>
+                        <div class="d_status" id="d_status"></div>
+                    </div>
+               </div>
+            </div>       
+        </div>
+    </div>
+</aura:component>

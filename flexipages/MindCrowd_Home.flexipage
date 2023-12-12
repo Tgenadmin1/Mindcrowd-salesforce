@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlexiPage xmlns="http://soap.sforce.com/2006/04/metadata">
+    <flexiPageRegions>
+        <appendable>enabled</appendable>
+        <name>header</name>
+        <prependable>enabled</prependable>
+        <replaceable>enabled</replaceable>
+        <type>Region</type>
+    </flexiPageRegions>
+    <flexiPageRegions>
+        <appendable>enabled</appendable>
+        <itemInstances>
+            <componentInstance>
+                <componentName>homeSection1</componentName>
+                <identifier>homeSection1</identifier>
+            </componentInstance>
+        </itemInstances>
+        <itemInstances>
+            <componentInstance>
+                <componentName>homeSection2</componentName>
+                <identifier>homeSection2</identifier>
+            </componentInstance>
+        </itemInstances>
+        <itemInstances>
+            <componentInstance>
+                <componentName>homeSection3</componentName>
+                <identifier>homeSection3</identifier>
+            </componentInstance>
+        </itemInstances>
+        <itemInstances>
+            <componentInstance>
+                <componentName>homeSection4</componentName>
+                <identifier>homeSection4</identifier>
+            </componentInstance>
+        </itemInstances>
+        <itemInstances>
+            <componentInstance>
+                <componentName>homeSection6</componentName>
+                <identifier>homeSection6</identifier>
+            </componentInstance>
+        </itemInstances>
+        <itemInstances>
+            <componentInstance>
+                <componentName>homeSection5</componentName>
+                <identifier>homeSection5</identifier>
+            </componentInstance>
+        </itemInstances>
+        <name>content</name>
+        <prependable>enabled</prependable>
+        <replaceable>enabled</replaceable>
+        <type>Region</type>
+    </flexiPageRegions>
+    <flexiPageRegions>
+        <appendable>enabled</appendable>
+        <name>sidebar</name>
+        <prependable>enabled</prependable>
+        <replaceable>enabled</replaceable>
+        <type>Region</type>
+    </flexiPageRegions>
+    <flexiPageRegions>
+        <appendable>enabled</appendable>
+        <itemInstances>
+            <componentInstance>
+                <componentName>cookieConsent</componentName>
+                <identifier>cookieConsent</identifier>
+            </componentInstance>
+        </itemInstances>
+        <name>footer</name>
+        <prependable>enabled</prependable>
+        <replaceable>enabled</replaceable>
+        <type>Region</type>
+    </flexiPageRegions>
+    <flexiPageRegions>
+        <appendable>enabled</appendable>
+        <itemInstances>
+            <componentInstance>
+                <componentInstanceProperties>
+                    <name>customHeadTags</name>
+                    <value>&lt;meta name=&apos;robots&apos; content=&apos;index, follow&apos; /&gt;
+&lt;link rel=&quot;canonical&quot; href=&quot;https://mindcrowd.org/&quot; /&gt;
+&lt;meta property=&quot;og:locale&quot; content=&quot;en_US&quot; /&gt;
+&lt;meta property=&quot;og:type&quot; content=&quot;website&quot; /&gt;	
+&lt;meta property=&quot;og:title&quot; content=&quot;MindCrowd Memory Test • Online Brain Scientific Research&quot; /&gt;
+&lt;meta property=&quot;og:description&quot; content=&quot;Discover more about your brain - in 10 short minutes - by taking our free online MindCrowd memory test. Play and help us reach one million participants.&quot; /&gt;
+&lt;meta property=&quot;og:url&quot; content=&quot;https://mindcrowd.org&quot;/&gt;
+&lt;meta property=&quot;article:publisher&quot; content=&quot;https://www.facebook.com/Mindcrowd/&quot; /&gt;
+&lt;meta property=&quot;article:published_time&quot; content=&quot;2022-06-04T08:30:36+00:00&quot; /&gt;
+&lt;meta property=&quot;article:modified_time&quot; content=&quot;2022-06-04T08:30:36+00:00&quot; /&gt;
+&lt;meta property=&quot;og:image&quot; content=&quot;https://mindcrowd2--devphase2.sandbox.my.site.com/MindCrowd/resource/FeaturedImages/mindcrowd-memory-game-online.jpg&quot;/&gt;
+&lt;meta property=&quot;og:site_name&quot; content=&quot;MindCrowd&quot; /&gt;
+&lt;meta property=&quot;og:image:width&quot; content=&quot;810&quot; /&gt;
+&lt;meta property=&quot;og:image:height&quot; content=&quot;456&quot; /&gt;
+&lt;meta property=&quot;og:image:type&quot; content=&quot;image/jpeg&quot; /&gt;
+&lt;meta property=&quot;twitter:card&quot; content=&quot;summary_large_image&quot;/&gt; 
+&lt;meta property=&quot;twitter:url&quot; content=&quot;https://mindcrowd.org/&quot;/&gt;
+&lt;meta property=&quot;twitter:title&quot; content=&quot;Memory Test Online • MindCrowd • Brain &amp; Cognition Study&quot;/&gt;
+&lt;meta property=&quot;twitter:description&quot; content=&quot;Discover more about your brain - in 10 short minutes - by taking the free online memory and attention test by MindCrowd&quot;/&gt;
+&lt;meta property=&quot;twitter:image&quot; content=&quot;https://mindcrowd2--devphase2.sandbox.my.site.com/MindCrowd/resource/FeaturedImages/mindcrowd-memory-game-online.jpg&quot;/&gt;
+&lt;meta name=&quot;twitter:creator&quot; content=&quot;@tgenmindcrowd&quot; /&gt;
+&lt;meta name=&quot;twitter:site&quot; content=&quot;@tgenmindcrowd&quot; /&gt;</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>description</name>
+                    <value>Take the test in the language of you preference</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>title</name>
+                    <value>Language Selection</value>
+                </componentInstanceProperties>
+                <componentName>forceCommunity:seoAssistant</componentName>
+                <identifier>forceCommunity_seoAssistant</identifier>
+            </componentInstance>
+        </itemInstances>
+        <name>sfdcHiddenRegion</name>
+        <prependable>enabled</prependable>
+        <replaceable>enabled</replaceable>
+        <type>Region</type>
+    </flexiPageRegions>
+    <masterLabel>Home</masterLabel>
+    <template>
+        <name>siteforce:sldsOneColLayout</name>
+    </template>
+    <type>CommAppPage</type>
+</FlexiPage>

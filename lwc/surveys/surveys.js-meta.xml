@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LightningComponentBundle xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>51.0</apiVersion>
+    <isExposed>true</isExposed>
+    <targets>
+        <target>lightning__AppPage</target>
+        <target>lightning__RecordPage</target>
+        <target>lightning__HomePage</target>
+        <target>lightningCommunity__Page</target>
+        <target>lightningCommunity__Default</target>
+    </targets>
+
+    <targetConfigs>  
+        <targetConfig targets="lightning__HomePage,lightning__RecordPage,lightningCommunity__Default">
+
+        <property name="survey_text_1" type="String" default="Welcome to your personal brain survey dashboard" label="survey_text_1"/>
+        <property name="survey_text_2" type="String" default="The tiles below represent short surveys that you can complete. Click a tile to launch the survey" label="survey_text_2"/>
+        <property name="Survey_text_2_1" type="String" default="A survey available to complete. Do these first." label="Survey_text_2_1"/>
+        <property name="Survey_text_2_2" type="String" default="A survey you have already completed. You can update these again in the future." label="Survey_text_2_2"/>
+        <property name="Survey_text_2_3" type="String" default="A locked survey. These will unlock as you complete more." label="Survey_text_2_3"/>
+        <property name="Survey_text_2_4" type="String" default="Note: Not all surveys are optimized to complete easily on a smartphone screen. We recommend using a tablet, laptop, or desktop computer for the surveys on this page." label="Survey_text_2_4"/>
+
+
+        <property name="survey_name_1" type="String" default="General Health" label="survey_name_1"/>
+        <property name="survey_name_2" type="String" default="COVID" label="survey_name_2"/>
+        <property name="survey_name_3" type="String" default="History of Brain Disease" label="survey_name_3"/>
+        <property name="survey_name_4" type="String" default="Economic Status" label="survey_name_4"/>
+        <property name="survey_name_5" type="String" default="Family History of Alzheimer's Disease" label="survey_name_5"/>
+        <property name="survey_name_6" type="String" default="Women's Health" label="survey_name_6"/>
+        <property name="survey_name_7" type="String" default="Language" label="survey_name_7"/>
+        <property name="survey_name_8" type="String" default="Sleep" label="survey_name_8"/>
+        <property name="survey_name_9" type="String" default="Daily Activities" label="survey_name_9"/>
+        <property name="survey_name_10" type="String" default="Nutrition" label="survey_name_10"/>
+        <property name="survey_name_11" type="String" default="Perceived Stress" label="survey_name_11"/>
+        <property name="survey_name_12" type="String" default="Life Satisfaction" label="survey_name_12"/>
+        <property name="survey_name_13" type="String" default="Physical Activity" label="survey_name_13"/>
+        <property name="survey_name_14" type="String" default="Stress" label="survey_name_14"/>
+        <property name="survey_name_15" type="String" default="Anxiety" label="survey_name_15"/>
+        <property name="survey_name_16" type="String" default="Social Support" label="survey_name_16"/>
+        <property name="survey_name_17" type="String" default="Cancer" label="survey_name_17"/>
+        <property name="survey_name_18" type="String" default="Coming Soon..." label="survey_name_18"/>
+
+        <property name="survey_two_min" type="String" default="2 min" label="survey_two_min"/>
+        <property name="survey_three_min" type="String" default="3 min" label="survey_three_min"/>
+        <property name="survey_five_min" type="String" default="5 min" label="survey_five_min"/>
+
+        </targetConfig>
+    </targetConfigs>
+</LightningComponentBundle>

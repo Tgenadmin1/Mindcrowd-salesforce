@@ -1,0 +1,82 @@
+<!--
+  @description             : This Game is same as "DLTRS game" but its UI will be changed having "X" instead of Ball. 
+  @author(Controller)      : Sunil Kumar Singh 
+  @UI author               : Raj
+  @last Updated by         : (Sunil Kr Singh//Date-Aug 1 2021)
+  @last modified by        : ChangeMeIn@UserSettingsUnder.SFDoc
+  Modifications Log 
+  Ver   Date         Author                  Modification
+  1.0   20-07-2021   Sunil Kumar Singh       Initial Version
+-->
+<aura:component controller="GamesController" implements="forceCommunity:availableForAllPageTypes,lightning:isUrlAddressable,lightning:hasPageReference" access="global">
+    
+    <aura:attribute name="ParticipantGameResponse" type="Object"/>
+    <aura:attribute name="myAttribute" type="String" access="global"/>
+    <aura:attribute name="mycontactId" type="String" access="global"/>
+    <aura:attribute name="participantGameid" type="String" access="global"/>
+    <aura:attribute name="ipAddress" type="String" access="global"/>
+    <aura:attribute name="browser" type="String" access="global"/>
+    <aura:attribute name="tapScreen" type="boolean" default="false" access="global"/>
+    <aura:attribute name="showConfirmDialog" type="boolean" default="false"/>
+    <aura:attribute name="device" type="String" />
+
+    
+    <!--aura:handler name="init" value="{!this}" action="{!c.startgame1}"/-->   
+    <ltng:require scripts="" afterScriptsLoaded="{!c.myAction}" />
+    <div class="main-content-outer slds-size_12-of-12 slds-small-size_12-of-12 slds-medium-size_12-of-12 slds-large-size_12-of-12 test">
+        <div class="main-content-inner" id="touchEvent">
+            <div class="logo-game">
+                <img src="{!$Resource.mindcrowd_style + '/images/MindCrowd-Logo-Color-White-Text.png'}"/>
+              </div>
+            <div class="game-title">{!$Label.c.game_name_2}</div>
+            <div class="game_panel" id="gameMainContent">
+                <div class="game_block" id="game_block">      
+                <div class="datablock" id="datablock_reactGame"></div>   
+                <p id="nextBtton" class="centers magenta-btn  btn-xlarge marginT20 slds-hide">
+                    <button class="slds-button"  onclick="{!c.goToMyResultsPage }">{!$Label.c.mst_text_My_results}</button>
+                    <button class="slds-button"  onclick="{!c.goToNextPage }">{!$Label.c.mst_text_My_Games}</button>
+                </p>    
+                <div class="duration">
+                    <div class="d_title" id="d_title"></div>
+                    <div class="d_txt" id="d_txt"></div>
+                    <div class="d_status" id="d_status"></div>
+                </div>
+            </div>
+            </div>
+            
+        </div>
+    </div>
+    <aura:if isTrue="{!v.showConfirmDialog}">
+        <!--Modal Box Start-->
+        <div role="dialog" class="slds-modal slds-fade-in-open ">
+            <div class="slds-modal__container">
+                <!--Modal Box Header Start-->
+                <header class="slds-modal__header">
+                   
+                    <lightning:buttonIcon iconName="utility:close"
+                    onclick="{! c.closeModel }"
+                    alternativeText="{!$Label.c.close_btn}"
+                    variant="bare-inverse"
+                    class="slds-modal__close"/>
+
+                </header>
+                <!--Modal Box Header End-->
+                 
+                <!--Modal Box Content Start-->
+                <div class="slds-modal__content slds-p-around--medium">
+                    <center><p>{!$Label.c.mst_text_not_authorized}</p></center>
+                </div>
+                <!--Modal Box Content End-->
+                <!--Modal Box Button Start-->
+                <footer class="slds-modal__footer">
+                </footer>
+                <!--Modal Box Button End-->
+            </div>
+        </div>
+        <div class="slds-backdrop slds-backdrop--open"></div>            
+    </aura:if>
+
+    
+    
+
+</aura:component>

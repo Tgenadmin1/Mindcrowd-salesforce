@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LightningComponentBundle xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>51.0</apiVersion>
+    <isExposed>true</isExposed>
+    <targets>
+        <target>lightning__AppPage</target>
+        <target>lightning__RecordPage</target>
+        <target>lightning__HomePage</target>
+        <target>lightningCommunity__Page</target>
+        <target>lightningCommunity__Default</target>
+    </targets>
+
+    <targetConfigs>
+        <targetConfig targets="lightning__HomePage,lightning__RecordPage,lightningCommunity__Default">
+            <property name="My_Profile" type="String" default="My Profile" label="My Profile"/>
+            <property name="change_password" type="String" default="Change Password" label="changed password"/>
+            <property name="finish_text_6" type="String" default="First Name" label="finish_text_6"/>
+            <property name="finish_text_9" type="String" default="Last Name" label="finish_text_9"/>
+            <property name="myprofile_text_03" type="String" default="Email" label="myprofile_text_03"/>
+            <property name="myprofile_text_13" type="String" default="Phone" label="myprofile_text_13"/>
+            <property name="maillingAddress" type="String" default="Please Enter your mailing Address:" label="maillingAddress"/>
+            <property name="city_text" type="String" default="City" label="city_text"/>
+            <property name="address_text" type="String" default="Address:" label="address_text"/>
+            
+            <property name="zip_text" type="String" default="zip text" label="zip_text"/>
+            <property name="complete6" type="String" default="	Which of the following have you personally experienced or are you currently experiencing?" label="complete6"/>
+            <property name="complete7" type="String" default="	Has one of your siblings or one of your parents been diagnosed with Alzheimer’s disease?" label="complete7"/>
+            <property name="complete8" type="String" default="Was your sibling or parent diagnosed with Alzheimer's disease before the age of 55?" label="complete8"/>
+            <property name="complete9" type="String" default="	Do you have any second-degree relatives (grandparents, grandchildren, aunts, uncles, nephews, nieces, or half-siblings) that have been diagnosed with Alzheimer’s disease?" label="complete9"/>
+            <property name="brainInfo_text_4" type="String" default="What gender do you identify as?" label="brainInfo_text_4"/>
+            <property name="brainInfo_text_14" type="String" default="Please tell us what gender you identify as" label="brainInfo_text_14"/>
+            <property name="brainInfo_text_5" type="String" default="What is the highest level of education you've completed?" label="brainInfo_text_5"/>
+            <property name="brainInfo_text_6" type="String" default="How many languages do you speak fluently?" label="brainInfo_text_6"/>
+            <property name="brainInfo_text_7" type="String" default="How many languages do you write fluently?" label="brainInfo_text_7"/>
+            <property name="brainInfo_text_9" type="String" default="If you speak a second language, at what age did you begin speaking that language?" label="brainInfo_text_9"/>
+            <property name="brainInfo_text_10" type="String" default="In what language are you most fluent?" label="brainInfo_text_10"/>
+            <property name="brainInfo_text_11" type="String" default="If youspeak a second language, at what age did you begin speaking that language?" label="brainInfo_text_11"/>
+            <property name="myprofile_text_12" type="String" default="How many prescription medications do you take on a daily basis?Number of daily medications" label="myprofile_text_12"/>
+            <property name="chngePassword" type="String" default="Change Password" label="chngePassword"/>
+            <property name="rule" type="String" default="You must adhere to the following password rules:" label="rule"/>
+            <property name="rule_1" type="String" default="	* Your password must be at least 8 characters long." label="rule_1"/>
+            <property name="rule_2" type="String" default="	* Your password must include letters and numbers" label="rule_2"/>
+            <property name="new_c_Password" type="String" default="New Password:" label="new_c_Password"/>
+            <property name="confirm_c_Password" type="String" default="Confirm New Password:" label="confirm_c_Password"/>
+            <property name="old_c_Password" type="String" default="Old Password:" label="old_c_Password"/>
+            <property name="cancel_text" type="String" default="cancel" label="cancel_text"/>
+            <property name="reuiredField" type="String" default="Please fill out the fields marked with an asterisk." label="reuiredField"/>
+            <property name="profileUpdated" type="String" default="Profile Updated Successfully!" label="profileUpdated"/>
+            <property name="validation_mandatory" type="String" default="Please fill out the fields marked with an asterisk." label="validation_mandatory"/>
+            <property name="age_validation" type="String" default="Please enter age from 18 to 115." label="age_validation"/>
+            <property name="brainInfo_text_choose" type="String" default="Please Choose" label="brainInfo_text_choose"/>
+            <property name="password_validation" type="String" default="Please enter a strong password" label="password_validation"/>
+            <property name="state_text" type="String" default="State" label="state_text"/>
+            <property name="save" type="String" default="save" label="save"/>
+            <property name="documentTitle" type="String" default="Profile • MindCrowd Project Expanded" label="documentTitle"/>
+            <property name="documentDiscription" type="String" default="Profile • MindCrowd Project Expanded" label="documentDiscription"/>
+
+            <property name="myprofile_text_10" type="String" default="In what country do you currently live?" label="myprofile_text_10"/>
+            <property name="discription_p_text" type="String" default="Suite/APT No." label="discription_p_text"/>
+            <property name="city_p_text" type="String" default="City" label="city_p_text"/>
+            <property name="zipCode_p_text" type="String" default="ZIP Code" label="zipCode_p_text"/>
+            <property name="newPassword" type="String" default="" label="newPassword"/>
+            <property name="confirmPassword" type="String" default="" label="confirmPassword"/>
+            <property name="oldPassword" type="String" default="" label="oldPassword"/>
+            <property name="None" type="String" default="--None--" label="None"/>
+            <property name="required1" type="String" default="Please Enter New Password." label="required1"/>
+            <property name="required2" type="String" default="New Password must be at least 8 characters long." label="required2"/>
+            <property name="required3" type="String" default="New Password didn't contains alphanumeric charecters." label="required3"/>
+            <property name="required4" type="String" default="Please Enter Confirm Password." label="required4"/>
+            <property name="required5" type="String" default="Please Enter Old Password." label="required5"/>
+            <property name="required6" type="String" default="Passwords do not match." label="required6"/>
+            <property name="required7" type="String" default="Password Updated Successfully." label="required7"/>
+            <property name="required8" type="String" default="Old Password didn't match." label="required8"/>
+            <property name="Success" type="String" default="Success!" label="Success"/>
+            <property name="Error" type="String" default="Error!" label="Error"/>
+           
+           
+        </targetConfig>
+    </targetConfigs>
+</LightningComponentBundle>

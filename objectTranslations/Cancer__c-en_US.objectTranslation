@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>ONC</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>ONCs</value>
+    </caseValues>
+    <fields>
+        <help><!-- Is your cancer considered to be in remission (no evidence of cancer)? --></help>
+        <label><!-- ONC_v1.0.3 --></label>
+        <name>Cancer_considered_to_be_in_remission__c</name>
+    </fields>
+    <fields>
+        <help><!-- What was the chemotherapy (“chemo”) that you were prescribed by your doctor? Please write the name of the drug(s) if you remember them. --></help>
+        <label><!-- ONC_v1.0.13 --></label>
+        <name>Chemotherapy_prescribed_by_doctor__c</name>
+    </fields>
+    <fields>
+        <label><!-- Contact Name --></label>
+        <name>Contact_Name__c</name>
+        <relationshipLabel><!-- ONCs --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Contact --></label>
+        <name>Contact__c</name>
+    </fields>
+    <fields>
+        <help><!-- Did your cancer come back (sometimes called &quot;relapse&quot;)? --></help>
+        <label><!-- ONC_v1.0.5 --></label>
+        <name>Did_your_cancer_come_back__c</name>
+    </fields>
+    <fields>
+        <help><!-- Do you complete recommended cancer screenings (mammography, colonoscopy, etc…) --></help>
+        <label><!-- ONC_v1.0.6 --></label>
+        <name>Do_you_complete_cancer_screenings__c</name>
+    </fields>
+    <fields>
+        <label><!-- Email --></label>
+        <name>Email__c</name>
+    </fields>
+    <fields>
+        <help><!-- Has a first-degree relative (biological mom, dad, or sibling) ever been diagnosed with the same cancer type? --></help>
+        <label><!-- ONC_v1.0.12 --></label>
+        <name>First_degree_relative_diagnosed_cancer__c</name>
+    </fields>
+    <fields>
+        <help><!-- Has a first-degree relative (biological mom, dad, or sibling) ever been diagnosed with any other cancer type? --></help>
+        <label><!-- ONC_v1.0.2 --></label>
+        <name>First_degree_relative_other_cancer__c</name>
+    </fields>
+    <fields>
+        <help><!-- Have you ever been diagnosed with malignant cancer? --></help>
+        <label><!-- ONC_v1.0.1 --></label>
+        <name>Have_you_diagnosed_with_Cancer__c</name>
+    </fields>
+    <fields>
+        <help><!-- Have you ever lived on a farm? --></help>
+        <label><!-- ONC_v1.0.7 --></label>
+        <name>Have_you_ever_lived_on_a_farm__c</name>
+    </fields>
+    <fields>
+        <help><!-- Have you served in the military? --></help>
+        <label><!-- ONC_v1.0.9 --></label>
+        <name>Have_you_served_in_the_military__c</name>
+    </fields>
+    <fields>
+        <help><!-- For all cancer patients and survivors: At the time of diagnosis, were you taking hormone replacement therapy? --></help>
+        <label><!-- ONC_v1.0.18 --></label>
+        <name>Hormone_replacement_therapy__c</name>
+    </fields>
+    <fields>
+        <help><!-- How many chemo “cycles” did you receive? --></help>
+        <label><!-- ONC_v1.0.14 --></label>
+        <name>How_many_chemo_cycles_did_you_receive__c</name>
+    </fields>
+    <fields>
+        <help><!-- If yes, how long (in years)? --></help>
+        <label><!-- ONC_v1.0.4 --></label>
+        <name>If_yes_how_long_in_years__c</name>
+    </fields>
+    <fields>
+        <help><!-- Did you have memory or cognition difficulties while on chemotherapy (some patients refer to this as &quot;chemobrain&quot;)? --></help>
+        <label><!-- ONC_v1.0.15 --></label>
+        <name>Memory_or_cognition_difficulty_on_chemo__c</name>
+    </fields>
+    <fields>
+        <help><!-- For women cancer patients and survivors: At the time of diagnosis, were you post-menopausal (defined as no menstrual cycles – or “periods” – during the entire year preceding your diagnosis)? --></help>
+        <label><!-- ONC_v1.0.17 --></label>
+        <name>Post_Menopausal__c</name>
+    </fields>
+    <fields>
+        <help><!-- If taking hormone replacement at time of diagnosis, did you stop hormone replacement therapy prior to receiving any chemo? --></help>
+        <label><!-- ONC_v1.0.19 --></label>
+        <name>Stop_hormone_replacement_prior_chemo__c</name>
+    </fields>
+    <fields>
+        <label><!-- ONC_v1.0.10 --></label>
+        <name>Type_of_cancer_you_diagnosed_with__c</name>
+    </fields>
+    <fields>
+        <help><!-- Were you also treated with radiation therapy? --></help>
+        <label><!-- ONC_v1.0.16 --></label>
+        <name>Were_you_treated_with_radiation_therapy__c</name>
+    </fields>
+    <fields>
+        <help><!-- Have you ever worked in proximity to radioactive materials or received a radiation exposure? --></help>
+        <label><!-- ONC_v1.0.8 --></label>
+        <name>Worked_proximity_radioactive_material__c</name>
+    </fields>
+    <fields>
+        <help><!-- What was your age in years at your time of diagnosis? --></help>
+        <label><!-- ONC_v1.0.11 --></label>
+        <name>Your_age_in_years_at_time_of_diagnosis__c</name>
+    </fields>
+    <fields>
+        <help><!-- At the time of diagnosis, had the cancer spread to more than one organ (e.g. metastasized)? --></help>
+        <label><!-- ONC_v1.0.20 --></label>
+        <name>cancer_spread_to_more_than_one_organ__c</name>
+    </fields>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

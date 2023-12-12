@@ -1,0 +1,35 @@
+<template>
+    <br/>
+    <lightning-card title="Record Detail">
+        <lightning-spinner if:true={spinner} size="small" variant="brand"></lightning-spinner>
+        <div class="slds-grid slds-wrap">
+            <div class="slds-p-horizontal--small slds-col slds-size_6-of-12 slds-m-bottom--medium">
+                <div class="slds-form-element">
+                    <lightning-input label="Contact Id" value={recordId} onchange={handeIdChange}></lightning-input>
+                </div>
+            </div>
+         <div class="slds-p-horizontal--small slds-col slds-size_6-of-12 slds-m-bottom--medium">
+              
+                <div class="slds-form-element">
+                    <lightning-input type="email" label="Email" value={contactEmail} onchange={handleEmailChange}></lightning-input>
+                </div>
+              
+            </div>
+
+            <div class="slds-p-horizontal--small slds-col slds-size_6-of-12 slds-m-bottom--medium">
+                <div class="slds-form-element">
+                    <lightning-input label="First Name" value={contactFirstName} onchange={handleFirstNameChange}></lightning-input>
+                </div>
+            </div>
+            <div class="slds-p-horizontal--small slds-col slds-size_6-of-12 slds-m-bottom--medium">
+                <div class="slds-form-element">
+                    <lightning-input label="Last Name" value={contactLastName} onchange={handleLastNameChange}></lightning-input>
+                </div>
+            </div>
+            
+            <div class="slds-p-horizontal--small slds-col slds-size_6-of-12 slds-m-bottom--medium">
+                <lightning-button label="Update Contact" variant="brand" onclick={handleClick}></lightning-button>
+            </div>
+        </div>
+    </lightning-card>
+</template>

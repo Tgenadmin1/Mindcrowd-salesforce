@@ -1,0 +1,22 @@
+<template>
+   <template if:true={selectform}>
+      <div>
+         <p>{Bean_Game_Form_Text_1_a}</p>
+      </div>
+      <div>
+         <lightning-button onclick={BeanGameClick} label={Bean_Game_Form_Text_5} class=" btn-sm pink-btn-box big slds-m-left_x-small" ></lightning-button>  
+         <lightning-button onclick={submitResults} label={Bean_Game_Form_Text_4} class=" btn-sm pink-btn-box big slds-m-left_x-small"></lightning-button>  
+     </div>
+  </template>
+  <template if:false={selectform}>
+   <div>
+      <p>{Bean_Game_Form_Text_1} </p>
+   </div>
+   <div>
+      <p>{Bean_Game_Form_Text_2}</p>
+   </div> 
+   <div>
+       <lightning-button onclick={BeanGameClick} label={Bean_Game_Form_Text_3} class=" btn-sm pink-btn-box big"></lightning-button>
+   </div>
+  </template>
+</template>

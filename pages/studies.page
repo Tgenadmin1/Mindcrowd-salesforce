@@ -1,0 +1,6 @@
+<apex:page showHeader="false" sidebar="false">
+    <div style="opacity: 0;" id='studies'></div>
+    <script>
+        window.location.href = '{!$Label.Community_Url}' + '/s/studies';
+    </script>
+</apex:page>

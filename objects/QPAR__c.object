@@ -1,0 +1,394 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>cREATED FOR MARKETING CLOUD</description>
+    <enableActivities>true</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableLicensing>false</enableLicensing>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <externalSharingModel>Private</externalSharingModel>
+    <fields>
+        <fullName>Contact_Name__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Contact Name</label>
+        <referenceTo>Contact</referenceTo>
+        <relationshipLabel>QPARs</relationshipLabel>
+        <relationshipName>QPARs</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Contact__c</fullName>
+        <description>CREATED FOR MARKETING CLOUD QPAR SURVEY</description>
+        <externalId>false</externalId>
+        <label>Contact</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Email__c</fullName>
+        <description>Created for Marketing cloud survey qpar survey.</description>
+        <externalId>false</externalId>
+        <label>Email</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Email</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Engage_in_flexibility_activities__c</fullName>
+        <description>Engage in flexibility activities such as stretching, yoga, chair yoga, or Tai Chi</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Engage in flexibility activities such as stretching, yoga, chair yoga, or Tai Chi</inlineHelpText>
+        <label>QPAR_v1.0.7</label>
+        <length>100</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Engage_in_light_activities__c</fullName>
+        <description>Engage in light activities such as bowling, billiards, golf with a cart, fishing, or playing catch</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Engage in light activities such as bowling, billiards, golf with a cart, fishing, or playing catch</inlineHelpText>
+        <label>QPAR_v1.0.3</label>
+        <length>100</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Engage_in_moderate_activities__c</fullName>
+        <description>Engage in moderate activities such as doubles tennis, dancing, hunting, skating, golf without a cart, or hiking on flat terrain</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Engage in moderate activities such as doubles tennis, dancing, hunting, skating, golf without a cart, or hiking on flat terrain</inlineHelpText>
+        <label>QPAR_v1.0.4</label>
+        <length>100</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Engage_in_strenuous_activities__c</fullName>
+        <description>Engage in strenuous activities such as jogging, swimming, cycling, singles tennis, skiiing, hiking on hilly terrain, or climbing stairs for exercise</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Engage in strenuous activities such as jogging, swimming, cycling, singles tennis, skiiing, hiking on hilly terrain, or climbing stairs for exercise</inlineHelpText>
+        <label>QPAR_v1.0.5</label>
+        <length>100</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Exercises_to_increase_muscle_strength__c</fullName>
+        <description>Any exercises to increase muscle strength or endurance, such as lifting weights, pushups, pullups, or chin-ups</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Any exercises to increase muscle strength or endurance, such as lifting weights, pushups, pullups, or chin-ups</inlineHelpText>
+        <label>QPAR_v1.0.6</label>
+        <length>100</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Hours_Engage_in_Flexible_Activities__c</fullName>
+        <description>Engage in flexibility activities such as stretching, yoga, chair yoga, or Tai Chi (in hours)</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Engage in flexibility activities such as stretching, yoga, chair yoga, or Tai Chi (in hours)</inlineHelpText>
+        <label>QPAR_v1.0.15</label>
+        <length>50</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Hours_Engage_in_Light_Activities__c</fullName>
+        <description>Engage in light activities such as bowling, billiards, golf with a cart, fishing, or playing catch (in hours)</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Engage in light activities such as bowling, billiards, golf with a cart, fishing, or playing catch (in hours)</inlineHelpText>
+        <label>QPAR_v1.0.11</label>
+        <length>50</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Hours_Engage_in_Moderate_Activities__c</fullName>
+        <description>Engage in moderate activities such as doubles tennis, dancing, hunting, skating, golf without a cart, or hiking on flat terrain (in hours)</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Engage in moderate activities such as doubles tennis, dancing, hunting, skating, golf without a cart, or hiking on flat terrain (in hours)</inlineHelpText>
+        <label>QPAR_v1.0.12</label>
+        <length>50</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Hours_Engage_in_Strenous_Activities__c</fullName>
+        <description>Engage in strenuous activities such as jogging, swimming, cycling, singles tennis, skiiing, hiking on hilly terrain, or climbing stairs for exercise (in hours)</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Engage in strenuous activities such as jogging, swimming, cycling, singles tennis, skiiing, hiking on hilly terrain, or climbing stairs for exercise (in hours)</inlineHelpText>
+        <label>QPAR_v1.0.13</label>
+        <length>50</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Hours_Exercise_to_increase_muscle_streng__c</fullName>
+        <description>Any exercises to increase muscle strength or endurance, such as lifting weights, pushups, pullups, or chin-ups
+(in hours)</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Any exercises to increase muscle strength or endurance, such as lifting weights, pushups, pullups, or chin-ups
+(in hours)</inlineHelpText>
+        <label>QPAR_v1.0.14</label>
+        <length>50</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Hours_Light_Housework_or_Labor__c</fullName>
+        <description>Any light housework or labor, such as dusting, washing dishes, mopping floors, ironing, or office work (in hours)</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Any light housework or labor, such as dusting, washing dishes, mopping floors, ironing, or office work (in hours)</inlineHelpText>
+        <label>QPAR_v1.0.16</label>
+        <length>50</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Hours_Participate_in_sitting_activities__c</fullName>
+        <description>Participate in sitting activities such as reading, book clubs, discussion groups, or handcrafts( in hours)</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Participate in sitting activities such as reading, book clubs, discussion groups, or handcrafts( in hours)</inlineHelpText>
+        <label>QPAR_v1.0.9</label>
+        <length>50</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Hours_Walk_outside__c</fullName>
+        <description>Walk outside for any reason such as fun or exercise, walking the dog, in a mall, or around a track or path (in hours)</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Walk outside for any reason such as fun or exercise, walking the dog, in a mall, or around a track or path( in hours)</inlineHelpText>
+        <label>QPAR_v1.0.10</label>
+        <length>50</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Light_housework_or_labor__c</fullName>
+        <description>Any light housework or labor, such as dusting, washing dishes, mopping floors, ironing, or office work</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Any light housework or labor, such as dusting, washing dishes, mopping floors, ironing, or office work</inlineHelpText>
+        <label>QPAR_v1.0.8</label>
+        <length>100</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Participate_in_sitting_activities__c</fullName>
+        <description>Participate in sitting activities such as reading, book clubs, discussion groups, or handcrafts</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Participate in sitting activities such as reading, book clubs, discussion groups, or handcrafts</inlineHelpText>
+        <label>QPAR_v1.0.1</label>
+        <length>100</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Walk_outside_for_any_reason__c</fullName>
+        <description>Walk outside for any reason such as fun or exercise, walking the dog, in a mall, or around a track or path</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Walk outside for any reason such as fun or exercise, walking the dog, in a mall, or around a track or path</inlineHelpText>
+        <label>QPAR_v1.0.2</label>
+        <length>100</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <label>QPAR</label>
+    <nameField>
+        <displayFormat>QPAR-{0000000000}</displayFormat>
+        <label>QPAR Name</label>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>QPARs</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>ReadWrite</sharingModel>
+    <visibility>Public</visibility>
+</CustomObject>

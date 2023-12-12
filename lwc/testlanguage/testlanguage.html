@@ -1,0 +1,47 @@
+<!--   @description  : This Component works for checking consent and languages for the guest user. 
+  @author            : Sunil Kumar
+  @UI author         : Raj
+  @last modified on  : 21-12-2021
+  @apex controller   : CustomLoginController
+  @description       : This is the consent web Page for guest User.
+ -->
+ <template>
+    <div class="mainCrowd-outer-box marginB30">
+        <div class="mainCrowd-inner-box">
+            <form  method="POST" name="ConcentStatus">     
+                <lightning-layout multiple-rows="true" class="inner_content">
+                    <lightning-layout-item size="12" small-device-size="12" medium-device-size="12">
+                        <div class="text-center marginB20 inner-title">{consent_text_1}</div>                                                         
+                       </lightning-layout-item>
+                       <lightning-layout-item size="12" small-device-size="12" medium-device-size="12">
+                            <P class="text-center" ><lightning-formatted-rich-text value={consent_text_2}></lightning-formatted-rich-text></P>
+                        </lightning-layout-item>
+                        <lightning-layout-item size="12" small-device-size="12" medium-device-size="12">
+                            <p class="marginLR-auto removeBorder j-center drop-down slds-size_12-of-12 slds-small-size_12-of-12 slds-medium-size_8-of-12 slds-align_absolute-center">
+                                <lightning-combobox
+                                          name="progress"
+                                          label=""
+                                          variant="label-hidden"
+                                          value={valueConsent}
+                                          options={optionsConsent}
+                                          onchange={handleChangeConsent} >
+                                </lightning-combobox>
+                            </p>
+                        </lightning-layout-item>
+                    <div class="">
+                        <div class="slds-p-around_medium" >
+                            <p>
+                                <lightning-formatted-rich-text value={consent_text_3}></lightning-formatted-rich-text>
+                            </p>
+                        </div>
+                        <div class="text-center">
+                            <lightning-button  class="pink-btn-box slds-button  slds-align_absolute-center" label={consent_text_5}  onclick={submitDetails}>  
+                            </lightning-button> 
+                        </div>
+                       
+                    </div>
+            </lightning-layout>  
+        </form>  
+        </div>
+    </div>     
+ </template>

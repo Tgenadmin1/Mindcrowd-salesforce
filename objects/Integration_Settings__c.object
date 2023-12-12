@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customSettingsType>List</customSettingsType>
+    <description>This setting is used to keep the values for integration with USPS api</description>
+    <enableFeeds>false</enableFeeds>
+    <fields>
+        <fullName>Client_Ip__c</fullName>
+        <description>stores client IP for tracking shipment.</description>
+        <externalId>false</externalId>
+        <label>Client Ip</label>
+        <length>30</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Image_Parameters__c</fullName>
+        <description>comprise of what type of label image needs to be created.</description>
+        <externalId>false</externalId>
+        <label>Image Parameters</label>
+        <length>50</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Label_Service_Api__c</fullName>
+        <externalId>false</externalId>
+        <label>Label Service Api</label>
+        <length>20</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MindCrowdAddress2__c</fullName>
+        <description>It contains the mindcrowd Address2.</description>
+        <externalId>false</externalId>
+        <label>MindCrowdAddress2</label>
+        <length>100</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MindCrowdCity__c</fullName>
+        <description>contains the city of mindcrowd office location.</description>
+        <externalId>false</externalId>
+        <label>MindCrowdCity</label>
+        <length>50</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MindCrowdFirmName__c</fullName>
+        <description>consists of mindcrowd firm name .</description>
+        <externalId>false</externalId>
+        <label>MindCrowdFirmName</label>
+        <length>50</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MindCrowdName__c</fullName>
+        <externalId>false</externalId>
+        <label>MindCrowdName</label>
+        <length>50</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MindCrowdPhone__c</fullName>
+        <description>consists of phone number of mindcrowd</description>
+        <externalId>false</externalId>
+        <label>MindCrowdPhone</label>
+        <length>40</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MindCrowdState__c</fullName>
+        <description>contains the state of mindcrowd address.</description>
+        <externalId>false</externalId>
+        <label>MindCrowdState</label>
+        <length>30</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MindCrowdZip5__c</fullName>
+        <description>contains zip5 of mindcrowd address.</description>
+        <externalId>false</externalId>
+        <label>MindCrowdZip5</label>
+        <precision>5</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Source_Id__c</fullName>
+        <externalId>false</externalId>
+        <label>Source Id</label>
+        <length>30</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>USPS_URL__c</fullName>
+        <description>It contains the API URL.</description>
+        <externalId>false</externalId>
+        <label>USPS URL</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Url</type>
+    </fields>
+    <fields>
+        <fullName>UserId__c</fullName>
+        <description>This is the id given By USPS to Mindcrowd .</description>
+        <externalId>false</externalId>
+        <label>UserId</label>
+        <length>20</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Weight__c</fullName>
+        <description>has weight of the packet</description>
+        <externalId>false</externalId>
+        <label>Weight</label>
+        <precision>3</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>eVSLabelUrl__c</fullName>
+        <description>USPS URL for generating eVS Label</description>
+        <externalId>false</externalId>
+        <label>eVSLabelUrl</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Url</type>
+    </fields>
+    <fields>
+        <fullName>eVSLabel_Service__c</fullName>
+        <description>consists of service which mindcrowd avails from USPS EVS LABEL API</description>
+        <externalId>false</externalId>
+        <label>eVSLabel Service</label>
+        <length>30</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <label>Integration Settings</label>
+    <visibility>Public</visibility>
+</CustomObject>

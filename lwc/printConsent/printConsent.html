@@ -1,0 +1,100 @@
+<!--   @description  : This Component works for checking consent and languages for the guest user. 
+  @author            : Sunil Kumar
+  @UI author         : Raj
+  @last modified on  : 06-01-2022
+  @apex controller   : CustomLoginController
+  @description       : This is the consent web Page for guest User.
+ -->
+ <template>
+    
+
+
+    <div class="mainCrowd-outer-box marginB30">
+        <div class="mainCrowd-inner-bo1x">
+            <form  method="POST" name="ConcentStatus">     
+                <lightning-layout multiple-rows="true" class="inner_content1">
+                
+                    <lightning-layout-item size="12" small-device-size="12" medium-device-size="12" class="participation1-form-item-row paddingR0">
+                        <div class="printDiv">
+                            <!-- <h1 class="text-center marginB20"><p class="title">Print Consent</p></h1>   -->
+                            <p>Please read the following information before agreeing to participate in this research study.</p>
+                            <p>This research study is conducted by Dr. Matt Huentelman at the Translational Genomic Research Institute (or TGen) in Phoenix, Arizona.</p>
+                            <p>The purpose of this scientific research study is to understand the factors that influence how the brain ages. We are interested in factors such as your lifestyle choices, your medical or family history, and even your genetic make-up. If we better understand how the brain ages, we may be able to understand what happens to people who experience an age-related brain disease (like Alzheimer's disease).</p>
+                            <p ><span class=" question-text">What will I have to do?</span><br>
+                              You will take one attention test and one memory test, and answer a few study-related questions.
+                              </p>
+                              <p ><span class="question-text">How will you use my information?</span><br>
+                                  The information you provide and your test results will be used to study, analyze and understand how memory works in healthy people.
+                                  </p>
+                               <p>We may contact you again for future brain studies. Most studies will be performed online.</p>   
+                               <p ><span class="question-text">How old do I have to be to participate?</span><br>
+                                  18 years old or older.
+                                  </p>   
+                                  <p ><span class="question-text">What are my alternatives to being in this study?</span><br>
+                                  This is not a treatment study. Your alternative is not to participate.
+                                  </p>  
+                                  <p ><span class="question-text">Are there any risks?</span><br>
+                                  No. There are no risks associated with taking the brain tests.
+                                  </p>  
+                                  <p ><span class="question-text">Will I get paid?</span><br>
+                                  No. 
+                                  </p>  
+                                  <p ><span class="question-text">Does it cost me anything to participate?</span><br>
+                                  No. 
+                                  </p>  
+                                  <p ><span class="question-text">Will you share my study data?</span><br>
+                                  Sharing research data with other scientists is an important part of the research process and helps advance scientific progress. We will share de-identified data from this study with other researchers to help further research into the human brain. 
+                                  </p>  
+                                  <p ><span class="question-text">Will you share my personal information with other people?</span><br>
+                                  No, we will not share your personal information without your permission. If you consent to participate in a MindCrowd collaborative study (or have previously done so), we may share or receive identifiable data such as your name or email address with our collaborative partners and your information could be shared with the FDA and the IRB overseeing this study. This would only be done to link your study data. 
+                                  </p>  
+                               <p class="padding0">To help protect your privacy, we have obtained a Certificate of Confidentiality from the National Institutes of Health. This means researchers may refuse to give out study information that identifies you. For example, if there were a court subpoena for study records, TGen would not give out information that identifies you, unless you have consented for this use. The Certificate does permit TGen to disclose
+                                   <br>
+                                  your information when:
+                                  
+                               </p>  
+                               <ul class="p-list">
+                                  <li>Required by Federal, State, or local laws (e.g., as required by the Federal Food, Drug, and Cosmetic Act, or state laws requiring the reporting of communicable diseases to State and local health departments, or information about abuse of children, elderly, or disabled persons), excluding instances of disclosure in any Federal, State, or local civil, criminal, administrative, legislative, or other proceeding;</li>
+                                  <li>You have consented to the disclosure, including for your medical treatment;</li>
+                                  <li>Made for the purposes of other scientific research that is in compliance with applicable federal regulations governing the protection of human subjects’ research.</li>
+                     
+                              </ul>
+                               <p>You should understand that a Certificate of Confidentiality does not prevent you or someone else, like a member of your family, from voluntarily releasing information about yourself or your involvement in this research. If you want your research information released to an insurer, medical care provider, or any other person not connected with the research, you must provide consent to allow the researchers to release it.</p>  
+                               <p ><span class="question-text">What if I change my mind and don't want to participate in the study anymore?</span><br>
+                                  You do not have to participate and you may stop at any time; your decision will not result in any penalty or loss of benefits to which you are otherwise entitled. Please contact the Study Coordinator at crc@tgen.org to withdraw from the study.
+                                  </p>  
+                                  <p ><span class="question-text">What if I have questions or comments?</span><br>
+                                  If you have any questions, concerns or complaints about this research, you may contact Dr. Matt Huentelman at mhuentelman@tgen.org or 602-343-8653 (24 hours). 
+                                  </p>  
+                                  <p ><span class="question-text">Will you contact me in the future?</span><br>
+                                  We may contact you in the future via email to offer you to participate in new scientific research studies. Participation in any of our studies is completely voluntary.
+                                  </p>  
+                                  <p class="padding0"><span class="question-text">What if I have questions about my rights in this research, have a complaint, or want to report a problem to someone besides the researcher?</span>
+                                  <br>If you have questions about your rights as a research participant in this study or if you have questions, concerns or complaints about the research, you may contact WCG IRB at:
+                                  
+                                  </p> 
+                                  <div class="paddingL30">
+                                      1019 39th Avenue SE Suite 120
+                                  <br>Puyallup, Washington 98374-2115
+                                  <br>Telephone:  855-818-2289
+                                  <br> E-mail:  researchquestions@wcgirb.com
+                                  </div>
+                               <p></p>  
+                               <p>WCG IRB is a group of people who perform independent review of research.</p>  
+                               <p>For questions, concerns, suggestions, complaints that are not being addressed by the research team, or in case of research-related harm, please contact the TGen Office of Research Compliance at <a href="mailto:?to=irb@tgen.org">irb@tgen.org.</a> </p> 
+                               <p>A description of this clinical trial will be available on <a target="_blank" href="http://www.ClinicalTrials.gov">http://www.ClinicalTrials.gov</a> , as required by U.S. Law.  This Web site will not include information that can identify you.  At most, the Web site will include a summary of the results.  You can search this Web site at any time.</p>  
+                              
+
+                        </div>                                                           
+                    </lightning-layout-item>
+                <lightning-layout-item size="12" class="print"  small-device-size="12" medium-device-size="12" >
+                    <!-- <p class="small">{label.consent_text_12} <a href="javascript:window.print()" onclick={printconsent}><b><u>{label.consent_text_13}</u></b></a> {label.consent_text_14}</p> -->
+                    <p class="small">{label.consent_text_12} <a class="pink-link" href="#"><b onclick={printconsent}><u>{label.consent_text_13}</u></b></a> {label.consent_text_14}</p>
+                </lightning-layout-item>
+            </lightning-layout>  
+        </form>  
+        </div>
+    </div>     
+    
+    <!-- <iframe src={fullUrl} id="cookieSet" class="cookieSet"></iframe> -->
+ </template>

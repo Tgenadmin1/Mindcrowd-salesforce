@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Game Detail</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Game Details</value>
+    </caseValues>
+    <fields>
+        <label><!-- Dependency --></label>
+        <name>Dependency__c</name>
+        <picklistValues>
+            <masterLabel>Deary Simple And Complex Reaction Time</masterLabel>
+            <translation><!-- Deary Simple And Complex Reaction Time --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Face-Name Associates</masterLabel>
+            <translation><!-- Face-Name Associates --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Fake News Test</masterLabel>
+            <translation><!-- Fake News Test --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Flanker</masterLabel>
+            <translation><!-- Flanker --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Keep Track</masterLabel>
+            <translation><!-- Keep Track --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Letter-Number Sequencing</masterLabel>
+            <translation><!-- Letter-Number Sequencing --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Object Discrimination</masterLabel>
+            <translation><!-- Object Discrimination --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Object Recognition And Similarity</masterLabel>
+            <translation><!-- Object Recognition And Similarity --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Object Spatial</masterLabel>
+            <translation><!-- Object Spatial --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Object Temporal</masterLabel>
+            <translation><!-- Object Temporal --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Speech Task</masterLabel>
+            <translation><!-- Speech Task --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Verbal Paired Associates</masterLabel>
+            <translation><!-- Verbal Paired Associates --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Max Score 2 --></label>
+        <name>Max_Score_2__c</name>
+    </fields>
+    <fields>
+        <help><!-- The Maximum Score that participant can Score By Playing the Game --></help>
+        <label><!-- Max Score --></label>
+        <name>Max_Score__c</name>
+    </fields>
+    <fields>
+        <label><!-- Reactivation Days --></label>
+        <name>Reactivation_Days__c</name>
+    </fields>
+    <fields>
+        <label><!-- UI Label --></label>
+        <name>UI_Label__c</name>
+    </fields>
+    <fields>
+        <label><!-- Version --></label>
+        <name>Version__c</name>
+    </fields>
+    <layouts>
+        <layout>Game Detail Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

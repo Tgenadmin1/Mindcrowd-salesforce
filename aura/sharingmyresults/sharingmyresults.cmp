@@ -1,0 +1,69 @@
+<!--
+  @description       : This 
+  @author            : Manikumar Meruva
+  @UI author         : Raj & Mani
+  @last modified on  : 09-09-2021
+  @last modified by  : ManiKumar
+  Modifications Log 
+  Ver   Date         Author         Modification
+  1.0   18-08-2021   Manikumar      Initial Version
+-->
+
+
+
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" controller="ParticipantResultsController">
+    
+    <aura:attribute name="otherMap" type="Map"  access="global" />
+    <aura:attribute name="contactId" type="String"  access="global" />
+    <aura:attribute name="gameName" type="String"  access="global" />
+    <aura:attribute name="showCharts" type="Boolean" default="false" access="global" />
+    <aura:attribute name="resultUrl" type="String"/>
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    
+    <lightning:layout multipleRows="true">
+        <aura:if isTrue ="{!v.showCharts}">
+            <div class="mainCrowd-outer-box">
+                <!-- <c:brainInfoResults></c:brainInfoResults> -->
+
+                  
+                <div class="mainCrowd-inner-box1 ">
+                    <!-- <div class="l-title text-center text-normal">{!$Label.c.sharingmyresults_text_1}</div> -->
+                    <!-- <h1 class=" slds-align_absolute-center marginT30 ">{!$Label.c.sharingmyresults_text_1}</h1> -->
+                    <div class="home_promo_n text-left marginT30 marginB30"  >{!$Label.c.sharingmyresults_text_2}</div>   
+                    <div class="slds-m-top_medium possition-r">
+                        <!-- <div class="social_result">
+                            <textarea readonly="true" class="hidden-text" id="urlClassic">{!v.resultUrl}</textarea>
+                            <ul>
+                                  <li class="magenta-btn"><lightning:button class="slds-align_right slds-button slds-button_neutral  copy-btn"  iconName="utility:copy_to_clipboard" variant="border-filled" label="Copy URL" onclick="{! c.copyClassic }"/></li>
+                                <li class="magenta-btn"><lightning:button class="slds-align_right slds-button slds-button_neutral" iconName="utility:email" variant="border-filled" label="E-mail" onclick="{!c.openEmail}"/></li>
+                                <li><a class="facebook font36" href="https://twitter.com/intent/tweet?text=%20https%3A%2F%2Fmindcrowd.org%2F%24related=AddToAny,micropat" target="_blank"><i class="fab fa-twitter-square" data-aura-rendered-by="157:0"></i></a></li>
+                                <li> <a class="twitter font36" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fmindcrowd.org%2F%24src=sdkpreparse" target="_blank"><i class="fab fa-facebook-square" data-aura-rendered-by="160:0"></i></a></li>
+                                
+                            </ul> 
+                        </div> -->
+                        
+                        <div class="slds-m-top_large possition-r">
+                            <c:ParticipantGuestUserGameDashboard gameName ="PAIRED GAME" gameTitle ="{!$Label.c.Paired_catcme_game_text3}" 
+                                                                 gameDesc1="{!$Label.c.Paired_catcme_game_text1}"
+                                                                 contactId="{!v.contactId}" isScoreReactionTime="false" ></c:ParticipantGuestUserGameDashboard>
+                        </div>
+                        <div class="slds-m-top_large possition-r">
+                            <c:ParticipantGuestUserGameDashboard gameName ="DLTRS" gameTitle ="{!$Label.c.Dltrs_catcme_game_text3}" 
+                                                                 gameDesc1="{!$Label.c.Dltrs_catcme_game_text1}"
+                                                                 contactId="{!v.contactId}"  isScoreReactionTime="true" ></c:ParticipantGuestUserGameDashboard>
+                        </div>
+                    </div>     
+                </div> 
+               
+                <div class="home_promo_n text-center marginT20 marginB20"  ><ui:outputRichText value="{!$Label.c.sharingmyresults_text_3}"/></div> 
+                <!-- <c:homeSection3></c:homeSection3> -->
+                <!-- <c:brainInfoResults></c:brainInfoResults> -->
+
+               
+            </div> 
+            <aura:set attribute="else">
+                <lightning:spinner alternativeText="Loading" size="large" />
+            </aura:set>
+        </aura:if>      
+    </lightning:layout>
+</aura:component>

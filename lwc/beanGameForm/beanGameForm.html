@@ -1,0 +1,34 @@
+<template>
+    
+    <lightning-layout-item size="12" small-device-size="12" medium-device-size="12">
+        <!-- <h1 class="text-center marginB20"><p class="title">{label.consent_text_6}</p></h1>            -->
+        <div class="text-center marginB20 inner-title">{consent_text_6}</div>                                                 
+        </lightning-layout-item>
+        <lightning-layout-item size="12" small-device-size="12" medium-device-size="12">
+            <div class="text-center  marginB20 subtitle">{consent_text_7}
+                <!-- <a  class="text-decoration-non subtitle" href="#"  onclick={faqClick}>
+                {label.consent_text_7}
+            </a>  -->
+            
+            </div>
+                                                                    
+        </lightning-layout-item>
+        <lightning-layout-item size="12" small-device-size="12" medium-device-size="12">
+            <p style="text-align: justify;">{consent_text_8}</p>                                                           
+        </lightning-layout-item>
+        <lightning-layout-item size="12" small-device-size="12" medium-device-size="12" large-device-size="12" class=" consent-form-item-row consent_form">
+                            
+            <div class="slds-grid slds-gutters">
+                
+                <div class="slds-col slds-size_1-of-10 paddingL0 paddingR0 remove-label ">
+                    <lightning-input class="information remove-label" message-when-value-missing="Select" onchange={checkTerm} type="checkbox" name="termandcondition"></lightning-input>
+                </div>
+                <div class="slds-col ">
+                    <p><lightning-formatted-rich-text value={consent_text_11}></lightning-formatted-rich-text> </p>
+                </div>
+            </div>
+        </lightning-layout-item>
+        <lightning-layout-item size="12" small-device-size="12" medium-device-size="12" large-device-size="12" class="marginB20 m-center">
+            <lightning-button disabled={isSubmitBtnDisable} class=" btn-sm pink-btn-box big"  onclick={save} label={consent_text_15}></lightning-button>
+        </lightning-layout-item>
+</template>

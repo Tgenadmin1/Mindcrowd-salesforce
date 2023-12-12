@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Activities of Daily Living</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Activities of Daily Livings</value>
+    </caseValues>
+    <fields>
+        <label><!-- Ability to Handle Finances --></label>
+        <name>Ability_to_Handle_Finances__c</name>
+    </fields>
+    <fields>
+        <label><!-- Ability to Use Telephone --></label>
+        <name>Ability_to_Use_Telephone__c</name>
+    </fields>
+    <fields>
+        <label><!-- Bathing --></label>
+        <name>Bathing__c</name>
+    </fields>
+    <fields>
+        <label><!-- Contact --></label>
+        <name>Contact__c</name>
+        <relationshipLabel><!-- Activities of Daily Livings --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Dressing --></label>
+        <name>Dressing__c</name>
+    </fields>
+    <fields>
+        <label><!-- Email --></label>
+        <name>Email__c</name>
+    </fields>
+    <fields>
+        <label><!-- Feeding --></label>
+        <name>Feeding__c</name>
+    </fields>
+    <fields>
+        <label><!-- Food Preparation --></label>
+        <name>Food_Preparation__c</name>
+    </fields>
+    <fields>
+        <label><!-- Grooming --></label>
+        <name>Grooming__c</name>
+    </fields>
+    <fields>
+        <label><!-- Housekeeping --></label>
+        <name>Housekeeping__c</name>
+    </fields>
+    <fields>
+        <label><!-- Laundry --></label>
+        <name>Laundry__c</name>
+    </fields>
+    <fields>
+        <label><!-- Mode of Transportation --></label>
+        <name>Mode_of_Transportation__c</name>
+    </fields>
+    <fields>
+        <label><!-- Physical Ambulation --></label>
+        <name>Physical_Ambulation__c</name>
+    </fields>
+    <fields>
+        <label><!-- Responsibility for Own Medications --></label>
+        <name>Responsibility_for_Own_Medications__c</name>
+    </fields>
+    <fields>
+        <label><!-- Shopping --></label>
+        <name>Shopping__c</name>
+    </fields>
+    <fields>
+        <label><!-- Toilet --></label>
+        <name>Toilet__c</name>
+    </fields>
+    <layouts>
+        <layout>Activities of Daily Living Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Survey Response --></label>
+            <section>Survey Response</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

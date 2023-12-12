@@ -1,0 +1,8 @@
+<apex:page showHeader="false" sidebar="false">
+  <script>
+  const fullURL= window.location.pathname;
+  const urlStr=fullURL.split('/');
+  const parameter=urlStr[urlStr.length-1];
+  window.location.href = '{!$Label.Community_Url}' + '/s/int-setcampaigncode?campaigncode='+ parameter;
+  </script>
+</apex:page>

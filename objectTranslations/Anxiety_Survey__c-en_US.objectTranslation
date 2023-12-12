@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>ANX</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>ANXs</value>
+    </caseValues>
+    <fields>
+        <label><!-- ANX_v1.0.32 --></label>
+        <name>Anticipating_or_Fearing_Frequency__c</name>
+    </fields>
+    <fields>
+        <label><!-- ANX_v1.0.31 --></label>
+        <name>Anticipating_or_Fearing_Intensity__c</name>
+    </fields>
+    <fields>
+        <label><!-- ANX_v1.0.2 --></label>
+        <name>Anxiety_Frequency__c</name>
+    </fields>
+    <fields>
+        <help><!-- Anxiety Intensity --></help>
+        <label><!-- ANX_v1.0.1 --></label>
+        <name>Anxiety_Intensity__c</name>
+    </fields>
+    <fields>
+        <label><!-- Contact --></label>
+        <name>Contact__c</name>
+        <relationshipLabel><!-- ANXs --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- ANX_v1.0.26 --></label>
+        <name>Dizziness_Headaches_Trembling_Frequency__c</name>
+    </fields>
+    <fields>
+        <label><!-- ANX_v1.0.25 --></label>
+        <name>Dizziness_Headaches_Trembling_Intensity__c</name>
+    </fields>
+    <fields>
+        <label><!-- Email --></label>
+        <name>Email__c</name>
+    </fields>
+    <fields>
+        <label><!-- ANX_v1.0.16 --></label>
+        <name>Fatigue_or_lack_of_Energy_Frequency__c</name>
+    </fields>
+    <fields>
+        <label><!-- ANX_v1.0.15 --></label>
+        <name>Fatigue_or_lack_of_Energy_Intensity__c</name>
+    </fields>
+    <fields>
+        <label><!-- ANX_v1.0.30 --></label>
+        <name>Feeling_Restless_Keyed_Up_Frequency__c</name>
+    </fields>
+    <fields>
+        <label><!-- ANX_v1.0.29 --></label>
+        <name>Feeling_Restless_Keyed_Up_Intensity__c</name>
+    </fields>
+    <fields>
+        <label><!-- ANX_v1.0.8 --></label>
+        <name>Irritability_Frequency__c</name>
+    </fields>
+    <fields>
+        <label><!-- ANX_v1.0.7 --></label>
+        <name>Irritability_Intensity__c</name>
+    </fields>
+    <fields>
+        <label><!-- ANX_v1.0.10 --></label>
+        <name>Muscle_Tension_or_Tightness_Frequency__c</name>
+    </fields>
+    <fields>
+        <label><!-- ANX_v1.0.9 --></label>
+        <name>Muscle_Tension_or_Tightness_Intensity__c</name>
+    </fields>
+    <fields>
+        <label><!-- ANX_v1.0.24 --></label>
+        <name>Nausea_constipation_Diarrhea_Frequency__c</name>
+    </fields>
+    <fields>
+        <label><!-- ANX_v1.0.23 --></label>
+        <name>Nausea_constipation_Diarrhea_Intensity__c</name>
+    </fields>
+    <fields>
+        <label><!-- ANX_v1.0.4 --></label>
+        <name>Nervousness_Frequency__c</name>
+    </fields>
+    <fields>
+        <label><!-- ANX_v1.0.3 --></label>
+        <name>Nervousness_Intensity__c</name>
+    </fields>
+    <fields>
+        <label><!-- ANX_v1.0.28 --></label>
+        <name>Numbness_Sweating_Flushing_Frequency__c</name>
+    </fields>
+    <fields>
+        <label><!-- ANX_v1.0.27 --></label>
+        <name>Numbness_Sweating_Flushing_Intensity__c</name>
+    </fields>
+    <fields>
+        <label><!-- ANX_v1.0.18 --></label>
+        <name>Problems_with_Attention_Frequency__c</name>
+    </fields>
+    <fields>
+        <label><!-- ANX_v1.0.17 --></label>
+        <name>Problems_with_Attention_Intensity__c</name>
+    </fields>
+    <fields>
+        <label><!-- ANX_v1.0.22 --></label>
+        <name>Shortness_of_Chest_Tightness_Frequency__c</name>
+    </fields>
+    <fields>
+        <label><!-- ANX_v1.0.21 --></label>
+        <name>Shortness_of_Chest_Tightness_Inte__c</name>
+    </fields>
+    <fields>
+        <label><!-- ANX_v1.0.14 --></label>
+        <name>Trouble_Fall_or_stay_Asleep_Frequency__c</name>
+    </fields>
+    <fields>
+        <label><!-- ANX_v1.0.13 --></label>
+        <name>Trouble_Fall_or_stay_Asleep_Intensity__c</name>
+    </fields>
+    <fields>
+        <label><!-- ANX_v1.0.34 --></label>
+        <name>Trouble_Functioning_at_Home_Frequency__c</name>
+    </fields>
+    <fields>
+        <label><!-- ANX_v1.0.33 --></label>
+        <name>Trouble_Functioning_at_Home_Intensity__c</name>
+    </fields>
+    <fields>
+        <label><!-- ANX_v1.0.12 --></label>
+        <name>Trouble_Relaxing_Frequency__c</name>
+    </fields>
+    <fields>
+        <label><!-- ANX_v1.0.11 --></label>
+        <name>Trouble_Relaxing_Intensity__c</name>
+    </fields>
+    <fields>
+        <label><!-- ANX_v1.0.20 --></label>
+        <name>Trouble_Remembering_Things_Frequency__c</name>
+    </fields>
+    <fields>
+        <label><!-- ANX_v1.0.19 --></label>
+        <name>Trouble_Remembering_Things_Intensity__c</name>
+    </fields>
+    <fields>
+        <label><!-- ANX_v1.0.6 --></label>
+        <name>Worrying_Frequency__c</name>
+    </fields>
+    <fields>
+        <label><!-- ANX_v1.0.5 --></label>
+        <name>Worrying_Intensity__c</name>
+    </fields>
+    <layouts>
+        <layout>Anxiety Survey Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Survey Response --></label>
+            <section>Survey Response</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

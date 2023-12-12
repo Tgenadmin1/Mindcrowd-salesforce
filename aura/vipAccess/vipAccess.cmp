@@ -1,0 +1,131 @@
+<!-- add implements="forceCommunity:availableForAllPageTypes" to surface the component in community builder -->
+<aura:component controller="LightningVIPAccessFormController" implements="forceCommunity:availableForAllPageTypes" access="global">
+    <!-- <aura:attribute name="showError" type="Boolean" required="true" description="" default="false" /> -->
+    <aura:attribute name="errorMessage" type="String" required="false" description="" />
+    <aura:attribute name="startUrl" type="String" required="false" description="The url you go to after a successful login" />
+    <aura:attribute name="usernameLabel" type="String" required="false" default="Username"/>
+    <aura:attribute name="passwordLabel" type="String" required="false" default="Password"/>
+    <aura:attribute name="loginButtonLabel" type="String" required="false" default="Log in"/>
+    <aura:attribute name="expid" type="String" required="false" description="The branding experience ID" />        
+    
+    <aura:attribute name="forgotPasswordLabel" type="String" required="false" default="Forgot your password?"/>
+    <aura:attribute name="selfRegisterLabel" type="String" required="false" default="Not a member?"/>
+    <aura:attribute name="forgotPasswordUrl" type="String" required="false" default="/ForgotPassword"/>
+    <aura:attribute name="selfRegisterUrl" type="String" required="false" default="/SelfRegister"/>
+    
+    <aura:attribute name="isUsernamePasswordEnabled" type="Boolean" />
+    <aura:attribute name="isSelfRegistrationEnabled" type="Boolean" />
+    <aura:attribute name="communityForgotPasswordUrl" type="String" />
+    <aura:attribute name="communitySelfRegisterUrl" type="String" />
+    <aura:attribute name="isModalOpen" type="boolean" required="true" description="" default="false"/>
+
+    <aura:attribute name="VIP_ACCESS" type="String" default="Login to your dashboard" access="global" />
+    <aura:attribute name="VIP_Access_ID" type="String" default="Email Address" access="global" />
+    <aura:attribute name="url_login" type="String" default="vipaccess" access="global" />
+    <aura:attribute name="url_passwordrecovery" type="String" default="passwordrecovery" access="global" />
+    <aura:attribute name="Password" type="String" default="Password" access="global" />
+    <aura:attribute name="Forgot_Password" type="String" default="Forgot Password?" access="global" />
+    <aura:attribute name="MindCrowd_VIP_Access" type="String" default="MindCrowd VIP Access" access="global" />
+    <aura:attribute name="additional_brain_games" type="String" default="Play additional brain games for a more complete picture of how your brain performs compared to others like you." access="global" />
+    <aura:attribute name="Want_VIP_access" type="String" default="Want VIP access to more brain games and a personalized dashboard to track your brain performance?" access="global" />
+    <aura:attribute name="simple_steps" type="String" default="Follow these two simple steps:" access="global" />
+    <aura:attribute name="Press_the_Start" type="String" default="Press the 'Start the Test' button and complete the main MindCrowd Memory and Attention games." access="global" />
+    <aura:attribute name="Provide_your_name" type="String" default="Provide your name and an email address where you would like to receive your invitation to join the VIP area of MindCrowd." access="global" />
+    <aura:attribute name="Login_User_Error" type="String" default="Enter a value in the Email Address field." access="global" />
+    <aura:attribute name="Login_Email_Error" type="String" default="Your login attempt has failed. Make sure the email and password are correct." access="global" />
+    <aura:attribute name="Login_Password_Error" type="String" default="Enter a value in the Password field." access="global" />
+    <aura:attribute name="sign_In" type="String" default="Sign In" access="global" />
+    
+    <aura:registerevent name="sitePropagatedStartUrl" type="c:setStartUrl"/>
+    <aura:handler name="init" value="{!this}" action="{!c.initialize}"/>
+    <aura:dependency resource="c:setStartUrl" type="EVENT"/>
+    <!-- <ltng:require scripts="" afterScriptsLoaded="{!c.myAction}" /> -->
+    <!-- Please uncomment
+    <aura:dependency resource="siteforce:registerQueryEventMap" type="EVENT"/>
+    -->
+    <aura:handler event="c:setStartUrl" action="{!c.setStartUrl}"/>
+    <aura:handler event="c:setExpId" action="{!c.setExpId}"/>    
+    <aura:dependency resource="c:setExpId" type="EVENT"/>  
+    
+    
+    <div>
+        
+        <div class=" login-box">
+            <h1 class="h-top-heading">{!v.MindCrowd_VIP_Access}</h1>
+            <div class="vip-text-2 text-center marginT30 marginB40">{!v.additional_brain_games}</div>
+            <div class="login-form">
+                <aura:renderIf isTrue="{!v.isUsernamePasswordEnabled}">
+                    <div id="sfdc_username_container" class="sfdc1">
+                        <!-- <h1 class=" marginB20"><p class="title">{!v.VIP_ACCESS}</p></h1> -->
+                        <div class=" marginB20 marginB30"><p class="title text-center">{!v.VIP_ACCESS}</p></div>
+                        
+                        
+                    </div>
+
+                    <div id="sfdc_username_container" class="sfdc1">
+                        <!-- <span id="sfdc_user" class="login-icon" data-icon="a"></span> -->
+                        <!-- <lightning:input class="marginT20" type="email" aura:id="email2" variant="false" placeholder="Email Address*"/> -->
+                        
+                    <!--  <lightning:input class="marginT20" type="email" aura:id="email2" variant="false" placeholder="Email Address*" /> -->
+
+
+                        <lightning:input   tabindex="1" variant="label-hidden" aura:id="username" placeholder="{!v.VIP_Access_ID}"  class="input sfdc_usernameinput sfdc" required="false" />
+                        
+                        
+                        <!-- <ui:inputEmail  value=""  aura:id="username" placeholder="{!v.VIP_Access_ID}" keyup="{!c.onKeyUp}" class="input sfdc_usernameinput sfdc" label="{!v.usernameLabel}" labelClass="assistiveText"/> -->
+                    </div>
+
+                    <div id="sfdc_password_container" class="sfdc1">
+                        <!-- <span id="sfdc_lock" class="login-icon sfdc" data-icon="c"></span> -->
+                        <ui:inputSecret value=""   aura:id="password" placeholder="{!v.Password}" keyup="{!c.onKeyUp}" class="input sfdc_passwordinput sfdc" label="{!v.passwordLabel}" labelClass="assistiveText" required="false"/>
+                    </div>
+
+                    <div class="sfdc text-center marginT30 ">
+                        <ui:button aura:id="submitButton" label="{!v.sign_In}" press="{!c.handleLogin}" class="sfdc_button loginButton "/>
+                        <!-- {!v.Submit} -->
+                    </div>
+                    <div class="sfdc text-center ">
+                        <div id="sfdc_forgot" class="sfdc">
+                            <!-- <span><a class="pink-link" href="{!if(v.communityForgotPasswordUrl == null, v.forgotPasswordUrl, v.communityForgotPasswordUrl)}">{!v.Forgot_Password}</a></span> -->
+                            <span><a class="link" href="{!$Label.c.Community_Url+'/s/'+$Label.c.url_login+'/'+$Label.c.url_passwordrecovery}">{!v.Forgot_Password}</a></span>
+                            <aura:renderIf isTrue="{!v.isSelfRegistrationEnabled}">
+                                <span  class="pink-link" ><a href="{!if(v.communitySelfRegisterUrl == null, v.selfRegisterUrl, v.communitySelfRegisterUrl)}">{!v.selfRegisterLabel}</a></span>
+                            </aura:renderIf>                            
+                        </div>
+                    </div>   
+                </aura:renderIf>
+            </div>   
+        </div>
+        <div class="login-text">
+            <!-- <p class="login-text-heading">Want VIP access to more brain games and a personalized dashboard to track your brain performance?</p> -->
+            <h2>{!v.Want_VIP_access}</h2>
+        <p>{!v.simple_steps}</p>
+        <ul class="number-list">
+            <li>{!v.Press_the_Start}</li>
+            <li>{!v.Provide_your_name}</li>
+        </ul>
+        </div>
+        <c:donate></c:donate>
+        <aura:if isTrue="{!v.isModalOpen}">          
+            <section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-modal="true" aria-describedby="modal-content-id-1" class="slds-modal slds-fade-in-open">
+                <div class="slds-modal__container">
+                    <header class="slds-modal__header">
+                        <lightning:buttonIcon iconName="utility:close"
+                                            onclick="{! c.closeModel }"
+                                            alternativeText="{!$Label.c.close_btn}"
+                                            variant="bare-inverse"
+                                            class="slds-modal__close"/>
+                        <h2 id="modal-heading-01" class="slds-text-heading_medium slds-hyphenate">
+                            <div>
+                                <ui:outputRichText value="{!v.errorMessage}"/>
+                            </div>
+                        </h2>
+                    </header>      
+                    <div class="slds-modal__content slds-p-around_medium" id="modal-content-id-1">
+                    </div>              
+                </div>
+            </section>
+            <div class="slds-backdrop slds-backdrop_open"></div>
+        </aura:if>  
+    </div>
+</aura:component>

@@ -1,0 +1,79 @@
+<!--
+  @description       : 
+  @author            : Raj Kumar
+  @UI author         : Raj
+  @last modified on  : 31-05-2021
+  @last modified by  : ChangeMeIn@UserSettingsUnder.SFDoc
+  Modifications Log 
+  Ver   Date         Author         Modification
+  1.0   01-06-2020   Raj Kumar      Initial Version
+-->
+
+<template>
+    <div class="project" id="project">
+        <div class="project-bg">
+            <lightning-layout class="project-layout">
+                <lightning-layout-item size="12" small-device-size="12" medium-device-size="12" large-device-size="12">
+                    <div class="content">
+                        <h2 class="sub_heading">{label.project_text_1}</h2>
+                        <h3>{label.project_text_2}</h3>
+                        <h4>{label.project_text_3}</h4>
+                        <!-- <h4>MindCrowd is a collaborative effort among leading scientific research institutions and organizations including <b>TGen </b>(The Translational Genomics Research Institute ), the University of Arizona, and the Alzheimer's Prevention Initiative.</h4>
+                        <h5>MindCrowd is the vision of Dr. Matt Huentelman, who believes that expanding the scope of genetic research to include Millions Of People Like You will lead to critical advancements in understanding and treating brain disorders.</h5> -->
+                    </div>
+
+
+
+                    <div class="sidebar remove-border full_width">
+                        <!-- <h5> {label.project_text_4}</h5> -->
+
+                        <div class="slds-grid slds-gutters callouts">
+                            <div class="slds-col slds-size_6-of-12 callout marginR15">
+                                <div class="slds-grid slds-gutters">
+                                    <div class="slds-col slds-size_4-of-12 paddingR0">
+                                        <img src={circle_phase_one} alt="Circle phase one">
+                                    </div>
+                                    <div class="slds-col paddingL0">
+                                        <p><strong>{label.project_text_5}</strong> {label.project_text_6}</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="slds-col slds-size_6-of-12 callout">
+                                <div class="slds-grid slds-gutters">
+                                    <div class="slds-col slds-size_4-of-12 paddingR0">
+                                        <img src={circle_phase_two} alt="Circle phase one">
+                                    </div>
+                                    <div class="slds-col paddingL0">
+                                        <p><strong>{label.project_text_7}</strong> {label.project_text_8}</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="line"></div>
+                </lightning-layout-item>
+                <lightning-layout-item size="12" small-device-size="12" medium-device-size="12" large-device-size="12"
+                    class=" the-problem">
+                    <div class="bottom">
+                        <div class="bottom_content1">
+                            <p class="pull-left">
+                                <img src={one_cause} alt="one_cause">
+                            </p>
+                            <div class=" top-banner-button pull-left button">
+                                <a href="#" class="banner-test-btn slds-button" onclick={handleClick}>
+                                    <div class="btn__test-time-left">{label.banner_Text_6}</div>
+                                    <div class="btn__test-time-right">
+                                        <span class="time__number">10</span>
+                                        <span class="time__units">min </span>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </lightning-layout-item>
+
+            </lightning-layout>
+        </div>
+    </div>
+
+</template>

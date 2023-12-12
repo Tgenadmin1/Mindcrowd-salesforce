@@ -1,0 +1,49 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global">
+    <aura:attribute name="microphones" type="List" />
+    <aura:attribute name="selectedMicrophone" type="String" />
+    <aura:attribute name="isRecording" type="Boolean" default="false" />
+    <aura:attribute name="isPlaying" type="Boolean" default="false" />
+    <aura:attribute name="recordedAudioUrl" type="String"  />
+    <aura:attribute name="speechTexteng" type="String"  />
+    <aura:attribute name="speechTextspanish" type="String"  />
+    <aura:handler name="init" action="{!c.doInit}" value="{!this}" />
+    <div>
+        <h3><b>Speech Task English</b></h3>
+        <!--label for="microphoneSelect">Select Microphone:</label-->
+        <!--select id="microphoneSelect" aura:id="microphoneSelect" onchange="{!c.onMicrophoneSelect}">
+            <option value="">Select Microphone</option>
+            <aura:iteration items="{!v.microphones}" var="mic">
+                <option value="{!mic.deviceId}">{!mic.label}</option>
+            </aura:iteration>
+        </select!-->
+        <lightning:button aura:id="english" onclick="{!c.testMicrophone}" disabled="{!v.isRecording || v.isPlaying}">Start Recording (1 minute)</lightning:button>
+        <div>
+            <!--h4 class="header">Speech to text(English)</h4-->
+            <lightning:textarea name="input1" label="Speech to text(English)" readonly="true" value="{!v.speechTexteng}"/>
+        </div>
+    
+        <!--button onclick="{!c.playRecording}" disabled="{!v.isRecording || v.isPlaying}">Play Recording</button!-->
+        <!--button onclick="{!c.saveMicrophone}" disabled="{!v.isRecording || v.isPlaying || !v.selectedMicrophone}">OK</button-->
+    </div>
+    <div>
+        <h3><b>Speech Task Spanish</b></h3>
+        <!--label for="microphoneSelect">Select Microphone:</label-->
+        <!--select id="microphoneSelect" aura:id="microphoneSelect" onchange="{!c.onMicrophoneSelect}">
+            <option value="">Select Microphone</option>
+            <aura:iteration items="{!v.microphones}" var="mic">
+                <option value="{!mic.deviceId}">{!mic.label}</option>
+            </aura:iteration>
+        </select!-->
+        <lightning:button  aura:id="spanish" onclick="{!c.testMicrophone}" disabled="{!v.isRecording || v.isPlaying}">Start Recording (1 minute)</lightning:button>
+        <div>
+            <!--h4 class="header">Speech to text(Spanish)</h4-->
+            <lightning:textarea name="input1" label="Speech to text(Spanish)" readonly="true" value="{!v.speechTextspanish}"/>
+        </div>
+    
+        <!--button onclick="{!c.playRecording}" disabled="{!v.isRecording || v.isPlaying}">Play Recording</button!-->
+        <!--button onclick="{!c.saveMicrophone}" disabled="{!v.isRecording || v.isPlaying || !v.selectedMicrophone}">OK</button-->
+    </div>
+    <audio aura:id="audioPlayer" controls="true" style="display:none;">
+        <source aura:id="audioSource" src="" type="audio/wav" />
+    </audio>
+</aura:component>

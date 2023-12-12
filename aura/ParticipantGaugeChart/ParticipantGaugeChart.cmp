@@ -1,0 +1,52 @@
+<!--
+  @description       : This 
+  @author            : Manikumar Meruva(Girikon Solutions Pvt Ltd)
+  @UI author         : Mani
+  @last modified on  : 09-09-2021
+  @last modified by  : ManiKumar
+  Modifications Log 
+  Ver   Date         Author         Modification
+  1.0   18-08-2021   Manikumar      Initial Version
+-->
+
+
+
+
+
+
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+    <ltng:require scripts="{!$Resource.d3js}" afterScriptsLoaded="{!c.scriptsLoaded}" />
+    <aura:attribute name="gaugeColor" type="List" access="global" default="['#FF5833','#FFB833','#33FF38']" />
+    <aura:attribute name="minValue" type="Integer" default="0"/>
+    <aura:attribute name="maxValue" type="Integer" default="100"/>
+    <aura:attribute name="breakPoint" type="Integer" default="40"/>
+    <aura:attribute name="lowAverage" type="Integer" access="global" />
+    <aura:attribute name="highAverage" type="Integer" access="global" />
+    <aura:attribute name="isPercentage" type="Boolean" access="global" />
+    <aura:attribute name="gaugeSize" type="Integer" default="33" /> 
+    
+    
+    
+    <!--<aura:attribute name="chartTitle" type="String" default="Chart Title "/>-->
+    <aura:attribute name="reportId" type="String" default=""/>
+    <aura:attribute name="chartLabel" type="String" access="global" />
+    
+
+    <!-- <aura:attribute name="TotalReactionTime" type="Integer" />
+    <aura:attribute name="NoofQuestionAttempted" type="String" default="No of Question Attempted "/>
+    <aura:attribute name="NoOfCorrectAnswered" type="String" default="No Of Correct Answered"/>
+   <aura:attribute name="FY" type="Integer" />  
+    <lightning:card>
+        <aura:set attribute="title">
+         <a onclick="{!c.gotoReport}" title="{!v.chartTitle}" class="slds-align_absolute-center" style="color: #fff !important">{!v.chartTitle}</a>
+        </aura:set>
+        <div style="text-align:center" aura:id="powergauge"></div>
+       <div style="margin-top:-30px;text-align:center"><b>{!v.NoOfCorrectAnswered+' '+v.breakPoint}</b></div>
+        <div style="text-align:center"><b>{!v.NoofQuestionAttempted+' '+v.maxValue}</b></div>
+        <div style="text-align:center"><b>Total Reaction Time {!v.TotalReactionTime}ms</b></div>
+    </lightning:card> -->
+    
+    <div class="slds-col slds-size--1-of-1 slds-small-size--2-of-2 slds-medium-size--4-of-4">
+        <div style="text-align:center" aura:id="powergauge"></div>
+    </div> 
+</aura:component>

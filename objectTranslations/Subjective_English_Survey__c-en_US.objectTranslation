@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>SUBENG</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>SUBENGs</value>
+    </caseValues>
+    <fields>
+        <help><!-- How comfortable are you reading in English? --></help>
+        <label><!-- SUBENG_v1.0.4 --></label>
+        <name>Comfortable_reading_in_English__c</name>
+    </fields>
+    <fields>
+        <help><!-- How comfortable are you speaking in English? --></help>
+        <label><!-- SUBENG_v1.0.2 --></label>
+        <name>Comfortable_speaking_in_English__c</name>
+    </fields>
+    <fields>
+        <help><!-- How comfortable are you writing in English? --></help>
+        <label><!-- SUBENG_v1.0.3 --></label>
+        <name>Comfortable_writing_in_English__c</name>
+    </fields>
+    <fields>
+        <label><!-- Contact Name --></label>
+        <name>Contact_Name__c</name>
+        <relationshipLabel><!-- SUBENGs --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Contact --></label>
+        <name>Contact__c</name>
+    </fields>
+    <fields>
+        <label><!-- Email --></label>
+        <name>Email__c</name>
+    </fields>
+    <fields>
+        <help><!-- Is English your native language? --></help>
+        <label><!-- SUBENG_v1.0.1 --></label>
+        <name>Is_English_your_native_language__c</name>
+    </fields>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

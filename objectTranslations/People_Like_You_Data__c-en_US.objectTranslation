@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>People Like You Data</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>People Like You Data</value>
+    </caseValues>
+    <fields>
+        <label><!-- Age --></label>
+        <name>Age__c</name>
+    </fields>
+    <fields>
+        <label><!-- Average --></label>
+        <name>Average__c</name>
+    </fields>
+    <fields>
+        <label><!-- Education --></label>
+        <name>Education__c</name>
+    </fields>
+    <fields>
+        <label><!-- Game Name --></label>
+        <name>Game_Name__c</name>
+        <relationshipLabel><!-- People Like You Data --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- High Average --></label>
+        <name>High_Average__c</name>
+    </fields>
+    <fields>
+        <label><!-- Low Average --></label>
+        <name>Low_Average__c</name>
+    </fields>
+    <fields>
+        <label><!-- Sex --></label>
+        <name>Sex__c</name>
+        <picklistValues>
+            <masterLabel>Female</masterLabel>
+            <translation><!-- Female --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Intersex</masterLabel>
+            <translation><!-- Intersex --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Male</masterLabel>
+            <translation><!-- Male --></translation>
+        </picklistValues>
+    </fields>
+    <layouts>
+        <layout>People Like You Data Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

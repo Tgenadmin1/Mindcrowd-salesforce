@@ -1,0 +1,46 @@
+<!--
+  @description             : 
+  @author(Controller)      : Sunil Kumar Singh 
+  @UI author               : Raj
+  @last Updated by         : (Sunil Kr Singh//Date-Aug 1 2021)
+  @last modified by        : ChangeMeIn@UserSettingsUnder.SFDoc
+  Modifications Log 
+  Ver   Date         Author                  Modification
+  1.0   20-07-2021   Sunil Kumar Singh       Initial Version
+-->
+<aura:component controller="GamesController"
+    implements="forceCommunity:availableForAllPageTypes,lightning:isUrlAddressable,lightning:hasPageReference"
+    access="global">
+    <aura:attribute name="ParticipantGameResponse" type="Object" />
+    <aura:attribute name="myAttribute" type="String" access="global"/>
+    <aura:attribute name="mycontactId" type="String" access="global"/>
+    <aura:attribute name="participantGameid" type="String" access="global"/>
+    <aura:attribute name="ipAddress" type="String" access="global"/>
+    <aura:attribute name="browser" type="String" access="global"/>
+    <ltng:require scripts="" afterScriptsLoaded="{!c.myAction}" />
+    <div
+        class="main-content-outer slds-size_12-of-12 slds-small-size_12-of-12 slds-medium-size_12-of-12 slds-large-size_12-of-12 test">
+          <div id="gameBox" class="main-content-inner shapes-game">
+            <div class="logo-game">
+                <img src="{!$Resource.mindcrowd_style + '/images/MindCrowd-Logo-Color-White-Text.png'}"/>
+              </div>
+            <div class="game-title">{!$Label.c.mst_text_18} </div>
+            <div class="game_panel pairedgame">
+                <div class="game_block" id="game_block">
+                    <div class="datablock" id="datablock_mst"></div>
+                    <p id="nextBtton" class="centers magenta-btn  btn-xlarge marginT20 slds-hide">
+                        <button class="slds-button"  onclick="{!c.goToMyResultsPage }">My Results</button>
+                        <button class="slds-button"  onclick="{!c.goToNextPage }">My Games</button>
+                    </p>
+                    <div class="duration">
+                        <div class="d_title" id="d_title"></div>
+                        <div class="d_txt" id="d_txt"></div>
+                        <div class="d_status" id="d_status"></div>
+                    </div>
+                    
+                </div>
+            </div>
+            <div id="imgContainer" style="height: 1px; width: 1px; position: absolute; top:-10px; left:-10px; overflow: hidden;"></div>
+        </div>
+    </div>
+</aura:component>

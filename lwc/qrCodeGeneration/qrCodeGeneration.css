@@ -1,0 +1,65 @@
+.qrcodeClass-box{
+    float: left;
+    /* display: table-cell; */
+     /* width:345px;  */
+    width: 306.555px;
+    height: auto;
+    /* margin: 0px 13.44px 0px 0px ; */
+    padding: 30px 0px 0px 0px ;
+    margin: 0;
+    /* border:1px red solid; */
+    text-align: center;
+    font-size: 20px;
+}
+
+
+
+@media print {
+    .slds-context-bar {
+        display :none;
+    }
+    .print {
+        display:none;
+    }
+    .slds-global-header {
+        display:none;
+    }
+    .slds-color__background_gray-1 {
+        display:none;
+    }
+    .slds-global-header_container {
+        display:none;
+        /* margin-top: 50px; */
+    }
+    .slds-no-print {
+        display:none;
+    }
+    .qrcodeClass-box canvas{
+        width:100% !important;
+        height: 100% !important;
+        margin: 0 ;
+        padding: 0 !important;
+    }
+
+    .qrcodeClass-box{
+        float: left;
+        width: 270px;
+        height: auto;
+        padding: 35px 0px 0px 0px ;
+        margin: 0;
+        text-align: center;
+        font-size: 20px;
+    }
+
+     .qrcodeClass-box:nth-child(2n){
+        /* margin-right: 65px ; */
+        float: right !important;
+   }
+
+
+
+
+
+    
+    
+}

@@ -1,0 +1,27 @@
+<design:component label="vipaccess">
+    <design:attribute name="startUrl"/>
+    <design:attribute name="usernameLabel" default="Email"/>
+    <design:attribute name="passwordLabel" default="Password"/>
+    <design:attribute name="loginButtonLabel" default="Log in"/>
+    <design:attribute name="forgotPasswordLabel" default="Forgot your password?"/>
+    <design:attribute name="forgotPasswordUrl"/>
+    <design:attribute name="selfRegisterLabel" default="Not a member?"/>
+    <design:attribute name="selfRegisterUrl"/>
+    
+    <design:attribute name="VIP_ACCESS" label="Login to your dashboard" description="Login to your dashboard"/>
+    <design:attribute name="VIP_Access_ID" label="Email Address" description="Email Address"/>
+    <design:attribute name="url_login" label="url_login" description="vipaccess"/>
+    <design:attribute name="url_passwordrecovery" label="url_passwordrecovery" description="passwordrecovery"/>
+    <design:attribute name="Password" label="Password" description="Password"/>
+    <design:attribute name="Forgot_Password" label="Forgot Password?" description="Forgot Password?"/>
+    <design:attribute name="MindCrowd_VIP_Access" label="MindCrowd_VIP_Access" description="MindCrowd VIP Access"/>
+    <design:attribute name="additional_brain_games" label="additional_brain_games" description="Play additional brain games for a more complete picture of how your brain performs compared to others like you."/>
+    <design:attribute name="Want_VIP_access" label="Want_VIP_access" description="Want VIP access to more brain games and a personalized dashboard to track your brain performance?"/>
+    <design:attribute name="simple_steps" label="simple_steps" description="Follow these two simple steps:"/>
+    <design:attribute name="Press_the_Start" label="Press_the_Start" description="Press the 'Start the Test' button and complete the main MindCrowd Memory and Attention games."/>
+    <design:attribute name="Provide_your_name" label="Provide_your_name" description="Provide your name and an email address where you would like to receive your invitation to join the VIP area of MindCrowd."/>
+    <design:attribute name="Login_User_Error"  label="Login_User_Error" default="Enter a value in the Email Address field." />
+    <design:attribute name="Login_Email_Error" label="Login_Email_Error" default="Your login attempt has failed. Make sure the email and password are correct." />
+    <design:attribute name="Login_Password_Error" label="Login_Password_Error" default="Enter a value in the Password field." />
+	<design:attribute name="sign_In" label="sign_In" default="Sign In"/>
+</design:component>

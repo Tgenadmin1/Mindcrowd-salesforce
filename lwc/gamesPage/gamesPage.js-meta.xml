@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LightningComponentBundle xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>51.0</apiVersion>
+    <isExposed>true</isExposed>
+    <targets>
+        <target>lightning__AppPage</target>
+        <target>lightning__RecordPage</target>
+        <target>lightning__HomePage</target>
+        <target>lightningCommunity__Page</target>
+        <target>lightningCommunity__Default</target>
+    </targets>
+
+    <targetConfigs>  
+        <targetConfig targets="lightning__HomePage,lightning__RecordPage,lightningCommunity__Default">
+            <property name="games_text_1" type="String" default="Welcome to your personal brain game dashboard" label="games_text_1"/>
+            <property name="games_text_2" type="String" default="The tiles below represent games that you can play. Click a tile to launch the game. Try to finish all of the games in 14 days or less." label="games_text_2"/>
+            <property name="games_text_2_1" type="String" default="A game available to play. Play these first.​" label="games_text_2_1"/>
+            <property name="games_text_2_4" type="String" default="A game you have already completed. You can play these again in the future.​" label="games_text_2_4"/>
+            <property name="games_text_2_2" type="String" default="A locked game. These will unlock as you play more.​" label="games_text_2_2"/>
+            <property name="games_text_2_3" type="String" default="Note: Not all games are optimized to play easily on a smartphone screen. We recommend using a tablet, laptop, or desktop computer for the games on this page.​" label="games_text_2_3"/>
+            
+            <property name="game_name_4" type="String" default="Focus​" label="game_name_4"/>
+            <property name="game_three_min" type="String" default="3 min​" label="game_three_min"/>
+            <property name="game_five_min" type="String" default="5 min​" label="game_five_min"/>
+            <property name="game_name_8" type="String" default="Objects​" label="game_name_8"/>
+            <property name="game_ten_min" type="String" default="10 min​" label="game_ten_min"/>
+            <property name="game_fifteen_min" type="String" default="15 min​" label="game_fifteen_min"/>
+            <property name="game_Remote" type="String" default="Remote​" label="game_Remote"/>
+            <property name="game_twentyFive" type="String" default="25 min​" label="game_twentyFive"/>
+            
+            <property name="game_name_9" type="String" default="Objects - Time​" label="game_name_9"/>
+            <property name="game_name_10" type="String" default="Objects - Space​" label="game_name_10"/>
+            <property name="game_name_11" type="String" default="Bean game​" label="game_name_11"/>
+            <property name="game_name_12" type="String" default="DBS​" label="game_name_12"/>
+            <property name="game_name_13" type="String" default="APOE​" label="game_name_13"/>
+            <property name="game_name_1" type="String" default="Word Pairs​" label="game_name_1"/>
+            <property name="game_name_2" type="String" default="​React" label="game_name_2"/>
+            <property name="game_name_5" type="String" default="​Faces and Names Stacks" label="game_name_5"/>
+            <property name="game_name_6" type="String" default="​Switching" label="game_name_6"/>
+            <property name="game_name_7" type="String" default="Keep Track​" label="game_name_7"/>
+            <property name="game_name_3" type="String" default="Shapes​" label="game_name_3"/>
+            <property name="game_name_c" type="String" default="Coming Soon...​" label="game_name_c"/>
+            <property name="game_name_17" type="String" default="Digit Symbol Matching Test​" label="game_name_17"/>
+            <property name="game_name_18" type="String" default="Camel and Cactus​" label="game_name_18"/>
+            
+            <property name="strTitle" type="String" default="Welcome in Salesforce" label="Enter the title"/>
+            <property name="game_block_error" type="String" default="These games are only available on a desktop or laptop. Versions will be released soon for mobile phones. Sorry for the inconvenience." label="game_block_error"/>
+
+            
+        </targetConfig>
+    </targetConfigs>
+</LightningComponentBundle>

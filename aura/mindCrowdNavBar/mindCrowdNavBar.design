@@ -1,0 +1,5 @@
+<design:component label="mindCrowdNavBar">
+    <design:attribute name="aboutMindcrowdTab" label="ABOUT MINDCROWD" description="ABOUT MINDCROWD"/>
+    <design:attribute name="cogAndBrain" label="COGNITION &#38; BRAIN AGING ARTICLES" description="COGNITION &#38; BRAIN AGING ARTICLES"/>
+    <design:attribute name="faq" label="FAQ" description="FAQ"/>
+</design:component>

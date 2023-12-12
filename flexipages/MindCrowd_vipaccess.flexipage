@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlexiPage xmlns="http://soap.sforce.com/2006/04/metadata">
+    <flexiPageRegions>
+        <appendable>enabled</appendable>
+        <name>header</name>
+        <prependable>enabled</prependable>
+        <replaceable>enabled</replaceable>
+        <type>Region</type>
+    </flexiPageRegions>
+    <flexiPageRegions>
+        <appendable>enabled</appendable>
+        <itemInstances>
+            <componentInstance>
+                <componentInstanceProperties>
+                    <name>forgotPasswordLabel</name>
+                    <value>Forgot your password?</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>forgotPasswordUrl</name>
+                    <value>/ForgotPassword</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>loginButtonLabel</name>
+                    <value>SUBMIT</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>passwordLabel</name>
+                    <value>Password</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>selfRegisterLabel</name>
+                    <value>Not a member?</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>selfRegisterUrl</name>
+                    <value>/SelfRegister</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>startUrl</name>
+                    <value>/s/me-dashboard</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>usernameLabel</name>
+                    <value>VIP Access ID</value>
+                </componentInstanceProperties>
+                <componentName>vipAccess</componentName>
+                <identifier>vipAccess</identifier>
+            </componentInstance>
+        </itemInstances>
+        <name>content</name>
+        <prependable>enabled</prependable>
+        <replaceable>enabled</replaceable>
+        <type>Region</type>
+    </flexiPageRegions>
+    <flexiPageRegions>
+        <appendable>enabled</appendable>
+        <name>footer</name>
+        <prependable>enabled</prependable>
+        <replaceable>enabled</replaceable>
+        <type>Region</type>
+    </flexiPageRegions>
+    <flexiPageRegions>
+        <appendable>enabled</appendable>
+        <itemInstances>
+            <componentInstance>
+                <componentInstanceProperties>
+                    <name>customHeadTags</name>
+                    <value>&lt;meta name=&quot;robots&quot; content=&quot;index, follow&quot;&gt;
+&lt;link rel=&quot;canonical&quot; href=&quot;https://mindcrowd.org/s/vipaccess&quot; /&gt;
+&lt;meta property=&quot;og:locale&quot; content=&quot;en_US&quot; /&gt;
+&lt;meta property=&quot;og:type&quot; content=&quot;website&quot; /&gt;	
+&lt;meta property=&quot;og:title&quot; content=&quot;MindCrowd VIP Access&quot; /&gt;
+&lt;meta property=&quot;og:description&quot; content=&quot;Play additional brain games for a more complete picture of how your brain performs compared with others like you&quot; /&gt;
+&lt;meta property=&quot;og:url&quot; content=&quot;https://mindcrowd2--devphase2.sandbox.my.site.com/MindCrowd/s/vipaccess&quot;/&gt;
+&lt;meta property=&quot;article:publisher&quot; content=&quot;https://www.facebook.com/Mindcrowd/&quot; /&gt;
+&lt;meta property=&quot;article:published_time&quot; content=&quot;2022-06-04T08:30:36+00:00&quot; /&gt;
+&lt;meta property=&quot;article:modified_time&quot; content=&quot;2022-06-04T08:30:36+00:00&quot; /&gt;
+&lt;meta property=&quot;og:image&quot; content=&quot;https://mindcrowd2--devphase2.sandbox.my.site.com/MindCrowd/resource/FeaturedImages/mindcrowd-vip-brain-games-online.jpg&quot;/&gt;
+&lt;meta property=&quot;og:site_name&quot; content=&quot;MindCrowd&quot; /&gt;
+&lt;meta property=&quot;og:image:width&quot; content=&quot;810&quot; /&gt;
+&lt;meta property=&quot;og:image:height&quot; content=&quot;456&quot; /&gt;
+&lt;meta property=&quot;og:image:type&quot; content=&quot;image/jpeg&quot; /&gt;
+&lt;meta property=&quot;twitter:card&quot; content=&quot;summary_large_image&quot;/&gt; 
+&lt;meta property=&quot;twitter:url&quot; content=&quot;https://mindcrowd.org/s/vipaccess&quot;/&gt;
+&lt;meta property=&quot;twitter:title&quot; content=&quot;MindCrowd VIP Access&quot;/&gt;
+&lt;meta property=&quot;twitter:description&quot; content=&quot;Play additional brain games for a more complete picture of how your brain performs compared with others like you&quot;/&gt;
+&lt;meta property=&quot;twitter:image&quot; content=&quot;https://mindcrowd2--devphase2.sandbox.my.site.com/MindCrowd/resource/FeaturedImages/mindcrowd-vip-brain-games-online.jpg&quot;/&gt;
+&lt;meta name=&quot;twitter:creator&quot; content=&quot;@tgenmindcrowd&quot; /&gt;
+&lt;meta name=&quot;twitter:site&quot; content=&quot;@tgenmindcrowd&quot; /&gt;</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>description</name>
+                    <value>MindCrowd’s VIP Access to more games and your personal memory and cognitive skills dashboard.</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>title</name>
+                    <value>MindCrowd VIP Access</value>
+                </componentInstanceProperties>
+                <componentName>forceCommunity:seoAssistant</componentName>
+                <identifier>forceCommunity_seoAssistant</identifier>
+            </componentInstance>
+        </itemInstances>
+        <name>sfdcHiddenRegion</name>
+        <prependable>enabled</prependable>
+        <replaceable>enabled</replaceable>
+        <type>Region</type>
+    </flexiPageRegions>
+    <masterLabel>vipaccess</masterLabel>
+    <template>
+        <name>siteforce:sldsOneColLayout</name>
+    </template>
+    <type>CommAppPage</type>
+</FlexiPage>

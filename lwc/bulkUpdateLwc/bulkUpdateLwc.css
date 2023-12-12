@@ -1,0 +1,119 @@
+.mainCrowd-inner-box {
+    background-color: #f7f7ff;
+    border: 1px #6a6797 solid;
+    border-radius: 7px;
+    padding: 70px 80px;
+    position: relative;
+    margin: 30px 10%;
+    font-size: 16px;
+    font-family: 'Whitneybook', Helvetica, Arial, sans-serif;
+    font-weight: 400;
+    line-height: 29.7px;
+    color: #000;
+    background-color: #fff;
+    hyphens: none;
+    word-break: break-word;
+}
+p {
+    margin: 0.85em 0;
+}
+.inner-title {
+    color: #163248;
+    font-family: 'Varela Round', Helvetica, Arial, sans-serif;
+    font-weight: normal;
+    /* text-transform: uppercase; */
+    font-size: 33px;
+    line-height: 38.5px;
+    text-align: center;
+    margin-bottom: 30px;
+    /* margin: 0; */
+}
+
+.pink-btn-box .slds-button {
+    padding: 15px 30px 13px;
+    font-size: 18px;
+    min-width: 139px;
+    background-color: #ea526e;
+    border-color: #ea526e;
+    color: #ffffff;
+    text-transform: uppercase;
+    /* font-family: Whitney; */
+    font-family: 'Whitneybook', Helvetica, Arial, sans-serif;
+    font-weight: 400;
+    line-height: 1.2em;
+    position: relative;
+    text-align: center;
+    max-width: 100%;
+    font-style: normal;
+    border-radius: 7px;
+    cursor: pointer;
+}
+.content {
+    padding: 0;
+    font-size: 20px;
+    text-align: center;
+    display: inline-block;
+    width: 100%;
+
+}
+.j-center{justify-content: center;}
+.button-box{
+    margin-top: 6px;
+    margin-left: 10px;
+    margin-bottom: 30px;
+}
+
+.number-list {
+    list-style: decimal;
+    padding-left: 15px;
+}
+.number-list li {
+    padding-bottom: 10px;
+}
+.mt-30{margin-top: 30px;}
+
+
+.upload-btn-icon  {
+    width: 16px !important;
+    height: 16px !important;
+    fill: #ffffff !important;
+    margin-right: 0.5rem;
+}
+.slds-file-selector__dropzone{
+
+    border: 0;
+}
+.fileupload{
+    margin-top: 4px;
+    margin-left: 10px;
+    margin-bottom: 30px;
+
+}
+.close-btn {
+    background: #6a6797;
+    border-radius: 50%;
+    border: 3px #59567e solid;
+    padding: 5px 5px 4px;
+    height: 32px;
+    width: 32px;
+    position: absolute;
+    top: -16px;
+    right: -16px;
+}
+.slds-button_brand{
+    cursor: pointer;
+}
+.text-underlin{
+    text-decoration: underline;
+}
+/* .fileupload{
+    z-index: 1;
+    top: -38px;
+}
+.fileupload-btn {
+    z-index: 0;
+    color: transparent;
+}
+.fileupload-btn .slds-button{
+    opacity: 0;
+} */

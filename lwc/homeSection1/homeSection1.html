@@ -1,0 +1,34 @@
+<template>
+
+    <lightning-layout class="home_section1">
+      <div class="slds-m-around_medium languageBanner " if:true={bannerShow}>
+       
+        <div class="languageBanner-content">
+          Estamos trabajando diligentemente para brindarles la nueva versión de MindCrowd en español. Agradecemos mucho su paciencia.
+          <lightning-button-icon icon-name="utility:close" alternative-text="Close this window"   variant="bare-inverse" onclick={closeModal} class="slds-modal__close  bannerClose-btn">  
+          </lightning-button-icon>
+        </div>
+        
+</div>
+
+
+        <lightning-layout-item size="12" small-device-size="12" medium-device-size="12" large-device-size="12">
+            <!-- <div class="h-top-text">{label.homesection1001}</div> -->
+            <!-- <h1 class="h-top-heading">{label.homesection1002}</h1> -->
+            <!-- <div class="h-top-text3">{label.homesection1003}</div> -->
+            <!-- <div class="text-center marginT2p"><a href={Community_Url_consent}  class="pink-btn slds-button text-center" title="Click to Take the MindCrowd Memory Test">{label.homesection1004}</a></div> -->
+            <div class="text-center" style=" width: 100%;"><a href={Community_language_Url}  class="pink-btn slds-button text-center" title="Click to Take the MindCrowd Memory Test">{label.nav_text_11}</a></div>
+            <!-- <div class="text-center privacy-link">{label.homesection1005} <a href="https://blog.mindcrowd.org/privacy-policy/">{label.homesection1006}</a></div> -->
+        </lightning-layout-item>
+        <lightning-layout-item size="12" small-device-size="12" medium-device-size="12" large-device-size="12">
+
+            <div class="home_promo_sponsors text-center ">
+              <p><img class="d-img" src={image11} alt="MindCrowd Contributors" title="MindCrowd Contributors" width="750" height="150">
+                <img class="m-img" src={image12} alt="MindCrowd Contributors" title="MindCrowd Contributors" width="500" height="500">
+              </p>
+             
+            </div>
+          </lightning-layout-item>
+    </lightning-layout>
+    
+</template>

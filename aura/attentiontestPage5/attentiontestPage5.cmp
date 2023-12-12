@@ -1,0 +1,34 @@
+<!--
+  @description       : This 
+  @author            : Sunil
+  @UI author         : Raj
+  @last modified on  : 18-12-2021
+  @last modified by  : ChangeMeIn@UserSettingsUnder.SFDoc
+  Modifications Log 
+  Ver   Date         Author         Modification
+  1.0   18-12-2021   Raj      Initial Version
+-->
+
+<aura:component controller="GamesController" implements="forceCommunity:availableForAllPageTypes,lightning:isUrlAddressable,lightning:hasPageReference" access="global">
+    <aura:attribute name="ParticipantGameResponse" type="Object"/>
+    <aura:attribute name="myAttribute" type="String" access="global"/>
+    <aura:attribute name="participantGameid" type="String" access="global"/>
+    <aura:attribute name="ipAddress" type="String" access="global"/>
+    <aura:attribute name="browser" type="String" access="global"/>
+    <!--aura:handler name="init" value="{!this}" action="{!c.startgame1}"/-->   
+    <ltng:require scripts="" afterScriptsLoaded="{!c.myAction}"  />
+    <div class="main-content-outer marginB30 test opacity" id="mainContent">
+        <div class="main-content-inner marginB90" id="mainContent">
+            <div class="game_panel instructionsLeft">
+                <div class="game_block" id="game_block">      
+                <div class="datablock" id="datablock"></div>   
+                <div class="duration">
+                    <div class="d_title" id="d_title"></div>
+                    <div class="d_txt" id="d_txt"></div>
+                    <div class="d_status" id="d_status"></div>
+                </div>
+            </div>
+            </div>     
+        </div>
+    </div>
+</aura:component>

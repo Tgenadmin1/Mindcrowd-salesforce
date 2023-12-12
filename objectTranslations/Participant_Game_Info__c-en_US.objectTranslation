@@ -1,0 +1,537 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Participant Game Info</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Participant Game Infos</value>
+    </caseValues>
+    <fields>
+        <label><!-- Any loud noices recorded? --></label>
+        <name>Aging_Well_Any_loud_noices_recorded__c</name>
+    </fields>
+    <fields>
+        <label><!-- Anyone elses voice recorded? --></label>
+        <name>Aging_Well_Anyone_elses_voice_recorded__c</name>
+    </fields>
+    <fields>
+        <label><!-- Used languages other than English? --></label>
+        <name>Aging_Well_Used_languages_other_than_Eng__c</name>
+    </fields>
+    <fields>
+        <label><!-- Would you like to delete recording --></label>
+        <name>Aging_Well_Would_you_like_to_delete_reco__c</name>
+    </fields>
+    <fields>
+        <label><!-- Browser User Agent --></label>
+        <name>Browser_User_Agent__c</name>
+    </fields>
+    <fields>
+        <label><!-- City --></label>
+        <name>City__c</name>
+    </fields>
+    <fields>
+        <label><!-- Contact Name --></label>
+        <name>Contact_Name__c</name>
+        <relationshipLabel><!-- Participant Game Infos --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Count Of No Of Correct Answered --></label>
+        <name>Count_Of_No_Of_Correct_Answered__c</name>
+    </fields>
+    <fields>
+        <label><!-- Count Of No of Question Attempted --></label>
+        <name>Count_Of_No_of_Question_Attempted__c</name>
+    </fields>
+    <fields>
+        <label><!-- Count Of Number of attempts for STACKS --></label>
+        <name>Count_Of_Number_of_attempts_for_STACKS__c</name>
+    </fields>
+    <fields>
+        <label><!-- Count Of Total Reaction Time --></label>
+        <name>Count_Of_Total_Reaction_Time__c</name>
+    </fields>
+    <fields>
+        <label><!-- Count Of Total correct for Round 0 --></label>
+        <name>Count_Of_Total_correct_for_Round_0__c</name>
+    </fields>
+    <fields>
+        <label><!-- Count Of Total correct for Round 10 --></label>
+        <name>Count_Of_Total_correct_for_Round_10__c</name>
+    </fields>
+    <fields>
+        <label><!-- Count Of Total correct for Round 11 --></label>
+        <name>Count_Of_Total_correct_for_Round_11__c</name>
+    </fields>
+    <fields>
+        <label><!-- Count Of Total correct for Round 1 --></label>
+        <name>Count_Of_Total_correct_for_Round_1__c</name>
+    </fields>
+    <fields>
+        <label><!-- Count Of Total correct for Round 2 --></label>
+        <name>Count_Of_Total_correct_for_Round_2__c</name>
+    </fields>
+    <fields>
+        <label><!-- Count Of Total correct for Round 3 --></label>
+        <name>Count_Of_Total_correct_for_Round_3__c</name>
+    </fields>
+    <fields>
+        <label><!-- Count Of_Total correct for Round 4 --></label>
+        <name>Count_Of_Total_correct_for_Round_4__c</name>
+    </fields>
+    <fields>
+        <label><!-- Count Of Total correct for Round 5 --></label>
+        <name>Count_Of_Total_correct_for_Round_5__c</name>
+    </fields>
+    <fields>
+        <label><!-- Count Of Total correct for Round 6 --></label>
+        <name>Count_Of_Total_correct_for_Round_6__c</name>
+    </fields>
+    <fields>
+        <label><!-- Count Of Total correct for Round 7 --></label>
+        <name>Count_Of_Total_correct_for_Round_7__c</name>
+    </fields>
+    <fields>
+        <label><!-- Count Of Total correct for Round 8 --></label>
+        <name>Count_Of_Total_correct_for_Round_8__c</name>
+    </fields>
+    <fields>
+        <label><!-- Count Of Total correct for Round 9 --></label>
+        <name>Count_Of_Total_correct_for_Round_9__c</name>
+    </fields>
+    <fields>
+        <label><!-- Country --></label>
+        <name>Country__c</name>
+    </fields>
+    <fields>
+        <label><!-- Device Screen Size --></label>
+        <name>Device_Screen_Size__c</name>
+    </fields>
+    <fields>
+        <label><!-- End Date Time --></label>
+        <name>End_Date_Time__c</name>
+    </fields>
+    <fields>
+        <label><!-- Any loud noices recorded? --></label>
+        <name>Episodic_memory_Any_loud_noices_recorded__c</name>
+    </fields>
+    <fields>
+        <label><!-- Anyone elses voice recorded? --></label>
+        <name>Episodic_memory_Anyone_elses_voices__c</name>
+    </fields>
+    <fields>
+        <label><!-- Used languages other than English? --></label>
+        <name>Episodic_memory_Used_languges_other_than__c</name>
+    </fields>
+    <fields>
+        <label><!-- Would you like to delete recording --></label>
+        <name>Episodic_memory_Would_you_like_to_delete__c</name>
+    </fields>
+    <fields>
+        <label><!-- Fake News Area Type Lives --></label>
+        <name>Fake_News_Area_Type_Lives__c</name>
+        <picklistValues>
+            <masterLabel>I prefer not to answer</masterLabel>
+            <translation><!-- I prefer not to answer --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Rural</masterLabel>
+            <translation><!-- Rural --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Suburban</masterLabel>
+            <translation><!-- Suburban --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Urban</masterLabel>
+            <translation><!-- Urban --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Fake News Ball Cost in Cents --></label>
+        <name>Fake_News_Ball_Cost_in_Cents__c</name>
+    </fields>
+    <fields>
+        <label><!-- Fake News Days to Cover Half Lake --></label>
+        <name>Fake_News_Days_to_Cover_Half_Lake__c</name>
+    </fields>
+    <fields>
+        <label><!-- Fake News Political Orientation --></label>
+        <name>Fake_News_Political_Orientation__c</name>
+        <picklistValues>
+            <masterLabel>Conservative</masterLabel>
+            <translation><!-- Conservative --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Extremely Conservative</masterLabel>
+            <translation><!-- Extremely Conservative --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Extremely Liberal</masterLabel>
+            <translation><!-- Extremely Liberal --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Liberal</masterLabel>
+            <translation><!-- Liberal --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Moderate</masterLabel>
+            <translation><!-- Moderate --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Moderate Conservative</masterLabel>
+            <translation><!-- Moderate Conservative --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Moderate Liberal</masterLabel>
+            <translation><!-- Moderate Liberal --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Fake News Social Media Engagement --></label>
+        <name>Fake_News_Social_Media_Engagement__c</name>
+        <picklistValues>
+            <masterLabel>Always</masterLabel>
+            <translation><!-- Always --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Never</masterLabel>
+            <translation><!-- Never --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Rarely</masterLabel>
+            <translation><!-- Rarely --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sometimes</masterLabel>
+            <translation><!-- Sometimes --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Very often</masterLabel>
+            <translation><!-- Very often --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Fake News Spending Hours for News/Week --></label>
+        <name>Fake_News_Spending_Hours_for_News_Week__c</name>
+    </fields>
+    <fields>
+        <label><!-- Fake News Supporting Political Allaince --></label>
+        <name>Fake_News_Supporting_Political_Allaince__c</name>
+        <picklistValues>
+            <masterLabel>Democratic party</masterLabel>
+            <translation><!-- Democratic party --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>I prefer not to answer</masterLabel>
+            <translation><!-- I prefer not to answer --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other</masterLabel>
+            <translation><!-- Other --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Republican party</masterLabel>
+            <translation><!-- Republican party --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Fake News Time to Make 100 Widgets --></label>
+        <name>Fake_News_Time_to_Make_100_Widgets__c</name>
+    </fields>
+    <fields>
+        <label><!-- Fake News Trust in Federal Government --></label>
+        <name>Fake_News_Trust_in_Federal_Government__c</name>
+        <picklistValues>
+            <masterLabel>Agree</masterLabel>
+            <translation><!-- Agree --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Disagree</masterLabel>
+            <translation><!-- Disagree --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Neutral</masterLabel>
+            <translation><!-- Neutral --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Strongly Agree</masterLabel>
+            <translation><!-- Strongly Agree --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Strongly Disagree</masterLabel>
+            <translation><!-- Strongly Disagree --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Game Attempt --></label>
+        <name>Game_Attempt__c</name>
+    </fields>
+    <fields>
+        <label><!-- Game Name --></label>
+        <name>Game_Name__c</name>
+        <relationshipLabel><!-- Participant Game Infos --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Game Play Status --></label>
+        <name>Game_Play_Status__c</name>
+        <picklistValues>
+            <masterLabel>Completed</masterLabel>
+            <translation><!-- Completed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Not-Completed</masterLabel>
+            <translation><!-- Not-Completed --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Game Version --></label>
+        <name>Game_Version__c</name>
+    </fields>
+    <fields>
+        <label><!-- Geolocation --></label>
+        <name>Geolocation__c</name>
+    </fields>
+    <fields>
+        <label><!-- IP Address --></label>
+        <name>IP_Address__c</name>
+    </fields>
+    <fields>
+        <label><!-- IP Data --></label>
+        <name>IP_Data__c</name>
+    </fields>
+    <fields>
+        <label><!-- Language --></label>
+        <name>Language__c</name>
+    </fields>
+    <fields>
+        <label><!-- Last Step --></label>
+        <name>Last_Step__c</name>
+    </fields>
+    <fields>
+        <label><!-- Latitude --></label>
+        <name>Latitude__c</name>
+    </fields>
+    <fields>
+        <label><!-- Longitude --></label>
+        <name>Longitude__c</name>
+    </fields>
+    <fields>
+        <label><!-- Mic Id --></label>
+        <name>Mic_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- Mic Label --></label>
+        <name>Mic_Label__c</name>
+    </fields>
+    <fields>
+        <label><!-- No. Of Correct Answered --></label>
+        <name>No_Of_Correct_Answered__c</name>
+    </fields>
+    <fields>
+        <label><!-- No. of Question Attempted --></label>
+        <name>No_of_Question_Attempted__c</name>
+    </fields>
+    <fields>
+        <label><!-- Number of attempts for STACKS --></label>
+        <name>Number_of_attempts_for_STACKS__c</name>
+    </fields>
+    <fields>
+        <label><!-- ReactionTime --></label>
+        <name>ReactionTime__c</name>
+    </fields>
+    <fields>
+        <label><!-- Region --></label>
+        <name>Region__c</name>
+    </fields>
+    <fields>
+        <label><!-- Speech Task 1 Recording --></label>
+        <name>Speech_Task_1_Recording__c</name>
+    </fields>
+    <fields>
+        <label><!-- Speech Task 2 Recording --></label>
+        <name>Speech_Task_2_Recording__c</name>
+    </fields>
+    <fields>
+        <label><!-- Speech Task Comments --></label>
+        <name>Speech_Task_Comments__c</name>
+    </fields>
+    <fields>
+        <label><!-- Start Date Time --></label>
+        <name>Start_Date_Time__c</name>
+    </fields>
+    <fields>
+        <label><!-- State --></label>
+        <name>State__c</name>
+    </fields>
+    <fields>
+        <label><!-- Sync With MC --></label>
+        <name>Sync_With_MC__c</name>
+    </fields>
+    <fields>
+        <label><!-- Test Session --></label>
+        <name>Test_Session__c</name>
+    </fields>
+    <fields>
+        <label><!-- Time Zone Offset --></label>
+        <name>Time_Zone_Offset__c</name>
+    </fields>
+    <fields>
+        <label><!-- Total KeyStrokes In Round 0 --></label>
+        <name>Total_KeyStrokes_In_Round_0__c</name>
+    </fields>
+    <fields>
+        <label><!-- Total KeyStrokes In Round 1 --></label>
+        <name>Total_KeyStrokes_In_Round_1__c</name>
+    </fields>
+    <fields>
+        <label><!-- Total KeyStrokes In Round 2 --></label>
+        <name>Total_KeyStrokes_In_Round_2__c</name>
+    </fields>
+    <fields>
+        <label><!-- Total KeyStrokes In Round 3 --></label>
+        <name>Total_KeyStrokes_In_Round_3__c</name>
+    </fields>
+    <fields>
+        <label><!-- Total Reaction Time --></label>
+        <name>Total_Reaction_Time__c</name>
+    </fields>
+    <fields>
+        <label><!-- Total Time for Round 0 --></label>
+        <name>Total_Time_for_Round_0__c</name>
+    </fields>
+    <fields>
+        <label><!-- Total Time for Round 1 --></label>
+        <name>Total_Time_for_Round_1__c</name>
+    </fields>
+    <fields>
+        <label><!-- Total Time for Round 2 --></label>
+        <name>Total_Time_for_Round_2__c</name>
+    </fields>
+    <fields>
+        <label><!-- Total Time for Round 3 --></label>
+        <name>Total_Time_for_Round_3__c</name>
+    </fields>
+    <fields>
+        <label><!-- Total Time for Round 4 --></label>
+        <name>Total_Time_for_Round_4__c</name>
+    </fields>
+    <fields>
+        <label><!-- Total Time for Round 5 --></label>
+        <name>Total_Time_for_Round_5__c</name>
+    </fields>
+    <fields>
+        <label><!-- Total Time for Round 7 --></label>
+        <name>Total_Time_for_Round_7__c</name>
+    </fields>
+    <fields>
+        <label><!-- Total Time for STACKS --></label>
+        <name>Total_Time_for_STACKS__c</name>
+    </fields>
+    <fields>
+        <label><!-- Total correct for Round 0 --></label>
+        <name>Total_correct_for_Round_0__c</name>
+    </fields>
+    <fields>
+        <label><!-- Total correct for Round 10 --></label>
+        <name>Total_correct_for_Round_10__c</name>
+    </fields>
+    <fields>
+        <label><!-- Total correct for Round 11 --></label>
+        <name>Total_correct_for_Round_11__c</name>
+    </fields>
+    <fields>
+        <label><!-- Total correct for Round 1 --></label>
+        <name>Total_correct_for_Round_1__c</name>
+    </fields>
+    <fields>
+        <label><!-- Total correct for Round 2 --></label>
+        <name>Total_correct_for_Round_2__c</name>
+    </fields>
+    <fields>
+        <label><!-- Total correct for Round 3 --></label>
+        <name>Total_correct_for_Round_3__c</name>
+    </fields>
+    <fields>
+        <label><!-- Total correct for Round 4 --></label>
+        <name>Total_correct_for_Round_4__c</name>
+    </fields>
+    <fields>
+        <label><!-- Total correct for Round 5 --></label>
+        <name>Total_correct_for_Round_5__c</name>
+    </fields>
+    <fields>
+        <label><!-- Total correct for Round 6 --></label>
+        <name>Total_correct_for_Round_6__c</name>
+    </fields>
+    <fields>
+        <label><!-- Total correct for Round 7 --></label>
+        <name>Total_correct_for_Round_7__c</name>
+    </fields>
+    <fields>
+        <label><!-- Total correct for Round 8 --></label>
+        <name>Total_correct_for_Round_8__c</name>
+    </fields>
+    <fields>
+        <label><!-- Total correct for Round 9 --></label>
+        <name>Total_correct_for_Round_9__c</name>
+    </fields>
+    <fields>
+        <label><!-- User Agent --></label>
+        <name>User_Agent__c</name>
+    </fields>
+    <fields>
+        <label><!-- User Device --></label>
+        <name>User_Device__c</name>
+    </fields>
+    <fields>
+        <label><!-- User Id --></label>
+        <name>User_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- Version --></label>
+        <name>Version__c</name>
+    </fields>
+    <fields>
+        <label><!-- Zip Code --></label>
+        <name>Zip_Code__c</name>
+    </fields>
+    <fields>
+        <label><!-- isActive --></label>
+        <name>isActive__c</name>
+    </fields>
+    <fields>
+        <label><!-- participantFeatureImageURL --></label>
+        <name>participantFeatureImageURL__c</name>
+    </fields>
+    <layouts>
+        <layout>Participant Game Info Layout</layout>
+        <sections>
+            <label><!-- Count Fields --></label>
+            <section>Count Fields</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Fake News --></label>
+            <section>Fake News</section>
+        </sections>
+        <sections>
+            <label><!-- Round Details --></label>
+            <section>Round Details</section>
+        </sections>
+        <sections>
+            <label><!-- Speech Task Aging Well --></label>
+            <section>Speech Task Aging Well</section>
+        </sections>
+        <sections>
+            <label><!-- Speech Task Episodic Memory --></label>
+            <section>Speech Task Episodic Memory</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Game Result Stat</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Game Result Stats</value>
+    </caseValues>
+    <fields>
+        <label><!-- DeviceType --></label>
+        <name>DeviceType__c</name>
+    </fields>
+    <fields>
+        <label><!-- GameName --></label>
+        <name>GameName__c</name>
+    </fields>
+    <fields>
+        <label><!-- OverallAverageCorrectAnswers --></label>
+        <name>OverallAverageCorrectAnswers__c</name>
+    </fields>
+    <fields>
+        <label><!-- OverallAverageReactionTime --></label>
+        <name>OverallAverageReactionTime__c</name>
+    </fields>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>
