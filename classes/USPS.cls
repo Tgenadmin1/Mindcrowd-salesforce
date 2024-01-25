@@ -19,13 +19,14 @@ public with sharing class USPS
         }
     }
     public static String userid=integrationsettings.UserId__c;
+    public static String password=integrationsettings.Password__c;
     public static String uspsurl=integrationsettings.USPS_URL__c;
     private static string BuildAddressQueryURLString(USPSAddress AddressToQuery,String USPS_UID) 
     {   
         //String BaseURL = 'https://secure.shippingapis.com/ShippingAPI.dll?API=Verify&XML=';
         String BaseURL = uspsurl+'?API=Verify&XML=';
         
-        String ReturnValue = '<AddressValidateRequest USERID="' + userid + '"><Address ID="0">';
+        String ReturnValue = '<AddressValidateRequest USERID="' + userid +'" PASSWORD="' + password + '"><Address ID="0">';
         ReturnValue += '<Address1>' + AddressToQuery.Address1 + '</Address1>';
         ReturnValue += '<Address2>' + AddressToQuery.Address2 + '</Address2>';
         ReturnValue += '<City>' + AddressToQuery.City + '</City>';

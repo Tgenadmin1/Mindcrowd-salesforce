@@ -20,6 +20,7 @@ public without sharing class TrackShipment
             }
     }
      public static String userid=integrationsettings.UserId__c;
+     public static String password=integrationsettings.Password__c;
      public static String uspsurl=integrationsettings.USPS_URL__c;  
      public static String clientip=integrationsettings.Client_Ip__c;
      public static String sourceid=integrationsettings.Source_Id__c;
@@ -30,7 +31,7 @@ public without sharing class TrackShipment
         //String BaseURL = 'https://secure.shippingapis.com/ShippingAPI.dll?API=TrackV2&XML=';
         String BaseURL = uspsurl+'?API=TrackV2&XML=';
     
-        String ReturnValue = '<TrackFieldRequest USERID="'+userid+'">';     
+        String ReturnValue = '<TrackFieldRequest USERID="'+userid+'" PASSWORD="' + password + '">';     
         ReturnValue+= '<Revision>1</Revision>';
       //  ReturnValue+='<ClientIp>122.3.3</ClientIp>';
       ReturnValue+='<ClientIp>'+clientip+'</ClientIp>';
