@@ -338,6 +338,24 @@
     <enableHistory>true</enableHistory>
     <externalSharingModel>ControlledByParent</externalSharingModel>
     <fields>
+        <fullName>Enrolled_in_Paid_Campaign__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Enrolled in Paid Campaign</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Tremendous_Award_Sent__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Tremendous Award Sent</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
         <fullName>ADL__c</fullName>
         <externalId>false</externalId>
         <label>ADL</label>
@@ -780,7 +798,6 @@
         <fullName>Education_Attainment__c</fullName>
         <externalId>false</externalId>
         <formula>IF( OR(ISPICKVAL( Highest_level_of_education_completed__c , &apos;Up to 8 Years&apos;), ISPICKVAL( Highest_level_of_education_completed__c , &apos;Completed 8th Grade (Elementary or Primary School Graduate)&apos;), ISPICKVAL( Highest_level_of_education_completed__c , &apos;Some High School&apos;) ) , 1,
-
  IF(ISPICKVAL( Highest_level_of_education_completed__c , &apos;High School Diploma (Baccalaureate)&apos;), 2,  IF(ISPICKVAL( Highest_level_of_education_completed__c , &apos;Some College (Some University)&apos;), 3,  IF(ISPICKVAL( Highest_level_of_education_completed__c , &apos;College Degree (University Graduate)&apos;), 4,  IF(ISPICKVAL( Highest_level_of_education_completed__c , &apos;Post Graduate Degree (Masters or Doctorate)&apos;), 5, 0) ) ) ) 
  )</formula>
         <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
