@@ -19,8 +19,11 @@ public with sharing class ShipmentLabel
     }
     //public  static String userid=integrationsettings.UserId__c;
     //System.debug('---user id--'+integrationsettings.UserId__c);
-    
-    public  static String userid=ShipmentLabel.integrationsettings.UserId__c;
+    public static string ZipCode5 ;
+    public static string ZipCode4 ;
+    public static string ZipCode ;
+    public static String userid=ShipmentLabel.integrationsettings.UserId__c;
+    public static String password=ShipmentLabel.integrationsettings.Password__c;
     public static String LabelServiceApi=ShipmentLabel.integrationsettings.Label_Service_Api__c;
     public static String UspsUrl=ShipmentLabel.integrationsettings.eVSLabelUrl__c;
     public static String MindcrowdName= ShipmentLabel.integrationsettings.MindCrowdName__c;
@@ -35,9 +38,7 @@ public with sharing class ShipmentLabel
     //method to build a request URL FOR EVS Label api which accepts id,contact Address and the campaign type  
     public static String buildShipmentLabelURLString(String Ids,Address addr,Research_Campaign__c campaign,String contactName) 
     {  
-        string ZipCode5 ;
-        string ZipCode4 ;
-        string ZipCode ;
+        
         if(addr.Postalcode!=null){
            ZipCode = addr.Postalcode;
             if(ZipCode.contains('-')){
@@ -54,6 +55,7 @@ public with sharing class ShipmentLabel
         //below variables are stored in custom settings.
         
         System.debug('---user id--'+integrationsettings.UserId__c);
+        System.debug('---user id--'+integrationsettings.Password__c);
         system.debug('---ZipCode5--'+ZipCode5);
         //---------------------------------
         // String userid=integrationsettings.UserId__c;
@@ -73,7 +75,7 @@ public with sharing class ShipmentLabel
         System.debug('uspsurl '+UspsUrl);
         
         String BaseURL =UspsUrl + '?API='+LabelServiceApi+'&XML=';
-        ReturnValue = '<'+LabelServiceApi+'Request USERID="'+userid+'">';
+        ReturnValue = '<' + LabelServiceApi + 'Request USERID="' + userid + '" PASSWORD="' + password + '">';
         // ReturnValue+= '<ImageParameters><ImageParameter>4X6LABELP</ImageParameter></ImageParameters>';
         ReturnValue+= '<ImageParameters><ImageParameter>'+MindCrowdImageParam+'</ImageParameter></ImageParameters>';
         ReturnValue+='<FromName>'+MindcrowdName+'</FromName>';
@@ -123,7 +125,7 @@ public with sharing class ShipmentLabel
         
         String ReturnValue='';
         String BaseURL =UspsUrl + '?API='+LabelServiceApi+'&XML=';
-        ReturnValue = '<'+LabelServiceApi+'Request USERID="'+userid+'">';
+        ReturnValue = '<'+LabelServiceApi+'Request USERID="'+userid+'" PASSWORD="' + password + '">';
         // ReturnValue+= '<ImageParameters><ImageParameter>4X6LABELP</ImageParameter></ImageParameters>';
         ReturnValue+= '<ImageParameters><ImageParameter>'+MindCrowdImageParam+'</ImageParameter></ImageParameters>';
         ReturnValue+='<FromName>'+contactName+'</FromName>';
