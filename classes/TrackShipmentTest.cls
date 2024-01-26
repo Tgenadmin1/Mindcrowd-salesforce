@@ -16,6 +16,7 @@ static testMethod void trackShipment_Test()
     Integration_Settings__c ints1 = new Integration_Settings__c();
     ints1.Name='test';
     ints1.UserId__c='548GIRIK0509';
+    ints1.Password__c = '752HH00UA860';
     ints1.USPS_URL__c='https://secure.shippingapis.com/ShippingAPI.dll';
     insert ints1;
     TrackShipment.integrationsettings=ints1;
