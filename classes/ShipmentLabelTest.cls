@@ -12,6 +12,7 @@ public with sharing class ShipmentLabelTest
         Integration_Settings__c ints1 = new Integration_Settings__c();
         ints1.Name='test';
         ints1.UserId__c='548GIRIK0509';
+        ints1.Password__c = '752HH00UA860';
         ints1.Label_Service_Api__c='eVSCertify';
         ints1.eVSLabelUrl__c='https://stg-secure.shippingapis.com/ShippingAPI.dll';
         ints1.MindCrowdName__c='TGen headquarters';
