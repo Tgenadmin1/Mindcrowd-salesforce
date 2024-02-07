@@ -1,6 +1,104 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomLabels xmlns="http://soap.sforce.com/2006/04/metadata">
     <labels>
+        <fullName>CamelandCactus_game_text_2</fullName>
+        <categories>CamelandCactusGame</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CamelandCactus game text 2</shortDescription>
+        <value>Just click or tap on the picture that goes best with the one at the top.</value>
+    </labels>
+    <labels>
+        <fullName>CamelandCactus_game_text_cactus</fullName>
+        <categories>CamelandCactusGame</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CamelandCactus game text cactus</shortDescription>
+        <value>The desert scene is the correct answer since cactus are usually found in the desert</value>
+    </labels>
+    <labels>
+        <fullName>CamelandCactus_game_text_nails</fullName>
+        <categories>CamelandCactusGame</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CamelandCactus game text nails</shortDescription>
+        <value>The hammer is the correct answer since a hammer is usually used to drive nails</value>
+    </labels>
+    <labels>
+        <fullName>CamelandCactus_game_text_wine</fullName>
+        <categories>CamelandCactusGame</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CamelandCactus game text wine</shortDescription>
+        <value>The grapes are the correct answer since they are commonly used to make wine</value>
+    </labels>
+    <labels>
+        <fullName>Digits_game_text_14</fullName>
+        <categories>Digits game</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Digits game text 14</shortDescription>
+        <value>Digits</value>
+    </labels>
+    <labels>
+        <fullName>camelandcactus_game_config_url</fullName>
+        <categories>Game Config Url</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>camelandcactus game config url</shortDescription>
+        <value>/resource/CamelandCactus_Config/CamelandCactus_EN.json</value>
+    </labels>
+    <labels>
+        <fullName>camelandcactus_game_text_14</fullName>
+        <categories>CamelandCactus Game</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>camelandcactus game text 14</shortDescription>
+        <value>Camel &amp; Cactus</value>
+    </labels>
+    <labels>
+        <fullName>digitSymbol_game_config_url</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>digitSymbol game config url</shortDescription>
+        <value>/resource/digitSymbol_Config/digitSymbol_Config_EN.json</value>
+    </labels>
+    <labels>
+        <fullName>game_name_17</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>game name 17</shortDescription>
+        <value>Digits</value>
+    </labels>
+    <labels>
+        <fullName>scientific_game_CamelandCactus</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>scientific game CamelandCactus</shortDescription>
+        <value>Camel &amp; Cactus</value>
+    </labels>
+    <labels>
+        <fullName>scientific_game_digitsymbolmatchingtest</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>scientific game digitsymbolmatchingtest</shortDescription>
+        <value>Digits</value>
+    </labels>
+    <labels>
+        <fullName>url_me_CamelandCactus</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>url_me_ CamelandCactus</shortDescription>
+        <value>me-CamelandCactus</value>
+    </labels>
+    <labels>
+        <fullName>url_me_digitSymbol</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>url me digitSymbol</shortDescription>
+        <value>me-digitsymbol</value>
+    </labels>
+    <labels>
         <fullName>APOE_intermediate_form</fullName>
         <language>en_US</language>
         <protected>false</protected>
