@@ -338,6 +338,66 @@
     <enableHistory>true</enableHistory>
     <externalSharingModel>ControlledByParent</externalSharingModel>
     <fields>
+        <fullName>Camel_and_Cactus__c</fullName>
+        <externalId>false</externalId>
+        <label>Camel and Cactus</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Opened</fullName>
+                    <default>true</default>
+                    <label>Unlocked</label>
+                </value>
+                <value>
+                    <fullName>Locked</fullName>
+                    <default>false</default>
+                    <label>Locked</label>
+                </value>
+                <value>
+                    <fullName>Completed</fullName>
+                    <default>false</default>
+                    <label>Completed</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Digit_Symbol_Matching_Test__c</fullName>
+        <externalId>false</externalId>
+        <label>Digit Symbol Matching Test</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Opened</fullName>
+                    <default>true</default>
+                    <label>Unlocked</label>
+                </value>
+                <value>
+                    <fullName>Locked</fullName>
+                    <default>false</default>
+                    <label>Locked</label>
+                </value>
+                <value>
+                    <fullName>Completed</fullName>
+                    <default>false</default>
+                    <label>Completed</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
         <fullName>Enrolled_in_Paid_Campaign__c</fullName>
         <defaultValue>false</defaultValue>
         <externalId>false</externalId>
