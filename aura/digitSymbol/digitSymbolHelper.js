@@ -1,8 +1,8 @@
 ({
-    recorData: function (component, event, helper, userContactId, gameId, questionNumber, userInputData, isCorrect, reactionTime, isPracticeQuestion, correctAnswer, participantGameInfoId, totalTrialTime, orderOffUserInput, timeTest, round, imageNames) {
+    recorData: function (component, event, helper, userContactId, gameId, questionNumber, userInputData, isCorrect, reactionTime, isPracticeQuestion, correctAnswer, participantGameInfoId, totalTrialTime, orderOffUserInput, timeTest, round, firstThreeKeys) {
        // let timeForEachBoxs = JSON.stringify(timeForCategories);
         let answerOrder = JSON.stringify(orderOffUserInput);
-        //let firstResponse = JSON.stringify(firstThreeKeys);
+        let firstResponse = JSON.stringify(firstThreeKeys);
         //console.log('vaues for bossss:',totalTrialTime, orderOffUserInput, timeForCategories,round);
         let data = {
             Contact_Name__c: userContactId,
@@ -18,9 +18,9 @@
             Total_Time_for_All_Boxes__c: totalTrialTime,
             Order_of_Answers__c: answerOrder,
             Round__c: round,
-            ImageName__c: imageNames
+            Participant_First_Response__c: firstResponse
         };
-        //console.log('data is : ',data);
+        console.log('data is : ',data);
         var action = component.get("c.saveGameResponse");
         action.setParams({ "sobj": JSON.stringify(data) });
         //console.log('question: ' + questionNumber +' responce: '+ userInputData +' correct: '+ isCorrect +'time: '+reactionTime);
@@ -47,7 +47,7 @@
 
     //this function get the game id from the server.
     gameDetails: function (component, event, helper, gameNameScientific) {
-        //console.log('gameNameScientific : ',gameNameScientific);
+        console.log('gameNameScientific : ',gameNameScientific);
         var ConList = component.get("c.getGameId");
         ConList.setParams({ "gameName": gameNameScientific });
         ConList.setCallback(this, function (a) {
@@ -56,7 +56,7 @@
                 var name = a.getReturnValue();
                 //console.log('gameDetails is : ',name);
                 component.set("v.myAttribute", name);
-                //console.log('game name:', component.get("v.myAttribute"));  
+                console.log('game name:', component.get("v.myAttribute"));  
             }
             else if (state === "ERROR") {
                 let message = '';

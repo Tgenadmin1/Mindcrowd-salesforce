@@ -104,25 +104,6 @@
     display: inline-block;
     margin-left: 15px;
 }
-.THIS.pink-button {
-    background-color: pink;
-    /* Add other button styling as needed */
-}
-
 .THIS .errorblock{
     display: none;
-}
-
-.THIS .fakenewsimage {
-    height: 100%; 
-    padding-bottom: 35px;
-    margin-bottom: 35px;
-    }
-
-@media (max-width: 912px) {
-    .THIS .fakenewsimage {
-        height: 100%; 
-        padding-bottom: 20px;
-        margin-bottom: 10px;
-        }
 }
