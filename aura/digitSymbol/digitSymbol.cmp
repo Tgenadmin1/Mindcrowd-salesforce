@@ -1,0 +1,104 @@
+<!--
+  @description       : 
+  @author            : Santhosh 
+  @UI author         : Santhosh
+  @last modified on  : 
+  @last modified by  : 
+  Modifications Log 
+  Ver   Date         Author         Modification
+  1.0   12-30-2020   Santhosh     Initial Version
+-->
+<aura:component controller="GamesController" implements="forceCommunity:availableForAllPageTypes,lightning:isUrlAddressable,lightning:hasPageReference" access="global">
+    
+    <aura:attribute name="ParticipantGameResponse" type="Object"/>
+    <aura:attribute name="myAttribute" type="String" access="global"/>
+    <aura:attribute name="mycontactId" type="String" access="global"/>
+    <aura:attribute name="participantGameid" type="String" access="global"/>
+    <aura:attribute name="ipAddress" type="String" access="global"/>
+    <aura:attribute name="browser" type="String" access="global"/>
+    <aura:attribute name="showConfirmDialog" type="boolean" default="false"/>
+
+    <!--aura:handler name="init" value="{!this}" action="{!c.startgame1}"/-->   
+    <ltng:require scripts="" afterScriptsLoaded="{!c.myAction}"  />
+    <div class="main-content-outer slds-size_12-of-12 slds-small-size_12-of-12 slds-medium-size_12-of-12 slds-large-size_12-of-12 test">
+        <div class="main-content-inner">
+            <div class="logo-game">
+                <img src="{!$Resource.mindcrowd_style + '/images/MindCrowd-Logo-Color-White-Text.png'}"/>
+              </div>
+            <div class="game-title">{!$Label.c.game_name_17}</div>
+            <div class="game_panel" id="gameMainContent">
+                <div class="game_block" id="game_block">  
+                    <div class="errorblock" id="errorblock">
+                        <p class="centers">{!$Label.c.keep_track_game_text_28}</p>
+                        <p class="centers mb10">{!$Label.c.keep_track_game_text_29}</p>
+                    </div>  
+                    <div class="errorblock" id="errorblock2">
+                        <p class="centers">{!$Label.c.keep_track_game_text_correct}</p>
+                        
+                    </div>  
+                <div class="datablock" id="datablock_keepTrackGame"></div> 
+                <div id="imgContainer" style="height: 1px; width: 1px; position: absolute; top:-10px; left:-10px; overflow: hidden;">
+                    <img src="../resource/mindGamesImages/objects/blobs1_2.png?v=4" alt="alternative-text"></img>
+                  </div>
+                 
+                <p id="nextBtton" class="centers magenta-btn  btn-xlarge marginT20 slds-hide">
+                    <button class="slds-button"  onclick="{!c.goToMyResultsPage }">{!$Label.c.mst_text_My_results}</button>
+                    <button class="slds-button"  onclick="{!c.goToNextPage }">{!$Label.c.mst_text_My_Games}</button>
+                </p>    
+                <div class="duration">
+                    <div class="d_title" id="d_title"></div>
+                    <div class="d_txt" id="d_txt"></div>
+                    <div class="d_status" id="d_status"></div>
+                </div>
+                <!-- +'<h1 class="title">Welcome to the experiment!</h1>'
+                +'<p class="centers mb10">To get familiar with the words that will be used in this task, words from six categories will be displayed in the center of the computer screen, one at a time.</p>'
+                +'<p class="centers mb10">The six categories will be displayed at the bottom of the screen.</p>'
+                +'<p class="centers mb10">Please read the word out loud and then click on the category word belongs to.</p>'
+                +'<p class="centers">Press the <span class="n-g-box">Spacebar</span> to continue.</p>' -->
+                <!-- <lightning:buttonGroup>
+                    <lightning:button label="Refresh" />
+                    <lightning:button label="Edit" />
+                    <lightning:button label="Save" />
+                    <lightning:button label="Save" />
+                    <lightning:button label="Save" />
+                    <lightning:button label="Save" />
+                    <lightning:button label="Save" />
+                    <lightning:button label="Save" />
+                    <lightning:button label="Save" />
+                    <lightning:button label="Save" />
+                </lightning:buttonGroup> -->
+            </div>
+            </div>     
+        </div>
+    </div>
+    <aura:if isTrue="{!v.showConfirmDialog}">
+            <!--Modal Box Start-->
+            <div role="dialog" class="slds-modal slds-fade-in-open ">
+                <div class="slds-modal__container">
+                    <!--Modal Box Header Start-->
+                    <header class="slds-modal__header">
+                       
+                        <lightning:buttonIcon iconName="utility:close"
+                        onclick="{! c.closeModel }"
+                        alternativeText="{!$Label.c.close_btn}"
+                        variant="bare-inverse"
+                        class="slds-modal__close"/>
+
+                    </header>
+                    <!--Modal Box Header End-->
+                     
+                    <!--Modal Box Content Start-->
+                    <div class="slds-modal__content slds-p-around--medium">
+                        <center><p>{!$Label.c.mst_text_not_authorized}</p></center>
+                    </div>
+                    <!--Modal Box Content End-->
+                    <!--Modal Box Button Start-->
+                    <footer class="slds-modal__footer">
+                    </footer>
+                    <!--Modal Box Button End-->
+                </div>
+            </div>
+            <div class="slds-backdrop slds-backdrop--open"></div>            
+        </aura:if>
+
+</aura:component>
