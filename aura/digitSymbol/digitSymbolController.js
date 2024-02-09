@@ -2,6 +2,10 @@
     myAction: function (component, event, helper) {
 
         var timeS = new Date().getTime();
+        const thresholdTime = 91000;   
+        let elapsedTime;
+        let intervalId; 
+        let startTime;    
                 const url = new URL(window.location.href);
                // const resourceRelPath = $A.get("$Label.c.keep_track_game_config_url")+'?test='+timeS;
                 const resourceUrl = $A.get("$Label.c.Community_Url")+  $A.get("$Label.c.digitSymbol_game_config_url")+'?test='+timeS;
@@ -193,15 +197,38 @@
 
                     function changeScreen() {
                         console.log('currentScreent',currentScreent);
+                        if (configdata[currentScreent].screen == "8") {
+                            startTime = performance.now();
+                            console.log('startTime: ' + startTime);
+                            intervalId = setInterval(() => {
+                                const currentTime = performance.now();                                
+                                if(currentScreent % 2 == 1){
+                                    startTime = startTime+1000;
+                                }                                
+                                elapsedTime = currentTime - startTime;                                                        
+                                console.log('elapsedTime: ' + elapsedTime);
+                                if (elapsedTime >= thresholdTime) {
+                                    currentScreent = configdata.length - 1;
+                                    console.log('time done: ' + currentScreent);
+                                    console.log('content: ' + configdata[currentScreent].content);
+                                    clearInterval(intervalId);
+                                    changeScreen();
+                                }
+                                // Check if questionNumber is 94 or elapsedTime is greater than thresholdTime
+                                if (elapsedTime >= thresholdTime) {
+                                    document.getElementById("nextBtton").classList.remove("slds-hide");
+                                }
+                            }, 1000);
+                        }
                         gameId = component.get("v.myAttribute");
                         userContactId = component.get("v.mycontactId");
                         ipAddress = component.get("v.ipAddress");
                         browserName = component.get("v.browser");
                         participantGameInfoId = component.get("v.participantGameid");//participantGameInfoId holds the participantgameinfo record id.
                         //console.log('gameId :',gameId,'userContactId:',userContactId, 'participantGameInfoId :',participantGameInfoId);
-                       // console.log('change screen',configdata[currentScreent].screen);
+                       //  console.log('change screen',configdata[currentScreent].screen);
 
-                        timedata = new Date();
+                        timedata = new Date(); 
                         pageLoadStartTime = timedata;
                         document.getElementById("datablock_keepTrackGame").innerHTML = configdata[currentScreent].content;
                         //adding event listeners fields in trial pages. 
@@ -1429,7 +1456,9 @@
                         
                         helper.recorData(component, event, helper, userContactId, gameId, questionNumber, userInput, isCorrect, reactionTime, isPracticeQuestion, correctAnswer, participantGameInfoId, totalTrialTime, orderOffUserInput, timeTest, round, firstResponse);
                         //questionNumber
+                        console.log(currentScreent + '' + configdata.length-1)
                         if (questionNumber == 94) {
+                            clearInterval(intervalId);
                             document.getElementById("nextBtton").classList.remove("slds-hide");
                         }
                         console.log("Input Results", gameName, questionNumber, userInput, isCorrect, reactionTime, isPracticeQuestion,correctAnswer,correctAnswer,participantGameInfoId, totalTrialTime, orderOffUserInput, timeForCategories, round, firstThreeKeys);
