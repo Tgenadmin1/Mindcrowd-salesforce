@@ -1189,22 +1189,23 @@
                         const altText = e.currentTarget.querySelector("img").getAttribute('alt');
                         console.log('altText: '+ altText);
 
-                        if ((configdata[currentScreent - 1].hasOwnProperty("answer")) || e.target.value == configdata[currentScreent - 1].answer.fld1) {
+                        if (configdata[currentScreent - 1].hasOwnProperty("answer")) {
                       /*  if (
                                 (configdata[currentScreent - 1].hasOwnProperty("answer") &&
                                   e.target.value == configdata[currentScreent - 1].answer.fld1) ||
                                 (configdata[currentScreent - 1].hasOwnProperty("answer") &&
                                   configdata[currentScreent - 1].hasOwnProperty("isPractice") &&
                                   configdata[currentScreent - 1].isPractice === false)
-                              ) {
-                                 let isCor = e.target.value === configdata[currentScreent - 1].answer.fld1 ? "true" : "false"; */
+                              ) { */
+
+                                 let isCor = altText == configdata[currentScreent - 1].answer.fld1 ? "true" : "false"; 
 
                             result_time = new Date() - timedata;
 
                             resultData[configdata[currentScreent - 1].screen] = {
                                 "duration": result_time,
-                                "status": { res_sts1: "true" },
-                                "data": { "fld1": e.target.value },
+                                "status": { res_sts1: isCor },
+                                "data": { "fld1": altText },
                                 "question": configdata[currentScreent - 1].question,
                                 "isPractice": configdata[currentScreent - 1].isPractice,
                                 "correctAnswer": configdata[currentScreent - 1].answer,
