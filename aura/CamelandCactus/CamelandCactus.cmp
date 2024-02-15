@@ -1,14 +1,11 @@
-<aura:component controller="GamesController" implements="forceCommunity:availableForAllPageTypes,lightning:isUrlAddressable,lightning:hasPageReference" access="global">
-    
+<aura:component controller="GamesController" implements="forceCommunity:availableForAllPageTypes,lightning:isUrlAddressable,lightning:hasPageReference" access="global">    
     <aura:attribute name="ParticipantGameResponse" type="Object"/>
     <aura:attribute name="myAttribute" type="String" access="global"/>
     <aura:attribute name="mycontactId" type="String" access="global"/>
     <aura:attribute name="participantGameid" type="String" access="global"/>
     <aura:attribute name="ipAddress" type="String" access="global"/>
     <aura:attribute name="browser" type="String" access="global"/>
-    <aura:attribute name="showConfirmDialog" type="boolean" default="false"/>
-
-    <!--aura:handler name="init" value="{!this}" action="{!c.startgame1}"/-->   
+    <aura:attribute name="showConfirmDialog" type="boolean" default="false"/> 
     <ltng:require scripts="" afterScriptsLoaded="{!c.myAction}"  />
     <div class="main-content-outer slds-size_12-of-12 slds-small-size_12-of-12 slds-medium-size_12-of-12 slds-large-size_12-of-12 test">
         <div class="main-content-inner">
@@ -22,10 +19,6 @@
                         <p class="centers">{!$Label.c.keep_track_game_text_28}</p>
                         <p class="centers mb10">{!$Label.c.keep_track_game_text_29}</p>
                     </div>  
-                 <!--  <div class="errorblock" id="errorblock2">
-                        <p class="centers">{!$Label.c.keep_track_game_text_correct}</p>
-                        
-                    </div> --> 
                     <div class="errorblock" id="errorblock2">
                         <p class="centers">{!$Label.c.CamelandCactus_game_text_wine}</p>
                         
@@ -50,23 +43,6 @@
                     <div class="d_txt" id="d_txt"></div>
                     <div class="d_status" id="d_status"></div>
                 </div>
-                <!-- +'<h1 class="title">Welcome to the experiment!</h1>'
-                +'<p class="centers mb10">To get familiar with the words that will be used in this task, words from six categories will be displayed in the center of the computer screen, one at a time.</p>'
-                +'<p class="centers mb10">The six categories will be displayed at the bottom of the screen.</p>'
-                +'<p class="centers mb10">Please read the word out loud and then click on the category word belongs to.</p>'
-                +'<p class="centers">Press the <span class="n-g-box">Spacebar</span> to continue.</p>' -->
-                <!-- <lightning:buttonGroup>
-                    <lightning:button label="Refresh" />
-                    <lightning:button label="Edit" />
-                    <lightning:button label="Save" />
-                    <lightning:button label="Save" />
-                    <lightning:button label="Save" />
-                    <lightning:button label="Save" />
-                    <lightning:button label="Save" />
-                    <lightning:button label="Save" />
-                    <lightning:button label="Save" />
-                    <lightning:button label="Save" />
-                </lightning:buttonGroup> -->
             </div>
             </div>     
         </div>
