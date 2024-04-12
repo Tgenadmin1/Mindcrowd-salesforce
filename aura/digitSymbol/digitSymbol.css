@@ -32,11 +32,9 @@
     margin-top: 10px !important;
 }
 
-.THIS .fakenewsimage {
-    height: 100%;  
-}
+
 @media (min-width: 200px) and (max-width: 500px) {
-    .THIS .fakenewsimage {
-        height: 70px;
+    .THIS .mobile {
+        height: 80px;
     }
 }
