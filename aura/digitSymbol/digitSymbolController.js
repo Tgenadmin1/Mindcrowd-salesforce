@@ -1,10 +1,11 @@
 ({
     myAction: function (component, event, helper) {
         var timeS = new Date().getTime();
-        const thresholdTime = 91000;   
-        let elapsedTime;
+        const thresholdTime = 90000;   
+        let elapsedTime = 0;
         let intervalId; 
-        let startTime;   
+        let startTime;
+        const fixedAdjustment = 4000;   
         const resourceUrl = $A.get("$Label.c.Community_Url")+  $A.get("$Label.c.digitSymbol_game_config_url")+'?test='+timeS;
         window.fetch(resourceUrl)
             .then($A.getCallback((response) => {
@@ -17,8 +18,6 @@
         var myPageRef = window.location.href;
         var actionGame = component.get("c.getCurrentContact");
         var pageUrl = myPageRef.split('/s/');
-
-        //-----Gettung gameId from the apex function------------------
         var gameNameScientific = $A.get("$Label.c.scientific_game_digitsymbolmatchingtest");
         helper.gameDetails(component, event, helper, gameNameScientific);
         var gameId;
@@ -63,12 +62,6 @@
                     let result_time = 0;
                     let command_value = 0;
                     let lastdatatitle = "";
-                    var gameName = $A.get("$Label.c.Digits_game_text_14");
-                    var gameTime = '5 minutes';
-                    var totalTrialTime = 0;
-                    var orderOffUserInput = [];
-                    var timeForCategories = {}; 
-                    var timeTest;
                     let macTouch = getCookie('macTouch');
                     var ua = window.navigator.userAgent;
                     var iOS = !!ua.match(/Mac OS/i);
@@ -88,20 +81,6 @@
                             device = 'TABLET';
                         }
                     }
-                    var keep_track_game_text_2 = "";
-                    var keep_track_game_text_19 = "";
-                    if (isKeyboad) {
-                        keep_track_game_text_2 = $A.get("$Label.c.keep_track_game_text_2");
-                        keep_track_game_text_19 = $A.get("$Label.c.keep_track_game_text_19");
-                    } else {
-                        keep_track_game_text_2 = $A.get("$Label.c.keep_track_game_text_2_tap");
-                        keep_track_game_text_19 = $A.get("$Label.c.keep_track_game_text_19_tap");
-                    }
-                        configdata =configdata.map(obj => {	
-                        obj.content = obj.content.replace('keep_track_game_text_2', keep_track_game_text_2);
-                        obj.content = obj.content.replace('keep_track_game_text_19', keep_track_game_text_19);
-                        return obj;
-                  });
                     
                     function getCookie (name) {
                         var cookieString = "; " + document.cookie;
@@ -112,6 +91,13 @@
                         }
                         return null;
                     }
+
+                    for(let i=0; i<configdata.length; i++){
+                        if (configdata[i].hasOwnProperty('content')){
+                            document.getElementById("divcontainer").innerHTML = configdata[i].content;     
+                        }                        
+                    }
+                    document.getElementById("divcontainer").innerHTML = '';
 
                     let bgimages = [];
                     var imgContainer = document.getElementById('imgContainer');
@@ -124,61 +110,36 @@
                         }
                     }
 
-                    preloadImage([
-                        "PDSKey.png",
-                        "PDS1.png",
-                        "PDS2.png",
-                        "PDS3.png",
-                        "DSKey.png",
-                        "DS1.png",
-                        "DS2.png",
-                        "DS3.png",
-                        "DS4.png",
-                        "DS5.png",
-                        "DS6.png",
-                        "DS7.png",
-                        "DS8.png",
-                        "DS9.png",
-                    ]
-                    )
+                    preloadImage(["PDSKey.png","PDS1.png","PDS2.png","PDS3.png","DSKey.png","DS1.png","DS2.png","DS3.png",
+                    "DS4.png","DS5.png","DS6.png","DS7.png","DS8.png","DS9.png","Page1.png","Page2.png","ESPage1.png","ESPage2.png","DSKeyES.png"]);
+
                     function changeScreen() {
-                        console.log('currentScreent',currentScreent);
-                        if (configdata[currentScreent].screen == "8") {
-                            startTime = performance.now();
+                        if (configdata[currentScreent].screen === "8") {
                             console.log('startTime: ' + startTime);
+                            startTime = performance.now(); 
                             intervalId = setInterval(() => {
-                                const currentTime = performance.now();                                
-                                if(currentScreent % 2 == 1){
-                                    startTime = startTime+1000;
-                                }                                
-                                elapsedTime = currentTime - startTime;                                                        
-                                console.log('elapsedTime: ' + elapsedTime);
-                                if (elapsedTime >= thresholdTime) {
-                                    currentScreent = configdata.length - 1;
-                                    console.log('time done: ' + currentScreent);
-                                    console.log('content: ' + configdata[currentScreent].content);
-                                    clearInterval(intervalId);
-                                    changeScreen();
-                                }
-                                if (elapsedTime >= thresholdTime) {
-                                    document.getElementById("nextBtton").classList.remove("slds-hide");
-                                }
+                              const currentTime = performance.now();
+                              elapsedTime = currentTime - startTime;
+                              console.log('elapsedTime: ' + elapsedTime);
+                              const adjustedThreshold = thresholdTime - fixedAdjustment + Math.floor (currentScreent / 2) * 1000;                          
+                              if (elapsedTime >= adjustedThreshold) {
+                                currentScreent = configdata.length - 1;
+                                console.log('time done: ' + currentScreent);
+                                clearInterval(intervalId);
+                                changeScreen();
+                              }
+                              if (elapsedTime >= adjustedThreshold) {
+                                document.getElementById("nextBtton").classList.remove("slds-hide");
+                            }
                             }, 1000);
                         }
                         gameId = component.get("v.myAttribute");
                         userContactId = component.get("v.mycontactId");
                         ipAddress = component.get("v.ipAddress");
                         browserName = component.get("v.browser");
-                        participantGameInfoId = component.get("v.participantGameid");//participantGameInfoId holds the participantgameinfo record id.
+                        participantGameInfoId = component.get("v.participantGameid");
                         timedata = new Date();
-                        document.getElementById("datablock_keepTrackGame").innerHTML = configdata[currentScreent].content;
-                        if(!isKeyboad){
-                            let userenterbtn= document.getElementById("enterBtn");
-                           if(typeof(userenterbtn) != 'undefined' && userenterbtn != null){
-                                userenterbtn.classList.remove("slds-hide");
-                                userenterbtn.addEventListener('click',gamePlayEnter,false);                               
-                           }
-                        }
+                        document.getElementById("datablock_digitGame").innerHTML = configdata[currentScreent].content;
                         if (!isKeyboad) {
                             document.getElementById("gameMainContent").removeEventListener('click', gotoNextScreen, false);
                             if (configdata[currentScreent].hasOwnProperty('isTouch')) {
@@ -204,8 +165,6 @@
                             var screenResolution = {"height" :screenHeight, "width" :screenWidth };
                             helper.participantGameInfo(component, event, helper, userContactId,language, gameId, startDateTime, gamePlayStatus,ipAddress,browserName,device,screenResolution);                            
                         }
-                        else {
-                        }
                         if ((configdata.length - 1) == currentScreent) {
                             endGame(gameId, participantGameInfoId);
                             clearTimeout(intervalTime);
@@ -229,7 +188,10 @@
                                   configdata[currentScreent - 1].hasOwnProperty("isPractice") &&
                                   configdata[currentScreent - 1].isPractice === false)
                               ) {
-                                let isCor = e.target.value === configdata[currentScreent - 1].answer.fld1 ? "true" : "false";                            
+                                let isCor = e.target.value === configdata[currentScreent - 1].answer.fld1 ? "true" : "false";
+                                if(!configdata[currentScreent - 1].isPractice){
+                                    round = 1;
+                                }                            
                                 result_time = new Date() - timedata;
                             resultData[configdata[currentScreent - 1].screen] = {
                                 "duration": result_time,
@@ -237,8 +199,7 @@
                                 "data": { "fld1": e.target.value },
                                 "question": configdata[currentScreent - 1].question,
                                 "isPractice": configdata[currentScreent - 1].isPractice,
-                                "correctAnswer": configdata[currentScreent - 1].answer,
-                                "firstResponse": configdata[currentScreent- 1].firstResponse
+                                "correctAnswer": configdata[currentScreent - 1].answer
                             };
                             lastdatatitle = "Result";
                             let currentgamedata = resultData[configdata[currentScreent - 1].screen];
@@ -250,28 +211,25 @@
                                     currentgamedata.status["res_sts" + (kk + 1)],
                                     currentgamedata.duration,
                                     currentgamedata.isPractice,
-                                    currentgamedata.correctAnswer["fld" + (kk + 1)]
+                                    currentgamedata.correctAnswer["fld" + (kk + 1)],
+                                    round
                                 );
                             });
                             document.getElementById("d_title").innerHTML = "Result";
                             document.getElementById("d_txt").innerHTML = result_time + " ms";
                             document.getElementById("d_status").innerHTML = resultData[configdata[currentScreent - 1].screen]["status"];
                             setTimeout(clearResult, 1500);
-                            totalTrialTime = 0;
-                            orderOffUserInput = [];
-                            timeForCategories = {};
                             if(configdata[currentScreent - 1].isPractice){                               
                                 resetError2(0);
                                 setTimeout(() => { 
                                     resetError2();
-                                    changeScreen(); 
-                                   
+                                    changeScreen();
                             }, 1000);
-
                             }else{
                                 changeScreen();
                             }
-                        } else {
+                        } else if(configdata[currentScreent - 1].hasOwnProperty("isPractice") &&
+                                  configdata[currentScreent - 1].isPractice){
                             resetError(0);
                             setTimeout(resetError, 15000000);
                         }
@@ -286,11 +244,7 @@
                         document.getElementById("gameMainContent").style = "pointer-events:none";
                     }
                     changeScreen();
-                    function gamePlayEnter(){ 
-                        gamePlay({keyCode:13});    
-                   }
-                    function gamePlay(e) {
-                        console.log('ifnodelete1');
+                    function gamePlay(e) {                        
                         command_value = e.keyCode;
                         let startDurations = configdata[currentScreent - 1].startDuration;
                         if (startDurations == -1) {
@@ -298,28 +252,7 @@
                                 clearTimeout(intervalTime);
                                 changeScreen();
                             }
-                        } else if (startDurations == 0) {
-                        }    
-                        else if (startDurations > 0) {
-                            let isResult = configdata[currentScreent - 1].hasOwnProperty("result") ? true : false;
-                            result_time = new Date() - timedata;
-                            if (result_time < startDurations) return false;
-                            if (isResult) {
-                                if (!resultData.hasOwnProperty(configdata[currentScreent - 1].screen)) {                                  
-                                    resultData[configdata[currentScreent - 1].screen] = {
-                                        "duration": "0",
-                                        "status": { res_sts1: "false" },
-                                        "data": "",
-                                        "question": configdata[currentScreent - 1].question,
-                                        "isPractice": configdata[currentScreent - 1].isPractice,
-                                        "correctAnswer": configdata[currentScreent - 1].answer,
-                                        "totalTimeForUserResponce": totalTrialTime,
-                                        "orderOffUserInput": orderOffUserInput,
-                                        "timeForCategories": timeForCategories  
-                                    };
-                                }
-                            }
-                        }
+                        } 
                     }
 
                     function clearResult() {
@@ -331,8 +264,8 @@
                     function gotoNextScreen(e) {
                         gamePlay({ keyCode: 32 });
                     }
-                    function saveData(gameName, questionNumber, userInput, isCorrect, reactionTime, isPracticeQuestion, correctAnswer,firstResponse) {                     
-                        helper.recorData(component, event, helper, userContactId, gameId, questionNumber, userInput, isCorrect, reactionTime, isPracticeQuestion, correctAnswer, participantGameInfoId, totalTrialTime, orderOffUserInput, timeTest, round, firstResponse);
+                    function saveData(gameName, questionNumber, userInput, isCorrect, reactionTime, isPracticeQuestion, correctAnswer,round) {                     
+                        helper.recorData(component, event, helper, userContactId, gameId, questionNumber, userInput, isCorrect, reactionTime, isPracticeQuestion, correctAnswer, participantGameInfoId, round);
                         if (questionNumber == 94) {
                             clearInterval(intervalId);
                             document.getElementById("nextBtton").classList.remove("slds-hide");
@@ -342,7 +275,7 @@
                         var endDateTime = new Date();
                         var gamePlayStatus = "Completed";
                         var screenResolution = {"height" :screenHeight, "width" :screenWidth };
-                        helper.participantGameInfoUpdate(component, event, helper, userContactId,language, gameId, endDateTime, gamePlayStatus, participantGameInfoId,screenResolution);//helper method calling here.
+                        helper.participantGameInfoUpdate(component, event, helper, userContactId,language, gameId, endDateTime, gamePlayStatus, participantGameInfoId,screenResolution);
                     }
                 }
                 $A.get('e.refreshView').fire();
@@ -365,17 +298,14 @@
     .catch($A.getCallback((error) => {
         console.error('Fetch Error :-S', error);
     }));
-
     },
     goToNextPage: function (component, event, helper) {
         const urlParams = new URLSearchParams(document.location.search.substring(1));
-        const product = urlParams.get('c__id');
         helper.allowLeaving();
         window.location.href = $A.get("$Label.c.Community_Url") + "/s/" + $A.get("$Label.c.url_dashboard");
     },
     goToMyResultsPage: function (component, event, helper) {
         const urlParams = new URLSearchParams(document.location.search.substring(1));
-        const product = urlParams.get('c__id');
         helper.allowLeaving();
         window.location.href = $A.get("$Label.c.Community_Url") + "/s/" + $A.get("$Label.c.url_myresults");
     },
