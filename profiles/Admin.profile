@@ -721,6 +721,66 @@
     </classAccesses>
     <custom>false</custom>
     <fieldPermissions>
+        <editable>false</editable>
+        <field>Contact.GLUCOSAMINE__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Contact.Glucosamine_Survey__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Glucosamine__c.Contact__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Glucosamine__c.Current_Duration_Taking_Glucosamine__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Glucosamine__c.Current_Frequency_of_Glucosamine_Intake__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Glucosamine__c.Dosage_Glucosamine__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Glucosamine__c.Duration_Took_Glucosamine__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Glucosamine__c.Email__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Glucosamine__c.Ever_Taken_Glucosamine__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Glucosamine__c.Past_Frequency_of_Glucosamine_Intake__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Glucosamine__c.Primary_Reason_for_Taking_Glucosamine__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Glucosamine__c.Time_Since_Stopped_Taking_Glucosamine__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
         <editable>true</editable>
         <field>AB_Testing__c.A_B_Variant__c</field>
         <readable>true</readable>
@@ -7807,6 +7867,9 @@
         <flow>Womens_Health_Survey</flow>
     </flowAccesses>
     <layoutAssignments>
+        <layout>Glucosamine__c-Glucosamine Layout</layout>
+    </layoutAssignments>
+    <layoutAssignments>
         <layout>AB_Testing__c-AB Testing Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
@@ -8139,6 +8202,15 @@
     <layoutAssignments>
         <layout>Zipcodes__mdt-Zipcode Exclusion Layout</layout>
     </layoutAssignments>
+    <objectPermissions>
+        <allowCreate>true</allowCreate>
+        <allowDelete>true</allowDelete>
+        <allowEdit>true</allowEdit>
+        <allowRead>true</allowRead>
+        <modifyAllRecords>true</modifyAllRecords>
+        <object>Glucosamine__c</object>
+        <viewAllRecords>true</viewAllRecords>
+    </objectPermissions>
     <objectPermissions>
         <allowCreate>true</allowCreate>
         <allowDelete>true</allowDelete>
@@ -9206,6 +9278,10 @@
         <recordType>Idea.InternalIdeasIdeaRecordType</recordType>
         <visible>false</visible>
     </recordTypeVisibilities>
+    <tabVisibilities>
+        <tab>Glucosamine__c</tab>
+        <visibility>DefaultOn</visibility>
+    </tabVisibilities>
     <tabVisibilities>
         <tab>AB_Testing__c</tab>
         <visibility>DefaultOn</visibility>
