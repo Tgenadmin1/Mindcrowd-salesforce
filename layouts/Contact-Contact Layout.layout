@@ -5,9 +5,7 @@
     <excludeButtons>Clone</excludeButtons>
     <excludeButtons>ContactHierarchy</excludeButtons>
     <excludeButtons>CreateCallList</excludeButtons>
-    <excludeButtons>DataDotComClean</excludeButtons>
     <excludeButtons>RecordShareHierarchy</excludeButtons>
-    <excludeButtons>RequestUseSfdc</excludeButtons>
     <excludeButtons>Share</excludeButtons>
     <excludeButtons>StartOutboundConversation</excludeButtons>
     <excludeButtons>Submit</excludeButtons>
@@ -41,6 +39,14 @@
             <layoutItems>
                 <behavior>Edit</behavior>
                 <field>Campaign_Code__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Medium__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Source__c</field>
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
@@ -139,6 +145,14 @@
             <layoutItems>
                 <behavior>Readonly</behavior>
                 <field>Email_Trigger_45_days__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Enrolled_in_Paid_Campaign__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Tremendous_Award_Sent__c</field>
             </layoutItems>
         </layoutColumns>
         <style>TwoColumnsTopToBottom</style>
@@ -293,15 +307,19 @@
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
-                <field>Fake_News_Test__c</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
                 <field>Bean_Game__c</field>
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
-                <field>Camel_and_Cactus__c</field>
+                <field>Fake_News__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Digits__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Tell_Me_More__c</field>
             </layoutItems>
         </layoutColumns>
         <layoutColumns>
@@ -332,6 +350,14 @@
             <layoutItems>
                 <behavior>Edit</behavior>
                 <field>Digit_Symbol_Matching_Test__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>This_That__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Tell_Me__c</field>
             </layoutItems>
         </layoutColumns>
         <style>TwoColumnsLeftToRight</style>
@@ -412,6 +438,14 @@
                 <behavior>Edit</behavior>
                 <field>SOCIAL_SUPPORT__c</field>
             </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>HEAT__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>GLUCOSAMINE__c</field>
+            </layoutItems>
         </layoutColumns>
         <style>TwoColumnsLeftToRight</style>
     </layoutSections>
@@ -457,6 +491,10 @@
                 <behavior>Edit</behavior>
                 <field>Is_ADL_Submitted__c</field>
             </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Is_ECog12_Submitted__c</field>
+            </layoutItems>
         </layoutColumns>
         <layoutColumns>
             <layoutItems>
@@ -494,6 +532,10 @@
             <layoutItems>
                 <behavior>Edit</behavior>
                 <field>Is_Heat_Survey_Submitted__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Glucosamine_Survey__c</field>
             </layoutItems>
         </layoutColumns>
         <style>TwoColumnsLeftToRight</style>
@@ -684,6 +726,21 @@
     <relatedLists>
         <fields>NAME</fields>
         <relatedList>Cancer__c.Contact_Name__c</relatedList>
+    </relatedLists>
+    <relatedLists>
+        <fields>NAME</fields>
+        <fields>Studies__c.NAME</fields>
+        <fields>Studies__c.Participant_Id__c</fields>
+        <relatedList>Contact_Study_Junction__c.Contact__c</relatedList>
+    </relatedLists>
+    <relatedLists>
+        <fields>NAME</fields>
+        <relatedList>ECog_12__c.Contact__c</relatedList>
+    </relatedLists>
+    <relatedLists>
+        <fields>NAME</fields>
+        <fields>Email__c</fields>
+        <relatedList>Glucosamine__c.Contact__c</relatedList>
     </relatedLists>
     <relatedObjects>AccountId</relatedObjects>
     <showEmailCheckbox>false</showEmailCheckbox>
