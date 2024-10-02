@@ -2,6 +2,7 @@ import { LightningElement, api } from 'lwc';
 import { NavigationMixin } from 'lightning/navigation';
 import getCurrentContact from '@salesforce/apex/CustomLoginController.getCurrentContact';
 import community_url from '@salesforce/label/c.Community_Url';
+import beangameviewformurl from '@salesforce/label/c.beangameviewformurl';
 import hasDuplicateRecord from "@salesforce/apex/ContactController.hasDuplicateRecord";
 
 export default class BeanGameForm1 extends NavigationMixin(LightningElement) {
@@ -11,7 +12,7 @@ export default class BeanGameForm1 extends NavigationMixin(LightningElement) {
     @api Bean_Game_Form_Text_3;
     @api Bean_Game_Form_Text_4;
     @api Bean_Game_Form_Text_5;
-    @api Bean_Game_VIP_URL='vipadd-beangameparticipant-consent'; 
+    @api Bean_Game_VIP_URL='add-beangameparticipant-consent-vip'; 
     lstcon;
     formattedDate;
     selectform;
@@ -68,7 +69,7 @@ export default class BeanGameForm1 extends NavigationMixin(LightningElement) {
             {
               type: "standard__webPage",
               attributes: {
-                url: community_url+"/s/beangameviewform-vip"+"?participantcode="+this.lstcon.ParticipantCode__c+"&campaign=bean game"
+                url: community_url+"/s/"+beangameviewformurl+"?participantcode="+this.lstcon.ParticipantCode__c+"&campaign=bean game"
               }
             },
             true // Replaces the current page in your browser history with the URL

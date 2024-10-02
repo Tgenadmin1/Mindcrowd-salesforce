@@ -153,27 +153,6 @@
     <enableSharing>true</enableSharing>
     <enableStreamingApi>true</enableStreamingApi>
     <externalSharingModel>Private</externalSharingModel>
-    <label>Glucosamine</label>
-    <nameField>
-        <displayFormat>GSM-{0000000000}</displayFormat>
-        <label>Glucosamine Name</label>
-        <trackHistory>false</trackHistory>
-        <type>AutoNumber</type>
-    </nameField>
-    <pluralLabel>Glucosamines</pluralLabel>
-    <searchLayouts/>
-    <sharingModel>ReadWrite</sharingModel>
-    <visibility>Public</visibility>
-    <fields>
-        <fullName>Email__c</fullName>
-        <externalId>false</externalId>
-        <label>Email </label>
-        <required>false</required>
-        <trackHistory>false</trackHistory>
-        <trackTrending>false</trackTrending>
-        <type>Email</type>
-        <unique>false</unique>
-    </fields>
     <fields>
         <fullName>Contact__c</fullName>
         <deleteConstraint>SetNull</deleteConstraint>
@@ -188,9 +167,9 @@
         <type>Lookup</type>
     </fields>
     <fields>
-        <fullName>Dosage_Glucosamine__c</fullName>
+        <fullName>Current_Duration_Taking_Glucosamine__c</fullName>
         <externalId>false</externalId>
-        <label>GSM_v1.0.7</label>
+        <label>GSM_v1.0.6</label>
         <length>30</length>
         <required>false</required>
         <trackHistory>false</trackHistory>
@@ -199,10 +178,21 @@
         <unique>false</unique>
     </fields>
     <fields>
-        <fullName>Ever_Taken_Glucosamine__c</fullName>
+        <fullName>Current_Frequency_of_Glucosamine_Intake__c</fullName>
         <externalId>false</externalId>
-        <label>GSM_v1.0.1</label>
+        <label>GSM_v1.0.5</label>
         <length>18</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Dosage_Glucosamine__c</fullName>
+        <externalId>false</externalId>
+        <label>GSM_v1.0.7</label>
+        <length>30</length>
         <required>false</required>
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
@@ -221,10 +211,20 @@
         <unique>false</unique>
     </fields>
     <fields>
-        <fullName>Current_Duration_Taking_Glucosamine__c</fullName>
+        <fullName>Email__c</fullName>
         <externalId>false</externalId>
-        <label>GSM_v1.0.6</label>
-        <length>30</length>
+        <label>Email </label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Email</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Ever_Taken_Glucosamine__c</fullName>
+        <externalId>false</externalId>
+        <label>GSM_v1.0.1</label>
+        <length>18</length>
         <required>false</required>
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
@@ -263,24 +263,15 @@
         <type>Text</type>
         <unique>false</unique>
     </fields>
-    <fields>
-        <fullName>Current_Frequency_of_Glucosamine_Intake__c</fullName>
-        <externalId>false</externalId>
-        <label>GSM_v1.0.5</label>
-        <length>18</length>
-        <required>false</required>
+    <label>Glucosamine</label>
+    <nameField>
+        <displayFormat>GSM-{0000000000}</displayFormat>
+        <label>Glucosamine Name</label>
         <trackHistory>false</trackHistory>
-        <trackTrending>false</trackTrending>
-        <type>Text</type>
-        <unique>false</unique>
-    </fields>
-    <listViews>
-        <fullName>All</fullName>
-        <columns>NAME</columns>
-        <columns>Email__c</columns>
-        <columns>Contact__c</columns>
-        <columns>CREATED_DATE</columns>
-        <filterScope>Everything</filterScope>
-        <label>All</label>
-    </listViews>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Glucosamines</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>ReadWrite</sharingModel>
+    <visibility>Public</visibility>
 </CustomObject>

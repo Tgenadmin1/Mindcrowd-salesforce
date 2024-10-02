@@ -3,7 +3,7 @@ public without sharing class LongitudinalGraphController {
     public static ChartData getGraphdData ()
     {        
         try{
-            Id contactId = [SELECT ContactId From User where Id =: UserInfo.getUserId() AND ContactId != null].ContactId;             
+            Id contactId = [SELECT ContactId From User where Id =: UserInfo.getUserId() AND ContactId != null].ContactId;           
             List<Map<String, Object>> flankerdataList = new List<Map<String, Object>>();
             List<Map<String, Object>> keepTrackdataList = new List<Map<String, Object>>();
             List<Map<String, Object>> FaceNameList = new List<Map<String, Object>>();
@@ -17,6 +17,8 @@ public without sharing class LongitudinalGraphController {
             List<Map<String, Object>> fakenewsdataList = new List<Map<String, Object>>();
             List<Map<String, Object>> beangameleftdataList = new List<Map<String, Object>>();
             List<Map<String, Object>> beangamerightdataList = new List<Map<String, Object>>();
+            List<Map<String, Object>> digitSymboldataList = new List<Map<String, Object>>();
+            List<Map<String, Object>> thisandthatdatalist = new List<Map<String, Object>>();
             List<String> xAxisLabelsflanker = new List<String>(); 
             List<String> xAxisLabelskeepTrack = new List<String>(); 
             List<String> xAxisLabelsFaceName = new List<String>(); 
@@ -28,10 +30,13 @@ public without sharing class LongitudinalGraphController {
             List<String> xAxisLabelsswitching = new List<String>(); 
             List<String> xAxisLabelswordPairs = new List<String>(); 
             List<String> xAxisLabelsfakenews = new List<String>(); 
-            List<String> xAxisLabelsbeangame = new List<String>(); 
+            List<String> xAxisLabelsbeangame = new List<String>();
+            List<String> xAxisLabelsdigitSymbol = new List<String>();
+            List<String> xAxisLabelsthisandthat = new List<String>();
+
             Map<String, Object> scoreData = new Map<String, Object>();
             Integer flkAtt=1,keeptrackAtt=1,faceNameAtt=1,objectsAtt=1,objectSpaceAtt=1,objectTimeAtt=1,reactAtt=1,shapesAtt=1,
-                    switchingAtt=1,wordPairAtt=1,fakenewsAtt=1,beangameAtt=1;
+                    switchingAtt=1,wordPairAtt=1,fakenewsAtt=1,beangameAtt=1,digitSymbolAtt=1,thisandthatAtt=1;
             Decimal yourScore,correctAnswers,reactionTime;
        
             List<Participant_Game_Info__c> recordsPGI =  [SELECT Count_Of_No_Of_Correct_Answered__c, Count_Of_Total_Reaction_Time__c,
@@ -47,8 +52,35 @@ public without sharing class LongitudinalGraphController {
                                                   AND Count_Of_No_Of_Correct_Answered__c >0
                                                   AND Count_Of_No_of_Question_Attempted__c >0
                                                   AND Count_Of_Total_Reaction_Time__c >0
+                                                  AND Game_Play_Status__c = 'Completed'
+                                                  AND CreatedDate < YESTERDAY
                                                   ORDER BY CreatedDate ASC
                                                   ];
+            
+            List<Participant_Game_Info__c> recordsPGIToday =  [SELECT No_Of_Correct_Answered__c, Total_Reaction_Time__c,
+                                                  No_of_Question_Attempted__c,User_Device__c,Game_Name__r.Name,
+                                                  Game_Name__r.Max_Score__c, CreatedDate
+                                                  FROM Participant_Game_Info__c 
+                                                  //WHERE Contact_Name__c = '0038G00000YESnyQAH' 
+                                                  WHERE Contact_Name__c = : contactId  
+                                                  AND No_Of_Correct_Answered__c != null
+                                                  AND No_of_Question_Attempted__c != null
+                                                  AND Total_Reaction_Time__c != null
+                                                  AND No_Of_Correct_Answered__c >0
+                                                  AND No_of_Question_Attempted__c >0
+                                                  AND Total_Reaction_Time__c >0
+                                                  AND Game_Play_Status__c = 'Completed'
+                                                  AND CreatedDate >= YESTERDAY
+                                                  ORDER BY CreatedDate ASC
+                                                  ];
+
+            for(Participant_Game_Info__c recPG: recordsPGIToday){
+               recPG.Count_Of_No_of_Question_Attempted__c = recPG.No_of_Question_Attempted__c;
+               recPG.Count_Of_No_Of_Correct_Answered__c = recPG.No_Of_Correct_Answered__c;
+               recPG.Count_Of_Total_Reaction_Time__c = recPG.Total_Reaction_Time__c;
+               recordsPGI.add(recPG);    
+            }   
+            
             system.debug('recordsPGI: '+recordsPGI);
             if(recordsPGI.size()>0)
             {
@@ -79,15 +111,13 @@ public without sharing class LongitudinalGraphController {
                                 if(xAxisLabelsflanker.contains(recPG.CreatedDate.format('MMM-dd-yyyy')) ){
                                     flkAtt=flkAtt+1;
                                     xAxisLabelsflanker.add(recPG.CreatedDate.format('MMM-dd-yyyy')+'('+flkAtt+')');
-                                    dataItem.put('x', recPG.CreatedDate.format('MMM-dd-yyyy')+'('+flkAtt+')');
-                            		//dataItem.put('y', correctAnswers);
+                                    dataItem.put('x', recPG.CreatedDate.format('MMM-dd-yyyy')+'('+flkAtt+')');                            		
                             		dataItem.put('y', reactionTime);
                                 }
                                 else{
                                     flkAtt=1;
                                     xAxisLabelsflanker.add(recPG.CreatedDate.format('MMM-dd-yyyy'));
-                                    dataItem.put('x', recPG.CreatedDate.format('MMM-dd-yyyy'));
-                            		//dataItem.put('y', correctAnswers);
+                                    dataItem.put('x', recPG.CreatedDate.format('MMM-dd-yyyy'));                            		
                             		dataItem.put('y', reactionTime);
                                 }
                             }
@@ -324,7 +354,7 @@ public without sharing class LongitudinalGraphController {
                                 }                                       
                                 wordPairsdataList.add(dataItem);                         
                             } 
-                    		if(recPG.Game_Name__r.Name =='Fake News Test' )
+                    		if(recPG.Game_Name__r.Name =='Fake News' )
                             {
                                 Map<String, Object> dataItem = new Map<String, Object>{'x' => recPG.CreatedDate.format('MMM-dd-yyyy'),'y' => correctAnswers};              
                                 if(xAxisLabelsfakenews.size()>0){
@@ -347,14 +377,62 @@ public without sharing class LongitudinalGraphController {
                                 dataItem.put('y', correctAnswers);
                                 }                                       
                                 fakenewsdataList.add(dataItem);                         
+                            }
+
+                            if(recPG.Game_Name__r.Name =='Digits' )
+                            {
+                                Map<String, Object> dataItem = new Map<String, Object>{'x' => recPG.CreatedDate.format('MMM-dd-yyyy'),'y' => correctAnswers};              
+                                if(xAxisLabelsdigitSymbol.size()>0){
+                                    if(xAxisLabelsdigitSymbol.contains(recPG.CreatedDate.format('MMM-dd-yyyy')) ){
+                                        digitSymbolAtt=digitSymbolAtt+1;
+                                        xAxisLabelsdigitSymbol.add(recPG.CreatedDate.format('MMM-dd-yyyy')+'('+digitSymbolAtt+')');
+                                        dataItem.put('x', recPG.CreatedDate.format('MMM-dd-yyyy')+'('+digitSymbolAtt+')');
+                                        dataItem.put('y', correctAnswers);
+                                    }
+                                    else{
+                                        digitSymbolAtt=1;
+                                        xAxisLabelsdigitSymbol.add(recPG.CreatedDate.format('MMM-dd-yyyy'));
+                                        dataItem.put('x', recPG.CreatedDate.format('MMM-dd-yyyy'));
+                                        dataItem.put('y', correctAnswers);
+                                    }
+                                }
+                                else{
+                                    xAxisLabelsdigitSymbol.add(recPG.CreatedDate.format('MMM-dd-yyyy'));
+                                    dataItem.put('x', recPG.CreatedDate.format('MMM-dd-yyyy'));
+                                    dataItem.put('y', correctAnswers);
+                                }                                       
+                                digitSymboldataList.add(dataItem);                         
+                            } 
+
+                            if(recPG.Game_Name__r.Name =='This & That' )
+                            {
+                                Map<String, Object> dataItem = new Map<String, Object>{'x' => recPG.CreatedDate.format('MMM-dd-yyyy'),'y' => correctAnswers};              
+                                if(xAxisLabelsthisandthat.size()>0){
+                                    if(xAxisLabelsthisandthat.contains(recPG.CreatedDate.format('MMM-dd-yyyy')) ){
+                                        thisandthatAtt=thisandthatAtt+1;
+                                        xAxisLabelsthisandthat.add(recPG.CreatedDate.format('MMM-dd-yyyy')+'('+thisandthatAtt+')');
+                                        dataItem.put('x', recPG.CreatedDate.format('MMM-dd-yyyy')+'('+thisandthatAtt+')');
+                                        dataItem.put('y', correctAnswers);
+                                    }
+                                    else{
+                                        thisandthatAtt=1;
+                                        xAxisLabelsthisandthat.add(recPG.CreatedDate.format('MMM-dd-yyyy'));
+                                        dataItem.put('x', recPG.CreatedDate.format('MMM-dd-yyyy'));
+                                        dataItem.put('y', correctAnswers);
+                                    }
+                                }
+                                else{
+                                    xAxisLabelsthisandthat.add(recPG.CreatedDate.format('MMM-dd-yyyy'));
+                                    dataItem.put('x', recPG.CreatedDate.format('MMM-dd-yyyy'));
+                                    dataItem.put('y', correctAnswers);
+                                }                                       
+                                thisandthatdatalist.add(dataItem);                         
                             } 
                     }
             } 
             List<Bean_Game__c> bean = [SELECT Id,Left_Hand_Average__c,Right_Hand_Average__c,CreatedDate FROM Bean_Game__c 
                                        where Contact__c = :contactId];
             for(Bean_Game__c beangame: bean){
-                 //Decimal leftHandAvg= Decimal.valueOf(beangame.Left_Hand_Average__c.split(':')[0])*60+Decimal.valueOf(beangame.Left_Hand_Average__c.split(':')[1]);
-                 //Decimal rightHandAvg = Decimal.valueOf(beangame.Right_Hand_Average__c.split(':')[0])*60+Decimal.valueOf(beangame.Right_Hand_Average__c.split(':')[1]);
                  Decimal leftHandAvg= beangame.Left_Hand_Average__c;
                  Decimal rightHandAvg = beangame.Right_Hand_Average__c;
                  Map<String, Object> dataItemLeft = new Map<String, Object>{'x' => beangame.CreatedDate.format('MMM-dd-yyyy'),'y' =>leftHandAvg};  
@@ -392,7 +470,7 @@ public without sharing class LongitudinalGraphController {
                 'FaceNameList'=>FaceNameList,'objectsdataList'=>objectsdataList,'objectSpacedataList'=>objectSpacedataList,
                 'objectTimedataList'=>objectTimedataList,'reactdataList'=>reactdataList,'shapesdataList'=>shapesdataList,
                 'switchingdataList'=>switchingdataList,'wordPairsdataList'=>wordPairsdataList,'fakenewsdataList'=>fakenewsdataList,
-               'beangameleftdataList'=>beangameleftdataList,'beangamerightdataList'=>beangamerightdataList};
+               'beangameleftdataList'=>beangameleftdataList,'beangamerightdataList'=>beangamerightdataList,'digitSymboldataList'=>digitSymboldataList,'thisandthatdatalist'=>thisandthatdatalist};
            chartData.xAxisLabelsflanker = xAxisLabelsflanker;
            chartData.xAxisLabelskeepTrack = xAxisLabelskeepTrack;
            chartData.xAxisLabelsFaceName = xAxisLabelsFaceName;
@@ -404,6 +482,8 @@ public without sharing class LongitudinalGraphController {
            chartData.xAxisLabelsswitching = xAxisLabelsswitching;
            chartData.xAxisLabelswordPairs = xAxisLabelswordPairs;
            chartData.xAxisLabelsfakenews = xAxisLabelsfakenews;
+           chartData.xAxisLabelsdigitSymbol = xAxisLabelsdigitSymbol;
+           chartData.xAxisLabelsthisandthat = xAxisLabelsthisandthat;
            chartData.xAxisLabelsbeangame = xAxisLabelsbeangame;
            return chartData;           
         }
@@ -442,6 +522,9 @@ public without sharing class LongitudinalGraphController {
         public List<String> xAxisLabelsfakenews;
         @AuraEnabled
         public List<String> xAxisLabelsbeangame;
-        
-    }
+        @AuraEnabled
+        public List<String> xAxisLabelsdigitSymbol;
+        @AuraEnabled
+        public List<String> xAxisLabelsthisandthat;
+        }
 }

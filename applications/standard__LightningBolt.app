@@ -14,5 +14,6 @@
     <navType>Standard</navType>
     <tabs>standard-LightningBoltHome</tabs>
     <tabs>Bean_Game__c</tabs>
+    <tabs>Heat_Stress_Survey__c</tabs>
     <uiType>Lightning</uiType>
 </CustomApplication>

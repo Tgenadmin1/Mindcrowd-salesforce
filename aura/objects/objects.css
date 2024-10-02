@@ -134,8 +134,8 @@
     display: inline-block;
     list-style: none;
     margin: 0px;
-    padding: 0px;
-    width: 100%;
+    padding-bottom: 70px;
+    width: 80%;
     height: 100%;
 }
 .THIS .objque ul li {

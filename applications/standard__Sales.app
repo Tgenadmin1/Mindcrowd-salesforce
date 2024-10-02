@@ -17,4 +17,5 @@
     <tabs>standard-Product2</tabs>
     <tabs>standard-Forecasting3</tabs>
     <tabs>Bean_Game__c</tabs>
+    <tabs>Heat_Stress_Survey__c</tabs>
 </CustomApplication>

@@ -17,10 +17,14 @@
     <tabs>standard-CmsWorkspaces</tabs>
     <tabs>standard-CmsExperiences</tabs>
     <tabs>Bean_Game__c</tabs>
+    <tabs>Heat_Stress_Survey__c</tabs>
     <uiType>Lightning</uiType>
     <workspaceConfig>
         <mappings>
             <tab>Bean_Game__c</tab>
+        </mappings>
+        <mappings>
+            <tab>Heat_Stress_Survey__c</tab>
         </mappings>
         <mappings>
             <tab>standard-CmsAuthorHome</tab>

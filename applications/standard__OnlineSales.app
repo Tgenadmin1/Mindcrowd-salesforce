@@ -8,5 +8,9 @@
     <navType>Standard</navType>
     <tabs>standard-OnlineSalesHome</tabs>
     <tabs>Bean_Game__c</tabs>
+    <tabs>Heat_Stress_Survey__c</tabs>
+    <tabs>standard-SalesforceContract</tabs>
+    <tabs>standard-SalesforceInvoice</tabs>
+    <tabs>standard-SalesforceProductCatalog</tabs>
     <uiType>Lightning</uiType>
 </CustomApplication>

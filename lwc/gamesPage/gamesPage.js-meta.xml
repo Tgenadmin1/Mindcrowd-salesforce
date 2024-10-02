@@ -40,7 +40,8 @@
             <property name="game_name_7" type="String" default="Keep Track​" label="game_name_7"/>
             <property name="game_name_3" type="String" default="Shapes​" label="game_name_3"/>
             <property name="game_name_c" type="String" default="Coming Soon...​" label="game_name_c"/>
-            
+            <property name="game_name_17" type="String" default="Digit Symbol Matching Test​" label="game_name_17"/>
+            <property name="game_name_18" type="String" default="Camel and Cactus​" label="game_name_18"/>
             
             <property name="strTitle" type="String" default="Welcome in Salesforce" label="Enter the title"/>
             <property name="game_block_error" type="String" default="These games are only available on a desktop or laptop. Versions will be released soon for mobile phones. Sorry for the inconvenience." label="game_block_error"/>

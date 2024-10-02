@@ -123,6 +123,7 @@
     },
     setApiData : function(component,data,event,self){
         var ipData=JSON.parse(data);
+        console.log('ipData',ipData);
         var ipstr = ipData.ip;
         var timeZone = ipData.time_zone;
         var latitude = ipData.latitude;
@@ -131,6 +132,9 @@
         var country = ipData.country_name;
         var region = ipData.region;
         var zip = ipData.postal;
+        var regionType = ipData.region_type;
+        
+        
         var fullIpData = JSON.stringify(ipData);
         component.set("v.ipAddress",ipstr);
         component.set('v.timeZone', timeZone.offset);
@@ -140,6 +144,7 @@
         component.set('v.country', country);
         component.set('v.region', region);
         component.set('v.zip', zip);
+        //component.set('v.state', state);
         component.set('v.fullIpData', fullIpData);
         localStorage.setItem('cip', btoa(ipstr));
         self.printBrowser(component, event,self);                    
@@ -222,6 +227,7 @@
             Region__c:region,
             IP_Data__c:fullIpData,
             Zip_Code__c:zip
+            
         };        
         var action = component.get("c.updatePGI");
         action.setParams({"sobj":JSON.stringify(data)});

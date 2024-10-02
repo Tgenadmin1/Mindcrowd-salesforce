@@ -46,7 +46,7 @@
         <recordTriggerType>Create</recordTriggerType>
         <triggerType>RecordBeforeSave</triggerType>
     </start>
-    <status>Active</status>
+    <status>Obsolete</status>
     <variables>
         <name>currentItem_Fetch_Game_Details</name>
         <dataType>SObject</dataType>

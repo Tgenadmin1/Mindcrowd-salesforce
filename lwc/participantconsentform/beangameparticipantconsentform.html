@@ -32,44 +32,39 @@
     </lightning-layout-item>
 
 
-    <!--for consent    -->
-    
-    <lightning-layout-item class="participation-form-item-row"  >
+    <!--for consent-->
 
-      <fieldset  class="slds-form-element slds-form-element_stacked paddingL0">
-        
-        <!-- <legend class="slds-form-element__legend slds-form-element__label    <abbr class="slds-required" title="required">*</abbr>By checking this box :</legend>
+    <lightning-layout-item class="participation-form-item-row">
+      <fieldset class="slds-form-element slds-form-element_stacked paddingL0">
+        <!-- <legend class="slds-form-element__legend slds-form-element__label">
+          <abbr class="slds-required" title="required">*</abbr>By checking this box :</legend>
       <lightning-checkbox-group name="shippingconsent" class="consentrequired" 
        options={options}
             value={value}  onchange={handleShipmentConsentChange}
             >
-        </lightning-checkbox-group> paddingL0 -->
+        </lightning-checkbox-group> -->
         <!-- <p style="margin-top: 0; margin-bottom: 0;"><abbr class="slds-required" title="required">*</abbr>{DBS_text_83} 
-        </p>  paddingL0 paddingR0 remove-label-->
+        </p> -->
         <div class="slds-grid slds-gutters">
-          <div class="slds-col slds-size_1-of-10 paddingL0 paddingR0 remove-label">
-            <lightning-checkbox-group name="shippingconsent" class="consentrequired" options={options} value={value} onchange={handleShipmentConsentChange}>
+          <div class="slds-col slds-size_1-of-10 paddingL0 paddingR0 remove-label ">
+            <lightning-checkbox-group name="shippingconsent" class="consentrequired" 
+            options={options}
+                value={value} onchange={handleShipmentConsentChange}>
             </lightning-checkbox-group>
           </div>
-          <div class="slds-col paddingL0 participation-form text">
-            <div style="text-align: left;">{Bean_text_23}</div>
-            
-          </div>
+          <div class="slds-col paddingL0 participation-form text">{Bean_text_23}</div>
         </div>
-        
         <div class="slds-grid slds-gutters">
-          <div class="slds-col slds-size_1-of-10 paddingL0 paddingR0 remove-label">
-            <lightning-checkbox-group name="shippingconsent2" class="consentrequired1" options={options} value={value} onchange={handleShipmentConsentChange2}>
+          <div class="slds-col slds-size_1-of-10 paddingL0 paddingR0 remove-label ">
+            <lightning-checkbox-group name="shippingconsent2" class="consentrequired1" 
+            options={options}
+                value={value} onchange={handleShipmentConsentChange2}>
             </lightning-checkbox-group>
           </div>
-          <div class="slds-col paddingL0">
-            <div style="text-align: left;">{Bean_text_24}</div>
-          </div>
+          <div class="slds-col paddingL0">{Bean_text_24}</div>
         </div>
-        
       </fieldset>
     </lightning-layout-item>
- 
     
     <!-- for code-->
 
@@ -107,9 +102,9 @@
           
           <!-- <div class="slds-grid slds-gutters"> -->
             <div class="slds-col slds-size_12-of-12">
-              <!-- <lightning-input type="hidden" id="sample1" class="slds-is-absolute" name="participant"
+              <!--lightning-input type="hidden" id="sample1" class="slds-is-absolute" name="participant"
                 onchange={handleParticipantChange} disabled value={participantcode} placeholder={Bean_text_2}>
-              </lightning-input> -->
+              </lightning-input-->
 
               <lightning-input type="text" name="input1" data-id="inputTextAddress" label={Bean_text_32} class="consentrequired1 require" placeholder={Bean_text_33}
                 value={address2} onchange={handleAddress2Change}></lightning-input>

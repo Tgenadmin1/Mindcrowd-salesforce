@@ -3,12 +3,9 @@ import { NavigationMixin } from 'lightning/navigation';
 
 import community_name from '@salesforce/label/c.community_name';
 import Community_Url from '@salesforce/label/c.Community_Url';
-
 import DBS_intermediate_form from '@salesforce/label/c.DBS_intermediate_form';
 import Bean_game_intermediate from '@salesforce/label/c.Bean_game_intermediate';
 import APOE_intermediate_form from '@salesforce/label/c.APOE_intermediate_form';
-
-
 import url_me_shapesgame from '@salesforce/label/c.url_me_shapesgame';
 import url_me_flankergame from '@salesforce/label/c.url_me_flankergame';
 import url_me_namesandfacesgame from '@salesforce/label/c.url_me_namesandfacesgame';
@@ -21,6 +18,9 @@ import url_me_wordpairsgame from '@salesforce/label/c.url_me_wordpairsgame';
 import url_me_reactgame from '@salesforce/label/c.url_me_reactgame';
 import url_me_fakeNewsTest from '@salesforce/label/c.url_me_fakeNewsTest';
 import url_me_speechTask from '@salesforce/label/c.url_me_speechTask';
+import url_me_speechTaskTellMeMore from '@salesforce/label/c.url_me_speechTaskTellMeMore';
+import url_me_digitSymbol from '@salesforce/label/c.url_me_digitSymbol';
+import url_me_ThisandThat from '@salesforce/label/c.url_me_This_and_That';
 import WordPairs from '@salesforce/label/c.game_name_1';
 import React from '@salesforce/label/c.game_name_2';
 import Shapes from '@salesforce/label/c.game_name_3';
@@ -36,19 +36,21 @@ import DBS from '@salesforce/label/c.game_name_12';
 import APOE from '@salesforce/label/c.game_name_13';
 import FakeNews from '@salesforce/label/c.game_name_14';
 import SpeechTask from '@salesforce/label/c.game_name_15';
+import SpeechTaskTellMeMore from '@salesforce/label/c.game_name_19';
+import ThisandThat from '@salesforce/label/c.game_name_18';
+import DigitSymbol from '@salesforce/label/c.game_name_17';
 import game_time_3_min from '@salesforce/label/c.game_time_3_min';
 import game_time_5_min from '@salesforce/label/c.game_time_5_min';
 import game_time_10_min from '@salesforce/label/c.game_time_10_min';
 import game_time_20_min from '@salesforce/label/c.game_time_20_min';
 import remote from '@salesforce/label/c.remote';
 
-
 import hasDuplicateRecords from "@salesforce/apex/ContactController.hasDuplicateRecords";
 import getCurrentContact from '@salesforce/apex/CustomLoginController.getCurrentContact';
 import restrictExpandedGames from '@salesforce/apex/CustomLoginController.restrictExpandedGames';
 import getCustomSettingValues from '@salesforce/apex/ContactController.getCustomSettingValues';
 
-export default class gamesPage extends NavigationMixin(LightningElement) {
+export default class GamesPage extends NavigationMixin(LightningElement) {
     label = {
        
         community_name
@@ -63,12 +65,14 @@ export default class gamesPage extends NavigationMixin(LightningElement) {
     url_objects=Community_Url + "/s/"+url_me_objects;
     url_objects_time=Community_Url + "/s/"+url_me_objects_time;
     url_objects_space=Community_Url + "/s/"+url_Objects_Space;
-
     url_fakenewstestgame = Community_Url + "/s/"+url_me_fakeNewsTest;
     url_dbsform = Community_Url + "/s/"+ DBS_intermediate_form;
     url_beangameform = Community_Url + "/s/"+ Bean_game_intermediate;
     url_apoeform = Community_Url + "/s/"+ APOE_intermediate_form;
     url_speechTask = Community_Url + "/s/"+url_me_speechTask;
+    url_speechTaskTellMeMore = Community_Url + "/s/"+url_me_speechTaskTellMeMore;
+    url_digitSymbol = Community_Url + "/s/"+url_me_digitSymbol;
+    url_ThisandThat = Community_Url + "/s/"+url_me_ThisandThat;
 
     lstcon;
     customSettingValues;
@@ -119,6 +123,15 @@ export default class gamesPage extends NavigationMixin(LightningElement) {
     @track openGame15 = false;
     @track completeGame15 = false;
     @track lockGame15 = false;
+    @track openGame18 = false;
+    @track completeGame18 = false;
+    @track lockGame18 = false;
+    @track openGame17 = false;
+    @track completeGame17 = false;
+    @track lockGame17 = false;
+    @track openGame19 = false;
+    @track completeGame19 = false;
+    @track lockGame19 = false;
     @track hasMouse = false;
     @track macTouch = false;
     @track restrictGame = false;
@@ -144,44 +157,55 @@ export default class gamesPage extends NavigationMixin(LightningElement) {
     @api game_name_13 = "APOE";
     @api game_name_14 = "Fake News Test"
     @api game_name_15 = "Speech Task"
+    @api game_name_18 = "Camel and Cactus"
     @api game_name_c = "Coming Soon...";
+    @api game_name_17 = "Digit Symbol Matching Test"
+    @api game_name_19 = "Tell Me More"
     @api game_three_min = "3 min";
     @api game_five_min = "5 min";
     @api game_ten_min = "10 min";
-    @api game_fifteen_min = "10 min";
+    @api game_fifteen_min = "15 min";
     @api game_twentyFive = "25 min";
     @api game_Remote;
     @api strTitle = "";
     @api game_block_error ="These games are only available on a desktop or laptop. Versions will be released soon for mobile phones and tablets.<br><br>Sorry for the inconvenience."
-
-    @track hideGame12 = false;
-    @track hideGame13 = false;
-    @track hideGame16 = false;
-
+    hideGame16 = false;
 
     connectedCallback() {
         getCurrentContact()
             .then(result => {
-
-               // alert('scree width = ' + screen.width + ' document width = ' + document.width);
-               // alert('scroll = ' + document.documentElement.scrollHeight + ' document height = ' + window.innerHeight);
                 if(this.getCookie('macTouch') == 'true'){
                     this.macTouch = true;
-                    console.log('macTouch1 =' + this.macTouch );
+                    //console.log('macTouch1 =' + this.macTouch );
                 }else{
                     this.macTouch = false;
-                    console.log('macTouch2 =' + this.macTouch );
+                    //console.log('macTouch2 =' + this.macTouch );
                 }
                 
                 this.lstcon = result;
-                console.log('this.lstcon: '+JSON.stringify(this.lstcon));
+                //console.log('this.lstcon: '+JSON.stringify(this.lstcon));
                 this.error = undefined;
-                const gameNames = [Focus,Objects,ObjectsTime,ObjectsSpace,WordPairs,React,FacesNames,Switching,KeepTrack,Shapes,FakeNews,SpeechTask,BeanGame,DBS,APOE];
-                const gameClasses = ['game4','game8','game9','game10','game1','game2','game5','game6','game7','game3','game14','game15','game11','game12','game13'];
-                const gameTimes = [game_time_3_min,game_time_5_min,game_time_10_min,game_time_5_min,game_time_5_min,game_time_5_min,game_time_20_min,game_time_10_min,game_time_10_min,game_time_10_min,game_time_10_min,game_time_10_min,remote,remote,remote];                
+                let gameNames = [];
+                let gameClasses = [];
+                let gameTimes = [];
+                const lang= document.getElementsByTagName("html")[0].getAttribute("lang");
+                if(this.lstcon.MailingCountry!='United States'){
+                    gameNames = [Focus,Objects,ObjectsTime,ObjectsSpace,WordPairs,React,FacesNames,Switching,KeepTrack,Shapes,DigitSymbol,FakeNews,ThisandThat,SpeechTask,SpeechTaskTellMeMore];
+                    gameClasses = ['game4','game8','game9','game10','game1','game2','game5','game6','game7','game3','game17','game14','game18','game15','game19'];
+                    gameTimes = [game_time_3_min,game_time_5_min,game_time_10_min,game_time_5_min,game_time_5_min,game_time_5_min,game_time_20_min,game_time_10_min,game_time_10_min,game_time_10_min,game_time_5_min,game_time_10_min,game_time_5_min,game_time_10_min,game_time_10_min];    
+                }   
+                else{
+                    gameNames = [Focus,Objects,ObjectsTime,ObjectsSpace,WordPairs,React,FacesNames,Switching,KeepTrack,Shapes,DigitSymbol,FakeNews,ThisandThat,SpeechTask,SpeechTaskTellMeMore,DBS,APOE,BeanGame];
+                    gameClasses = ['game4','game8','game9','game10','game1','game2','game5','game6','game7','game3','game17','game14','game18','game15','game19','game12','game13','game11'];
+                    gameTimes = [game_time_3_min,game_time_5_min,game_time_10_min,game_time_5_min,game_time_5_min,game_time_5_min,game_time_20_min,game_time_10_min,game_time_10_min,game_time_10_min,game_time_5_min,game_time_10_min,game_time_5_min,game_time_10_min,game_time_10_min,remote,remote,remote];    
+                }            
                 const gamesOpenArray = [];
                 const gameLockedArray = [];
                 const gameCompletedArray = [];
+                const elementPositionMap = gameNames.reduce((map, element, index) => {
+                    map[element] = index;
+                    return map;
+                  }, {});
                 for (let i = 0; i < gameNames.length; i++) {
                    const game = {
                        id: i,
@@ -190,7 +214,7 @@ export default class gamesPage extends NavigationMixin(LightningElement) {
                        lock: false,
                        gametime: gameTimes[i],
                        gamename: gameNames[i],                      
-                       classname: 'opened game-tiles '+gameClasses[i]
+                       classname: `opened game-tiles ${gameClasses[i]} ${i < 10 && this.lstcon.isProject2_Participant__c  ? 'p2' : ''}`
                    };
                 gamesOpenArray.push(game);
                 }
@@ -202,7 +226,7 @@ export default class gamesPage extends NavigationMixin(LightningElement) {
                     lock: false,
                     gametime: gameTimes[i],                   
                     gamename: gameNames[i],
-                    classname: 'completed game-tiles '+gameClasses[i]
+                    classname: `completed game-tiles ${gameClasses[i]} ${i < 10 && this.lstcon.isProject2_Participant__c  ? 'p2' : ''}`
                 };
                 gameCompletedArray.push(game);
                 }
@@ -214,11 +238,10 @@ export default class gamesPage extends NavigationMixin(LightningElement) {
                         lock: true,
                         gametime: gameTimes[i],                    
                         gamename: gameNames[i],
-                        classname: 'locked game-tiles '+ gameClasses[i]
+                        classname: `locked game-tiles ${gameClasses[i]} ${i < 10 && this.lstcon.isProject2_Participant__c  ? 'p2' : ''}`
                     };
                 gameLockedArray.push(game);
                 }
-                console.log('gamesOpenArray'+gamesOpenArray );
                 const finalLockedArray = [];
                 const finalCompletedArray = [];
                 if (this.lstcon.Deary_Simple_And_Complex_Reaction_Time__c == "Opened") {
@@ -238,277 +261,238 @@ export default class gamesPage extends NavigationMixin(LightningElement) {
                 }
 
                 if (this.lstcon.Face_Name_Associates__c == "Opened") {
-                    //this.template.querySelector('.game5').className = 'opened game-tiles game5';
-                    //this.openGame5 = true;
                     this.gameItems.push(gamesOpenArray[6]);
                 }
                 else if (this.lstcon.Face_Name_Associates__c == "Completed") {
-                    //this.template.querySelector('.game5').className = 'completed game-tiles game5';
-                    //this.completeGame5 = true;
                     finalCompletedArray.push(gameCompletedArray[6]);
                 }
                 else if (this.lstcon.Face_Name_Associates__c == "Locked") {
-                    //this.template.querySelector('.game5').className = 'locked game-tiles game5';
-                    //this.lockGame5 = true;
                     finalLockedArray.push(gameLockedArray[6]);
                 }
 
                 if (this.lstcon.Flanker__c == "Opened") {
-                    //this.template.querySelector('.game4').className = 'opened game-tiles game4';
-                    //this.openGame4 = true;
                     this.gameItems.push(gamesOpenArray[0]);
                 }
                 else if (this.lstcon.Flanker__c == "Completed") {
-                    //this.template.querySelector('.game4').className = 'completed game-tiles game4';
-                    //this.completeGame4 = true;
                     finalCompletedArray.push(gameCompletedArray[0]);
                 }
                 else if (this.lstcon.Flanker__c == "Locked") {
-                    //this.template.querySelector('.game4').className = 'locked game-tiles game4';
-                    //this.lockGame4 = true;
                     finalLockedArray.push(gameLockedArray[0]);
                 }
 
                 if (this.lstcon.Keep_Track__c == "Opened") {
-                    //this.template.querySelector('.game7').className = 'opened game-tiles game7';
-                    //this.openGame7 = true;
                     this.gameItems.push(gamesOpenArray[8]);
                 }
                 else if (this.lstcon.Keep_Track__c == "Completed") {
-                    //this.template.querySelector('.game7').className = 'completed game-tiles game7';
-                    //this.completeGame7 = true;
                     finalCompletedArray.push(gameCompletedArray[8]);
                 }
                 else if (this.lstcon.Keep_Track__c == "Locked") {
-                    //this.template.querySelector('.game7').className = 'locked game-tiles game7';
-                    //this.lockGame7 = true;
                     finalLockedArray.push(gameLockedArray[8]);
                 }
 
                 if (this.lstcon.Letter_Number_Sequencing__c == "Opened") {
-                    //this.template.querySelector('.game6').className = 'opened game-tiles game6';
-                    //this.openGame6 = true;
                     this.gameItems.push(gamesOpenArray[7]);
                 }
                 else if (this.lstcon.Letter_Number_Sequencing__c == "Completed") {
-                    //this.template.querySelector('.game6').className = 'completed game-tiles game6';
-                    //this.completeGame6 = true;
                     finalCompletedArray.push(gameCompletedArray[7]);
                 }
                 else if (this.lstcon.Letter_Number_Sequencing__c == "Locked") {
-                    //this.template.querySelector('.game6').className = 'locked game-tiles game6';
-                    //this.lockGame6 = true;
                     finalLockedArray.push(gameLockedArray[7]);
                 }
 
                 if (this.lstcon.Object_Recognition_And_Similarity__c == "Opened") {
-                    //this.template.querySelector('.game3').className = 'opened game-tiles game3';
-                    //this.openGame3 = true;
                     this.gameItems.push(gamesOpenArray[9]);
                 }
                 else if (this.lstcon.Object_Recognition_And_Similarity__c == "Completed") {
-                    //this.template.querySelector('.game3').className = 'completed game-tiles game3';
-                    //this.completeGame3 = true;
                     finalCompletedArray.push(gameCompletedArray[9]);
                 }
                 else if (this.lstcon.Object_Recognition_And_Similarity__c == "Locked") {
-                    //this.template.querySelector('.game3').className = 'locked game-tiles game3';
-                    //this.lockGame3 = true;
                     finalLockedArray.push(gameLockedArray[9]);
                 }
 
 
                 if (this.lstcon.Verbal_Paired_Associates__c == "Opened") {
-                    //this.template.querySelector('.game1').className = 'opened game-tiles game1';
-                    //this.openGame1 = true;
                     this.gameItems.push(gamesOpenArray[4]);
                 }
                 else if (this.lstcon.Verbal_Paired_Associates__c == "Completed") {
-                    //this.template.querySelector('.game1').className = 'completed game-tiles game1';
-                    //this.completeGame1 = true;
                     finalCompletedArray.push(gameCompletedArray[4]);
                 }
                 else if (this.lstcon.Verbal_Paired_Associates__c == "Locked") {
-                    //this.template.querySelector('.game1').className = 'locked game-tiles game1';
-                    //this.lockGame1 = true;
                     finalLockedArray.push(gameLockedArray[4]);
                 }
 
                 if (this.lstcon.Object_Discrimination__c == "Opened") {
-                    //this.template.querySelector('.game8').className = 'opened game-tiles game8';
-                    //this.openGame8 = true; 
                     this.gameItems.push(gamesOpenArray[1]);
                 }
                 else if (this.lstcon.Object_Discrimination__c == "Completed") {
-                    //this.template.querySelector('.game8').className = 'completed game-tiles game8';
-                    //this.completeGame8 = true;
                     finalCompletedArray.push(gameCompletedArray[1]);
                 }
                 else if (this.lstcon.Object_Discrimination__c == "Locked") {
-                    //this.template.querySelector('.game8').className = 'locked game-tiles game8';
-                    //this.lockGame8 = true;
                     finalLockedArray.push(gameLockedArray[1]);
                 }
 
                 if (this.lstcon.Object_Temporal__c == "Opened") {
-                    //this.template.querySelector('.game9').className = 'opened game-tiles game9';
-                    //this.openGame9 = true;
                     this.gameItems.push(gamesOpenArray[2]);
                 }
                 else if (this.lstcon.Object_Temporal__c == "Completed") {
-                    //this.template.querySelector('.game9').className = 'completed game-tiles game9';
-                    //this.completeGame9 = true;
                     finalCompletedArray.push(gameCompletedArray[2]);
                 }
                 else if (this.lstcon.Object_Temporal__c == "Locked") {
-                    //this.template.querySelector('.game9').className = 'locked game-tiles game9';
-                    //this.lockGame9 = true;
                     finalLockedArray.push(gameLockedArray[2]);
                 }
 
                 if (this.lstcon.Object_Spatial__c== "Opened") {
-                    //this.template.querySelector('.game10').className = 'opened game-tiles game10';
-                    //this.openGame10 = true;
                     this.gameItems.push(gamesOpenArray[3]);
                 }
                 else if (this.lstcon.Object_Spatial__c == "Completed") {
-                    //this.template.querySelector('.game10').className = 'completed game-tiles game10';
-                    //this.completeGame10 = true;
                     finalCompletedArray.push(gameCompletedArray[3]);
                 }
                 else if (this.lstcon.Object_Spatial__c == "Locked") {
-                    //this.template.querySelector('.game10').className = 'locked game-tiles game10';
-                    //this.lockGame10 = true;
                     finalLockedArray.push(gameLockedArray[3]);
                 }
 
-                if (this.lstcon.Speech_Task__c == "Opened") {
-                    //this.template.querySelector('.game15').className = 'opened game-tiles game15';
-                    //this.openGame15 = true;
-                    this.gameItems.push(gamesOpenArray[11]);
-                }
-                else if (this.lstcon.Speech_Task__c == "Completed") {
-                    //this.template.querySelector('.game15').className = 'completed game-tiles game15';
-                    //this.completeGame15 = true;
-                    finalCompletedArray.push(gameCompletedArray[11]);
-                }   
-                else if (this.lstcon.Speech_Task__c == "Locked") {
-                    //this.template.querySelector('.game15').className = 'locked game-tiles game15';
-                    //this.lockGame15 = true;
+                if(lang=='es' || this.lstcon.isProject2_Participant__c){
                     finalLockedArray.push(gameLockedArray[11]);
                 }
+                else{
                 
-                if (this.lstcon.Fake_News_Test__c == "Opened") {
-                    //this.template.querySelector('.game14').className = 'opened game-tiles game14';
-                    //this.openGame14 = true;
-                    this.gameItems.push(gamesOpenArray[10]);
-                } 
-                else if (this.lstcon.Fake_News_Test__c == "Completed") {
-                    //this.template.querySelector('.game14').className = 'completed game-tiles game14';
-                    //this.completeGame14 = true;
-                    finalCompletedArray.push(gameCompletedArray[10]);
-                } 
-                else if (this.lstcon.Fake_News_Test__c == "Locked") {
-                    //this.template.querySelector('.game14').className = 'locked game-tiles game14';
-                    //this.lockGame14 = true;
-                    finalLockedArray.push(gameLockedArray[10]);
-                }
-                
-                if (this.lstcon.Bean_Game__c == "Opened") {
-                    //this.template.querySelector('.game11').className = 'opened game-tiles game11';
-                    //this.openGame11 = true;
-                    this.gameItems.push(gamesOpenArray[12]);            
-                } 
-                else if (this.lstcon.Bean_Game__c == "Completed") {
-                    //this.template.querySelector('.game11').className = 'completed game-tiles game11';
-                    //this.completeGame11 = true;
-                    finalCompletedArray.push(gameCompletedArray[12]);
-                } 
-                else if (this.lstcon.Bean_Game__c == "Locked") {
-                    //this.template.querySelector('.game11').className = 'locked game-tiles game11';
-                    //this.lockGame11 = true;
-                    finalLockedArray.push(gameLockedArray[12]);
+                    if (this.lstcon.Fake_News__c == "Opened") {
+                        this.gameItems.push(gamesOpenArray[11]);
+                    } 
+                    else if (this.lstcon.Fake_News__c == "Completed") {
+                        finalCompletedArray.push(gameCompletedArray[11]);
+                    } 
+                    else if (this.lstcon.Fake_News__c == "Locked") {
+                        finalLockedArray.push(gameLockedArray[11]);
+                    }
                 }
 
-                const campaigns = ["DBS", "APOE"];
-                hasDuplicateRecords({ conId: this.lstcon.Id, campaign: campaigns })
-                .then(result => {                  
-                        console.log('(result: ' + JSON.stringify(result));
-                        if (result[campaigns[0]]=="Y" && result[campaigns[1]]=="Y") {
-                            //this.template.querySelector('.game13').className = 'completed game-tiles game13'; 
-                            //this.template.querySelector('.game12').className = 'completed game-tiles game12';  
-                            //this.completeGame13 = true;   
-                            //this.completeGame12 = true;  
-                            this.hideGame16 = true;
-                            finalCompletedArray.push(gamesOpenArray[13]);   
-                            finalCompletedArray.push(gamesOpenArray[14]);
-                            this.gameItems = [...this.gameItems, ...finalCompletedArray, ...finalLockedArray];
+                if(this.lstcon.isProject2_Participant__c){
+                        finalLockedArray.push(gameLockedArray[10]);
+                        finalLockedArray.push(gameLockedArray[12]);
+                        finalLockedArray.push(gameLockedArray[13]);
+                        finalLockedArray.push(gameLockedArray[14]);
+                }
+                else{
+                        if (this.lstcon.Tell_Me__c == "Opened") {
+                            this.gameItems.push(gamesOpenArray[13]);
                         }
-                        else if (result[campaigns[0]]=="Y" && result[campaigns[1]]=="N") {
-                            //this.template.querySelector('.game12').className = 'completed game-tiles game12';
-                            //this.completeGame12 = true;                                 
-                            //this.hideGame13 = true;
+                        else if (this.lstcon.Tell_Me__c == "Completed") {
                             finalCompletedArray.push(gameCompletedArray[13]);
-                            this.gameItems = [...this.gameItems, ...finalCompletedArray, ...finalLockedArray];
-                        }
-                        else if (result[campaigns[0]]=="N" && result[campaigns[1]]=="Y") {
-                            //this.template.querySelector('.game13').className = 'completed game-tiles game13';
-                            //this.completeGame13 = true;                             
-                            //this.hideGame12 = true;
-                            finalCompletedArray.push(gameCompletedArray[14]);
-                            this.gameItems = [...this.gameItems, ...finalCompletedArray, ...finalLockedArray];
-                        }
-                        else {                            
-                            getCustomSettingValues()
-                                .then(result => {
-                                    this.customSettingValues = result;
-                                                const lang= document.getElementsByTagName("html")[0].getAttribute("lang");
-                                                console.log(lang);
-                                                if((lang=='en-US' && this.customSettingValues[0].CurrRunnCampEnglish__c=='APOE') || (lang=='es' && this.customSettingValues[0].CurrRunnCampSpanish__c=='APOE')){
-                                                    //this.template.querySelector('.game13').className = 'opened game-tiles game13';
-                                                    //this.openGame13 = true;
-                                                    //this.hideGame12 = true;
-                                                    this.gameItems.push(gamesOpenArray[14]);                                                           
-                                                }                            
-                                                if((lang=='en-US' && this.customSettingValues[0].CurrRunnCampEnglish__c=='DBS') || (lang=='es' && this.customSettingValues[0].CurrRunnCampSpanish__c=='DBS')){
-                                                    //this.template.querySelector('.game12').className = 'opened game-tiles game12';
-                                                    //this.openGame12 = true;
-                                                    //this.hideGame13 = true;
-                                                    this.gameItems.push(gamesOpenArray[13]);   
-                                                } 
-                                                this.gameItems = [...this.gameItems, ...finalCompletedArray, ...finalLockedArray];
-                                })
-                                .catch(error => {
-                                    console.error('Error fetching custom setting values:', error);
-                                });
                         }   
-                        
-                        console.log('this.gameItems'+JSON.stringify(this.gameItems));
-                })
-                .catch(error => {
-                    this.error = error;
-                    console.log(this.error );
-                });
-            
+                        else if (this.lstcon.Tell_Me__c == "Locked") {
+                            finalLockedArray.push(gameLockedArray[13]);
+                        }
 
-                /*hasDuplicateRecord({ conId: this.lstcon.Id,  campaign: 'bean game'})
-                .then(result => {
-                        if(result) {
-                        console.log('bean: ' + result);
-                        console.log('typeof bean:' + typeof result);
-                        this.template.querySelector('.game11').className = 'completed game-tiles game11';
-                        this.completeGame11 = true;                        
+                        if (this.lstcon.Tell_Me_More__c == "Opened") {
+                            this.gameItems.push(gamesOpenArray[14]);
+                        }
+                        else if (this.lstcon.Tell_Me_More__c == "Completed") {
+                            finalCompletedArray.push(gameCompletedArray[14]);
+                        }   
+                        else if (this.lstcon.Tell_Me_More__c == "Locked") {
+                            finalLockedArray.push(gameLockedArray[14]);
+                        }
+
+                        if (this.lstcon.Digits__c == "Opened") {
+                            this.gameItems.push(gamesOpenArray[10]);            
+                        } 
+                        else if (this.lstcon.Digits__c == "Completed") {
+                            finalCompletedArray.push(gameCompletedArray[10]);
+                        } 
+                        else if (this.lstcon.Digits__c == "Locked") {
+                            finalLockedArray.push(gameLockedArray[10]);
+                        }
+                        
+                        if (this.lstcon.This_That__c == "Opened") {
+                            this.gameItems.push(gamesOpenArray[12]);            
+                        } 
+                        else if (this.lstcon.This_That__c == "Completed") {
+                            finalCompletedArray.push(gameCompletedArray[12]);
+                        } 
+                        else if (this.lstcon.This_That__c == "Locked") {
+                            finalLockedArray.push(gameLockedArray[12]);
+                        }
+                }               
+
+                if(this.lstcon.MailingCountry=='United States'){
+                    if (this.lstcon.Bean_Game__c == "Opened") {
+                        this.gameItems.push(gamesOpenArray[17]);            
+                    } 
+                    else if (this.lstcon.Bean_Game__c == "Completed") {
+                        finalCompletedArray.push(gameCompletedArray[17]);
+                    } 
+                    else if (this.lstcon.Bean_Game__c == "Locked") {
+                        finalLockedArray.push(gameLockedArray[17]);
                     }
-                    else{
-                        this.template.querySelector('.game11').className = 'opened game-tiles game11';
-                        this.openGame11 = true;
-                    }
-                 
-                })
-                .catch(error => {
-                    this.error = error;
-                });*/   
-               return restrictExpandedGames({ Zipcode: this.lstcon.MailingPostalCode });
+
+                    const campaigns = ["DBS", "APOE"];
+                    hasDuplicateRecords({ conId: this.lstcon.Id, campaign: campaigns })
+                    .then(result => {                  
+                            //console.log('(result: ' + JSON.stringify(result));
+                            if (result[campaigns[0]]=="Y" && result[campaigns[1]]=="Y") {
+                                hideGame16 = true;          
+                                finalCompletedArray.push(gameCompletedArray[15]);   
+                                finalCompletedArray.push(gameCompletedArray[16]);                                                    
+                                //this.gameItems = [...this.gameItems, ...finalCompletedArray, ...finalLockedArray];
+                                const gameItemsSorted = this.sortByOrder(this.gameItems, 'gamename', elementPositionMap);
+                                const finalCompletedArraySorted = this.sortByOrder(finalCompletedArray, 'gamename', elementPositionMap);
+                                const finalLockedArraySorted = this.sortByOrder(finalLockedArray, 'gamename', elementPositionMap);
+                                this.gameItems = [...gameItemsSorted, ...finalCompletedArraySorted, ...finalLockedArraySorted];
+                                //console.log('Both DBS & APOE');
+                            }
+                            else if (result[campaigns[0]]=="Y" && result[campaigns[1]]=="N") {
+                                finalCompletedArray.push(gameCompletedArray[15]);
+                                //console.log('DBS');
+                                const gameItemsSorted = this.sortByOrder(this.gameItems, 'gamename', elementPositionMap);
+                                const finalCompletedArraySorted = this.sortByOrder(finalCompletedArray, 'gamename', elementPositionMap);
+                                const finalLockedArraySorted = this.sortByOrder(finalLockedArray, 'gamename', elementPositionMap);
+                                this.gameItems = [...gameItemsSorted, ...finalCompletedArraySorted, ...finalLockedArraySorted];                            
+                            }
+                            else if (result[campaigns[0]]=="N" && result[campaigns[1]]=="Y") {                                
+                                finalCompletedArray.push(gameCompletedArray[16]);
+                                //console.log('APOE');
+                                const gameItemsSorted = this.sortByOrder(this.gameItems, 'gamename', elementPositionMap);
+                                const finalCompletedArraySorted = this.sortByOrder(finalCompletedArray, 'gamename', elementPositionMap);
+                                const finalLockedArraySorted = this.sortByOrder(finalLockedArray, 'gamename', elementPositionMap);
+                                this.gameItems = [...gameItemsSorted, ...finalCompletedArraySorted, ...finalLockedArraySorted];   
+                            }
+                            else {                            
+                                getCustomSettingValues()
+                                    .then(result => {
+                                        this.customSettingValues = result;
+                                                    //const lang= document.getElementsByTagName("html")[0].getAttribute("lang");
+                                                    if((lang=='en-US' && this.customSettingValues[0].CurrRunnCampEnglish__c=='APOE') || (lang=='es' && this.customSettingValues[0].CurrRunnCampSpanish__c=='APOE')){
+                                                        this.gameItems.push(gamesOpenArray[16]);    
+                                                        //console.log('APOE Open');                                                       
+                                                    }                            
+                                                    if((lang=='en-US' && this.customSettingValues[0].CurrRunnCampEnglish__c=='DBS') || (lang=='es' && this.customSettingValues[0].CurrRunnCampSpanish__c=='DBS')){
+                                                        this.gameItems.push(gamesOpenArray[15]);   
+                                                        //console.log('DBS Open');    
+                                                    } 
+                                                    const gameItemsSorted = this.sortByOrder(this.gameItems, 'gamename', elementPositionMap);
+                                                    const finalCompletedArraySorted = this.sortByOrder(finalCompletedArray, 'gamename', elementPositionMap);
+                                                    const finalLockedArraySorted = this.sortByOrder(finalLockedArray, 'gamename', elementPositionMap);
+                                                    this.gameItems = [...gameItemsSorted, ...finalCompletedArraySorted, ...finalLockedArraySorted];   
+                                    })
+                                    .catch(error => {
+                                        console.error('Error fetching custom setting values:', error);
+                                    });
+                            }  
+                            //console.log('this.gameItems'+JSON.stringify(this.gameItems));
+                    })
+                    .catch(error => {
+                        this.error = error;
+                        //console.log(this.error );
+                    });            
+                }
+                else{
+                    const gameItemsSorted = this.sortByOrder(this.gameItems, 'gamename', elementPositionMap);
+                    const finalCompletedArraySorted = this.sortByOrder(finalCompletedArray, 'gamename', elementPositionMap);
+                    const finalLockedArraySorted = this.sortByOrder(finalLockedArray, 'gamename', elementPositionMap);
+                    this.gameItems = [...gameItemsSorted, ...finalCompletedArraySorted, ...finalLockedArraySorted];
+                }
+                return restrictExpandedGames({ Zipcode: this.lstcon.MailingPostalCode });
             })
             .then(result => {
                 this.error = undefined;                
@@ -519,7 +503,7 @@ export default class gamesPage extends NavigationMixin(LightningElement) {
             .catch(error => {
                 this.error = error;
                 this.contacts = undefined;
-                console.log(this.error );
+                //console.log(this.error );
             });
 
             window.onmousemove = function() {
@@ -528,6 +512,9 @@ export default class gamesPage extends NavigationMixin(LightningElement) {
 
     }
 
+    sortByOrder(array, property, positionMap) {
+        return [...array].sort((a, b) => positionMap[a[property]] - positionMap[b[property]]);
+    }
 
     getCookie(name) {
         var cookieString = "; " + document.cookie;
@@ -540,6 +527,7 @@ export default class gamesPage extends NavigationMixin(LightningElement) {
     }
 
     gameClick(event){
+        event.preventDefault();
         const clickedElement = event.currentTarget;
         let url;
         if(clickedElement.classList.contains('game4')){
@@ -586,6 +574,15 @@ export default class gamesPage extends NavigationMixin(LightningElement) {
         } 
         else if(clickedElement.classList.contains('game13')){
             url = this.url_apoeform;
+        }
+        else if(clickedElement.classList.contains('game17')){
+            url = this.url_digitSymbol;
+        } 
+        else if(clickedElement.classList.contains('game18')){
+            url = this.url_ThisandThat;
+        } 
+        else if(clickedElement.classList.contains('game19')){
+            url = this.url_speechTaskTellMeMore;
         } 
         if ("ontouchstart" in document.documentElement){
             document.cookie = 'macTouch = ' + true;
@@ -604,140 +601,7 @@ export default class gamesPage extends NavigationMixin(LightningElement) {
        }else{
         document.cookie = 'macTouch = ' + false;
         window.location.href = this.url_wordpairsgame;
-       }
-
-    }
-
-    reactgameClick(e){
-       if ("ontouchstart" in document.documentElement){
-        document.cookie = 'macTouch = ' + true;
-        window.location.href = this.url_reactgame;
-       }else{
-        document.cookie = 'macTouch = ' + false;
-        window.location.href = this.url_reactgame;
-       }
-    }
-    objectsClick(){
-        if ("ontouchstart" in document.documentElement){
-         document.cookie = 'macTouch = ' + true;
-         window.location.href = this.url_objects;
-        }else{
-         document.cookie = 'macTouch = ' + false;
-         window.location.href = this.url_objects;
-        }
-     }
-     objects_timeClick(){
-        if ("ontouchstart" in document.documentElement){
-         document.cookie = 'macTouch = ' + true;
-         window.location.href = this.url_objects_time;
-        }else{
-         document.cookie = 'macTouch = ' + false;
-         window.location.href = this.url_objects_time;
-        }
-     }
-     objects_spaceClick(){
-        if ("ontouchstart" in document.documentElement){
-         document.cookie = 'macTouch = ' + true;
-         window.location.href = this.url_objects_space;
-        }else{
-         document.cookie = 'macTouch = ' + false;
-         window.location.href = this.url_objects_space;
-        }
-     }
-     flankergameClick(){
-        if ("ontouchstart" in document.documentElement){
-         document.cookie = 'macTouch = ' + true;
-         window.location.href = this.url_flankergame;
-        }else{
-         document.cookie = 'macTouch = ' + false;
-         window.location.href = this.url_flankergame;
-        }
-     }
-     namesandfacesgameClick(){
-        if ("ontouchstart" in document.documentElement){
-         document.cookie = 'macTouch = ' + true;
-         window.location.href = this.url_namesandfacesgame;
-        }else{
-         document.cookie = 'macTouch = ' + false;
-         window.location.href = this.url_namesandfacesgame;
-        }
-     }
-     switchinggameClick(){
-        if ("ontouchstart" in document.documentElement){
-         document.cookie = 'macTouch = ' + true;
-         window.location.href = this.url_switchinggame;
-        }else{
-         document.cookie = 'macTouch = ' + false;
-         window.location.href = this.url_switchinggame;
-        }
-     }
-
-     keeptrackgameClick(){
-        if ("ontouchstart" in document.documentElement){
-         document.cookie = 'macTouch = ' + true;
-         window.location.href = this.url_keeptrackgame;
-        }else{
-         document.cookie = 'macTouch = ' + false;
-         window.location.href = this.url_keeptrackgame;
-        }
-     }
-     shapesgameClick(){
-        if ("ontouchstart" in document.documentElement){
-         document.cookie = 'macTouch = ' + true;
-         window.location.href = this.url_shapesgame;
-        }else{
-         document.cookie = 'macTouch = ' + false;
-         window.location.href = this.url_shapesgame;
-        }
-     }
-
-    BeangameClick() {
-        if ("ontouchstart" in document.documentElement){
-            document.cookie = 'macTouch = ' + true;
-            window.location.href = this.url_beangameform;
-        }else{
-            document.cookie = 'macTouch = ' + false;
-            window.location.href = this.url_beangameform;
-        }
-    }
-  
-    DBSgameClick(){
-        if ("ontouchstart" in document.documentElement){
-            document.cookie = 'macTouch = ' + true;
-            window.location.href = this.url_dbsform;
-        }else{
-            document.cookie = 'macTouch = ' + false;
-            window.location.href = this.url_dbsform;
-        }
-
-    }
-    APOEgameClick(){
-        if ("ontouchstart" in document.documentElement){
-            document.cookie = 'macTouch = ' + true;
-            window.location.href = this.url_apoeform;
-        }else{
-            document.cookie = 'macTouch = ' + false;
-            window.location.href = this.url_apoeform;
-        }
-
-    }
-    FakenewstestClick(){
-        if ("ontouchstart" in document.documentElement){            
-         document.cookie = 'macTouch = ' + true;    
-         window.location.href = this.url_fakenewstestgame;    
-        }else{
-         document.cookie = 'macTouch = ' + false;  
-         window.location.href = this.url_fakenewstestgame;       
-        }        
-     }
-     speechTaskClick(){
-        if ("ontouchstart" in document.documentElement){
-         document.cookie = 'macTouch = ' + true;
-         window.location.href = this.url_speechTask;
-        }else{
-         document.cookie = 'macTouch = ' + false;
-         window.location.href = this.url_speechTask;
-        }
-     }*/
+      }
+   */
 
 }

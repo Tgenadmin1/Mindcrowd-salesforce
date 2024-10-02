@@ -83,7 +83,7 @@ public static void updateshipdetail()
 		        
         ApexPages.StandardSetController sc = new ApexPages.StandardSetController(lst1);
         ShippingDetailsController sd = new ShippingDetailsController(sc);
-        System.debug('list is--'+lst1);  
+        System.debug('list is::'+lst1);  
 		
         PageReference pref = new ApexPages.StandardController(lst1[0]).view();
 		pref.getParameters().put('id',lst1[0].Id);

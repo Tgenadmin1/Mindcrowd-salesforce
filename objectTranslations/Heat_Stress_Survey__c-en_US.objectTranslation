@@ -101,5 +101,12 @@
         <label><!-- HS_v1.0.12 --></label>
         <name>Worried_heat_during_the_summer_outside__c</name>
     </fields>
+    <layouts>
+        <layout>HEAT Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
     <startsWith>Consonant</startsWith>
 </CustomObjectTranslation>

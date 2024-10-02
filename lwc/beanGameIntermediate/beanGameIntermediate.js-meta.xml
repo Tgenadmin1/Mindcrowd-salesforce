@@ -18,7 +18,7 @@
             <property name="Bean_Game_Form_Text_3" type="String" default="Yes, I want to lean more about the bean game!" label="Bean_Game_Form_Text_3"/>
             <property name="Bean_Game_Form_Text_4" type="String" default="Submit Results" label="Bean_Game_Form_Text_4"/>
             <property name="Bean_Game_Form_Text_5" type="String" default="Yes, Please send me the bean game again" label="Bean_Game_Form_Text_5"/>
-            <property name="Bean_Game_VIP_URL" type="String" default="vipadd-beangameparticipant-consent" label="Bean_Game_VIP_URL"/>        
+            <property name="Bean_Game_VIP_URL" type="String" default="add-beangameparticipant-consent-vip" label="Bean_Game_VIP_URL"/>        
         </targetConfig>
     </targetConfigs>
 </LightningComponentBundle>

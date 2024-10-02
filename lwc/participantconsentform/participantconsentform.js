@@ -25,6 +25,8 @@ import close_btn from "@salesforce/label/c.close_btn";
 //import fetchRecord from "@salesforce/apex/ContactController.fetchContactFields";
 import fetchRecord from '@salesforce/apex/ContactController.fetchContactFields1';
 //import requiredFieldValidationError from '@salesforce/label/c.Required_Fields_Error_Message';
+import url_decline from '@salesforce/label/c.live_URL_9';
+import url_decline_vip from '@salesforce/label/c.url_dashboard';
 
 import { ShowToastEvent } from "lightning/platformShowToastEvent";
 const FIELDS = [
@@ -254,10 +256,6 @@ export default class Participantconsentform extends NavigationMixin(LightningEle
   @api APOE_text_4="Enter Last Name Here";
   @api url_acceptance = 'add-acceptancepage';  
   @api url_alreadysubmitted = 'add-already-submitted';  
-  @api url_decline;
-  @api url_decline_vip; 
-  @api url_acceptance_vip;  
-  @api url_alreadysubmitted_vip;
   @api strTitle = 'Welcome in Salesforce';
   
   
@@ -374,7 +372,14 @@ export default class Participantconsentform extends NavigationMixin(LightningEle
 
       // let countyOptions = [{label:'--None--', value:'--None--'}];
       // let countyOptions = [{label:'--us--', value:'--us--'}];
-      let countyOptions = [{ label: "United States", value: "US" }];
+      //let countyOptions = [{ label: "United States", value: "US" }];
+      let countyOptions;
+      if (document.getElementsByTagName("html")[0].getAttribute("lang") == 'es') {
+        countyOptions = [{ label: "Estados Unidos", value: "US" }];
+      }
+      else {
+        countyOptions = [{ label: "United States", value: "US" }];
+      }   
 
       //         // Account Country Control Field Picklist values
       data.picklistFieldValues.MailingCountryCode.values.forEach((key) => {
@@ -708,17 +713,18 @@ export default class Participantconsentform extends NavigationMixin(LightningEle
   }
 
   decline(event) {
-    if (window.location.pathname.indexOf('vipadd') > -1) {
+    //window.location.href="https://blog.mindcrowd.org/";
+    if (window.location.pathname.indexOf('vip') > -1) {
       this[NavigationMixin.Navigate]({
         type: 'standard__webPage',
         attributes: {
-          url: community_url + '/s/' + this.url_decline_vip
+          url: community_url + '/s/' + url_decline_vip
         }
       },
       true); // Replaces the current page in your browser history with the URL
     } else {
-      window.location.href = this.url_decline;
-      console.log('gggg', this.url_decline);
+      window.location.href = url_decline;
+      console.log('gggg', url_decline);
     }
   }
   
@@ -877,20 +883,15 @@ export default class Participantconsentform extends NavigationMixin(LightningEle
   }
   //Function which runs when participant clicks on I agree.
   accept() {
-    let url=this.url_acceptance;
-    if (window.location.pathname.indexOf('vipadd') > -1) {		
-		    url = this.url_acceptance_vip 
-    } 
-    console.log('url'+url);
-      this[NavigationMixin.Navigate](
-        {
-          type: "standard__webPage",
-          attributes: {
-            url: community_url+"/s/"+url
-          }
-        },
-        true // Replaces the current page in your browser history with the URL
-      );
+    this[NavigationMixin.Navigate](
+      {
+        type: "standard__webPage",
+        attributes: {
+          url: community_url+"/s/"+this.url_acceptance
+        }
+      },
+      true // Replaces the current page in your browser history with the URL
+    );
   }
 
   alreadysubmitted() {

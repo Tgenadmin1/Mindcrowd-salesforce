@@ -160,10 +160,6 @@ WIRB is a group of people who perform independent review of research" label="Bea
             <property name="textValue" type="String" default="Your address information is verified!" label="textValue"/>
             <property name="url_acceptance" type="String" default="add-acceptancepage" label="url_acceptance"/>
             <property name="url_alreadysubmitted" type="String" default="add-already-submitted" label="url_alreadysubmitted"/>
-            <property name="url_alreadysubmitted_vip" type="String" default="add-already-submitted-vip" label="url_alreadysubmitted_vip"/>
-            <property name="url_decline" type="String" default="https://blog.mindcrowd.org/" label="url_decline"/>
-            <property name="url_decline_vip" type="String" default="me-dashboard" label="url_decline_vip"/>
-            <property name="url_acceptance_vip" type="String" default="me-dashboard" label="url_acceptance_vip"/>
             <property name="strTitle" type="String" default="Welcome in Salesforce" label="Enter the title"/>
             
             

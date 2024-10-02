@@ -162,5 +162,20 @@
              GamesController.getCurrentContact(); 
         }    
         test.stopTest();
-    }    
+    }
+
+    @IsTest
+public static void testupdateSpeechTaskPGI() {
+    Contact con= new contact(lastname='Test1');
+        insert con;
+        Game_Detail__c game =new Game_Detail__c(Name='DLTRS');
+        insert game;
+        Participant_Game_Info__c pGI = new Participant_Game_Info__c();
+            pGI.Contact_Name__c=con.Id;
+            pGI.Game_Name__c=game.Id;
+        insert pGI;
+  
+   Map<String, Object> responseBodys = GamesController.updateSpeechTaskPGI(pGI.id, 'Aging Well', true,true,true,false);
+ 
+}    
 }

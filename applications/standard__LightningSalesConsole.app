@@ -27,11 +27,15 @@
     <tabs>standard-CollaborationGroup</tabs>
     <tabs>standard-File</tabs>
     <tabs>Bean_Game__c</tabs>
+    <tabs>Heat_Stress_Survey__c</tabs>
     <uiType>Lightning</uiType>
     <utilityBar>LightningSalesConsole_UtilityBar</utilityBar>
     <workspaceConfig>
         <mappings>
             <tab>Bean_Game__c</tab>
+        </mappings>
+        <mappings>
+            <tab>Heat_Stress_Survey__c</tab>
         </mappings>
         <mappings>
             <tab>standard-Account</tab>

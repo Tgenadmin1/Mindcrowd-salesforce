@@ -53,5 +53,20 @@
             action.setCallback(this, function(a){ });
             $A.enqueueAction(action);
         }
+    },
+
+    fetchContact: function (component, participantcode) {     
+        var action = component.get("c.fetchContactFields");
+        action.setParams({participantcode:participantcode});
+        action.setCallback(this, function(a) {
+            var rtnValue = a.getReturnValue();
+            if (rtnValue != null) {
+                component.set("v.username", rtnValue.Email);
+                component.set("v.disabled", true);  
+            }
+            else{
+            }
+       });
+        $A.enqueueAction(action);
     }
 })

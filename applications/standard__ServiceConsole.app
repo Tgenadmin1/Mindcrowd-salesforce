@@ -181,9 +181,13 @@
     <tabs>standard-Opportunity</tabs>
     <tabs>standard-Lead</tabs>
     <tabs>Bean_Game__c</tabs>
+    <tabs>Heat_Stress_Survey__c</tabs>
     <workspaceConfig>
         <mappings>
             <tab>Bean_Game__c</tab>
+        </mappings>
+        <mappings>
+            <tab>Heat_Stress_Survey__c</tab>
         </mappings>
         <mappings>
             <tab>standard-Account</tab>

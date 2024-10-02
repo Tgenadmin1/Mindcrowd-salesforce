@@ -41,14 +41,35 @@
             insert pGameInfo2;
         Participant_Game_Info__c pGameInfo3 = new  Participant_Game_Info__c(Contact_Name__c=con.id,Game_Name__c=game3.id);
             insert pGameInfo3;
+            Participant_Game_Info__c pGameInfo4 = new  Participant_Game_Info__c(Contact_Name__c=con.id,Game_Name__c=game4.id);
+            insert pGameInfo4;
+            Participant_Game_Info__c pGameInfo5 = new  Participant_Game_Info__c(Contact_Name__c=con.id,Game_Name__c=game5.id);
+            insert pGameInfo5;
+            Participant_Game_Info__c pGameInfo6 = new  Participant_Game_Info__c(Contact_Name__c=con.id,Game_Name__c=game6.id);
+            insert pGameInfo6;
+            Participant_Game_Info__c pGameInfo7 = new  Participant_Game_Info__c(Contact_Name__c=con.id,Game_Name__c=game7.id);
+            insert pGameInfo7;
+            Participant_Game_Info__c pGameInfo8 = new  Participant_Game_Info__c(Contact_Name__c=con.id,Game_Name__c=game8.id);
+            insert pGameInfo8;
         
         String data4='{"Contact_Name__c":"'+con.id+'", "Game_Name__c":"'+pGameInfo3.Game_Name__c+'","Game_Play_Status__c":"Not Completed"}';
         String data5='{"Contact_Name__c":"'+con.id+'", "Game_Name__c":"'+pGameInfo2.Game_Name__c+'","Game_Play_Status__c":"Not Completed"}';
         String data6='{"Contact_Name__c":"'+con.id+'", "Game_Name__c":"'+pGameInfo1.Game_Name__c+'","Game_Play_Status__c":"Not Completed"}';
+        String data7='{"Contact_Name__c":"'+con.id+'", "Game_Name__c":"'+pGameInfo4.Game_Name__c+'","Game_Play_Status__c":"Not Completed"}';
+        String data8='{"Contact_Name__c":"'+con.id+'", "Game_Name__c":"'+pGameInfo5.Game_Name__c+'","Game_Play_Status__c":"Not Completed"}';
+        String data9='{"Contact_Name__c":"'+con.id+'", "Game_Name__c":"'+pGameInfo6.Game_Name__c+'","Game_Play_Status__c":"Not Completed"}';
+        String data10='{"Contact_Name__c":"'+con.id+'", "Game_Name__c":"'+pGameInfo7.Game_Name__c+'","Game_Play_Status__c":"Not Completed"}';
+        String data11='{"Contact_Name__c":"'+con.id+'", "Game_Name__c":"'+pGameInfo8.Game_Name__c+'","Game_Play_Status__c":"Not Completed"}';
+ 
         Test.startTest();
         GamesPageDependencyController.triggerForUpdateContactGamesField(data4);
          GamesPageDependencyController.triggerForUpdateContactGamesField(data5);
          GamesPageDependencyController.triggerForUpdateContactGamesField(data6);
+         GamesPageDependencyController.triggerForUpdateContactGamesField(data7);
+         GamesPageDependencyController.triggerForUpdateContactGamesField(data8);
+         GamesPageDependencyController.triggerForUpdateContactGamesField(data9);
+         GamesPageDependencyController.triggerForUpdateContactGamesField(data10);
+         GamesPageDependencyController.triggerForUpdateContactGamesField(data11);
         Test.stopTest();
     }
 }

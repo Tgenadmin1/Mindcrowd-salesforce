@@ -17,22 +17,49 @@ static void setupTestData() {
     customSettingRecords.RestMethod__c= 'POST';
     insert customSettingRecords; 
       List<Contact> testContacts = new List<Contact>();
-       for (Integer i = 0; i < 10; i++) {
+       for (Integer i = 0; i < 1; i++) {
             testContacts.add(new Contact(
                 FirstName = 'TestFirstName' + i,
                 LastName = 'TestLastName' + i,
                 Email = 'testemail' + i + '@example.com',
                 Enrolled_in_Paid_Campaign__c = True,
                 Tremendous_Award_Sent__c = False,
-                Verbal_Paired_Associates__c = 'Completed', Deary_Simple_And_Complex_Reaction_Time__c = 'Completed',
-                Object_Recognition_And_Similarity__c = 'Completed',Flanker__c = 'Completed', Face_Name_Associates__c = 'Completed',
-                Fake_News_Test__c = 'Completed', Bean_Game__c = 'Completed', 
-                Letter_Number_Sequencing__c = 'Completed', Keep_Track__c = 'Completed', Object_Discrimination__c = 'Completed',
-                Object_Temporal__c = 'Completed', Object_Spatial__c = 'Completed', Speech_Task__c = 'Completed',Language__c=i==8?'English':'Spanish'
+                Language__c='English',
+                Activation_Date__c = System.today()
                
             ));
         }
+    
         insert testContacts;
+    Research_Campaign__c rc = new Research_Campaign__c(Name = 'DBS');
+    insert rc;
+    Shipping_Detail__c sd = new Shipping_Detail__c(Shipment_Status__c = 'Received', Campaign__c=rc.Id,contact_Id__c=testContacts[0].Id);
+    insert sd;
+       
+    List<Game_Detail__c> games = new List<Game_Detail__c>();
+    List<String> gameNames = new List<String>{'Flanker', 'Letter-Number Sequencing', 'Keep Track', 'Object Spatial', 'Deary Simple And Complex Reaction Time', 'Object Discrimination', 'Object Temporal', 'Face-Name Associates', 'Verbal Paired Associates', 'Object Recognition And Similarity'};
+        for(String gameName: gameNames){
+            Game_Detail__c game = new Game_Detail__c();
+            game.Name = gameName;
+			games.add(game);           
+        } 
+    insert games;
+    
+    List<Participant_Game_Info__c> pgis = new List<Participant_Game_Info__c>();
+    for(Game_Detail__c game: [Select Id, Name from Game_Detail__c]){
+        Participant_Game_Info__c pgi = new Participant_Game_Info__c();
+            pgi.Contact_Name__c = testContacts[0].Id;
+            pgi.Game_Name__c = game.Id;
+            pgi.Game_Play_Status__c = 'Completed';
+            pgi.Count_Of_No_Of_Correct_Answered__c = 10;
+            pgi.Count_Of_No_of_Question_Attempted__c = 10;
+            pgi.Count_Of_Total_Reaction_Time__c = 10;
+            pgi.Count_Of_No_Of_Correct_Answered__c = 10;
+            pgi.Count_Of_No_of_Question_Attempted__c = 10;
+            pgi.Count_Of_Total_Reaction_Time__c = 10;
+			pgis.add(pgi);
+		}
+    insert pgis;
 }
 
     @isTest

@@ -33,40 +33,7 @@
         // helper.preventLeaving();
         
 
-
-        var actionOnLanguage = component.get("c.getCurrentContact");
-        actionOnLanguage.setCallback(this, function (response) {
-            var state = response.getState();
-            if (state === "SUCCESS") {
-                // console.log('the user corresponding language : ',response.getReturnValue());
-               
-                var storeResponse = response.getReturnValue();
-                var language="";
-                var tempEnLang="";
-                const urlParams = document.location.href.split('?');
-                if(storeResponse.Language__c=="Español"){
-                    language="es";
-                    tempEnLang="es";
-                }else if(storeResponse.Language__c=="English"){
-                    tempEnLang="en_US";
-                    language="en-US";
-                }else{
-                     tempEnLang="en_US";
-                     language="en-US";
-                }
-                if(document.getElementsByTagName("html")[0].getAttribute("lang") ==language)
-                {
-                     this.tempEnLang= "en_US";
-                     
-                }else{
-                    window.location = $A.get("$Label.c.Community_language_Url") +'/s/'+ $A.get("$Label.c.url_dashboard_jump");
-                  // console.log("dashboard_page_name_EN", $A.get("$Label.c.Community_language_Url") , $A.get("$Label.c.url_dashboard_jump"));
-                }
-              //  console.log('the user corresponding storeResponse.Language__c : ',storeResponse.Language__c);
-               // component.set("v.Language", language);
-            }
-        });
-        $A.enqueueAction(actionOnLanguage);
+        
 
 
 	},
@@ -83,6 +50,5 @@
     //     helper.allowLeaving();
     // }
 
-    
     
 })

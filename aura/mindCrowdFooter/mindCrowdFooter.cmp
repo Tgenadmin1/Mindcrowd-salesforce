@@ -15,6 +15,7 @@
   <aura:attribute name="isModalOpen" type="boolean" default="false" />
   <aura:attribute name="isModalOpenEmailSave" type="boolean" default="false" />
   <aura:attribute name="message" type="String" default="" />
+  <aura:attribute name="svgUrl" type="String" default="" />
   <aura:attribute name="year" type="date" />
   <ltng:require scripts="" afterScriptsLoaded="{!c.myAction}"  />
 
@@ -50,7 +51,7 @@
                   rel="noopener"><span class="avia_hidden_link_text">Facebook</span></a>
               </li>
               <li class="social_bookmarks_twitter"><a class="facebook" href="https://twitter.com/TGenMINDCROWD"
-                  target="_blank" title="Twitter"><i class="fab fa-twitter"></i></a></li>
+                  target="_blank" title="Twitter"><img src="{!v.svgUrl}" alt="Twitter" style="width: 2rem; height: 2rem;"/></a></li>
               <li class="social_bookmarks_pinterest">
                 <a target="_blank" aria-label="Link to Pinterest" href="https://www.pinterest.com/tgenmindcrowd/"
                   aria-hidden="false" data-av_icon="" data-av_iconfont="entypo-fontello" title="Pinterest"
@@ -83,7 +84,7 @@
       <div class="social_icons ">
         <ul class="text-center">
           <li class="social_bookmarks_twitter"><a class="facebook" href="https://twitter.com/TGenMINDCROWD"
-              target="_blank" title="Twitter"><i class="fab fa-twitter"></i></a></li>
+              target="_blank" title="Twitter"><img src="{!v.svgUrl}" alt="Twitter" style="width: 1rem; height: 1rem;"/></a></li>
           <li class="social_bookmarks_facebook">
             <!-- <a class="twitter " href="https://www.facebook.com/Mindcrowd" target="_blank"><i class="fab fa-facebook"></i></a> -->
             <a target="_blank" aria-label="Link to Facebook" href="{!$Label.c.facebook}"

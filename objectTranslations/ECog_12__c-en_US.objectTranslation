@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>ECog-12</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>ECog&apos;s-12</value>
+    </caseValues>
+    <fields>
+        <label><!-- ECog-12_v1.0.7 --></label>
+        <name>Anticipating_weather_change_and_planning__c</name>
+    </fields>
+    <fields>
+        <label><!-- ECog-12_v1.0.3 --></label>
+        <name>Communicating_ideas_in_conversation__c</name>
+    </fields>
+    <fields>
+        <label><!-- Contact --></label>
+        <name>Contact__c</name>
+        <relationshipLabel><!-- ECog&apos;s-12 --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- ECog-12_v1.0.5 --></label>
+        <name>Difficulty_calc_distances_when_driving__c</name>
+    </fields>
+    <fields>
+        <label><!-- ECog-12_v1.0.11 --></label>
+        <name>Doing_two_things_at_once__c</name>
+    </fields>
+    <fields>
+        <label><!-- Email --></label>
+        <name>Email__c</name>
+    </fields>
+    <fields>
+        <label><!-- ECog-12_v1.0.6 --></label>
+        <name>Finding_your_way_around_a_familiar_home__c</name>
+    </fields>
+    <fields>
+        <label><!-- ECog-12_v1.0.9 --></label>
+        <name>Keeping_living_and_workspace_organised__c</name>
+    </fields>
+    <fields>
+        <label><!-- ECog-12_v1.0.10 --></label>
+        <name>Managing_bill_payments__c</name>
+    </fields>
+    <fields>
+        <label><!-- ECog-12_v1.0.8 --></label>
+        <name>Planning_trip_vacation_outing__c</name>
+    </fields>
+    <fields>
+        <label><!-- ECog-12_v1.0.2 --></label>
+        <name>Remember_current_date_or_day_of_the_week__c</name>
+    </fields>
+    <fields>
+        <label><!-- ECog-12_v1.0.1 --></label>
+        <name>Remember_where_you_placed_personal_items__c</name>
+    </fields>
+    <fields>
+        <label><!-- ECog-12_v1.0.4 --></label>
+        <name>Understanding_spoken_directions__c</name>
+    </fields>
+    <fields>
+        <label><!-- ECog-12_v1.0.12 --></label>
+        <name>Work_on_a_task_talk_to_someone_sametime__c</name>
+    </fields>
+    <layouts>
+        <layout>ECog-12 Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

@@ -34,7 +34,7 @@
 
     //this function get the game id from the server.
     gameDetails: function (component, event, helper, gameNameScientific) {
-        console.log('gameNameScientific : ',gameNameScientific);
+        //console.log('gameNameScientific : ',gameNameScientific);
         var ConList = component.get("c.getGameId");
         ConList.setParams({ "gameName": gameNameScientific });
         ConList.setCallback(this, function (a) {
@@ -43,7 +43,7 @@
                 var name = a.getReturnValue();
                 //console.log('gameDetails is : ',name);
                 component.set("v.myAttribute", name);
-                console.log('game name:', component.get("v.myAttribute"));  
+                //console.log('game name:', component.get("v.myAttribute"));  
             }
             else if (state === "ERROR") {
                 let message = '';
@@ -177,7 +177,7 @@
         //console.log('participantGameInfoUpdate is : ',data);
         var action = component.get("c.participantGameInfoUpdate");
         action.setParams({ "sobj": JSON.stringify(data) });
-        ////console.log('gameId: ' + gameId +' startDateTime: '+ startDateTime +' gamePlayStatus: '+ gamePlayStatus +'endDateTime: '+endDateTime);
+        //console.log('gameId: ' + gameId +' startDateTime: '+ startDateTime +' gamePlayStatus: '+ gamePlayStatus +'endDateTime: '+endDateTime);
         action.setCallback(this, function (a) {
             var state = a.getState();
             if (state === "SUCCESS") {

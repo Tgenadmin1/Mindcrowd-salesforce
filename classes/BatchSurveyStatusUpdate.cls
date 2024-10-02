@@ -1,18 +1,17 @@
 /*
-*
 @author            : Santhosh Nookilla
 @description       : Schedulable Batch Class for Unlocking Surveys
 @test class        : BatchSurveyStatusUpdateTest
-*  
 */
 
 global class BatchSurveyStatusUpdate implements Database.Batchable<SObject>, Schedulable {
 
-    String objectName;
-    String fieldName;
-    String conFieldName;
-
-    global BatchSurveyStatusUpdate() {}
+    public String objectName;
+    public String fieldName;
+    public String conFieldName;
+    
+    global BatchSurveyStatusUpdate() {
+    }
 
     global BatchSurveyStatusUpdate(String objectName, String fieldName, String conFieldName) {
         this.objectName = objectName;
@@ -22,7 +21,6 @@ global class BatchSurveyStatusUpdate implements Database.Batchable<SObject>, Sch
 
     global Database.QueryLocator start(Database.BatchableContext bc) {
         String query = 'SELECT Id, ' + fieldName + ' FROM ' + objectName + ' WHERE CreatedDate = N_DAYS_AGO:365';
-        system.debug('Query: ' + query);
         return Database.getQueryLocator(query);
     }
 
@@ -31,12 +29,11 @@ global class BatchSurveyStatusUpdate implements Database.Batchable<SObject>, Sch
 
         for (SObject obj : scope) {
             recordIds.add((Id)obj.get(fieldName));
-        }
+        }              
 
-        String dynamicQuery = 'SELECT Id, ' + conFieldName + ' FROM Contact WHERE Id IN :recordIds';
-        system.debug('dynamicQuery: ' + dynamicQuery);
-        List<Contact> contactsToUpdate = Database.query(dynamicQuery);
-
+        String dynamicQuery = 'SELECT Id, ' + conFieldName + ' FROM Contact WHERE Id IN :recordIds AND isProject2_Participant__c != true';
+        List<Contact> contactsToUpdate = Database.query(dynamicQuery); 
+        
         for (SObject obj : scope) {
             for (Contact contact : contactsToUpdate) {
                 if (contact.Id.equals(obj.get(fieldName)) && contact.get(conFieldName) != 'Opened') {
@@ -48,13 +45,13 @@ global class BatchSurveyStatusUpdate implements Database.Batchable<SObject>, Sch
         if (!contactsToUpdate.isEmpty()) {
             update contactsToUpdate;
         }
+        
+        System.debug('No of Surey Records: '+recordIds.size());
+        System.debug('No of contactsToUpdate: '+contactsToUpdate.size());
     }
 
     global void finish(Database.BatchableContext context) {
-        System.debug('---IN FINISH');
-
     }
-
 
     global void execute(SchedulableContext sc) {
         
@@ -108,9 +105,6 @@ global class BatchSurveyStatusUpdate implements Database.Batchable<SObject>, Sch
         
         BatchSurveyStatusUpdate surveyANXIETY = new BatchSurveyStatusUpdate('Anxiety_Survey__c', 'Contact__c', 'ANXIETY__c');
 		Database.executeBatch(surveyANXIETY);
-        
-        BatchSurveyStatusUpdate surveyHEAT = new BatchSurveyStatusUpdate('Heat_Stress_Survey__c', 'Contact__c', 'HEAT__c');
-		Database.executeBatch(surveyHEAT);
 
     }
 }

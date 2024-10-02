@@ -12,4 +12,5 @@
     <tabs>standard-IdeaTheme</tabs>
     <tabs>standard-report</tabs>
     <tabs>standard-Dashboard</tabs>
+    <tabs>Heat_Stress_Survey__c</tabs>
 </CustomApplication>

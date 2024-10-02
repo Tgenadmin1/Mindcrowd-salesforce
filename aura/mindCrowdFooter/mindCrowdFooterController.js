@@ -5,6 +5,9 @@
       //  var cmpTarget = cmp.find('email2');
        // $A.util.addClass(cmpTarget, 'newsletter-email');
 
+       var svgUrl = $A.get('$Resource.twitter');
+       component.set('v.svgUrl', svgUrl);
+
        var lang = document.documentElement.lang;
        if(lang == 'en-US')
        {

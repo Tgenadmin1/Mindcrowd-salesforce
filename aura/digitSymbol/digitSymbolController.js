@@ -35,10 +35,10 @@
             if (state === "SUCCESS") {
                 var name = a.getReturnValue();
                  var language = name['Language__c'];     
-                if (name['Digit_Symbol_Matching_Test__c'] == 'Locked' && pageUrl[1] == $A.get("$Label.c.url_me_digitSymbol")) {
+                if (name['Digits__c'] == 'Locked' && pageUrl[1] == $A.get("$Label.c.url_me_digitSymbol")) {
                     component.set('v.showConfirmDialog', true);
                 }
-                else if (name['Digit_Symbol_Matching_Test__c'] == 'Completed' && pageUrl[1] == $A.get("$Label.c.url_me_digitSymbol")) {
+                else if (name['Digits__c'] == 'Completed' && pageUrl[1] == $A.get("$Label.c.url_me_digitSymbol")) {
                     component.set('v.showConfirmDialog', true);
                 }
                 else {
@@ -104,27 +104,27 @@
                     function preloadImage(imgdata) {
                     for (var i = 0; i < imgdata.length; i++) {
                         bgimages[i] = new Image();
-                        bgimages[i].src = '../s/sfsites/c/resource/DigitSymbolSR/' + imgdata[i];
+                        bgimages[i].src = '../s/sfsites/c/resource/mindGamesImages/digitsymbol/' + imgdata[i];
 
                         imgContainer.appendChild(bgimages[i]);
                         }
                     }
 
                     preloadImage(["PDSKey.png","PDS1.png","PDS2.png","PDS3.png","DSKey.png","DS1.png","DS2.png","DS3.png",
-                    "DS4.png","DS5.png","DS6.png","DS7.png","DS8.png","DS9.png","Page1.png","Page2.png","ESPage1.png","ESPage2.png","DSKeyES.png"]);
+                    "DS4.png","DS5.png","DS6.png","DS7.png","DS8.png","DS9.png","Page1.png","Page2.png","ESPage1.png","ESPage2.png","DSKeyES.png","blank.png","Pblank.png"]);
 
                     function changeScreen() {
                         if (configdata[currentScreent].screen === "8") {
-                            console.log('startTime: ' + startTime);
+                            //console.log('startTime: ' + startTime);
                             startTime = performance.now(); 
                             intervalId = setInterval(() => {
                               const currentTime = performance.now();
                               elapsedTime = currentTime - startTime;
-                              console.log('elapsedTime: ' + elapsedTime);
+                              //console.log('elapsedTime: ' + elapsedTime);
                               const adjustedThreshold = thresholdTime - fixedAdjustment + Math.floor (currentScreent / 2) * 1000;                          
                               if (elapsedTime >= adjustedThreshold) {
                                 currentScreent = configdata.length - 1;
-                                console.log('time done: ' + currentScreent);
+                                //console.log('time done: ' + currentScreent);
                                 clearInterval(intervalId);
                                 changeScreen();
                               }

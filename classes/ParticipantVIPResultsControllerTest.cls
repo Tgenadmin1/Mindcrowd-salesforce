@@ -172,7 +172,7 @@ public class ParticipantVIPResultsControllerTest
     {     
         User tempUser = [Select Id,ContactId From User Where Username Like '%sfdc%' limit 1];
         Id contId = tempUser.ContactId;
-        List<String> gameNames = new List<String>{'Face-Name Associates','Flanker','Keep Track','Object Discrimination','Object Spatial','Object Temporal','Deary Simple And Complex Reaction Time','Object Recognition And Similarity','Letter-Number Sequencing','Verbal Paired Associates'};
+        List<String> gameNames = new List<String>{'Face-Name Associates','Flanker','Keep Track','Object Discrimination','Object Spatial','Object Temporal','Deary Simple And Complex Reaction Time','Object Recognition And Similarity','Letter-Number Sequencing','Verbal Paired Associates','Digits','Fake News','This & That'};
 		List<Game_Detail__c> games = new List<Game_Detail__c>();
 		List<People_Like_You_Data__c> plys = new List<People_Like_You_Data__c>();
 		List<Participant_Game_Info__c> pgis = new List<Participant_Game_Info__c>();
@@ -202,11 +202,18 @@ public class ParticipantVIPResultsControllerTest
 			ply.Low_Average__c =1;
 			ply.Sex__c ='Male';
 			plys.add(ply);
-			Participant_Game_Info__c pgi = new Participant_Game_Info__c();
-			pgi.Contact_Name__c = contId;
-			pgi.Game_Name__c = game.Id;
-			pgi.Game_Play_Status__c = 'Completed';
-			pgis.add(pgi);
+            for(Integer i=0;i<30;i++){
+                Participant_Game_Info__c pgi = new Participant_Game_Info__c();
+                pgi.Contact_Name__c = contId;
+                pgi.Game_Name__c = game.Id;
+                pgi.User_Device__c = 'DESKTOP';
+                pgi.Game_Play_Status__c = 'Completed';
+                pgi.Count_Of_No_Of_Correct_Answered__c = 20;
+                pgi.Count_Of_No_of_Question_Attempted__c =30 ;
+                pgi.Count_Of_Total_Reaction_Time__c =1000 ;
+                pgis.add(pgi);
+            }
+
 		}
         insert plys; 
 		insert pgis; 
@@ -215,6 +222,7 @@ public class ParticipantVIPResultsControllerTest
 			Participant_Game_Info__c pgi = new Participant_Game_Info__c();
 			pgi.Contact_Name__c = contId;
 			pgi.Game_Name__c = game.Id;
+            pgi.User_Device__c = 'DESKTOP';
 			pgi.Game_Play_Status__c = 'Completed';
 			pgis2.add(pgi);
 		}
@@ -235,9 +243,77 @@ public class ParticipantVIPResultsControllerTest
 			pgrs.add(res1);
 		}
 			insert pgrs;       
+        
+        // Create a list of contact IDs for use in creating Bean_Game__c instances
+List<Id> contactIds = new List<Id> {contId };
+
+// Create a list to hold Bean_Game__c instances
+List<Bean_Game__c> beans = new List<Bean_Game__c>();
+
+// Define exercise time variables
+String rightHandTime = '1:40';
+String leftHandTime = '2:40';
+
+// Loop through the list of contact IDs to create Bean_Game__c instances
+for (Id contactId : contactIds) {
+    // Create 5 instances per contactId
+    for (Integer i = 0; i < 5; i++) {
+        Bean_Game__c bean = new Bean_Game__c(
+            RightHand_1_ExerciseTime__c = rightHandTime,
+            RightHand_2_ExerciseTime__c = rightHandTime,
+            RightHand_3_ExerciseTime__c = rightHandTime,
+            RightHand_4_ExerciseTime__c = rightHandTime,
+            LeftHand_1_ExerciseTime__c = leftHandTime,
+            LeftHand_2_ExerciseTime__c = leftHandTime,
+            LeftHand_3_ExerciseTime__c = leftHandTime,
+            LeftHand_4_ExerciseTime__c = leftHandTime,
+            Contact__c = contactId
+        );
+        beans.add(bean);
+    }
+}
+
+// Insert all Bean_Game__c instances in a single operation
+insert beans;
+
+// Create a list to hold Participant_Dashboard__c instances
+List<Participant_Dashboard__c> dashboards = new List<Participant_Dashboard__c>();
+Game_Detail__c beangame = new Game_Detail__c();
+        beangame.Name = 'Bean Game';
+        insert beangame;
+// Define common properties for dashboards
+Integer dataValue = 20;
+String dataCategory = 'Other';
+
+// Create instances of Participant_Dashboard__c
+Participant_Dashboard__c objDashboard1 = new Participant_Dashboard__c(
+    Data_Value__c = dataValue,
+    Game_Detail__c = beangame.id,
+    Data_Category__c = dataCategory,
+    Data_Name__c = 'Overall Average Right Hand'
+);
+dashboards.add(objDashboard1);
+
+Participant_Dashboard__c objDashboard2 = new Participant_Dashboard__c(
+    Data_Value__c = dataValue,
+    Game_Detail__c = beangame.id,
+    Data_Category__c = dataCategory,
+    Data_Name__c = 'Overall Average Left Hand'
+);
+dashboards.add(objDashboard2);
+
+// Insert all Participant_Dashboard__c instances in a single operation
+insert dashboards;
+
         System.runAs(tempUser)
         {
             LongitudinalGraphController.getGraphdData();
+            ParticipantVIPResultsController.getDashboardDataForloggedInUser('Flanker');
+            ParticipantVIPResultsController.getDashboardDataForloggedInUser('Keep Track');
+            //ParticipantResultsController.getDashboardDataForloggedInUser('Fake News');
+            //ParticipantResultsController.getDashboardDataForloggedInUser('Keep Track');
+            ParticipantVIPResultsController.getDashboardDataBeanGame('left');
+            ParticipantVIPResultsController.getDashboardDataBeanGame('right');
         }       
     }
 }

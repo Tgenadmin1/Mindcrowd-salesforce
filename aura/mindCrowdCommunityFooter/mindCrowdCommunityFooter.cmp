@@ -12,6 +12,7 @@
     <aura:attribute name="baseUrl" type="String"/>    
     <aura:attribute name="ContactId" type="String"/>
     <aura:attribute name="year" type="date" />
+    <aura:attribute name="svgUrl" type="String" default="" />
     <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
     <!--<lightning:navigation aura:id="navService"/>-->
     <lightning:navigation aura:id="navService"/>
@@ -24,7 +25,7 @@
               <div class="social_icons ">
             
                 <ul class="text-center">
-                  <li class="social_bookmarks_twitter"><a class="facebook" href="https://twitter.com/TGenMINDCROWD" target="_blank" title="Twitter"><i class="fab fa-twitter"></i></a></li>
+                  <li class="social_bookmarks_twitter"><a class="facebook" href="https://twitter.com/TGenMINDCROWD" target="_blank" title="Twitter"><img src="{!v.svgUrl}" alt="Twitter" style="width: 1rem; height: 1rem;"/></a></li>
                     <li class="social_bookmarks_facebook"> 
                       <!-- <a class="twitter " href="https://www.facebook.com/Mindcrowd" target="_blank"><i class="fab fa-facebook"></i></a> -->
                       <a target="_blank" aria-label="Link to Facebook" href="{!$Label.c.facebook}" aria-hidden="false" data-av_icon="" data-av_iconfont="entypo-fontello" title="Facebook" rel="noopener"><span class="avia_hidden_link_text">Facebook</span></a>

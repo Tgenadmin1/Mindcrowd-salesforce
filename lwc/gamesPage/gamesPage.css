@@ -2,3 +2,19 @@
     --sds-c-icon-color-background: #CB0015;
         padding: 0.3rem;
 }
+
+.game-tiles.p2::after {
+    /*background-image: url("../sfsites/c/resource/mindcrowdGameImages/flanker/star.svg"); background-repeat: no-repeat;*/
+    background-image: url("../sfsites/c/resource/star"); background-repeat: no-repeat;
+    background-repeat: no-repeat;
+    background-position: top right;
+    transform: scale(0.9);
+    content: ' ';
+    display: block;
+    position: absolute;
+    right: -15px;
+    top: -15px;
+    height: 60%;
+    opacity: 0.8;
+    width: 100px;
+}

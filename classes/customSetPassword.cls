@@ -47,15 +47,23 @@ public without sharing class customSetPassword {
     public void MyActionMethod(){
         //bool = false;
         domainURL=URL.getSalesforceBaseUrl().getHost();
+        language = 'en_US';
         String url = site.getPathPrefix();
         system.debug('domainURL===>'+domainURL);
-        if(url.contains('MindCrowd') || test.isRunningTest()){
+        system.debug('Community_Url_Spanish===>'+Label.Community_Url_Spanish);
+        String MindCrowd = Label.MindCrowd_English;
+        String MindCrowdES = Label.MindCrowd_Spanish;
+        
+        if(url.contains(MindCrowd) || test.isRunningTest()){
             language = 'en_US';
+            system.debug('MindCrowd===>'+MindCrowd);
         }
         
-        if(url.contains('MindCrowdES') || test.isRunningTest()){
+        if(url.contains(MindCrowdES) || test.isRunningTest()){
             language = 'es';
+            system.debug('MindCrowdES===>'+MindCrowdES);
         }
+        
         domainURL=  'sid=1;' +  'domain=.' + domainURL + ';path=/;expires=Thu, 01 Jan 1970 00:00:00 GMT';
         system.debug('lllll' + domainURL);
         deleteCookies = false;

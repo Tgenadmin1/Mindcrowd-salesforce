@@ -1,35 +1,27 @@
-<template >
-    <!-- <h1>Current Record Id is {contactId}</h1> -->
+<template>
     <div class="mainCrowd-outer-box marginB30 paddingT0" if:true={opacity} onload={checkSteps}>
         <div id="steps" class="steps">
             <div class="step-grid slds-grid slds-gutters text-center">
                 <div class="slds-col current tick">
                     <div class="step-number ">{step_1}</div>
-                    <!-- <div class="lable-s1">{label.step_1}</div> -->
                 </div>
                 <div class="slds-col current tick">
                     <div class="step-number">{step_2}</div>
-                    <!-- <div class="lable-s1">{label.step_2}</div> -->
                 </div>
                 <div class="slds-col current tick">
                     <div class="step-number">{step_3}</div>
-                    <!-- <div class="lable-s1">{label.step_3}</div> -->
                 </div>
                 <div class="slds-col current">
                     <div class="step-number ">{step_4a}</div>
-                    <!-- <div class="lable-s1">Compare Your Brain</div> -->
                 </div>
                 <div class="slds-col">
                     <div class="step-number">{step_4}</div>
-                    <!-- <div class="lable-s1">{label.step_4}</div> -->
-                  </div>
-              </div>
+                </div>
+            </div>
         </div>
         <div class="mainCrowd-inner-box compare_form  brainInfo ">
-             <!-- <h1 class="text-center marginB20"><p class="title">Let's compare your brain!</p></h1>  -->
-             <div class="text-center marginB20 inner-title">{brainee_1}</div>
-             <p class="marginB20 text-center">{brainee_2}</p>
-             <!-- <p class="marginB20 text-center">Please provide us with these additional details to help compare your results to people like you.</p> -->
+            <div class="text-center marginB20 inner-title">{brainee_1}</div>
+            <p class="marginB20 text-center">{brainee_2}</p>
             <template if:true={repeattesttaker.data}>
                 <lightning-radio-group name="repeattesttaker" label={completepageq1}
                     options={repeattesttaker.data.values} type="radio" class="biological-sex-radioGroup"
@@ -37,18 +29,28 @@
                 </lightning-radio-group>
             </template>
             <template if:true={race.data}>
+                <!--Commented for TSS-192 - Field Alignment Issue
                 <lightning-combobox name="race" label={complete3} placeholder={brainInfo_text_choose}
-                    options={race.data.values}  onchange={handleRace} dropdown-alignment="auto">
+                    options={race.data.values} onchange={handleRace} dropdown-alignment="auto">
                 </lightning-combobox>
+                End-Commented for TSS-192 - Field Alignment Issue -->
+                <!--Added for TSS-192 - Field Alignment Issue-->
+                <div class="slds-form-element">
+                    <label class="slds-form-element__label inputrequire" for="race">{complete3}</label>
+                    <lightning-combobox name="race" class="race mc-combobox" placeholder={brainInfo_text_choose}
+                    options={race.data.values} onchange={handleRace} dropdown-alignment="auto" variant="label-hidden">
+                    </lightning-combobox>
+                </div>
+                <!--End-Added for TSS-192 - Field Alignment Issue-->
             </template>
             <template if:true={HispanicLatinoPicklist.data}>
-                <lightning-radio-group name="hispanic" label={Hispanic_Latino} options={HispanicLatinoPicklist.data.values} 
-                type="radio" class="biological-sex-radioGroup" onchange={handleHispanic} value={hispanicLatinoValueSet}>
+                <lightning-radio-group name="hispanic" label={Hispanic_Latino}
+                    options={HispanicLatinoPicklist.data.values} type="radio" class="biological-sex-radioGroup"
+                    onchange={handleHispanic} value={hispanicLatinoValueSet}>
                 </lightning-radio-group>
             </template>
             <template if:true={hispanicCountry}>
-                <lightning-checkbox-group name="hispanic_country"
-                    label={complete4_a}
+                <lightning-checkbox-group name="hispanic_country" label={complete4_a}
                     options={hispanicorigin.data.values} value={selectedCountry} onchange={hispanicCountriesChange}
                     class="radio-button-group-brainee medicalConditionsChange">
                 </lightning-checkbox-group>
@@ -67,12 +69,12 @@
             <template if:true={isFirstDegreeEOVisible}>
                 <lightning-radio-group name="firstdegreeeo" label={complete8} class="biological-sex-radioGroup"
                     type="radio" options={firstdegreeeo.data.values} onchange={handleFirstDegreeEO}>
-                </lightning-radio-group>         
+                </lightning-radio-group>
             </template>
             <template if:true={seconddegree.data}>
-            <lightning-radio-group name="seconddegree" label={complete9} class="biological-sex-radioGroup"
+                <lightning-radio-group name="seconddegree" label={complete9} class="biological-sex-radioGroup"
                     type="radio" options={seconddegree.data.values} onchange={handleSecondDegree}>
-            </lightning-radio-group>
+                </lightning-radio-group>
             </template>
             <template if:true={handedness.data}>
                 <lightning-radio-group name="handedness" label={campylete2} options={handedness.data.values}
@@ -80,18 +82,41 @@
                 </lightning-radio-group>
             </template>
             <template if:true={medications.data}>
+            <!--Commented for TSS-192 - Field Alignment Issue
                 <lightning-combobox name="medications" label={complete5} placeholder={brainInfo_text_choose}
                     options={medications.data.values} onchange={handleMedications} dropdown-alignment="bottom-left">
                 </lightning-combobox>
+            End-Commented for TSS-192 - Field Alignment Issue -->
+            <!--Added for TSS-192 - Field Alignment Issue-->
+            <div class="slds-form-element">
+                <label class="slds-form-element__label"  for="medications">{complete5}</label>
+                <lightning-combobox name="medications" class="mc-combobox" placeholder={brainInfo_text_choose}
+                options={medications.data.values} onchange={handleMedications} dropdown-alignment="bottom-left" variant="label-hidden">
+            </lightning-combobox>
+            </div>
+            <!--End-Added for TSS-192 - Field Alignment Issue-->
             </template>
-            <div class="slds-align_absolute-center">
-                <lightning-button class="btn-sm pink-btn-box big" type="submit" name="Next"
-                    label={Brain_Info_Results} onclick={updateContact}>
+            <div class="slds-align_absolute-center postion-relative m-setting-bInfo-button">
+                <p>{brainInfo_text_required}<abbr class="slds-required">*</abbr></p>
+                <lightning-button class="btn-sm pink-btn-box big" type="submit" name="Next" label={Brain_Info_Results}
+                    onclick={updateContact}>
                 </lightning-button>
             </div>
-
-
         </div>
     </div>
 
+    <template if:true={ErrorModalOpen}>
+        <section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-modal="true" aria-describedby="modal-content-id-1" class="slds-modal slds-modal_small ssm slds-fade-in-open">
+                <div class="slds-modal__container">
+                     <header class="slds-modal__header">
+                        <lightning-button-icon icon-name="utility:close" alternative-text={label.close_btn} variant="bare-inverse" onclick={closeModal} class="slds-modal__close">  
+                        </lightning-button-icon> 
+                        <span class="title slds-hyphenate" id="modal-heading-01">{brainInfo_text_error}</span>
+                      </header>
+                <div class="slds-modal__content slds-p-around_medium" id="modal-content-id-2">
+            </div>
+                </div>
+        </section>
+                <div class="slds-backdrop slds-backdrop_open"></div>
+    </template>
 </template>

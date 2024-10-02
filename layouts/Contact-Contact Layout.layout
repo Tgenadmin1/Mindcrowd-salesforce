@@ -66,10 +66,6 @@
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
-                <field>test1__c</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
                 <field>Sub_Id__c</field>
             </layoutItems>
             <layoutItems>
@@ -79,10 +75,6 @@
             <layoutItems>
                 <behavior>Edit</behavior>
                 <field>Project2_Enrollment_Date__c</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
-                <field>isProject2_Disenrolled__c</field>
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
@@ -171,10 +163,6 @@
                 <behavior>Edit</behavior>
                 <field>Consent_Catchment__c</field>
             </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
-                <field>Speech_Task_Consent__c</field>
-            </layoutItems>
         </layoutColumns>
         <layoutColumns>
             <layoutItems>
@@ -184,10 +172,6 @@
             <layoutItems>
                 <behavior>Edit</behavior>
                 <field>Consent_Signed_On__c</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
-                <field>Fake_News_Test_Consent__c</field>
             </layoutItems>
         </layoutColumns>
         <style>TwoColumnsLeftToRight</style>
@@ -345,14 +329,6 @@
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
-                <field>Speech_Task__c</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
-                <field>Digit_Symbol_Matching_Test__c</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
                 <field>This_That__c</field>
             </layoutItems>
             <layoutItems>
@@ -403,6 +379,10 @@
             <layoutItems>
                 <behavior>Edit</behavior>
                 <field>CANCER__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>ECog12__c</field>
             </layoutItems>
         </layoutColumns>
         <layoutColumns>
@@ -726,12 +706,6 @@
     <relatedLists>
         <fields>NAME</fields>
         <relatedList>Cancer__c.Contact_Name__c</relatedList>
-    </relatedLists>
-    <relatedLists>
-        <fields>NAME</fields>
-        <fields>Studies__c.NAME</fields>
-        <fields>Studies__c.Participant_Id__c</fields>
-        <relatedList>Contact_Study_Junction__c.Contact__c</relatedList>
     </relatedLists>
     <relatedLists>
         <fields>NAME</fields>

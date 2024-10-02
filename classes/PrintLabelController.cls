@@ -23,7 +23,7 @@ public with sharing class PrintLabelController
         //     customSettingAddress = isList[0];
         // }
 
-        shippingDetailList = [SELECT Id, USPSLabelImage__c, USPSReturnLabelImage__c FROM Shipping_Detail__c
+        shippingDetailList = [SELECT Id, USPSLabelImage__c,USPSReturnLabelImage__c FROM Shipping_Detail__c
                               WHERE Id IN :selectedItems AND Tracking_Id__c!=null WITH SECURITY_ENFORCED];                
     }
 }

@@ -32,6 +32,7 @@
     <forgotPasswordTemplate>unfiled$public/CommunityForgotPasswordEmailTemplate</forgotPasswordTemplate>
     <gatherCustomerSentimentData>true</gatherCustomerSentimentData>
     <headlessForgotPasswordTemplate>unfiled$public/CommunityHeadlessForgotPasswordTemplate</headlessForgotPasswordTemplate>
+    <headlessRegistrationTemplate>unfiled$public/CommunityHeadlessRegistrationTemplate</headlessRegistrationTemplate>
     <logoutUrl>https://mindcrowd2--qa.sandbox.my.site.com/MindCrowd/s/vipaccess</logoutUrl>
     <maxFileSizeKb>5120</maxFileSizeKb>
     <networkMemberGroups>

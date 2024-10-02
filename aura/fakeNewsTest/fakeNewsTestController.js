@@ -14,9 +14,11 @@
                         let fakenewsButton = data.fakenewsButtons;
                         let realHeadLines =  data.realHeadLines;
                         let fakeHeadLines =  data.fakeHeadLines; 
+                        let generalinstrs =  data.fakenewsInstrPage.genericinstructions;
                 let firstset; 
                 let secondset; 
                 let firstSetType;
+                const intermedcontent = '<div id="imgContainer" class="centers fakenewsimage" ><img src="../resource/fakeNewsTaskSR/blank.jpg?" alt="blank"></img></div>';
                 if(Math.random() < 0.5){
                     firstset = fakenewsButton.accuracybuttons;
                     secondset = fakenewsButton.sharingbuttons;
@@ -48,89 +50,73 @@
                 realHeadLinesRandomFirstSet.forEach(item => {
                     item.content = item.content + firstset;
                     if(firstSetType == 'sharing'){
-                        item.isPractice = true;
-                    }         
+                        //item.isPractice = true;
+                        item.answer.fld1 = '';
+                        item.answer.fld2 = '';
+                    }        
                 });
                 fakeHeadLinesRandomFirstSet.forEach(item => {
                      item.content = item.content + firstset;
                      if(firstSetType == 'sharing'){
-                        item.isPractice = true;
-                    }   
+                        //item.isPractice = true;
+                        item.answer.fld1 = '';
+                        item.answer.fld2 = '';
+                    } 
                 });
                 realHeadLinesRandomSecondSet.forEach(item => {
                     item.content = item.content + secondset;
                     if(firstSetType != 'sharing'){
-                        item.isPractice = true;
+                        //item.isPractice = true;
+                        item.answer.fld1 = '';
+                        item.answer.fld2 = '';
                     }
                   });
                 fakeHeadLinesRandomSecondSet.forEach(item => {
                     item.content = item.content + secondset;   
                     if(firstSetType != 'sharing'){
-                        item.isPractice = true;
+                        //item.isPractice = true;
+                        item.answer.fld1 = '';
+                        item.answer.fld2 = '';
                     }
-                });
-                
-                let realNewsImages = [];
-                let fakeNewsImages = [];
-                for (let i = 0; i < realHeadLinesRandomFirstSet.length; i++) {
-                    let regex = /\/([^\/?]+)\?/;
-                    let match = realHeadLinesRandomFirstSet[i].content.match(regex);
-                    let imageName='';
-                    if (match && match[1]) {
-                        imageName = match[1];
-                        realNewsImages.push(imageName);
-                    }
-                }
-                for (let i = 0; i < fakeHeadLinesRandomFirstSet.length; i++) {
-                    let regex = /\/([^\/?]+)\?/;
-                    let match = fakeHeadLinesRandomFirstSet[i].content.match(regex);
-                    let imageName='';
-                    if (match && match[1]) {
-                        imageName = match[1];
-                        fakeNewsImages.push(imageName);
-                    }
-                }
-                console.log('realNewsImages =: ',realNewsImages);
-                console.log('fakeNewsImages =: ',fakeNewsImages);
-
-                let image_path_fake = "../resource/fakeNewsTaskSF/";
-                let image_path_real = "../resource/fakeNewsTaskSR/";
-                let bgimages = [];      
-                let bgimages2 = [];            
-                var imgContainer = document.getElementById('imgContainer2');
-                function preloadImage(imgdata) {                       
-                    for (var i = 0; i < imgdata.length; i++) {
-                        bgimages[i] = new Image();
-                        bgimages[i].src = image_path_real+imgdata[i];                        
-                        imgContainer.appendChild(bgimages[i]);
-                    }                    
-                }
-                function preloadImage2(imgdata) {                       
-                    for (var i = 0; i < imgdata.length; i++) {
-                        bgimages2[i] = new Image();
-                        bgimages2[i].src = image_path_fake+imgdata[i];                        
-                        imgContainer.appendChild(bgimages2[i]);
-                    }                    
-                }
-                preloadImage(realNewsImages);
-                preloadImage2(fakeNewsImages);
-
-                console.log(bgimages);
-                console.log(bgimages2);
+                });                
+               
 
                 let headllinesFirstSet = [...realHeadLinesRandomFirstSet, ...fakeHeadLinesRandomFirstSet];
                 let headllinesSecondSet = [...realHeadLinesRandomSecondSet, ...fakeHeadLinesRandomSecondSet];
+
+                //console.log('headllinesFirstSet: ' + headllinesFirstSet);
+                //console.log('headllinesSecondSet: ' + headllinesSecondSet);
 
                 let headllinesFirstSetRandom = shuffleArray(headllinesFirstSet);
                 let headllinesSecondSetRandom = shuffleArray(headllinesSecondSet);
 
                 let headllinesRandom = [...headllinesFirstSetRandom, ...headllinesSecondSetRandom];                
-                
-                for (let i = 0; i < headllinesRandom.length; i++) {
-                    configdata[i+2].content = headllinesRandom[i].content;
-                    configdata[i+2].answer = headllinesRandom[i].answer;                    
-                }    
+                let j=0;
+                for (let i = 4; i < configdata.length; i++) {
+                    if(i==52){
+                        configdata[i].content = generalinstrs;
+                    }
+                    else if(i % 2 == 0){
+                        configdata[i].content = headllinesRandom[j].content;
+                        configdata[i].answer = headllinesRandom[j].answer; 
+                        j++;
+                    } else if(i==53 || i==101){
 
+                    }
+                    else{
+                        if(firstSetType == 'accuracy' && i<53 || firstSetType != 'accuracy' && i>53){
+                            configdata[i].content = intermedcontent+fakenewsButton.accuracybuttons;  
+                        }
+                        else{
+                            configdata[i].content = intermedcontent+fakenewsButton.sharingbuttons;
+                        }
+                    }                                     
+                }    
+        //console.log('configdata: ' + JSON.stringify(configdata));
+        for(let i=2; i<=101; i=i+2){
+            document.getElementById("divcontainer").innerHTML = configdata[i].content;
+        }
+        document.getElementById("divcontainer").innerHTML = '';
         var myPageRef = window.location.href;
         var actionGame = component.get("c.getCurrentContact");
         var pageUrl = myPageRef.split('/s/');
@@ -152,10 +138,10 @@
             if (state === "SUCCESS") {
                 var name = a.getReturnValue();
                  var language = name['Language__c'];     
-                if (name['Fake_News_Test__c'] == 'Locked' && pageUrl[1] == $A.get("$Label.c.url_me_fakeNewsTest")) {
+                if (name['Fake_News__c'] == 'Locked' && pageUrl[1] == $A.get("$Label.c.url_me_fakeNewsTest")) {
                     component.set('v.showConfirmDialog', true);
                 }
-                else if (name['Fake_News_Test__c'] == 'Completed' && pageUrl[1] == $A.get("$Label.c.url_me_fakeNewsTest")) {
+                else if (name['Fake_News__c'] == 'Completed' && pageUrl[1] == $A.get("$Label.c.url_me_fakeNewsTest")) {
                     component.set('v.showConfirmDialog', true);
                 }
                 else {
@@ -228,9 +214,9 @@
                         participantGameInfoId = component.get("v.participantGameid");//participantGameInfoId holds the participantgameinfo record id.
                         timedata = new Date();
                         pageLoadStartTime = timedata;
-                        document.getElementById("datablock_keepTrackGame").innerHTML = configdata[currentScreent].content; 
+                        document.getElementById("datablock_fakeNewsGame").innerHTML = configdata[currentScreent].content; 
 
-                        if (configdata[currentScreent].screen == '49'){
+                        if (configdata[currentScreent].screen == '98'){
                             document.getElementById("continue").classList.remove('slds-hide');
                         } 
                         if (configdata[currentScreent].screen == '1') {                        
@@ -260,7 +246,14 @@
                             userinputbtn.forEach(item => { item.addEventListener('click', userInputResponse, false); });
                         }
 
-                       if (currentScreent == 0) {                          
+                        let userenterbtn= document.getElementById("enterbtn");
+                        if(typeof(userenterbtn) != 'undefined' && userenterbtn != null){                       
+                             userenterbtn.removeEventListener('click',gamePlayEnter,false);
+                             userenterbtn.addEventListener('click',gamePlayEnter,false);                          
+                            
+                        }
+
+                       if (currentScreent == 1) {                          
                             var startDateTime = new Date();
                             var gamePlayStatus = "Not-Completed";
                             var screenResolution = {"height" :screenHeight, "width" :screenWidth };                           
@@ -271,7 +264,7 @@
 
                         // end game function is updating the record of participant gameInfo like endDateTime.
                         if ((configdata.length - 1) == currentScreent) {
-                            endGame(gameId, participantGameInfoId);
+                            //endGame(gameId, participantGameInfoId);
                             clearTimeout(intervalTime);
                             return false;
                         }
@@ -294,24 +287,37 @@
                             let regex = /\/([^\/?]+)\?/; 
                             let match = content.match(regex);
                             let imageName='';
+                            let question;
                             if (match && match[1]) {
                                 imageName = match[1];
                               }
+                            if(imageName.includes('SR')){
+                                question = 'Real News';
+                            }
+                            else{
+                                question = 'Fake News';
+                            }
                             result_time = new Date() - timedata;
                             let isCorrect = false;
-                            if(e.target.value == configdata[currentScreent - 1].answer.fld1 || e.target.value == configdata[currentScreent - 1].answer.fld2){
-                                isCorrect = true;
-                            }
-                            let correctAnswer = configdata[currentScreent - 1].answer["fld1"]+','+configdata[currentScreent - 1].answer["fld2"];
+                            let userInput =  e.target.closest('button').value;              
+                            let correctAnswer='';                     
+                            if(userInput== configdata[currentScreent - 1].answer.fld1 || userInput == configdata[currentScreent - 1].answer.fld2){
+                                isCorrect = true;                                
+                            }   
+                            if(configdata[currentScreent - 1].answer["fld1"] !=null || configdata[currentScreent - 1].answer["fld1"] !='')
+                            {
+                                correctAnswer = configdata[currentScreent - 1].answer["fld1"]+','+configdata[currentScreent - 1].answer["fld2"]; 
+                            }                        
                             saveData(
                                 "FAKENEWSTEST",
                                 configdata[currentScreent - 1].question,
-                                e.target.value,
+                                userInput,
                                 isCorrect,
                                 result_time,
                                 configdata[currentScreent - 1].isPractice,
                                 correctAnswer,
-                                imageName
+                                imageName,
+                                question
                             );
 
                             setTimeout(clearResult, 1500);
@@ -354,7 +360,7 @@
                    }
 
                     function gamePlay(e) {
-                        console.log('inside gamePlay');
+                        //console.log('inside gamePlay');
                         let startDurations = configdata[currentScreent - 1].startDuration;
                         let command_value = e.keyCode;
                         if (startDurations == -1) {
@@ -374,12 +380,8 @@
                     function gotoNextScreen(e) {
                         gamePlay({ keyCode: 32 });                
                     }
-                    function saveData(gameName, questionNumber, userInput, isCorrect, reactionTime, isPracticeQuestion, correctAnswer,imageNames) {
-                    helper.recorData(component, event, helper, userContactId, gameId, questionNumber, userInput, isCorrect, reactionTime, isPracticeQuestion, correctAnswer, participantGameInfoId, totalTrialTime, orderOffUserInput, timeTest, round, imageNames);
-                       if (questionNumber == 49) {
-                            document.getElementById("nextBtton").classList.remove("slds-hide");
-                        }                       
-
+                    function saveData(gameName, questionNumber, userInput, isCorrect, reactionTime, isPracticeQuestion, correctAnswer,imageNames,question) {
+                    helper.recorData(component, event, helper, userContactId, gameId, questionNumber, userInput, isCorrect, reactionTime, isPracticeQuestion, correctAnswer, participantGameInfoId, totalTrialTime, orderOffUserInput, timeTest, round, imageNames,question);
                     }
                     function endGame(gameId, participantGameInfoId) {
                         var endDateTime = new Date();
@@ -423,7 +425,7 @@
         window.location.href = $A.get("$Label.c.Community_Url") + "/s/" + $A.get("$Label.c.url_myresults");
     },
     goToSurveys: function (component, event, helper) {
-        document.getElementById("datablock_keepTrackGame").innerHTML = '';
+        document.getElementById("datablock_fakeNewsGame").innerHTML = '';
         document.getElementById("continue").classList.add('slds-hide');
         helper.allowLeaving();
         component.set('v.showSurvey',true);

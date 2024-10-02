@@ -11,7 +11,7 @@
 
 
 
-<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" controller="ParticipantResultsControllerES" >
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" controller="ParticipantVIPResultsController" >
     
     <aura:attribute name="otherMap" type="Map"  access="global" /> 
     <aura:attribute name="contactId" type="String"  access="global" />
@@ -31,12 +31,24 @@
     <aura:attribute name="gameColor" type="List"  access="global" />
     <aura:attribute name="isGamePlayed" type="Boolean"  access="global" />
     <aura:attribute name="peopleLikeYou" type="Integer" access="global" />
+    <aura:attribute name="showpeopleLikeYou" type="Boolean" default="true" />
     <aura:attribute name="overallAverage" type="Integer" access="global" />
+    <aura:attribute name="peopleLikeYouNoDataLabel" type="String" default="We currently don't have enough people like you to display 'People Like You' results. Check back in the future for an update." />
      <aura:attribute name="scoreBasedCaption" type="String"  access="global" />
-    
+     <aura:attribute name="spinner" type="boolean" default="false"/>  
+     <aura:attribute name="beanGamehandSide" type="String"/>  
     
     
     <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    <aura:if isTrue="{!v.spinner}">
+        <div aura:id="spinnerId" class="slds-spinner_container">
+            <div class="slds-spinner--brand  slds-spinner slds-spinner--large slds-is-relative" role="alert">
+                <span class="slds-assistive-text">Loading...</span>
+                <div class="slds-spinner__dot-a"></div>
+                <div class="slds-spinner__dot-b"></div>
+            </div>
+        </div>
+    </aura:if>
     
     <lightning:layout multipleRows="true">
         <aura:if isTrue ="{!v.isGamePlayed}">
@@ -68,20 +80,33 @@
                                                     
                                                     </lightning:layoutItem>
                                                <lightning:layoutItem size="0" class="graph-double">
-                                               <c:ParticipantGaugeChart breakPoint ="{!v.peopleLikeYou}" gaugeColor="['#FF5833','#FFB833','#33FF38']" lowAverage ="{!v.lValue}" highAverage ="{!v.hValue}"
+                                                <aura:if isTrue ="{!v.showpeopleLikeYou}">
+                                                    <c:ParticipantGaugeChart breakPoint ="{!v.peopleLikeYou}" gaugeColor="['#FF5833','#FFB833','#33FF38']" lowAverage ="{!v.lValue}" highAverage ="{!v.hValue}"
                                                                          minValue = "0"  maxValue="{!v.mValue}" chartLabel ="{!$Label.c.Catcme_text_2}" isPercentage="False"></c:ParticipantGaugeChart>
-                                                
+                                               
+                                               <aura:set attribute="else"> 
+                                                <lightning:layoutItem >
+                                                    <lightning:formattedRichText value="{!v.peopleLikeYouNoDataLabel}"/>                                   
+                                                    </lightning:layoutItem>
+                                              </aura:set> 
+                                            </aura:if>
                                             </lightning:layoutItem>
                                                 <aura:set attribute="else"> 
                                                      <lightning:layoutItem size="0" class="graph-singel">
                                                         <c:ParticipantGaugeChart breakPoint ="{!v.correctAnswers}" gaugeColor="['#33FF38','#FFB833','#FF5833']" lowAverage ="{!v.lValue}" highAverage ="{!v.hValue}"
-                                                                                 minValue = "0"  maxValue="{!v.mValue}" chartLabel ="{!$Label.c.Catcme_text_1}"  isPercentage="True"></c:ParticipantGaugeChart>
+                                                                                 minValue = "0"  maxValue="{!v.mValue}" chartLabel ="{!$Label.c.Catcme_text_1}"  isPercentage="False"></c:ParticipantGaugeChart>
                                                        <!--   <div class="scoreBasedCaption">{!v.scoreBasedCaption}	</div> -->
                                                         </lightning:layoutItem>
                                                     <lightning:layoutItem size="0" class="graph-double">
-                                                         <c:ParticipantGaugeChart breakPoint ="{!v.peopleLikeYou}" gaugeColor="['#33FF38','#FFB833','#FF5833']" lowAverage ="{!v.lValue}" highAverage ="{!v.hValue}"
-                                                                         minValue = "0"  maxValue="{!v.mValue}" chartLabel ="{!$Label.c.Catcme_text_2}"  isPercentage="True" ></c:ParticipantGaugeChart>
-                                                
+                                                        <aura:if isTrue ="{!v.showpeopleLikeYou}">
+                                                            <c:ParticipantGaugeChart breakPoint ="{!v.peopleLikeYou}" gaugeColor="['#33FF38','#FFB833','#FF5833']" lowAverage ="{!v.lValue}" highAverage ="{!v.hValue}"
+                                                                         minValue = "0"  maxValue="{!v.mValue}" chartLabel ="{!$Label.c.Catcme_text_2}"  isPercentage="False" ></c:ParticipantGaugeChart>
+                                                          <aura:set attribute="else"> 
+                                                             <lightning:layoutItem>
+                                                                <lightning:formattedRichText value="{!v.peopleLikeYouNoDataLabel}"/>                   
+                                                    </lightning:layoutItem>
+                                                           </aura:set> 
+                                                        </aura:if>
                                             </lightning:layoutItem>
                                                     </aura:set> 
                                                 </aura:if> 
@@ -93,7 +118,7 @@
                                             </lightning:layoutItem> -->
                                             <lightning:layoutItem size="0"  class="graph-double">
                                                 <c:ParticipantGaugeChart breakPoint ="{!v.overallAverage}" gaugeColor="['#cac8f0']" lowAverage ="0" highAverage ="0"
-                                                                         minValue = "0"  maxValue="{!v.mValue}" chartLabel ="{!$Label.c.Catcme_text_3}"  isPercentage="{! !v.isScoreReactionTime}"></c:ParticipantGaugeChart>  
+                                                                         minValue = "0"  maxValue="{!v.mValue}" chartLabel ="{!$Label.c.Catcme_text_3}"   isPercentage="False" ></c:ParticipantGaugeChart>  
                                                 
                                                 
                                             </lightning:layoutItem>

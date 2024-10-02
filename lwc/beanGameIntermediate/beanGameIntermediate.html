@@ -3,10 +3,24 @@
       <div>
          <p>{Bean_Game_Form_Text_1_a}</p>
       </div>
-      <div>
-         <lightning-button onclick={BeanGameClick} label={Bean_Game_Form_Text_5} class=" btn-sm pink-btn-box big slds-m-left_x-small" ></lightning-button>  
-         <lightning-button onclick={submitResults} label={Bean_Game_Form_Text_4} class=" btn-sm pink-btn-box big slds-m-left_x-small"></lightning-button>  
-     </div>
+      <!--div>
+         <lightning-button onclick={BeanGameClick} label={Bean_Game_Form_Text_5} class=" btn-sm pink-btn-box big slds-m-left_x-small btmargin" ></lightning-button>  
+         <lightning-button onclick={submitResults} label={Bean_Game_Form_Text_4} class=" btn-sm pink-btn-box big slds-m-left_x-small btmargin"></lightning-button>  
+     </div-->
+   <!--lightning-layout>
+     <lightning-layout-item size="12" small-device-size="12" medium-device-size="12" large-device-size="12">
+      <lightning-button variant="brand" label={Bean_Game_Form_Text_5} onclick={BeanGameClick}
+        class="magenta-btn slds-float_left">
+      </lightning-button>
+      <lightning-button variant="brand" label={Bean_Game_Form_Text_4} onclick={submitResults}
+        class="magenta-btn slds-float_left slds-m-left_small m-paddingLR20">
+      </lightning-button>
+    </lightning-layout-item>
+   </lightning-layout-->
+   <div id="nextBtton" class="magenta-btn btn-xlarge marginT20">
+      <button class="slds-button marginBean"  onclick={BeanGameClick}>{Bean_Game_Form_Text_5}</button>
+      <button class="slds-button marginBean"  onclick={submitResults}>{Bean_Game_Form_Text_4}</button>                  
+   </div>
   </template>
   <template if:false={selectform}>
    <div>

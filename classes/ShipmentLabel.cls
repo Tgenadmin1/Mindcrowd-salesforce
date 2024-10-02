@@ -34,9 +34,24 @@ public with sharing class ShipmentLabel
     public static Integer MindcrowdZip = Integer.valueOf(ShipmentLabel.integrationsettings.MindCrowdZip5__c);
     public static String MindcrowdPhone='6023438400';//ShipmentLabel.integrationsettings.MindCrowdPhone__c;
     public static String MindCrowdImageParam= ShipmentLabel.integrationsettings.Image_Parameters__c;
+    public static String grantType= ShipmentLabel.integrationsettings.grant_type__c;
+    public static String clientId= ShipmentLabel.integrationsettings.client_id__c;
+    public static String clientSecret= ShipmentLabel.integrationsettings.client_secret__c;
+    public static String endPointAccessToken= ShipmentLabel.integrationsettings.AccessToken_url__c;
+    public static String CRID= ShipmentLabel.integrationsettings.CRID__c;
+    public static String payerRoleName= ShipmentLabel.integrationsettings.Role_Name_P__c;
+    public static String labelOwnerRoleName= ShipmentLabel.integrationsettings.Role_Name_LO__c;
+    public static String MID= ShipmentLabel.integrationsettings.MID__c;
+    public static String manifestMID= ShipmentLabel.integrationsettings.Manifest_MID__c;
+    public static String accountType= ShipmentLabel.integrationsettings.Account_Type__c;
+    public static String accountNumber= ShipmentLabel.integrationsettings.Account_Number__c;
+    public static String endPointPaymentToken= ShipmentLabel.integrationsettings.Payment_Access_Token_URL__c;
+    public static String endUSPSLabelAPI= ShipmentLabel.integrationsettings.USPS_Label_API_URL__c;
+    public static String ProcessingCategory = ShipmentLabel.integrationsettings.Processing_Category__c;    
+    
     
     //method to build a request URL FOR EVS Label api which accepts id,contact Address and the campaign type  
-    public static String buildShipmentLabelURLString(String Ids,Address addr,Research_Campaign__c campaign,String contactName) 
+    /*public static String buildShipmentLabelURLString(String Ids,Address addr,Research_Campaign__c campaign,String contactName) 
     {  
         
         if(addr.Postalcode!=null){
@@ -367,119 +382,232 @@ public with sharing class ShipmentLabel
             USPSXMLReader.next();
         }
         return ReturnLabel;
-    } 
+    }*/
     
     public static Boolean getLabel(Map<String,Address> IdAddressMap, Map<String,Research_Campaign__c> IdCampaignMap, Map<String,String> idContactNameMap)
     {
         System.debug('values of selected id with contact info from vf are--'+IdAddressMap);
         System.debug('values of selected id with research campaign info from vf are--'+IdCampaignMap);
         USPSLabel ResponseLabel = new USPSLabel();
-        USPSLabel ReturnLabelResponse= new USPSLabel();
+        //USPSLabel ReturnLabelResponse= new USPSLabel();
         Map<ID,USPSLabel> idResponseMap = new Map<ID,USPSLabel>();
         //------poc for return label---
-        Map<Id,USPSLabel> idReturnResponseMap = new Map<Id,USPSLabel>();
+        //Map<Id,USPSLabel> idReturnResponseMap = new Map<Id,USPSLabel>();
         //------------------------------
-        for (String shipId : IdAddressMap.keySet()) 
-        {
-            // for(String shipIdCampaign:IdCampaignMap.keySet())
-            // {   
-            System.debug('values of idcampaign map are---'+IdCampaignMap.values());
-            System.debug('values of idcampaign map are---'+IdCampaignMap.get(shipId));
-            Research_Campaign__c rc=IdCampaignMap.get(shipId);
-            System.debug('---return value---'+rc.isReturnLabelNeeded__c);
+        String authToken = USPSLabelAccessToken.requestAccessToken(grantType,clientId,clientSecret,endPointAccessToken);
+        System.debug('authToken=>' +authToken);
+        String paymentToken=null;
+        if(authToken !=null){
+            paymentToken = USPSPaymentLabelAccessToken.requestPaymentToken(authToken, CRID, payerRoleName, labelOwnerRoleName, MID, manifestMID, accountType,accountNumber,endPointPaymentToken);
+            System.debug('paymentToken=>' +paymentToken);
+        }
+        if(authToken !=null && paymentToken !=null){
+            for (String shipId : IdAddressMap.keySet()) 
+            {
+                // for(String shipIdCampaign:IdCampaignMap.keySet())
+                // {   
+                System.debug('values of idcampaign map are---'+IdCampaignMap.values());
+                System.debug('values of idcampaign map are---'+IdCampaignMap.get(shipId));
+                Research_Campaign__c rc=IdCampaignMap.get(shipId);
+                //System.debug('---return value---'+rc.isReturnLabelNeeded__c);
+                
+                //String USPSLabelURL = buildShipmentLabelURLString(shipId,IdAddressMap.get(shipId),IdCampaignMap.get(shipId),idContactNameMap.get(shipId));
+                //System.debug('url is ---'+USPSLabelURL);
+                //string XMLLabelResponse = getLabelFromUSPS(USPSLabelURL);
+                //System.debug('---getLabelFromUSPS--180--'+XMLLabelResponse);
+                //ResponseLabel = parseUSPSLabelResponseXML(XMLLabelResponse,false);
+                ResponseLabel = CreateUSPSLabel(shipId,IdAddressMap.get(shipId),IdCampaignMap.get(shipId),
+                                                        idContactNameMap.get(shipId),endUSPSLabelAPI,authToken,paymentToken);
+                System.debug('parsed response FOR ONE WAY---'+ResponseLabel);
+                //this map holds the value of shipping id as key and corresponding response label as value.
+                idResponseMap.put(shipId, ResponseLabel);
+                //------------------ to test for two labels redundant code--------
+                System.debug('Map response--'+idResponseMap);
+                // for(Id id :idResponseMap.keySet())
+                // {
+                //     USPSLabel mapValue=idResponseMap.get(id);
+                //     System.debug(id);
+                //     System.debug(idResponseMap.get(id));
+                //     if (mapValue.USPS_Returned_Error == true) 
+                //         {
+                //             system.debug('USPS_ERROR_CODE: ' + mapValue.USPS_ERROR_CODE);
+                //             system.debug('USPS_ERROR_DESC: ' + mapValue.USPS_ERROR_DESC);
+                //             system.debug('USPS_ERROR_SOURCE: ' + mapValue.USPS_ERROR_SOURCE);
+                //         }  
+                //     else{    
+                //     ShippingDetailsController.changeShipmentStatusToCreateLabel(id,mapValue.BarcodeNumber,mapValue.Postage,mapValue.LabelImage);
+                //     }
+                // }
+                
+                //---------------------------------------------------------------------------            
+                /*if(rc.isReturnLabelNeeded__c==true){
+                    String USPSLabelReturnURL=buildReturnShipmentURLString(shipId,IdAddressMap.get(shipId),IdCampaignMap.get(shipId),idContactNameMap.get(shipId));
+                    System.debug('----Return label url ---'+USPSLabelReturnURL);
+                    String XMLReturnLabelResponse= getLabelFromUSPS(USPSLabelReturnURL);
+                    ReturnLabelResponse=parseUSPSLabelResponseXML(XMLReturnLabelResponse,true); 
+                    // System.debug('parsed  response FOR RETURN LABEL---'+XMLReturnLabelResponse);   
+                }
+                idReturnResponseMap.put(shipId,ReturnLabelResponse);*/
+                
+                //}   
+            }
             
-            String USPSLabelURL = buildShipmentLabelURLString(shipId,IdAddressMap.get(shipId),IdCampaignMap.get(shipId),idContactNameMap.get(shipId));
-            System.debug('url is ---'+USPSLabelURL);
-            string XMLLabelResponse = getLabelFromUSPS(USPSLabelURL);
-            System.debug('---getLabelFromUSPS--180--'+XMLLabelResponse);
-            ResponseLabel = parseUSPSLabelResponseXML(XMLLabelResponse,false);
-            System.debug('parsed response FOR ONE WAY---'+ResponseLabel);
-            //this map holds the value of shipping id as key and corresponding response label as value.
-            idResponseMap.put(shipId, ResponseLabel);
-            //------------------ to test for two labels redundant code--------
             System.debug('Map response--'+idResponseMap);
-            // for(Id id :idResponseMap.keySet())
-            // {
-            //     USPSLabel mapValue=idResponseMap.get(id);
-            //     System.debug(id);
-            //     System.debug(idResponseMap.get(id));
-            //     if (mapValue.USPS_Returned_Error == true) 
-            //         {
-            //             system.debug('USPS_ERROR_CODE: ' + mapValue.USPS_ERROR_CODE);
-            //             system.debug('USPS_ERROR_DESC: ' + mapValue.USPS_ERROR_DESC);
-            //             system.debug('USPS_ERROR_SOURCE: ' + mapValue.USPS_ERROR_SOURCE);
-            //         }  
-            //     else{    
-            //     ShippingDetailsController.changeShipmentStatusToCreateLabel(id,mapValue.BarcodeNumber,mapValue.Postage,mapValue.LabelImage);
-            //     }
-            // }
+            //System.debug('return label Map response---'+idReturnResponseMap);    
             
-            //---------------------------------------------------------------------------            
-            if(rc.isReturnLabelNeeded__c==true){
-                String USPSLabelReturnURL=buildReturnShipmentURLString(shipId,IdAddressMap.get(shipId),IdCampaignMap.get(shipId),idContactNameMap.get(shipId));
-                System.debug('----Return label url ---'+USPSLabelReturnURL);
-                String XMLReturnLabelResponse= getLabelFromUSPS(USPSLabelReturnURL);
-                ReturnLabelResponse=parseUSPSLabelResponseXML(XMLReturnLabelResponse,true); 
-                // System.debug('parsed  response FOR RETURN LABEL---'+XMLReturnLabelResponse);   
+            for(Id id :idResponseMap.keySet())
+            {
+                USPSLabel mapValue=idResponseMap.get(id);
+                System.debug(id);
+                System.debug(idResponseMap.get(id));
+                System.debug('  mapValue.USPS_Returned_Error response---'+ mapValue.USPS_Returned_Error);
+                if (mapValue.ToAddress2 == '')
+                {
+                    system.debug('USPS_ERROR_CODE: ' + mapValue.USPS_ERROR_CODE);
+                    system.debug('USPS_ERROR_DESC: ' + mapValue.USPS_ERROR_DESC);
+                    system.debug('USPS_ERROR_SOURCE: ' + mapValue.USPS_ERROR_SOURCE);
+                    ShippingDetailsController.changeShipmentStatusToFail(id,mapValue.USPS_ERROR_CODE,mapValue.USPS_ERROR_DESC,mapValue.USPS_ERROR_SOURCE);
+                }  
+                else{    
+                    ShippingDetailsController.changeShipmentStatusToCreateLabel(id,
+                                                                                mapValue.ToAddress1,
+                                                                                mapValue.ToAddress2,
+                                                                                mapValue.ToCity,
+                                                                                mapValue.ToState,
+                                                                                mapValue.ToZip5,
+                                                                                mapValue.ToZip4,
+                                                                                mapValue.RDC,
+                                                                                mapValue.CarrierRoute,
+                                                                                mapValue.BarcodeNumber,mapValue.Postage,mapValue.LabelImage);
+                }
             }
-            idReturnResponseMap.put(shipId,ReturnLabelResponse);
             
-            //}   
-        }
-        
-        System.debug('Map response--'+idResponseMap);
-        System.debug('return label Map response---'+idReturnResponseMap);    
-        
-        for(Id id :idResponseMap.keySet())
-        {
-            USPSLabel mapValue=idResponseMap.get(id);
-            System.debug(id);
-            System.debug(idResponseMap.get(id));
-            System.debug('  mapValue.USPS_Returned_Error response---'+ mapValue.USPS_Returned_Error);
-            if (mapValue.ToAddress2 == '')
+            //-------------------for poc return label-------
+            /*for(Id id :idReturnResponseMap.keySet())
             {
-                system.debug('USPS_ERROR_CODE: ' + mapValue.USPS_ERROR_CODE);
-                system.debug('USPS_ERROR_DESC: ' + mapValue.USPS_ERROR_DESC);
-                system.debug('USPS_ERROR_SOURCE: ' + mapValue.USPS_ERROR_SOURCE);
-                ShippingDetailsController.changeShipmentStatusToFail(id,mapValue.USPS_ERROR_CODE,mapValue.USPS_ERROR_DESC,mapValue.USPS_ERROR_SOURCE);
-            }  
-            else{    
-                ShippingDetailsController.changeShipmentStatusToCreateLabel(id,
-                                                                            mapValue.ToAddress1,
-                                                                            mapValue.ToAddress2,
-                                                                            mapValue.ToCity,
-                                                                            mapValue.ToState,
-                                                                            mapValue.ToZip5,
-                                                                            mapValue.ToZip4,
-                                                                            mapValue.RDC,
-                                                                            mapValue.CarrierRoute,
-                                                                            mapValue.BarcodeNumber,mapValue.Postage,mapValue.LabelImage);
-            }
-        }
-        
-        //-------------------for poc return label-------
-        for(Id id :idReturnResponseMap.keySet())
-        {
-            USPSLabel returnmapValue=idReturnResponseMap.get(id);
-            System.debug(id);
-            System.debug(idReturnResponseMap.get(id));
-            if (returnmapValue.ToAddress2 == '') 
-            {
-                system.debug('USPS_ERROR_CODE: ' + returnmapValue.USPS_ERROR_CODE);
-                system.debug('USPS_ERROR_DESC: ' + returnmapValue.USPS_ERROR_DESC);
-                system.debug('USPS_ERROR_SOURCE: ' + returnmapValue.USPS_ERROR_SOURCE);
-                //ShippingDetailsController.changeShipmentStatusToFail(id,returnmapValue.USPS_ERROR_CODE,returnmapValue.USPS_ERROR_DESC,returnmapValue.USPS_ERROR_SOURCE);
-            }  
-            else{    
-                ShippingDetailsController.changeShipmentStatusToCreateReturnLabel(id,
-                                                                                  returnmapValue.RDC,
-                                                                                  returnmapValue.CarrierRoute,        
-                                                                                  returnmapValue.BarcodeNumber,returnmapValue.Postage,returnmapValue.LabelImage);
-            }
-        }
-        //------------------------------------------------------
-        
+                USPSLabel returnmapValue=idReturnResponseMap.get(id);
+                System.debug(id);
+                System.debug(idReturnResponseMap.get(id));
+                if (returnmapValue.ToAddress2 == '') 
+                {
+                    system.debug('USPS_ERROR_CODE: ' + returnmapValue.USPS_ERROR_CODE);
+                    system.debug('USPS_ERROR_DESC: ' + returnmapValue.USPS_ERROR_DESC);
+                    system.debug('USPS_ERROR_SOURCE: ' + returnmapValue.USPS_ERROR_SOURCE);
+                    //ShippingDetailsController.changeShipmentStatusToFail(id,returnmapValue.USPS_ERROR_CODE,returnmapValue.USPS_ERROR_DESC,returnmapValue.USPS_ERROR_SOURCE);
+                }  
+                else{    
+                    ShippingDetailsController.changeShipmentStatusToCreateReturnLabel(id,
+                                                                                      returnmapValue.RDC,
+                                                                                      returnmapValue.CarrierRoute,        
+                                                                                      returnmapValue.BarcodeNumber,returnmapValue.Postage,returnmapValue.LabelImage);
+                }
+            }*/
+            //------------------------------------------------------
+    	}
         return true;
         
-    } 
+    }    
+    
+    public static USPSLabel CreateUSPSLabel(String Ids,Address addr,Research_Campaign__c campaign,String contactName, String endPoint, String authToken,
+                                           String paymentToken) {
+            USPSLabel ResponseLabel = new USPSLabel(); 
+            if(addr.Postalcode!=null){
+               ZipCode = addr.Postalcode;
+                if(ZipCode.contains('-')){
+                    List<String> splitString = ZipCode.split('-');
+                    ZipCode5 = splitString.get(0);
+                    ZipCode4 = splitString.get(1);
+                }
+                else{
+                    ZipCode5 = addr.Postalcode;
+                }
+            }
+            Http http = new Http();
+            HttpRequest httpRequest = new HttpRequest();
+            httpRequest.setEndpoint(endPoint);
+            httpRequest.setMethod('POST');
+            httpRequest.setHeader('Content-Type', 'application/json');
+            httpRequest.setHeader('Accept','application/vnd.usps.labels+json');
+            httpRequest.setHeader('X-Payment-Authorization-Token', paymentToken);  
+            httpRequest.setHeader('Authorization','Bearer ' + authToken);
+            USPSLabelRequest uspsLabelrequest = new USPSLabelRequest();    
+            USPSLabelRequest.ImageInfo imageInfo = new USPSLabelRequest.ImageInfo();
+            imageInfo.imageType = 'SVG';
+            imageInfo.labelType = MindCrowdImageParam;
+            uspsLabelrequest.imageInfo = imageInfo;  
+            USPSLabelRequest.ToAddress toAddress = new USPSLabelRequest.ToAddress();
+            toAddress.streetAddress = addr.Street;
+            toAddress.secondaryAddress = '';
+            toAddress.city = addr.City;
+            toAddress.state = addr.StateCode;
+            toAddress.ZIPCode = ZipCode5;
+            if(ZipCode4!=null){
+                toAddress.ZIPPlus4 = ZipCode4;
+            }else{
+                toAddress.ZIPPlus4 = null;
+            }
+            toAddress.firstName = contactName;
+            toAddress.lastName = contactName;
+            toAddress.firm = contactName;
+            toAddress.phone = '+15551234567';
+            uspsLabelrequest.toAddress = toAddress;   
+            USPSLabelRequest.FromAddress fromAddress = new USPSLabelRequest.FromAddress();
+            fromAddress.streetAddress = MindcrowdAddress2;
+            fromAddress.secondaryAddress = '';
+            fromAddress.city = MindcrowdCity;
+            fromAddress.state = MindcrowdState;
+            fromAddress.ZIPCode = String.valueof(MindcrowdZip);
+            fromAddress.ZIPPlus4 = null;
+            fromAddress.firstName = MindcrowdName;
+            fromAddress.lastName = MindcrowdName;
+            fromAddress.firm = MindcrowdFirmName;
+            fromAddress.phone = MindcrowdPhone;
+            uspsLabelrequest.fromAddress = fromAddress;
+            USPSLabelRequest.PackageDescription packageDescription = new USPSLabelRequest.PackageDescription();
+            packageDescription.mailClass = campaign.Usps_Service_Type__c;
+            packageDescription.weight = (campaign.Weight_in_Ounces__c)/16;
+            packageDescription.length = campaign.Length_in_Inches__c;
+            packageDescription.width = campaign.Width_in_Inches__c;
+            packageDescription.height = campaign.Height_in_Inches__c;
+			packageDescription.girth = campaign.Girth_in_Inches__c;                   
+            packageDescription.shape = campaign.Shape__c;
+            packageDescription.weightUOM = 'lb';
+            packageDescription.dimensionsUOM = 'in';
+            packageDescription.packagingType = campaign.Packaging_Type__c;
+            packageDescription.processingCategory = processingCategory;
+            DateTime dt = DateTime.now();
+            DateTime dtAdd7 = dt.addDays(7);
+			String formattedDate = dtAdd7.format('yyyy-MM-dd');
+            packageDescription.mailingDate = formattedDate;
+            packageDescription.destinationEntryFacilityType = 'NONE';
+            uspsLabelrequest.packageDescription = packageDescription;
+            httpRequest.setBody(JSON.serialize(uspsLabelrequest));
+            HttpResponse httpresponse = http.send(httpRequest);
+            if (httpresponse.getStatusCode() != 200) {
+                USPSApiErrorResponse response = (USPSApiErrorResponse)JSON.deserialize(httpresponse.getBody(), USPSApiErrorResponse.class);            
+                USPSApiErrorResponse.Error errorDetails = response.error;
+                ResponseLabel.USPS_ERROR_CODE = errorDetails.code;
+                ResponseLabel.USPS_ERROR_DESC = errorDetails.message;
+                ResponseLabel.USPS_Returned_Error = true;
+                List<USPSApiErrorResponse.Errors> errorList = errorDetails.errors;            
+                if (errorList.size()>0) {
+                    ResponseLabel.USPS_ERROR_SOURCE = errorList[0].source;
+                }
+                return ResponseLabel;
+            } 
+            else {
+                USPSLabelResponse labelRresponse = (USPSLabelResponse)JSON.deserialize(httpresponse.getBody(), USPSLabelResponse.class);
+                USPSLabelResponse.LabelAddress labelAddress = labelRresponse.labelAddress;
+                ResponseLabel.ToAddress1=labelAddress.secondaryAddress;
+                ResponseLabel.ToAddress2=labelAddress.streetAddress;
+                ResponseLabel.ToCity=labelAddress.city;
+                ResponseLabel.ToState=labelAddress.state;
+                ResponseLabel.ToZip5=labelAddress.ZIPCode;
+                ResponseLabel.ToZip4=labelAddress.ZIPPlus4;
+                ResponseLabel.BarcodeNumber=labelRresponse.routingInformation;
+                ResponseLabel.Postage=String.valueof(labelRresponse.postage);
+                ResponseLabel.LabelImage=labelRresponse.labelImage;
+                return ResponseLabel;            
+        	}
+      }
 }

@@ -396,7 +396,7 @@
         <description>This field will store the StatusSummary returned by USPS Tracking API. It will tell us where the packet is located along with other info like date and time in a single line.</description>
         <externalId>false</externalId>
         <label>Track Summary</label>
-        <length>32768</length>
+        <length>131072</length>
         <trackFeedHistory>false</trackFeedHistory>
         <trackTrending>false</trackTrending>
         <type>LongTextArea</type>
@@ -575,7 +575,7 @@
         <linkType>page</linkType>
         <masterLabel>Print Labels</masterLabel>
         <openType>replace</openType>
-        <page>PrintLabelVF</page>
+        <page>PrintUSPSLabelVF</page>
         <protected>false</protected>
         <requireRowSelection>true</requireRowSelection>
     </webLinks>

@@ -8,7 +8,7 @@ global class BatchUpdatePGI implements Database.Batchable<SObject>,Database.Allo
     global Database.QueryLocator start(Database.BatchableContext bc)
     {
              
-     return Database.getQueryLocator('SELECT Id, Contact_Name__c, IP_Address__c, Geolocation__Longitude__s, Geolocation__Latitude__s, Time_Zone_Offset__c,createdDate, IP_Data__c FROM Participant_Game_Info__c where createdDate>=2022-06-01T23:19:06.000+0000 and Geolocation__Latitude__s=null and IP_Address__c!=null order by createdDate desc');
+     return Database.getQueryLocator('SELECT Id, Contact_Name__c, IP_Address__c, Geolocation__Longitude__s, Geolocation__Latitude__s,Zip_Code__c,Region__c,Country__c,City__c, Time_Zone_Offset__c,createdDate, IP_Data__c FROM Participant_Game_Info__c where createdDate>=2022-06-01T23:19:06.000+0000 and Geolocation__Latitude__s=null and IP_Address__c!=null order by createdDate desc');
         
     }
     global void execute(Database.BatchableContext bc, List<Participant_Game_Info__c > scope)

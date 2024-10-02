@@ -1983,11 +1983,10 @@
         height:24px;
         border-color: #6a6797;
     }
-	.participation-form.text {
+		.participation-form.text {
        text-align: left
 	   	
     }
-	
     .participation-form-item-row  .slds-checkbox_faux::after {
         border-width: 3px !important;
         height: 7px !important;
@@ -2365,8 +2364,8 @@
         display: block;
         font-weight: 100;
     }
-
-    .game-tiles-box .game-tiles .title1{
+	
+	    .game-tiles-box .game-tiles .title1{
         justify-content: center;
         margin: auto;
         color: #1e4463;
@@ -2385,7 +2384,7 @@
         display: block;
         font-weight: 100;
     }
-
+	
     .game-tiles.opened{
         background-color: #f7f7ff;
         border: 1px #6a6797  solid;
@@ -2402,7 +2401,7 @@
         border: 1px #6a6797  solid;
     }
     .game-tiles.opened .game-tiles-lock-icon {
-        background-color:#01df38;
+        background-color: #01df38;
         -webkit-transform: scaleX(-1);
          transform: scaleX(-1);
     }
@@ -2419,6 +2418,7 @@
     .game-tiles.game6,
     .game-tiles.game7,
     .game-tiles.game8,
+.game-tiles.game17, 
 .game-tiles.survey1,
 .game-tiles.survey2,
 .game-tiles.survey3,
@@ -2435,7 +2435,10 @@
 .game-tiles.survey14,
 .game-tiles.survey15,
 .game-tiles.survey16,
-.game-tiles.survey17 {
+.game-tiles.survey17,
+.game-tiles.survey18,
+.game-tiles.survey19,
+.game-tiles.survey20 {
         position: relative;
     }
     .game-tiles.game1::before{
@@ -2537,9 +2540,7 @@
         width: 150px;
       
     }
-    .game-tiles.game8::before, 
-    .game-tiles.game9::before, 
-    .game-tiles.game10::before {
+    .game-tiles.game8::before, .game-tiles.game9::before, .game-tiles.game10::before{
         background-image: url(/s/sfsites/c/resource/1619780842000/mindcrowd_style/images/game-icon8.svg?test=1);
         background-repeat: no-repeat;
         background-size: contain;
@@ -2553,7 +2554,113 @@
         opacity: 0.4;
         width: 150px;
     }
+	
+.game-tiles.game11::before {
+    background-image: url(/s/sfsites/c/resource/1619780842000/mindcrowd_style/images/Bean.svg?test=1);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: -50px center;
+    content: ' ';
+    display: block;
+    position: absolute;
+    left: 0;
+    top: -18px;
+    height: 120%;
+    opacity: 0.4;
+    width: 220px;
+}
+	
+.game-tiles.game13::before, 
+.game-tiles.game12::before {
+    background-image: url(/s/sfsites/c/resource/1619780842000/mindcrowd_style/images/Blood-drop.svg?test=1);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: -84px center;
+    content: ' ';
+    display: block;
+    position: absolute;
+    left: 0;
+    top: -18px;
+    height: 120%;
+    opacity: 0.4;
+    width: 250px;
+}
+	
+.game-tiles.game14::before {
+    background-image: url(/s/sfsites/c/resource/1619780842000/mindcrowd_style/images/FakeNews.svg?test=1);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: -20px center;
+    content: ' ';
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 14px;
+    height: 80%;
+    opacity: 0.4;
+    width: 180px;
+}
 
+.game-tiles.game15::before {
+    background-image: url(/s/sfsites/c/resource/1619780842000/mindcrowd_style/images/speech.svg?test=1);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: -52px center;
+    content: ' ';
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 14px;
+    height: 80%;
+    opacity: 0.4;
+    width: 300px;
+}
+
+    .game-tiles.game17::before {
+        background-image: url(/s/sfsites/c/resource/1619780842000/mindcrowd_style/images/digitSymbol.svg?test=1);
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: -50px center;
+        content: ' ';
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 10px;
+        height: 90%;
+        opacity: 0.4;
+        width: 300px;
+    }
+	
+.game-tiles.game18::before {
+    background-image: url(/s/sfsites/c/resource/1619780842000/mindcrowd_style/images/cactus.svg?test=1);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: -42px center;
+    content: ' ';
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 14px;
+    height: 80%;
+    opacity: 0.4;
+    width: 300px;
+}
+	
+.game-tiles.game19::before {
+    background-image: url(/s/sfsites/c/resource/1619780842000/mindcrowd_style/images/speech.svg?test=1);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: -52px center;
+    content: ' ';
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 14px;
+    height: 80%;
+    opacity: 0.4;
+    width: 300px;
+}
+	
     .game-tiles.survey1::before,
     .game-tiles.survey2::before,
     .game-tiles.survey3::before,
@@ -2570,7 +2677,10 @@
     .game-tiles.survey14::before,
     .game-tiles.survey15::before,
     .game-tiles.survey16::before,
-    .game-tiles.survey17::before {
+    .game-tiles.survey17::before,
+	.game-tiles.survey18::before,
+    .game-tiles.survey19::before,
+    .game-tiles.survey20::before{
         background-image: url(/s/sfsites/c/resource/1619780842000/mindcrowd_style/images/Survey.svg?test=1);
         background-repeat: no-repeat;
         background-size: contain;
@@ -2581,14 +2691,13 @@
         left: 50%;
         top: 50%;
         transform: translate(-50%, -50%);
-        opacity: 0.1;
+        opacity: 0.4;
         width: 190px; /* Adjust width as needed */
         height: 190px; /* Adjust height as needed */
     }
-
-
+	
     .game-tiles-box .game-tiles .status .slds-icon-action-check{
-        background-color:#ea526e;
+        background-color: #ea526e;
     }
     .game-tiles-box .game-tiles .status .slds-icon-action-check .slds-icon{
         width: 24px;
@@ -2975,7 +3084,7 @@
         fill: #163249;
     }
     .game-tiles.completed .game-tiles-lock-icon {
-        background-color:#ea526e;
+        background-color: #ea526e;
     }
     .btn__test-time--small .btn__test-time-icon {
         margin-top: -12px;
@@ -3335,6 +3444,7 @@
     .centers{
         text-align: center;
     }
+    
     .mb10{
         margin-bottom: 10px !important;
     }
@@ -3346,6 +3456,12 @@
     }
     .mt35 {
         margin-top: 35px !important;
+    }
+    .mt30 {
+        margin-top: 35px !important;
+    }
+    .mt50 {
+        margin-top: 50px !important;
     }
     .box4 {
         width: 100%;
@@ -4108,7 +4224,7 @@
     }
     .copyright-content .social_bookmarks_twitter a:hover{
         color: #fff;
-        background-color: #46d4fe;
+        background-color: #022432;
     }
     .social_footer li img{
         width:30px;
@@ -4417,9 +4533,12 @@
         font-size: 50px;
     }
 	
-    .example-box .txt_placeholder{
-        font-size: 30px;
-    }
+	.example-box .txt_placeholder::placeholder {
+	  font-size: 30px;
+	  color: rgb(200, 200, 200);
+	  transition: font-size 0.1s ease-in-out;
+	}
+	
     .txt_input{
         max-width: 230px;
         border:0px;
@@ -4491,7 +4610,12 @@
     .comm-page-custom-numberletter,
     .comm-page-custom-keeptrack,
     .comm-page-custom-me-objects-temporal,
-    .comm-page-custom-me-objects-space
+    .comm-page-custom-me-objects-space,
+    .comm-page-custom-pme-esto-y-aquello,
+    .comm-page-custom-me-digitos,
+	.comm-page-custom-pme-noticias-falsas,
+	.comm-page-custom-pme-cuentame,
+	.comm-page-custom-pme-cuentame-mas
     {
         padding-top: 46px;
     }
@@ -4502,7 +4626,12 @@
     .comm-page-custom-me-concentracion .slds-builder-header_container,
     .comm-page-custom-me-nombresycaras .slds-builder-header_container,
     .comm-page-custom-numberletter .slds-builder-header_container,
-    .comm-page-custom-keeptrack .slds-builder-header_container
+    .comm-page-custom-keeptrack .slds-builder-header_container,
+    .comm-page-custom-pme-esto-y-aquello .slds-builder-header_container,
+    .comm-page-custom-me-digitos .slds-builder-header_container,
+	.comm-page-custom-pme-noticias-falsas .slds-builder-header_container,
+	.comm-page-custom-pme-cuentame .slds-builder-header_container,
+	.comm-page-custom-pme-cuentame-mas .slds-builder-header_container
     {
         display: none;
         padding-top: 0;
@@ -4517,7 +4646,12 @@
     .comm-page-custom-numberletter .main-content-inner,
     .comm-page-custom-keeptrack .main-content-inner,
     .comm-page-custom-me-objects-temporal .main-content-inner,
-    .comm-page-custom-me-objects-space .main-content-inner
+    .comm-page-custom-me-objects-space .main-content-inner,
+    .comm-page-custom-pme-esto-y-aquello .main-content-inner,
+    .comm-page-custom-me-digitos .main-content-inner,
+	.comm-page-custom-pme-noticias-falsas .main-content-inner,
+	.comm-page-custom-pme-cuentame .main-content-inner,
+	.comm-page-custom-pme-cuentame-mas .main-content-inner
     {
         min-height: 90vh;
         width: auto;
@@ -4576,7 +4710,7 @@
 .thumb-img-box .slds-col{cursor: pointer;}
 .thumb-img-box .slds-col:hover{opacity: 0.8;}
 .social_icons.footer-s-icon .social_bookmarks_twitter{
-    background-color: #1DA1F2;
+    background-color: #01151e;
     flex-basis: calc(33% - 4px);
     margin-left: 5px;
     padding: 0;
@@ -5186,6 +5320,11 @@
     margin-left: 0;
 }
 
+.longitgraph{
+    position: relative; 
+	height:60vh;
+}
+
     @media print {
         .slds-context-bar,
         .slds-builder-header_container, .footerArea {
@@ -5312,6 +5451,9 @@
         .faceImg{
             width: 220px !important;
         }
+        .camelBtn {
+            margin-right: 20px;
+        }
         .cFaceNameGame .face3Container .faceImg{
             width: 200px !important;
         }
@@ -5362,6 +5504,13 @@
             width: 150px;
         }
         .keep-track-ul .slds-button {
+            min-width: 100%;
+            text-align: center;
+            display: inline-block;
+            font-size: 20px !important;
+            padding: 15px 5px !important;
+        }
+        .camel-cactus-ul .slds-button {
             min-width: 100%;
             text-align: center;
             display: inline-block;
@@ -5439,12 +5588,12 @@
     }
 	
 	.two-button-set li{
-	width: 50%;
-	padding: 35px !important;
-	margin: 0 !important;
-	text-align: center;
-	}
-	
+        width: 50%;
+        padding: 35px !important;
+        margin: 0 !important;
+        text-align: center;
+    }
+        
     .two-button-set li .tabButtons{
         margin: 0 auto !important;
         padding: 0 !important;
@@ -5452,23 +5601,23 @@
     
     .four-button-set li{
         width: 25%;
-        padding: 20px !important;
+        padding: 15px !important;
         margin: 0 !important;
         text-align: center;
     }
+        
     .four-button-set li .tabButtons{
         margin: 0 auto !important;
         padding: 0 !important;
     }
-	
-		    .two-button-set2 li{
-		padding-left: 40px; !important;
-		padding-right: 40px; !important;
-     
-    }
-	
-	    .four-button-set2 li{
-        padding: 4px 4px; !important;
+        
+	.two-button-set2 li{
+		padding-left: 25px; !important;
+		padding-right: 25px; !important;    
+    }        
+    .four-button-set2 li {
+		padding-left: 2.5px; !important;
+		padding-right:2.5px; !important;
 		margin: 0 !important;
     }
 
@@ -5476,6 +5625,12 @@
         margin: auto;
         
     }
+	@media (max-width: 768px) {
+	.longitgraph{
+		width:60vh; 
+		height:60vh;
+	}
+	}
     @media (max-width: 768px),  (max-width: 900px) {
         .m-paddingLR20 .slds-button{
             padding-left: 20px;
@@ -5485,11 +5640,11 @@
         .cNumberLetterGame .btninputbx li{
             margin: 0 !important;
         }
-        .btninputbx li{
+        /*.btninputbx li{
             width: 24.3333333%;
             padding: 0;
             margin: 0 !important;
-        }
+        }Commented by Sibi for Spanish+Mobile conflict*/
         
         .btninputbx li img{
             margin: 0 auto;
@@ -5610,7 +5765,7 @@
             margin-left: auto;
             margin-right: auto;
         }
-        .comm-page-custom-me-seguimiento .main-content-inner, .comm-page-custom-me-objetos .main-content-inner, .comm-page-custom-me-parespalabrasreglas .main-content-inner, .comm-page-custom-me-reaccion .main-content-inner, .comm-page-custom-me-concentracion .main-content-inner, .comm-page-custom-me-nombresycaras .main-content-inner, .comm-page-custom-numberletter .main-content-inner, .comm-page-custom-keeptrack .main-content-inner, .comm-page-custom-me-objects-temporal .main-content-inner, .comm-page-custom-me-objects-space .main-content-inner{
+        .comm-page-custom-me-seguimiento .main-content-inner, .comm-page-custom-me-objetos .main-content-inner, .comm-page-custom-me-parespalabrasreglas .main-content-inner, .comm-page-custom-me-reaccion .main-content-inner, .comm-page-custom-me-concentracion .main-content-inner, .comm-page-custom-me-nombresycaras .main-content-inner, .comm-page-custom-numberletter .main-content-inner, .comm-page-custom-keeptrack .main-content-inner, .comm-page-custom-me-objects-temporal .main-content-inner, .comm-page-custom-me-objects-space .main-content-inner,  .comm-page-custom-me-digitos .main-content-inner, .comm-page-custom-pme-esto-y-aquello .main-content-inner,comm-page-custom-pme-noticias-falsas .main-content-inner,comm-page-custom-pme-cuentame .main-content-inner,comm-page-custom-pme-cuentame-mas .main-content-inner {
             min-height: 82vh;
         }
         .instractionb.box4 div, .box4 div, .btninput1, .comm-page-custom-me-reaccion .game_panel img {
@@ -6486,6 +6641,14 @@
             justify-content: center;
             margin-bottom: 10px;
         }
+        .camel-cactus-ul li .slds-button {
+            width: 100%;
+            text-align: center;
+            float: none;
+            justify-content: center;
+            margin-bottom: 10px;
+        }
+        
         .mainCrowd-outer-box {max-width: 100%;}
          .biological-sex-radioGroup fieldset .slds-radio{
             float: none;
@@ -6597,6 +6760,12 @@
             margin-top: 0;
         }
         }
+		@media (max-width: 480px) {
+			.longitgraph{
+				width:40vh; 
+				height:60vh;
+			}
+		}
         @media  (max-width: 415px) {
             .result-p-title{
                 font-size: 29px;
@@ -6646,6 +6815,11 @@
             .example-box .txt_input {
                 font-size: 26px;
             }
+			.example-box .txt_placeholder::placeholder {
+			  font-size: 18px;
+			  color: rgb(200, 200, 200);
+			  transition: font-size 0.1s ease-in-out;
+			}
             
         }
         @media (max-width: 360px) {
@@ -6667,6 +6841,11 @@
             .example-box .txt_input{
                font-size: 26px;
             }
+			.example-box .txt_placeholder::placeholder {
+			  font-size: 18px;
+			  color: rgb(200, 200, 200);
+			  transition: font-size 0.1s ease-in-out;
+			}
             .brainInfo .slds-form-element__control{
                 width: 100% !important;
                }
@@ -6833,7 +7012,12 @@
             .comm-page-custom-numberletter .main-content-inner, 
             .comm-page-custom-keeptrack .main-content-inner, 
             .comm-page-custom-me-objects-temporal .main-content-inner, 
-            .comm-page-custom-me-objects-space .main-content-inner {
+            .comm-page-custom-me-objects-space .main-content-inner,
+            .comm-page-custom-pme-esto-y-aquello .main-content-inner,
+            .comm-page-custom-me-digitos .main-content-inner,
+			.comm-page-custom-pme-noticias-falsas .main-content-inner,
+			.comm-page-custom-pme-cuentame .main-content-inner,
+			.comm-page-custom-pme-cuentame-mas .main-content-inner			{
                 min-height: 90vh;
             }
             }
@@ -6844,7 +7028,7 @@
             }
             
         @media (max-width: 767px) {
-            .comm-page-custom-me-seguimiento .main-content-inner, .comm-page-custom-me-objetos .main-content-inner, .comm-page-custom-me-parespalabrasreglas .main-content-inner, .comm-page-custom-me-reaccion .main-content-inner, .comm-page-custom-me-concentracion .main-content-inner, .comm-page-custom-me-nombresycaras .main-content-inner, .comm-page-custom-numberletter .main-content-inner, .comm-page-custom-keeptrack .main-content-inner, .comm-page-custom-me-objects-temporal .main-content-inner, .comm-page-custom-me-objects-space .main-content-inner{
+            .comm-page-custom-me-seguimiento .main-content-inner, .comm-page-custom-me-objetos .main-content-inner, .comm-page-custom-me-parespalabrasreglas .main-content-inner, .comm-page-custom-me-reaccion .main-content-inner, .comm-page-custom-me-concentracion .main-content-inner, .comm-page-custom-me-nombresycaras .main-content-inner, .comm-page-custom-numberletter .main-content-inner, .comm-page-custom-keeptrack .main-content-inner, .comm-page-custom-me-objects-temporal .main-content-inner, .comm-page-custom-me-objects-space .main-content-inner, .comm-page-custom-me-digitos .main-content-inner, .comm-page-custom-pme-esto-y-aquello .main-content-inner,comm-page-custom-pme-noticias-falsas .main-content-inner,comm-page-custom-pme-cuentame .main-content-inner,comm-page-custom-pme-cuentame-mas .main-content-inner{
                 min-height: 72vh;
             }
 
@@ -6873,6 +7057,11 @@
                 padding-left: 0;
                 padding-right: 0;
             }
+			.example-box .txt_placeholder::placeholder {
+			  font-size: 18px;
+			  color: rgb(200, 200, 200);
+			  transition: font-size 0.1s ease-in-out;
+			}
             .cMemorytestPage1 .game_block,
             .cMemorytestPage2 .game_block,
             .cMemorytestPage3 .game_block,
@@ -6943,6 +7132,14 @@
            } */
     
         }
+		
+@media (min-width: 900px) {
+        .mc-combobox.slds-form-element > div .slds-form-element__control .slds-combobox_container .slds-combobox_container, .age, .speakingLanguageAge, .otherGender {
+			width: 46vw !important;
+			max-width: 560px !important;
+			min-width: 380px !important;
+		}
+}
 
         body{ 
             opacity: 1; 
@@ -6968,5 +7165,200 @@
         to {opacity: 1;}
         }
 
-       
-    
+        .digit-symbol-ul {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            list-style: none;
+            padding: 0;
+        }
+        
+        .digit-symbol-ul li {
+            margin: 0 5px; /* Adjust the margin between buttons */
+        }
+        
+        .digit-symbol-ul li .slds-button {
+            border-radius: 3px !important;
+            box-shadow: rgb(0 0 0 / 30%) 0px 11px 12px -7px;
+            color: #163248 !important;
+            background-color: #fff !important;
+            font-weight: 200 !important;
+            border: 1px #bdbdbd solid !important;
+            max-width: 100%;
+            font-size: 24px; /* Increase the font size */
+            padding: 15px 10px; /* Adjust padding for button size */
+        }
+        
+        .digit-symbol-ul li .slds-button[disabled],
+        .digit-symbol-ul li .slds-button:disabled {
+            background-color: #fff !important;
+            border: 1px #bdbdbd solid !important;
+            color: #000305 !important;
+        }
+        
+        .digit-symbol-ul .inputbtn_lbl {
+            margin-bottom: 50px;
+            border: 1px #ccc solid;
+        }
+        
+        .digit-symbol-ul {
+            justify-content: center;
+            margin: auto;
+            margin-top: 10px;
+        }
+        
+        .digit-symbol-ul .slds-button {
+            font-size: 24px !important;
+            padding: 12px 5px 12px !important;
+            min-width: 100%;
+            text-align: center;
+            display: inline-block;
+            width : 80px;
+        }   
+        .camel-cactus-ul {
+            justify-content: center;
+            margin: auto;
+            margin-top: 16px;
+        }
+        
+        .camel-cactus-ul li{	
+            padding-right: 15px;
+            padding-bottom: 2px;    
+            min-width: 210px;    
+            width: 25%;
+            float: none;
+            display: inline-block;
+            vertical-align: middle;
+        }
+        .camel-cactus-ul div {   
+            padding-right: 15px;
+            padding-bottom: 2px;    
+            min-width: 210px;    
+            width: 25%;
+            float: none;
+            display: inline-block;
+            vertical-align: middle;
+        }
+        
+        
+        .camel-cactus-ul li .slds-button {
+            border-radius: 3px !important;
+            box-shadow: rgb(0 0 0 / 30%) 0px 11px 12px -7px;
+            color: #163248 !important;
+            background-color: #fff !important;
+            font-weight: 200 !important;
+            border: 1px #bdbdbd solid !important;
+            max-width: 100%;
+        }
+        
+        .camel-cactus-ul .slds-button {
+            font-size: 24px !important;
+            padding: 15px 5px 15px !important;
+            min-width: 100%;
+            text-align: center;
+            display: inline-block;
+        }      
+        
+        @media (max-width: 600px) {
+            .camel-cactus-ul li{	
+                padding-right: 15px;
+                padding-bottom: 2px;    
+                min-width: 35vw;    
+                width: 25%;
+                float: none;
+                display: inline-block;
+                vertical-align: middle;
+            }
+            .camel-cactus-ul div {   
+                padding-right: 15px;
+                padding-bottom: 2px;    
+                min-width: 35vw;    
+                width: 25%;
+                float: none;
+                display: inline-block;
+                vertical-align: middle;
+            } 
+        }
+
+            .fake-news-ul {
+                justify-content: center;
+                margin: auto;
+                margin-top: 14px;
+            }
+            
+            .fake-news-ul li,
+            .fake-news-ul div {
+                /* float:left; */
+                padding: 2px;
+                /* min-width: 234px; */
+                min-width: 210px;
+            
+                /* width: 16.66666%; */
+                width: 25%;
+                float: none;
+                display: inline-block;
+                vertical-align: middle;
+            }
+            
+            .fake-news-ul li .slds-button {
+                border-radius: 2px !important;
+                box-shadow: rgb(0 0 0 / 30%) 0px 11px 12px -7px;
+                color: #163248 !important;
+                background-color: #fff !important;
+                font-weight: 200 !important;
+                border: 1px #bdbdbd solid !important;
+                max-width: 100%;
+            }
+            
+            .fake-news-ul li .slds-button[disabled],
+            .fake-news-ul li .slds-button:disabled {
+                background-color: #fff !important;
+                border: 1px #bdbdbd solid !important;
+                color: #000305 !important;
+            
+            }
+            
+            .fake-news-ul .slds-button {
+                font-size: 22px !important;
+                padding: 15px 5px 15px !important;
+                min-width: 100%;
+                text-align: center;
+                display: inline-block;
+            }
+            
+            .fake-news-ul li .slds-button:hover {
+                background-color: rgb(233, 233, 233) !important;
+                color: #1e4463;
+            }
+            
+            .fake-news-ul .slds-button {
+                    min-width: 100%;
+                    text-align: center;
+                    display: inline-block;
+                    font-size: 18px !important;
+                    padding: 15px 5px !important;
+            }
+            
+            .fake-news-ul li .slds-button:hover {
+                    background-color: #fff !important;
+                    color: #1e4463;
+            }
+            
+            .fake-news-ul li .slds-button {
+                    width: 100%;
+                    text-align: center;
+                    float: none;
+                    justify-content: center;
+                    margin-bottom: 3px;
+            }
+
+            @media (max-width: 600px) {
+                .fake-news-ul .slds-button {
+                    min-width: 100%;
+                    text-align: center;
+                    display: inline-block;
+                    font-size: 18px !important;
+                    padding: 7px 4px !important;
+                }
+            }
+            

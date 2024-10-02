@@ -32,7 +32,8 @@ public class ScheduleBatchEmailTempBatch implements Database.Batchable<sObject>,
     // execute  method to reset password of the use  whose contact  consent sign on is null and it had been 1,7 or 45 days    
     public void execute(Database.BatchableContext bc, List<Contact> ConLst)
     {
-        Set<Id> conId = new Set<Id>();        
+        Set<Id> conId = new Set<Id>();  
+        system.debug('ConLst'+ConLst.size());
         for(Contact con : ConLst)
         {             
             // createing map to get the contact for which password is getting reset 
@@ -51,6 +52,7 @@ public class ScheduleBatchEmailTempBatch implements Database.Batchable<sObject>,
             if(email45dayFireToMap.containskey(u.ContactId)){ email45dayFireToLst = u.Username +', '+ (email45dayFireToLst != null ? email45dayFireToLst : ''); }          
       
         }       
+        	
     }
     // finish method firring the email for which password is getting reset 
     public void finish(Database.BatchableContext bc){

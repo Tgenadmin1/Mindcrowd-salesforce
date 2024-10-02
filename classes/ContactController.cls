@@ -75,7 +75,7 @@ public without sharing class ContactController
                   }
                 else if(campaigntype == 'bean game' && BeanGameStat !='Opened'){
                     return 'DuplicateSD';
-                }
+                  }
                 else{
                 if(ResponseAddress.Address1==''){
                     Shipping_Detail__c shiprecordcreate = new Shipping_Detail__c(
@@ -319,7 +319,7 @@ public without sharing class ContactController
     @AuraEnabled(cacheable=true)
     public static Contact fetchContactFields1(String participantcode){
     	
-        	Contact con = [SELECT Id,FirstName,LastName,Email,ParticipantCode__c,Bean_Game__c FROM Contact 
+        	Contact con = [SELECT Id,FirstName,LastName,Email,ParticipantCode__c,Bean_Game__c,Consent_signed_on__c FROM Contact 
                                  where ParticipantCode__c=:participantcode limit 1];
         return con;
     }
@@ -392,12 +392,28 @@ public without sharing class ContactController
     System.debug('customSettingValues: ' + customSettingValues);
     return customSettingValues;
 }
+    @AuraEnabled
+    public static String updateConsent(String participantcode) {
+        String statuscode='';
+        try{
+            List<Contact> Cont = [select Id from Contact where ParticipantCode__c =: participantcode];
+            if(Cont.size()>0){
+                Cont[0].Consent_Signed_on__c = system.today();
+                update Cont[0];
+                statuscode='Success';            
+           }       
+        }
+        catch(Exception e){
+            statuscode='Failed';
+        }        
+        return statuscode;
+    }
 
+    @AuraEnabled(cacheable=true)
+    public static Contact contactHistorical(String participantcode) {
 
-    // @AuraEnabled(cacheable=true)
-    // Public static string getCustomSettingValues(){
-    //     List<CurrRunnCamp__c> existingRecords = CurrRunnCamp__c.getall().values();
-    //     system.debug('existingRecords ' + existingRecords);
-    //     return 'true';
-    // } 
+    Contact conh = [SELECT Id, Campaign_Code__c FROM Contact where ParticipantCode__c =:participantcode];
+    return conh;
+    }
+
 }

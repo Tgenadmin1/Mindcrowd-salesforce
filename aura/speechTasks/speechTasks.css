@@ -178,6 +178,17 @@
     color: transparent !important;
 }
 
+.THIS #nextBtton2 {
+    opacity: 1;
+    visibility: visible;    
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+  }
+
+  .THIS #nextBtton2.hidden {
+    opacity: 0;
+    visibility: hidden;
+  }
+
 /*.THIS .game_panel_speechtask {
     width: 100%;
     height: 100%;
@@ -223,7 +234,7 @@
     margin-bottom: 10px;
     text-align: left;
     text-shadow: 0px 0px 2px rgb(0 0 0 / 24%);
-    line-height: 24px;
+    line-height: 28px;
     padding-bottom: 5px;
     text-transform: none;
     font-family: 'whitneylight', Helvetica, Arial, sans-serif;
@@ -237,14 +248,29 @@
     margin-bottom: 10px;
     text-align: left;
     text-shadow: 0px 0px 2px rgb(0 0 0 / 24%);
-    padding-bottom: 5px;
-    line-height: 20px;
+    /*padding-bottom: 5px;*/
+    line-height: 26px;
     text-transform: none;
     font-family: 'whitneylight', Helvetica, Arial, sans-serif;
     font-weight: 300;
-    color: #163248;
+    color: #6b6494;
+    margin-top: 20px;
+    padding: 10px;
 }
 
+.THIS .reclabel {
+    font-size: 20px;
+    margin-bottom: 10px;
+    text-align: center;
+    text-shadow: 0px 0px 2px rgb(0 0 0 / 24%);
+    line-height: 34px;
+    padding-bottom: 5px;
+    text-transform: none;
+    font-family: 'whitneylight', Helvetica, Arial, sans-serif;
+    font-weight: 300;
+    color: #6b6494;
+    margin-left: 1em;  
+}
 
 .THIS .game_block_speechtask {
     font-size: 25px;
@@ -294,6 +320,66 @@
 .THIS .txtarea {
     width: 100%;
     height: 200px;
+}
+
+
+.THIS .nextbuttmsg {
+    font-size: 18px;
+    color: #6b6494;
+    padding: 10px;
+    margin-top: 10px;
+    font-weight: 600;
+    font-family: 'whitneylight', Helvetica, Arial, sans-serif;
+}
+
+.THIS .notemsg {
+    color: #6b6494;
+    font-weight: 600;
+}
+
+.THIS .error {
+    border: 2px solid red;
+}
+
+.THIS .startButtondiv {
+    margin-left: 2em;
+}
+
+.THIS .magenta-btn-blue
+{
+    padding: 15px 30px 13px;
+    font-size: 18px;
+    min-width: 139px;
+    background-color: blue;
+    border-color: blue;
+    color: #ffffff;
+    text-transform: uppercase;
+    font-family: 'Whitneybook', Helvetica, Arial, sans-serif;
+    font-weight: 400;
+    line-height: 1.2em;
+    position: relative;
+    text-align: center;
+    max-width: 100%;
+    font-style: normal;
+    border-radius: 7px;
+}
+
+.THIS .microphone {
+    display: flex; 
+    flex-direction: row;
+    width: 100%;
+    align-items: center;
+    justify-content: center; /* Add this line to center vertically */
+    text-align: center;
+    padding-left: 40px;
+}
+
+@media (min-width: 600px) {
+    .THIS #canvas, .THIS #recording {
+        /*flex: 1;*/
+        margin: 10px;
+        padding: 10px;
+    }
 }
 
 .THIS .recording-container {
@@ -397,35 +483,184 @@
   }
   
 
-.THIS .timer {
-    font-size: 5em; /* Adjust the font size to make it larger */
-    color: #ea526e; /* Change the text color to make it flashy */
-    margin-bottom: 20px;
-    margin-top: 100px;
-    padding: 10px;
+
+
+@media (min-width: 100px) and (max-width: 290px) {
+    .THIS .timer {
+        font-size: 2em; /* Adjust the font size to make it larger */
+        color: #ea526e; /* Change the text color to make it flashy */
+        margin-bottom: 10px;
+        margin-top: 5px;
+        padding: 5px;
+    }
+    
 
 }
 
-@media (max-width: 600px) {
-
-    .THIS .container {
-        flex-direction: column; /* Change to a single column layout */
+@media (min-width: 291px) and (max-width: 342px) {
+    .THIS .timer {
+        font-size: 2.5em; /* Adjust the font size to make it larger */
+        color: #ea526e; /* Change the text color to make it flashy */
+        margin-bottom: 10px;
+        margin-top: 5px;
+        padding: 5px;
     }
+    
 
-    .THIS .column {
-        width: 100%; /* Full width for mobile */
-    }
+}
 
+@media (min-width: 343px) and (max-width: 380px) {
+    .THIS .timer {
+        font-size: 3em; /* Adjust the font size to make it larger */
+        color: #ea526e; /* Change the text color to make it flashy */
+        margin-bottom: 10px;
+        margin-top: 5px;
+        padding: 5px;
+    }   
+}
+
+@media (min-width: 381px) and (max-width: 420px) {
+    .THIS .timer {
+        font-size: 3.5em; /* Adjust the font size to make it larger */
+        color: #ea526e; /* Change the text color to make it flashy */
+        margin-bottom: 10px;
+        margin-top: 5px;
+        padding: 5px;
+    }   
+}
+
+    
+@media (min-width: 421px) and (max-width: 500px) {
     .THIS .timer {
         font-size: 4em; /* Adjust the font size to make it larger */
         color: #ea526e; /* Change the text color to make it flashy */
         margin-bottom: 10px;
         margin-top: 5px;
         padding: 5px;
-   
+    }   
+}
+
+    @media (min-width: 501px) and (max-width: 600px) {
+        .THIS .timer {
+            font-size: 5em; /* Adjust the font size to make it larger */
+            color: #ea526e; /* Change the text color to make it flashy */
+            margin-bottom: 10px;
+            margin-top: 5px;
+            padding: 5px;
+        }  
+
+}
+@media (min-width: 601px) and (max-width: 700px) {
+    .THIS .timer {
+        font-size: 2.75em; /* Adjust the font size to make it larger */
+        color: #ea526e; /* Change the text color to make it flashy */
+        margin-bottom: 20px;
+        margin-top: 100px;
+        padding: 10px;    
+    }   
+
+}
+
+@media (min-width: 701px) and (max-width: 912px) {
+    .THIS .timer {
+        font-size: 3.5em; /* Adjust the font size to make it larger */
+        color: #ea526e; /* Change the text color to make it flashy */
+        margin-bottom: 20px;
+        margin-top: 100px;
+        padding: 10px;    
+    }   
+
+}
+
+@media (min-width: 913px) and (max-width: 972px) {
+    .THIS .timer {
+        font-size: 3.5em; /* Adjust the font size to make it larger */
+        color: #ea526e; /* Change the text color to make it flashy */
+        margin-bottom: 20px;
+        margin-top: 100px;
+        padding: 10px;    
+    }  
+} 
+
+@media (min-width: 973px) and (max-width: 1060px) {
+    .THIS .timer {
+        font-size: 4em; /* Adjust the font size to make it larger */
+        color: #ea526e; /* Change the text color to make it flashy */
+        margin-bottom: 20px;
+        margin-top: 100px;
+        padding: 10px;    
+    }  
+} 
+
+    @media (min-width: 1061px) and (max-width: 1280px) {
+        .THIS .timer {
+            font-size: 4.5em; /* Adjust the font size to make it larger */
+            color: #ea526e; /* Change the text color to make it flashy */
+            margin-bottom: 20px;
+            margin-top: 100px;
+            padding: 10px;       
+         }
+        }   
+
+        @media (min-width: 1281px) {
+            .THIS .timer {
+                font-size: 5em; /* Adjust the font size to make it larger */
+                color: #ea526e; /* Change the text color to make it flashy */
+                margin-bottom: 20px;
+                margin-top: 100px;
+                padding: 10px;       
+             }
+        } 
+
+
+.THIS .nextButton2 {
+    margin: 5px; /* Adjust the value to your preference */
+}
+
+
+
+
+/*@media (min-width: 601px) {
+    .THIS .nextBttondiv {
+        float: right;
+    }
+    
+    .THIS .nextBtton2
+    {
+        float: right;
     }
 
-    .THIS .title_speech_task {
+}*/
+
+
+@media (max-width: 600px) {
+
+    .THIS .container {
+        flex-direction: column; /* Change to a single column layout */
+        align-items: center; 
+        text-align: center; 
+    }  
+
+
+    .THIS .microphone {
+        display: flex; 
+        flex-direction: column;
+        align-items: center;
+        justify-content: center; /* Add this line to center vertically */
+        text-align: center;
+        padding-left: 0px;
+    }
+
+    .THIS .startButtondiv {
+        margin-left: 0; /* Remove left margin */
+        margin-top: 1em; /* Add top margin for spacing */
+    }
+
+    .THIS .column {
+        width: 100%; /* Full width for mobile */
+    }
+
+     .THIS .title_speech_task {
         font-size: 22px;
         /* border-bottom: 1px #afafaf solid; */
         text-align: left;
@@ -454,5 +689,7 @@
         width: 100%; /* Make the audio element fill its container horizontally */
         height: 100%; /* Make the audio element fill its container vertically */
     }
+
+
     
 }

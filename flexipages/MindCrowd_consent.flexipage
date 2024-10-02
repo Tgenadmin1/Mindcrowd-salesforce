@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlexiPage xmlns="http://soap.sforce.com/2006/04/metadata">
+    <flexiPageRegions>
+        <appendable>enabled</appendable>
+        <name>header</name>
+        <prependable>enabled</prependable>
+        <replaceable>enabled</replaceable>
+        <type>Region</type>
+    </flexiPageRegions>
+    <flexiPageRegions>
+        <appendable>enabled</appendable>
+        <itemInstances>
+            <componentInstance>
+                <componentInstanceProperties>
+                    <name>ConsentPDF</name>
+                    <value>mhuentelman21-022-Amendment-1-Catchment-ICF-050522.pdf</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>consent01</name>
+                    <value>Please click on the checkbox at the bottom of the page before pressing the &apos;I Agree&apos; button.</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>consent02</name>
+                    <value>Please read the following information before agreeing to participate in this research study.</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>consent03</name>
+                    <value>This research study is conducted by Dr. Matt Huentelman at the Translational Genomics Research Institute (or TGen) in Phoenix, Arizona.</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>consent04</name>
+                    <value>The purpose of this study is to understand the factors that influence how the brain ages. We are interested in factors such as your lifestyle choices, your medical or family history, and even your genetic make-up. If we better understand how the brain ages, we may be able to understand what happens to people who experience an age-related brain disease (like Alzheimer&apos;s disease).</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>consent05</name>
+                    <value>What will I have to do?</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>consent06</name>
+                    <value>You will take one attention test and one memory test, and answer a few study-related questions.</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>consent07</name>
+                    <value>How will you use my information?</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>consent08</name>
+                    <value>We will use it to study, analyze, and understand how memory works in healthy people.</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>consent09</name>
+                    <value>We may contact you again for future brain studies. Most studies will be performed online.</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>consent10</name>
+                    <value>How old do I have to be to participate?</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>consent11</name>
+                    <value>18 years old or older.</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>consent12</name>
+                    <value>What are my alternatives to being in this study?</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>consent13</name>
+                    <value>This is not a treatment study. Your alternative is not to participate.</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>consent14</name>
+                    <value>Are there any risks?</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>consent15</name>
+                    <value>No</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>consent16</name>
+                    <value>Will I get paid?</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>consent17</name>
+                    <value>Does it cost me anything to participate?</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>consent18</name>
+                    <value>Will you share my study data?</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>consent19</name>
+                    <value>Sharing research data with other scientists is an important part of the research process and helps advance scientific progress. We will share de-identified data from this study with other researchers to help further research into the human brain.</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>consent20</name>
+                    <value>Will you share my personal information with other people?</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>consent21</name>
+                    <value>No, we will not share your personal information without your permission. If you consent to participate in a MindCrowd collaborative study (or have previously done so), we may share or receive identifiable data such as your name or email address with our collaborative partners. This would only be done to link your study data. Your information could also be shared with the FDA and the IRB overseeing this study.</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>consent22</name>
+                    <value>To help protect your privacy, we have obtained a Certificate of Confidentiality from the National Institutes of Health. This means researchers may refuse to give out study information that identifies you. For example, if there were a court order requesting your study records, TGen would not give out information that identifies you, unless you have consented for this use. The Certificate does permit TGen to disclose your information when:</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>consent23</name>
+                    <value>Required by Federal, State, or local laws. This excludes instances of Federal, State, or local civil, criminal, administrative, legislative, or other proceedings;</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>consent24</name>
+                    <value>You have consented to the disclosure, including for your medical treatment;</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>consent25</name>
+                    <value>Done as part of other approved research studies.</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>consent26</name>
+                    <value>A Certificate of Confidentiality does not prevent you or someone else, like a member of your family, from voluntarily sharing information about yourself or your involvement in this research. If you want your research information released to an insurer, medical care provider, or any other person not connected with the research, you must provide consent to allow the researchers to release it.</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>consent27</name>
+                    <value>What if I change my mind and don&apos;t want to participate in the study anymore?</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>consent28</name>
+                    <value>Your participation is completely voluntary. You do not have to participate and you may stop at any time. Your decision will not result in any penalty or loss of benefits to which you are otherwise entitled. Please contact the Study Coordinator at crc@tgen.org to withdraw from the study.</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>consent29</name>
+                    <value>What if I have questions or comments?</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>consent30</name>
+                    <value>If you have any questions, concerns or complaints about this research, you may contact Dr. Matt Huentelman at mhuentelman@tgen.org or 602-343-8653 (24 hours).</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>consent31</name>
+                    <value>Will you contact me in the future?</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>consent32</name>
+                    <value>We may contact you in the future via email to offer you to participate in new scientific research studies. Participation in any of our studies is completely voluntary.</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>consent33</name>
+                    <value>What if I have questions about my rights in this research, have a complaint, or want to report a problem to someone besides the researcher?</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>consent34</name>
+                    <value>If you have questions about your rights as a research participant in this study or if you have questions, concerns or complaints about the research, you may contact WCG IRB at:</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>consent35</name>
+                    <value>1019 39th Avenue SE Suite 120</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>consent36</name>
+                    <value>Puyallup, Washington 98374-2115</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>consent37</name>
+                    <value>Telephone:  855-818-2289</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>consent38</name>
+                    <value>E-mail:</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>consent39</name>
+                    <value>researchquestions@wcgirb.com</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>consent40</name>
+                    <value>WCG IRB is a group of people who perform independent review of research.</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>consent41</name>
+                    <value>For questions, concerns, suggestions, complaints that are not being addressed by the research team, or in case of research-related harm, please contact the TGen Office of Research Compliance at</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>consent42</name>
+                    <value>irb@tgen.org.</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>consent43</name>
+                    <value>If you have questions about your rights as a research participant in this study or if you have questions, concerns or complaints about the research, you may contact WCG IRB at:</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>consent_text_11</name>
+                    <value>&lt;span class=&quot;concent-check-label&quot;&gt;If you would like to participate, please check the empty box to confirm that:&lt;/span&gt;&lt;ul&gt;&lt;li&gt;you are 18 years of age or older,&lt;/li&gt;&lt;li&gt;you have read and understood the information above and want to participate in this research study, and&lt;/li&gt;&lt;li&gt;you are not using this test to self-diagnose or predict your future risk of cognitive decline, Alzheimer’s disease, or any other dementia.&lt;/li&gt;&lt;/ul&gt;</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>consent_text_12</name>
+                    <value>If you would like a copy of the consent form for your records,</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>consent_text_13</name>
+                    <value>click here to download</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>consent_text_14</name>
+                    <value>one</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>consent_text_15</name>
+                    <value>I AGREE</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>consent_text_6</name>
+                    <value>THE MINDCROWD SCIENTIFIC STUDY</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>consent_text_7</name>
+                    <value>Information and Frequently Asked Questions</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>consent_text_8</name>
+                    <value>Please read the following information and the answers to frequently asked questions about MindCrowd. To play the free MindCrowd memory and attention game, check the box below and press I Agree.</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>strTitle</name>
+                    <value>Welcome in Salesforce</value>
+                </componentInstanceProperties>
+                <componentName>consent</componentName>
+                <identifier>consent</identifier>
+            </componentInstance>
+        </itemInstances>
+        <name>content</name>
+        <prependable>enabled</prependable>
+        <replaceable>enabled</replaceable>
+        <type>Region</type>
+    </flexiPageRegions>
+    <flexiPageRegions>
+        <appendable>enabled</appendable>
+        <name>footer</name>
+        <prependable>enabled</prependable>
+        <replaceable>enabled</replaceable>
+        <type>Region</type>
+    </flexiPageRegions>
+    <flexiPageRegions>
+        <appendable>enabled</appendable>
+        <itemInstances>
+            <componentInstance>
+                <componentInstanceProperties>
+                    <name>customHeadTags</name>
+                    <value>&lt;meta name=&quot;robots&quot; content=&quot;noindex, follow&quot;&gt;
+&lt;meta name=&quot;description&quot; content=&quot;MindCrowd is a scientific research study. It is not a diagnostic test. To participate, please, read and agree to the terms of the study.&quot;&gt;</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>description</name>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>title</name>
+                    <value>MindCrowd Research Study • FAQ • Consent</value>
+                </componentInstanceProperties>
+                <componentName>forceCommunity:seoAssistant</componentName>
+                <identifier>forceCommunity_seoAssistant</identifier>
+            </componentInstance>
+        </itemInstances>
+        <name>sfdcHiddenRegion</name>
+        <prependable>enabled</prependable>
+        <replaceable>enabled</replaceable>
+        <type>Region</type>
+    </flexiPageRegions>
+    <masterLabel>consent</masterLabel>
+    <template>
+        <name>siteforce:sldsOneColLayout</name>
+    </template>
+    <type>CommAppPage</type>
+</FlexiPage>

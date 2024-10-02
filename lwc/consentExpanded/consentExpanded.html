@@ -1,0 +1,139 @@
+<!--   @description  : This Component works for checking consent and languages for the guest user. 
+  @author            : Sunil Kumar
+  @UI author         : Raj
+  @last modified on  : 26-05-2021
+  @apex controller   : CustomLoginController
+  @description       : This is the consent web Page for guest User.
+  @last modified on  : 09-09-2022
+ -->
+ <template>
+        <template if:true={ErrorModalOpen}>
+            <section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-modal="true" aria-describedby="modal-content-id-1" class="slds-modal slds-modal_small ssm slds-fade-in-open">
+                <div class="slds-modal__container">
+                     <header class="slds-modal__header slds-modal__header_empty">
+                        <lightning-button-icon icon-name="utility:close" alternative-text={close_btn_label}   variant="bare-inverse" onclick={closeModal} class="slds-modal__close ">  
+                        </lightning-button-icon> 
+                      </header>
+                    <div class="slds-modal__content slds-p-around_medium" id="modal-content-id-2">
+                        <P  class="text-center">{DBS_text_88}</P>
+                     </div>
+                </div>
+            </section>
+            <div class="slds-backdrop slds-backdrop_open"></div>
+        </template>
+            <div class="mainCrowd-outer-box marginB30">
+                <template if:true={isLoading}>
+                    <lightning-spinner variant="base" size="large" class="slds-m-right_medium"></lightning-spinner>
+                </template>
+                <div class="mainCrowd-inner-box">
+                    <form  method="POST" name="ConcentStatus">     
+                        <lightning-layout multiple-rows="true" class="inner_content">                            
+                            <lightning-layout-item size="12" small-device-size="12" medium-device-size="12">                        
+                            <div class="text-center marginB20 inner-title">{consent_text_6}</div>                                                 
+                            </lightning-layout-item>
+                            <lightning-layout-item size="12" small-device-size="12" medium-device-size="12">
+                                <div class="text-center  marginB20 subtitle">{consent_text_7}
+                               
+                                </div>
+                                                                                        
+                            </lightning-layout-item>
+                            <lightning-layout-item size="12" small-device-size="12" medium-device-size="12">
+                                <p style="text-align: justify;">{consent_text_8}</p>                                                           
+                            </lightning-layout-item>
+                        
+                            <lightning-layout-item size="12" small-device-size="12" medium-device-size="12" class="participation-form-item-row paddingR0">
+                                <div class="white_wrapper_content participation-form-text-aria printDiv">
+                                    
+                                    <p>{consentExpanded01}</p>
+                                    <p>{consentExpanded02}</p>
+                                    <p>{consentExpanded03}</p>
+                                    <p>{consentExpanded04}</p>
+                                    <p>{consentExpanded05}</p>
+                                    <p ><span class=" question-text"><b>{consentExpanded06}</b></span><br>
+                                        {consentExpanded07}
+                                        </p>
+                                        <p ><span class="question-text"><b>{consentExpanded08}</b></span><br>
+                                            {consentExpanded09}
+                                            </p> 
+                                        <p ><span class="question-text"><b>{consentExpanded10}</b></span><br>
+                                            {consentExpanded11}
+                                            </p>   
+                                            <p ><span class="question-text"><b>{consentExpanded12}</b></span><br>
+                                            {consentExpanded13}
+                                            </p>  
+                                            <p ><span class="question-text"><b>{consentExpanded14}</b></span><br>
+                                            {consentExpanded15}
+                                            </p>  
+                                            <p ><span class="question-text"><b>{consentExpanded16}</b></span><br>
+                                            {consentExpanded17} 
+                                            </p>  
+                                            <p>{consentExpanded18}<br></p>
+                                            
+                                        <ul class="p-list">
+                                            <li>{consentExpanded19}</li>
+                                            <li>{consentExpanded20}</li>
+                                            <li>{consentExpanded21}</li>
+                            
+                                        </ul>
+                                        <p>{consentExpanded22}</p>  
+                                        <p ><span class="question-text"><b>{consentExpanded23}</b></span><br>
+                                            {consentExpanded24}
+                                            </p>  
+                                            <p ><span class="question-text"><b>{consentExpanded25}</b></span><br>
+                                            {consentExpanded26} 
+                                            </p>  
+                                            <p ><span class="question-text"><b>{consentExpanded27}</b></span><br>
+                                            {consentExpanded28}
+                                            </p>  
+                                            <p class="padding0"><span class="question-text"><b>{consentExpanded29}</b></span>
+                                            <br> {consentExpanded30}
+                                            
+                                            </p> 
+                                            <div class="paddingL30">
+                                                {consentExpanded31}
+                                            <br>{consentExpanded32}
+                                            <br>{consentExpanded33}
+                                            <br> {consentExpanded34}  <a href="mailto:?to=researchquestions@wcgirb.com">{consent39}</a>
+                                            </div>
+                                        <p></p>  
+                                        <p>{consentExpanded35}</p>  
+                                        <p>{consentExpanded36} <a href="mailto:?to=irb@tgen.org">{consentExpanded37}</a> </p> 
+                                                                               
+                                </div>                                                           
+                            </lightning-layout-item>
+
+                            <lightning-layout-item size="12" small-device-size="12" medium-device-size="12" large-device-size="12" class=" consent-form-item-row consent_form">
+                            
+                                <div class="slds-grid slds-gutters">
+                                    
+                                    <div class="slds-col slds-size_1-of-10 paddingL0 paddingR0 remove-label ">
+                                        <lightning-input class="information remove-label" message-when-value-missing="Select" onchange={checkTerm1} type="checkbox" name="termandcondition1"></lightning-input>
+                                    </div>
+                                    <div class="slds-col ">
+                                        <p><lightning-formatted-rich-text value={consentExpanded_text_11}></lightning-formatted-rich-text> </p>
+                                    </div>
+                                </div>                                
+                            </lightning-layout-item>
+                            <lightning-layout-item size="12" small-device-size="12" medium-device-size="12" large-device-size="12" class=" consent-form-item-row">                            
+                                <div class="slds-grid slds-gutters">                                    
+                                    <div class="slds-col slds-size_1-of-10 paddingL0 paddingR0 remove-label ">
+                                        <lightning-input class="information remove-label" message-when-value-missing="Select" onchange={checkTerm} type="checkbox" name="termandcondition2"></lightning-input>
+                                    </div>
+                                    <div class="slds-col ">
+                                        <p><lightning-formatted-rich-text value={consentExpanded_text_12}></lightning-formatted-rich-text> </p>
+                                    </div>
+                                </div>
+                            </lightning-layout-item>
+                            <lightning-layout-item size="12" small-device-size="12" medium-device-size="12" large-device-size="12">
+                                <lightning-button variant="brand" label={DBS_text_85} title={DBS_text_85} onclick={updateContactFields}
+                                  class="magenta-btn slds-float_left mb10">
+                                </lightning-button>
+                                <lightning-button variant="brand" label={DBS_text_93} title={DBS_text_93} onclick={decline}
+                                  class="magenta-btn slds-float_left slds-m-left_small m-paddingLR20">
+                                </lightning-button>
+                            </lightning-layout-item>
+                    </lightning-layout>  
+                </form>  
+                </div>
+            </div>  
+ </template>

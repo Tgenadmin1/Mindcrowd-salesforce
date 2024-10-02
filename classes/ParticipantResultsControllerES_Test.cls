@@ -191,4 +191,116 @@ public class ParticipantResultsControllerES_Test
        // List<Participant_Game_Info__c> lstPartGameInfo=[SELECT Id, Game_Name__c, participantFeatureImageURL__c, Contact_Name__c, Game_Play_Status__c FROM Participant_Game_Info__c Where Participant_Game_Info__c.Contact_Name__c=:currentUserId]; 
         ParticipantResultsControllerES.saveSign(base64Data, contentType, currentUserId, gameName);
     }
+    
+        @isTest
+    private static void testgetGraphdData()
+    {     
+        User tempUser = [Select Id,ContactId From User Where Username Like '%sfdc%' limit 1];
+        Id contId = tempUser.ContactId;
+        List<String> gameNames = new List<String>{'Face-Name Associates','Flanker','Keep Track','Object Discrimination','Object Spatial','Object Temporal','Deary Simple And Complex Reaction Time','Object Recognition And Similarity','Letter-Number Sequencing','Verbal Paired Associates'};
+		List<Game_Detail__c> games = new List<Game_Detail__c>();
+		List<People_Like_You_Data__c> plys = new List<People_Like_You_Data__c>();
+		List<Participant_Game_Info__c> pgis = new List<Participant_Game_Info__c>();
+        List<Participant_Game_Info__c> pgis2 = new List<Participant_Game_Info__c>();
+		List<Participant_Game_Response__c> pgrs = new List<Participant_Game_Response__c>();        
+        List<Game_Detail__c> exgames = [select Id,Max_Score__c from Game_Detail__c];
+        for(Game_Detail__c exgame: exgames)
+        {
+            exgame.Max_Score__c = 100;
+        }
+        update exgames;
+		for(String gameName: gameNames){
+			Game_Detail__c gd = new Game_Detail__c();
+			gd.Name = gameName;
+			gd.Max_Score__c = 100;
+			games.add(gd);
+		}
+		insert games;
+        system.debug('games: '+games);
+		for(Game_Detail__c game: [select Id from Game_Detail__c where name in  : gameNames] )	
+		{
+			People_Like_You_Data__c ply = new People_Like_You_Data__c();
+			ply.Age__c = 34;
+			ply.Education__c = 2;
+			ply.Game_Name__c = game.Id;
+			ply.High_Average__c =49;
+			ply.Low_Average__c =1;
+			ply.Sex__c ='Male';
+			plys.add(ply);
+            for(Integer i=0;i<30;i++){
+                Participant_Game_Info__c pgi = new Participant_Game_Info__c();
+                pgi.Contact_Name__c = contId;
+                pgi.Game_Name__c = game.Id;
+                pgi.User_Device__c = 'DESKTOP';
+                pgi.Game_Play_Status__c = 'Completed';
+                pgi.Count_Of_No_Of_Correct_Answered__c = 20;
+                pgi.Count_Of_No_of_Question_Attempted__c =30 ;
+                pgi.Count_Of_Total_Reaction_Time__c =1000 ;
+                pgi.CreatedDate = Date.today()-91;
+                pgis.add(pgi);
+            }
+
+		}
+        insert plys; 
+		insert pgis; 
+        for(Participant_Game_Info__c pgi : [SELECT Id, CreatedDate,Game_Name__r.Name  from Participant_Game_Info__c ] ){
+            if(pgi.Game_Name__r.Name == 'Flanker'){
+                Test.setCreatedDate(pgi.Id,DateTime.newInstance(2023,04,24));
+            }
+            else if(pgi.Game_Name__r.Name == 'Object Discrimination'){
+                Test.setCreatedDate(pgi.Id, DateTime.newInstance(2023,01,22));
+            }
+            else {
+                Test.setCreatedDate(pgi.Id, DateTime.newInstance(2022,07,24));
+            }
+                   pgi.Count_Of_No_Of_Correct_Answered__c = 20;
+                pgi.Count_Of_No_of_Question_Attempted__c =30 ;
+                pgi.Count_Of_Total_Reaction_Time__c =1000 ;
+            
+        }
+                     /*System.debug([Select id, Game_Name__r.Name,Contact_Name__r.Id, Contact_Name__c, Game_Name__c,createddate
+										FROM Participant_Game_Info__c 
+										WHERE
+										Game_Name__r.Name IN ('Flanker')												
+										AND CreatedDate >= N_DAYS_AGO:91
+													AND Count_Of_No_Of_Correct_Answered__c != null
+                                                  	AND Count_Of_No_of_Question_Attempted__c != null
+                                                  	AND Count_Of_Total_Reaction_Time__c != null
+                                                  	AND Count_Of_No_Of_Correct_Answered__c >0
+                                                  	AND Count_Of_No_of_Question_Attempted__c >0
+                                                  	AND Count_Of_Total_Reaction_Time__c >0
+                                                    AND Contact_Name__r.Language__c='English'][0].createddate);*/
+        for(Game_Detail__c game: [select Id from Game_Detail__c where name in  : gameNames] )	
+		{
+			Participant_Game_Info__c pgi = new Participant_Game_Info__c();
+			pgi.Contact_Name__c = contId;
+			pgi.Game_Name__c = game.Id;
+            pgi.User_Device__c = 'DESKTOP';
+			pgi.Game_Play_Status__c = 'Completed';
+			pgis2.add(pgi);
+		}
+        insert pgis2; 
+		
+		for(Participant_Game_Info__c pgi: [select Id,Game_Name__c from Participant_Game_Info__c] )	
+		{
+			Participant_Game_Response__c res1 = new Participant_Game_Response__c();
+			res1.Contact_Name__c= contId;
+			res1.Game_Name__c = pgi.Game_Name__c;
+			res1.Reaction_Time_in_ms__c = 5000;
+			res1.Is_Correct__c = true;
+			res1.Is_Practice_Question__c = false;  
+			res1.Participant_Game_InfoID__c = pgi.Id;
+			res1.Participant_Response__c = 'Test';
+			res1.Question_Number__c = '1';
+			res1.Right_Answer__c = 'Test';
+			pgrs.add(res1);
+		}
+			insert pgrs;   
+        System.runAs(tempUser)
+        {
+            LongitudinalGraphController.getGraphdData();
+            ParticipantResultsControllerES.getDashboardDataForloggedInUser('Flanker');
+            ParticipantResultsControllerES.getDashboardDataForloggedInUser('Keep Track'); 
+        }       
+    }
 }

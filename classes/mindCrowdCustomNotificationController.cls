@@ -37,7 +37,7 @@
                     conUser=[SELECT Id,Object_Temporal__c,Verbal_Paired_Associates__c,Deary_Simple_And_Complex_Reaction_Time__c,
                              Object_Spatial__c,Object_Discrimination__c, Keep_Track__c, Face_Name_Associates__c, 
                              Object_Recognition_And_Similarity__c, Flanker__c, 
-                             Letter_Number_Sequencing__c FROM Contact Where Id=:ur1[0].ContactId];         
+                             Letter_Number_Sequencing__c,Digits__c,Bean_Game__c,Fake_News__c,This_That__c,Tell_Me_More__c,Tell_Me__c,Language__c,isProject2_Participant__c FROM Contact Where Id=:ur1[0].ContactId];         
                 }   
                 System.debug('I am in conUser'+conUser);
                 System.debug('I am in ur1'+ur1);
@@ -252,6 +252,138 @@
                         System.debug('Problem sending notification: ' + e.getMessage()+ ' at line number '+e.getLineNumber());
                     }
                 }
+                /*If(conUser.Digits__c=='Opened' && conUser.Language__c != 'Español' && conUser.isProject2_Participant__c != true){
+                    body=System.Label.notification_Body_Digit_Symbol_Matching_Test;
+                    url=System.Label.url_me_digitSymbol;
+                    addressTest = 
+                    '' +
+                    '    {' +
+                    '        type: \'standard__webPage\', ' +
+                    '        attributes: {' +
+                    '          "url":"'+'/'+url+'"' +
+                    '        }'+
+                    '   }'+
+                    ''; 
+                    notification.setBody(body);
+                    notification.setTargetPageRef(addressTest);
+                    notification.setBody(body); 
+                    try {
+                        notification.send(recipientsIds);              
+                    }
+                    catch (Exception e) {
+                        System.debug('Problem sending notification: ' + e.getMessage()+ ' at line number '+e.getLineNumber());
+                    }
+                }
+                If(conUser.Bean_Game__c=='Opened' && conUser.isProject2_Participant__c != true){
+                    body=System.Label.notification_Body_Bean_Game;
+                    url=System.Label.Bean_game_intermediate;
+                    addressTest = 
+                    '' +
+                    '    {' +
+                    '        type: \'standard__webPage\', ' +
+                    '        attributes: {' +
+                    '          "url":"'+'/'+url+'"' +
+                    '        }'+
+                    '   }'+
+                    ''; 
+                    notification.setBody(body);
+                    notification.setTargetPageRef(addressTest);
+                    notification.setBody(body); 
+                    try {
+                        notification.send(recipientsIds);              
+                    }
+                    catch (Exception e) {
+                        System.debug('Problem sending notification: ' + e.getMessage()+ ' at line number '+e.getLineNumber());
+                    }
+                }
+                If(conUser.Fake_News__c=='Opened' && conUser.Language__c != 'Español' && conUser.isProject2_Participant__c != true){
+                    body=System.Label.notification_Body_Fake_News;
+                    url=System.Label.url_me_fakeNewsTest;
+                    addressTest = 
+                    '' +
+                    '    {' +
+                    '        type: \'standard__webPage\', ' +
+                    '        attributes: {' +
+                    '          "url":"'+'/'+url+'"' +
+                    '        }'+
+                    '   }'+
+                    ''; 
+                    notification.setBody(body);
+                    notification.setTargetPageRef(addressTest);
+                    notification.setBody(body); 
+                    try {
+                        notification.send(recipientsIds);              
+                    }
+                    catch (Exception e) {
+                        System.debug('Problem sending notification: ' + e.getMessage()+ ' at line number '+e.getLineNumber());
+                    }
+                }
+                If(conUser.This_That__c=='Opened' && conUser.Language__c != 'Español' && conUser.isProject2_Participant__c != true){
+                    body=System.Label.notification_Body_This_That;
+                    url=System.Label.url_This_and_That;
+                    addressTest = 
+                    '' +
+                    '    {' +
+                    '        type: \'standard__webPage\', ' +
+                    '        attributes: {' +
+                    '          "url":"'+'/'+url+'"' +
+                    '        }'+
+                    '   }'+
+                    ''; 
+                    notification.setBody(body);
+                    notification.setTargetPageRef(addressTest);
+                    notification.setBody(body); 
+                    try {
+                        notification.send(recipientsIds);              
+                    }
+                    catch (Exception e) {
+                        System.debug('Problem sending notification: ' + e.getMessage()+ ' at line number '+e.getLineNumber());
+                    }
+                }
+                If(conUser.Tell_Me__c=='Opened' && conUser.Language__c != 'Español' && conUser.isProject2_Participant__c != true){
+                    body=System.Label.notification_Body_Speech_Task;
+                    url=System.Label.url_me_speechTask;
+                    addressTest = 
+                    '' +
+                    '    {' +
+                    '        type: \'standard__webPage\', ' +
+                    '        attributes: {' +
+                    '          "url":"'+'/'+url+'"' +
+                    '        }'+
+                    '   }'+
+                    ''; 
+                    notification.setBody(body);
+                    notification.setTargetPageRef(addressTest);
+                    notification.setBody(body); 
+                    try {
+                        notification.send(recipientsIds);              
+                    }
+                    catch (Exception e) {
+                        System.debug('Problem sending notification: ' + e.getMessage()+ ' at line number '+e.getLineNumber());
+                    }
+                }
+                If(conUser.Tell_Me_More__c=='Opened' && conUser.Language__c != 'Español' && conUser.isProject2_Participant__c != true){
+                    body=System.Label.notification_Body_Speech_Task2;
+                    url=System.Label.url_me_speechTaskTellMeMore	;
+                    addressTest = 
+                    '' +
+                    '    {' +
+                    '        type: \'standard__webPage\', ' +
+                    '        attributes: {' +
+                    '          "url":"'+'/'+url+'"' +
+                    '        }'+
+                    '   }'+
+                    ''; 
+                    notification.setBody(body);
+                    notification.setTargetPageRef(addressTest);
+                    notification.setBody(body); 
+                    try {
+                        notification.send(recipientsIds);              
+                    }
+                    catch (Exception e) {
+                        System.debug('Problem sending notification: ' + e.getMessage()+ ' at line number '+e.getLineNumber());
+                    }
+                }*/
             }      
         }  
         public static void notifyUserOtherGames(Id contactid, String gameName)

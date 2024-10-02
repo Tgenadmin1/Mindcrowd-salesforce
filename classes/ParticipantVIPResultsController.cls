@@ -19,6 +19,7 @@ public without sharing class ParticipantVIPResultsController
     @AuraEnabled(cacheable=true) 
     public static DashboardData getDashboardData (String contactId, String gameName)
     {
+        System.debug('Game Name: ' + gameName);
         Map<String, Integer> mapOtherData = new Map<String, Integer>();
         Map<String, Integer> mapWhatHappendWithAgeData = new Map<String, Integer>();
         Map<String, Integer> mapPlyAverageValuesData = new Map<String, Integer>();
@@ -33,22 +34,38 @@ public without sharing class ParticipantVIPResultsController
         mapPlyAverageValuesData.put ('HighAverage', 0); 
         DashboardData objDashboardData = new DashboardData();
         
-        for(Participant_Game_Info__c objInfo:[SELECT 
-                                              /*Added three fields to remove dependency PGR from PGI*/
-                                              /* Added on 27/07/2022 */
-                                              Count_Of_No_Of_Correct_Answered__c, Count_Of_No_of_Question_Attempted__c,
+        List<Participant_Game_Info__c> pgis = [SELECT Count_Of_No_Of_Correct_Answered__c, Count_Of_No_of_Question_Attempted__c,
                                               Count_Of_Total_Reaction_Time__c, No_Of_Correct_Answered__c,
-                                              No_of_Question_Attempted__c,Total_Reaction_Time__c, User_Device__c,Id
+                                              No_of_Question_Attempted__c,Total_Reaction_Time__c, User_Device__c,Id,CreatedDate
                                               FROM Participant_Game_Info__c 
                                               WHERE Contact_Name__c =: contactId  
                                               AND Game_Name__r.Name =:gameName
-                                              AND Count_Of_No_Of_Correct_Answered__c != null
+                                              AND ((Count_Of_No_Of_Correct_Answered__c != null
                                               AND Count_Of_No_of_Question_Attempted__c != null
                                               AND Count_Of_Total_Reaction_Time__c != null
                                               AND Count_Of_No_Of_Correct_Answered__c >0
                                               AND Count_Of_No_of_Question_Attempted__c >0
-                                              AND Count_Of_Total_Reaction_Time__c >0
-                                              ORDER BY CreatedDate DESC LIMIT 1])
+                                              AND Count_Of_Total_Reaction_Time__c >0) 
+                                              OR (No_Of_Correct_Answered__c != null
+                                              AND No_of_Question_Attempted__c != null
+                                              AND Total_Reaction_Time__c != null
+                                              AND No_Of_Correct_Answered__c >0
+                                              AND No_of_Question_Attempted__c >0
+                                              AND Total_Reaction_Time__c >0))
+                                              AND Game_Play_Status__c = 'Completed'
+                                              ORDER BY CreatedDate DESC LIMIT 1];
+          System.debug('PGIS: ' + pgis.size());
+        if(pgis.size()>0){
+            for(Participant_Game_Info__c pgi : pgis){
+                if(pgi.CreatedDate.Date() >= Date.Today()-1){
+                	pgi.Count_Of_No_of_Question_Attempted__c = pgi.No_of_Question_Attempted__c;
+                    pgi.Count_Of_No_Of_Correct_Answered__c = pgi.No_Of_Correct_Answered__c;
+                    pgi.Count_Of_Total_Reaction_Time__c = pgi.Total_Reaction_Time__c;
+            	}  
+            }                      
+        } 
+        
+        for(Participant_Game_Info__c objInfo:pgis)
         {
             userDevice = objInfo.User_Device__c;
             currPGIId= objInfo.Id;
@@ -259,7 +276,17 @@ public without sharing class ParticipantVIPResultsController
             
              List<Decimal> quartileValues = new List<Decimal>();
              Decimal sumReationTime = 0;
-             if(beanPeopleLikeYou !=null && beanPeopleLikeYou.size() > 0){//Check if 0 or 25                 
+             if(beanPeopleLikeYou.size()==0){
+                beanPeopleLikeYou = [SELECT Right_Hand_Average__c,Left_Hand_Average__c 
+                                                    FROM Bean_Game__c 
+                                                    WHERE Contact__r.Age__c > 0                                      
+                                           			AND Contact__r.Sex__c != ''
+                                           			AND Contact__r.Education_Attainment__c != null
+                                                    AND  Id !=: bean[0].Id
+                                                    Order by CreatedDate DESC
+                                             	    LIMIT 48990];
+             }
+            
                   for (Bean_Game__c beangame : beanPeopleLikeYou) {
                       if(handSide == 'left'){
                         quartileValues.add(beangame.Left_Hand_Average__c);
@@ -272,10 +299,7 @@ public without sharing class ParticipantVIPResultsController
                     }
                   }
 					mapOtherData.put ('People Like You', sumReationTime / beanPeopleLikeYou.size());                 
-              }
-              else {
-                //Need to add if less numbers
-              }        
+  
         quartileValues.sort();                
         Decimal dataSize = quartileValues.size();
         Integer q1Index = Math.ceil((dataSize + 1) / 4.0).intValue();

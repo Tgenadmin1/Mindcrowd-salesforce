@@ -272,4 +272,76 @@ public class ContactControllertest
         ContactController.updateABTestingRecord(ab.id, con.id);
         test.stopTest();
     }
+    
+    @isTest
+    public static void testHasDuplicateRecords() {
+        // Create a Contact
+        Contact contactRecord = new Contact();
+        contactRecord.FirstName = 'Test';
+        contactRecord.LastName = 'User';
+        // Set other required fields on the Contact
+        insert contactRecord;
+
+        // Create Campaign records
+        List<Research_Campaign__c> campaignRecords = new List<Research_Campaign__c>();
+        for (String campaignName : new List<String>{'CampaignA', 'CampaignB', 'CampaignC'}) {
+            Research_Campaign__c campaignRecord = new Research_Campaign__c();
+            campaignRecord.Name = campaignName;
+            // Set other fields as needed
+            campaignRecords.add(campaignRecord);
+        }
+        insert campaignRecords;
+
+        // Create Shipping_Detail__c records with valid Campaign IDs
+        List<Shipping_Detail__c> shippingRecords = new List<Shipping_Detail__c>();
+        for (Research_Campaign__c campaign : campaignRecords) {
+            Shipping_Detail__c shippingRecord = new Shipping_Detail__c();
+            shippingRecord.Contact_Id__c = contactRecord.Id;
+            shippingRecord.Campaign__c = campaign.Id;
+            // Set other fields as needed
+            shippingRecords.add(shippingRecord);
+        }
+        insert shippingRecords;
+
+        Test.startTest();
+
+        // Call the method to test
+        List<String> campaignsToCheck = new List<String>{'CampaignA', 'CampaignB', 'CampaignC'};
+        Map<String, String> result = ContactController.hasDuplicateRecords(contactRecord.Id, campaignsToCheck);
+
+        // Add assertions to verify the result
+        System.assertEquals('Y', result.get('CampaignA'));
+        System.assertEquals('Y', result.get('CampaignB'));
+
+        // Ensure that 'CampaignC' is in the result map and is not null
+        System.assert(result.containsKey('CampaignC'));
+        System.assertNotEquals(null, result.get('CampaignC'));
+        
+        Test.stopTest();
+    }
+    
+    @isTest
+    public static void testGetCustomSettingValues() {
+        // Insert a sample CurrRunnCamp__c custom setting record
+        CurrRunnCamp__c customSettingRecord = new CurrRunnCamp__c(
+            Name = 'Sample Setting',
+            CurrRunnCampEnglish__c = 'English Value',
+            CurrRunnCampSpanish__c = 'Spanish Value'
+        );
+        insert customSettingRecord;
+
+        Test.startTest();
+
+        // Call the method to test
+        List<Map<String, Object>> result = ContactController.getCustomSettingValues();
+
+        // Add assertions to verify the result
+        System.assertEquals(1, result.size());
+        Map<String, Object> settingValues = result[0];
+        System.assertEquals(customSettingRecord.Id, settingValues.get('Id'));
+        System.assertEquals(customSettingRecord.CurrRunnCampEnglish__c, settingValues.get('CurrRunnCampEnglish__c'));
+        System.assertEquals(customSettingRecord.CurrRunnCampSpanish__c, settingValues.get('CurrRunnCampSpanish__c'));
+
+        Test.stopTest();
+    }
 }

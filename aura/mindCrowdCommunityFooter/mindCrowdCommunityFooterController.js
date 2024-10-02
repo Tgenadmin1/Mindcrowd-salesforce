@@ -1,5 +1,8 @@
 ({
     doInit : function(component, event, helper) {
+        var svgUrl = $A.get('$Resource.twitter');
+        component.set('v.svgUrl', svgUrl);
+ 
         var action = component.get("c.getCurrentUser");
         action.setCallback(this, function(response) {
             var state = response.getState();

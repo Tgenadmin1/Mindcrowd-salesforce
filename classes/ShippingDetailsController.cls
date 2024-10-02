@@ -33,20 +33,20 @@ public without sharing class ShippingDetailsController
                                                    FROM Shipping_Detail__c
                                                    where Barcode__c =: barcode];
         System.debug('---shipmenttosend------'+shipmenttoSend);                                       
-        if(!shipmenttoSend.isEmpty()&& shipmenttoSend[0].Shipment_Status__c=='Created')
+         if(!shipmenttoSend.isEmpty()&& shipmenttoSend[0].Shipment_Status__c=='Created')
         {  //it is checked when SendShipment button is clicked to update status and date.
             for(Shipping_Detail__c b:shipmenttoSend)
             {   
                 barId = b.Barcode__c;
                 for(String BarInfo:barcode){
-                    if(barId.equals(BarInfo)){
+                     if(barId.equals(BarInfo)){
                         if(b.Shipment_Status__c=='Created'){
                             b.Shipment_Sent_Date__c=System.today();
                             b.Shipment_Status__c='Sent';
                         }
-                    }
                 }
-                
+                }
+               
                 
             }
             update shipmenttoSend;
@@ -111,7 +111,7 @@ public without sharing class ShippingDetailsController
                         }
                     }
                 }
-                
+               
             }else{
                 barId = shipmenttoSend[0].Barcode__c;
                 if(!barId.equals(barcode)){
@@ -240,7 +240,7 @@ public without sharing class ShippingDetailsController
                     labelid.Address__City__s=ToCity;
                     labelid.Address__StateCode__s=ToState;
                     if(ToZip4!=null){
-                        labelid.Address__PostalCode__s=ToZip5+'-'+ToZip4;
+                       labelid.Address__PostalCode__s=ToZip5+'-'+ToZip4;
                     }else{
                         labelid.Address__PostalCode__s=ToZip5;
                     }

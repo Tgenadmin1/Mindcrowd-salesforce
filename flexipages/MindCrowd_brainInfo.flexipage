@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlexiPage xmlns="http://soap.sforce.com/2006/04/metadata">
+    <flexiPageRegions>
+        <appendable>enabled</appendable>
+        <name>header</name>
+        <prependable>enabled</prependable>
+        <replaceable>enabled</replaceable>
+        <type>Region</type>
+    </flexiPageRegions>
+    <flexiPageRegions>
+        <appendable>enabled</appendable>
+        <itemInstances>
+            <componentInstance>
+                <componentInstanceProperties>
+                    <name>brainInfo_error_age</name>
+                    <value>Please enter age from 18 to 115</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>brainInfo_text_1</name>
+                    <value>Tell us a little about your brain</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>brainInfo_text_10</name>
+                    <value>In what language are you most fluent?</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>brainInfo_text_11</name>
+                    <value>What country do you live in?</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>brainInfo_text_13</name>
+                    <value>What zip code do you currently live in?​</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>brainInfo_text_14</name>
+                    <value>Please tell us what gender you identify as</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>brainInfo_text_2</name>
+                    <value>What is your biological sex?</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>brainInfo_text_3</name>
+                    <value>What is your current age?</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>brainInfo_text_4</name>
+                    <value>What gender do you identify as?</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>brainInfo_text_5</name>
+                    <value>What is the highest level of education you&apos;ve completed?</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>brainInfo_text_6</name>
+                    <value>How many languages do you speak fluently?</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>brainInfo_text_7</name>
+                    <value>How many languages do you write fluently?</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>brainInfo_text_8</name>
+                    <value>What was the first language you spoke?</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>brainInfo_text_9</name>
+                    <value>If you speak a second language, at what age did you begin speaking that language?</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>brainInfo_text_choose</name>
+                    <value>Please Choose</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>brainInfo_text_error</name>
+                    <value>Please fill out the fields marked with an asterisk.</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>brainInfo_text_required</name>
+                    <value>Required Field</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>next_button_text</name>
+                    <value>Continue</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>step_1</name>
+                    <value>About You</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>step_2</name>
+                    <value>ATTENTION TEST</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>step_3</name>
+                    <value>MEMORY TEST</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>step_4</name>
+                    <value>YOUR RESULTS</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>step_4a</name>
+                    <value>Your Brain</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>strTitle</name>
+                    <value>Welcome in Salesforce</value>
+                </componentInstanceProperties>
+                <componentName>brainInfo</componentName>
+                <identifier>brainInfo</identifier>
+            </componentInstance>
+        </itemInstances>
+        <name>content</name>
+        <prependable>enabled</prependable>
+        <replaceable>enabled</replaceable>
+        <type>Region</type>
+    </flexiPageRegions>
+    <flexiPageRegions>
+        <appendable>enabled</appendable>
+        <name>footer</name>
+        <prependable>enabled</prependable>
+        <replaceable>enabled</replaceable>
+        <type>Region</type>
+    </flexiPageRegions>
+    <flexiPageRegions>
+        <appendable>enabled</appendable>
+        <itemInstances>
+            <componentInstance>
+                <componentInstanceProperties>
+                    <name>customHeadTags</name>
+                    <value>&lt;meta name=&quot;robots&quot; content=&quot;noindex, follow&quot;&gt;
+&lt;meta name=&quot;description&quot; content=&quot;Let&apos;s get acquainted. Tell us a little about your brain.&quot;&gt;</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>description</name>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>title</name>
+                    <value>About Your Brain • MindCrowd Research Study</value>
+                </componentInstanceProperties>
+                <componentName>forceCommunity:seoAssistant</componentName>
+                <identifier>forceCommunity_seoAssistant</identifier>
+            </componentInstance>
+        </itemInstances>
+        <name>sfdcHiddenRegion</name>
+        <prependable>enabled</prependable>
+        <replaceable>enabled</replaceable>
+        <type>Region</type>
+    </flexiPageRegions>
+    <masterLabel>brainInfo</masterLabel>
+    <template>
+        <name>siteforce:sldsOneColLayout</name>
+    </template>
+    <type>CommAppPage</type>
+</FlexiPage>

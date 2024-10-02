@@ -1,17 +1,14 @@
 <!--
   @description             : 
-  @author(Controller)      : Sunil Kumar Singh 
-  @UI author               : Raj
-  @last Updated by         : (Sunil Kr Singh//Date-Aug 1 2021)
-  @last modified by        : ChangeMeIn@UserSettingsUnder.SFDoc
+  @author(Controller)      : Sibi Sathyan
+  @UI author               : Sibi Sathyan
+  @last Updated by         : Sibi Sathyan 11/06/2023
   Modifications Log 
   Ver   Date         Author                  Modification
-  1.0   20-07-2021   Sunil Kumar Singh       Initial Version
 -->
 <aura:component controller="GamesController"
     implements="forceCommunity:availableForAllPageTypes,lightning:isUrlAddressable,lightning:hasPageReference,force:appHostable"
     access="global">
-    <aura:attribute name="ParticipantGameResponse" type="Object" />
     <aura:attribute name="myAttribute" type="String" access="global"/>
     <aura:attribute name="mycontactId" type="String" access="global"/>
     <aura:attribute name="participantGameid" type="String" access="global"/>
@@ -19,19 +16,17 @@
     <aura:attribute name="browser" type="String" access="global"/>
     <aura:attribute name="showConfirmDialog" type="boolean" default="false"/>
     <aura:handler event="force:refreshView" action="{!c.myAction}" />
-    <aura:attribute name="microphones" type="List" />
+    <aura:attribute name="currScreen" type="Integer" default="0" />
     <aura:attribute name="selectedMicrophone" type="String" />
     <aura:attribute name="isRecording" type="Boolean" default="false" />
     <aura:attribute name="isPlaying" type="Boolean" default="false" />
-    <aura:attribute name="recordedAudioUrl" type="String"  />
-    <aura:attribute name="speechTexteng" type="String"  />
-    <aura:attribute name="speechTextspanish" type="String"  />
-    <aura:attribute name="currScreen" type="Integer" default="0" />
-    <aura:attribute name="speechTask1" type="String"  />    
-    <aura:attribute name="speechTask2" type="String"  />
-    <aura:attribute name="speechTasks" type="List" default="[]"/>
-    <!--aura:handler name="init" action="{!c.doInit}" value="{!this}" /-->
-    <!-- <ltng:require scripts="" afterScriptsLoaded="{!c.myAction}" /> -->
+    <aura:attribute name="speechTaskRec" type="String" default=""/>
+    <aura:attribute name="otherlanguage" type="Boolean" default=""/>
+    <aura:attribute name="othervoices" type="Boolean" default=""/>
+    <aura:attribute name="loudnoices" type="Boolean" default=""/>
+    <aura:attribute name="delete" type="Boolean" default=""/>
+    <aura:attribute name="MicId" type="String" default=""/>
+    <aura:attribute name="MicLabel" type="String" default=""/>
     
     <ltng:require scripts="{!$Resource.RecordRTC}" afterScriptsLoaded="{!c.myAction}" />
     <div
@@ -40,85 +35,36 @@
             <div class="logo-game">
                 <img src="{!$Resource.mindcrowd_style + '/images/MindCrowd-Logo-Color-White-Text.png'}"/>
               </div>
-            <div class="game-title">Speech Task</div>
+            <div class="game-title">{!$Label.c.SpeechTask_Tell_me_text}</div>
             <div class="game_panel pairedgame" id="gameMainContent">
                 <div class="game_block_speechtask " id="game_block">
-                    <div class="datablock" id="datablock"></div>            
-                    <div id="speechtask"  class="slds-hide">
-             
-                        <!--label for="microphoneSelect">Select Microphone:</label>
-                        <lightning:select aura:id="microphoneSelect" onchange="{!c.onMicrophoneSelect}">
-                            <aura:iteration items="{!v.microphones}" var="mic">
-                                <option value="{!mic.deviceId}">{!mic.label}</option>
-                            </aura:iteration>
-                        </lightning:select-->                        
-                        <!--lightning:button aura:id="english" onclick="{!c.testMicrophone}" disabled="{!v.isRecording || v.isPlaying}">Start Recording (1 minute)</lightning:button-->
-                        <!--lightning:button aura:id="english" onclick="{!c.testMicrophone}" disabled="{!v.isRecording || v.isPlaying}">Start Recording (1 minute)</lightning:button-->
-       
-                        <div style="margin-left: 2em;">
-                        <button id="startButton" class="slds-button startButton" label="Test Microphone" onclick="{!c.startRecording}">
-                            <img src="{!$Resource.mindGamesImages + '/speechtask/Mic.png'}" alt="Microphone Icon" />
-                        </button>
-                       </div>
-                       <div class="title_speech_task"><i>Click here to start the test</i> </div>
-                       <!--div id="recordingindicator" class="recording-container slds-hide">
-                        <div class="recording-line" style="left: 40px;"></div>
-                        <div class="recording-line" style="left: 60px;"></div>
-                        <div class="recording-line" style="left: 80px;"></div>
-                        <div class="recording-line" style="left: 100px;"></div>
-                        <div class="recording-line" style="left: 120px;"></div>
-                        <div class="recording-line" style="left: 140px;"></div>
-                        <div class="recording-line" style="left: 160px;"></div>
-                        <div class="recording-line" style="left: 180px;"></div>
-                    </div-->
-                    <!--div id="recording"-->
-                        <!--h4 class="header">Speech to text(English)</h4-->
-                        <!--lightning:textarea name="input1" label="Speech to text(English)" readonly="true" value="{!v.speechTexteng}"/!-->
-                    <!--/div-->
-                       
-                       <!--div id="timer" class="slds-hide timer">10:00</div-->
-            
-                        <!--button onclick="{!c.playRecording}" disabled="{!v.isRecording || v.isPlaying}">Play Recording</button>
-                        <button onclick="{!c.saveMicrophone}" disabled="{!v.isRecording || v.isPlaying || !v.selectedMicrophone}">OK</button-->
-                    </div>
-                    <!--p id="nextBtton" class="magenta-btn  btn-xlarge marginT20 bottom-right-button">
-                        <button class="slds-button "  onclick="{!c.goToMyResultsPage }">Next</button>
-                    </p-->
+                    <div class="datablock" id="datablock"></div>
+                    <div id ="errormessage" class="title slds-hide" style="color: red;">{!$Label.c.Speech_Task_Error}</div>
                     <p id="nextBtton" class="centers magenta-btn  btn-xlarge marginT20 slds-hide">
-                        
-                        <!--button class="slds-button"  onclick="{!c.goToMyResultsPage }">{!$Label.c.flanker_myResult}</button!-->
-                        <button class="slds-button"  onclick="{!c.goToNextPage }" disabled="{!v.isRecording || v.isPlaying}">Done</button>
-                    </p>     
-                    <div id="nextBtton2" class="centers magenta-btn  btn-xlarge marginT20">
-                        <input autocomplete="off"  class="cmdbtn" type="button" name="enterbtn" id="enterbtn" value="NEXT"></input>
-                    </div>     
+                        <button class="slds-button"  onclick="{!c.goToNextPage }">{!$Label.c.flanker_myGames}</button>
+                    </p> 
                     <div class="duration">
                         <div class="d_title" id="d_title"></div>
                         <div class="d_txt" id="d_txt"></div>
                         <div class="d_status" id="d_status"></div>
                     </div>
-                    
                 </div>  
             </div>
         </div>
-        <!--div id="imgContainer" style="height: 1px; width: 1px; position: absolute; top:-10px; left:-10px; overflow: hidden;"></div-->
     </div>
     <aura:if isTrue="{!v.showConfirmDialog}">
             <!--Modal Box Start-->
             <div role="dialog" class="slds-modal slds-fade-in-open ">
                 <div class="slds-modal__container">
                     <!--Modal Box Header Start-->
-                    <header class="slds-modal__header">
-                       
+                    <header class="slds-modal__header">                       
                         <lightning:buttonIcon iconName="utility:close"
                         onclick="{! c.closeModel }"
                         alternativeText="{!$Label.c.close_btn}"
                         variant="bare-inverse"
                         class="slds-modal__close"/>
-
                     </header>
-                    <!--Modal Box Header End-->
-                     
+                    <!--Modal Box Header End-->                     
                     <!--Modal Box Content Start-->
                     <div class="slds-modal__content slds-p-around--medium">
                         <center><p>{!$Label.c.mst_text_not_authorized}</p></center>
@@ -131,5 +77,5 @@
                 </div>
             </div>
             <div class="slds-backdrop slds-backdrop--open"></div>            
-        </aura:if>
+    </aura:if>
 </aura:component>
