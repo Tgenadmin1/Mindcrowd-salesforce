@@ -227,6 +227,18 @@
         <visibleLines>4</visibleLines>
     </fields>
     <fields>
+        <fullName>Max_Score_2__c</fullName>
+        <externalId>false</externalId>
+        <label>Max Score 2</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
         <fullName>Max_Score__c</fullName>
         <description>The Maximum Score that participant can Score By Playing the Game</description>
         <externalId>false</externalId>

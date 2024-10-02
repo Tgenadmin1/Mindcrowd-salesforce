@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlexiPage xmlns="http://soap.sforce.com/2006/04/metadata">
+    <flexiPageRegions>
+        <appendable>enabled</appendable>
+        <name>header</name>
+        <prependable>enabled</prependable>
+        <replaceable>enabled</replaceable>
+        <type>Region</type>
+    </flexiPageRegions>
+    <flexiPageRegions>
+        <appendable>enabled</appendable>
+        <itemInstances>
+            <componentInstance>
+                <componentInstanceProperties>
+                    <name>Bean_text_all</name>
+                    <value>&lt;p&gt;This consent information sheet addendum has more information about the research study.  It may add to or change the information in the consent form you signed at the start of this study.&lt;/p&gt;   &lt;p&gt;You are being invited to participate in a research study that is being carried out by Dr. Matt Huentelman at  the  non-profit  Translational  Genomic  Research  Institute (TGen) in Phoenix, Arizona. This  study  will measure the time that it takes you to play a movement game.&lt;/p&gt;   &lt;p&gt;Your participation will involve timing yourself, or asking a friend to time you, as you complete a game. We will send you a game kit including all of the materials that you will need to complete the game. You will need to self-record your results and return the results to TGen. The amount of time that it takes you to complete the game will vary between people, but we expect it to take you approximately 20 minutes.&lt;/p&gt;   &lt;p&gt;There are no known risks associated with being in this research. There is no direct benefit to you being in this study. However, what we learn from this study may help others in the future. Your alternative is to not participate in this study.&lt;/p&gt;   &lt;p&gt;You will not be paid for being in this study.&lt;/p&gt;   &lt;p&gt;If you have questions about your participation in this study, you feel you have had a research-related injury, or you have questions, concerns, or complaints about the research, you may contact the study coordinator at MindCrowdQuestion@tgen.org or 602-343-8653 (24 hours). Contact the WCG IRB if you have questions about your rights as a research subject, concerns, complaints or input: 855-818-2289. WCG IRB is a group of people who perform independent review of research.&lt;/p&gt;   &lt;p&gt;The study  staff  may  be  required  to  share  the  records  generated  from  this  research  with  the  sponsor, regulatory agencies such as the US Food and Drug Administration, Health and Human Services, and the IRB.  This  information  is  shared  so  the  research  can  be  conducted  and  properly  monitored.  The  people receiving  this  information  may  not  be  required  to  protect  it  and  your  information  may  be  re-disclosed without your permission. If you do not provide permission to use your information, you cannot be in the study.&lt;/p&gt;   &lt;p class=&quot;padding0&quot;&gt;All information collected about you during the course of this study will be kept confidential. When the results of this research are published or discussed at scientific conferences, no information will be included that would reveal your identity. To help protect your privacy, we have obtained a Certificate of Confidentiality from the National Institutes of Health. This means researchers may refuse to give out study information that identifies you. For example, if there were a court order requesting your study records, TGen &lt;u&gt;would not&lt;/u&gt; give out information that identifies you, unless you have consented for this use. The Certificate &lt;u&gt;does&lt;/u&gt; permit TGen to disclose your information when:&lt;/p&gt;   &lt;ul class=&quot;p-list&quot;&gt; 	&lt;li&gt;Required by Federal, State, or local laws. This excludes instances of Federal, State, or local civil, &amp;nbsp;criminal, administrative, legislative, or other proceedings;&lt;/li&gt; 	&lt;li&gt;You have consented to the disclosure, including for your medical treatment;&lt;/li&gt; 	&lt;li&gt;Done as part of other approved research studies.&lt;/li&gt;   &lt;/ul&gt;   &lt;p&gt;A Certificate of Confidentiality does not prevent you or someone else, like a member of your family, from voluntarily sharing information about yourself or your involvement in this research. If you want your research information released to an insurer, medical care provider, or any other person not connected with the research, you must provide consent to allow the researchers to release it.&lt;/p&gt;   &lt;p&gt;Your participation in this study is completely voluntary. You may choose not to participate or you may stop participation at any time during the research activity without penalty or loss of benefits to which you are otherwise entitled. You can contact the Study Coordinator at MindCrowdQuestion@tgen.org to withdraw from the study.&lt;/p&gt;   &lt;p&gt;&lt;span class=&quot;question-text&quot;&gt;How do I agree to participate?&lt;/span&gt;&lt;/p&gt;   &lt;p&gt;There will be questions and check boxes at the end of this form. Once you have reviewed all the statements, you will either check the button that states: “I Consent” or the button that says “I Decline.”&lt;/p&gt;</value>
+                </componentInstanceProperties>
+                <componentName>participantconsentform</componentName>
+                <identifier>participantconsentform</identifier>
+            </componentInstance>
+        </itemInstances>
+        <name>content</name>
+        <prependable>enabled</prependable>
+        <replaceable>enabled</replaceable>
+        <type>Region</type>
+    </flexiPageRegions>
+    <flexiPageRegions>
+        <appendable>enabled</appendable>
+        <name>footer</name>
+        <prependable>enabled</prependable>
+        <replaceable>enabled</replaceable>
+        <type>Region</type>
+    </flexiPageRegions>
+    <flexiPageRegions>
+        <appendable>enabled</appendable>
+        <itemInstances>
+            <componentInstance>
+                <componentInstanceProperties>
+                    <name>customHeadTags</name>
+                    <value>&lt;meta name=&quot;robots&quot; content=&quot;noindex, nofollow&quot;&gt;</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>description</name>
+                    <value>Bean Game • Participant</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>title</name>
+                    <value>Bean Game • Participant • ADD</value>
+                </componentInstanceProperties>
+                <componentName>forceCommunity:seoAssistant</componentName>
+                <identifier>forceCommunity_seoAssistant</identifier>
+            </componentInstance>
+        </itemInstances>
+        <name>sfdcHiddenRegion</name>
+        <prependable>enabled</prependable>
+        <replaceable>enabled</replaceable>
+        <type>Region</type>
+    </flexiPageRegions>
+    <masterLabel>BeanGameParticipant Consent</masterLabel>
+    <template>
+        <name>siteforce:sldsOneColLayout</name>
+    </template>
+    <type>CommAppPage</type>
+</FlexiPage>

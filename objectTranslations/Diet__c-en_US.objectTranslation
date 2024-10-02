@@ -76,5 +76,12 @@
         <label><!-- DIET_v1.0.6 --></label>
         <name>Sweetened_beverages_eaten_in_a_day__c</name>
     </fields>
+    <layouts>
+        <layout>Diet Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
     <startsWith>Consonant</startsWith>
 </CustomObjectTranslation>

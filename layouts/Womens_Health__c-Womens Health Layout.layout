@@ -36,6 +36,10 @@
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
+                <field>Contact_Name__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
                 <field>Have_you_ever_used_hormonal__c</field>
             </layoutItems>
             <layoutItems>

@@ -96,5 +96,12 @@
         <label><!-- SOCSUPP_v1.0.15 --></label>
         <name>Talk_about_my_problems_with_my_friends__c</name>
     </fields>
+    <layouts>
+        <layout>Social Support Survey Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
     <startsWith>Consonant</startsWith>
 </CustomObjectTranslation>

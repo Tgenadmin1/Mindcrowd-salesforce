@@ -17,13 +17,8 @@ global class BatchContactGameStatusUpdate implements Database.Batchable<SObject>
 													AND CreatedDate = N_DAYS_AGO:183)
 										OR (Game_Name__r.Name IN ('Verbal Paired Associates', 'Object Recognition And Similarity') 
 													AND CreatedDate = N_DAYS_AGO:365))
-													AND Count_Of_No_Of_Correct_Answered__c != null
-                                                  	AND Count_Of_No_of_Question_Attempted__c != null
-                                                  	AND Count_Of_Total_Reaction_Time__c != null
-                                                  	AND Count_Of_No_Of_Correct_Answered__c >0
-                                                  	AND Count_Of_No_of_Question_Attempted__c >0
-                                                  	AND Count_Of_Total_Reaction_Time__c >0
-                                                    AND Contact_Name__r.Language__c='English']);  
+													AND Contact_Name__r.Project2_Enrollment_Date__c = null
+                                                    ]);  
    
     }
 
@@ -81,12 +76,7 @@ global class BatchContactGameStatusUpdate implements Database.Batchable<SObject>
 
 				} 
 			}
-		}
-            
-       // Update contact using database.update
-        
-        database.update(contUpd);
-            
+		}    
      }
         
      Database.SaveResult[] srList = database.update(contUpd, false);

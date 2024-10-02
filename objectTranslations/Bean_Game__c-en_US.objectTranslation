@@ -103,6 +103,10 @@
         <name>LeftHand_4_ExerciseTime__c</name>
     </fields>
     <fields>
+        <label><!-- Left Hand Average --></label>
+        <name>Left_Hand_Average__c</name>
+    </fields>
+    <fields>
         <label><!-- OneLastThing --></label>
         <name>OneLastThing__c</name>
         <picklistValues>
@@ -197,6 +201,10 @@
     <fields>
         <label><!-- RightHand_4_ExerciseTime --></label>
         <name>RightHand_4_ExerciseTime__c</name>
+    </fields>
+    <fields>
+        <label><!-- Right Hand Average --></label>
+        <name>Right_Hand_Average__c</name>
     </fields>
     <layouts>
         <layout>Bean Game Layout</layout>

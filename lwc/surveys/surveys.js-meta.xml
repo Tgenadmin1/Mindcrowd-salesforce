@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LightningComponentBundle xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>51.0</apiVersion>
+    <isExposed>true</isExposed>
+    <targets>
+        <target>lightning__AppPage</target>
+        <target>lightning__RecordPage</target>
+        <target>lightning__HomePage</target>
+        <target>lightningCommunity__Page</target>
+        <target>lightningCommunity__Default</target>
+    </targets>
+
+    <targetConfigs>  
+        <targetConfig targets="lightning__HomePage,lightning__RecordPage,lightningCommunity__Default">
+            <property name="survey_text_1" type="String" default="Welcome to your personal brain survey dashboard" label="survey_text_1"/>
+            <property name="survey_text_2" type="String" default="The tiles below represent short surveys that you can complete. Click a tile to launch the survey" label="survey_text_2"/>
+            <property name="Survey_text_2_1" type="String" default="A survey available to complete. Do these first." label="Survey_text_2_1"/>
+            <property name="Survey_text_2_2" type="String" default="A survey you have already completed. You can update these again in the future." label="Survey_text_2_2"/>
+            <property name="Survey_text_2_3" type="String" default="A locked survey. These will unlock as you complete more." label="Survey_text_2_3"/>
+            <property name="Survey_text_2_4" type="String" default="Note: Not all surveys are optimized to complete easily on a smartphone screen. We recommend using a tablet, laptop, or desktop computer for the surveys on this page." label="Survey_text_2_4"/>
+        </targetConfig>
+    </targetConfigs>
+</LightningComponentBundle>

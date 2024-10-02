@@ -21,6 +21,10 @@
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
+                <field>Contact_Name__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
                 <field>What_is_your_primary_occupation__c</field>
             </layoutItems>
             <layoutItems>

@@ -5,6 +5,9 @@ import acceptancePage01 from '@salesforce/label/c.acceptancePage01';
 import acceptancePage02 from '@salesforce/label/c.acceptancePage02';
 import Logo_Link from '@salesforce/label/c.Logo_Link';
 import Blog_Link from '@salesforce/label/c.live_URL_2';
+import Games_Dashboard from '@salesforce/label/c.Games_Dashboard';
+import community_url from '@salesforce/label/c.Community_Url';
+
 export default class AcceptancePage  extends NavigationMixin(LightningElement) {
    
     logoimage2 =  images + '/images/MindCrowd-Logo-Color-White-Text.png';
@@ -14,7 +17,27 @@ export default class AcceptancePage  extends NavigationMixin(LightningElement) {
     @api acceptancePage03 = 'Go to the MindCrowd Website';
     @api acceptancePage04 = 'Want to learn more about this research';
     @api acceptancePage05 = 'Our records show that you have already completed this survey. Thank you for your time.'
-    
+    @api acceptancePage06 = 'My Games';    
+    url_gamespage = community_url + '/s/' + Games_Dashboard;
+    showButton = false;
+
+    connectedCallback() {
+      if (window.location.pathname.indexOf('vip') > -1) {
+          this.showButton = true; 
+      } else {
+          this.showButton = false;                      
+      }
+      }
+
+    navigateToGamePage() {
+      this[NavigationMixin.Navigate]({
+          type: 'standard__webPage',
+          attributes: {
+              url: this.url_gamespage
+          }
+      });
+    }
+
     navigateToWebPage() {
         // Navigate to a URL
         this[NavigationMixin.Navigate]({

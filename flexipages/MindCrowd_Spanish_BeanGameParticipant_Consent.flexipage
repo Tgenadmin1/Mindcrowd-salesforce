@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlexiPage xmlns="http://soap.sforce.com/2006/04/metadata">
+    <flexiPageRegions>
+        <appendable>enabled</appendable>
+        <name>header</name>
+        <prependable>enabled</prependable>
+        <replaceable>enabled</replaceable>
+        <type>Region</type>
+    </flexiPageRegions>
+    <flexiPageRegions>
+        <appendable>enabled</appendable>
+        <itemInstances>
+            <componentInstance>
+                <componentInstanceProperties>
+                    <name>Bean_text_1</name>
+                    <value>Formulario del juego de las alubias (Bean Game) para la participación  en la investigación</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>Bean_text_10</name>
+                    <value>Es posible que se requiera que el personal del estudio comparta los registros generados a  partir de esta investigación con el patrocinador, las agencias reguladoras como la  Administración de Alimentos y Medicamentos de EE. UU., los Servicios Humanos y de Salud  y la IRB. Esta información se comparte para que la investigación pueda llevarse a cabo y  controlarse adecuadamente. Es posible que las personas que reciben esta información no  estén obligadas a protegerla y su información puede volver a divulgarse sin su permiso. Si no  da su autorización para usar su información, no puede participar en el estudio.</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>Bean_text_11</name>
+                    <value>Toda la información recopilada sobre usted durante el curso de este estudio se mantendrá  confidencial. Cuando los resultados de esta investigación se publiquen o discutan en  conferencias científicas, no se incluirá información que revele su identidad.</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>Bean_text_12</name>
+                    <value>Su participación en este estudio es completamente voluntaria. Puede optar por no participar o  puede dejar de participar en cualquier momento durante la investigación sin ninguna  penalización. Puede ponerse en contacto con el coordinador del estudio en  MindCrowdQuestion@tgen.org para retirarse de él.</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>Bean_text_2</name>
+                    <value>Introduce tu código aquí</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>Bean_text_23</name>
+                    <value>Entiendo que si no quiero participar, no debo de llenar esta página.</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>Bean_text_24</name>
+                    <value>Entiendo que si tengo una pregunta, debo contactar al Coordinador de la Investigación Clínica al  602-343-8653 ( 24 horas) o al MindCrowdQuestion@tgen.org antes de completar esta autorización.</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>Bean_text_25</name>
+                    <value>Nombre</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>Bean_text_25a</name>
+                    <value>Escriba su Nombre Aquí</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>Bean_text_26</name>
+                    <value>Apellido</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>Bean_text_26a</name>
+                    <value>Escriba su Apellido Aquí</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>Bean_text_27</name>
+                    <value>Correo  Electrónico</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>Bean_text_27a</name>
+                    <value>Escriba su Correo Electrónico Aquí</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>Bean_text_28</name>
+                    <value>Favor de escribir su correo postal en las siguientes casillas. El kit de actividades motoras le será enviado  a ese domicilio. Tome en cuenta que por ahora únicamente podemos enviarlo a participantes en Los  Estados Unidos.</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>Bean_text_29</name>
+                    <value>Escriba el Nombre de la Ciudad Aquí</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>Bean_text_3</name>
+                    <value>País seleccionado</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>Bean_text_30</name>
+                    <value>--Ninguno--</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>Bean_text_31</name>
+                    <value>Escriba su Código Postal Aquí</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>Bean_text_32</name>
+                    <value>Dirección (Número de apartamento)</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>Bean_text_33</name>
+                    <value>Escriba el Nombre de la Calle Aquí (incluyendo Ste./Apto.)</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>Bean_text_4</name>
+                    <value>Estado seleccionado</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>Bean_text_5</name>
+                    <value>Validar</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>Bean_text_6</name>
+                    <value>Le invitamos a que participe en un estudio de investigación que está llevando a cabo el Dr.  Matt Huentelman en el Translational Genomics Research Institute (o TGen) sin ánimo de  lucro de Phoenix, Arizona. Este estudio medirá el tiempo que tarda en jugar un juego de  movimiento.</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>Bean_text_7</name>
+                    <value>Su participación consistirá en cronometrarse usted o pedirle a alguien que lo haga mientras  completa un juego. Le enviaremos un kit de juego que incluye todos los materiales que  necesitará para completar el juego. Deberá registrar usted sus resultados y enviarlos a TGen.  La cantidad de tiempo que se tarda en completar el juego variará entre diferentes, pero  esperamos que tarde aproximadamente 20 minutos.</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>Bean_text_8</name>
+                    <value>No existen riesgos conocidos asociados con la participación en esta investigación. No hay  ningún beneficio directo para usted por participar en este estudio. Sin embargo, lo que  aprendemos de este estudio puede ayudar a otros en el futuro. Puede optar por no participar  en este estudio.</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>Bean_text_9</name>
+                    <value>Si tiene preguntas sobre su participación en este estudio, cree que ha sufrido algún daño relacionado con la investigación o tiene preguntas, inquietudes o quejas sobre la  investigación, puede contactar con el coordinador del estudio en  MindCrowdQuestion@tgen.org o en el 602-343-8653. Si tiene preguntas sobre sus derechos  como sujeto de investigación, preocupaciones, quejas o aportaciones, contacte con Western  Institutional Review Board (WIRB): 1-800-562-4789. WIRB es un grupo de personas que  realizan una revisión independiente de la investigación.</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>Bean_text_all</name>
+                    <value>&lt;p&gt;Este apéndice de la hoja de información de consentimiento tiene más información acerca del estudio de investigación. Puede añadir o cambiar la información en el consentimiento que usted firmó al comienzo de este estudio.&lt;/p&gt;  &lt;p&gt;Está usted invitado a participar en un estudio de investigación conducido por el Dr. Matt Huentelman en el Instituto de Investigación de Genómica Translacional sin fines de lucro, Translational Genomic Research lnstitute (TGen) en Phoenix, Arizona. Este estudio medirá el tiempo que le toma a usted completar un juego de movimientos.&lt;/p&gt;  &lt;p&gt;Su participación consiste en medir su propio tiempo, o que le pida a una amistad que tome el tiempo que tarda usted en completar el juego. Le enviaremos un kit con el juego, incluyendo todos los materiales que necesitará para completar el juego. Deberá anotar sus propios resultados y enviar los resultados a TGen. El tiempo para completar el juego varía de persona a persona, pero calculamos que tardará aproximadamente 20 minutos.&lt;/p&gt;  &lt;p&gt;No hay riesgos conocidos asociados con su participación en esta investigación. No hay ningún beneficio directo para usted por participar. Sin embargo, lo que aprendamos por este estudio podrá ayudar a otros en el futuro. Su alternativa es, no participar en este estudio.&lt;/p&gt;  &lt;p&gt;No recibirá pago por participar en este estudio.&lt;/p&gt;  &lt;p&gt;Si tiene preguntas acerca de su participación en este estudio, si piensa que sufrió una lesión relacionada a esta investigación, si tiene preguntas, preocupaciones o quejas acerca de esta investigación, puede contactar al coordinador del estudio en &lt;a href=&quot;mailto:MindCrowdQuestion@tgen.org&quot;&gt;MindCrowdQuestion@tgen.org&lt;/a&gt; o al 602-343-8653 (24 horas). Contacte WCG IRB al: 855-818-2289, si tiene preguntas acerca de sus derechos como sujeto de la investigación, o preocupaciones, quejas o contribuciones. WCG IRB es un grupo de personas que realizan revisiones independientes de las investigaciones.&lt;/p&gt;  &lt;p&gt;Es posible que se requiere que el personal del estudio comparta los datos generados por esta investigación con el patrocinador, con agencias reguladoras como la Administración de Alimentos y Fármacos, Salubridad y Servicios Humanos de los Estados Unidos (US Food and Drug Administration, Health and Human Services), y con la Junta de Revisión Institucional [IRB]. Esta información es compartida para llevar a cabo la investigación y para que se pueda monitorear adecuadamente. Es posible que las personas que reciban están información no tengan el requerimiento de protegerla y que su información se vuelva a divulgar sin su autorización. Si usted no proporciona la autorización para utilizar su información, usted no podrá participar este estudio.&lt;/p&gt;  &lt;p class=&quot;padding0&quot;&gt;Toda la información que se obtenga de usted durante el curso de este estudio, será confidencial. Cuando se publiquen los resultados de esta investigación o cuando se hable de ello en conferencias científicas, no se incluirá información alguna que revele su identidad. Para ayudar a proteger su identidad obtuvimos un Certificado de Confidencialidad del los Institutos de Salubridad Nacionales. Esto significa que los investigadores se pueden reusar a proporcionar información del estudio que lo identifique a usted. Por ejemplo, si hubiera una orden judicial solicitando sus récords del estudio, TGen no proporcionaría información que lo identifique a usted, a no ser usted haya proporcionado una autorización para este uso. Este Certificado sí autoriza a TGen a divulgar su información cuando:&lt;/p&gt;  &lt;ul class=&quot;p-list&quot;&gt;   &lt;li&gt;Es requerido por leyes Federales, Estatales o locales. Esto excluye procesos Federales, Estatales o civiles locales, penales, administrativos, legislativos, u otros procesos;&lt;/li&gt;   &lt;li&gt;Usted haya autorizado la divulgación, incluyendo la de su tratamiento médico;&lt;/li&gt;   &lt;li&gt;Se haya llevado a cabo como parte de otro estudio de investigación aprobado.&lt;/li&gt; &lt;/ul&gt;   &lt;p&gt;Un certificado de confidencialidad no impide que usted o alguna otra persona, tal como un miembro de su familia, divulgue la información acerca de su participación en esta investigación en forma voluntaria. Si usted desea que la información de su investigación sea compartida con un proveedor de seguros o un proveedor médico o cualquier otra persona que no tenga conexión con la investigación, usted deberá proporcional su autorización para permitir a los investigadores divulgarla.&lt;/p&gt;  &lt;p&gt;Su participación en este estudio es completamente voluntaria. Usted puede elegir no participar o puede cesar su participación en cualquier momento durante las actividades de la investigación, sin sanciones o pérdida de los beneficios a los cuales usted tenga derecho. Para cesar su participación contactar al Coordinador del Estudio en &lt;a href=&quot;mailto:MindCrowdQuestions@tgen.org&quot;&gt;MindCrowdQuestions@tgen.org&lt;/a&gt;.&lt;/p&gt;  &lt;p&gt; &lt;span class=&quot;question-text&quot;&gt;¿Cómo puedo acceder a participar?&lt;/span&gt; &lt;/p&gt;  &lt;p&gt;Habrá preguntas y casillas al final de este formulario. Una vez que haya revisado todo lo escrito, usted podrá elegir la casilla que dice: &quot;Sí Autorizo&quot; o la casilla que dice &quot;NO Autorizo.&quot;&lt;/p&gt;</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>DBS_text_10</name>
+                    <value>VALIDAR DIRECCIÓN</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>DBS_text_11</name>
+                    <value>Código de estado no válido.</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>DBS_text_12</name>
+                    <value>Ciudad no válida.</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>DBS_text_13</name>
+                    <value>Dirección no encontrada.</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>DBS_text_14</name>
+                    <value>Dirección verificada.</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>DBS_text_2</name>
+                    <value>Obligatorio</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>DBS_text_3</name>
+                    <value>Dirección</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>DBS_text_4</name>
+                    <value>Número de apartamento</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>DBS_text_5</name>
+                    <value>Ciudad</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>DBS_text_6</name>
+                    <value>Código postal</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>DBS_text_7</name>
+                    <value>País</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>DBS_text_8</name>
+                    <value>--Ninguno--</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>DBS_text_81</name>
+                    <value>¿CÓMO ACEPTO PARTICIPAR?</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>DBS_text_82</name>
+                    <value>Habrá preguntas y casillas de verificación al final de este formulario. Una vez que haya  revisado todas las declaraciones, marque el botón que dice: &quot;Doy mi consentimiento&quot; o el  botón que dice &quot;Rechazo&quot;.</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>DBS_text_83</name>
+                    <value>Marcando esta casilla:</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>DBS_text_84</name>
+                    <value>Entiendo que si tengo preguntas debo contactar con el Coordinador de  Investigación Clínica en el 602-343-8653 o en MindCrowdQuestion@tgen.org antes de completar esta página.</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>DBS_text_85</name>
+                    <value>Sí autorizo</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>DBS_text_86</name>
+                    <value>Por favor, rellene los campos obligatorios</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>DBS_text_87</name>
+                    <value>Enviar</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>DBS_text_88</name>
+                    <value>Por favor, rellene los campos obligatorios.</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>DBS_text_9</name>
+                    <value>Estado</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>DBS_text_93</name>
+                    <value>NO autorizo</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>textValue</name>
+                    <value>Dirección verificada.</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>url_acceptance</name>
+                    <value>adic/aprobacionescrita</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>url_alreadysubmitted</name>
+                    <value>adic/direccion-ya-ingresada</value>
+                </componentInstanceProperties>
+                <componentName>participantconsentform</componentName>
+                <identifier>participantconsentform</identifier>
+            </componentInstance>
+        </itemInstances>
+        <name>content</name>
+        <prependable>enabled</prependable>
+        <replaceable>enabled</replaceable>
+        <type>Region</type>
+    </flexiPageRegions>
+    <flexiPageRegions>
+        <appendable>enabled</appendable>
+        <name>footer</name>
+        <prependable>enabled</prependable>
+        <replaceable>enabled</replaceable>
+        <type>Region</type>
+    </flexiPageRegions>
+    <flexiPageRegions>
+        <appendable>enabled</appendable>
+        <itemInstances>
+            <componentInstance>
+                <componentInstanceProperties>
+                    <name>customHeadTags</name>
+                    <value>&lt;meta name=&quot;robots&quot; content=&quot;noindex, follow&quot;&gt;
+&lt;meta name=&quot;description&quot; content=&quot;Reglas e información para participar del juego de los frijoles&quot;&gt;</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>description</name>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>title</name>
+                    <value>Juego de los Frijoles • ADI</value>
+                </componentInstanceProperties>
+                <componentName>forceCommunity:seoAssistant</componentName>
+                <identifier>forceCommunity_seoAssistant</identifier>
+            </componentInstance>
+        </itemInstances>
+        <name>sfdcHiddenRegion</name>
+        <prependable>enabled</prependable>
+        <replaceable>enabled</replaceable>
+        <type>Region</type>
+    </flexiPageRegions>
+    <masterLabel>BeanGameParticipant Consent</masterLabel>
+    <template>
+        <name>siteforce:sldsOneColLayout</name>
+    </template>
+    <type>CommAppPage</type>
+</FlexiPage>

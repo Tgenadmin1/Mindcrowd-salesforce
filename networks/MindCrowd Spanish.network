@@ -10,6 +10,7 @@
     <enableApexCDNCaching>true</enableApexCDNCaching>
     <enableCustomVFErrorPageOverrides>false</enableCustomVFErrorPageOverrides>
     <enableDirectMessages>true</enableDirectMessages>
+    <enableExpFriendlyUrlsAsDefault>false</enableExpFriendlyUrlsAsDefault>
     <enableExperienceBundleBasedSnaOverrideEnabled>true</enableExperienceBundleBasedSnaOverrideEnabled>
     <enableGuestChatter>false</enableGuestChatter>
     <enableGuestFileAccess>true</enableGuestFileAccess>
@@ -31,6 +32,7 @@
     <forgotPasswordTemplate>unfiled$public/CommunityForgotPasswordEmailTemplateSpanish</forgotPasswordTemplate>
     <gatherCustomerSentimentData>true</gatherCustomerSentimentData>
     <headlessForgotPasswordTemplate>unfiled$public/CommunityHeadlessForgotPasswordTemplate</headlessForgotPasswordTemplate>
+    <headlessRegistrationTemplate>unfiled$public/CommunityHeadlessRegistrationTemplate</headlessRegistrationTemplate>
     <logoutUrl>https://project.mindcrowd.org/es/s/accesovip</logoutUrl>
     <networkMemberGroups>
         <profile>Admin</profile>

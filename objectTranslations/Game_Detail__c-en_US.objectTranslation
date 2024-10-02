@@ -53,6 +53,10 @@
         </picklistValues>
     </fields>
     <fields>
+        <label><!-- Max Score 2 --></label>
+        <name>Max_Score_2__c</name>
+    </fields>
+    <fields>
         <help><!-- The Maximum Score that participant can Score By Playing the Game --></help>
         <label><!-- Max Score --></label>
         <name>Max_Score__c</name>

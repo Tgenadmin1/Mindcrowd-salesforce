@@ -1,0 +1,192 @@
+.THIS.card-header {
+    font-size: 28px;
+}
+
+.THIS .radio-label {    
+    font-family: 'whitneylight', Helvetica, Arial, sans-serif;
+    text-shadow: 0px 0px 2px rgb(0 0 0 / 24%);
+    text-transform: none;
+    font-weight: 300;
+    color: #163248;
+}
+
+.THIS .card-title {
+
+    /*font-size: 20px; 
+    line-height: 1.5; 
+    margin-bottom: 5px; 
+    padding-left: 10px;
+    font-family: 'whitneylight', Helvetica, Arial, sans-serif;*/
+    font-size: 24px;
+    line-height: 34px;
+    margin: 10px;
+    font-family: 'whitneylight', Helvetica, Arial, sans-serif;
+    text-shadow: 0px 0px 2px rgb(0 0 0 / 24%);
+    text-transform: none;
+    font-weight: 400;
+    color: #163248;
+}
+
+.THIS .card-title1 {
+    font-size: 24px;
+    line-height: 34px;
+    margin: 10px;
+    font-family: 'whitneylight', Helvetica, Arial, sans-serif;
+    text-shadow: 0px 0px 2px rgb(0 0 0 / 24%);
+    text-transform: none;
+    font-weight: 400;
+    color: #163248;
+    padding-bottom: 15px; /* Adjust the value to add desired space */
+}
+
+
+.THIS .error-message {
+    color: red;
+    font-size: 18px;
+    margin-top: 10px; /* Adjust margin as needed */
+    font-family: Helvetica, Arial, sans-serif;
+    padding-left: 10px;
+}
+
+.THIS .centered-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; /* Full viewport height */
+}
+
+.THIS .centered-content {
+    text-align: center;
+}
+
+
+
+.THIS .input-container {
+    width: 200px;
+    padding-left: 10px
+    
+}
+
+
+.THIS .button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.THIS .custom-input {
+    border: 1px solid #6a6797;
+    border-radius: 8px;
+    font-size: 16px;
+    width: 100%;
+}
+
+
+
+.THIS .lightning-button {
+    background-color: #cf445e; /* Set the button color to pink */
+    color: white; /* Set the text color to white for better contrast */
+    border: none; /* Remove the border */
+    padding: 10px 20px; /* Add padding for a nice look */
+    cursor: pointer; /* Change the cursor to a pointer */
+    font-size: 20px; /* Adjust the font size */
+}
+
+.THIS .lightning-button:hover {
+    background-color: pink; /* Maintain the button color on hover */
+}
+
+
+.THIS .input-label {
+    position: absolute;
+    right: -22%;
+    transform: translateX(50%);
+    top: 30%;
+    font-size: 26px;
+    line-height: 34px;
+    margin: 10px;
+    font-family: 'whitneylight', Helvetica, Arial, sans-serif;
+    text-shadow: 0px 0px 2px rgb(0 0 0 / 24%);
+    text-transform: none;
+    font-weight: 400;
+    color: #163248;
+}
+
+
+.THIS .input-label1 {
+    position: absolute;
+    right: -32%;
+    transform: translateX(50%);
+    top: 30%;
+    font-size: 24px;
+    line-height: 34px;
+    margin: 10px;
+    font-family: 'whitneylight', Helvetica, Arial, sans-serif;
+    text-shadow: 0px 0px 2px rgb(0 0 0 / 24%);
+    text-transform: none;
+    font-weight: 400;
+    color: #163248;
+}
+
+.THIS .input-label2 {
+    position: absolute;
+    right: -20%;
+    transform: translateX(50%);
+    top: 30%;
+    font-size: 26px;
+    line-height: 34px;
+    margin: 10px;
+    font-family: 'whitneylight', Helvetica, Arial, sans-serif;
+    text-shadow: 0px 0px 2px rgb(0 0 0 / 24%);
+    text-transform: none;
+    font-weight: 400;
+    color: #163248;
+}
+
+.THIS .slds-form-group {
+    display: flex; /* Make the form group container flexbox */
+    flex-direction: column; /* Arrange radio buttons vertically */
+}
+
+.THIS .slds-form-element__inline {
+    display: flex; /* Make each radio option a flexbox item */
+    align-items: center; /* Align radio button and label horizontally */
+}
+
+.THIS .slider-card {
+    position: relative;
+}
+
+.THIS .slds-slider {
+    padding: 0 50px; /* Adjust the padding as needed */
+}
+
+.THIS #slider-values {
+    display: flex;
+    width: calc(100% - 40px); /* Adjust this value based on padding changes */
+    margin-top: 10px; /* Adjust this value as needed */
+}
+
+.THIS #slider-values span {
+    flex: 1;
+    flex-basis: calc(100% / 7); /* Distribute equally for 7 spans */
+    text-align: center; /* Center the text within spans */
+}
+
+.THIS #slider-values span {
+    flex: 1; /* Equal distribution of space for each span */
+    text-align: center; /* Center the text within each span */
+}
+
+
+.THIS .slds-slider {
+    display: flex;
+    flex-direction: row; /* Default horizontal layout */
+}
+
+@media only screen and (max-width: 768px) {
+    /* Media query for mobile and tablet devices */
+    .THIS .slds-slider {
+        flex-direction: column; /* Vertical layout for smaller screens */
+    }
+}

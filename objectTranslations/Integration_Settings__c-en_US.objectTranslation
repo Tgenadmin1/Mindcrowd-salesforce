@@ -49,6 +49,10 @@
         <name>MindCrowdZip5__c</name>
     </fields>
     <fields>
+        <label><!-- Password --></label>
+        <name>Password__c</name>
+    </fields>
+    <fields>
         <label><!-- Source Id --></label>
         <name>Source_Id__c</name>
     </fields>

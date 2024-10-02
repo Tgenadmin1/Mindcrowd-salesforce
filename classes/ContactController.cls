@@ -21,8 +21,9 @@ public without sharing class ContactController
     {
         try 
         {  
-            List<Contact> con = [SELECT Id,ParticipantCode__c,Shipment_Consent__c,Shipping_Consent__c FROM Contact 
+            List<Contact> con = [SELECT Id,ParticipantCode__c,Shipment_Consent__c,Shipping_Consent__c,Bean_Game__c FROM Contact 
                                  where ParticipantCode__c=:participantcode OR Secure_GUID__c =:participantcode];
+            String BeanGameStat;
             string conID;
             string mailingzipcode;
             if(con.size()>1){
@@ -31,12 +32,14 @@ public without sharing class ContactController
                     system.debug('ParticipationID====>'+ParticipationID);
                     if(ParticipationID.equals(participantcode)){
                         conID = contactId.id;
+                        BeanGameStat = con[0].Bean_Game__c;
                         break;
                     }
                 }
             }
             else{
                 conID = con[0].id;
+                BeanGameStat = con[0].Bean_Game__c;
             }
             List<Research_Campaign__c> campaignList=new List<Research_Campaign__c>();
             campaignList= [SELECT Id,Name FROM Research_Campaign__c where Name=:campaigntype];
@@ -67,7 +70,10 @@ public without sharing class ContactController
                 }
                 con[0].Shipping_Consent__c=shipmentconsent;
                 update con;
-                if (ContactController.hasDuplicateRecord(conID,campaigntype)) {
+                if ((ContactController.hasDuplicateRecord(conID,campaigntype) && campaigntype != 'bean game')) {
+                    return 'DuplicateSD';
+                  }
+                else if(campaigntype == 'bean game' && BeanGameStat !='Opened'){
                     return 'DuplicateSD';
                   }
                 else{
@@ -313,7 +319,7 @@ public without sharing class ContactController
     @AuraEnabled(cacheable=true)
     public static Contact fetchContactFields1(String participantcode){
     	
-        	Contact con = [SELECT Id,FirstName,LastName,Email,ParticipantCode__c FROM Contact 
+        	Contact con = [SELECT Id,FirstName,LastName,Email,ParticipantCode__c,Bean_Game__c,Consent_signed_on__c FROM Contact 
                                  where ParticipantCode__c=:participantcode limit 1];
         return con;
     }
@@ -329,4 +335,77 @@ public without sharing class ContactController
         return existingRecords.size()>0?true:false;
         
     } 
+    
+    @AuraEnabled
+    Public static Map<String, String> hasDuplicateRecords(string conId, List<String> campaign){
+        List<Shipping_Detail__c> existingRecords=[select id,
+                                                  Contact_Id__c,
+                                                  Shipment_Status__c,
+                                                  Campaign__r.Name
+                                                  from Shipping_Detail__c 
+                                                  where Contact_Id__c=:conId
+                                                  AND Campaign__r.Name IN: campaign
+                                                  AND Shipment_Status__c NOT IN('Invalid Address','Failed')];
+        Map<String, String> campStatus = new Map<String, String>();
+        for(String campName:  campaign){
+                campStatus.put(campName, 'N');
+        }
+        for(Shipping_Detail__c sd: existingRecords){
+            if(campaign.contains(sd.Campaign__r.Name)){
+                campStatus.put(sd.Campaign__r.Name,'Y');
+            }
+        }
+        return campStatus;
+        
+    } 
+
+    @AuraEnabled(cacheable=true)
+    public static List<Map<String, Object>> getCustomSettingValues() {
+    List<Map<String, Object>> customSettingValues = new List<Map<String, Object>>();
+    
+    // Get all the fields for CurrRunnCamp__c
+    Map<String, Schema.SObjectField> fieldMap = Schema.SObjectType.CurrRunnCamp__c.fields.getMap();
+    String fieldsToQuery = 'Id'; // Always include Id
+    
+    // Add additional fields to the query
+    for (String fieldName : new String[]{'CurrRunnCampEnglish__c', 'CurrRunnCampSpanish__c'}) {
+        if (fieldMap.containsKey(fieldName)) {
+            fieldsToQuery += ',' + fieldName;
+        }
+    }
+    
+    // Build the dynamic SOQL query
+    String query = 'SELECT ' + fieldsToQuery + ' FROM CurrRunnCamp__c';
+    
+    // Execute the query
+    List<CurrRunnCamp__c> existingRecords = Database.query(query);
+    
+    // Convert the records to a list of maps
+    for (CurrRunnCamp__c record : existingRecords) {
+        Map<String, Object> recordMap = new Map<String, Object>();
+        recordMap.put('Id', record.Id);
+        recordMap.put('CurrRunnCampEnglish__c', record.CurrRunnCampEnglish__c);
+        recordMap.put('CurrRunnCampSpanish__c', record.CurrRunnCampSpanish__c);
+        customSettingValues.add(recordMap);
+    }
+    
+    System.debug('customSettingValues: ' + customSettingValues);
+    return customSettingValues;
+}
+    @AuraEnabled
+    public static String updateConsent(String participantcode) {
+        String statuscode='';
+        try{
+            List<Contact> Cont = [select Id from Contact where ParticipantCode__c =: participantcode];
+            if(Cont.size()>0){
+                Cont[0].Consent_Signed_on__c = system.today();
+                update Cont[0];
+                statuscode='Success';            
+           }       
+        }
+        catch(Exception e){
+            statuscode='Failed';
+        }        
+        return statuscode;
+    }
 }

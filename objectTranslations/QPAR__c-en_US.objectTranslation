@@ -102,5 +102,12 @@
         <label><!-- QPAR_v1.0.2 --></label>
         <name>Walk_outside_for_any_reason__c</name>
     </fields>
+    <layouts>
+        <layout>QPAR Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
     <startsWith>Consonant</startsWith>
 </CustomObjectTranslation>

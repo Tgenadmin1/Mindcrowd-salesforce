@@ -1,5 +1,6 @@
 ({
     doInit: function(component, event, helper) {
+        component.set("v.spinner", true);
         const gameName = component.get("v.gameName");
         let action = component.get('c.getDashboardDataForloggedInUser');
         action.setParams({
@@ -60,6 +61,10 @@
                 //For testing : In case you want to all Games Charts even if it is not played
                // component.set('v.isGamePlayed', true);
               // component.set('v.showCharts', true);
+              component.set("v.spinner", false); 
+            }
+            else{
+                component.set("v.spinner", false); 
             }
         });
         $A.enqueueAction(action);

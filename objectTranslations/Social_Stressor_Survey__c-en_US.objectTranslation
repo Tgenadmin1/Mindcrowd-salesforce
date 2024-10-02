@@ -81,5 +81,12 @@
         <label><!-- SOCSTRESS_v1.0.9 --></label>
         <name>You_or_family_member_lose_job__c</name>
     </fields>
+    <layouts>
+        <layout>Social Stressor Survey Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
     <startsWith>Consonant</startsWith>
 </CustomObjectTranslation>

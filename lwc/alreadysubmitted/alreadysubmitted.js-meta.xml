@@ -16,7 +16,7 @@
                 <property name="acceptancePage03" type="String" default="Go to the MindCrowd Website" label="acceptancePage03"/>
                 <property name="acceptancePage04" type="String" default="Want to learn more about this research" label="acceptancePage04"/>
                 <property name="acceptancePage05" type="String" default="Our records show that you have already completed this survey. Thank you for your time." label="acceptancePage05"/>
-                
-            </targetConfig>
+                <property name="acceptancePage06" type="String" default="My Games" label="acceptancePage06"/>
+        </targetConfig>
         </targetConfigs>
 </LightningComponentBundle>

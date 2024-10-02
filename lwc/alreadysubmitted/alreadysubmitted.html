@@ -48,7 +48,7 @@
         <div class="freebirdFormviewerViewHeaderThemeStripe freebirdSolidBackground exportThemeStripe"></div>
         <h1 class="title">{acceptancePage05}</h1>
         </lightning-layout-item>
-    
+<template if:false={showButton}>    
     <lightning-layout-item size="12" small-device-size="12" medium-device-size="12" large-device-size="12" class="text-center marginT2p">
         <lightning-button label={acceptancePage03} class="magenta-btn slds-m-left_x-small" variant="brand" onclick={navigateToHomePage}></lightning-button>
 </lightning-layout-item>
@@ -56,7 +56,13 @@
 <lightning-layout-item size="12" small-device-size="12" medium-device-size="12" large-device-size="12" class="text-center marginT2p">
     <lightning-button label={acceptancePage04} class="magenta-btn slds-m-left_x-small" variant="brand" onclick={navigateToWebPage}></lightning-button>
 </lightning-layout-item>
+</template>
 
+<template if:true={showButton}>
+    <lightning-layout-item size="12" small-device-size="12" medium-device-size="12" large-device-size="12" class="text-center marginT2p">
+    <lightning-button label={acceptancePage06} class="magenta-btn slds-m-left_x-small" variant="brand" onclick={navigateToGamePage}></lightning-button>
+    </lightning-layout-item>
+</template>
     </lightning-layout>
 
     <!-- <lightning-card>

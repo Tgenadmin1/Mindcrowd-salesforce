@@ -25,6 +25,8 @@ import close_btn from "@salesforce/label/c.close_btn";
 //import fetchRecord from "@salesforce/apex/ContactController.fetchContactFields";
 import fetchRecord from '@salesforce/apex/ContactController.fetchContactFields1';
 //import requiredFieldValidationError from '@salesforce/label/c.Required_Fields_Error_Message';
+import url_decline from '@salesforce/label/c.live_URL_9';
+import url_decline_vip from '@salesforce/label/c.url_dashboard';
 
 import { ShowToastEvent } from "lightning/platformShowToastEvent";
 const FIELDS = [
@@ -370,7 +372,14 @@ export default class Participantconsentform extends NavigationMixin(LightningEle
 
       // let countyOptions = [{label:'--None--', value:'--None--'}];
       // let countyOptions = [{label:'--us--', value:'--us--'}];
-      let countyOptions = [{ label: "United States", value: "US" }];
+      //let countyOptions = [{ label: "United States", value: "US" }];
+      let countyOptions;
+      if (document.getElementsByTagName("html")[0].getAttribute("lang") == 'es') {
+        countyOptions = [{ label: "Estados Unidos", value: "US" }];
+      }
+      else {
+        countyOptions = [{ label: "United States", value: "US" }];
+      }   
 
       //         // Account Country Control Field Picklist values
       data.picklistFieldValues.MailingCountryCode.values.forEach((key) => {
@@ -704,9 +713,21 @@ export default class Participantconsentform extends NavigationMixin(LightningEle
   }
 
   decline(event) {
-    window.location.href="https://blog.mindcrowd.org/";
+    //window.location.href="https://blog.mindcrowd.org/";
+    if (window.location.pathname.indexOf('vip') > -1) {
+      this[NavigationMixin.Navigate]({
+        type: 'standard__webPage',
+        attributes: {
+          url: community_url + '/s/' + url_decline_vip
+        }
+      },
+      true); // Replaces the current page in your browser history with the URL
+    } else {
+      window.location.href = url_decline;
+      console.log('gggg', url_decline);
+    }
   }
-
+  
   updateContactFields(event) {
     if(this.zipcode!=null){
       if(this.zipcode.length>=9){

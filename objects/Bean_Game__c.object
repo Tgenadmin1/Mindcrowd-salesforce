@@ -380,6 +380,33 @@
         <unique>false</unique>
     </fields>
     <fields>
+        <fullName>Left_Hand_Average__c</fullName>
+        <externalId>false</externalId>
+        <formula>(
+        VALUE(LEFT(LeftHand_1_ExerciseTime__c, FIND(&quot;:&quot;, LeftHand_1_ExerciseTime__c) - 1)) +
+        VALUE(LEFT(LeftHand_2_ExerciseTime__c, FIND(&quot;:&quot;, LeftHand_2_ExerciseTime__c) - 1)) +
+        VALUE(LEFT(LeftHand_3_ExerciseTime__c, FIND(&quot;:&quot;, LeftHand_3_ExerciseTime__c) - 1)) +
+        VALUE(LEFT(LeftHand_4_ExerciseTime__c, FIND(&quot;:&quot;, LeftHand_4_ExerciseTime__c) - 1))
+    )*60 / 4
++
+
+    (
+        VALUE(MID(LeftHand_1_ExerciseTime__c, FIND(&quot;:&quot;, LeftHand_1_ExerciseTime__c) + 1, LEN(LeftHand_1_ExerciseTime__c))) +
+        VALUE(MID(LeftHand_2_ExerciseTime__c, FIND(&quot;:&quot;, LeftHand_2_ExerciseTime__c) + 1, LEN(LeftHand_2_ExerciseTime__c))) +
+        VALUE(MID(LeftHand_3_ExerciseTime__c, FIND(&quot;:&quot;, LeftHand_3_ExerciseTime__c) + 1, LEN(LeftHand_3_ExerciseTime__c))) +
+        VALUE(MID(LeftHand_4_ExerciseTime__c, FIND(&quot;:&quot;, LeftHand_4_ExerciseTime__c) + 1, LEN(LeftHand_4_ExerciseTime__c)))
+    ) / 4</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Left Hand Average</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
         <fullName>OneLastThing__c</fullName>
         <externalId>false</externalId>
         <label>OneLastThing</label>
@@ -605,6 +632,34 @@
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Right_Hand_Average__c</fullName>
+        <externalId>false</externalId>
+        <formula>(
+VALUE(Left(RightHand_1_ExerciseTime__c, FIND(&quot;:&quot;, RightHand_1_ExerciseTime__c) - 1)) +
+VALUE(Left(RightHand_2_ExerciseTime__c, FIND(&quot;:&quot;, RightHand_2_ExerciseTime__c) - 1)) +
+VALUE(Left(RightHand_3_ExerciseTime__c, FIND(&quot;:&quot;, RightHand_3_ExerciseTime__c) - 1)) +
+VALUE(Left(RightHand_4_ExerciseTime__c, FIND(&quot;:&quot;, RightHand_4_ExerciseTime__c) - 1))
+)*60 / 4
+
++
+
+(
+VALUE(MID(RightHand_1_ExerciseTime__c, FIND(&quot;:&quot;, RightHand_1_ExerciseTime__c) + 1, LEN(RightHand_1_ExerciseTime__c))) +
+VALUE(MID(RightHand_2_ExerciseTime__c, FIND(&quot;:&quot;, RightHand_2_ExerciseTime__c) + 1, LEN(RightHand_2_ExerciseTime__c))) +
+VALUE(MID(RightHand_3_ExerciseTime__c, FIND(&quot;:&quot;, RightHand_3_ExerciseTime__c) + 1, LEN(RightHand_3_ExerciseTime__c))) +
+VALUE(MID(RightHand_4_ExerciseTime__c, FIND(&quot;:&quot;, RightHand_4_ExerciseTime__c) + 1, LEN(RightHand_4_ExerciseTime__c)))
+) / 4</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Right Hand Average</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
         <unique>false</unique>
     </fields>
     <label>Bean Game</label>

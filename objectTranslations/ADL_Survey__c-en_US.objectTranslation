@@ -81,5 +81,12 @@
         <label><!-- ADL_v1.0.10 --></label>
         <name>Work_at_a_paid_job_position__c</name>
     </fields>
+    <layouts>
+        <layout>ADL Survey Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
     <startsWith>Consonant</startsWith>
 </CustomObjectTranslation>

@@ -9,7 +9,7 @@
   Ver   Date         Author         Modification
   2.0   15-09-2022   Vidushi Agarwal  Implemented design attribute -->
   
-    <aura:component controller="CustomLoginController" extends="forceCommunity:navigationMenuBase" access="global" implements="forceCommunity:availableForAllPageTypes">
+  <aura:component controller="CustomLoginController" extends="forceCommunity:navigationMenuBase" access="global" implements="forceCommunity:availableForAllPageTypes">
     <aura:attribute name="baseUrl" type="String"/>    
     <aura:attribute name="ContactId" type="String"/>
     <aura:attribute name="Language" type="String"/>
@@ -19,13 +19,19 @@
     <aura:attribute name="community_nav_text_4" type="String" default = "My Profile" access="global" />
     <aura:attribute name="community_nav_text_5" type="String" default = "Blog" access="global" />
     <aura:attribute name="community_nav_text_6" type="String" default = "Logout" access="global" />
+    <aura:attribute name="community_nav_text_7" type="String" default = "My Surveys" access="global" />
     <aura:attribute name="macTouch" type="Boolean" default="false"  access="global" />
     <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
     <!--<lightning:navigation aura:id="navService"/>-->
     <lightning:navigation aura:id="navService"/>
-            <div class="slds-builder-header__utilities-item">
+              <div class="slds-builder-header__utilities-item">
                 <a href="" class="slds-builder-header__item-action slds-media slds-media_center gameLink paddingL0" onclick="{!c.gameNav}">
                   <div class="slds-media__body">{!v.community_nav_text_1}</div>
+                </a>
+              </div>
+              <div class="slds-builder-header__utilities-item">
+                <a href="#" class="slds-builder-header__item-action slds-media slds-media_center" onclick="{!c.surveysNav}">
+                    <div class="slds-media__body">{!v.community_nav_text_7}</div>
                 </a>
               </div>
               <div class="slds-builder-header__utilities-item">
@@ -58,5 +64,5 @@
                   <div class="slds-media__body">{!v.community_nav_text_6}</div>
                 </a>
               </div>
-              
+                            
 </aura:component>

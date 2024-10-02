@@ -151,7 +151,17 @@
                 url: $A.get("$Label.c.Community_Url") + '/s/'+ $A.get("$Label.c.url_myresults")
             }
         });
+    },
+    surveysNav: function (component, event, helper) {
+        var ContactId = component.get("v.ContactId");
+        console.log("ContactId", ContactId);
+        
+        component.find("navService").navigate({
+            type: "standard__webPage",
+            attributes: {
+                url: $A.get("$Label.c.Community_Url") + '/s/' + $A.get("$Label.c.url_surveys")
+            }
+        });
     }
-   
 
 })

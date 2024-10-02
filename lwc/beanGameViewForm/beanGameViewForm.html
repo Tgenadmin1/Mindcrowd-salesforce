@@ -595,6 +595,11 @@
                         <h1 class="title">{BeanGame_text1} </h1>
                         <!-- <h1 class="title" style="font-size: 14px;">Thank you for your participation! </h1> -->
                         <div class="form-section">{BeanGame_text21}</div>
+                        <template if:true={showButton}>
+                            <div class="text-center marginT2p">
+                                <lightning-button label={BeanGame_text29} class="magenta-btn slds-m-left_x-small" variant="brand" onclick={navigateToMygames}></lightning-button>
+                            </div> 
+                        </template>
                 </lightning-layout-item>
 
 

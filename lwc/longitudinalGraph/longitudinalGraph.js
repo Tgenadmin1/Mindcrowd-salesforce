@@ -4,6 +4,8 @@ import { loadScript } from 'lightning/platformResourceLoader';
 import { ShowToastEvent } from 'lightning/platformShowToastEvent';
 import Date from '@salesforce/label/c.Date';
 import Score from '@salesforce/label/c.Score';
+import BeanGame_Left_Hand from '@salesforce/label/c.BeanGame_Left_Hand';
+import BeanGame_Right_Hand from '@salesforce/label/c.BeanGame_Right_Hand';
 
 export default class ChartExample extends LightningElement {
     isChartJsInitialized;
@@ -280,7 +282,127 @@ export default class ChartExample extends LightningElement {
         } 
         //configdata.options.scales.yAxes[0].ticks.stepSize =4;
         //configdata.options.scales.yAxes[0].ticks.suggestedMax =36;
-      }      
+      }
+      if (this.chartName == 'Fake News' || this.chartName == 'Noticias Falsas') {
+        const fakenewsdata =[...this.graphData.gamedataList.fakenewsdataList];
+        configdata.data.datasets[0].data = fakenewsdata;
+        configdata.options.scales.xAxes[0].labels =[...this.graphData.xAxisLabelsfakenews];
+        const maxscore = fakenewsdata.reduce(function(acc, current) {
+          if (current.y > acc) {
+            return current.y;
+          }
+          return acc;
+        }, "");        
+        if(maxscore <= 12 )
+        {
+          configdata.options.scales.yAxes[0].ticks.stepSize =1;
+          configdata.options.scales.yAxes[0].ticks.suggestedMax =maxscore+1;
+        } 
+        else{
+          configdata.options.scales.yAxes[0].ticks.stepSize =2;
+          configdata.options.scales.yAxes[0].ticks.suggestedMax =maxscore+2;
+        } 
+      }
+
+      if (this.chartName == 'Digits' || this.chartName == 'Dígitos') {
+        const digitSymboldata =[...this.graphData.gamedataList.digitSymboldataList];
+        configdata.data.datasets[0].data = digitSymboldata;
+        configdata.options.scales.xAxes[0].labels =[...this.graphData.xAxisLabelsdigitSymbol];
+        const maxscore = digitSymboldata.reduce(function(acc, current) {
+          if (current.y > acc) {
+            return current.y;
+          }
+          return acc;
+        }, "");        
+        if(maxscore <= 50 )
+        {
+          configdata.options.scales.yAxes[0].ticks.stepSize = 5;
+          configdata.options.scales.yAxes[0].ticks.suggestedMax =maxscore+1;
+        } 
+        else{
+          configdata.options.scales.yAxes[0].ticks.stepSize = 10;
+          configdata.options.scales.yAxes[0].ticks.suggestedMax =maxscore+2;
+        } 
+      } 
+
+      if (this.chartName == 'This & That' || this.chartName == 'Esto y Aquello') {
+        const thisandthatdata =[...this.graphData.gamedataList.thisandthatdatalist];
+        configdata.data.datasets[0].data = thisandthatdata;
+        configdata.options.scales.xAxes[0].labels =[...this.graphData.xAxisLabelsthisandthat];
+        const maxscore = thisandthatdata.reduce(function(acc, current) {
+          if (current.y > acc) {
+            return current.y;
+          }
+          return acc;
+        }, "");        
+        if(maxscore <= 16 )
+        {
+          configdata.options.scales.yAxes[0].ticks.stepSize = 2;
+          configdata.options.scales.yAxes[0].ticks.suggestedMax =maxscore+1;
+        } 
+        else{
+          configdata.options.scales.yAxes[0].ticks.stepSize = 4;
+          configdata.options.scales.yAxes[0].ticks.suggestedMax =maxscore+2;
+        } 
+      } 
+
+      if (this.chartName == 'Bean Game' || this.chartName == 'Juego de las Alubias') {                    
+        const beangameleftdata =[...this.graphData.gamedataList.beangameleftdataList];
+        const beangamerightdata =[...this.graphData.gamedataList.beangamerightdataList];        
+        configdata.data.datasets[0].data = beangameleftdata;
+        configdata.data.datasets[0].label= BeanGame_Left_Hand;
+        configdata.options.legend.display=true;
+        let newDataset = {...configdata.data.datasets[0]};        
+        newDataset.data = beangamerightdata; 
+        newDataset.label=BeanGame_Right_Hand; 
+        //console.log(JSON.stringify(newDataset));
+        newDataset.pointBackgroundColor='rgba(30,144,255, 0.2)';     
+        newDataset.pointBorderColor='rgba(30,144,255, 1)'; 
+        newDataset.backgroundColor.filter(item => item !== 'rgba(18,35,62, 0.2)');  
+        newDataset.borderColor.filter(item => item !== 'rgba(18,35,62, 1)'); 
+        newDataset.backgroundColor.push('rgba(30,144,255, 1)');  
+        newDataset.borderColor=('rgba(30,144,255, 1)'); 
+        configdata.data.datasets.push(newDataset);        
+        configdata.options.scales.xAxes[0].labels =[...this.graphData.xAxisLabelsbeangame];
+        /*configdata.options.scales.yAxes[0].type="time"; 
+        const time=   {
+          parser: 'mm:ss.SS', // Format for the time data
+          unit: 'minute',
+          unitStepSize: 1,
+          displayFormats: {
+              'minute': 'mm:ss.SS'
+            }
+          };
+        configdata.options.scales.yAxes[0].time=time;
+        configdata.options.scales.yAxes.forEach((yAxis) => {
+          delete yAxis.ticks;
+        });*/
+        //console.log(JSON.stringify(configdata));      
+        const leftmaxscore = beangameleftdata.reduce(function(acc, current) {
+          if (current.y > acc) {
+            return current.y;
+          }
+          return acc;
+        }, "");    
+        const rightmaxscore = beangamerightdata.reduce(function(acc, current) {
+          if (current.y > acc) {
+            return current.y;
+          }
+          return acc;
+        }, ""); 
+        let maxscore = Math.max(leftmaxscore, rightmaxscore);
+        if(maxscore <= 400 )
+        {
+          configdata.options.scales.yAxes[0].ticks.stepSize =20;
+          configdata.options.scales.yAxes[0].ticks.suggestedMax =maxscore+20;
+        } 
+        else{
+          configdata.options.scales.yAxes[0].ticks.stepSize =25;
+          configdata.options.scales.yAxes[0].ticks.suggestedMax =maxscore+25;
+        }
+        //configdata.options.scales.yAxes[0].ticks.stepSize =4;
+        //configdata.options.scales.yAxes[0].ticks.suggestedMax =36;
+      }   
     
       if (this.isChartJsInitialized) {
           return;

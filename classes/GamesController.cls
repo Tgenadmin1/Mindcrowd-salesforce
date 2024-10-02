@@ -298,6 +298,9 @@ public without sharing class GamesController
         if(obj!=null && obj.Contact__c!=null){
             System.debug('beanGame is created with id: '+obj.id);
             insert obj;   
+            Contact cont = [select Bean_Game__c from Contact where Id=:obj.Contact__c];
+            cont.Bean_Game__c='Completed';
+            update cont;
         }
         else{
             System.debug('BeanGame OBJ is null.');
@@ -340,8 +343,53 @@ public without sharing class GamesController
                      Object_Discrimination__c,Object_Temporal__c,Object_Spatial__c ,MailingCity,MailingCountryCode,
                      MailingStreet,MailingStateCode,MailingPostalCode,Sex__c,Second_degree_family_history_of_AD__c,
                      First_degree_family_history_of_AD__c,First_degree_family_history_of_EO_AD__c,
-                     Health_Lifestyle_and_Medical__c ,Highest_level_of_education_completed__c FROM Contact where id=:u.ContactId];
+                     Health_Lifestyle_and_Medical__c ,Highest_level_of_education_completed__c,Fake_News__c,
+                     Tell_Me__c,Digits__c,Tell_Me_More__c,This_That__c FROM Contact where id=:u.ContactId];
         }
         return con;
+    }
+    
+    @AuraEnabled
+    public static void participantGameInfoUpdate1(Participant_Game_Info__c sobj) {
+        try {      
+            if (sobj != null ) {
+                update sobj;
+            } else {
+                System.debug('PGi object or field is null.');
+            }
+        } catch (Exception ex) {
+            logError('GamesController', 'update_PGI()', ex.getMessage() + ', Data: ' + sobj);
+            System.Debug('participantGameInfoUpdate1 AuraHandledException: ' + ex.getMessage());
+        }
+    }
+    
+    @AuraEnabled
+    public static Map<String, Object> updateSpeechTaskPGI(String parentId, String taskName, Boolean otherlanguage, 
+                                                          Boolean othervoices,Boolean loudnoices,Boolean isconsent){
+	   try {
+            Participant_Game_Info__c pgi = [Select Id,Recording_File_Name__c,Contact_Name__c,Is_Loud_Noises_Recorded__c,
+                                            Is_Non_English_Usage__c,Is_Other_Voices_Recorded__c,Is_Recording_Usage_Consent__c
+                                            from Participant_Game_Info__c where Id =: parentId];
+           String filename = pgi.Contact_Name__c+'_'+pgi.Id+'.weba';
+           Map<String, Object> responseBody = new Map<String, Object>();
+           system.debug(isconsent);
+           
+           if(isconsent){
+                String bucketName = (taskName == 'Aging Well') ? 'tellme-mindcrowd' : (taskName == 'Memory') ? 'tellmemore-mindcrowd' : null;
+                responseBody  = AWSLambdaService.getUploadURL(bucketName, fileName,'callout:AWS_S3');
+                pgi.Recording_File_Name__c = filename;
+           }     
+           
+           pgi.Is_Non_English_Usage__c = otherlanguage;
+           pgi.Is_Other_Voices_Recorded__c = othervoices;
+           pgi.Is_Loud_Noises_Recorded__c = loudnoices;
+           pgi.Is_Recording_Usage_Consent__c = isconsent;           
+           update pgi;    
+           return responseBody;
+        }
+         catch (System.Exception e) {
+            System.debug('Exception: ' + e.getMessage());
+            return null;
+        }    
     }
 }

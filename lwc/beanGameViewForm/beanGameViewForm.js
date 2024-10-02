@@ -21,8 +21,12 @@ import oneLastThing from '@salesforce/schema/Bean_Game__c.OneLastThing__c';
 import { getObjectInfo, getPicklistValues} from 'lightning/uiObjectInfoApi';
 import { ShowToastEvent } from 'lightning/platformShowToastEvent';
 import { CurrentPageReference } from 'lightning/navigation';
+import community_url from '@salesforce/label/c.Community_Url';
+import Games_Dashboard from '@salesforce/label/c.Games_Dashboard';
+import {NavigationMixin} from 'lightning/navigation';
+import beangameviewformurl from '@salesforce/label/c.beangameviewformurl';
 
-export default class BeanGameViewForm extends LightningElement {
+export default class BeanGameViewForm extends NavigationMixin(LightningElement) {
     logoimage =  images + '/images/MindCrowd+Logo+FORM.png';
     logoimage2 =  images + '/images/mindcrowd.png';
 
@@ -35,6 +39,8 @@ export default class BeanGameViewForm extends LightningElement {
     @track rightformResponse = false;
     @track oneLastThing = false;
     @track refOfBean = beanGameObject;
+    showButton=false;
+    @api BeanGame_text29;
 
    
 
@@ -73,6 +79,7 @@ export default class BeanGameViewForm extends LightningElement {
     @api BeanGame_text26 = "Please fill the required fields.";
     @api BeanGame_text27 = "Submit";
     @api BeanGame_text28 = "List has no rows for assignment to SObject";
+    url_gamespage = community_url + '/s/' + Games_Dashboard;
 
 
     @wire(CurrentPageReference)
@@ -129,6 +136,9 @@ export default class BeanGameViewForm extends LightningElement {
                     this.ErrorModalOpen=true;
                    // alert('Please fill the required fields.');
                 }
+                if (window.location.pathname.indexOf(beangameviewformurl) > -1) {		
+                    this.showButton = true; 
+                } 
     }
     formSubmit2(){             
         const isInputsCorrect = [...this.template.querySelectorAll('.require')]
@@ -205,8 +215,7 @@ export default class BeanGameViewForm extends LightningElement {
                         }),
                     );   
                 }
-                //window.console.log("result of beanGame", this.message);
-            
+                //window.console.log("result of beanGame", this.message);            
             })
             .catch(error => {
                 this.message = undefined+'symnole';
@@ -407,4 +416,12 @@ export default class BeanGameViewForm extends LightningElement {
     closeModalForCode(){
         this.ErrorParticipantCode=false;
     }
+    navigateToMygames() {
+        this[NavigationMixin.Navigate]({
+            type: 'standard__webPage',
+            attributes: {
+                url: this.url_gamespage
+            }
+        });
+      }
 }

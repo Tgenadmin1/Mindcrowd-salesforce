@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LightningComponentBundle xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>58.0</apiVersion>
+    <isExposed>true</isExposed>
+    <targets>
+        <target>lightning__AppPage</target>
+        <target>lightning__RecordPage</target>
+        <target>lightning__HomePage</target>
+        <target>lightningCommunity__Page</target>
+        <target>lightningCommunity__Default</target>
+    </targets>
+
+    <targetConfigs>  
+        <targetConfig targets="lightning__HomePage,lightning__RecordPage,lightningCommunity__Default">
+            <property name="Bean_Game_Form_Text_1" type="String" default="To participate in this game, you’ll need to complete an online consent form and complete a fun game on your kitchen table – it all takes less than 10 minutes. We’ll mail you all of the supplies that you need to complete the activity. Just follow the instructions in the kit and send us back your results." label="Bean_Game_Form_Text_1"/>
+            <property name="Bean_Game_Form_Text_1_a" type="String" default="You can either request the Bean game kit again or submit the results" label="Bean_Game_Form_Text_1_a"/>
+            <property name="Bean_Game_Form_Text_2" type="String" default="Click on the button below to learn more about the kitchen table bean game!" label="Bean_Game_Form_Text_2"/>
+            <property name="Bean_Game_Form_Text_3" type="String" default="Yes, I want to lean more about the bean game!" label="Bean_Game_Form_Text_3"/>
+            <property name="Bean_Game_Form_Text_4" type="String" default="Submit Results" label="Bean_Game_Form_Text_4"/>
+            <property name="Bean_Game_Form_Text_5" type="String" default="Yes, Please send me the bean game again" label="Bean_Game_Form_Text_5"/>
+            <property name="Bean_Game_VIP_URL" type="String" default="add-beangameparticipant-consent-vip" label="Bean_Game_VIP_URL"/>        
+        </targetConfig>
+    </targetConfigs>
+</LightningComponentBundle>

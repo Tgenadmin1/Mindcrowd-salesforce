@@ -36,7 +36,7 @@
     <aura:attribute name="peopleLikeYouNoDataLabel" type="String" default="We currently don't have enough people like you to display 'People Like You' results. Check back in the future for an update." />
      <aura:attribute name="scoreBasedCaption" type="String"  access="global" />
      <aura:attribute name="spinner" type="boolean" default="false"/>  
-    
+     <aura:attribute name="beanGamehandSide" type="String"/>  
     
     
     <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
@@ -99,7 +99,7 @@
                                                         </lightning:layoutItem>
                                                     <lightning:layoutItem size="0" class="graph-double">
                                                         <aura:if isTrue ="{!v.showpeopleLikeYou}">
-                                                         <c:ParticipantGaugeChart breakPoint ="{!v.peopleLikeYou}" gaugeColor="['#33FF38','#FFB833','#FF5833']" lowAverage ="{!v.lValue}" highAverage ="{!v.hValue}"
+                                                            <c:ParticipantGaugeChart breakPoint ="{!v.peopleLikeYou}" gaugeColor="['#33FF38','#FFB833','#FF5833']" lowAverage ="{!v.lValue}" highAverage ="{!v.hValue}"
                                                                          minValue = "0"  maxValue="{!v.mValue}" chartLabel ="{!$Label.c.Catcme_text_2}"  isPercentage="False" ></c:ParticipantGaugeChart>
                                                           <aura:set attribute="else"> 
                                                              <lightning:layoutItem>

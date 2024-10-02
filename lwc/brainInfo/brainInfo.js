@@ -96,6 +96,8 @@ export default class BrainInfo extends NavigationMixin(LightningElement) {
     campaignCode="";
     eventCode="";
     subIdToContact="";
+    medium="";
+    source="";
    
     currentPageReference = null;
     language = null;
@@ -197,6 +199,12 @@ export default class BrainInfo extends NavigationMixin(LightningElement) {
             if(localStorage.getItem('subIdToStoreLocal')!=null){
                 this.subIdToContact =localStorage.getItem('subIdToStoreLocal');
             }
+            if(localStorage.getItem('utmmedium')!=null){
+                this.medium =localStorage.getItem('utmmedium');
+            }
+            if(localStorage.getItem('utmsource')!=null){
+                this.source =localStorage.getItem('utmsource');
+            }
 
           // console.log('subId = ', localStorage.getItem('subIdToStoreLocal'));
             
@@ -293,7 +301,14 @@ export default class BrainInfo extends NavigationMixin(LightningElement) {
     countryPicklistValues({ error, data }) {      
         if (data) {            
             this.error = null;
-            let countyOptions = [{ label: 'United States', value: 'US' }];
+            let countyOptions;
+            if(this.language=='es'){
+                countyOptions = [{ label: 'Estados Unidos', value: 'US' }];
+            }
+            else{
+                countyOptions = [{ label: 'United States', value: 'US' }];
+            }
+            
             // Account Country Control Field Picklist values
             data.picklistFieldValues.MailingCountryCode.values.forEach(key => {
                 countyOptions.push({
@@ -441,6 +456,12 @@ export default class BrainInfo extends NavigationMixin(LightningElement) {
         }        
     };
 
+    handleInputZipcode(event) {
+        if (event.target.value.length > 9) {
+            event.target.value = event.target.value.slice(0,9); 
+        }
+    };
+
     handleCity(event) {
         this.rec.MailingPostalCode = event.target.value;
         let zipcode = this.template.querySelector('.zipcode');
@@ -533,6 +554,8 @@ export default class BrainInfo extends NavigationMixin(LightningElement) {
             this.rec.Campaign_Code__c = this.campaignCode;
             this.rec.Event_Id__c = this.eventCode;
             this.rec.Sub_Id__c = this.subIdToContact;
+            this.rec.Medium__c = this.medium;
+            this.rec.Source__c = this.source;
             
             
             if(this.language=='en_US'){
@@ -560,6 +583,8 @@ export default class BrainInfo extends NavigationMixin(LightningElement) {
                  localStorage.removeItem('eventId');
                  localStorage.removeItem('studiesId');
                  localStorage.removeItem('subIdToStoreLocal');
+                 localStorage.removeItem('utmsource');
+                 localStorage.removeItem('utmmedium');
                  
 
                 let data = JSON.parse(JSON.stringify(result));

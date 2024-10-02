@@ -93,5 +93,11 @@ global without sharing class LightningVIPAccessFormController {
         } catch (Exception ex) {
             return ex.getMessage();            
         }        
-    } 
+    }
+    
+    @AuraEnabled
+    public static Contact fetchContactFields(String participantcode){    	
+        Contact con = [SELECT Id,Email FROM Contact where ParticipantCode__c=:participantcode limit 1];
+        return con;
+    }
 }

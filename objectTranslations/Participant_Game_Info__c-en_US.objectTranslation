@@ -9,6 +9,10 @@
         <value>Participant Game Infos</value>
     </caseValues>
     <fields>
+        <label><!-- Age Difference --></label>
+        <name>Age_Difference__c</name>
+    </fields>
+    <fields>
         <label><!-- Browser User Agent --></label>
         <name>Browser_User_Agent__c</name>
     </fields>
@@ -102,6 +106,10 @@
         <name>End_Date_Time__c</name>
     </fields>
     <fields>
+        <label><!-- Federal Gov Trust Feelings --></label>
+        <name>Federal_Gov_TrustFeelings__c</name>
+    </fields>
+    <fields>
         <label><!-- Game Name --></label>
         <name>Game_Name__c</name>
         <relationshipLabel><!-- Participant Game Infos --></relationshipLabel>
@@ -135,6 +143,22 @@
         <name>IP_Data__c</name>
     </fields>
     <fields>
+        <label><!-- Is Loud Noises Recorded --></label>
+        <name>Is_Loud_Noises_Recorded__c</name>
+    </fields>
+    <fields>
+        <label><!-- Is Non English Usage --></label>
+        <name>Is_Non_English_Usage__c</name>
+    </fields>
+    <fields>
+        <label><!-- Is Other Voices Recorded --></label>
+        <name>Is_Other_Voices_Recorded__c</name>
+    </fields>
+    <fields>
+        <label><!-- Is Recording Usage Consent --></label>
+        <name>Is_Recording_Usage_Consent__c</name>
+    </fields>
+    <fields>
         <label><!-- Language --></label>
         <name>Language__c</name>
     </fields>
@@ -147,8 +171,28 @@
         <name>Latitude__c</name>
     </fields>
     <fields>
+        <label><!-- Living Location --></label>
+        <name>Living_Location__c</name>
+    </fields>
+    <fields>
         <label><!-- Longitude --></label>
         <name>Longitude__c</name>
+    </fields>
+    <fields>
+        <label><!-- Mic Id --></label>
+        <name>Mic_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- Mic Label --></label>
+        <name>Mic_Label__c</name>
+    </fields>
+    <fields>
+        <label><!-- Mold Spread Days --></label>
+        <name>Mold_Spread_Days__c</name>
+    </fields>
+    <fields>
+        <label><!-- News Consumption (hrs/wk) --></label>
+        <name>News_Consumption_hrs_wk__c</name>
     </fields>
     <fields>
         <label><!-- No. Of Correct Answered --></label>
@@ -163,8 +207,28 @@
         <name>Number_of_attempts_for_STACKS__c</name>
     </fields>
     <fields>
+        <label><!-- Political Affiliation --></label>
+        <name>Political_Affiliation__c</name>
+    </fields>
+    <fields>
+        <label><!-- Political Orientation --></label>
+        <name>Political_Orientation__c</name>
+    </fields>
+    <fields>
+        <label><!-- Printing Time Pages --></label>
+        <name>Printing_Time_Pages__c</name>
+    </fields>
+    <fields>
+        <label><!-- Recording File Name --></label>
+        <name>Recording_File_Name__c</name>
+    </fields>
+    <fields>
         <label><!-- Region --></label>
         <name>Region__c</name>
+    </fields>
+    <fields>
+        <label><!-- Social Media Engagement --></label>
+        <name>Social_Media_Engagement__c</name>
     </fields>
     <fields>
         <label><!-- Start Date Time --></label>
@@ -177,6 +241,14 @@
     <fields>
         <label><!-- Sync With MC --></label>
         <name>Sync_With_MC__c</name>
+    </fields>
+    <fields>
+        <label><!-- Tell Me More Recording File Link --></label>
+        <name>Tell_Me_More_Recording_File_Link__c</name>
+    </fields>
+    <fields>
+        <label><!-- Tell Me Recording File Link --></label>
+        <name>Tell_Me_Recording_File_Link__c</name>
     </fields>
     <fields>
         <label><!-- Test Session --></label>
@@ -321,8 +393,16 @@
             <section>Custom Links</section>
         </sections>
         <sections>
+            <label><!-- Fake News --></label>
+            <section>Fake News</section>
+        </sections>
+        <sections>
             <label><!-- Round Details --></label>
             <section>Round Details</section>
+        </sections>
+        <sections>
+            <label><!-- Speech Task --></label>
+            <section>Speech Task</section>
         </sections>
     </layouts>
     <startsWith>Consonant</startsWith>

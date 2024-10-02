@@ -120,5 +120,12 @@
         <label><!-- ONC_v1.0.20 --></label>
         <name>cancer_spread_to_more_than_one_organ__c</name>
     </fields>
+    <layouts>
+        <layout>Cancer Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
     <startsWith>Consonant</startsWith>
 </CustomObjectTranslation>

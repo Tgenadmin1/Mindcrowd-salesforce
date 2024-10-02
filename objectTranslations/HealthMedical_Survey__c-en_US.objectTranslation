@@ -316,5 +316,12 @@ Please check all that apply. --></help>
         <label><!-- HM_v1.0.17 --></label>
         <name>what_type_of_seizures_you_were_diagnose__c</name>
     </fields>
+    <layouts>
+        <layout>HealthMedical Survey Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
     <startsWith>Consonant</startsWith>
 </CustomObjectTranslation>

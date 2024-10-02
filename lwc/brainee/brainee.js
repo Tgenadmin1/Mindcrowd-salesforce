@@ -28,8 +28,16 @@ import consent_URL from '@salesforce/label/c.url_testlanguage';
 import url_aboutyourbrain from '@salesforce/label/c.url_aboutyourbrain';
 import url_memorytestcompleted from '@salesforce/label/c.url_memorytestcompleted';
 import url_additionalquestions from '@salesforce/label/c.url_additionalquestions';
+import brainInfo_text_required from '@salesforce/label/c.brainInfo_text_required';
+import close_btn from "@salesforce/label/c.close_btn";
 
 export default class Brainee extends NavigationMixin(LightningElement) {
+
+    label = {
+        brainInfo_text_required,
+        close_btn: 'Close' 
+    }
+
     @api completepageq1 = "Have you taken the Mindcrowd test before?";
     @api campylete2 = "Are you left or right hand dominant?";
     @api complete3 = "Which option best describes your race?";
@@ -50,6 +58,8 @@ export default class Brainee extends NavigationMixin(LightningElement) {
     @api brainee_1 = "LET'S COMPARE YOUR BRAIN!";
     @api brainee_2 = "These additional details will help compare your results to other people like you.";
     @api strTitle = "Welcome in Salesforce";
+    @api brainInfo_text_error = "Please fill out the fields marked with an asterisk.";
+    @api brainInfo_text_required = 'Required Field';
     currentPageReference = null;
     urlStateParameters = null;
     urlId = null;
@@ -64,12 +74,14 @@ export default class Brainee extends NavigationMixin(LightningElement) {
     input_firstdegree;
     input_firstdegreeeo;
     input_seconddegree;
+    requiredField="";
     isFirstDegreeEOVisible = false;
     @track hispanicLatinoValueSet;
     @track opacity = false;
     @track hispanicCountry = false;
     @track selectedCountry = [];
     @track selectedmedicalConditions = [];
+    @track ErrorModalOpen = false;
     @wire(CurrentPageReference)
     getStateParameters(currentPageReference) {
         this.preventLeaving();
@@ -213,33 +225,44 @@ export default class Brainee extends NavigationMixin(LightningElement) {
         this.input_health = JSON.parse(JSON.stringify(this.input_health)).join(';');
     }
     updateContact() {
-        this.input_hispanic = this.hispanicLatinoValueSet;
-        upsertContact({
-            contactId: this.contactId,
-            repeattesttaker: this.input_repeattestaker,
-            handedness: this.input_handedness,
-            race: this.input_race,
-            hispanic: this.input_hispanic,
-            hispanicorigin: this.input_hispanicorigin,
-            medications: this.input_medications,
-            health: this.input_health,
-            urlId: this.urlId,
-            firstdegree: this.input_firstdegree,
-            firstdegreeeo: this.input_firstdegreeeo,
-            seconddegree: this.input_seconddegree
-        }).then(result => {
-            if (result) {
-                this.allowLeaving();
-                window.location = Community_Url + "/s/" + url_emailrequestvipinvite;
-
-            } else {
-                console.log('Fields NOT updated', result);
-            }
-        })
+        const raceCombobox = this.template.querySelector('lightning-combobox[name="race"]');
+        let raceValue = this.input_race;      
+        if (raceValue == null || raceValue === '') {
+            this.ErrorModalOpen = true;
+            raceCombobox.classList.add('input-invalid');
+            this.requiredField = "Please select which option best describes your race?";
+            raceCombobox.reportValidity();
+            return;
+        } else {
+            this.input_hispanic = this.hispanicLatinoValueSet;
+            upsertContact({
+                contactId: this.contactId,
+                repeattesttaker: this.input_repeattestaker,
+                handedness: this.input_handedness,
+                race: this.input_race,
+                hispanic: this.input_hispanic,
+                hispanicorigin: this.input_hispanicorigin,
+                medications: this.input_medications,
+                health: this.input_health,
+                urlId: this.urlId,
+                firstdegree: this.input_firstdegree,
+                firstdegreeeo: this.input_firstdegreeeo,
+                seconddegree: this.input_seconddegree
+            }).then(result => {
+                if (result) {
+                    console.log('Contact updated successfully, redirecting.');
+                    this.allowLeaving();
+                    window.location = Community_Url + "/s/" + url_emailrequestvipinvite;
+                } else {
+                    console.log('Fields NOT updated', result);
+                }
+            })
             .catch(error => {
                 console.log('error: ', error);
             });
+        }
     }
+    
     fireSuccessToast() {
         const evt = new ShowToastEvent({
             message: 'You just submitted your details!',
@@ -255,5 +278,9 @@ export default class Brainee extends NavigationMixin(LightningElement) {
     }
     allowLeaving() {
         window.removeEventListener("beforeunload", this.leaveHandler);
+    }
+
+    closeModal() {
+        this.ErrorModalOpen = false;   
     }
 }

@@ -161,6 +161,18 @@
     <enableStreamingApi>true</enableStreamingApi>
     <externalSharingModel>Private</externalSharingModel>
     <fields>
+        <fullName>Age_Difference__c</fullName>
+        <externalId>false</externalId>
+        <label>Age Difference</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
         <fullName>Browser_User_Agent__c</fullName>
         <description>Browser at which test was conducted.(eg: chrome, Firefox)</description>
         <externalId>false</externalId>
@@ -450,6 +462,17 @@
         <type>DateTime</type>
     </fields>
     <fields>
+        <fullName>Federal_Gov_TrustFeelings__c</fullName>
+        <externalId>false</externalId>
+        <label>Federal Gov Trust Feelings</label>
+        <length>30</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
         <fullName>Game_Name__c</fullName>
         <deleteConstraint>SetNull</deleteConstraint>
         <description>Lookup to game, saving game id, will show game name at front-end.</description>
@@ -533,6 +556,42 @@
         <visibleLines>5</visibleLines>
     </fields>
     <fields>
+        <fullName>Is_Loud_Noises_Recorded__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Is Loud Noises Recorded</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Is_Non_English_Usage__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Is Non English Usage</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Is_Other_Voices_Recorded__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Is Other Voices Recorded</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Is_Recording_Usage_Consent__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Is Recording Usage Consent</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
         <fullName>Language__c</fullName>
         <description>test language get from consent page. ( Language selected by test-taker at public application.)</description>
         <externalId>false</externalId>
@@ -569,12 +628,69 @@
         <unique>false</unique>
     </fields>
     <fields>
+        <fullName>Living_Location__c</fullName>
+        <externalId>false</externalId>
+        <label>Living Location</label>
+        <length>30</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
         <fullName>Longitude__c</fullName>
         <externalId>false</externalId>
         <label>Longitude</label>
         <precision>18</precision>
         <required>false</required>
         <scale>8</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Mic_Id__c</fullName>
+        <externalId>false</externalId>
+        <label>Mic Id</label>
+        <length>100</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Mic_Label__c</fullName>
+        <externalId>false</externalId>
+        <label>Mic Label</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Mold_Spread_Days__c</fullName>
+        <externalId>false</externalId>
+        <label>Mold Spread Days</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>News_Consumption_hrs_wk__c</fullName>
+        <externalId>false</externalId>
+        <label>News Consumption (hrs/wk)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Number</type>
@@ -633,10 +749,66 @@
         <type>Summary</type>
     </fields>
     <fields>
+        <fullName>Political_Affiliation__c</fullName>
+        <externalId>false</externalId>
+        <label>Political Affiliation</label>
+        <length>50</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Political_Orientation__c</fullName>
+        <externalId>false</externalId>
+        <label>Political Orientation</label>
+        <length>30</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Printing_Time_Pages__c</fullName>
+        <externalId>false</externalId>
+        <label>Printing Time Pages</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Recording_File_Name__c</fullName>
+        <externalId>false</externalId>
+        <label>Recording File Name</label>
+        <length>100</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
         <fullName>Region__c</fullName>
         <externalId>false</externalId>
         <label>Region</label>
         <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Social_Media_Engagement__c</fullName>
+        <externalId>false</externalId>
+        <label>Social Media Engagement</label>
+        <length>30</length>
         <required>false</required>
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
@@ -673,6 +845,24 @@
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Tell_Me_More_Recording_File_Link__c</fullName>
+        <externalId>false</externalId>
+        <label>Tell Me More Recording File Link</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Url</type>
+    </fields>
+    <fields>
+        <fullName>Tell_Me_Recording_File_Link__c</fullName>
+        <externalId>false</externalId>
+        <label>Tell Me Recording File Link</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Url</type>
     </fields>
     <fields>
         <fullName>Test_Session__c</fullName>

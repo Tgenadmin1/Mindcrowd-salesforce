@@ -18,7 +18,7 @@
     <processMetadataValues>
         <name>CanvasMode</name>
         <value>
-            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+            <stringValue>FREE_FORM_CANVAS</stringValue>
         </value>
     </processMetadataValues>
     <processMetadataValues>
@@ -31,8 +31,8 @@
     <recordUpdates>
         <name>Update_Contact_enrollment_Date</name>
         <label>Update Contact enrollment Date</label>
-        <locationX>176</locationX>
-        <locationY>335</locationY>
+        <locationX>616</locationX>
+        <locationY>372</locationY>
         <connector>
             <targetReference>Update_Parent_Date</targetReference>
         </connector>
@@ -52,9 +52,99 @@
             </value>
         </filters>
         <inputAssignments>
+            <field>ADL__c</field>
+            <value>
+                <stringValue>Opened</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>ANXIETY__c</field>
+            <value>
+                <stringValue>Opened</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>BRAIN_DISEASE__c</field>
+            <value>
+                <stringValue>Opened</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>COVID__c</field>
+            <value>
+                <stringValue>Opened</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>DIET__c</field>
+            <value>
+                <stringValue>Opened</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>FHAD__c</field>
+            <value>
+                <stringValue>Opened</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>HEALTH_MEDICAL__c</field>
+            <value>
+                <stringValue>Opened</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>PERCEIVED_STRESS__c</field>
+            <value>
+                <stringValue>Opened</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
             <field>Project2_Enrollment_Date__c</field>
             <value>
                 <elementReference>TodayDate</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>QPAR__c</field>
+            <value>
+                <stringValue>Opened</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>SES__c</field>
+            <value>
+                <stringValue>Opened</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>SLEEP__c</field>
+            <value>
+                <stringValue>Opened</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>SOCIAL_STRESSOR__c</field>
+            <value>
+                <stringValue>Opened</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>SOCIAL_SUPPORT__c</field>
+            <value>
+                <stringValue>Opened</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>SUBJECTIVE_ENGLISH__c</field>
+            <value>
+                <stringValue>Opened</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>SWLS__c</field>
+            <value>
+                <stringValue>Opened</stringValue>
             </value>
         </inputAssignments>
         <object>Contact</object>
@@ -62,8 +152,8 @@
     <recordUpdates>
         <name>Update_Parent_Date</name>
         <label>Update Parent Date</label>
-        <locationX>176</locationX>
-        <locationY>455</locationY>
+        <locationX>616</locationX>
+        <locationY>479</locationY>
         <filterLogic>and</filterLogic>
         <filters>
             <field>Id</field>
@@ -72,6 +162,54 @@
                 <elementReference>$Record.Parent_Contact__r.Id</elementReference>
             </value>
         </filters>
+        <inputAssignments>
+            <field>ADL__c</field>
+            <value>
+                <stringValue>Opened</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>ANXIETY__c</field>
+            <value>
+                <stringValue>Opened</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>BRAIN_DISEASE__c</field>
+            <value>
+                <stringValue>Opened</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>COVID__c</field>
+            <value>
+                <stringValue>Opened</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>DIET__c</field>
+            <value>
+                <stringValue>Opened</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>FHAD__c</field>
+            <value>
+                <stringValue>Opened</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>HEALTH_MEDICAL__c</field>
+            <value>
+                <stringValue>Opened</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>PERCEIVED_STRESS__c</field>
+            <value>
+                <stringValue>Opened</stringValue>
+            </value>
+        </inputAssignments>
         <inputAssignments>
             <field>Project2_Center_Id__c</field>
             <value>
@@ -85,6 +223,48 @@
             </value>
         </inputAssignments>
         <inputAssignments>
+            <field>QPAR__c</field>
+            <value>
+                <stringValue>Opened</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>SES__c</field>
+            <value>
+                <stringValue>Opened</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>SLEEP__c</field>
+            <value>
+                <stringValue>Opened</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>SOCIAL_STRESSOR__c</field>
+            <value>
+                <stringValue>Opened</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>SOCIAL_SUPPORT__c</field>
+            <value>
+                <stringValue>Opened</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>SUBJECTIVE_ENGLISH__c</field>
+            <value>
+                <stringValue>Opened</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>SWLS__c</field>
+            <value>
+                <stringValue>Opened</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
             <field>isProject2_Participant__c</field>
             <value>
                 <elementReference>$Record.isProject2_Participant__c</elementReference>
@@ -93,8 +273,8 @@
         <object>Contact</object>
     </recordUpdates>
     <start>
-        <locationX>50</locationX>
-        <locationY>0</locationY>
+        <locationX>490</locationX>
+        <locationY>48</locationY>
         <connector>
             <targetReference>Update_Contact_enrollment_Date</targetReference>
         </connector>

@@ -47,5 +47,12 @@
         <label><!-- SWLS_v1.0.2 --></label>
         <name>The_conditions_of_my_life_are_excellent__c</name>
     </fields>
+    <layouts>
+        <layout>Swls Survey Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
     <startsWith>Consonant</startsWith>
 </CustomObjectTranslation>

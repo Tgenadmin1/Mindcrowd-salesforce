@@ -94,6 +94,13 @@
         <action>Permanent</action>
         <isActive>true</isActive>
         <isDynamic>false</isDynamic>
+        <source>/press-room/dr-huentelman-selected-for-the-top-40-under-40.aspx</source>
+        <target>https://blog.mindcrowd.org/mindcrowd-news-insights/</target>
+    </siteRedirectMappings>
+    <siteRedirectMappings>
+        <action>Permanent</action>
+        <isActive>true</isActive>
+        <isDynamic>false</isDynamic>
         <source>/press-room/ktar.aspx</source>
         <target>https://blog.mindcrowd.org/ktar/</target>
     </siteRedirectMappings>
@@ -157,6 +164,13 @@
         <action>Permanent</action>
         <isActive>true</isActive>
         <isDynamic>false</isDynamic>
+        <source>/s/</source>
+        <target>/s/?nocache=/s/</target>
+    </siteRedirectMappings>
+    <siteRedirectMappings>
+        <action>Permanent</action>
+        <isActive>true</isActive>
+        <isDynamic>false</isDynamic>
         <source>/s/vipaccess</source>
         <target>/s/vipaccess?nocache=/s/vipaccess</target>
     </siteRedirectMappings>
@@ -166,20 +180,6 @@
         <isDynamic>false</isDynamic>
         <source>/test/consent.aspx</source>
         <target>/</target>
-    </siteRedirectMappings>
-    <siteRedirectMappings>
-        <action>Permanent</action>
-        <isActive>true</isActive>
-        <isDynamic>false</isDynamic>
-        <source>/s/</source>
-        <target>/s/?nocache=/s/</target>
-    </siteRedirectMappings>
-    <siteRedirectMappings>
-        <action>Permanent</action>
-        <isActive>true</isActive>
-        <isDynamic>false</isDynamic>
-        <source>/press-room/dr-huentelman-selected-for-the-top-40-under-40.aspx</source>
-        <target>https://blog.mindcrowd.org/mindcrowd-news-insights/</target>
     </siteRedirectMappings>
     <siteType>ChatterNetwork</siteType>
     <subdomain>mindcrowd-game</subdomain>

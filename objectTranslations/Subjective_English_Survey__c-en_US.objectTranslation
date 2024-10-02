@@ -41,5 +41,12 @@
         <label><!-- SUBENG_v1.0.1 --></label>
         <name>Is_English_your_native_language__c</name>
     </fields>
+    <layouts>
+        <layout>Subjective English Survey Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
     <startsWith>Consonant</startsWith>
 </CustomObjectTranslation>

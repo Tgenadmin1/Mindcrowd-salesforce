@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LightningComponentBundle xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>58.0</apiVersion>
+    <isExposed>true</isExposed>
+    <targets>
+        <target>lightning__AppPage</target>
+        <target>lightning__RecordPage</target>
+        <target>lightning__HomePage</target>
+        <target>lightningCommunity__Page</target>
+        <target>lightningCommunity__Default</target>
+    </targets>
+
+    <targetConfigs>  
+        <targetConfig targets="lightning__HomePage,lightning__RecordPage,lightningCommunity__Default">
+            <property name="DBS_Bean_Game_Form_Text_1" type="String" default="Remember us? On"/>
+            <property name="DBS_Game_Form_Text_1_a" type="String" default=", you took the MindCrowd online memory quiz to advance our Alzheimer's research." label="DBS_Game_Form_Text_1_a"/>
+            <property name="DBS_Bean_Game_Form_Text_2" type="String" default="Your test results were intriguing, and you have been selected to join us for Phase 2. You'll need to complete an online consent form, prick your finger, and donate blood drops. We'll send a postage-paid, blood-drop collection kit right to your home to make it as easy as possible to participate. You'll be advancing science, just by pricking your finger. Cool, right?" label="DBS_Bean_Game_Form_Text_2"/>
+            <property name="DBS_Bean_Game_Form_Text_3" type="String" default="Click on the button below to learn more about Phase 2." label="DBS_Bean_Game_Form_Text_3"/>
+            <property name="DBS_Bean_Game_Form_Text_4" type="String" default="Yes, I want to learn more about phase 2!" label="DBS_Bean_Game_Form_Text_4"/>
+            <property name="DBS_Bean_Game_Form_Text_5" type="String" default="Thank you again for your willingness to help advance our understanding of the brain!" label="DBS_Bean_Game_Form_Text_5"/>
+            <property name="DBS_Game_VIP_URL" type="String" default="adic/vipadd-dbsparticipant-consent" label="DBS_Game_VIP_URL"/>
+     </targetConfig>
+    </targetConfigs>
+</LightningComponentBundle>

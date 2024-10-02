@@ -40,6 +40,7 @@
         <property name="BeanGame_text26" type="String" default="Please fill the required fields." label="BeanGame_text26"/>
         <property name="BeanGame_text27" type="String" default="Submit" label="BeanGame_text27"/>
         <property name="BeanGame_text28" type="String" default="List has no rows for assignment to SObject" label="BeanGame_text28"/>
+         <property name="BeanGame_text29" type="String" default="My Games" label="BeanGame_text29"/>
                 
         </targetConfig>
        </targetConfigs>

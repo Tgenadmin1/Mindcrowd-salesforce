@@ -1,6 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomLabels xmlns="http://soap.sforce.com/2006/04/metadata">
     <labels>
+        <fullName>APOE_intermediate_form</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>APOE_intermediate_form</shortDescription>
+        <value>add-apoe-info-form-vip</value>
+    </labels>
+    <labels>
         <fullName>App_block_name</fullName>
         <categories>app block name</categories>
         <language>en_US</language>
@@ -97,12 +104,65 @@
         <value>home_compare_graphic.png</value>
     </labels>
     <labels>
+        <fullName>BeanGame_Left_Hand</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>BeanGame_Left_Hand</shortDescription>
+        <value>Left Hand</value>
+    </labels>
+    <labels>
+        <fullName>BeanGame_Right_Hand</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>BeanGame_Right_Hand</shortDescription>
+        <value>Right Hand</value>
+    </labels>
+    <labels>
+        <fullName>Bean_game_intermediate</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Bean game intermediate</shortDescription>
+        <value>add-beangame-info-form-vip</value>
+    </labels>
+    <labels>
         <fullName>Brain_Info_Results</fullName>
         <categories>Brain Info</categories>
         <language>en_US</language>
         <protected>false</protected>
         <shortDescription>Brain Info Results</shortDescription>
         <value>View Your Results</value>
+    </labels>
+    <labels>
+        <fullName>CamelandCactus_game_text_2</fullName>
+        <categories>CamelandCactusGame</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CamelandCactus game text 2</shortDescription>
+        <value>Just click or tap on the picture that goes best with the one at the top.</value>
+    </labels>
+    <labels>
+        <fullName>CamelandCactus_game_text_cactus</fullName>
+        <categories>CamelandCactusGame</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CamelandCactus game text cactus</shortDescription>
+        <value>The desert scene is the correct answer since cactus are usually found in the desert</value>
+    </labels>
+    <labels>
+        <fullName>CamelandCactus_game_text_nails</fullName>
+        <categories>CamelandCactusGame</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CamelandCactus game text nails</shortDescription>
+        <value>The hammer is the correct answer since a hammer is usually used to drive nails</value>
+    </labels>
+    <labels>
+        <fullName>CamelandCactus_game_text_wine</fullName>
+        <categories>CamelandCactusGame</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CamelandCactus game text wine</shortDescription>
+        <value>The grapes are the correct answer since they are commonly used to make wine</value>
     </labels>
     <labels>
         <fullName>Catcme_text_1</fullName>
@@ -264,6 +324,13 @@
         <value>https://project.mindcrowd.org</value>
     </labels>
     <labels>
+        <fullName>Community_Url_MC_Cloud</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Community_Url_MC_Cloud</shortDescription>
+        <value>https://cloud.sap.mindcrowd.org/</value>
+    </labels>
+    <labels>
         <fullName>Community_Url_Spanish</fullName>
         <language>en_US</language>
         <protected>false</protected>
@@ -279,6 +346,13 @@
         <value>https://project.mindcrowd.org/es</value>
     </labels>
     <labels>
+        <fullName>DBS_intermediate_form</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>DBS intermediate form</shortDescription>
+        <value>add-dbsIntermediateForm</value>
+    </labels>
+    <labels>
         <fullName>DataAPIKey</fullName>
         <categories>This api key is usng for the participant additional information from ipdata.co</categories>
         <language>en_US</language>
@@ -292,6 +366,14 @@
         <protected>false</protected>
         <shortDescription>Date</shortDescription>
         <value>Date</value>
+    </labels>
+    <labels>
+        <fullName>Digits_game_text_14</fullName>
+        <categories>Digits game</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Digits game text 14</shortDescription>
+        <value>Digits</value>
     </labels>
     <labels>
         <fullName>DltrsGamePart1v0_01</fullName>
@@ -611,7 +693,7 @@ Are you ready?</value>
         <language>en_US</language>
         <protected>false</protected>
         <shortDescription>Email address for password reset list</shortDescription>
-        <value>null</value>
+        <value>sfadmin2@tgen.org</value>
     </labels>
     <labels>
         <fullName>Error_Report_To_Email</fullName>
@@ -886,6 +968,393 @@ Are you ready?</value>
         <value>To continue, please press the &lt;span class=&quot;n-g-box&quot;&gt;Spacebar&lt;/span&gt; or &lt;span class=&quot;n-g-box&quot;&gt;Tap&lt;/span&gt; your touch screen.</value>
     </labels>
     <labels>
+        <fullName>FakeNewsTestForm_cents</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>FakeNewsTestForm_cents</shortDescription>
+        <value>cents</value>
+    </labels>
+    <labels>
+        <fullName>FakeNewsTestForm_days</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>FakeNewsTestForm_days</shortDescription>
+        <value>days</value>
+    </labels>
+    <labels>
+        <fullName>FakeNewsTestForm_hours</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>FakeNewsTestForm_hours</shortDescription>
+        <value>hours</value>
+    </labels>
+    <labels>
+        <fullName>FakeNewsTestForm_minutes</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>FakeNewsTestForm_minutes</shortDescription>
+        <value>minutes</value>
+    </labels>
+    <labels>
+        <fullName>FakeNewsTestForm_seconds</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>FakeNewsTestForm_seconds</shortDescription>
+        <value>seconds</value>
+    </labels>
+    <labels>
+        <fullName>FakeNewsTestForm_years</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>FakeNewsTestForm_years</shortDescription>
+        <value>years</value>
+    </labels>
+    <labels>
+        <fullName>Fake_News_Test_Form_1</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Fake News Test Form 1</shortDescription>
+        <value>Type your responses into the box provided under each question. 
+Please do not use a calculator.</value>
+    </labels>
+    <labels>
+        <fullName>Fake_News_Test_Form_10</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Fake_News_Test_Form_10</shortDescription>
+        <value>On the scale of political orientation below, please indicate where you would place yourself.</value>
+    </labels>
+    <labels>
+        <fullName>Fake_News_Test_Form_10_A1</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Fake News Test Form 10 A1</shortDescription>
+        <value>Extremely Liberal</value>
+    </labels>
+    <labels>
+        <fullName>Fake_News_Test_Form_10_A2</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Fake News Test Form 10 A2</shortDescription>
+        <value>Liberal</value>
+    </labels>
+    <labels>
+        <fullName>Fake_News_Test_Form_10_A3</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Fake News Test Form 10 A3</shortDescription>
+        <value>Moderate Liberal</value>
+    </labels>
+    <labels>
+        <fullName>Fake_News_Test_Form_10_A4</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Fake News Test Form 10 A4</shortDescription>
+        <value>Moderate</value>
+    </labels>
+    <labels>
+        <fullName>Fake_News_Test_Form_10_A5</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Fake News Test Form 10 A5</shortDescription>
+        <value>Moderate Conservative</value>
+    </labels>
+    <labels>
+        <fullName>Fake_News_Test_Form_10_A6</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Fake News Test Form 10 A6</shortDescription>
+        <value>Conservative</value>
+    </labels>
+    <labels>
+        <fullName>Fake_News_Test_Form_10_A7</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Fake News Test Form 10 A7</shortDescription>
+        <value>Extremely Conservative</value>
+    </labels>
+    <labels>
+        <fullName>Fake_News_Test_Form_10_Error</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Fake News Test Form 10 Error</shortDescription>
+        <value>Please Select political orientation.</value>
+    </labels>
+    <labels>
+        <fullName>Fake_News_Test_Form_2</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Fake News Test Form 2</shortDescription>
+        <value>The ages of Mark and Adam add up to 28 years total. Mark is 20 years older than Adam. How many years old is Adam?(Answer in years)</value>
+    </labels>
+    <labels>
+        <fullName>Fake_News_Test_Form_2_Error</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Fake News Test Form 2 Error</shortDescription>
+        <value>Please enter answer in years.</value>
+    </labels>
+    <labels>
+        <fullName>Fake_News_Test_Form_3</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Fake News Test Form 3</shortDescription>
+        <value>If it takes 10 seconds for 10 printers to print out 10 pages of paper, how many seconds will it take 50 printers to print out 50 pages of paper? (Answer in seconds)</value>
+    </labels>
+    <labels>
+        <fullName>Fake_News_Test_Form_3_Error</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Fake News Test Form 3 Error</shortDescription>
+        <value>Please enter answer in seconds.</value>
+    </labels>
+    <labels>
+        <fullName>Fake_News_Test_Form_4</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Fake News Test Form 4</shortDescription>
+        <value>On a loaf of bread, there is a patch of mold. Every day, the patch doubles in size. If it takes 40 days for the patch to cover the entire loaf of bread, how many days would it take for the patch to cover half of the loaf of bread? (Answer in days)</value>
+    </labels>
+    <labels>
+        <fullName>Fake_News_Test_Form_4_Error</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Fake News Test Form 4 Error</shortDescription>
+        <value>Please enter answer in days.</value>
+    </labels>
+    <labels>
+        <fullName>Fake_News_Test_Form_5</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Fake News Test Form 5</shortDescription>
+        <value>How many hours per week do you spend listening to, reading, or watching the news? (type your response in the box below)</value>
+    </labels>
+    <labels>
+        <fullName>Fake_News_Test_Form_5_Error</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Fake News Test Form 5 Error</shortDescription>
+        <value>Please select hours between 0 to 168.</value>
+    </labels>
+    <labels>
+        <fullName>Fake_News_Test_Form_6</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Fake News Test Form 6</shortDescription>
+        <value>How often do you actively engage on any social media platform. By &quot;engage&quot; we mean actions like commenting, sharing, liking, or reposting.</value>
+    </labels>
+    <labels>
+        <fullName>Fake_News_Test_Form_6_A1</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Fake News Test Form 6 A1</shortDescription>
+        <value>Never</value>
+    </labels>
+    <labels>
+        <fullName>Fake_News_Test_Form_6_A2</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Fake News Test Form 6 A2</shortDescription>
+        <value>Rarely</value>
+    </labels>
+    <labels>
+        <fullName>Fake_News_Test_Form_6_A3</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Fake News Test Form 6 A3</shortDescription>
+        <value>Sometimes</value>
+    </labels>
+    <labels>
+        <fullName>Fake_News_Test_Form_6_A4</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Fake News Test Form 6 A4</shortDescription>
+        <value>Very often</value>
+    </labels>
+    <labels>
+        <fullName>Fake_News_Test_Form_6_A5</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Fake News Test Form 6 A5</shortDescription>
+        <value>Always</value>
+    </labels>
+    <labels>
+        <fullName>Fake_News_Test_Form_6_Error</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Fake News Test Form 6 Error</shortDescription>
+        <value>Please select social media engagement.</value>
+    </labels>
+    <labels>
+        <fullName>Fake_News_Test_Form_7</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Fake News Test Form 7</shortDescription>
+        <value>How do you feel about this statement: I trust my Federal Government to do what is best for its citizens.</value>
+    </labels>
+    <labels>
+        <fullName>Fake_News_Test_Form_7_A1</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Fake News Test Form 7 A1</shortDescription>
+        <value>Strongly Disagree</value>
+    </labels>
+    <labels>
+        <fullName>Fake_News_Test_Form_7_A2</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Fake News Test Form 7 A2</shortDescription>
+        <value>Disagree</value>
+    </labels>
+    <labels>
+        <fullName>Fake_News_Test_Form_7_A3</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Fake News Test Form 7 A3</shortDescription>
+        <value>Neutral</value>
+    </labels>
+    <labels>
+        <fullName>Fake_News_Test_Form_7_A4</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Fake News Test Form 7 A4</shortDescription>
+        <value>Agree</value>
+    </labels>
+    <labels>
+        <fullName>Fake_News_Test_Form_7_A5</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Fake News Test Form 7 A5</shortDescription>
+        <value>Strongly Agree</value>
+    </labels>
+    <labels>
+        <fullName>Fake_News_Test_Form_7_Error</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Fake News Test Form 7 Error</shortDescription>
+        <value>Please select trust in the federal government.</value>
+    </labels>
+    <labels>
+        <fullName>Fake_News_Test_Form_8</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Fake News Test Form 8</shortDescription>
+        <value>In American politics, do you consider yourself a member or supporter of:</value>
+    </labels>
+    <labels>
+        <fullName>Fake_News_Test_Form_8_A1</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Fake News Test Form 8 A1</shortDescription>
+        <value>Democratic party</value>
+    </labels>
+    <labels>
+        <fullName>Fake_News_Test_Form_8_A2</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Fake News Test Form 8 A2</shortDescription>
+        <value>Republican party</value>
+    </labels>
+    <labels>
+        <fullName>Fake_News_Test_Form_8_A3</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Fake News Test Form 8 A3</shortDescription>
+        <value>Other (please specify)</value>
+    </labels>
+    <labels>
+        <fullName>Fake_News_Test_Form_8_A4</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Fake_News_Test_Form_8_A4</shortDescription>
+        <value>I prefer not to answer</value>
+    </labels>
+    <labels>
+        <fullName>Fake_News_Test_Form_8_Error</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Fake News Test Form 8 Error</shortDescription>
+        <value>In American politics, Please select support of.</value>
+    </labels>
+    <labels>
+        <fullName>Fake_News_Test_Form_9</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Fake News Test Form 9</shortDescription>
+        <value>Which of these best describes the general area where you live?</value>
+    </labels>
+    <labels>
+        <fullName>Fake_News_Test_Form_9_A1</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Fake News Test Form 9 A1</shortDescription>
+        <value>Urban</value>
+    </labels>
+    <labels>
+        <fullName>Fake_News_Test_Form_9_A2</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Fake News Test Form 9 A2</shortDescription>
+        <value>Suburban</value>
+    </labels>
+    <labels>
+        <fullName>Fake_News_Test_Form_9_A3</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Fake News Test Form 9 A3</shortDescription>
+        <value>Rural</value>
+    </labels>
+    <labels>
+        <fullName>Fake_News_Test_Form_9_A4</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Fake_News_Test_Form_9_A4</shortDescription>
+        <value>I prefer not to answer</value>
+    </labels>
+    <labels>
+        <fullName>Fake_News_Test_Form_9_Error</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Fake News Test Form 9 Error</shortDescription>
+        <value>Please select where you live.</value>
+    </labels>
+    <labels>
+        <fullName>Fake_News_Test_Form_Thanks_A1</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Fake News Test Form Thanks A1</shortDescription>
+        <value>Thank you for playing &lt;b&gt;Fake News&lt;/b&gt;.</value>
+    </labels>
+    <labels>
+        <fullName>Fake_News_Test_Form_Thanks_A2</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Fake News Test Form Thanks A2</shortDescription>
+        <value>Your results have been recorded.</value>
+    </labels>
+    <labels>
+        <fullName>Fake_News_Test_Form_Thanks_A3</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Fake News Test Form Thanks A3</shortDescription>
+        <value>Click or tap the &lt;b&gt;My Results&lt;/b&gt; button below to view your results.</value>
+    </labels>
+    <labels>
+        <fullName>Fake_News_Test_Form_Thanks_A4</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Fake News Test Form Thanks A4</shortDescription>
+        <value>Or, click or tap the &lt;b&gt;My Games&lt;/b&gt; button below to return to the menu of games.</value>
+    </labels>
+    <labels>
+        <fullName>Fake_News_Test_welcom</fullName>
+        <categories>FakeNewsTest Game</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Fake News Test welcom</shortDescription>
+        <value>Fake News Test</value>
+    </labels>
+    <labels>
         <fullName>Forgot_Password</fullName>
         <categories>login</categories>
         <language>en_US</language>
@@ -900,6 +1369,13 @@ Are you ready?</value>
         <protected>false</protected>
         <shortDescription>GameControllerLockLabel</shortDescription>
         <value>true</value>
+    </labels>
+    <labels>
+        <fullName>Games_Dashboard</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Games Dashboard</shortDescription>
+        <value>me-dashboard</value>
     </labels>
     <labels>
         <fullName>Hispanic_Latino</fullName>
@@ -2141,6 +2617,27 @@ Are you ready?</value>
         <value>To begin, press the &lt;span class=&quot;n-g-box&quot;&gt;Spacebar&lt;/span&gt; or &lt;span class=&quot;n-g-box&quot;&gt;Tap&lt;/span&gt; your touch screen.</value>
     </labels>
     <labels>
+        <fullName>SpeechTask_Tell_me_more_text</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>SpeechTask_Tell_me_more_text</shortDescription>
+        <value>Tell Me More</value>
+    </labels>
+    <labels>
+        <fullName>SpeechTask_Tell_me_text</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>SpeechTask_Tell_me_text</shortDescription>
+        <value>Tell Me</value>
+    </labels>
+    <labels>
+        <fullName>Speech_Task_Error</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Speech_Task_Error</shortDescription>
+        <value>Please answer all the questions</value>
+    </labels>
+    <labels>
         <fullName>Submit</fullName>
         <categories>login</categories>
         <language>en_US</language>
@@ -2186,6 +2683,13 @@ Are you ready?</value>
         <protected>false</protected>
         <shortDescription>acceptancePage02</shortDescription>
         <value>Thank you for participating in our research study! A kit will be mailed to the address you provided soon.  If you have any questions please email the study coordinator at mindcrowdquestion@tgen.org</value>
+    </labels>
+    <labels>
+        <fullName>acceptancePage05</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>acceptancePage05</shortDescription>
+        <value>Our records show that you have already completed this survey. Thank you for your time.</value>
     </labels>
     <labels>
         <fullName>address_text</fullName>
@@ -2242,6 +2746,13 @@ Are you ready?</value>
         <protected>false</protected>
         <shortDescription>beangameScorer</shortDescription>
         <value>Be sure to record as minutes:seconds up to two decimal places. For example, 1 minute and 45.03 &lt;br/&gt; seconds would be entered as 1:45.03. If your score was less than a minute, please enter your score starting with 0: (e.g., 0:52.31)</value>
+    </labels>
+    <labels>
+        <fullName>beangameviewformurl</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>beangameviewformurl</shortDescription>
+        <value>add-beangame-vip</value>
     </labels>
     <labels>
         <fullName>brainInfo_text_1</fullName>
@@ -2410,6 +2921,22 @@ Are you ready?</value>
         <value>We can still email you your results plus a VIP invitation to play more free brain games, and updates about brain research and other studies you can join.</value>
     </labels>
     <labels>
+        <fullName>camelandcactus_game_config_url</fullName>
+        <categories>Game Config Url</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>camelandcactus game config url</shortDescription>
+        <value>/resource/CamelandCactus_Config/CamelandCactus_EN.json</value>
+    </labels>
+    <labels>
+        <fullName>camelandcactus_game_text_14</fullName>
+        <categories>CamelandCactus Game</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>camelandcactus game text 14</shortDescription>
+        <value>This &amp; That</value>
+    </labels>
+    <labels>
         <fullName>campylete2</fullName>
         <language>en_US</language>
         <protected>false</protected>
@@ -2534,6 +3061,13 @@ Are you ready?</value>
         <protected>false</protected>
         <shortDescription>community nav text 5</shortDescription>
         <value>FAQ</value>
+    </labels>
+    <labels>
+        <fullName>community_nav_text_7</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>community_nav_text_7</shortDescription>
+        <value>My Surveys</value>
     </labels>
     <labels>
         <fullName>complete3</fullName>
@@ -3068,6 +3602,13 @@ Are you ready?</value>
         <protected>false</protected>
         <shortDescription>debugConsole</shortDescription>
         <value>true</value>
+    </labels>
+    <labels>
+        <fullName>digitSymbol_game_config_url</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>digitSymbol game config url</shortDescription>
+        <value>/resource/digitSymbol_Config/digitSymbol_Config_EN.json</value>
     </labels>
     <labels>
         <fullName>dlrts_game_text</fullName>
@@ -3798,6 +4339,27 @@ Are you ready?</value>
         <value>/resource/FacesNames_Config/FacesNames_EN.json</value>
     </labels>
     <labels>
+        <fullName>fakeNewsTest_game_config_url</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>fakeNewsTest_game_config_url</shortDescription>
+        <value>/resource/fakeNews_Config/fakeNews_Config_EN.json</value>
+    </labels>
+    <labels>
+        <fullName>fakeNews_text</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>fakeNews_text_1</shortDescription>
+        <value>Fake News</value>
+    </labels>
+    <labels>
+        <fullName>fakenews_Continue</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>fakenews_Continue</shortDescription>
+        <value>Click or tap here to continue</value>
+    </labels>
+    <labels>
         <fullName>faq</fullName>
         <categories>nav</categories>
         <language>en_US</language>
@@ -4020,6 +4582,13 @@ Are you ready?</value>
         <protected>false</protected>
         <shortDescription>faq text 9</shortDescription>
         <value>What are my alternatives to being in this study?</value>
+    </labels>
+    <labels>
+        <fullName>file_upload_msg</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>file_upload_msg</shortDescription>
+        <value>Please wait while your audio is uploading. Do not refresh or navigate away from this page.</value>
     </labels>
     <labels>
         <fullName>finish</fullName>
@@ -4575,6 +5144,20 @@ Are you ready?</value>
         <value>/resource/focus_Config/focus_EN.json</value>
     </labels>
     <labels>
+        <fullName>game_bean_title_left</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>game_bean_title_left</shortDescription>
+        <value>Bean Game (Left Hand)</value>
+    </labels>
+    <labels>
+        <fullName>game_bean_title_right</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>game_bean_title_right</shortDescription>
+        <value>Bean Game (Right Hand)</value>
+    </labels>
+    <labels>
         <fullName>game_button_1</fullName>
         <language>en_US</language>
         <protected>false</protected>
@@ -4669,6 +5252,63 @@ Are you ready?</value>
         <value>Objects - Space</value>
     </labels>
     <labels>
+        <fullName>game_name_11</fullName>
+        <categories>game name</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>game_name_11</shortDescription>
+        <value>Bean Game</value>
+    </labels>
+    <labels>
+        <fullName>game_name_12</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>game_name_12</shortDescription>
+        <value>DBS</value>
+    </labels>
+    <labels>
+        <fullName>game_name_13</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>game_name_13</shortDescription>
+        <value>APOE</value>
+    </labels>
+    <labels>
+        <fullName>game_name_14</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>game_name_14</shortDescription>
+        <value>Fake News</value>
+    </labels>
+    <labels>
+        <fullName>game_name_15</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>game_name_15</shortDescription>
+        <value>Tell Me</value>
+    </labels>
+    <labels>
+        <fullName>game_name_17</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>game name 17</shortDescription>
+        <value>Digits</value>
+    </labels>
+    <labels>
+        <fullName>game_name_18</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>game name 18</shortDescription>
+        <value>This &amp; That</value>
+    </labels>
+    <labels>
+        <fullName>game_name_19</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>game_name_19</shortDescription>
+        <value>Tell Me More</value>
+    </labels>
+    <labels>
         <fullName>game_name_2</fullName>
         <categories>Games</categories>
         <language>en_US</language>
@@ -4698,7 +5338,7 @@ Are you ready?</value>
         <language>en_US</language>
         <protected>false</protected>
         <shortDescription>game name 5</shortDescription>
-        <value>Faces and Names&lt;br&gt;Stacks</value>
+        <value>Faces and Names Stacks</value>
     </labels>
     <labels>
         <fullName>game_name_6</fullName>
@@ -4778,6 +5418,48 @@ Are you ready?</value>
         <protected>false</protected>
         <shortDescription>game thanks text 2 c</shortDescription>
         <value>Or, click or tap the button below to return to the menu of games.</value>
+    </labels>
+    <labels>
+        <fullName>game_time_10_min</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>game_time_10_min</shortDescription>
+        <value>10 min</value>
+    </labels>
+    <labels>
+        <fullName>game_time_20_min</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>game_time_20_min</shortDescription>
+        <value>20 min</value>
+    </labels>
+    <labels>
+        <fullName>game_time_3_min</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>game_time_3_min</shortDescription>
+        <value>3 min</value>
+    </labels>
+    <labels>
+        <fullName>game_time_4_min</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>game_time_4_min</shortDescription>
+        <value>4 min</value>
+    </labels>
+    <labels>
+        <fullName>game_time_5_min</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>game_time_5_min</shortDescription>
+        <value>5 min</value>
+    </labels>
+    <labels>
+        <fullName>game_time_7_min</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>game_time_7_min</shortDescription>
+        <value>7 min</value>
     </labels>
     <labels>
         <fullName>games_get_started_text_1</fullName>
@@ -5798,7 +6480,7 @@ Your task is to &lt;span&gt;name the last items presented from each of the four 
         <language>en_US</language>
         <protected>false</protected>
         <shortDescription>live_URL_1</shortDescription>
-        <value>https://blog.mindcrowd.org/about-mindcrowd-study/</value>
+        <value>https://mindcrowd.org/about-mindcrowd-study/</value>
     </labels>
     <labels>
         <fullName>live_URL_10</fullName>
@@ -5881,6 +6563,13 @@ Your task is to &lt;span&gt;name the last items presented from each of the four 
         <value>Please Enter your mailing Address:</value>
     </labels>
     <labels>
+        <fullName>mc_done</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>mc_done</shortDescription>
+        <value>Done</value>
+    </labels>
+    <labels>
         <fullName>mdt0_game_config_url</fullName>
         <categories>Game Config Url</categories>
         <language>en_US</language>
@@ -5951,6 +6640,13 @@ Your task is to &lt;span&gt;name the last items presented from each of the four 
         <protected>false</protected>
         <shortDescription>Memory Game Step 4a</shortDescription>
         <value>Your Brain</value>
+    </labels>
+    <labels>
+        <fullName>minutes</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>FakeNewsTestForm_days</shortDescription>
+        <value>FakeNewsTestForm_days</value>
     </labels>
     <labels>
         <fullName>mst_object_space_welcome</fullName>
@@ -7560,12 +8256,33 @@ Number of daily medications</value>
         <value>Continue</value>
     </labels>
     <labels>
+        <fullName>notification_Body_Bean_Game</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>notification Body Bean Game</shortDescription>
+        <value>You are eligible to play: &quot;Bean Game&quot;</value>
+    </labels>
+    <labels>
+        <fullName>notification_Body_Digit_Symbol_Matching_Test</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>notification Body Digit Symbol Matching Test</shortDescription>
+        <value>You are eligible to play: &quot;Digits&quot;. It takes 5 minutes to complete.</value>
+    </labels>
+    <labels>
         <fullName>notification_Body_FacesNames</fullName>
         <categories>profilePageNotification</categories>
         <language>en_US</language>
         <protected>false</protected>
         <shortDescription>notification Body FacesNames</shortDescription>
         <value>You are eligible to play: &quot;Faces and Names Stacks&quot;. It takes 25 minutes to complete.</value>
+    </labels>
+    <labels>
+        <fullName>notification_Body_Fake_News</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>notification_Body_Fake_News</shortDescription>
+        <value>You are eligible to play: &quot;Fake News&quot;. It takes 10 minutes to complete.</value>
     </labels>
     <labels>
         <fullName>notification_Body_Focus</fullName>
@@ -7624,12 +8341,33 @@ Number of daily medications</value>
         <value>You are eligible to play: &quot;Shapes&quot;. It takes 15 minutes to complete.</value>
     </labels>
     <labels>
+        <fullName>notification_Body_Speech_Task</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>notification Body Speech Task</shortDescription>
+        <value>You are eligible to play: &quot;Tell Me&quot;. It takes 10 minutes to complete.</value>
+    </labels>
+    <labels>
+        <fullName>notification_Body_Speech_Task2</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>notification Body Speech Task2</shortDescription>
+        <value>You are eligible to play: &quot;Tell Me More&quot;. It takes 10 minutes to complete.</value>
+    </labels>
+    <labels>
         <fullName>notification_Body_Switching</fullName>
         <categories>profilePageNotification</categories>
         <language>en_US</language>
         <protected>false</protected>
         <shortDescription>notification Body Switching</shortDescription>
         <value>You are eligible to play: &quot;Switching&quot;. It takes 15 minutes to complete.</value>
+    </labels>
+    <labels>
+        <fullName>notification_Body_This_That</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>notification_Body_This_That</shortDescription>
+        <value>You are eligible to play: &quot;This &amp; That&quot;. It takes 5 minutes to complete.</value>
     </labels>
     <labels>
         <fullName>notification_Body_Word_Pairs</fullName>
@@ -9145,6 +9883,13 @@ your consideration. If you have any questions please email the Clinical
 Research Coordinator at mindcrowdquestion@tgen.org</value>
     </labels>
     <labels>
+        <fullName>remote</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Remote</shortDescription>
+        <value>Remote</value>
+    </labels>
+    <labels>
         <fullName>results_text_1</fullName>
         <categories>results</categories>
         <language>en_US</language>
@@ -9241,6 +9986,41 @@ Research Coordinator at mindcrowdquestion@tgen.org</value>
         <value>* Your password must include letters and numbers</value>
     </labels>
     <labels>
+        <fullName>scientific_game_CamelandCactus</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>scientific game CamelandCactus</shortDescription>
+        <value>Camel &amp; Cactus</value>
+    </labels>
+    <labels>
+        <fullName>scientific_game_Tell_me</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>scientific_game_Tell_me</shortDescription>
+        <value>Tell Me</value>
+    </labels>
+    <labels>
+        <fullName>scientific_game_Tell_me_more</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>scientific_game_Tell_me_more</shortDescription>
+        <value>Tell Me More</value>
+    </labels>
+    <labels>
+        <fullName>scientific_game_This_That</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>scientific_game_This_That</shortDescription>
+        <value>This &amp; That</value>
+    </labels>
+    <labels>
+        <fullName>scientific_game_bean</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>scientific_game_bean</shortDescription>
+        <value>Bean  Game</value>
+    </labels>
+    <labels>
         <fullName>scientific_game_dearySimpleAndComplexReactionTime</fullName>
         <language>en_US</language>
         <protected>false</protected>
@@ -9248,11 +10028,25 @@ Research Coordinator at mindcrowdquestion@tgen.org</value>
         <value>Deary Simple And Complex Reaction Time</value>
     </labels>
     <labels>
+        <fullName>scientific_game_digitsymbolmatchingtest</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>scientific game digitsymbolmatchingtest</shortDescription>
+        <value>Digits</value>
+    </labels>
+    <labels>
         <fullName>scientific_game_faceNameAssociates</fullName>
         <language>en_US</language>
         <protected>false</protected>
         <shortDescription>scientific game faceNameAssociates</shortDescription>
         <value>Face-Name Associates</value>
+    </labels>
+    <labels>
+        <fullName>scientific_game_fakeNewsTest</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>scientific game fakeNewsTest</shortDescription>
+        <value>Fake News</value>
     </labels>
     <labels>
         <fullName>scientific_game_flanker</fullName>
@@ -9311,6 +10105,20 @@ Research Coordinator at mindcrowdquestion@tgen.org</value>
         <value>Verbal Paired Associates</value>
     </labels>
     <labels>
+        <fullName>scientific_speech_task2</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>scientific_speech_task2</shortDescription>
+        <value>Tell Me More</value>
+    </labels>
+    <labels>
+        <fullName>scientific_speech_tasks</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>scientific_speech_tasks</shortDescription>
+        <value>Tell Me</value>
+    </labels>
+    <labels>
         <fullName>shapes_game_config_url</fullName>
         <categories>Game Config Url</categories>
         <language>en_US</language>
@@ -9349,6 +10157,48 @@ Research Coordinator at mindcrowdquestion@tgen.org</value>
         <protected>false</protected>
         <shortDescription>shrd title</shortDescription>
         <value>My Personal Test Score</value>
+    </labels>
+    <labels>
+        <fullName>speechTask2_config_url</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>speechTask2_config_url</shortDescription>
+        <value>/resource/speechTaskTellMeMore_Config/speechTaskTellMeMore_Config_EN.json</value>
+    </labels>
+    <labels>
+        <fullName>speechTask_config_url</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>speechTask_config_url</shortDescription>
+        <value>/resource/speechTaskTellMe_Config/speechTaskTellMe_Config_EN.json</value>
+    </labels>
+    <labels>
+        <fullName>speechTask_error_label</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>speechTask_error_label</shortDescription>
+        <value>You weren&apos;t loud enough, please move closer to your device and speak louder</value>
+    </labels>
+    <labels>
+        <fullName>speechTask_error_label2</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>speechTask_error_label2</shortDescription>
+        <value>We didn&apos;t detect any sound - make sure your mic is on and unmuted</value>
+    </labels>
+    <labels>
+        <fullName>speechTask_label_1</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>speechTask_label_1</shortDescription>
+        <value>RECORDING IN PROGRESS!</value>
+    </labels>
+    <labels>
+        <fullName>speechTask_label_2</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>speechTask_label_2</shortDescription>
+        <value>RECORDING COMPLETE</value>
     </labels>
     <labels>
         <fullName>stack_image</fullName>
@@ -9405,6 +10255,160 @@ Research Coordinator at mindcrowdquestion@tgen.org</value>
         <protected>false</protected>
         <shortDescription>step_4a</shortDescription>
         <value>Your Brain</value>
+    </labels>
+    <labels>
+        <fullName>survey_name_1</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>survey_name_1</shortDescription>
+        <value>Health Medical Survey</value>
+    </labels>
+    <labels>
+        <fullName>survey_name_10</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>survey_name_10</shortDescription>
+        <value>Nutrition</value>
+    </labels>
+    <labels>
+        <fullName>survey_name_11</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>survey_name_11</shortDescription>
+        <value>Perceived Stress</value>
+    </labels>
+    <labels>
+        <fullName>survey_name_12</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>survey_name_12</shortDescription>
+        <value>Life Satisfaction</value>
+    </labels>
+    <labels>
+        <fullName>survey_name_13</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>survey_name_13</shortDescription>
+        <value>Physical Activity</value>
+    </labels>
+    <labels>
+        <fullName>survey_name_14</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>survey_name_14</shortDescription>
+        <value>Stress</value>
+    </labels>
+    <labels>
+        <fullName>survey_name_15</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>survey_name_15</shortDescription>
+        <value>Anxiety</value>
+    </labels>
+    <labels>
+        <fullName>survey_name_16</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>survey_name_16</shortDescription>
+        <value>Social Support</value>
+    </labels>
+    <labels>
+        <fullName>survey_name_17</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>survey_name_17</shortDescription>
+        <value>Cancer</value>
+    </labels>
+    <labels>
+        <fullName>survey_name_18</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>survey_name_18</shortDescription>
+        <value>Heat</value>
+    </labels>
+    <labels>
+        <fullName>survey_name_2</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>survey_name_2</shortDescription>
+        <value>COVID</value>
+    </labels>
+    <labels>
+        <fullName>survey_name_3</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>survey_name_3</shortDescription>
+        <value>History of Brain Disease</value>
+    </labels>
+    <labels>
+        <fullName>survey_name_4</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>survey_name_4</shortDescription>
+        <value>Economic Status</value>
+    </labels>
+    <labels>
+        <fullName>survey_name_5</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>survey_name_5</shortDescription>
+        <value>Family History of Alzheimer&apos;s Disease</value>
+    </labels>
+    <labels>
+        <fullName>survey_name_6</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>survey_name_6</shortDescription>
+        <value>Women&apos;s Health</value>
+    </labels>
+    <labels>
+        <fullName>survey_name_7</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>survey_name_7</shortDescription>
+        <value>Language</value>
+    </labels>
+    <labels>
+        <fullName>survey_name_8</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>survey_name_8</shortDescription>
+        <value>Sleep</value>
+    </labels>
+    <labels>
+        <fullName>survey_name_9</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>survey_name_9</shortDescription>
+        <value>Daily Activities</value>
+    </labels>
+    <labels>
+        <fullName>survey_name_n</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>survey name n</shortDescription>
+        <value>Coming Soon...</value>
+    </labels>
+    <labels>
+        <fullName>survey_time_2_min</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>survey_time_2_min</shortDescription>
+        <value>2 min</value>
+    </labels>
+    <labels>
+        <fullName>survey_time_3_min</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>survey_time_3_min</shortDescription>
+        <value>3 min</value>
+    </labels>
+    <labels>
+        <fullName>survey_time_5_min</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>survey_time_5_min</shortDescription>
+        <value>5 min</value>
     </labels>
     <labels>
         <fullName>tapjoy_url</fullName>
@@ -9503,6 +10507,13 @@ Research Coordinator at mindcrowdquestion@tgen.org</value>
         <value>seleccionidioma</value>
     </labels>
     <labels>
+        <fullName>thisandthat_game_config_url</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>thisandthat_game_config_url</shortDescription>
+        <value>/resource/ThisandThat_Config/ThisandThat_Config_EN.json</value>
+    </labels>
+    <labels>
         <fullName>tower_of_London_text_0</fullName>
         <categories>Tower of London Game</categories>
         <language>en_US</language>
@@ -9567,12 +10578,145 @@ Research Coordinator at mindcrowdquestion@tgen.org</value>
         <value>&lt;span class=&quot;n-g-box&quot;&gt;Move the discs in Your Pattern to match the pattern shown in the Goal Pattern &lt;/span&gt; in as few moves as possible, as quickly as possible.</value>
     </labels>
     <labels>
+        <fullName>url_ADL_Survey</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>url_ADL_Survey</shortDescription>
+        <value>AdlSurvey</value>
+    </labels>
+    <labels>
+        <fullName>url_Anxiety_Survey</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>url_Anxiety_Survey</shortDescription>
+        <value>AnxietySurvey</value>
+    </labels>
+    <labels>
+        <fullName>url_Brain_Disease_Survey</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>url_Brain_Disease_Survey</shortDescription>
+        <value>PersonalandFamilyHistoryofBrainDisease</value>
+    </labels>
+    <labels>
+        <fullName>url_COVID_Survey</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>url_COVID_Survey</shortDescription>
+        <value>COVIDSurvey</value>
+    </labels>
+    <labels>
+        <fullName>url_Cancer_Survey</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>url_Cancer_Survey</shortDescription>
+        <value>CancerSurvey</value>
+    </labels>
+    <labels>
+        <fullName>url_Diet_Survey</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>url_Diet_Survey</shortDescription>
+        <value>DietSurvey</value>
+    </labels>
+    <labels>
+        <fullName>url_FHAD_Survey</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>url_FHAD_Survey</shortDescription>
+        <value>FhadSurvey</value>
+    </labels>
+    <labels>
+        <fullName>url_Health_Medical_Survey</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>url_Health_Medical_Survey</shortDescription>
+        <value>HealthMedicalSurvey</value>
+    </labels>
+    <labels>
+        <fullName>url_Heat_Survey</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>url Heat Survey</shortDescription>
+        <value>HeatStressSurvey</value>
+    </labels>
+    <labels>
         <fullName>url_Objects_Space</fullName>
         <categories>Page URL</categories>
         <language>en_US</language>
         <protected>false</protected>
         <shortDescription>url Objects Space</shortDescription>
         <value>me-objects-space</value>
+    </labels>
+    <labels>
+        <fullName>url_Perceived_Stress_Survey</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>url_Perceived_Stress_Survey</shortDescription>
+        <value>PerceivedStressSurvey</value>
+    </labels>
+    <labels>
+        <fullName>url_QPAR_Survey</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>url_QPAR_Survey</shortDescription>
+        <value>QPARSurvey</value>
+    </labels>
+    <labels>
+        <fullName>url_SES_Survey</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>url_SES_Survey</shortDescription>
+        <value>SESSurvey</value>
+    </labels>
+    <labels>
+        <fullName>url_SWLS_Survey</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>url_SWLS_Survey</shortDescription>
+        <value>SwlsSurvey</value>
+    </labels>
+    <labels>
+        <fullName>url_Sleep_Survey</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>url_Sleep_Survey</shortDescription>
+        <value>SleepSurvey</value>
+    </labels>
+    <labels>
+        <fullName>url_Social_Stress_Survey</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>url_Social_Stress_Survey</shortDescription>
+        <value>SocialStressorSurvey</value>
+    </labels>
+    <labels>
+        <fullName>url_Social_Support_Survey</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>url_Social_Support_Survey</shortDescription>
+        <value>SocialSupportSurvey</value>
+    </labels>
+    <labels>
+        <fullName>url_Subjective_English_Survey</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>url_Subjective_English_Survey</shortDescription>
+        <value>SubjectiveEnglishSurvey</value>
+    </labels>
+    <labels>
+        <fullName>url_This_and_That</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>url_This_and_That</shortDescription>
+        <value>me-this-and-that</value>
+    </labels>
+    <labels>
+        <fullName>url_Women_Health_Survey</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>url_Women_Health_Survey</shortDescription>
+        <value>WomenHealthSurvey</value>
     </labels>
     <labels>
         <fullName>url_aboutyourbrain</fullName>
@@ -9711,12 +10855,41 @@ Research Coordinator at mindcrowdquestion@tgen.org</value>
         <value>vipaccess</value>
     </labels>
     <labels>
+        <fullName>url_me_CamelandCactus</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>url_me_ CamelandCactus</shortDescription>
+        <value>me-CamelandCactus</value>
+    </labels>
+    <labels>
         <fullName>url_me_Objects_Time</fullName>
         <categories>Page URL</categories>
         <language>en_US</language>
         <protected>false</protected>
         <shortDescription>url me Objects - Time</shortDescription>
         <value>me-objects-time</value>
+    </labels>
+    <labels>
+        <fullName>url_me_This_and_That</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>url_me_This_and_That</shortDescription>
+        <value>me-this-and-that</value>
+    </labels>
+    <labels>
+        <fullName>url_me_digitSymbol</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>url me digitSymbol</shortDescription>
+        <value>me-digits</value>
+    </labels>
+    <labels>
+        <fullName>url_me_fakeNewsTest</fullName>
+        <categories>Page URL</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>url me-fakeNewsTest</shortDescription>
+        <value>me-fakenews</value>
     </labels>
     <labels>
         <fullName>url_me_flankergame</fullName>
@@ -9765,6 +10938,20 @@ Research Coordinator at mindcrowdquestion@tgen.org</value>
         <protected>false</protected>
         <shortDescription>url me-shapesgame</shortDescription>
         <value>me-shapesgame</value>
+    </labels>
+    <labels>
+        <fullName>url_me_speechTask</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>url_me_speechTask</shortDescription>
+        <value>me-tell-me</value>
+    </labels>
+    <labels>
+        <fullName>url_me_speechTaskTellMeMore</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>url_me_speechTaskTellMeMore</shortDescription>
+        <value>me-tell-me-more</value>
     </labels>
     <labels>
         <fullName>url_me_switchinggame</fullName>
@@ -9949,6 +11136,13 @@ Research Coordinator at mindcrowdquestion@tgen.org</value>
         <protected>false</protected>
         <shortDescription>url sharingmyresults</shortDescription>
         <value>sharingmyresults</value>
+    </labels>
+    <labels>
+        <fullName>url_surveys</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>url_surveys</shortDescription>
+        <value>me-surveys</value>
     </labels>
     <labels>
         <fullName>url_switchinggame</fullName>

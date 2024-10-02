@@ -28,7 +28,7 @@
         <name>update_contact</name>
         <label>update contact</label>
         <locationX>176</locationX>
-        <locationY>335</locationY>
+        <locationY>323</locationY>
         <filterLogic>and</filterLogic>
         <filters>
             <field>Id</field>
@@ -41,6 +41,12 @@
             <field>Is_WOMENS_HEALTH_Submitted__c</field>
             <value>
                 <booleanValue>true</booleanValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>WOMENS_HEALTH__c</field>
+            <value>
+                <stringValue>Completed</stringValue>
             </value>
         </inputAssignments>
         <object>Contact</object>
