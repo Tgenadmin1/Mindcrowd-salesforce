@@ -29,9 +29,19 @@
                 </lightning-radio-group>
             </template>
             <template if:true={race.data}>
+                <!--Commented for TSS-192 - Field Alignment Issue
                 <lightning-combobox name="race" label={complete3} placeholder={brainInfo_text_choose}
                     options={race.data.values} onchange={handleRace} dropdown-alignment="auto">
                 </lightning-combobox>
+                End-Commented for TSS-192 - Field Alignment Issue -->
+                <!--Added for TSS-192 - Field Alignment Issue-->
+                <div class="slds-form-element">
+                    <label class="slds-form-element__label"  for="race">{complete3}</label>
+                    <lightning-combobox name="race" class="mc-combobox" placeholder={brainInfo_text_choose}
+                    options={race.data.values} onchange={handleRace} dropdown-alignment="auto"  variant="label-hidden">
+                    </lightning-combobox>
+                </div>
+                <!--End-Added for TSS-192 - Field Alignment Issue-->
             </template>
             <template if:true={HispanicLatinoPicklist.data}>
                 <lightning-radio-group name="hispanic" label={Hispanic_Latino}
@@ -72,11 +82,21 @@
                 </lightning-radio-group>
             </template>
             <template if:true={medications.data}>
+            <!--Commented for TSS-192 - Field Alignment Issue
                 <lightning-combobox name="medications" label={complete5} placeholder={brainInfo_text_choose}
                     options={medications.data.values} onchange={handleMedications} dropdown-alignment="bottom-left">
                 </lightning-combobox>
+            End-Commented for TSS-192 - Field Alignment Issue -->
+            <!--Added for TSS-192 - Field Alignment Issue-->
+            <div class="slds-form-element">
+                <label class="slds-form-element__label"  for="medications">{complete5}</label>
+                <lightning-combobox name="medications" class="mc-combobox" placeholder={brainInfo_text_choose}
+                options={medications.data.values} onchange={handleMedications} dropdown-alignment="bottom-left" variant="label-hidden">
+            </lightning-combobox>
+            </div>
+            <!--End-Added for TSS-192 - Field Alignment Issue-->
             </template>
-            <div class="slds-align_absolute-center">
+            <div class="slds-align_absolute-center slds-m-top_medium">
                 <lightning-button class="btn-sm pink-btn-box big" type="submit" name="Next" label={Brain_Info_Results}
                     onclick={updateContact}>
                 </lightning-button>

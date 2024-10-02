@@ -58,7 +58,7 @@
                 }
                 
                 
-                /*if(!component.get('v.isScoreReactionTime')){
+                if(!component.get('v.isScoreReactionTime')){
                     if(component.get('v.correctAnswers') == component.get('v.mValue')){
                         component.set('v.scoreBasedCaption', $A.get("$Label.c.Catcme_text_4"));
                     } else if(component.get('v.correctAnswers') >= component.get('v.lValue')){
@@ -71,7 +71,7 @@
                     component.set('v.chartLabel', component.get('v.chartLabel') +''
                                   +component.get('v.scoreBasedCaption'));
                     console.log('chartLabel='+component.get('v.chartLabel'));
-                }*/
+                } 
                 //For testing : In case you want to all Games Charts even if it is not played
                // component.set('v.isGamePlayed', true);
               // component.set('v.showCharts', true);

@@ -18,12 +18,8 @@ input.slds-input {
     border-radius: 5px;
     height: 50%;
 }
-
-.custom-combobox-container {
-    display: flex;
-    align-items: center;
-}
-
-.custom-label {
-    margin-right: 10px; /* Adjust the spacing between label and combobox */
+input[type="number"].zipcode::-webkit-inner-spin-button,
+input[type="number"].zipcode::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }

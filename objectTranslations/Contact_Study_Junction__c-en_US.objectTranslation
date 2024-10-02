@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Contact Study</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Contacts Studies</value>
+    </caseValues>
+    <fields>
+        <label><!-- Compound Key --></label>
+        <name>Compound_Key__c</name>
+    </fields>
+    <fields>
+        <label><!-- Contact --></label>
+        <name>Contact__c</name>
+        <relationshipLabel><!-- Contacts Studies --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Studies --></label>
+        <name>Studies__c</name>
+        <relationshipLabel><!-- Contacts Studies --></relationshipLabel>
+    </fields>
+    <layouts>
+        <layout>Contact Study Junction Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

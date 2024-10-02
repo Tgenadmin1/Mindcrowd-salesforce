@@ -61,6 +61,24 @@ public class mindCrowdNotificationControllerTest {
              Game_Detail__c game10=new Game_Detail__c(Name='Object Spatial',Reactivation_Days__c=10,Dependency__c='');
              insert game10;
              lgame.add(game10);
+        Game_Detail__c game11=new Game_Detail__c(Name='Digits',Reactivation_Days__c=10,Dependency__c='');
+             insert game11;
+             lgame.add(game11);
+           Game_Detail__c game12=new Game_Detail__c(Name='Bean Game',Reactivation_Days__c=10,Dependency__c='');
+             insert game12;
+             lgame.add(game12);
+             Game_Detail__c game13=new Game_Detail__c(Name='Tell Me',Reactivation_Days__c=10,Dependency__c='');
+             insert game13;
+             lgame.add(game13);
+             Game_Detail__c game14=new Game_Detail__c(Name='Tell Me More',Reactivation_Days__c=10,Dependency__c='');
+             insert game14;
+             lgame.add(game14);
+             Game_Detail__c game15=new Game_Detail__c(Name='Fake News',Reactivation_Days__c=10,Dependency__c='');
+             insert game15;
+             lgame.add(game15);
+             Game_Detail__c game16=new Game_Detail__c(Name='This & That',Reactivation_Days__c=10,Dependency__c='');
+             insert game16;
+             lgame.add(game16);
         for(Game_Detail__c lgameCheck:lgame){
              mindCrowdCustomNotificationController.notifyUserOtherGames(con.Id,lgameCheck.Name);
         }
@@ -89,6 +107,9 @@ public class mindCrowdNotificationControllerTest {
         notification2.setTitle('Apex Custom Notification');
         notification2.setBody('The notifications are coming from INSIDE the Apex!');
        mindCrowdCustomNotificationController.notifyUserfrombatch(recipientsIds);
+		Contact cont = [select Id from Contact][0];
+        mindCrowdCustomNotificationController.notifyUserActivatedGames(cont.Id, 'Flanker');
+        mindCrowdCustomNotificationController.notifyUserActivatedGames(cont.Id, 'Keep Track');
     }
         
         

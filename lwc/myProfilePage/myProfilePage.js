@@ -202,7 +202,7 @@ export default class MyProfilePage extends LightningElement {
   @api state_text = "State";
   @api myprofile_text_10 = "In what country do you currently live?";
   @api save = "save";
-  @api documentTitle = "Perfil • PME";
+  @api documentTitle = "Profile • MC Expanded";
   @api documentDiscription = "Profile • MindCrowd Project Expanded";
   @api discription_p_text = "Suite/APT No.";
   @api city_p_text = "City";
@@ -292,7 +292,41 @@ export default class MyProfilePage extends LightningElement {
       });
 
       this.dependentValues = stateOptions;
-      console.log('dependend values',this.dependentValues);
+      //console.log('wire countryPicklistValues');
+          this.isEmpty = false;
+          let dependValues = [];
+
+          if (this.selectedCountry) {
+            // if Selected country is none returns nothing
+            if (this.selectedCountry === "--None--") {
+              this.isEmpty = true;
+              dependValues = [{ label: this.None, value:this.None }];
+              this.selectedCountry = null;
+              this.selectedState = null;
+              return;
+            }
+            // else if (this.selectedCountry == "US") {
+            //   this.isStateVisible = true;
+            //} else {
+            //   this.isStateVisible = true;
+            //   this.showText = false;
+            // }
+    
+            // filter the total dependent values based on selected country value
+            this.totalDependentValues.forEach((conValues) => {
+              if (
+                conValues.validFor[0] === this.controlValues[this.selectedCountry]
+              ) {
+                dependValues.push({
+                  label: conValues.label,
+                  value: conValues.value
+                });
+              }
+            });
+            this.dependentValues = dependValues;
+            //console.log('countryPicklist Dependent Values', JSON.stringify(this.dependentValues));
+          }
+      
     } else if (error) {
       this.error = JSON.stringify(error);
       console.log(this.error);
@@ -464,9 +498,11 @@ export default class MyProfilePage extends LightningElement {
     // this.selectedState = event.target.value;
   }
   handleAddress1Change(event){
-    this.rec.MailingStreet=event.target.value.replace(/\n/g, ' ');
+   this.rec.MailingStreet=event.target.value.replace(/\n/g, ' ');
    this.address1 = this.rec.MailingStreet;
   }
+
+
   handleCityChange(event) {
     this.rec.MailingCity = event.target.value;
     this.city =  this.rec.MailingCity;
@@ -547,7 +583,7 @@ export default class MyProfilePage extends LightningElement {
   connectedCallback() {
     getContact()
       .then((result) => {
-        window.console.log("result ===> ", result);
+        //window.console.log("result ===> ", result);
         this.data = result;
         this.contactId = this.data.ContactId;
         this.getCurrentContactdetails();
@@ -576,6 +612,39 @@ export default class MyProfilePage extends LightningElement {
          // console.log('ddddddddddd');
           this.city = result.MailingCity;
           this.selectedCountry = result.MailingCountryCode;
+          this.isEmpty = false;
+          let dependValues = [];
+          //console.log('getCurrentContactdetails');
+          if (this.selectedCountry) {
+            // if Selected country is none returns nothing
+            if (this.selectedCountry === "--None--") {
+              this.isEmpty = true;
+              dependValues = [{ label: this.None, value:this.None }];
+              this.selectedCountry = null;
+              this.selectedState = null;
+              return;
+            }
+            // else if (this.selectedCountry == "US") {
+            //   this.isStateVisible = true;
+            //} else {
+            //   this.isStateVisible = true;
+            //   this.showText = false;
+            // }
+    
+            // filter the total dependent values based on selected country value
+            this.totalDependentValues.forEach((conValues) => {
+              if (
+                conValues.validFor[0] === this.controlValues[this.selectedCountry]
+              ) {
+                dependValues.push({
+                  label: conValues.label,
+                  value: conValues.value
+                });
+              }
+            });
+            this.dependentValues = dependValues;
+            //console.log('connectedCallback Dependent Values', JSON.stringify(this.dependentValues));
+          }
           this.selectedState = result.MailingStateCode;
           this.address1 = result.MailingStreet;
           this.zipcode = result.MailingPostalCode;
@@ -750,7 +819,7 @@ export default class MyProfilePage extends LightningElement {
 
       
         .then((result) => {
-          console.log('return value:',result);
+          //console.log('return value:',result);
           if (result != null) {
             this.dispatchEvent(
               new ShowToastEvent({
@@ -799,7 +868,7 @@ export default class MyProfilePage extends LightningElement {
     this.rec.MailingPostalCode = this.zipcode;
     this.rec.Id = this.data.ContactId;
 
-    console.log('checking address',this.rec);
+    //console.log('checking address',this.rec);
 
     if (this.speakingLanguageAgeFind == true) {
       upsertContact({

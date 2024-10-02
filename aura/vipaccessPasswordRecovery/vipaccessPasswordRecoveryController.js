@@ -23,11 +23,16 @@
     initialize: function(component, event, helper) {
         
         const urlParams = new URLSearchParams(document.location.search.substring(1));
-        console.log('sssssssssssssssssssurlParams = ', urlParams);
+        console.log('urlParams = ', urlParams);
         const showConformModal = urlParams.get('done');
+        const Email = urlParams.get('Email');
         //console.log('sssssssssssssssssssurlParams = ', contact);
         if(showConformModal){
             component.set("v.isModalForValidEmail", true);
+        }
+        if(Email){
+            component.set("v.username", Email);
+            component.set("v.disabled", true);            
         }
         $A.get("e.siteforce:registerQueryEventMap").setParams({"qsToEvent" : helper.qsToEventMap}).fire();
     },

@@ -3,8 +3,8 @@
     <flexiPageRegions>
         <itemInstances>
             <componentInstance>
-                <componentName>SpeechTask</componentName>
-                <identifier>c_SpeechTask</identifier>
+                <componentName>testLWC</componentName>
+                <identifier>c_testLWC</identifier>
             </componentInstance>
         </itemInstances>
         <name>region1</name>

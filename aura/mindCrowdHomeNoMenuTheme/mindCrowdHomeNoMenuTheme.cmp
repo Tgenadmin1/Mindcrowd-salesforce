@@ -9,7 +9,7 @@
   1.0   06-07-2021   Raj Kumar      Initial Version
 -->
 <!-- <aura:component implements="forceCommunity:themeLayout"> -->
-    <aura:component controller="GamesController" implements="forceCommunity:themeLayout" access="global" description="mindCrowd Custom Theme Layout"> 
+  <aura:component controller="GamesController" implements="forceCommunity:themeLayout" access="global" description="mindCrowd Custom Theme Layout"> 
     <aura:attribute name="sidebarFooter" type="Aura.Component[]"/>
     <aura:attribute name="navMindcrowd" type="Aura.Component[]" required="false"/>
     <aura:attribute name="languageSection" type="Aura.Component[]" />

@@ -16,16 +16,37 @@
         //get subid value for Tapjoy
         var subitem1 = localStorage.getItem('subIdToStoreLocal');
         //console.log('subitem1==>'+subitem1);
-        const queryString = window.location.search;
+        //const queryString = window.location.search;
 		// console.log(queryString);
-        var tapjoyUrl = $A.get("$Label.c.tapjoy_url");
-        var urlParams = new URLSearchParams(queryString);
-        var trnsIdToStoreLocal = urlParams.get(tapjoyUrl);
-        
-        if(trnsIdToStoreLocal!=null){
-            // console.log('trnsIdToStoreLocal',trnsIdToStoreLocal);
-            localStorage.setItem('subIdToStoreLocal', trnsIdToStoreLocal);
+        //var tapjoyUrl = $A.get("$Label.c.tapjoy_url");
+        //var urlParams = new URLSearchParams(queryString);
+        //console.log('tjcookieurl: '+tjcookieurl);
+        const urlParams1 =new URLSearchParams(window.location.search);
+        const campaign = urlParams1.get('campaign');
+        if(campaign=='historical'){
+            localStorage.setItem('campaigncode',campaign);
+            localStorage.setItem('utmsource','Email'); 
+            let email = urlParams1.get('Email');               
+            if(email){
+                localStorage.setItem('utmmedium',email);        
+            }
+            else {
+                const participantcode = urlParams1.get('participantcode');
+                if(participantcode){
+                        helper.fetchContact(component,participantcode);
+                }
+            }         
         }
+        if(tjcookieurl){
+            const urlParams = getURLParameters(tjcookieurl);
+            if(urlParams){
+                    localStorage.setItem('subIdToStoreLocal', urlParams.utm_term ? urlParams.utm_term : '');
+                    localStorage.setItem('campaigncode', urlParams.utm_campaign ? urlParams.utm_campaign : '');
+                    localStorage.setItem('utmsource', urlParams.utm_source ? urlParams.utm_source : '');
+                    localStorage.setItem('utmmedium', urlParams.utm_medium ? urlParams.utm_medium : '');
+                    localStorage.setItem('utmappName', urlParams.appname ? urlParams.appname : '');
+            }            
+        }       
         
         var subitem = localStorage.getItem('subIdToStoreLocal');
         // console.log('subitem==>'+subitem);
@@ -41,7 +62,23 @@
             window.console.log = function () { };
         }
         
-        var tempurl = $A.get("$Label.c.Community_Url") + '/s/'+$A.get("$Label.c.url_testlanguage")
+        var tempurl = $A.get("$Label.c.Community_Url") + '/s/'+$A.get("$Label.c.url_testlanguage");
+
+        function getURLParameters(url) {
+            let decodeurl = decodeURIComponent(url);
+            //console.log('decodeurl: '+decodeurl);            
+            const urlParts = decodeurl.split('?');
+            if (urlParts.length < 2) {
+              return {}; // No query string parameters
+            }
+            const queryString = urlParts[1];
+            const params = {};
+            queryString.split('&').forEach(param => {
+              const [key, value] = param.split('=');
+              params[key] = value;
+            });
+            return params;
+          }
 
     },
     openEmail: function (component, event, helper) {

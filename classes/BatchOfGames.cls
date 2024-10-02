@@ -9,109 +9,82 @@
 
 global class BatchOfGames implements Database.Batchable<SObject>,Database.Stateful
 {
-    global Set<String>  GameNamelist=new Set<String>();
-    global Map<String,List<String>>  ConIdsVsGameIds=new Map<String,List<String>>();
-    global Map<String,String>  GameIdsVsName=new Map<String,String>();
+    public Integer activationdays;
+    global List<AggregateResult> queryresult; 
+    global BatchOfGames(List<AggregateResult> queryresult)
+    { 
+    this.queryresult = queryresult; 
+    } 
+
+global Database.QueryLocator start(Database.BatchableContext bc)
+{
+    System.debug('-----in start');
+    System.debug(this.queryresult);
+    List<String>  conidlist=new List<String>(); 
     
+    for(AggregateResult ar : queryresult)
+    { 
+        String conid;
+        conid = (String)ar.get('cnid');
+        conidlist.add(conid);
+    } 
+    System.debug('-CONID LIST is--'+conidlist);
+
+   // String conidStr=String.join(conidlist, ',');
     
-    global Database.QueryLocator start(Database.BatchableContext bc)
-    {   
-        System.debug('---IN start');
-        return Database.getQueryLocator([SELECT Name,Game_Name__c,Game_Name__r.Name,Contact_Name__c from Participant_Game_Info__c 
-							where isActive__c = true AND Game_Play_Status__c ='Completed']);     
-    }
-    global void execute(Database.BatchableContext bc, List<Participant_Game_Info__c> scope)
-    {  
-        System.debug('---IN execute');
-        for(Participant_Game_Info__c ar : scope)
-        { 
-            if(!ConIdsVsGameIds.containsKey((String)ar.get('Contact_Name__c'))){
-                ConIdsVsGameIds.put((String)ar.get('Contact_Name__c'),new List<String>{(String)ar.get('Game_Name__c')});
-            }else{
-                ConIdsVsGameIds.get((String)ar.get('Contact_Name__c')).add((String)ar.get('Game_Name__c'));
-            }
-            GameNamelist.add((String)ar.get('Game_Name__c'));
-        }
+    // String q= 'select Id,Email from Contact where Id IN ('+conidStr+')';
+    // System.debug(q);
+    list<Contact> lstcon=new List<Contact>();
+    System.debug('lstcon--->'+lstcon);
+    String q= 'select Id,Email from Contact where Id IN:conidlist';
+    lstcon=Database.query(q);
+    System.debug(lstcon);
+    return Database.getQueryLocator([select Id,Email from Contact where Id IN:conidlist]);  
         
-        List<Contact>  Conlist=new List<Contact>();
-        for(Game_Detail__c gNames :[select id,Name from Game_Detail__c where Id =: GameNamelist]){
-            GameIdsVsName.put(gNames.id, gNames.Name);
-        }
-        List<Contact> conlistrecord=[SELECT Id,Email from Contact where Id IN:ConIdsVsGameIds.keySet()];
-        for(Contact con: conlistrecord){
-            List<String> valueofMap=ConIdsVsGameIds.get(con.id);
-            for(String gameid  : valueofMap){
-                String gameName =GameIdsVsName.get(gameid);
-                
-                If(gameName == 'Flanker'){
-                    con.Flanker__c='Opened';   
-                    
-                }else If(gameName == 'Verbal Paired Associates'){
-                    con.Verbal_Paired_Associates__c='Opened'; 
-                    
-                }else If(gameName == 'Letter-Number Sequencing'){
-                    con.Letter_Number_Sequencing__c='Opened'; 
-                    
-                }else If(gameName == 'Deary Simple And Complex Reaction Time'){
-                    con.Deary_Simple_And_Complex_Reaction_Time__c='Opened';  
-                    
-                }else If(gameName == 'Keep Track'){
-                    con.Keep_Track__c='Opened';   
-                    
-                }else If(gameName == 'Object Recognition And Similarity'){
-                    con.Object_Recognition_And_Similarity__c='Opened';   
-                    
-                }else If(gameName == 'Object Discrimination'){
-                    con.Object_Discrimination__c='Opened';  
-                    
-                }else If(gameName == 'Object Temporal'){
-                    con.Object_Temporal__c='Opened';   
-                    
-                }else If(gameName == 'Face-Name Associates'){
-                    con.Face_Name_Associates__c='Opened';      
-                }else If(gameName == 'Object Spatial'){
-                    con.Object_Spatial__c='Opened'; 
-                }
-                mindCrowdCustomNotificationController.notifyUserActivatedGames(con.id,gameName);
-            }
-            conlist.add(con);
-            //System.debug('conlist120>>'+conlist);
-        }
-        update conlist;
-        
-        //system.debug('scope'+scope);
-        Set<String>  recsIds=new Set<String>();
-        List<User> IdUser =[SELECT Username, ContactId, Id FROM User Where ContactId=:conlistrecord];
-        system.debug('IdUser>>>'+IdUser);
-        for(User ur:IdUser){
-            recsIds.Add(ur.Id);      
-        }
-        system.debug('recsIds>>>>>>>>>'+recsIds);
-        
-        //mindCrowdCustomNotificationController.notifyUserfrombatch(recsIds);
-        //Id conidd = '0038G00000SLC79QAH';
-        //mindCrowdCustomNotificationController.notifyUserActivatedGames(conidd,'Flanker');
-        
-        Messaging.Email[] messages = new Messaging.Email[0];
-        EmailTemplate emt=[Select Id from EmailTemplate where Name = 'Invitation for Playing Games'];
-        for(Contact objC : conlistrecord)
-        {
-            
-            Messaging.SingleEmailMessage mail = new Messaging.SingleEmailMessage();
-            mail.setTargetObjectId(objC.Id);
-            mail.setSenderDisplayName('System Admin');
-            mail.setTemplateId(emt.Id);
-            messages.add(mail);
-            System.debug('Email sent to ----' +objC.Id);
-        }
-        if( Test.IsRunningTest() == false){
-            Messaging.sendEmail(messages);
-        }
-    }
-    global void finish(Database.BatchableContext BC)
+}
+global void execute(Database.BatchableContext bc, List<Contact> scope)
+{   
+    System.debug('in execute method');
+    System.debug('batchable context--'+scope);
+    Integer size= scope.size();
+    System.debug('### size of scope---'+size);
+    for(Contact con:scope)
     {
+     con.Deary_Simple_And_Complex_Reaction_Time__c ='Opened';
+     con.Verbal_Paired_Associates__c ='Opened';
+     System.debug('contact name to be updated is---');
+    }
+   update scope;
+    system.debug('scope'+scope);
+    Set<String>  recsIds=new Set<String>();
+    List<User> IdUser =[SELECT Username, ContactId, Id FROM User Where ContactId=:scope];
+    system.debug('IdUser'+IdUser);
+    for(User ur:IdUser){
+                recsIds.Add(ur.Id);      
+            }
+    mindCrowdCustomNotificationController.notifyUserfrombatch(recsIds);
+    Messaging.Email[] messages = new Messaging.Email[0];
+    EmailTemplate emt=[Select Id from EmailTemplate where Name = 'Invitation for Playing Games'];
+    for(Contact objC : scope)
+    {
+
+        Messaging.SingleEmailMessage mail = new Messaging.SingleEmailMessage();
+        mail.setTargetObjectId(objC.Id);
+        mail.setSenderDisplayName('System Admin');
+        mail.setTemplateId(emt.Id);
+        messages.add(mail);
+        System.debug('Email sent to ----' +objC.Id);
+    }
+    if( Test.IsRunningTest() == false){
+        system.debug('>>>>');
+    
+    Messaging.sendEmail(messages);
+    }
+ }
+global void finish(Database.BatchableContext BC)
+{
         System.debug('---IN FINISH');
         
-    }  
-    
+}  
+
 }

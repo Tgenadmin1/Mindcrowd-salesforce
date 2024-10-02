@@ -75,7 +75,7 @@ public class BatchGameResultDashboardAVG implements Database.Batchable<sObject>,
        private void initializeMaps() {
         sumCorrectAnswers = new Map<String, Decimal>();
         countGames = new Map<String, Integer>();
-        List<Game_Detail__c> gameDetails = [SELECT Name from Game_Detail__c where name !='Speech Tasks' and name !='Bean Game'];  
+        List<Game_Detail__c> gameDetails = [SELECT Name from Game_Detail__c where name !='Speech Task Tell Me' and name !='Speech Task Tell Me More'and name !='Bean Game'];  
         for (Game_Detail__c gameDetail : gameDetails) {
             sumCorrectAnswers.put(gameDetail.Name, 0);
             countGames.put(gameDetail.Name, 0);

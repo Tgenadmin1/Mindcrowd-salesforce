@@ -36,7 +36,7 @@
     text-transform: none;
     font-weight: 400;
     color: #163248;
-    padding-bottom: 30px; /* Adjust the value to add desired space */
+    padding-bottom: 15px; /* Adjust the value to add desired space */
 }
 
 
@@ -115,7 +115,7 @@
 
 .THIS .input-label1 {
     position: absolute;
-    right: -28%;
+    right: -32%;
     transform: translateX(50%);
     top: 30%;
     font-size: 24px;

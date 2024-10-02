@@ -7,6 +7,6 @@ public without sharing class TestContactCtrl {
 
     @AuraEnabled
     public static Contact getRecord(String recordId){
-        return [SELECT Id,FirstName,LastName,Email,Phone FROM Contact WHERE Id=:recordId LIMIT 1];
+        return [SELECT Id,FirstName,LastName,Email FROM Contact WHERE Id=:recordId LIMIT 1];
     }
 }

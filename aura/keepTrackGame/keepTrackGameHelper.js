@@ -56,7 +56,6 @@
                 var name = a.getReturnValue();
                 //console.log('gameDetails is : ',name);
                 component.set("v.myAttribute", name);
-                console.log('game name:', component.get("v.myAttribute"));  
             }
             else if (state === "ERROR") {
                 let message = '';

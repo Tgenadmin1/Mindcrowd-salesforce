@@ -1,0 +1,5 @@
+<apex:page standardController="Participant_Game_Info__c" lightningStyleSheets="true">
+    <div class="slds-scope">
+        <c-download-amazon-s3-file record-id="{!$CurrentPage.parameters.id}"/>
+    </div>
+</apex:page>

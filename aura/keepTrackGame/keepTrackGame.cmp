@@ -37,9 +37,6 @@
                         
                     </div>  
                 <div class="datablock" id="datablock_keepTrackGame"></div> 
-                <div id="imgContainer" style="height: 1px; width: 1px; position: absolute; top:-10px; left:-10px; overflow: hidden;">
-                    <img src="../resource/mindGamesImages/objects/blobs1_2.png?v=4" alt="alternative-text"></img>
-                  </div>
                  
                 <p id="nextBtton" class="centers magenta-btn  btn-xlarge marginT20 slds-hide">
                     <button class="slds-button"  onclick="{!c.goToMyResultsPage }">{!$Label.c.mst_text_My_results}</button>

@@ -1,76 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomLabels xmlns="http://soap.sforce.com/2006/04/metadata">
     <labels>
-        <fullName>CamelandCactus_game_text_2</fullName>
-        <categories>CamelandCactusGame</categories>
-        <language>en_US</language>
-        <protected>false</protected>
-        <shortDescription>CamelandCactus game text 2</shortDescription>
-        <value>Just click or tap on the picture that goes best with the one at the top.</value>
-    </labels>
-    <labels>
-        <fullName>CamelandCactus_game_text_cactus</fullName>
-        <categories>CamelandCactusGame</categories>
-        <language>en_US</language>
-        <protected>false</protected>
-        <shortDescription>CamelandCactus game text cactus</shortDescription>
-        <value>The desert scene is the correct answer since cactus are usually found in the desert</value>
-    </labels>
-    <labels>
-        <fullName>CamelandCactus_game_text_nails</fullName>
-        <categories>CamelandCactusGame</categories>
-        <language>en_US</language>
-        <protected>false</protected>
-        <shortDescription>CamelandCactus game text nails</shortDescription>
-        <value>The hammer is the correct answer since a hammer is usually used to drive nails</value>
-    </labels>
-    <labels>
-        <fullName>CamelandCactus_game_text_wine</fullName>
-        <categories>CamelandCactusGame</categories>
-        <language>en_US</language>
-        <protected>false</protected>
-        <shortDescription>CamelandCactus game text wine</shortDescription>
-        <value>The grapes are the correct answer since they are commonly used to make wine</value>
-    </labels>
-    <labels>
-        <fullName>Digits_game_text_14</fullName>
-        <categories>Digits game</categories>
-        <language>en_US</language>
-        <protected>false</protected>
-        <shortDescription>Digits game text 14</shortDescription>
-        <value>Digits</value>
-    </labels>
-    <labels>
-        <fullName>camelandcactus_game_config_url</fullName>
-        <categories>Game Config Url</categories>
-        <language>en_US</language>
-        <protected>false</protected>
-        <shortDescription>camelandcactus game config url</shortDescription>
-        <value>/resource/CamelandCactus_Config/CamelandCactus_EN.json</value>
-    </labels>
-    <labels>
-        <fullName>camelandcactus_game_text_14</fullName>
-        <categories>CamelandCactus Game</categories>
-        <language>en_US</language>
-        <protected>false</protected>
-        <shortDescription>camelandcactus game text 14</shortDescription>
-        <value>Camel &amp; Cactus</value>
-    </labels>
-    <labels>
-        <fullName>scientific_game_CamelandCactus</fullName>
-        <language>en_US</language>
-        <protected>false</protected>
-        <shortDescription>scientific game CamelandCactus</shortDescription>
-        <value>Camel &amp; Cactus</value>
-    </labels>
-    <labels>
-        <fullName>scientific_game_digitsymbolmatchingtest</fullName>
-        <language>en_US</language>
-        <protected>false</protected>
-        <shortDescription>scientific game digitsymbolmatchingtest</shortDescription>
-        <value>Digits</value>
-    </labels>
-    <labels>
         <fullName>APOE_intermediate_form</fullName>
         <language>en_US</language>
         <protected>false</protected>
@@ -181,6 +111,20 @@
         <value>home_compare_graphic.png</value>
     </labels>
     <labels>
+        <fullName>BeanGame_Left_Hand</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>BeanGame Left Hand</shortDescription>
+        <value>Left Hand</value>
+    </labels>
+    <labels>
+        <fullName>BeanGame_Right_Hand</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>BeanGame Right Hand</shortDescription>
+        <value>Right Hand</value>
+    </labels>
+    <labels>
         <fullName>Bean_Game_Form_1</fullName>
         <language>en_US</language>
         <protected>false</protected>
@@ -243,6 +187,38 @@
         <protected>false</protected>
         <shortDescription>Brain Info Results</shortDescription>
         <value>View Your Results</value>
+    </labels>
+    <labels>
+        <fullName>CamelandCactus_game_text_2</fullName>
+        <categories>CamelandCactusGame</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CamelandCactus game text 2</shortDescription>
+        <value>Just click or tap on the picture that goes best with the one at the top.</value>
+    </labels>
+    <labels>
+        <fullName>CamelandCactus_game_text_cactus</fullName>
+        <categories>CamelandCactusGame</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CamelandCactus game text cactus</shortDescription>
+        <value>The desert scene is the correct answer since cactus are usually found in the desert</value>
+    </labels>
+    <labels>
+        <fullName>CamelandCactus_game_text_nails</fullName>
+        <categories>CamelandCactusGame</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CamelandCactus game text nails</shortDescription>
+        <value>The hammer is the correct answer since a hammer is usually used to drive nails</value>
+    </labels>
+    <labels>
+        <fullName>CamelandCactus_game_text_wine</fullName>
+        <categories>CamelandCactusGame</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CamelandCactus game text wine</shortDescription>
+        <value>The grapes are the correct answer since they are commonly used to make wine</value>
     </labels>
     <labels>
         <fullName>Catcme_text_1</fullName>
@@ -510,7 +486,15 @@
         <language>en_US</language>
         <protected>false</protected>
         <shortDescription>DigitSymbol Title</shortDescription>
-        <value>Digit Symbol</value>
+        <value>Digit Symbol Matching Test</value>
+    </labels>
+    <labels>
+        <fullName>Digits_game_text_14</fullName>
+        <categories>Digits game</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Digits game text 14</shortDescription>
+        <value>Digits</value>
     </labels>
     <labels>
         <fullName>DltrsGamePart1v0_01</fullName>
@@ -1157,6 +1141,20 @@ Are you ready?</value>
         <value>minutes</value>
     </labels>
     <labels>
+        <fullName>FakeNewsTestForm_seconds</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>FakeNewsTestForm seconds</shortDescription>
+        <value>seconds</value>
+    </labels>
+    <labels>
+        <fullName>FakeNewsTestForm_years</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>FakeNewsTestForm years</shortDescription>
+        <value>years</value>
+    </labels>
+    <labels>
         <fullName>Fake_News_Test_Form_1</fullName>
         <language>en_US</language>
         <protected>false</protected>
@@ -1232,42 +1230,42 @@ Please do not use a calculator.</value>
         <language>en_US</language>
         <protected>false</protected>
         <shortDescription>Fake News Test Form 2</shortDescription>
-        <value>A bat and a ball cost $1.10 in total. The bat costs $1.00 more than the ball. How much does the ball cost? (Answer in cents)</value>
+        <value>The ages of Mark and Adam add up to 28 years total. Mark is 20 years older than Adam. How many years old is Adam?(Answer in years)</value>
     </labels>
     <labels>
         <fullName>Fake_News_Test_Form_2_Error</fullName>
         <language>en_US</language>
         <protected>false</protected>
         <shortDescription>Fake News Test Form 2 Error</shortDescription>
-        <value>Please enter ball cost.</value>
+        <value>Please enter answer in years.</value>
     </labels>
     <labels>
         <fullName>Fake_News_Test_Form_3</fullName>
         <language>en_US</language>
         <protected>false</protected>
         <shortDescription>Fake News Test Form 3</shortDescription>
-        <value>If it takes 5 machines 5 minutes to make 5 widgets, how long would it take 100 machines to make 100 widgets? (Answer in minutes)</value>
+        <value>If it takes 10 seconds for 10 printers to print out 10 pages of paper, how many seconds will it take 50 printers to print out 50 pages of paper? (Answer in seconds)</value>
     </labels>
     <labels>
         <fullName>Fake_News_Test_Form_3_Error</fullName>
         <language>en_US</language>
         <protected>false</protected>
         <shortDescription>Fake News Test Form 3 Error</shortDescription>
-        <value>Please enter widget time.</value>
+        <value>Please enter answer in seconds.</value>
     </labels>
     <labels>
         <fullName>Fake_News_Test_Form_4</fullName>
         <language>en_US</language>
         <protected>false</protected>
         <shortDescription>Fake News Test Form 4</shortDescription>
-        <value>In a lake, there is a patch of lily pads. Every day, the patch doubles in size. If it takes 48 days for the patch to cover the entire lake, how long would it take for the patch to cover half of the lake? (Answer in days)</value>
+        <value>On a loaf of bread, there is a patch of mold. Every day, the patch doubles in size. If it takes 40 days for the patch to cover the entire loaf of bread, how many days would it take for the patch to cover half of the loaf of bread? (Answer in days)</value>
     </labels>
     <labels>
         <fullName>Fake_News_Test_Form_4_Error</fullName>
         <language>en_US</language>
         <protected>false</protected>
         <shortDescription>Fake News Test Form 4 Error</shortDescription>
-        <value>Please enter days to cover half of the lake.</value>
+        <value>Please enter answer in days.</value>
     </labels>
     <labels>
         <fullName>Fake_News_Test_Form_5</fullName>
@@ -1470,7 +1468,7 @@ Please do not use a calculator.</value>
         <language>en_US</language>
         <protected>false</protected>
         <shortDescription>Fake News Test Form Thanks A1</shortDescription>
-        <value>Thank you for playing &lt;b&gt;News Task&lt;/b&gt;.</value>
+        <value>Thank you for playing &lt;b&gt;Fake News&lt;/b&gt;.</value>
     </labels>
     <labels>
         <fullName>Fake_News_Test_Form_Thanks_A2</fullName>
@@ -2830,6 +2828,27 @@ Please do not use a calculator.</value>
         <value>https://mindcrowd2--devphase2.sandbox.my.site.com/MindCrowd/s/sitemap-spanish-view.xml</value>
     </labels>
     <labels>
+        <fullName>SpeechTask_Tell_me_more_text</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>SpeechTask_Tell_me_more_text</shortDescription>
+        <value>Tell Me More</value>
+    </labels>
+    <labels>
+        <fullName>SpeechTask_Tell_me_text</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>SpeechTask_Tell_me_text</shortDescription>
+        <value>Tell Me</value>
+    </labels>
+    <labels>
+        <fullName>Speech_Task_Error</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Speech_Task_Error</shortDescription>
+        <value>Please answer all the questions</value>
+    </labels>
+    <labels>
         <fullName>Submit</fullName>
         <categories>login</categories>
         <language>en_US</language>
@@ -2843,6 +2862,13 @@ Please do not use a calculator.</value>
         <protected>false</protected>
         <shortDescription>Thank you!</shortDescription>
         <value>Thank You!</value>
+    </labels>
+    <labels>
+        <fullName>TremendousRewardSettingsName</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>TremendousRewardSettingsName</shortDescription>
+        <value>RewardsSetting</value>
     </labels>
     <labels>
         <fullName>VIP_ACCESS</fullName>
@@ -3156,6 +3182,13 @@ Please do not use a calculator.</value>
         <value>Be sure to record as minutes:seconds up to two decimal places. For example, 1 minute and 45.03 &lt;br/&gt; seconds would be entered as 1:45.03. If your score was less than a minute, please enter your score starting with 0: (e.g., 0:52.31)</value>
     </labels>
     <labels>
+        <fullName>beangameviewformurl</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>beangameviewformurl</shortDescription>
+        <value>add-beangame-vip</value>
+    </labels>
+    <labels>
         <fullName>brainInfo_text_1</fullName>
         <categories>Brain Info</categories>
         <language>en_US</language>
@@ -3344,6 +3377,22 @@ Please do not use a calculator.</value>
         <protected>false</protected>
         <shortDescription>braininfo02</shortDescription>
         <value>We can still email you your results plus a VIP invitation to play more free brain games, and updates about brain research and other studies you can join.</value>
+    </labels>
+    <labels>
+        <fullName>camelandcactus_game_config_url</fullName>
+        <categories>Game Config Url</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>camelandcactus game config url</shortDescription>
+        <value>/resource/CamelandCactus_Config/CamelandCactus_EN.json</value>
+    </labels>
+    <labels>
+        <fullName>camelandcactus_game_text_14</fullName>
+        <categories>CamelandCactus Game</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>camelandcactus game text 14</shortDescription>
+        <value>This &amp; That</value>
     </labels>
     <labels>
         <fullName>campylete2</fullName>
@@ -3886,6 +3935,279 @@ Please do not use a calculator.</value>
         <protected>false</protected>
         <shortDescription>consent40</shortDescription>
         <value>For questions, concerns, suggestions, complaints that are not being addressed by the research team, or in case of research-related harm, please contact the TGen Office of Research Compliance at &lt;a href=&quot;mailto:?to=irb@tgen.org&quot;&gt;irb@tgen.org.&lt;/a&gt;</value>
+    </labels>
+    <labels>
+        <fullName>consentExpanded01</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>consentExpanded01</shortDescription>
+        <value>Taking part in this research is voluntary.  You may decide not to participate, or you may leave the study at any time.  Your decision will not result in any penalty or loss of benefits to which you are otherwise entitled.</value>
+    </labels>
+    <labels>
+        <fullName>consentExpanded02</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>consentExpanded02</shortDescription>
+        <value>If you have any questions, concerns, or complaints or think this research has hurt you, talk to the research team at the phone number(s) listed in this document.</value>
+    </labels>
+    <labels>
+        <fullName>consentExpanded03</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>consentExpanded03</shortDescription>
+        <value>This consent information sheet addendum has more information about the research study.  It may add to or change the information in the consent form you signed at the start of this study.</value>
+    </labels>
+    <labels>
+        <fullName>consentExpanded04</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>consentExpanded04</shortDescription>
+        <value>You are being asked to participate in a research study. Please read the following information before agreeing to participate.</value>
+    </labels>
+    <labels>
+        <fullName>consentExpanded05</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>consentExpanded05</shortDescription>
+        <value>This research study is being conducted by Dr. Matt Huentelman at the Translational Genomics Research Institute (TGen). The purpose of this study is to understand how the brain ages.</value>
+    </labels>
+    <labels>
+        <fullName>consentExpanded06</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>consentExpanded06</shortDescription>
+        <value>What will I have to do?</value>
+    </labels>
+    <labels>
+        <fullName>consentExpanded07</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>consentExpanded07</shortDescription>
+        <value>You will be asked to create an account and complete several online brain tests. We may send you requests to complete these online tests several times during your participation in MindCrowd.</value>
+    </labels>
+    <labels>
+        <fullName>consentExpanded08</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>consentExpanded08</shortDescription>
+        <value>Are there any risks?</value>
+    </labels>
+    <labels>
+        <fullName>consentExpanded09</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>consentExpanded09</shortDescription>
+        <value>No.</value>
+    </labels>
+    <labels>
+        <fullName>consentExpanded10</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>consentExpanded10</shortDescription>
+        <value>Will I get paid?</value>
+    </labels>
+    <labels>
+        <fullName>consentExpanded11</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>consentExpanded11</shortDescription>
+        <value>You will receive $100 for the completion of all brain tests. To qualify, you must also participate in our dried blood sample or APOE sub-studies.</value>
+    </labels>
+    <labels>
+        <fullName>consentExpanded12</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>consentExpanded12</shortDescription>
+        <value>Does it cost me anything to participate?</value>
+    </labels>
+    <labels>
+        <fullName>consentExpanded13</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>consentExpanded13</shortDescription>
+        <value>No.</value>
+    </labels>
+    <labels>
+        <fullName>consentExpanded14</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>consentExpanded14</shortDescription>
+        <value>Will you share my study data?</value>
+    </labels>
+    <labels>
+        <fullName>consentExpanded15</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>consentExpanded15</shortDescription>
+        <value>Sharing research data with other scientists is an important part of the research process and helps advance scientific progress. We will share de-identified data from this study with other researchers to help further research into the human brain.</value>
+    </labels>
+    <labels>
+        <fullName>consentExpanded16</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>consentExpanded16</shortDescription>
+        <value>Will you share my personal information with other people?</value>
+    </labels>
+    <labels>
+        <fullName>consentExpanded17</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>consentExpanded17</shortDescription>
+        <value>No, we will not share your personal information without your permission. If you consent to participate in a MindCrowd collaborative study (or have previously done so), we may share or receive identifiable data such as your name or email address with our collaborative partners. Your information could also be shared with the FDA and the IRB overseeing this study. This would only be done to link your study data.</value>
+    </labels>
+    <labels>
+        <fullName>consentExpanded18</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>consentExpanded18</shortDescription>
+        <value>To help protect your privacy, we have obtained a Certificate of Confidentiality from the National Institutes of Health. This means researchers may refuse to give out study information that identifies you. For example, if there were a court order requesting your study records, TGen would not give out information that identifies you, unless you have consented for this use. The Certificate does permit TGen to disclose your information when:</value>
+    </labels>
+    <labels>
+        <fullName>consentExpanded19</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>consentExpanded19</shortDescription>
+        <value>Required by Federal, State, or local laws. This excludes instances of Federal, State, or local civil, criminal, administrative, legislative, or other proceedings;</value>
+    </labels>
+    <labels>
+        <fullName>consentExpanded20</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>consentExpanded20</shortDescription>
+        <value>You have consented to the disclosure, including for your medical treatment;</value>
+    </labels>
+    <labels>
+        <fullName>consentExpanded21</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>consentExpanded21</shortDescription>
+        <value>Done as part of other approved research studies.</value>
+    </labels>
+    <labels>
+        <fullName>consentExpanded22</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>consentExpanded22</shortDescription>
+        <value>A Certificate of Confidentiality does not prevent you or someone else, like a member of your family, from voluntarily sharing information about yourself or your involvement in this research. If you want your research information released to an insurer, medical care provider, or any other person not connected with the research, you must provide consent to allow the researchers to release it.</value>
+    </labels>
+    <labels>
+        <fullName>consentExpanded23</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>consentExpanded23</shortDescription>
+        <value>What if I change my mind and don&apos;t want to participate in the study anymore?</value>
+    </labels>
+    <labels>
+        <fullName>consentExpanded24</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>consentExpanded24</shortDescription>
+        <value>Your participation is completely voluntary. You do not have to participate and you may stop at any time. Your decision will not result in any penalty to you. Please contact the Study Coordinator at crc@tgen.org to withdraw from the study.</value>
+    </labels>
+    <labels>
+        <fullName>consentExpanded25</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>consentExpanded25</shortDescription>
+        <value>What if I have questions or comments?</value>
+    </labels>
+    <labels>
+        <fullName>consentExpanded26</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>consentExpanded26</shortDescription>
+        <value>If you have any questions, concerns or complaints about this research, you may contact Dr. Matt Huentelman at mhuentelman@tgen.org or 602-343-8653 (24 hours).</value>
+    </labels>
+    <labels>
+        <fullName>consentExpanded27</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>consentExpanded27</shortDescription>
+        <value>Will you contact me in the future?</value>
+    </labels>
+    <labels>
+        <fullName>consentExpanded28</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>consentExpanded28</shortDescription>
+        <value>We may contact you in the future via email to offer you to participate in new scientific research studies. Participation in any of our studies is completely voluntary.</value>
+    </labels>
+    <labels>
+        <fullName>consentExpanded29</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>consentExpanded29</shortDescription>
+        <value>What if I have questions about my rights in this research, have a complaint, or want to report a problem to someone besides the researcher?</value>
+    </labels>
+    <labels>
+        <fullName>consentExpanded30</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>consentExpanded30</shortDescription>
+        <value>You may contact WCG IRB at:</value>
+    </labels>
+    <labels>
+        <fullName>consentExpanded31</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>consentExpanded31</shortDescription>
+        <value>1019 39th Avenue SE Suite 120</value>
+    </labels>
+    <labels>
+        <fullName>consentExpanded32</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>consentExpanded32</shortDescription>
+        <value>Puyallup, Washington 98374-2115</value>
+    </labels>
+    <labels>
+        <fullName>consentExpanded33</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>consentExpanded33</shortDescription>
+        <value>Telephone:  855-818-2289</value>
+    </labels>
+    <labels>
+        <fullName>consentExpanded34</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>consentExpanded34</shortDescription>
+        <value>E-mail:  researchquestions@wcgirb.com</value>
+    </labels>
+    <labels>
+        <fullName>consentExpanded35</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>consentExpanded35</shortDescription>
+        <value>WCG IRB is a group of people who perform independent review of research.</value>
+    </labels>
+    <labels>
+        <fullName>consentExpanded36</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>consentExpanded36</shortDescription>
+        <value>For questions, concerns, suggestions, complaints that are not being addressed by the research team, or in case of research-related harm, please contact the TGen Office of Research Compliance at</value>
+    </labels>
+    <labels>
+        <fullName>consentExpanded37</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>consentExpanded37</shortDescription>
+        <value>irb@tgen.org.</value>
+    </labels>
+    <labels>
+        <fullName>consentExpanded_text_11</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>consentExpanded text 11</shortDescription>
+        <value>I have read this form, or it has been read to me. This form describes the purpose and details of this research study. I understand that if I have questions, I should contact the study coordinator at 602-343-8653 (24 hours) or mhuentelman@tgen.org or before I consent to participate in this study.</value>
+    </labels>
+    <labels>
+        <fullName>consentExpanded_text_12</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>consentExpanded text 12</shortDescription>
+        <value>I consent to participate in this research study.</value>
     </labels>
     <labels>
         <fullName>consent_text_1</fullName>
@@ -4862,7 +5184,7 @@ Please do not use a calculator.</value>
         <language>en_US</language>
         <protected>false</protected>
         <shortDescription>fakeNews_text_1</shortDescription>
-        <value>News Task</value>
+        <value>Fake News</value>
     </labels>
     <labels>
         <fullName>fakenewsButtons</fullName>
@@ -5101,6 +5423,13 @@ Please do not use a calculator.</value>
         <protected>false</protected>
         <shortDescription>faq text 9</shortDescription>
         <value>What are my alternatives to being in this study?</value>
+    </labels>
+    <labels>
+        <fullName>file_upload_msg</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>file_upload_msg</shortDescription>
+        <value>Uploading audio</value>
     </labels>
     <labels>
         <fullName>finish</fullName>
@@ -5791,6 +6120,20 @@ Please do not use a calculator.</value>
         <value>/resource/focus_Config/focus_EN.json</value>
     </labels>
     <labels>
+        <fullName>game_bean_title_left</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>game_bean_title_left</shortDescription>
+        <value>Bean Game (Left Hand)</value>
+    </labels>
+    <labels>
+        <fullName>game_bean_title_right</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>game_bean_title_right</shortDescription>
+        <value>Bean Game (Right Hand)</value>
+    </labels>
+    <labels>
         <fullName>game_button_1</fullName>
         <language>en_US</language>
         <protected>false</protected>
@@ -5911,14 +6254,14 @@ Please do not use a calculator.</value>
         <language>en_US</language>
         <protected>false</protected>
         <shortDescription>game_name_14</shortDescription>
-        <value>News Task</value>
+        <value>Fake News</value>
     </labels>
     <labels>
         <fullName>game_name_15</fullName>
         <language>en_US</language>
         <protected>false</protected>
         <shortDescription>game_name_15</shortDescription>
-        <value>Speech Task</value>
+        <value>Tell Me</value>
     </labels>
     <labels>
         <fullName>game_name_16</fullName>
@@ -5939,7 +6282,14 @@ Please do not use a calculator.</value>
         <language>en_US</language>
         <protected>false</protected>
         <shortDescription>game name 18</shortDescription>
-        <value>Camel and Cactus</value>
+        <value>This &amp; That</value>
+    </labels>
+    <labels>
+        <fullName>game_name_19</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>game_name_19</shortDescription>
+        <value>Tell Me More</value>
     </labels>
     <labels>
         <fullName>game_name_2</fullName>
@@ -6133,7 +6483,7 @@ Please do not use a calculator.</value>
         <language>en_US</language>
         <protected>false</protected>
         <shortDescription>games_start_text_2</shortDescription>
-        <value>Thank you for participating in the news task. On the following pages, you will be asked to evaluate various news headlines. Each headline will be presented with a question underneath it. Please read each news headline at your own pace and respond the question by clicking one of the options provided. Once you respond, the task will automatically move forward to the next news headline.
+        <value>Thank you for participating in the Fake News. On the following pages, you will be asked to evaluate various news headlines. Each headline will be presented with a question underneath it. Please read each news headline at your own pace and respond the question by clicking one of the options provided. Once you respond, the task will automatically move forward to the next news headline.
 Please make sure to turn your cell phone off and remove as many distractions as possible from your work area. Once you are ready, please click on the button below to start.
 &lt;span class=&quot;n-g-box&quot;&gt;START&lt;/span&gt;</value>
     </labels>
@@ -9251,12 +9601,40 @@ Number of daily medications</value>
         <value>Continue</value>
     </labels>
     <labels>
+        <fullName>notification_Body_Bean_Game</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>notification Body Bean Game</shortDescription>
+        <value>You are eligible to play: &quot;Bean Game&quot;</value>
+    </labels>
+    <labels>
+        <fullName>notification_Body_Camel_and_Cactus</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>notification Body Camel and Cactus</shortDescription>
+        <value>You are eligible to play: &quot;Camel and Cactus&quot;. It takes 5 minutes to complete.</value>
+    </labels>
+    <labels>
+        <fullName>notification_Body_Digit_Symbol_Matching_Test</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>notification Body Digit Symbol Matching Test</shortDescription>
+        <value>You are eligible to play: &quot;Digit Symbol Matching Test&quot;. It takes 5 minutes to complete.</value>
+    </labels>
+    <labels>
         <fullName>notification_Body_FacesNames</fullName>
         <categories>profilePageNotification</categories>
         <language>en_US</language>
         <protected>false</protected>
         <shortDescription>notification Body FacesNames</shortDescription>
         <value>You are eligible to play: &quot;Faces and Names Stacks&quot;. It takes 25 minutes to complete.</value>
+    </labels>
+    <labels>
+        <fullName>notification_Body_Fake_News</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>notification Body Fake News</shortDescription>
+        <value>You are eligible to play: &quot;Fake News&quot;. It takes 10 minutes to complete.</value>
     </labels>
     <labels>
         <fullName>notification_Body_Focus</fullName>
@@ -9315,12 +9693,26 @@ Number of daily medications</value>
         <value>You are eligible to play: &quot;Shapes&quot;. It takes 15 minutes to complete.</value>
     </labels>
     <labels>
+        <fullName>notification_Body_Speech_Task</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>notification Body Speech Task</shortDescription>
+        <value>You are eligible to play: &quot;Tell me&quot;. It takes 10 minutes to complete.</value>
+    </labels>
+    <labels>
         <fullName>notification_Body_Switching</fullName>
         <categories>profilePageNotification</categories>
         <language>en_US</language>
         <protected>false</protected>
         <shortDescription>notification Body Switching</shortDescription>
         <value>You are eligible to play: &quot;Switching&quot;. It takes 15 minutes to complete.</value>
+    </labels>
+    <labels>
+        <fullName>notification_Body_Tell_me_more</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>notification_Body_Tell_me_more</shortDescription>
+        <value>You are eligible to play: &quot;Tell me more&quot;. It takes 10 minutes to complete.</value>
     </labels>
     <labels>
         <fullName>notification_Body_Word_Pairs</fullName>
@@ -11226,6 +11618,34 @@ Research Coordinator at mindcrowdquestion@tgen.org</value>
         <value>* Your password must include letters and numbers</value>
     </labels>
     <labels>
+        <fullName>scientific_game_CamelandCactus</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>scientific game CamelandCactus</shortDescription>
+        <value>Camel &amp; Cactus</value>
+    </labels>
+    <labels>
+        <fullName>scientific_game_Tell_me</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>scientific_game_Tell_me</shortDescription>
+        <value>Tell Me</value>
+    </labels>
+    <labels>
+        <fullName>scientific_game_Tell_me_more</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>scientific_game_Tell_me_more</shortDescription>
+        <value>Tell Me More</value>
+    </labels>
+    <labels>
+        <fullName>scientific_game_This_That</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>scientific_game_This_That</shortDescription>
+        <value>This &amp; That</value>
+    </labels>
+    <labels>
         <fullName>scientific_game_bean</fullName>
         <language>en_US</language>
         <protected>false</protected>
@@ -11240,6 +11660,13 @@ Research Coordinator at mindcrowdquestion@tgen.org</value>
         <value>Deary Simple And Complex Reaction Time</value>
     </labels>
     <labels>
+        <fullName>scientific_game_digitsymbolmatchingtest</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>scientific game digitsymbolmatchingtest</shortDescription>
+        <value>Digits</value>
+    </labels>
+    <labels>
         <fullName>scientific_game_faceNameAssociates</fullName>
         <language>en_US</language>
         <protected>false</protected>
@@ -11251,7 +11678,7 @@ Research Coordinator at mindcrowdquestion@tgen.org</value>
         <language>en_US</language>
         <protected>false</protected>
         <shortDescription>scientific game fakeNewsTest</shortDescription>
-        <value>News Task</value>
+        <value>Fake News</value>
     </labels>
     <labels>
         <fullName>scientific_game_flanker</fullName>
@@ -11310,11 +11737,18 @@ Research Coordinator at mindcrowdquestion@tgen.org</value>
         <value>Verbal Paired Associates</value>
     </labels>
     <labels>
+        <fullName>scientific_speech_task2</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>scientific_speech_task2</shortDescription>
+        <value>Tell Me More</value>
+    </labels>
+    <labels>
         <fullName>scientific_speech_tasks</fullName>
         <language>en_US</language>
         <protected>false</protected>
         <shortDescription>scientific_speech_tasks</shortDescription>
-        <value>Speech Tasks</value>
+        <value>Tell Me</value>
     </labels>
     <labels>
         <fullName>shapes_game_config_url</fullName>
@@ -11357,11 +11791,53 @@ Research Coordinator at mindcrowdquestion@tgen.org</value>
         <value>My Personal Test Score</value>
     </labels>
     <labels>
+        <fullName>speechTask2_config_url</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>speechTask2_config_url</shortDescription>
+        <value>/resource/speechTaskTellMeMore_Config/speechTaskTellMeMore_Config_EN.json</value>
+    </labels>
+    <labels>
         <fullName>speechTask_config_url</fullName>
         <language>en_US</language>
         <protected>false</protected>
         <shortDescription>speechTask_config_url</shortDescription>
-        <value>/resource/speechTask_Config/speechTask_Config_EN.json</value>
+        <value>/resource/speechTaskTellMe_Config/speechTaskTellMe_Config_EN.json</value>
+    </labels>
+    <labels>
+        <fullName>speechTask_error_labe1</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>speechTask_error_labe1</shortDescription>
+        <value>You weren&apos;t loud enough, please move closer to your device and speak louder</value>
+    </labels>
+    <labels>
+        <fullName>speechTask_error_label</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>speechTask_error_label</shortDescription>
+        <value>You weren&apos;t loud enough, please move closer to your device and speak louder</value>
+    </labels>
+    <labels>
+        <fullName>speechTask_error_label2</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>speechTask_error_label2</shortDescription>
+        <value>We didn&apos;t detect any sound - make sure your mic is on and unmuted</value>
+    </labels>
+    <labels>
+        <fullName>speechTask_label_1</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>speechTask_label_1</shortDescription>
+        <value>RECORDING IN PROGRESS!</value>
+    </labels>
+    <labels>
+        <fullName>speechTask_label_2</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>speechTask_label_2</shortDescription>
+        <value>RECORDING COMPLETE</value>
     </labels>
     <labels>
         <fullName>stack_image</fullName>
@@ -11487,7 +11963,14 @@ Research Coordinator at mindcrowdquestion@tgen.org</value>
         <language>en_US</language>
         <protected>false</protected>
         <shortDescription>survey_name_18</shortDescription>
-        <value>Coming Soon...</value>
+        <value>Heat</value>
+    </labels>
+    <labels>
+        <fullName>survey_name_19</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>survey_name_19</shortDescription>
+        <value>Glucosamine</value>
     </labels>
     <labels>
         <fullName>survey_name_2</fullName>
@@ -11495,6 +11978,13 @@ Research Coordinator at mindcrowdquestion@tgen.org</value>
         <protected>false</protected>
         <shortDescription>survey_name_2</shortDescription>
         <value>COVID</value>
+    </labels>
+    <labels>
+        <fullName>survey_name_20</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>survey_name_20</shortDescription>
+        <value>Ecog-12</value>
     </labels>
     <labels>
         <fullName>survey_name_3</fullName>
@@ -11544,6 +12034,34 @@ Research Coordinator at mindcrowdquestion@tgen.org</value>
         <protected>false</protected>
         <shortDescription>survey_name_9</shortDescription>
         <value>Daily Activities</value>
+    </labels>
+    <labels>
+        <fullName>survey_name_n</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>survey name n</shortDescription>
+        <value>Coming Soon...</value>
+    </labels>
+    <labels>
+        <fullName>survey_time_2_min</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>survey_time_2_min</shortDescription>
+        <value>2 min</value>
+    </labels>
+    <labels>
+        <fullName>survey_time_3_min</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>survey_time_3_min</shortDescription>
+        <value>3 min</value>
+    </labels>
+    <labels>
+        <fullName>survey_time_5_min</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>survey_time_5_min</shortDescription>
+        <value>5 min</value>
     </labels>
     <labels>
         <fullName>tapjoy_url</fullName>
@@ -11649,6 +12167,13 @@ Research Coordinator at mindcrowdquestion@tgen.org</value>
         <value>autorizacion</value>
     </labels>
     <labels>
+        <fullName>thisandthat_game_config_url</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>thisandthat_game_config_url</shortDescription>
+        <value>/resource/ThisandThat_Config/ThisandThat_Config_EN.json</value>
+    </labels>
+    <labels>
         <fullName>tower_of_London_text_0</fullName>
         <categories>Tower of London Game</categories>
         <language>en_US</language>
@@ -11735,6 +12260,13 @@ Research Coordinator at mindcrowdquestion@tgen.org</value>
         <value>AnxietySurvey</value>
     </labels>
     <labels>
+        <fullName>url_Bean_Game</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>url Bean Game</shortDescription>
+        <value>me-Bean Game</value>
+    </labels>
+    <labels>
         <fullName>url_Brain_Disease_Survey</fullName>
         <language>en_US</language>
         <protected>false</protected>
@@ -11747,6 +12279,13 @@ Research Coordinator at mindcrowdquestion@tgen.org</value>
         <protected>false</protected>
         <shortDescription>url_COVID_Survey</shortDescription>
         <value>COVIDSurvey</value>
+    </labels>
+    <labels>
+        <fullName>url_Camel_and_Cactus</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>url Camel and Cactus</shortDescription>
+        <value>me-Camel and Cactus</value>
     </labels>
     <labels>
         <fullName>url_Cancer_Survey</fullName>
@@ -11763,6 +12302,20 @@ Research Coordinator at mindcrowdquestion@tgen.org</value>
         <value>DietSurvey</value>
     </labels>
     <labels>
+        <fullName>url_Digit_Symbol_Matching_Test</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>url Digit Symbol Matching Test</shortDescription>
+        <value>me-Digit Symbol Matching Test</value>
+    </labels>
+    <labels>
+        <fullName>url_Ecog12</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>url_Ecog12</shortDescription>
+        <value>ECog-12-Paid</value>
+    </labels>
+    <labels>
         <fullName>url_FHAD_Survey</fullName>
         <language>en_US</language>
         <protected>false</protected>
@@ -11777,11 +12330,32 @@ Research Coordinator at mindcrowdquestion@tgen.org</value>
         <value>me-FakeNewsTestForm</value>
     </labels>
     <labels>
+        <fullName>url_Fake_News</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>url Fake News</shortDescription>
+        <value>me-Fake News</value>
+    </labels>
+    <labels>
+        <fullName>url_Glucosamine</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>url_Glucosamine</shortDescription>
+        <value>GlucosamineSurvey</value>
+    </labels>
+    <labels>
         <fullName>url_Health_Medical_Survey</fullName>
         <language>en_US</language>
         <protected>false</protected>
         <shortDescription>url_Health_Medical_Survey</shortDescription>
         <value>HealthMedicalSurvey</value>
+    </labels>
+    <labels>
+        <fullName>url_Heat_Survey</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>url Heat Survey</shortDescription>
+        <value>HeatStressSurvey</value>
     </labels>
     <labels>
         <fullName>url_Objects_Space</fullName>
@@ -11841,11 +12415,25 @@ Research Coordinator at mindcrowdquestion@tgen.org</value>
         <value>SocialSupportSurvey</value>
     </labels>
     <labels>
+        <fullName>url_Speech_Task</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>url Tell Me</shortDescription>
+        <value>me-Tell Me</value>
+    </labels>
+    <labels>
         <fullName>url_Subjective_English_Survey</fullName>
         <language>en_US</language>
         <protected>false</protected>
         <shortDescription>url_Subjective_English_Survey</shortDescription>
         <value>SubjectiveEnglishSurvey</value>
+    </labels>
+    <labels>
+        <fullName>url_This_and_That</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>url_This_and_That</shortDescription>
+        <value>me-this-and-that</value>
     </labels>
     <labels>
         <fullName>url_Women_Health_Survey</fullName>
@@ -12006,11 +12594,18 @@ Research Coordinator at mindcrowdquestion@tgen.org</value>
         <value>me-objects-time</value>
     </labels>
     <labels>
+        <fullName>url_me_This_and_That</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>url_me_This_and_That</shortDescription>
+        <value>me-this-and-that</value>
+    </labels>
+    <labels>
         <fullName>url_me_digitSymbol</fullName>
         <language>en_US</language>
         <protected>false</protected>
         <shortDescription>url me digitSymbol</shortDescription>
-        <value>me-digitsymbol</value>
+        <value>me-digits</value>
     </labels>
     <labels>
         <fullName>url_me_fakeNewsTest</fullName>
@@ -12018,7 +12613,7 @@ Research Coordinator at mindcrowdquestion@tgen.org</value>
         <language>en_US</language>
         <protected>false</protected>
         <shortDescription>url me-fakeNewsTest</shortDescription>
-        <value>me-fakeNewsTest</value>
+        <value>me-fakenews</value>
     </labels>
     <labels>
         <fullName>url_me_flankergame</fullName>
@@ -12073,7 +12668,14 @@ Research Coordinator at mindcrowdquestion@tgen.org</value>
         <language>en_US</language>
         <protected>false</protected>
         <shortDescription>url_me_speechTask</shortDescription>
-        <value>me-speechTasks</value>
+        <value>me-Tellme</value>
+    </labels>
+    <labels>
+        <fullName>url_me_speechTaskTellMeMore</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>url_me_speechTaskTellMeMore</shortDescription>
+        <value>me-Tellmemore</value>
     </labels>
     <labels>
         <fullName>url_me_switchinggame</fullName>

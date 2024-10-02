@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LightningComponentBundle xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>51.0</apiVersion>
+    <isExposed>true</isExposed>
+    <targets>
+        <target>lightning__AppPage</target>
+        <target>lightning__RecordPage</target>
+        <target>lightning__HomePage</target>
+        <target>lightningCommunity__Page</target>
+        <target>lightningCommunity__Default</target>
+    </targets>
+    <targetConfigs>  
+        <targetConfig targets="lightning__HomePage,lightning__RecordPage,lightningCommunity__Default">
+            <property name="consent_text_6" type="String" default="The MindCrowd Research Study" label="The MindCrowd Research Study"/>
+            <property name="consent_text_7" type="String" default="Information and Frequently Asked Questions" label="Information and Frequently Asked Questions"/>
+            <property name="consent_text_8" type="String" default="MindCrowd is a scientific research study. To participate, please read the following information and agree by checking the box below. Press the 'I agree' button to continue." label="I agree button to continue"/>
+            <property name="consentExpanded_text_11" type="String" default="I have read this form, or it has been read to me. This form describes the purpose and details of this research study. I understand that if I have questions, I should contact the study coordinator at 602-343-8653 (24 hours) or mhuentelman@tgen.org or before I consent to participate in this study." label="Checking Confirm"/>
+            <property name="consentExpanded_text_12" type="String" default="I consent to participate in this research study." label="Checking Confirm"/>
+            <property name="consentExpanded01" type="String" default="Taking part in this research is voluntary.  You may decide not to participate, or you may leave the study at any time.  Your decision will not result in any penalty or loss of benefits to which you are otherwise entitled." label="consentExpanded01"/>
+            <property name="consentExpanded02" type="String" default="If you have any questions, concerns, or complaints or think this research has hurt you, talk to the research team at the phone number(s) listed in this document." label="consentExpanded02"/>
+            <property name="consentExpanded03" type="String" default="This consent information sheet addendum has more information about the research study.  It may add to or change the information in the consent form you signed at the start of this study.  " label="consentExpanded03"/>
+            <property name="consentExpanded04" type="String" default="You are being asked to participate in a research study. Please read the following information before agreeing to participate." label="consentExpanded04"/>
+            <property name="consentExpanded05" type="String" default="This research study is being conducted by Dr. Matt Huentelman at the Translational Genomics Research Institute (TGen). The purpose of this study is to understand how the brain ages. " label="consentExpanded05"/>
+            <property name="consentExpanded06" type="String" default="What will I have to do?" label="consentExpanded06"/>
+            <property name="consentExpanded07" type="String" default="You will be asked to create an account and complete several online brain tests. We may send you requests to complete these online tests several times during your participation in MindCrowd. " label="consentExpanded07"/>
+            <property name="consentExpanded08" type="String" default="Are there any risks?" label="consentExpanded08"/>
+            <property name="consentExpanded09" type="String" default="No." label="consentExpanded09"/>
+            <property name="consentExpanded10" type="String" default="Will I get paid?" label="consentExpanded10"/>
+            <property name="consentExpanded11" type="String" default="You will receive $100 for the completion of all brain tests. To qualify, you must also participate in our dried blood sample or APOE sub-studies." label="consentExpanded11"/>
+            <property name="consentExpanded12" type="String" default="Does it cost me anything to participate?" label="consentExpanded12"/>
+            <property name="consentExpanded13" type="String" default="No." label="consentExpanded13"/>
+            <property name="consentExpanded14" type="String" default="Will you share my study data?" label="consentExpanded14"/>
+            <property name="consentExpanded15" type="String" default="Sharing research data with other scientists is an important part of the research process and helps advance scientific progress. We will share de-identified data from this study with other researchers to help further research into the human brain." label="consentExpanded15"/>
+            <property name="consentExpanded16" type="String" default="Will you share my personal information with other people?" label="consentExpanded16"/>
+            <property name="consentExpanded17" type="String" default="No, we will not share your personal information without your permission. If you consent to participate in a MindCrowd collaborative study (or have previously done so), we may share or receive identifiable data such as your name or email address with our collaborative partners. Your information could also be shared with the FDA and the IRB overseeing this study. This would only be done to link your study data. " label="consentExpanded17"/>
+            <property name="consentExpanded18" type="String" default="To help protect your privacy, we have obtained a Certificate of Confidentiality from the National Institutes of Health. This means researchers may refuse to give out study information that identifies you. For example, if there were a court order requesting your study records, TGen would not give out information that identifies you, unless you have consented for this use. The Certificate does permit TGen to disclose your information when:" label="consentExpanded18"/>
+            <property name="consentExpanded19" type="String" default="Required by Federal, State, or local laws. This excludes instances of Federal, State, or local civil, criminal, administrative, legislative, or other proceedings;" label="consentExpanded19"/>
+            <property name="consentExpanded20" type="String" default="You have consented to the disclosure, including for your medical treatment;" label="consentExpanded20"/>
+            <property name="consentExpanded21" type="String" default="Done as part of other approved research studies." label="consentExpanded21"/>
+            <property name="consentExpanded22" type="String" default="A Certificate of Confidentiality does not prevent you or someone else, like a member of your family, from voluntarily sharing information about yourself or your involvement in this research. If you want your research information released to an insurer, medical care provider, or any other person not connected with the research, you must provide consent to allow the researchers to release it." label="consentExpanded22"/>
+            <property name="consentExpanded23" type="String" default="What if I change my mind and don't want to participate in the study anymore?" label="consentExpanded23"/>
+            <property name="consentExpanded24" type="String" default="Your participation is completely voluntary. You do not have to participate and you may stop at any time. Your decision will not result in any penalty to you. Please contact the Study Coordinator at crc@tgen.org to withdraw from the study." label="consentExpanded24"/>
+            <property name="consentExpanded25" type="String" default="What if I have questions or comments?" label="consentExpanded25"/>
+            <property name="consentExpanded26" type="String" default="If you have any questions, concerns or complaints about this research, you may contact Dr. Matt Huentelman at mhuentelman@tgen.org or 602-343-8653 (24 hours). " label="consentExpanded26"/>
+            <property name="consentExpanded27" type="String" default="Will you contact me in the future?" label="consentExpanded27"/>
+            <property name="consentExpanded28" type="String" default="We may contact you in the future via email to offer you to participate in new scientific research studies. Participation in any of our studies is completely voluntary." label="consentExpanded28"/>
+            <property name="consentExpanded29" type="String" default="What if I have questions about my rights in this research, have a complaint, or want to report a problem to someone besides the researcher?" label="consentExpanded29"/>
+            <property name="consentExpanded30" type="String" default="You may contact WCG IRB at:" label="consentExpanded30"/>
+            <property name="consentExpanded31" type="String" default="1019 39th Avenue SE Suite 120" label="consentExpanded31"/>
+            <property name="consentExpanded32" type="String" default="Puyallup, Washington 98374-2115" label="consentExpanded32"/>
+            <property name="consentExpanded33" type="String" default="Telephone:  855-818-2289" label="consentExpanded33"/>
+            <property name="consentExpanded34" type="String" default="E-mail:  researchquestions@wcgirb.com" label="consentExpanded34"/>
+            <property name="consentExpanded35" type="String" default="WCG IRB is a group of people who perform independent review of research." label="consentExpanded35"/>
+            <property name="consentExpanded36" type="String" default="For questions, concerns, suggestions, complaints that are not being addressed by the research team, or in case of research-related harm, please contact the TGen Office of Research Compliance at" label="consentExpanded36"/>
+            <property name="consentExpanded37" type="String" default="irb@tgen.org." label="consentExpanded37"/>   
+            <property name="DBS_text_85" type="String" default="I Consent" label="DBS_text_85"/>
+            <property name="DBS_text_93" type="String" default="I Decline" label="DBS_text_93"/>
+            <property name="DBS_text_88" type="String" default="Please Complete the Required Fields." label="DBS_text_88"/>
+            <property name="url_dashboard" type="String" default="pme-dashboard" label="url_dashboard"/>
+            <property name="url_password_reset" type="String" default="vipaccess/passwordrecovery" label="url_password_reset"/>
+        </targetConfig>
+    </targetConfigs>   
+</LightningComponentBundle>

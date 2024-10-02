@@ -367,7 +367,7 @@
             if (currentScreent != 69) {
                 document.getElementById("datablock_pairedGame").innerHTML = configdata[currentScreent].content;
                 if ((currentScreent > 45 && currentScreent < 69 &&  currentScreent % 2 === 0)) {
-                    if (isKeyboad) {
+                    if (isKeyboad || document.getElementsByTagName("html")[0].getAttribute("lang")=='es') {
                         document.getElementById("inputsolution").addEventListener('keyup', resetPlaceholderSize);
                     }
                     let placeholder = $A.get("$Label.c.catchment_placeholder");
@@ -604,16 +604,18 @@
                 gamePlay({ keyCode: 13 });
             }
         }
-
         function resetPlaceholderSize() {
-            let inputstr = document.getElementById("inputsolution").value;
-            if (inputstr == null || inputstr == '') { 
-                this.classList.add('txt_placeholder');
+            let inputstr = document.getElementById("inputsolution");
+            let inputstrval = inputstr.value;
+            if (inputstrval == null || inputstrval == '') {                 
+                if (!inputstr.classList.contains('txt_placeholder'))
+                {inputstr.className += ' txt_placeholder';}
             }
-            else{
-                this.classList.remove('txt_placeholder');
+            else{                
+                if (inputstr.classList.contains('txt_placeholder'))
+                {inputstr.className = inputstr.className.replace('txt_placeholder', '');}
             }            
-          }
+          }          
     }
 
 

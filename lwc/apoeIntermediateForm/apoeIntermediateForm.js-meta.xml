@@ -20,7 +20,7 @@
             <property name="APOE_Game_Form_Text_5" type="String" default="The button below will take you to more information about the study and our online consent form. Once the consent is completed, we’ll send you a kit that you can use to take your cheek swab sample and a pre-paid envelope to send it to the laboratory." label="APOE_Game_Form_Text_5"/>
             <property name="APOE_Game_Form_Text_6" type="String" default="YES, I want to learn more about this research Oportunity." label="APOE_Game_Form_Text_6"/>
             <property name="APOE_Game_Form_Text_7" type="String" default="Thank you again for your willingness to help advance our understanding of the brain!." label="APOE_Game_Form_Text_7"/>
-            <property name="APOE_Game_VIP_URL" type="String" default="apoe-participant-consent-form-vip" label="APOE_Game_VIP_URL"/>
+            <property name="APOE_Game_VIP_URL" type="String" default="add-apoeparticipant-consent-vip" label="APOE_Game_VIP_URL"/>
      </targetConfig>
     </targetConfigs>
 </LightningComponentBundle>

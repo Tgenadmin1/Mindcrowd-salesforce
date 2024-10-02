@@ -17,7 +17,7 @@ public without sharing class ParticipantVIPResultsControllerOptimized
         DashboardDataAll dashboarddataall = new DashboardDataAll();
         Map<String, DashboardData> dashboarddata= new  Map<String, DashboardData>();
         Map<String, DashboardDataBean> dashboardDataBean= new  Map<String, DashboardDataBean>();
-        List<String> gameNames =  new List<String>{'News Task','Object Recognition And Similarity','Keep Track','Object Spatial','Object Temporal','Object Discrimination','Deary Simple And Complex Reaction Time','Verbal Paired Associates','Face-Name Associates','Flanker','Letter-Number Sequencing','Bean Game'};
+        List<String> gameNames =  new List<String>{'Fake News','Object Recognition And Similarity','Keep Track','Object Spatial','Object Temporal','Object Discrimination','Deary Simple And Complex Reaction Time','Verbal Paired Associates','Face-Name Associates','Flanker','Letter-Number Sequencing','Bean Game'};
         for(String game: gameNames){
             dashboarddata.put(game,getDashboardData(ContactId, game));
         } 
@@ -184,7 +184,7 @@ public without sharing class ParticipantVIPResultsControllerOptimized
                     }
                 }
                 else{
-                    if(gameName=='News Task') {
+                    if(gameName=='Fake News') {
                         mapPlyAverageValuesData.put ('LowAverage', 8);
                         mapPlyAverageValuesData.put ('HighAverage', 16);   
                     }                   

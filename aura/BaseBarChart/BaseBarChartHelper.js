@@ -1,6 +1,11 @@
 ({
     createGraph : function(cmp, temp) {
         
+      if (!temp || typeof temp !== 'object') {
+            console.error('Invalid temp data:', temp);
+            return;
+        } 
+        
         var dataMap = {"chartLabels": Object.keys(temp),
                        "chartData": Object.values(temp)
                       };
@@ -75,7 +80,7 @@
                         ctx1.textBaseline = 'bottom';
                         
                         this.data.datasets.forEach(function(dataset, i) {
-                            var meta = chartInstance.controller.getDatasetMeta(i);
+                            var meta = chartInstance.controller.getDatasetMeta(i); 
                             meta.data.forEach(function(bar, index) {
                                 var data = dataset.data[index];
                                 ctx.fillText(data, bar._model.x, bar._model.y - 5);

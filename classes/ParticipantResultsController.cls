@@ -23,13 +23,11 @@ public without sharing class ParticipantResultsController
     @AuraEnabled(cacheable=true) 
     public static DashboardData getDashboardData (String contactId, String gameName)
     {
-        
         Map<String, Integer> mapOtherData = new Map<String, Integer>();
         Map<String, Integer> mapWhatHappendWithAgeData = new Map<String, Integer>();
         Map<String, Integer> mapPlyAverageValuesData = new Map<String, Integer>();
         String userDevice;
-        Id currPGIId;
-        
+        Id currPGIId;        
         mapOtherData.put('YourScore',0);
         mapOtherData.put('isGamePlayed',0); 
         mapOtherData.put('CorrectAnswers',0); 
@@ -37,24 +35,29 @@ public without sharing class ParticipantResultsController
         mapOtherData.put ('People Like You', 0);
         mapPlyAverageValuesData.put ('LowAverage', 0);
         mapPlyAverageValuesData.put ('HighAverage', 0); 
-        
         DashboardData objDashboardData = new DashboardData();
         
-        for(Participant_Game_Info__c objInfo:[SELECT 
+        List<Participant_Game_Info__c> pgis = [SELECT 
                                               /*Added three fields to remove dependency PGR from PGI*/
                                               /* Added on 27/07/2022 */
-                                              Count_Of_No_Of_Correct_Answered__c,
-                                              Count_Of_No_of_Question_Attempted__c,
-                                              Count_Of_Total_Reaction_Time__c,
-                                              No_Of_Correct_Answered__c,
-                                              No_of_Question_Attempted__c,
-                                              Total_Reaction_Time__c,
-                                              User_Device__c,
-                                              Id
+                                              Count_Of_No_Of_Correct_Answered__c, Count_Of_No_of_Question_Attempted__c,
+                                              Count_Of_Total_Reaction_Time__c, No_Of_Correct_Answered__c,
+                                              No_of_Question_Attempted__c,Total_Reaction_Time__c, User_Device__c,Id,CreatedDate
                                               FROM Participant_Game_Info__c 
                                               WHERE Contact_Name__c =: contactId  
-                                              AND Game_Name__r.Name =:gameName
-                                              ORDER BY CreatedDate DESC LIMIT 1])
+                                              AND Game_Name__r.Name =:gameName                                              
+                                              ORDER BY CreatedDate DESC LIMIT 1];
+        if(pgis.size()>0){
+            for(Participant_Game_Info__c pgi : pgis){
+                if(pgi.CreatedDate.Date() >= Date.Today()-1){
+                	pgi.Count_Of_No_of_Question_Attempted__c = pgi.No_of_Question_Attempted__c;
+                    pgi.Count_Of_No_Of_Correct_Answered__c = pgi.No_Of_Correct_Answered__c;
+                    pgi.Count_Of_Total_Reaction_Time__c = pgi.Total_Reaction_Time__c;
+            	}  
+            }                      
+        } 
+        
+        for(Participant_Game_Info__c objInfo:pgis)
         {
             userDevice = objInfo.User_Device__c;
             currPGIId= objInfo.Id;
@@ -86,8 +89,7 @@ public without sharing class ParticipantResultsController
         else{
             lowage = age-10;
             highage = age+10;
-        }
-        
+        }        
         pluage = age == null ? 18 : age;
         pluage = pluage < 18 ? 18 : pluage;
         pluage = pluage > 90 ? 90 : pluage;
@@ -96,15 +98,33 @@ public without sharing class ParticipantResultsController
         String sex = objCon.Sex__c;
         
         mapPlyAverageValuesData.put ('MaxValue', Integer.valueOf([SELECT Max_Score__c FROM Game_Detail__c where Name=:gameName LIMIT 1].Max_Score__c) );
-        Boolean calcPeopleLikYouDashboard = false;
-        if(gameName == 'DLTRS' || gameName == 'Deary Simple And Complex Reaction Time' || gameName == 'Flanker'){            
-             List<Participant_Game_Info__c> peopleLikeYouPGIList = [SELECT Count_Of_Total_Reaction_Time__c ,Count_Of_No_of_Question_Attempted__c
+        List<Participant_Game_Info__c> peopleLikeYouPGIList = [SELECT Count_Of_Total_Reaction_Time__c ,Count_Of_No_of_Question_Attempted__c,Count_Of_No_Of_Correct_Answered__c
                                            FROM Participant_Game_Info__c 
                                            WHERE Contact_Name__r.Age__c > 0
                                            AND Contact_Name__r.Age__c >= :lowage
                                            AND Contact_Name__r.Age__c <= :highage
                                            AND User_Device__c != ''
                                            AND Contact_Name__r.Sex__c != ''
+                                           AND Contact_Name__r.Sex__c =:sex
+                                           AND Contact_Name__r.Education_Attainment__c =:edu_att
+                                           AND Count_Of_No_Of_Correct_Answered__c >0
+                                           AND Count_Of_No_of_Question_Attempted__c >0
+                                           AND Count_Of_Total_Reaction_Time__c >0
+                                           AND Game_Name__r.Name =: gameName
+                                           AND Id != :currPGIId
+                                           Order by CreatedDate DESC
+                                           LIMIT 49990];
+        List<Decimal> quartileValues = new List<Decimal>();
+        system.debug('First Query:'+peopleLikeYouPGIList.size());
+        if(peopleLikeYouPGIList !=null && peopleLikeYouPGIList.size() < 25){
+            peopleLikeYouPGIList = [SELECT Count_Of_Total_Reaction_Time__c ,Count_Of_No_of_Question_Attempted__c,Count_Of_No_Of_Correct_Answered__c
+                                           FROM Participant_Game_Info__c 
+                                           WHERE Contact_Name__r.Age__c > 0
+                                           AND Contact_Name__r.Age__c >= :lowage
+                                           AND Contact_Name__r.Age__c <= :highage
+                                           AND User_Device__c != ''
+                                           AND Contact_Name__r.Sex__c != ''
+                                    	   AND Contact_Name__r.Sex__c =:sex
                                            AND Contact_Name__r.Education_Attainment__c != null
                                            AND Count_Of_No_Of_Correct_Answered__c >0
                                            AND Count_Of_No_of_Question_Attempted__c >0
@@ -112,49 +132,10 @@ public without sharing class ParticipantResultsController
                                            AND Game_Name__r.Name =: gameName
                                            AND Id != :currPGIId
                                            Order by CreatedDate DESC
-                                           LIMIT 50000];
-                if(peopleLikeYouPGIList !=null && peopleLikeYouPGIList.size() >= 25){                
-                    Decimal sumReationTime = 0;    
-                    Decimal reactTimeMax = 0;
-                    List<Decimal> reacttimeList = new List<Decimal>();
-                    for (Participant_Game_Info__c peopleLikeYouPGI : peopleLikeYouPGIList) {
-                        Decimal reactTime = peopleLikeYouPGI.Count_Of_Total_Reaction_Time__c / peopleLikeYouPGI.Count_Of_No_of_Question_Attempted__c;
-                        sumReationTime += reactTime;
-                        reacttimeList.add(reactTime);
-                        if (peopleLikeYouPGI.Count_Of_Total_Reaction_Time__c > reactTimeMax &&  gameName == 'Flanker') {
-                            reactTimeMax = peopleLikeYouPGI.Count_Of_Total_Reaction_Time__c;
-                        }
-                    }
-                    Decimal reactTimeAvg =   sumReationTime / peopleLikeYouPGIList.size();
-                    if(reactTimeAvg != null){
-                        mapOtherData.put ('People Like You', Integer.valueOf(reactTimeAvg));
-                    }               		 
-                    if(gameName == 'Flanker' && reactTimeMax != null){
-                        mapPlyAverageValuesData.put ('MaxValue', Integer.valueOf(reactTimeMax));
-                    }     
-                    reacttimeList.sort();                
-                    Integer dataSize = reacttimeList.size();
-                    Integer q1Index = Math.ceil((dataSize + 1) / 4.0).intValue();
-                    Integer q2Index = Math.ceil((dataSize + 1) / 2.0).intValue();
-                    Integer q3Index = Math.ceil(3 * (dataSize + 1) / 4.0).intValue();
-                    
-                    if (dataSize > 0) {
-                        Integer lowAverage = Integer.valueOf(reacttimeList[q1Index - 1]);
-                        Integer highAverage = Integer.valueOf(reacttimeList[q3Index - 1]);
-                        if(lowAverage != null){
-                            mapPlyAverageValuesData.put ('LowAverage', lowAverage);
-                        }
-                        if(highAverage != null){
-                            mapPlyAverageValuesData.put ('HighAverage', highAverage);                                      
-                        }
-                    }
-                }
-                else{
-                    calcPeopleLikYouDashboard = true;
-                }
-        	}
-        else{
-             List<Participant_Game_Info__c> peopleLikeYouPGIList = [SELECT Count_Of_No_Of_Correct_Answered__c
+                                           LIMIT 49990];
+                    system.debug('Second Query:'+peopleLikeYouPGIList.size());
+                    if(peopleLikeYouPGIList !=null && peopleLikeYouPGIList.size() < 25){
+                    peopleLikeYouPGIList = [SELECT Count_Of_Total_Reaction_Time__c ,Count_Of_No_of_Question_Attempted__c,Count_Of_No_Of_Correct_Answered__c
                                            FROM Participant_Game_Info__c 
                                            WHERE Contact_Name__r.Age__c > 0
                                            AND Contact_Name__r.Age__c >= :lowage
@@ -169,65 +150,77 @@ public without sharing class ParticipantResultsController
                                            AND Id != :currPGIId
                                            Order by CreatedDate DESC
                                            LIMIT 49990];
-                if(peopleLikeYouPGIList !=null && peopleLikeYouPGIList.size() >= 25){                
-                    Decimal sumcorrAnswer = 0;    
-                    Decimal corrAnswerMax = 0;
-                    List<Decimal> corrAnswersList = new List<Decimal>();
-                    for (Participant_Game_Info__c peopleLikeYouPGI : peopleLikeYouPGIList) { 
-                        Decimal corrAnswer = peopleLikeYouPGI.Count_Of_No_Of_Correct_Answered__c;
-                        sumcorrAnswer += corrAnswer;
-                        corrAnswersList.add(corrAnswer);
-                    }
-                    Decimal corrAnswerAvg =   sumcorrAnswer / peopleLikeYouPGIList.size();
-                    if(corrAnswerAvg != null){
-                        mapOtherData.put ('People Like You', Integer.valueOf(corrAnswerAvg));
-                    }  
-                    corrAnswersList.sort();                
-                    Integer dataSize = corrAnswersList.size();
-                    Integer q1Index = Math.ceil((dataSize + 1) / 4.0).intValue();
-                    Integer q2Index = Math.ceil((dataSize + 1) / 2.0).intValue();
-                    Integer q3Index = Math.ceil(3 * (dataSize + 1) / 4.0).intValue();
-                    
-                    if (dataSize > 0) {
-                        Integer lowAverage = Integer.valueOf(corrAnswersList[q1Index - 1]);
-                        Integer highAverage = Integer.valueOf(corrAnswersList[q3Index - 1]);
-                        if(lowAverage != null){
-                            mapPlyAverageValuesData.put ('LowAverage', lowAverage);
+                        system.debug('Third Query:'+peopleLikeYouPGIList.size());
+        		}
+        }
+        if(peopleLikeYouPGIList !=null && peopleLikeYouPGIList.size() >= 25){ 
+            if(gameName == 'DLTRS' || gameName == 'Deary Simple And Complex Reaction Time' || gameName == 'Flanker'){
+                        Decimal sumReationTime = 0;
+                        List<Decimal> reacttimeList = new List<Decimal>();
+                        for (Participant_Game_Info__c peopleLikeYouPGI : peopleLikeYouPGIList) {
+                            Decimal reactTime = peopleLikeYouPGI.Count_Of_Total_Reaction_Time__c / peopleLikeYouPGI.Count_Of_No_of_Question_Attempted__c;
+                            sumReationTime += reactTime;
+                            reacttimeList.add(reactTime);      
                         }
-                        if(highAverage != null){
-                            mapPlyAverageValuesData.put ('HighAverage', highAverage);                                      
+                        Decimal reactTimeAvg =   sumReationTime / peopleLikeYouPGIList.size();
+                        if(reactTimeAvg != null){
+                            mapOtherData.put ('People Like You', Integer.valueOf(reactTimeAvg));
                         }
-                    }
-                }
-               else{
-                    calcPeopleLikYouDashboard = true;
-                }
-            }
-        
-        	if(calcPeopleLikYouDashboard){
+                		quartileValues.addAll(reacttimeList);
+                	}
+            else{      
+                        Decimal sumcorrAnswer = 0;    
+                        Decimal corrAnswerMax = 0;
+                        List<Decimal> corrAnswersList = new List<Decimal>();
+                        for (Participant_Game_Info__c peopleLikeYouPGI : peopleLikeYouPGIList) { 
+                            Decimal corrAnswer = peopleLikeYouPGI.Count_Of_No_Of_Correct_Answered__c;
+                            sumcorrAnswer += corrAnswer;
+                            corrAnswersList.add(corrAnswer);
+                        }
+                        Decimal corrAnswerAvg =   sumcorrAnswer / peopleLikeYouPGIList.size();
+                        if(corrAnswerAvg != null){
+                            mapOtherData.put ('People Like You', Integer.valueOf(corrAnswerAvg));
+                        }  
+                		quartileValues.addAll(corrAnswersList);
+                	}            
+                      	quartileValues.sort();                
+                        Integer dataSize = quartileValues.size();
+                        Integer q1Index = Math.ceil((dataSize + 1) / 4.0).intValue();
+                        Integer q2Index = Math.ceil((dataSize + 1) / 2.0).intValue();
+                        Integer q3Index = Math.ceil(3 * (dataSize + 1) / 4.0).intValue();
+                        
+                        if (dataSize > 0) {
+                            Integer lowAverage = Integer.valueOf(quartileValues[q1Index - 1]);
+                            Integer highAverage = Integer.valueOf(quartileValues[q3Index - 1]);
+                            if(lowAverage != null){
+                                mapPlyAverageValuesData.put ('LowAverage', lowAverage);
+                            }
+                            if(highAverage != null){
+                                mapPlyAverageValuesData.put ('HighAverage', highAverage);                                      
+                            }
+                        }
+        	}
+        	else{
             List<People_Like_You_Data__c> objLikeYouList = [SELECT Education__c,Sex__c, Age__c,Average__c,High_Average__c,Low_Average__c,Game_Name__r.Max_Score__c
             FROM People_Like_You_Data__c
             WHERE Game_Name__r.Name =:gameName 
             AND Sex__c =:objCon.Sex__c AND Education__c>=: edu_att
             AND Age__c =:pluage Order BY Education__c ASC LIMIT 1];
             for(People_Like_You_Data__c peopleLikeYouData : objLikeYouList){
-                //People_Like_You_Data__c peopleLikeYouData=new People_Like_You_Data__c();                
                 if(gameName=='Flanker'){
-                	mapPlyAverageValuesData.put ('LowAverage', 2000);
-                	mapPlyAverageValuesData.put ('HighAverage', 4000);    
+                	mapPlyAverageValuesData.put ('LowAverage', 564);
+                	mapPlyAverageValuesData.put ('HighAverage', 963);    
                 }
                 else
                 {
                     mapPlyAverageValuesData.put ('LowAverage', Integer.valueOf(peopleLikeYouData.Low_Average__c));
                     mapPlyAverageValuesData.put ('HighAverage', Integer.valueOf(peopleLikeYouData.High_Average__c)); 
-                }                
-         
-            }         
-
-            }
+                }  
+            } 
+           }
       List<Participant_Dashboard__c> partDashboard = [SELECT Data_Value__c FROM Participant_Dashboard__c WHERE Game_Detail__r.Name=:gameName LIMIT 1];
             if(partDashboard !=null && partDashboard.size()>0){
-            mapOtherData.put('Overall Average', Integer.valueOf(partDashboard[0].Data_Value__c));
+            	mapOtherData.put('Overall Average', Integer.valueOf(partDashboard[0].Data_Value__c));
             }
             else{
                 mapOtherData.put('Overall Average', 0);

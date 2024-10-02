@@ -27,9 +27,4 @@ public class SendRewardRequestWrapper {
 	public class Delivery {
 		public String method;
 	}
-
-	
-	public static SendRewardRequestWrapper parse(String json) {
-		return (SendRewardRequestWrapper) System.JSON.deserialize(json, SendRewardRequestWrapper.class);
-	}
 }

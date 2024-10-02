@@ -1,10 +1,6 @@
 import { LightningElement, wire, track, api } from 'lwc';
 import { NavigationMixin } from 'lightning/navigation';
-
-import updateContactFields from "@salesforce/apex/ContactController.updateContactFields";
 import getCurrentContact from '@salesforce/apex/CustomLoginController.getCurrentContact';
-import restrictExpandedGames from '@salesforce/apex/CustomLoginController.restrictExpandedGames';
-
 import Community_Url_MC_Cloud from '@salesforce/label/c.Community_Url_MC_Cloud';
 import url_Health_Medical_Survey from '@salesforce/label/c.url_Health_Medical_Survey';
 import url_COVID_Survey from '@salesforce/label/c.url_COVID_Survey';
@@ -23,464 +19,322 @@ import url_Social_Stress_Survey from '@salesforce/label/c.url_Social_Stress_Surv
 import url_Anxiety_Survey from '@salesforce/label/c.url_Anxiety_Survey';
 import url_Social_Support_Survey from '@salesforce/label/c.url_Social_Support_Survey';
 import url_Cancer_Survey from '@salesforce/label/c.url_Cancer_Survey';
+import url_Heat_Survey from '@salesforce/label/c.url_Heat_Survey';
+import url_Glucosamine from '@salesforce/label/c.url_Glucosamine';
+import url_Ecog12 from '@salesforce/label/c.url_Ecog12';
+import Health_Medical from '@salesforce/label/c.survey_name_1';
+import COVID from '@salesforce/label/c.survey_name_2';
+import Brain_Disease from '@salesforce/label/c.survey_name_3';
+import SES from '@salesforce/label/c.survey_name_4';
+import FHAD from '@salesforce/label/c.survey_name_5';
+import Women_Health from '@salesforce/label/c.survey_name_6';
+import English from '@salesforce/label/c.survey_name_7';
+import Sleep from '@salesforce/label/c.survey_name_8';
+import ADL from '@salesforce/label/c.survey_name_9';
+import Diet from '@salesforce/label/c.survey_name_10';
+import Perceived_Stress from '@salesforce/label/c.survey_name_11';
+import SWLS from '@salesforce/label/c.survey_name_12';
+import QPAR from '@salesforce/label/c.survey_name_13';
+import Social_Stress from '@salesforce/label/c.survey_name_14';
+import Anxiety from '@salesforce/label/c.survey_name_15';
+import Social_Support from '@salesforce/label/c.survey_name_16';
+import Cancer from '@salesforce/label/c.survey_name_17';
+import Heat from '@salesforce/label/c.survey_name_18';
+import Glucosamine from '@salesforce/label/c.survey_name_19';
+import Ecog12 from '@salesforce/label/c.survey_name_20';
+import game_name_c from '@salesforce/label/c.game_name_c';
+import survey_time_2_min from '@salesforce/label/c.survey_time_2_min';
+import survey_time_3_min from '@salesforce/label/c.survey_time_3_min';
+import survey_time_5_min from '@salesforce/label/c.survey_time_5_min';
 
-
-export default class surveys extends NavigationMixin(LightningElement) {
-    
+export default class surveys extends NavigationMixin(LightningElement) {    
     lstcon;
-
-    @api Email;
-    @api contactId;
     @api survey_text_1 = "Welcome to your personal survey dashboard";
     @api survey_text_2 = "The tiles below represent short surveys that you can complete. Click a tile to launch the survey";
     @api Survey_text_2_1 = "A survey available to complete. Do these first.";
     @api Survey_text_2_2 = "A survey you have already completed. You can update these again in the future.";
     @api Survey_text_2_3 = "A locked survey. These will unlock as you complete more.";
-    @api Survey_text_2_4 = "Note: Not all surveys are optimized to complete easily on a smartphone screen. We recommend using a tablet, laptop, or desktop computer for the surveys on this page.";
-    
-    @api survey_name_1 = "General Health";
-    @api survey_name_2 = "COVID";
-    @api survey_name_3 = "History of Brain Disease";
-    @api survey_name_4 = "Economic Status";
-    @api survey_name_5 = "Family History of Alzheimer's Disease";
-    @api survey_name_6 = "Women's Health";
-    @api survey_name_7 = "Language";
-    @api survey_name_8 = "Sleep";
-    @api survey_name_9 = "Daily Activities";
-    @api survey_name_10 = "Nutrition";
-    @api survey_name_11 = "Perceived Stress";
-    @api survey_name_12 = "Life Satisfaction";
-    @api survey_name_13 = "Physical Activity";
-    @api survey_name_14 = "Stress";
-    @api survey_name_15 = "Anxiety";
-    @api survey_name_16 = "Social Support";
-    @api survey_name_17 = "Cancer";
-    @api survey_name_18 = "Coming Soon...";
-
-    @api survey_two_min = "2 min";
-    @api survey_three_min = "3 min";
-    @api survey_five_min = "5 min";
-
-    @track openGame4 = false;
-    @track completeGame4 = false;
-    @track lockGame4 = false;
-
-    @track openSurvey1 = false;
-    @track completeSurvey1 = false;
-    @track lockSurvey1 = false;
-    @track openSurvey2 = false;
-    @track completeSurvey2 = false;
-    @track lockSurvey2 = false;
-    @track openSurvey3 = false;
-    @track completeSurvey3 = false;
-    @track lockSurvey3 = false;
-    @track openSurvey4 = false;
-    @track completeSurvey4 = false;
-    @track lockSurvey4 = false;
-    @track openSurvey5 = false;
-    @track completeSurvey5 = false;
-    @track lockSurvey5 = false;
-    @track openSurvey6 = false;
-    @track completeSurvey6 = false;
-    @track lockSurvey6 = false;
-    @track openSurvey7 = false;
-    @track completeSurvey7 = false;
-    @track lockSurvey7 = false;
-    @track openSurvey8 = false;
-    @track completeSurvey8 = false;
-    @track lockSurvey8 = false;
-    @track openSurvey9 = false;
-    @track completeSurvey9 = false;
-    @track lockSurvey9 = false;
-    @track openSurvey10 = false;
-    @track completeSurvey10 = false;
-    @track lockSurvey10 = false;
-    @track openSurvey11 = false;
-    @track completeSurvey11 = false;
-    @track lockSurvey11 = false;
-    @track openSurvey12= false;
-    @track completeSurvey12 = false;
-    @track lockSurvey12 = false;
-    @track openSurvey13 = false;
-    @track completeSurvey13 = false;
-    @track lockSurvey13 = false;
-    @track openSurvey14 = false;
-    @track completeSurvey14 = false;
-    @track lockSurvey14 = false;
-    @track openSurvey15 = false;
-    @track completeSurvey15 = false;
-    @track lockSurvey15 = false;
-    @track openSurvey16 = false;
-    @track completeSurvey16 = false;
-    @track lockSurvey16 = false;
-    @track openSurvey17 = false;
-    @track completeSurvey17 = false;
-    @track lockSurvey17 = false;
+    @api Survey_text_2_4 = "Note: Not all surveys are optimized to complete easily on a smartphone screen. We recommend using a tablet, laptop, or desktop computer for the surveys on this page.";    
     @track hasMouse = false;
     @track macTouch = false;
-    @track restrictGame = false;
-
-
-
-    @api url_HealthMedicalSurvey = '';
-    @api url_COVIDSurvey = '';
-    @api url_BrainDiseaseSurvey = '';
-    @api url_SESSurvey = '';
-    @api url_FHADSurvey = '';
-    @api url_WomenHealthSurvey = '';
-    @api url_SubjectiveEnglishSurvey = '';
-    @api url_SleepSurvey = '';
-    @api url_ADLSurvey = '';
-    @api url_DietSurvey = '';
-    @api url_PerceivedStressSurvey = '';
-    @api url_SWLSSurvey = '';
-    @api url_QPARSurvey = '';
-    @api url_SocialStressSurvey = '';
-    @api url_AnxietySurvey = '';
-    @api url_SocialSupportSurvey = '';
-    @api url_CancerSurvey = '';
-
-
-
-   /* @track dynamicFontSize; 
-
-    connectedCallback() {
-        this.calculateFontSize();
-    }
-
-    calculateFontSize() {
-        const textLength = this.survey_text_5.length;
-        const baseFontSize = 46; // Your original base font size
-        const maxTextLength = 30; // Adjust this based on your design
-
-        let fontSize = baseFontSize;
-
-        if (textLength > maxTextLength) {
-            fontSize = baseFontSize - (textLength - maxTextLength);
-        }
-
-        this.titleStyle = `font-size: ${fontSize}px`;
-    } */
+    @track surveyItems = [];  
+    game_name_c =  game_name_c;
+    hideSurvey18 = false;
+    hideSurvey19 = false;
 
     connectedCallback() {
         getCurrentContact()
             .then(result => {
-                console.log('inside conn call back');
-
-               // alert('scree width = ' + screen.width + ' document width = ' + document.width);
-               // alert('scroll = ' + document.documentElement.scrollHeight + ' document height = ' + window.innerHeight);
                 if(this.getCookie('macTouch') == 'true'){
                     this.macTouch = true;
-                    console.log('macTouch1 =' + this.macTouch );
+                    //console.log('macTouch1 =' + this.macTouch );
                 }else{
                     this.macTouch = false;
-                    console.log('macTouch2 =' + this.macTouch );
+                    //console.log('macTouch2 =' + this.macTouch );
+                }
+                this.lstcon = result;
+                //console.log('contact: '+JSON.stringify(this.lstcon) );
+                this.error = undefined;
+                let surveyNames = [];
+                let surveyClasses = [];
+                let surveyTimes = [];
+                if(this.lstcon.Sex__c == 'Female' && this.lstcon.Gender__c == 'Female'){
+                    surveyNames = [Health_Medical,COVID,Brain_Disease,SES,FHAD,English,Sleep,ADL,Diet,Perceived_Stress,SWLS,QPAR,Social_Stress,Anxiety,Social_Support,Cancer,Glucosamine,Ecog12,Women_Health];
+                    surveyClasses = ['survey1','survey2','survey3','survey4','survey5','survey7','survey8','survey9','survey10','survey11','survey12','survey13','survey14','survey15','survey16','survey17','survey19','survey20',,'survey6'];
+                    surveyTimes = [survey_time_5_min,survey_time_5_min,survey_time_5_min,survey_time_3_min,survey_time_3_min,survey_time_2_min,survey_time_5_min,survey_time_3_min,survey_time_3_min,survey_time_3_min,survey_time_2_min,survey_time_3_min,survey_time_3_min,survey_time_3_min,survey_time_3_min,survey_time_5_min,survey_time_3_min,survey_time_5_min,survey_time_3_min];
+                }
+                else{
+                    surveyNames = [Health_Medical,COVID,Brain_Disease,SES,FHAD,English,Sleep,ADL,Diet,Perceived_Stress,SWLS,QPAR,Social_Stress,Anxiety,Social_Support,Cancer,Glucosamine,Ecog12];
+                    surveyClasses = ['survey1','survey2','survey3','survey4','survey5','survey7','survey8','survey9','survey10','survey11','survey12','survey13','survey14','survey15','survey16','survey17','survey19','survey20',];
+                    surveyTimes = [survey_time_5_min,survey_time_5_min,survey_time_5_min,survey_time_3_min,survey_time_3_min,survey_time_2_min,survey_time_5_min,survey_time_3_min,survey_time_3_min,survey_time_3_min,survey_time_2_min,survey_time_3_min,survey_time_3_min,survey_time_3_min,survey_time_3_min,survey_time_5_min,survey_time_3_min,survey_time_5_min];
+                }               
+                const surveysOpenArray = [];
+                const surveyLockedArray = [];
+                const surveyCompletedArray = [];
+                const elementPositionMap = surveyNames.reduce((map, element, index) => {
+                    map[element] = index;
+                    return map;
+                  }, {});
+                for (let i = 0; i < surveyNames.length; i++) {
+                   const survey = {
+                       id: i,
+                       open: true,
+                       complete: false,
+                       lock: false,
+                       surveytime: surveyTimes[i],
+                       surveyname: surveyNames[i],
+                       classname: `opened game-tiles ${surveyClasses[i]} ${i < 15 && this.lstcon.isProject2_Participant__c  ? 'p2' : ''}`,
+                       titleclass: i == 4 ? 'title1' : 'title'
+                   };
+                surveysOpenArray.push(survey);
+                }
+                for (let i = 0; i < surveyNames.length; i++) {
+                const survey = {
+                    id: i,
+                    open: false,
+                    complete: true,
+                    lock: false,
+                    surveytime: surveyTimes[i],                   
+                    surveyname: surveyNames[i],
+                    classname: `${i < 15 && this.lstcon.isProject2_Participant__c ? 'completed1' : 'completed'} game-tiles ${surveyClasses[i]} ${i < 15 && this.lstcon.isProject2_Participant__c ? 'p2' : ''}`,
+                    titleclass: i == 4 ? 'title1' : 'title'
+                };
+                surveyCompletedArray.push(survey);
+                }
+                for (let i = 0; i < surveyNames.length; i++) {
+                    const survey = {
+                        id: i,
+                        open: false,
+                        complete: false,
+                        lock: true,
+                        surveytime: surveyTimes[i],                    
+                        surveyname: surveyNames[i],
+                        classname: `locked game-tiles ${surveyClasses[i]} ${i < 15 && this.lstcon.isProject2_Participant__c  ? 'p2' : ''}`,
+                        titleclass: i == 4 ? 'title1' : 'title'
+                    };
+                surveyLockedArray.push(survey);
+                }
+                const finalLockedArray = [];
+                const finalCompletedArray = [];     
+
+                if (this.lstcon.HEALTH_MEDICAL__c == "Opened") {
+                    this.surveyItems.push(surveysOpenArray[0]);
+                }
+                else if (this.lstcon.HEALTH_MEDICAL__c == "Completed") {
+                    finalCompletedArray.push(surveyCompletedArray[0]);
+                }
+                else if (this.lstcon.HEALTH_MEDICAL__c == "Locked") {
+                    finalLockedArray.push(surveyLockedArray[0]);
                 }
 
-                this.lstcon = result;
-                console.log('result', this.lstcon);
-                this.error = undefined;
-                console.log('lstcon'+ this.lstcon);
+                if (this.lstcon.COVID__c == "Opened") {
+                    this.surveyItems.push(surveysOpenArray[1]);
+                }
+                else if (this.lstcon.COVID__c == "Completed") {
+                    finalCompletedArray.push(surveyCompletedArray[1]);
+                }
+                else if (this.lstcon.COVID__c == "Locked") {
+                    finalLockedArray.push(surveyLockedArray[1]);
+                }
 
+                if (this.lstcon.BRAIN_DISEASE__c == "Opened") {
+                    this.surveyItems.push(surveysOpenArray[2]);
+                }
+                else if (this.lstcon.BRAIN_DISEASE__c == "Completed") {
+                    finalCompletedArray.push(surveyCompletedArray[2]);
+                }
+                else if (this.lstcon.BRAIN_DISEASE__c == "Locked") {
+                    finalLockedArray.push(surveyLockedArray[2]);
+                }
+
+                if (this.lstcon.SES__c == "Opened") {
+                    this.surveyItems.push(surveysOpenArray[3]);
+                }
+                else if (this.lstcon.SES__c == "Completed") {
+                    finalCompletedArray.push(surveyCompletedArray[3]);
+                }
+                else if (this.lstcon.SES__c == "Locked") {
+                    finalLockedArray.push(surveyLockedArray[3]);
+                }
+
+                if (this.lstcon.FHAD__c == "Opened") {
+                    this.surveyItems.push(surveysOpenArray[4]);
+                }
+                else if (this.lstcon.FHAD__c == "Completed") {
+                    finalCompletedArray.push(surveyCompletedArray[4]);
+                }
+                else if (this.lstcon.FHAD__c == "Locked") {
+                    finalLockedArray.push(surveyLockedArray[4]);
+                }
+
+                if (this.lstcon.SUBJECTIVE_ENGLISH__c == "Opened") {
+                    this.surveyItems.push(surveysOpenArray[5]);
+                }
+                else if (this.lstcon.SUBJECTIVE_ENGLISH__c == "Completed") {
+                    finalCompletedArray.push(surveyCompletedArray[5]);
+                }
+                else if (this.lstcon.SUBJECTIVE_ENGLISH__c == "Locked") {
+                    finalLockedArray.push(surveyLockedArray[5]);
+                }
+
+                if (this.lstcon.SLEEP__c == "Opened") {
+                    this.surveyItems.push(surveysOpenArray[6]);
+                }
+                else if (this.lstcon.SLEEP__c == "Completed") {
+                    finalCompletedArray.push(surveyCompletedArray[6]);
+                }
+                else if (this.lstcon.SLEEP__c == "Locked") {
+                    finalLockedArray.push(surveyLockedArray[6]);
+                }
+
+                if (this.lstcon.ADL__c == "Opened") {
+                    this.surveyItems.push(surveysOpenArray[7]);
+                }
+                else if (this.lstcon.ADL__c == "Completed") {
+                    finalCompletedArray.push(surveyCompletedArray[7]);
+                }
+                else if (this.lstcon.ADL__c == "Locked") {
+                    finalLockedArray.push(surveyLockedArray[7]);
+                }
+
+                if (this.lstcon.DIET__c== "Opened") {
+                    this.surveyItems.push(surveysOpenArray[8]);
+                }
+                else if (this.lstcon.DIET__c == "Completed") {
+                    finalCompletedArray.push(surveyCompletedArray[8]);
+                }
+                else if (this.lstcon.DIET__c == "Locked") {
+                    finalLockedArray.push(surveyLockedArray[8]);
+                }
+
+                if (this.lstcon.PERCEIVED_STRESS__c == "Opened") {
+                    this.surveyItems.push(surveysOpenArray[9]);
+                }
+                else if (this.lstcon.PERCEIVED_STRESS__c == "Completed") {
+                    finalCompletedArray.push(surveyCompletedArray[9]);
+                }   
+                else if (this.lstcon.PERCEIVED_STRESS__c == "Locked") {
+                    finalLockedArray.push(surveyLockedArray[9]);
+                }
+
+                if (this.lstcon.SWLS__c == "Opened") {
+                    this.surveyItems.push(surveysOpenArray[10]);
+                }
+                else if (this.lstcon.SWLS__c == "Completed") {
+                    finalCompletedArray.push(surveyCompletedArray[10]);
+                }   
+                else if (this.lstcon.SWLS__c == "Locked") {
+                    finalLockedArray.push(surveyLockedArray[10]);
+                }
                 
-                if (this.lstcon.HEALTH_MEDICAL__c == "Opened" || this.lstcon.HEALTH_MEDICAL__c == null) {
-                    //this.template.querySelector('.survey1').className = 'opened game-tiles survey1';
-                    this.openSurvey1 = true;
-                    console.log('HEALTH MEDICAL', 'Opened');
-                    }
-                    else if (this.lstcon.HEALTH_MEDICAL__c == "Completed") {
-                    //this.template.querySelector('.survey1').className = 'completed game-tiles survey1';
-                    this.completeSurvey1 = true;
-                    console.log('HEALTH MEDICAL', 'Completed');
-                    }
-                    else if (this.lstcon.HEALTH_MEDICAL__c == "Locked") {
-                    //this.template.querySelector('.survey1').className = 'locked game-tiles survey1';
-                    this.lockSurvey1 = true;
-                    console.log('HEALTH MEDICAL', 'Locked');
-                    }
-                    
-                    
-                    if (this.lstcon.COVID__c == "Opened" || this.lstcon.COVID__c == null) {
-                    //this.template.querySelector('.survey2').className = 'opened game-tiles survey2';
-                    this.openSurvey2 = true;
-                    console.log('Opened');
-                    }
-                    else if (this.lstcon.COVID__c == "Completed") {
-                    //this.template.querySelector('.survey2').className = 'completed game-tiles survey2';
-                    this.completeSurvey2 = true;
-                    console.log('Completed');
-                    }
-                    else if (this.lstcon.COVID__c == "Locked") {
-                    //this.template.querySelector('.survey2').className = 'locked game-tiles survey2';
-                    this.lockSurvey2 = true;
-                    console.log('Locked');
-                    }
-                    
-                    
-                    if (this.lstcon.BRAIN_DISEASE__c == "Opened" || this.lstcon.BRAIN_DISEASE__c == null) {
-                    //this.template.querySelector('.survey3').className = 'opened game-tiles survey3';
-                    this.openSurvey3 = true;
-                    console.log('Opened');
-                    }
-                    else if (this.lstcon.BRAIN_DISEASE__c == "Completed") {
-                    //this.template.querySelector('.survey3').className = 'completed game-tiles survey3';
-                    this.completeSurvey3 = true;
-                    console.log('Completed');
-                    }
-                    else if (this.lstcon.BRAIN_DISEASE__c == "Locked") {
-                    //this.template.querySelector('.survey3').className = 'locked game-tiles survey3';
-                    this.lockSurvey3 = true;
-                    console.log('Locked');
-                    }
-                    
-                    
-                    if (this.lstcon.SES__c == "Opened" || this.lstcon.SES__c == null) {
-                    //this.template.querySelector('.survey4').className = 'opened game-tiles survey4';
-                    this.openSurvey4 = true;
-                    console.log('Opened');
-                    }
-                    else if (this.lstcon.SES__c == "Completed") {
-                    //this.template.querySelector('.survey4').className = 'completed game-tiles survey4';
-                    this.completeSurvey4 = true;
-                    console.log('Completed');
-                    }
-                    else if (this.lstcon.SES__c == "Locked") {
-                    //this.template.querySelector('.survey4').className = 'locked game-tiles survey4';
-                    this.lockSurvey4 = true;
-                    console.log('Locked');
-                    }
-                    
-                    
-                    if (this.lstcon.FHAD__c == "Opened" || this.lstcon.FHAD__c == null) {
-                    //this.template.querySelector('.survey5').className = 'opened game-tiles survey5';
-                    this.openSurvey5 = true;
-                    console.log('Opened');
-                    }
-                    else if (this.lstcon.FHAD__c == "Completed") {
-                    //this.template.querySelector('.survey5').className = 'completed game-tiles survey5';
-                    this.completeSurvey5 = true;
-                    console.log('Completed');
-                    }
-                    else if (this.lstcon.FHAD__c == "Locked") {
-                    //this.template.querySelector('.survey5').className = 'locked game-tiles survey5';
-                    this.lockSurvey5 = true;
-                    console.log('Locked');
-                    }
-                    
-                    
-                    if (this.lstcon.WOMENS_HEALTH__c == "Opened" || this.lstcon.WOMENS_HEALTH__c == null) {
-                    //this.template.querySelector('.survey6').className = 'opened game-tiles survey6';
-                    this.openSurvey6 = true;
-                    console.log('Opened');
+                if (this.lstcon.QPAR__c == "Opened") {
+                    this.surveyItems.push(surveysOpenArray[11]);
+                } 
+                else if (this.lstcon.QPAR__c == "Completed") {
+                    finalCompletedArray.push(surveyCompletedArray[11]);
+                } 
+                else if (this.lstcon.QPAR__c == "Locked") {
+                    finalLockedArray.push(surveyLockedArray[11]);
+                }
+                
+                if (this.lstcon.SOCIAL_STRESSOR__c == "Opened") {
+                    this.surveyItems.push(surveysOpenArray[12]);            
+                } 
+                else if (this.lstcon.SOCIAL_STRESSOR__c == "Completed") {
+                    finalCompletedArray.push(surveyCompletedArray[12]);
+                } 
+                else if (this.lstcon.SOCIAL_STRESSOR__c == "Locked") {
+                    finalLockedArray.push(surveyLockedArray[12]);
+                }
+
+                if (this.lstcon.ANXIETY__c == "Opened") {
+                    this.surveyItems.push(surveysOpenArray[13]);            
+                } 
+                else if (this.lstcon.ANXIETY__c == "Completed") {
+                    finalCompletedArray.push(surveyCompletedArray[13]);
+                } 
+                else if (this.lstcon.ANXIETY__c == "Locked") {
+                    finalLockedArray.push(surveyLockedArray[13]);
+                }
+
+                if (this.lstcon.SOCIAL_SUPPORT__c == "Opened") {
+                    this.surveyItems.push(surveysOpenArray[14]);            
+                } 
+                else if (this.lstcon.SOCIAL_SUPPORT__c == "Completed") {
+                    finalCompletedArray.push(surveyCompletedArray[14]);
+                } 
+                else if (this.lstcon.SOCIAL_SUPPORT__c == "Locked") {
+                    finalLockedArray.push(surveyLockedArray[14]);
+                }
+
+                if(this.lstcon.CANCER__c == "Opened") {
+                    this.surveyItems.push(surveysOpenArray[15]);            
+                } 
+                else if (this.lstcon.CANCER__c == "Completed") {
+                    finalCompletedArray.push(surveyCompletedArray[15]);
+                } 
+                else if (this.lstcon.CANCER__c == "Locked") {
+                    finalLockedArray.push(surveyLockedArray[15]);
+                }
+
+                if (this.lstcon.GLUCOSAMINE__c == "Opened") {
+                    this.surveyItems.push(surveysOpenArray[16]);            
+                }
+                else if (this.lstcon.GLUCOSAMINE__c == "Completed") {
+                    finalCompletedArray.push(surveyCompletedArray[16]);
+                } 
+                else if (this.lstcon.GLUCOSAMINE__c == "Locked") {
+                    finalLockedArray.push(surveyLockedArray[16]);
+                }
+
+                if (this.lstcon.ECog12__c == "Opened") {
+
+                    this.surveyItems.push(surveysOpenArray[17]);            
+                } 
+                else if (this.lstcon.ECog12__c == "Completed") {
+                    finalCompletedArray.push(surveyCompletedArray[17]);
+                } 
+                else if (this.lstcon.ECog12__c == "Locked") {
+                    finalLockedArray.push(surveyLockedArray[17]);
+                }
+
+                if(this.lstcon.Sex__c == 'Female' && this.lstcon.Gender__c == 'Female'){
+                    this.hideSurvey19 = true;
+                    if (this.lstcon.WOMENS_HEALTH__c == "Opened") {
+                        this.surveyItems.push(surveysOpenArray[18]);
                     }
                     else if (this.lstcon.WOMENS_HEALTH__c == "Completed") {
-                    //this.template.querySelector('.survey6').className = 'completed game-tiles survey6';
-                    this.completeSurvey6 = true;
-                    console.log('Completed');
+                        finalCompletedArray.push(surveyCompletedArray[18]);
                     }
                     else if (this.lstcon.WOMENS_HEALTH__c == "Locked") {
-                    //this.template.querySelector('.survey6').className = 'locked game-tiles survey6';
-                    this.lockSurvey6 = true;
-                    console.log('Locked');
+                        finalLockedArray.push(surveyLockedArray[18]);
                     }
-                    
-                    
-                    if (this.lstcon.SUBJECTIVE_ENGLISH__c == "Opened" || this.lstcon.SUBJECTIVE_ENGLISH__c == null) {
-                    //this.template.querySelector('.survey7').className = 'opened game-tiles survey7';
-                    this.openSurvey7 = true;
-                    console.log('Opened');
-                    }
-                    else if (this.lstcon.SUBJECTIVE_ENGLISH__c == "Completed") {
-                    //this.template.querySelector('.survey7').className = 'completed game-tiles survey7';
-                    this.completeSurvey7 = true;
-                    console.log('Completed');
-                    }
-                    else if (this.lstcon.SUBJECTIVE_ENGLISH__c == "Locked") {
-                    //this.template.querySelector('.survey7').className = 'locked game-tiles survey7';
-                    this.lockSurvey7 = true;
-                    console.log('Locked');
-                    }
-                    
-                    
-                    if (this.lstcon.SLEEP__c == "Opened" || this.lstcon.SLEEP__c == null) {
-                    //this.template.querySelector('.survey8').className = 'opened game-tiles survey8';
-                    this.openSurvey8 = true;
-                    console.log('Opened');
-                    }
-                    else if (this.lstcon.SLEEP__c == "Completed") {
-                    //this.template.querySelector('.survey8').className = 'completed game-tiles survey8';
-                    this.completeSurvey8 = true;
-                    console.log('Completed');
-                    }
-                    else if (this.lstcon.SLEEP__c == "Locked") {
-                    //this.template.querySelector('.survey8').className = 'locked game-tiles survey8';
-                    this.lockSurvey8 = true;
-                    console.log('Locked');
-                    }
-                    
-                    
-                    if (this.lstcon.ADL__c == "Opened" || this.lstcon.ADL__c == null) {
-                    //this.template.querySelector('.survey9').className = 'opened game-tiles survey9';
-                    this.openSurvey9 = true;
-                    console.log('Opened');
-                    }
-                    else if (this.lstcon.ADL__c == "Completed") {
-                    //this.template.querySelector('.survey9').className = 'completed game-tiles survey9';
-                    this.completeSurvey9 = true;
-                    console.log('Completed');
-                    }
-                    else if (this.lstcon.ADL__c == "Locked") {
-                    //this.template.querySelector('.survey9').className = 'locked game-tiles survey9';
-                    this.lockSurvey9 = true;
-                    console.log('Locked');
-                    }
-                    
-                    
-                    if (this.lstcon.DIET__c == "Opened" || this.lstcon.DIET__c == null) {
-                    //this.template.querySelector('.survey10').className = 'opened game-tiles survey10';
-                    this.openSurvey10 = true;
-                    console.log('Opened');
-                    }
-                    else if (this.lstcon.DIET__c == "Completed") {
-                    //this.template.querySelector('.survey10').className = 'completed game-tiles survey10';
-                    this.completeSurvey10 = true;
-                    console.log('Completed');
-                    }
-                    else if (this.lstcon.DIET__c == "Locked") {
-                    //this.template.querySelector('.survey10').className = 'locked game-tiles survey10';
-                    this.lockSurvey10 = true;
-                    console.log('Locked');
-                    }
-                    
-                    
-                    if (this.lstcon.PERCEIVED_STRESS__c == "Opened" || this.lstcon.PERCEIVED_STRESS__c == null) {
-                    //this.template.querySelector('.survey11').className = 'opened game-tiles survey11';
-                    this.openSurvey11 = true;
-                    console.log('Opened');
-                    }
-                    else if (this.lstcon.PERCEIVED_STRESS__c == "Completed") {
-                    //this.template.querySelector('.survey11').className = 'completed game-tiles survey11';
-                    this.completeSurvey11 = true;
-                    console.log('Completed');
-                    }
-                    else if (this.lstcon.PERCEIVED_STRESS__c == "Locked") {
-                    //this.template.querySelector('.survey11').className = 'locked game-tiles survey11';
-                    this.lockSurvey11 = true;
-                    console.log('Locked');
-                    }
-                    
-                    
-                    if (this.lstcon.SWLS__c == "Opened" || this.lstcon.SWLS__c == null) {
-                    //this.template.querySelector('.survey12').className = 'opened game-tiles survey12';
-                    this.openSurvey12 = true;
-                    console.log('Opened');
-                    }
-                    else if (this.lstcon.SWLS__c == "Completed") {
-                    //this.template.querySelector('.survey12').className = 'completed game-tiles survey12';
-                    this.completeSurvey12 = true;
-                    console.log('Completed');
-                    }
-                    else if (this.lstcon.SWLS__c == "Locked") {
-                    //this.template.querySelector('.survey12').className = 'locked game-tiles survey12';
-                    this.lockSurvey12 = true;
-                    console.log('Locked');
-                    }
-                    
-                    
-                    if (this.lstcon.QPAR__c == "Opened" || this.lstcon.QPAR__c == null) {
-                    //this.template.querySelector('.survey13').className = 'opened game-tiles survey13';
-                    this.openSurvey13 = true;
-                    console.log('Opened');
-                    }
-                    else if (this.lstcon.QPAR__c == "Completed") {
-                    //this.template.querySelector('.survey13').className = 'completed game-tiles survey13';
-                    this.completeSurvey13 = true;
-                    console.log('Completed');
-                    }
-                    else if (this.lstcon.QPAR__c == "Locked") {
-                    //this.template.querySelector('.survey13').className = 'locked game-tiles survey13';
-                    this.lockSurvey13 = true;
-                    console.log('Locked');
-                    }
-                    
-                    
-                    if (this.lstcon.SOCIAL_STRESSOR__c == "Opened" || this.lstcon.SOCIAL_STRESSOR__c == null) {
-                    //this.template.querySelector('.survey14').className = 'opened game-tiles survey14';
-                    this.openSurvey14 = true;
-                    console.log('Opened');
-                    }
-                    else if (this.lstcon.SOCIAL_STRESSOR__c == "Completed") {
-                    //this.template.querySelector('.survey14').className = 'completed game-tiles survey14';
-                    this.completeSurvey14 = true;
-                    console.log('Completed');
-                    }
-                    else if (this.lstcon.SOCIAL_STRESSOR__c == "Locked") {
-                    //this.template.querySelector('.survey14').className = 'locked game-tiles survey14';
-                    this.lockSurvey14 = true;
-                    console.log('Locked');
-                    }
-                    
-                    
-                    if (this.lstcon.ANXIETY__c == "Opened" || this.lstcon.ANXIETY__c == null) {
-                    //this.template.querySelector('.survey15').className = 'opened game-tiles survey15';
-                    this.openSurvey15 = true;
-                    console.log('Opened');
-                    }
-                    else if (this.lstcon.ANXIETY__c == "Completed") {
-                    //this.template.querySelector('.survey15').className = 'completed game-tiles survey15';
-                    this.completeSurvey15 = true;
-                    console.log('Completed');
-                    }
-                    else if (this.lstcon.ANXIETY__c == "Locked") {
-                    //this.template.querySelector('.survey15').className = 'locked game-tiles survey15';
-                    this.lockSurvey15 = true;
-                    console.log('Locked');
-                    }
-                    
-                    
-                    if (this.lstcon.SOCIAL_SUPPORT__c == "Opened" || this.lstcon.SOCIAL_SUPPORT__c == null) {
-                    //this.template.querySelector('.survey16').className = 'opened game-tiles survey16';
-                    this.openSurvey16 = true;
-                    console.log('Opened');
-                    }
-                    else if (this.lstcon.SOCIAL_SUPPORT__c == "Completed") {
-                    //this.template.querySelector('.survey16').className = 'completed game-tiles survey16';
-                    this.completeSurvey16 = true;
-                    console.log('Completed');
-                    }
-                    else if (this.lstcon.SOCIAL_SUPPORT__c == "Locked") {
-                    //this.template.querySelector('.survey16').className = 'locked game-tiles survey16';
-                    this.lockSurvey16 = true;
-                    console.log('Locked');
-                    }
-                    
-                    
-                    if (this.lstcon.CANCER__c == "Opened" || this.lstcon.CANCER__c == null) {
-                    //this.template.querySelector('.survey17').className = 'opened game-tiles survey17';
-                    this.openSurvey17 = true;
-                    console.log('Opened');
-                    }
-                    else if (this.lstcon.CANCER__c == "Completed") {
-                    //this.template.querySelector('.survey17').className = 'completed game-tiles survey17';
-                    this.completeSurvey17 = true;
-                    console.log('Completed');
-                    }
-                    else if (this.lstcon.CANCER__c == "Locked") {
-                    //this.template.querySelector('.survey17').className = 'locked game-tiles survey17';
-                    this.lockSurvey17 = true;
-                    console.log('Locked');
-                    }
-
+                }
+				const surveyItemsSorted = this.sortByOrder(this.surveyItems, 'surveyname', elementPositionMap);
+                const finalCompletedArraySorted = this.sortByOrder(finalCompletedArray, 'surveyname', elementPositionMap);
+                const finalLockedArraySorted = this.sortByOrder(finalLockedArray, 'surveyname', elementPositionMap);
+                this.surveyItems = [...surveyItemsSorted, ...finalCompletedArraySorted, ...finalLockedArraySorted]; 
             })
-           /*.then(result => {
-                this.error = undefined;
-                 if(this.macTouch){
-                     this.restrictGame = result;
-                 } 
-                 console.log('macTouch: ' + this.macTouch);               
-                 console.log('Postal Code: ' + this.lstcon.MailingPostalCode);
-                 console.log('restrictGame: '+ result);
-             }) */
             .catch(error => {
                 this.error = error;
                 this.contacts = undefined;
@@ -488,521 +342,88 @@ export default class surveys extends NavigationMixin(LightningElement) {
             window.onmousemove = function() {
                 this.hasMouse = true;
             }
-
+    }	
+	
+	sortByOrder(array, property, positionMap) {
+        return [...array].sort((a, b) => positionMap[a[property]] - positionMap[b[property]]);
     }
                          
-       
-    /* connectedCallback() {
-        this.loadContactFields();
-    }
-
-    async loadContactFields() {
-        try {
-            const result = await this.updateContactFields();
-            if (result === 'success') {
-                await this.fetchContactInfo();
-            } else {
-                // Handle error
-            }
-        } catch (error) {
-            // Handle error
+    surveyClick(event){
+        event.preventDefault();
+        const clickedElement = event.currentTarget;
+        let url;
+        if(clickedElement.classList.contains('survey1')){
+            url = `${Community_Url_MC_Cloud}${url_Health_Medical_Survey}?Email=${this.lstcon.Email}&Contact=${this.lstcon.Id}`;
         }
-    }
-
-    async updateContactFields() {
-        try {
-            const result = await updateRecord({
-                fields: {
-                    Id: this.participantCode,
-                }
-            });
-            return result;
-        } catch (error) {
-            // Handle error
-            return 'failed';
+        else if(clickedElement.classList.contains('survey2')){
+            url = `${Community_Url_MC_Cloud}${url_COVID_Survey}?Email=${this.lstcon.Email}&Contact=${this.lstcon.Id}`;
+        }   
+        else if(clickedElement.classList.contains('survey3')){
+            url = `${Community_Url_MC_Cloud}${url_Brain_Disease_Survey}?Email=${this.lstcon.Email}&Contact=${this.lstcon.Id}`;
+        } 
+        else if(clickedElement.classList.contains('survey4')){
+            url = `${Community_Url_MC_Cloud}${url_SES_Survey}?Email=${this.lstcon.Email}&Contact=${this.lstcon.Id}`;
+        } 
+        else if(clickedElement.classList.contains('survey5')){
+            url = `${Community_Url_MC_Cloud}${url_FHAD_Survey}?Email=${this.lstcon.Email}&Contact=${this.lstcon.Id}`;
+        } 
+        else if(clickedElement.classList.contains('survey6')){
+            url = `${Community_Url_MC_Cloud}${url_Women_Health_Survey}?Email=${this.lstcon.Email}&Contact=${this.lstcon.Id}`;
+        } 
+        else if(clickedElement.classList.contains('survey7')){
+            url = `${Community_Url_MC_Cloud}${url_Subjective_English_Survey}?Email=${this.lstcon.Email}&Contact=${this.lstcon.Id}`;
+        } 
+        else if(clickedElement.classList.contains('survey8')){
+            url = `${Community_Url_MC_Cloud}${url_Sleep_Survey}?Email=${this.lstcon.Email}&Contact=${this.lstcon.Id}`;
+        } 
+        else if(clickedElement.classList.contains('survey9')){
+            url = `${Community_Url_MC_Cloud}${url_ADL_Survey}?Email=${this.lstcon.Email}&Contact=${this.lstcon.Id}`;
+        } 
+        else if(clickedElement.classList.contains('survey10')){
+            url = `${Community_Url_MC_Cloud}${url_Diet_Survey}?Email=${this.lstcon.Email}&Contact=${this.lstcon.Id}`;
+        } 
+        else if(clickedElement.classList.contains('survey11')){
+            url = `${Community_Url_MC_Cloud}${url_Perceived_Stress_Survey}?Email=${this.lstcon.Email}&Contact=${this.lstcon.Id}`;
+        } 
+        else if(clickedElement.classList.contains('survey12')){
+            url = `${Community_Url_MC_Cloud}${url_SWLS_Survey}?Email=${this.lstcon.Email}&Contact=${this.lstcon.Id}`;
+        } 
+        else if(clickedElement.classList.contains('survey13')){
+            url = `${Community_Url_MC_Cloud}${url_QPAR_Survey}?Email=${this.lstcon.Email}&Contact=${this.lstcon.Id}`;
+        } 
+        else if(clickedElement.classList.contains('survey14')){
+            url = `${Community_Url_MC_Cloud}${url_Social_Stress_Survey}?Email=${this.lstcon.Email}&Contact=${this.lstcon.Id}`;
+        } 
+        else if(clickedElement.classList.contains('survey15')){
+            url = `${Community_Url_MC_Cloud}${url_Anxiety_Survey}?Email=${this.lstcon.Email}&Contact=${this.lstcon.Id}`;
         }
-    }
+        else if(clickedElement.classList.contains('survey16')){
+            url = `${Community_Url_MC_Cloud}${url_Social_Support_Survey}?Email=${this.lstcon.Email}&Contact=${this.lstcon.Id}`;
+        } 
+        else if(clickedElement.classList.contains('survey17')){
+            url = `${Community_Url_MC_Cloud}${url_Cancer_Survey}?Email=${this.lstcon.Email}&Contact=${this.lstcon.Id}`;
+        } 
+        else if(clickedElement.classList.contains('survey18')){
+            url = `${Community_Url_MC_Cloud}${url_Heat_Survey}?Email=${this.lstcon.Email}&Contact=${this.lstcon.Id}`;
+        } 
 
-    async fetchContactInfo() {
-        try {
-            const contactInfo = await getCurrentContact({ participantcode: this.participantCode });
-            if (contactInfo) {
-                const contactEmail = contactInfo.Email;
-                const contactId = contactInfo.Id;
-                this.url_healthsurvey = `${Community_Url_MC_Cloud}${url_Health_Medical_Survey}?Email=${contactEmail}&Contact=${contactId}`;
-            }
-        } catch (error) {
-            // Handle error
-        }
-    } */
+        else if(clickedElement.classList.contains('survey19')){
+            url = `${Community_Url_MC_Cloud}${url_Glucosamine}?Email=${this.lstcon.Email}&Contact=${this.lstcon.Id}`;
+        } 
+        else if(clickedElement.classList.contains('survey20')){
+            url = `${Community_Url_MC_Cloud}${url_Ecog12}?Email=${this.lstcon.Email}&Contact=${this.lstcon.Id}`;
+        } 
+        
+		this.navigateToUrl(url);
+    }   
 
-    healthMedicalsurveyClick() {
-        getCurrentContact()
-            .then(result => {
-                this.lstcon = result;
-                this.error = undefined;
-                console.log('Result..', this.lstcon);
-                this.url_HealthMedicalSurvey = `${Community_Url_MC_Cloud}${url_Health_Medical_Survey}?Email=${this.lstcon.Email}&Contact=${this.lstcon.Id}`;
-                console.log('Result..', this.url_HealthMedicalSurvey);
-                if(this.lstcon.Unsubscribe__c == false) {
-                this.navigateToUrlhealth();
-                }
-                })
-                .catch(error => {
-                this.error = error;
-                this.lstcon = undefined;
-                console.log('Result..', this.lstcon);
-                });
-
-    }
-    navigateToUrlhealth(){
-
-        this[NavigationMixin.Navigate]({
+    navigateToUrl(url) {
+    this[NavigationMixin.Navigate]({
             type: 'standard__webPage',
             attributes: {
-                url: this.url_HealthMedicalSurvey
+                url: url
             }
         });
-
-    } 
-
-    COVIDSurveyClick() {
-        getCurrentContact()
-            .then(result => {
-                this.lstcon = result;
-                this.error = undefined;
-                this.url_COVIDSurvey = `${Community_Url_MC_Cloud}${url_COVID_Survey}?Email=${this.lstcon.Email}&Contact=${this.lstcon.Id}`;
-                console.log('Result..', this.url_COVIDSurvey);
-                if (this.lstcon.Unsubscribe__c == false) {
-                    this.navigateToUrlCOVID();
-                }
-            })
-            .catch(error => {
-                this.error = error;
-                this.lstcon = undefined;
-            });
-    }
-    
-    navigateToUrlCOVID() {
-
-            this[NavigationMixin.Navigate]({
-                type: 'standard__webPage',
-                attributes: {
-                    url: this.url_COVIDSurvey
-                }
-            });
-    } 
-
-    BrainDiseaseSurveyClick() {
-        getCurrentContact()
-            .then(result => {
-                this.lstcon = result;
-                this.error = undefined;
-                this.url_BrainDiseaseSurvey = `${Community_Url_MC_Cloud}${url_Brain_Disease_Survey}?Email=${this.lstcon.Email}&Contact=${this.lstcon.Id}`;
-                console.log('Result..', this.url_BrainDiseaseSurvey);
-                if(this.lstcon.Unsubscribe__c == false) {
-                this.navigateToUrlBrain();
-                }
-                })
-                .catch(error => {
-                this.error = error;
-                this.lstcon = undefined; // Corrected variable name
-                });
-
-    }
-    navigateToUrlBrain(){
-
-            this[NavigationMixin.Navigate]({
-                type: 'standard__webPage',
-                attributes: {
-                    url: this.url_BrainDiseaseSurvey
-                }
-            });
-    } 
-        
-    SESSurveyClick() {
-        getCurrentContact()
-            .then(result => {
-                this.lstcon = result;
-                this.error = undefined;
-                this.url_SESSurvey = `${Community_Url_MC_Cloud}${url_SES_Survey}?Email=${this.lstcon.Email}&Contact=${this.lstcon.Id}`;
-                console.log('Result..', this.url_SESSurvey);
-                if(this.lstcon.Unsubscribe__c == false) {
-                this.navigateToUrlSES();
-                }
-                })
-                .catch(error => {
-                this.error = error;
-                this.lstcon = undefined; // Corrected variable name
-                });
-
-    }
-    navigateToUrlSES(){
-
-            this[NavigationMixin.Navigate]({
-                type: 'standard__webPage',
-                attributes: {
-                    url: this.url_SESSurvey
-                }
-            });
-    } 
-
-    FHADSurveyClick() {
-        getCurrentContact()
-            .then(result => {
-                this.lstcon = result;
-                this.error = undefined;
-                this.url_FHADSurvey = `${Community_Url_MC_Cloud}${url_FHAD_Survey}?Email=${this.lstcon.Email}&Contact=${this.lstcon.Id}`;
-                console.log('Result..', this.url_FHADSurvey);
-                if(this.lstcon.Unsubscribe__c == false) {
-                this.navigateToUrlFHAD();
-                }
-                })
-                .catch(error => {
-                this.error = error;
-                this.lstcon = undefined; // Corrected variable name
-                });
-
-    }
-    navigateToUrlFHAD(){
-
-            this[NavigationMixin.Navigate]({
-                type: 'standard__webPage',
-                attributes: {
-                    url: this.url_FHADSurvey
-                }
-            });
-    }
-
-    WomenHealthSurveyClick() {
-        getCurrentContact()
-            .then(result => {
-                this.lstcon = result;
-                this.error = undefined;
-                this.url_WomenHealthSurvey = `${Community_Url_MC_Cloud}${url_Women_Health_Survey}?Email=${this.lstcon.Email}&Contact=${this.lstcon.Id}`;
-                console.log('Result..', this.url_WomenHealthSurvey);
-                if(this.lstcon.Unsubscribe__c == false) {
-                this.navigateToUrlWomen();
-                }
-                })
-                .catch(error => {
-                this.error = error;
-                this.lstcon = undefined; // Corrected variable name
-                });
-
-    }
-    navigateToUrlWomen(){
-
-           this[NavigationMixin.Navigate]({
-                type: 'standard__webPage',
-                attributes: {
-                    url: this.url_WomenHealthSurvey
-                }
-            });
-    } 
-
-
-    SubjectiveEnglishSurveyClick() {
-        getCurrentContact()
-            .then(result => {
-                this.lstcon = result;
-                this.error = undefined;
-                this.url_SubjectiveEnglishSurvey = `${Community_Url_MC_Cloud}${url_Subjective_English_Survey}?Email=${this.lstcon.Email}&Contact=${this.lstcon.Id}`;
-                console.log('Result..', this.url_SubjectiveEnglishSurvey);
-                if(this.lstcon.Unsubscribe__c == false) {
-                this.navigateToUrlSubjective();
-                }
-                })
-                .catch(error => {
-                this.error = error;
-                this.lstcon = undefined; // Corrected variable name
-                });
-
-    }
-    navigateToUrlSubjective(){
-
-            this[NavigationMixin.Navigate]({
-                type: 'standard__webPage',
-                attributes: {
-                    url: this.url_SubjectiveEnglishSurvey
-                }
-            });
-    } 
-
-
-    SleepSurveyClick() {
-        getCurrentContact()
-            .then(result => {
-                this.lstcon = result;
-                this.error = undefined;
-                this.url_SleepSurvey = `${Community_Url_MC_Cloud}${url_Sleep_Survey}?Email=${this.lstcon.Email}&Contact=${this.lstcon.Id}`;
-                console.log('Result..', this.url_SleepSurvey);
-                if(this.lstcon.Unsubscribe__c == false) {
-                this.navigateToUrlSleep();
-                }
-                })
-                .catch(error => {
-                this.error = error;
-                this.lstcon = undefined; // Corrected variable name
-                });
-
-    }
-    navigateToUrlSleep(){
-
-            this[NavigationMixin.Navigate]({
-                type: 'standard__webPage',
-                attributes: {
-                    url: this.url_SleepSurvey
-                }
-            });
-    } 
-
-    ADLSurveyClick() {
-        getCurrentContact()
-            .then(result => {
-                this.lstcon = result;
-                this.error = undefined;
-                this.url_ADLSurvey = `${Community_Url_MC_Cloud}${url_ADL_Survey}?Email=${this.lstcon.Email}&Contact=${this.lstcon.Id}`;
-                console.log('Result..', this.url_ADLSurvey);
-                if(this.lstcon.Unsubscribe__c == false) {
-                this.navigateToUrlADL();
-                }
-                })
-                .catch(error => {
-                this.error = error;
-                this.lstcon = undefined; // Corrected variable name
-                });
-
-    }
-    navigateToUrlADL(){
-
-            this[NavigationMixin.Navigate]({
-                type: 'standard__webPage',
-                attributes: {
-                    url: this.url_ADLSurvey
-                }
-            });
-    }
-
-    DietSurveyClick() {
-        getCurrentContact()
-            .then(result => {
-                this.lstcon = result;
-                this.error = undefined;
-                this.url_DietSurvey = `${Community_Url_MC_Cloud}${url_Diet_Survey}?Email=${this.lstcon.Email}&Contact=${this.lstcon.Id}`;
-                console.log('Result..', this.url_DietSurvey);
-                if(this.lstcon.Unsubscribe__c == false) {
-                this.navigateToUrlDiet();
-                }
-                })
-                .catch(error => {
-                this.error = error;
-                this.lstcon = undefined; // Corrected variable name
-                });
-
-    }
-    navigateToUrlDiet(){
-
-            this[NavigationMixin.Navigate]({
-                type: 'standard__webPage',
-                attributes: {
-                    url: this.url_DietSurvey
-                }
-            });
-    }
-
-
-    PerceivedStressSurveyClick() {
-        getCurrentContact()
-            .then(result => {
-                this.lstcon = result;
-                this.error = undefined;
-                this.url_PerceivedStressSurvey = `${Community_Url_MC_Cloud}${url_Perceived_Stress_Survey}?Email=${this.lstcon.Email}&Contact=${this.lstcon.Id}`;
-                console.log('Result..', this.url_PerceivedStressSurvey);
-                if(this.lstcon.Unsubscribe__c == false) {
-                this.navigateToUrlPerceived();
-                }
-                })
-                .catch(error => {
-                this.error = error;
-                this.lstcon = undefined; // Corrected variable name
-                });
-
-    }
-    navigateToUrlPerceived(){
-
-            this[NavigationMixin.Navigate]({
-                type: 'standard__webPage',
-                attributes: {
-                    url: this.url_PerceivedStressSurvey
-                }
-            });
-    }
-
-
-    SWLSSurveyClick() {
-        getCurrentContact()
-            .then(result => {
-                this.lstcon = result;
-                this.error = undefined;
-                this.url_SWLSSurvey = `${Community_Url_MC_Cloud}${url_SWLS_Survey}?Email=${this.lstcon.Email}&Contact=${this.lstcon.Id}`;
-                console.log('Result..', this.url_SWLSSurvey);
-                if(this.lstcon.Unsubscribe__c == false) {
-                this.navigateToUrlSWLS();
-                }
-                })
-                .catch(error => {
-                this.error = error;
-                this.lstcon = undefined; // Corrected variable name
-                });
-
-    }
-    navigateToUrlSWLS(){
-
-            this[NavigationMixin.Navigate]({
-                type: 'standard__webPage',
-                attributes: {
-                    url: this.url_SWLSSurvey
-                }
-            });
-    } 
-
-
-    QPARSurveyClick() {
-        getCurrentContact()
-            .then(result => {
-                this.lstcon = result;
-                this.error = undefined;
-                this.url_QPARSurvey = `${Community_Url_MC_Cloud}${url_QPAR_Survey}?Email=${this.lstcon.Email}&Contact=${this.lstcon.Id}`;
-                console.log('Result..', this.url_QPARSurvey);
-                if(this.lstcon.Unsubscribe__c == false) {
-                this.navigateToUrlQPAR();
-                }
-                })
-                .catch(error => {
-                this.error = error;
-                this.lstcon = undefined; // Corrected variable name
-                });
-
-    }
-    navigateToUrlQPAR(){
-
-            this[NavigationMixin.Navigate]({
-                type: 'standard__webPage',
-                attributes: {
-                    url: this.url_QPARSurvey
-                }
-            });
-    } 
-
-    SocialStressSurveyClick() {
-        getCurrentContact()
-            .then(result => {
-                this.lstcon = result;
-                this.error = undefined;
-                this.url_SocialStressSurvey = `${Community_Url_MC_Cloud}${url_Social_Stress_Survey}?Email=${this.lstcon.Email}&Contact=${this.lstcon.Id}`;
-                console.log('Result..', this.url_SocialStressSurvey);
-                if(this.lstcon.Unsubscribe__c == false) {
-                this.navigateToUrlSocial();
-                }
-                })
-                .catch(error => {
-                this.error = error;
-                this.lstcon = undefined; // Corrected variable name
-                });
-
-    }
-    navigateToUrlSocial(){
-
-            this[NavigationMixin.Navigate]({
-                type: 'standard__webPage',
-                attributes: {
-                    url: this.url_SocialStressSurvey
-                }
-            });
-    } 
-
-
-    AnxietySurveyClick() {
-        getCurrentContact()
-            .then(result => {
-                this.lstcon = result;
-                this.error = undefined;
-                this.url_AnxietySurvey = `${Community_Url_MC_Cloud}${url_Anxiety_Survey}?Email=${this.lstcon.Email}&Contact=${this.lstcon.Id}`;
-                console.log('Result..', this.url_AnxietySurvey);
-                if(this.lstcon.Unsubscribe__c == false) {
-                this.navigateToUrlAnxiety();
-                }
-                })
-                .catch(error => {
-                this.error = error;
-                this.lstcon = undefined; // Corrected variable name
-                });
-
-    }
-    navigateToUrlAnxiety(){
-
-            this[NavigationMixin.Navigate]({
-                type: 'standard__webPage',
-                attributes: {
-                    url: this.url_AnxietySurvey
-                }
-            });
-    } 
-
-
-    SocialSupportSurveyClick() {
-        getCurrentContact()
-            .then(result => {
-                this.lstcon = result;
-                this.error = undefined;
-                this.url_SocialSupportSurvey = `${Community_Url_MC_Cloud}${url_Social_Support_Survey}?Email=${this.lstcon.Email}&Contact=${this.lstcon.Id}`;
-                console.log('Result..', this.url_SocialSupportSurvey);
-                if(this.lstcon.Unsubscribe__c == false) {
-                this.navigateToUrlSocialSupport();
-                }
-                })
-                .catch(error => {
-                this.error = error;
-                this.lstcon = undefined; // Corrected variable name
-                });
-
-    }
-    navigateToUrlSocialSupport(){
-
-            this[NavigationMixin.Navigate]({
-                type: 'standard__webPage',
-                attributes: {
-                    url: this.url_SocialSupportSurvey
-                }
-            });
-    } 
-
-    CancerSurveyClick() {
-        getCurrentContact()
-            .then(result => {
-                this.lstcon = result;
-                this.error = undefined;
-                this.url_CancerSurvey = `${Community_Url_MC_Cloud}${url_Cancer_Survey}?Email=${this.lstcon.Email}&Contact=${this.lstcon.Id}`;
-                console.log('Result..', this.url_CancerSurvey);
-                if(this.lstcon.Unsubscribe__c == false) {
-                this.navigateToUrlCancer();
-                }
-                })
-                .catch(error => {
-                this.error = error;
-                this.lstcon = undefined; // Corrected variable name
-                });
-
-    }
-    navigateToUrlCancer(){
-
-            this[NavigationMixin.Navigate]({
-                type: 'standard__webPage',
-                attributes: {
-                    url: this.url_CancerSurvey
-                }
-            });
     } 
 
     getCookie(name) {
@@ -1014,5 +435,4 @@ export default class surveys extends NavigationMixin(LightningElement) {
         }
         return null;
     }
-
 }

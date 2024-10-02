@@ -1,40 +1,5 @@
-({
-    
-    recorData: function (component, event, helper, userContactId, gameId, questionNumber, userInput, isCorrect, reactionTime, isPracticeQuestion, correctAnswer, participantGameInfoId, round) {
-
-        let data = {
-            Contact_Name__c: userContactId,
-            Game_Name__c: gameId,
-            Question_Number__c: questionNumber,
-            Participant_Response__c: userInput,
-            Is_Correct__c: isCorrect,
-            Reaction_Time_in_ms__c: reactionTime,
-            Is_Practice_Question__c: isPracticeQuestion,
-            Right_Answer__c: correctAnswer,
-            Participant_Game_InfoID__c: participantGameInfoId,
-            Round__c: round
-        };
-        var action = component.get("c.saveGameResponse");
-        action.setParams({ "sobj": JSON.stringify(data) });
-        action.setCallback(this, function (a) {
-            var state = a.getState();
-            if (state === "SUCCESS") {
-                var name = a.getReturnValue();
-            }
-            else if (state === "ERROR") {
-                let message = '';
-                let errors = response.getError();
-                if (errors && Array.isArray(errors) && errors.length > 0) {
-                    message = errors[0].message;
-                }
-            }
-        });
-        $A.getCallback(function () {
-            $A.enqueueAction(action);
-        })();
-    },
-
-    saveAudioToSalesforce: function(component, participantGameInfoId, binaryData, taskNum,otherlanguage,othervoices,
+({    
+   saveAudioToSalesforce: function(component, participantGameInfoId, binaryData, taskNum,otherlanguage,othervoices,
         loudnoices,isdelete) {
         var action = component.get("c.createAudioContentVersion");
         //const binaryDataStr = JSON.stringify(binaryData);
@@ -164,34 +129,32 @@
         }
 
     },
+        //this function update the gameid into the participantGameinfo object.
+        gameNameInParticipantGameInfo: function (component, event, helper, userContactId, gameId, participantGameInfoId, ipAddress, browserName, device) {
 
-    //this function update the gameid into the participantGameinfo object.
-    gameNameInParticipantGameInfo: function (component, event, helper, userContactId, gameId, participantGameInfoId, ipAddress, browserName, device) {
-
-        let data = {
-            Contact_Name__c: userContactId,
-            Game_Name__c: gameId,
-            Id: participantGameInfoId,
-            Browser_User_Agent__c: browserName,
-            IP_Address__c: ipAddress,
-            User_Device__c: device,
-            User_Agent__c: navigator.userAgent
-
-        };
-        var action = component.get("c.gameNameInParticipantGameInfoUpdate");
-        action.setParams({ "sobj": JSON.stringify(data) });
-        try {
-            $A.enqueueAction(action);
-        }
-        catch (e) {
-            //console.log(e.message);
-        }
-    },
+            let data = {
+                Contact_Name__c: userContactId,
+                Game_Name__c: gameId,
+                Id: participantGameInfoId,
+                Browser_User_Agent__c: browserName,
+                IP_Address__c: ipAddress,
+                User_Device__c: device,
+                User_Agent__c: navigator.userAgent
+    
+            };
+            var action = component.get("c.gameNameInParticipantGameInfoUpdate");
+            action.setParams({ "sobj": JSON.stringify(data) });
+            try {
+                $A.enqueueAction(action);
+            }
+            catch (e) {
+                //console.log(e.message);
+            }
+        },
 
     //this fucntion update the participantgameinfo record's field like as endDatetime.
-    participantGameInfoUpdate: function (component, event, helper, userContactId,language, gameId, endDateTime, gamePlayStatus, participantGameInfoId, screenResolution,comments,micid, miclabel) {
+    participantGameInfoUpdate: function (component, event, helper, userContactId,language, gameId, endDateTime, gamePlayStatus, participantGameInfoId, screenResolution) {
         let data;
-        if(!micid){
             data = {
                 Contact_Name__c: userContactId,
                 Language__c:language,
@@ -200,16 +163,10 @@
                 Game_Play_Status__c: gamePlayStatus,
                 Id: participantGameInfoId,
                 Device_Screen_Size__c: JSON.stringify(screenResolution),
+                Mic_Id__c: component.get('v.MicId'),
+                Mic_Label__c: component.get('v.MicLabel')
             };
-       }
-       else{
-        data = {
-            Id: participantGameInfoId,
-            Speech_Task_Comments__c: comments,
-            Mic_Id__c: micid,
-            Mic_Label__c: miclabel
-        };
-       }
+       
         var action = component.get("c.participantGameInfoUpdate");
         action.setParams({ "sobj": JSON.stringify(data) });
         action.setCallback(this, function (a) {
@@ -285,55 +242,6 @@
     },
     allowLeaving: function () {
         window.removeEventListener("beforeunload", this.leaveHandler);
-    },
-    //this fucntion is updating some fields like "Total_Time_for_Round_1__c"  in "participantGameInfo" object.
-    participantGameInfoUpdateTotalTimeRoundOne: function (component, event, helper, userContactId, gameId, participantGameInfoId, totalTimeForRound, totalKeyStrokesInRound, currentScreent) {
-        let data = {};
-
-        if (currentScreent == '13') {
-            data = {
-                Contact_Name__c: userContactId,
-                Game_Name__c: gameId,
-                Id: participantGameInfoId,
-                Total_Time_for_Round_0__c: totalTimeForRound,
-                Total_KeyStrokes_In_Round_0__c: totalKeyStrokesInRound
-            };
-        }
-        else if (currentScreent == '114') {
-            data = {
-                Contact_Name__c: userContactId,
-                Game_Name__c: gameId,
-                Id: participantGameInfoId,
-                Total_Time_for_Round_1__c: totalTimeForRound,
-                Total_KeyStrokes_In_Round_1__c: totalKeyStrokesInRound
-            };
-        }
-        var action = component.get("c.participantGameInfoUpdate");
-        action.setParams({ "sobj": JSON.stringify(data) });
-        action.setCallback(this, function (a) {
-            var state = a.getState();
-            if (state === "SUCCESS") {
-                var name = a.getReturnValue();
-                component.set("v.participantGameid", name);
-            }
-            else if (state === "ERROR") {
-                let message = '';
-                let errors = response.getError();
-                if (errors && Array.isArray(errors) && errors.length > 0) {
-                    message = errors[0].message;
-                }
-                //console.error(message);
-            }
-            else {
-                //console.log('error');
-            }
-        });
-        try {
-            $A.enqueueAction(action);
-        }
-        catch (e) {
-            //console.log(e.message);
-        }
     },
     ristrictAutoRun: function (component, event, helper) {
         console.log('beforerefresh');

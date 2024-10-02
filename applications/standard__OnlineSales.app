@@ -10,5 +10,8 @@
     <tabs>Bean_Game__c</tabs>
     <tabs>Campaign_Participant__c</tabs>
     <tabs>AB_Testing__c</tabs>
+    <tabs>standard-SalesforceContract</tabs>
+    <tabs>standard-SalesforceInvoice</tabs>
+    <tabs>standard-SalesforceProductCatalog</tabs>
     <uiType>Lightning</uiType>
 </CustomApplication>

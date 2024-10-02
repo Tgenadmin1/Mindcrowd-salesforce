@@ -246,8 +246,8 @@
             if (currentScreent != 20) {
                 document.getElementById("datablock_pairedGame").innerHTML = configdata[currentScreent].content;
                 if (currentScreent == 14 || currentScreent == 16 || currentScreent == 18 ) {
-                    if (isKeyboad) {
-                        document.getElementById("inputsolution").addEventListener('keyup', resetPlaceholderSize);
+                    if (isKeyboad || document.getElementsByTagName("html")[0].getAttribute("lang")=='es') {
+                        document.getElementById("inputsolution").addEventListener('keyup', resetPlaceholderSize);                       
                     }
                     let placeholder = $A.get("$Label.c.catchment_placeholder");
                     document.getElementById("inputsolution").setAttribute("placeholder", placeholder);
@@ -495,12 +495,15 @@
         }
 
         function resetPlaceholderSize() {
-            let inputstr = document.getElementById("inputsolution").value;
-            if (inputstr == null || inputstr == '') { 
-                this.classList.add('txt_placeholder');
+            let inputstr = document.getElementById("inputsolution");
+            let inputstrval = inputstr.value;
+            if (inputstrval == null || inputstrval == '') {                 
+                if (!inputstr.classList.contains('txt_placeholder'))
+                {inputstr.className += ' txt_placeholder';}
             }
-            else{
-                this.classList.remove('txt_placeholder');
+            else{                
+                if (inputstr.classList.contains('txt_placeholder'))
+                {inputstr.className = inputstr.className.replace('txt_placeholder', '');}
             }            
           }
  

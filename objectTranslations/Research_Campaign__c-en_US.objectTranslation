@@ -9,16 +9,36 @@
         <value>Research Campaigns</value>
     </caseValues>
     <fields>
+        <label><!-- Height in Inches --></label>
+        <name>Height_in_Inches__c</name>
+    </fields>
+    <fields>
+        <label><!-- Length in Inches --></label>
+        <name>Length_in_Inches__c</name>
+    </fields>
+    <fields>
+        <label><!-- Shape --></label>
+        <name>Shape__c</name>
+    </fields>
+    <fields>
         <label><!-- Usps Service Type --></label>
         <name>Usps_Service_Type__c</name>
         <picklistValues>
             <masterLabel>FIRST CLASS</masterLabel>
             <translation><!-- FIRST CLASS --></translation>
         </picklistValues>
+        <picklistValues>
+            <masterLabel>USPS_GROUND_ADVANTAGE</masterLabel>
+            <translation><!-- USPS_GROUND_ADVANTAGE --></translation>
+        </picklistValues>
     </fields>
     <fields>
         <label><!-- Weight in Ounces --></label>
         <name>Weight_in_Ounces__c</name>
+    </fields>
+    <fields>
+        <label><!-- Width in Inches --></label>
+        <name>Width_in_Inches__c</name>
     </fields>
     <fields>
         <label><!-- isReturnLabelNeeded --></label>

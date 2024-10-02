@@ -1,4 +1,4 @@
-import {LightningElement, track,api} from 'lwc';
+import {LightningElement, track} from 'lwc';
 
 import updateContact from '@salesforce/apex/TestContactCtrl.updateContact';
 import getRecord from '@salesforce/apex/TestContactCtrl.getRecord';
@@ -10,8 +10,6 @@ export default class TestContactCreate extends LightningElement {
     @track contactFirstName='';
     @track contactLastName='';
     @track spinner;
-    @api attribute1;
-    @api attribute2;
 
     handeIdChange(event){
         this.recordId = event.detail.value;

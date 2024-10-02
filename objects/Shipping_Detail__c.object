@@ -535,8 +535,11 @@
     <pluralLabel>Shipping Details</pluralLabel>
     <profileSearchLayouts>
         <fields>NAME</fields>
+        <fields>Shipment_Status__c</fields>
+        <fields>Campaign__c</fields>
         <fields>Price__c</fields>
         <fields>Tracking_Id__c</fields>
+        <fields>CREATED_DATE</fields>
         <profileName>System Administrator</profileName>
     </profileSearchLayouts>
     <searchLayouts>
@@ -596,7 +599,7 @@
         <linkType>page</linkType>
         <masterLabel>Print Labels</masterLabel>
         <openType>replace</openType>
-        <page>PrintLabelVF</page>
+        <page>PrintUSPSLabelVF</page>
         <protected>false</protected>
         <requireRowSelection>true</requireRowSelection>
     </webLinks>

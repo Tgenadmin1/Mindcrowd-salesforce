@@ -18,7 +18,7 @@
             <property name="DBS_Bean_Game_Form_Text_3" type="String" default="Click on the button below to learn more about Phase 2." label="DBS_Bean_Game_Form_Text_3"/>
             <property name="DBS_Bean_Game_Form_Text_4" type="String" default="Yes, I want to learn more about phase 2!" label="DBS_Bean_Game_Form_Text_4"/>
             <property name="DBS_Bean_Game_Form_Text_5" type="String" default="Thank you again for your willingness to help advance our understanding of the brain!" label="DBS_Bean_Game_Form_Text_5"/>
-            <property name="DBS_Game_VIP_URL" type="String" default="vipadd-dbsparticipant-consent" label="DBS_Game_VIP_URL"/>
+            <property name="DBS_Game_VIP_URL" type="String" default="adic/vipadd-dbsparticipant-consent" label="DBS_Game_VIP_URL"/>
      </targetConfig>
     </targetConfigs>
 </LightningComponentBundle>

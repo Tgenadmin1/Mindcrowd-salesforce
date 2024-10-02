@@ -585,7 +585,8 @@
                                             device = 'TABLET';
                                         }
 
-                                    }                                    function getCookie(name) {
+                                    }
+                                    function getCookie(name) {
                                         var cookieString = "; " + document.cookie;
                                         cookieString = cookieString.replace('LSKey-c$', '');
                                         var parts = cookieString.split("; " + name + "=");

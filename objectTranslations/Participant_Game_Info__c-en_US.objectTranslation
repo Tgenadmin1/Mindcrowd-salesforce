@@ -9,6 +9,10 @@
         <value>Participant Game Infos</value>
     </caseValues>
     <fields>
+        <label><!-- Age Difference --></label>
+        <name>Age_Difference__c</name>
+    </fields>
+    <fields>
         <label><!-- Any loud noices recorded? --></label>
         <name>Aging_Well_Any_loud_noices_recorded__c</name>
     </fields>
@@ -130,140 +134,8 @@
         <name>Episodic_memory_Would_you_like_to_delete__c</name>
     </fields>
     <fields>
-        <label><!-- Fake News Area Type Lives --></label>
-        <name>Fake_News_Area_Type_Lives__c</name>
-        <picklistValues>
-            <masterLabel>I prefer not to answer</masterLabel>
-            <translation><!-- I prefer not to answer --></translation>
-        </picklistValues>
-        <picklistValues>
-            <masterLabel>Rural</masterLabel>
-            <translation><!-- Rural --></translation>
-        </picklistValues>
-        <picklistValues>
-            <masterLabel>Suburban</masterLabel>
-            <translation><!-- Suburban --></translation>
-        </picklistValues>
-        <picklistValues>
-            <masterLabel>Urban</masterLabel>
-            <translation><!-- Urban --></translation>
-        </picklistValues>
-    </fields>
-    <fields>
-        <label><!-- Fake News Ball Cost in Cents --></label>
-        <name>Fake_News_Ball_Cost_in_Cents__c</name>
-    </fields>
-    <fields>
-        <label><!-- Fake News Days to Cover Half Lake --></label>
-        <name>Fake_News_Days_to_Cover_Half_Lake__c</name>
-    </fields>
-    <fields>
-        <label><!-- Fake News Political Orientation --></label>
-        <name>Fake_News_Political_Orientation__c</name>
-        <picklistValues>
-            <masterLabel>Conservative</masterLabel>
-            <translation><!-- Conservative --></translation>
-        </picklistValues>
-        <picklistValues>
-            <masterLabel>Extremely Conservative</masterLabel>
-            <translation><!-- Extremely Conservative --></translation>
-        </picklistValues>
-        <picklistValues>
-            <masterLabel>Extremely Liberal</masterLabel>
-            <translation><!-- Extremely Liberal --></translation>
-        </picklistValues>
-        <picklistValues>
-            <masterLabel>Liberal</masterLabel>
-            <translation><!-- Liberal --></translation>
-        </picklistValues>
-        <picklistValues>
-            <masterLabel>Moderate</masterLabel>
-            <translation><!-- Moderate --></translation>
-        </picklistValues>
-        <picklistValues>
-            <masterLabel>Moderate Conservative</masterLabel>
-            <translation><!-- Moderate Conservative --></translation>
-        </picklistValues>
-        <picklistValues>
-            <masterLabel>Moderate Liberal</masterLabel>
-            <translation><!-- Moderate Liberal --></translation>
-        </picklistValues>
-    </fields>
-    <fields>
-        <label><!-- Fake News Social Media Engagement --></label>
-        <name>Fake_News_Social_Media_Engagement__c</name>
-        <picklistValues>
-            <masterLabel>Always</masterLabel>
-            <translation><!-- Always --></translation>
-        </picklistValues>
-        <picklistValues>
-            <masterLabel>Never</masterLabel>
-            <translation><!-- Never --></translation>
-        </picklistValues>
-        <picklistValues>
-            <masterLabel>Rarely</masterLabel>
-            <translation><!-- Rarely --></translation>
-        </picklistValues>
-        <picklistValues>
-            <masterLabel>Sometimes</masterLabel>
-            <translation><!-- Sometimes --></translation>
-        </picklistValues>
-        <picklistValues>
-            <masterLabel>Very often</masterLabel>
-            <translation><!-- Very often --></translation>
-        </picklistValues>
-    </fields>
-    <fields>
-        <label><!-- Fake News Spending Hours for News/Week --></label>
-        <name>Fake_News_Spending_Hours_for_News_Week__c</name>
-    </fields>
-    <fields>
-        <label><!-- Fake News Supporting Political Allaince --></label>
-        <name>Fake_News_Supporting_Political_Allaince__c</name>
-        <picklistValues>
-            <masterLabel>Democratic party</masterLabel>
-            <translation><!-- Democratic party --></translation>
-        </picklistValues>
-        <picklistValues>
-            <masterLabel>I prefer not to answer</masterLabel>
-            <translation><!-- I prefer not to answer --></translation>
-        </picklistValues>
-        <picklistValues>
-            <masterLabel>Other</masterLabel>
-            <translation><!-- Other --></translation>
-        </picklistValues>
-        <picklistValues>
-            <masterLabel>Republican party</masterLabel>
-            <translation><!-- Republican party --></translation>
-        </picklistValues>
-    </fields>
-    <fields>
-        <label><!-- Fake News Time to Make 100 Widgets --></label>
-        <name>Fake_News_Time_to_Make_100_Widgets__c</name>
-    </fields>
-    <fields>
-        <label><!-- Fake News Trust in Federal Government --></label>
-        <name>Fake_News_Trust_in_Federal_Government__c</name>
-        <picklistValues>
-            <masterLabel>Agree</masterLabel>
-            <translation><!-- Agree --></translation>
-        </picklistValues>
-        <picklistValues>
-            <masterLabel>Disagree</masterLabel>
-            <translation><!-- Disagree --></translation>
-        </picklistValues>
-        <picklistValues>
-            <masterLabel>Neutral</masterLabel>
-            <translation><!-- Neutral --></translation>
-        </picklistValues>
-        <picklistValues>
-            <masterLabel>Strongly Agree</masterLabel>
-            <translation><!-- Strongly Agree --></translation>
-        </picklistValues>
-        <picklistValues>
-            <masterLabel>Strongly Disagree</masterLabel>
-            <translation><!-- Strongly Disagree --></translation>
-        </picklistValues>
+        <label><!-- Federal Gov Trust Feelings --></label>
+        <name>Federal_Gov_TrustFeelings__c</name>
     </fields>
     <fields>
         <label><!-- Game Attempt --></label>
@@ -303,6 +175,22 @@
         <name>IP_Data__c</name>
     </fields>
     <fields>
+        <label><!-- Is Loud Noises Recorded --></label>
+        <name>Is_Loud_Noises_Recorded__c</name>
+    </fields>
+    <fields>
+        <label><!-- Is Non English Usage --></label>
+        <name>Is_Non_English_Usage__c</name>
+    </fields>
+    <fields>
+        <label><!-- Is Other Voices Recorded --></label>
+        <name>Is_Other_Voices_Recorded__c</name>
+    </fields>
+    <fields>
+        <label><!-- Is Recording Usage Consent --></label>
+        <name>Is_Recording_Usage_Consent__c</name>
+    </fields>
+    <fields>
         <label><!-- Language --></label>
         <name>Language__c</name>
     </fields>
@@ -313,6 +201,10 @@
     <fields>
         <label><!-- Latitude --></label>
         <name>Latitude__c</name>
+    </fields>
+    <fields>
+        <label><!-- Living Location --></label>
+        <name>Living_Location__c</name>
     </fields>
     <fields>
         <label><!-- Longitude --></label>
@@ -327,6 +219,14 @@
         <name>Mic_Label__c</name>
     </fields>
     <fields>
+        <label><!-- Mold Spread Days --></label>
+        <name>Mold_Spread_Days__c</name>
+    </fields>
+    <fields>
+        <label><!-- News Consumption (hrs/wk) --></label>
+        <name>News_Consumption_hrs_wk__c</name>
+    </fields>
+    <fields>
         <label><!-- No. Of Correct Answered --></label>
         <name>No_Of_Correct_Answered__c</name>
     </fields>
@@ -339,12 +239,36 @@
         <name>Number_of_attempts_for_STACKS__c</name>
     </fields>
     <fields>
+        <label><!-- Political Affiliation --></label>
+        <name>Political_Affiliation__c</name>
+    </fields>
+    <fields>
+        <label><!-- Political Orientation --></label>
+        <name>Political_Orientation__c</name>
+    </fields>
+    <fields>
+        <label><!-- Printing Time Pages --></label>
+        <name>Printing_Time_Pages__c</name>
+    </fields>
+    <fields>
         <label><!-- ReactionTime --></label>
         <name>ReactionTime__c</name>
     </fields>
     <fields>
+        <label><!-- Recording File Link --></label>
+        <name>Recording_File_Link__c</name>
+    </fields>
+    <fields>
+        <label><!-- Recording File Name --></label>
+        <name>Recording_File_Name__c</name>
+    </fields>
+    <fields>
         <label><!-- Region --></label>
         <name>Region__c</name>
+    </fields>
+    <fields>
+        <label><!-- Social Media Engagement --></label>
+        <name>Social_Media_Engagement__c</name>
     </fields>
     <fields>
         <label><!-- Speech Task 1 Recording --></label>
@@ -369,6 +293,14 @@
     <fields>
         <label><!-- Sync With MC --></label>
         <name>Sync_With_MC__c</name>
+    </fields>
+    <fields>
+        <label><!-- Tell Me More Recording File Link --></label>
+        <name>Tell_Me_More_Recording_File_Link__c</name>
+    </fields>
+    <fields>
+        <label><!-- Tell Me Recording File Link --></label>
+        <name>Tell_Me_Recording_File_Link__c</name>
     </fields>
     <fields>
         <label><!-- Test Session --></label>
@@ -521,17 +453,25 @@
             <section>Fake News</section>
         </sections>
         <sections>
+            <label><!-- New Section --></label>
+            <section>New Section</section>
+        </sections>
+        <sections>
             <label><!-- Round Details --></label>
             <section>Round Details</section>
         </sections>
         <sections>
-            <label><!-- Speech Task Aging Well --></label>
-            <section>Speech Task Aging Well</section>
-        </sections>
-        <sections>
-            <label><!-- Speech Task Episodic Memory --></label>
-            <section>Speech Task Episodic Memory</section>
+            <label><!-- Speech Info --></label>
+            <section>Speech Info</section>
         </sections>
     </layouts>
+    <quickActions>
+        <label><!-- Download File --></label>
+        <name>Download_File</name>
+    </quickActions>
     <startsWith>Consonant</startsWith>
+    <webLinks>
+        <label><!-- Download --></label>
+        <name>Download</name>
+    </webLinks>
 </CustomObjectTranslation>

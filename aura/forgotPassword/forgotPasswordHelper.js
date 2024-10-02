@@ -10,7 +10,6 @@
         action.setParams({username:username, checkEmailUrl:checkEmailUrl});
         action.setCallback(this, function(a) {
             var rtnValue = a.getReturnValue();
-            
             if (rtnValue != null) {
                component.set("v.errorMessage",rtnValue);
                component.set("v.showError",true);

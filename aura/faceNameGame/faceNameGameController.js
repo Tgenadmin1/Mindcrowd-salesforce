@@ -185,6 +185,7 @@
                             var face_name_game_text_21_a ="";
                             var face_name_game_text_14a ="";
                             var face_name_game_text_23 ="";
+                            var tower_of_London_text_4 = "";
 							
 
 
@@ -197,6 +198,7 @@
                                 face_name_game_text_21_a =$A.get("$Label.c.face_name_game_text_21_a_tap");
                                 face_name_game_text_14a =$A.get("$Label.c.face_name_game_text_14a_tap");
                                 face_name_game_text_23 =$A.get("$Label.c.face_name_game_text_23_tap");
+                                tower_of_London_text_4 = $A.get("$Label.c.tower_of_London_text_4_tap");
                             }else{
                                 face_name_game_text_5_a= $A.get("$Label.c.face_name_game_text_5_a");
                                 face_name_game_text_12_a =$A.get("$Label.c.face_name_game_text_12_a");
@@ -205,6 +207,7 @@
                                 face_name_game_text_21_a =$A.get("$Label.c.face_name_game_text_21_a");
                                 face_name_game_text_14a =$A.get("$Label.c.face_name_game_text_14a");
                                 face_name_game_text_23 =$A.get("$Label.c.face_name_game_text_23");
+                                tower_of_London_text_4 = $A.get("$Label.c.tower_of_London_text_4");                                
                             }
 
                                 configdata  = configdata.map(obj => {	
@@ -215,6 +218,7 @@
                                 obj.content = obj.content.replace('face_name_game_text_21_a', face_name_game_text_21_a); 
                                 obj.content = obj.content.replace('face_name_game_text_14a', face_name_game_text_14a); 
                                 obj.content = obj.content.replace('face_name_game_text_23', face_name_game_text_23);
+                                obj.content = obj.content.replace('tower_of_London_text_4', tower_of_London_text_4);
                                 return obj;
                           });
                           //console.log('New configdata: '+JSON.stringify(configdata));
@@ -1140,8 +1144,23 @@
                                             result.occupation= false;
                                         }
                                         //console.log("sunil:before call save data ");
-                                        saveData('facename', configdata[currentScreen - 1].question+'a', inputDat.name,configdata[currentScreen - 1].answer.name,result.name,configdata[currentScreen-1].endDuration,configdata[currentScreen - 1].isPractice, firstTime,isIgnore,  pinputkeyPress);
-                                        saveData('facename', configdata[currentScreen - 1].question+'b', inputDat.occupation,configdata[currentScreen - 1].answer.occupation,result.occupation,configdata[currentScreen-1].endDuration, configdata[currentScreen - 1].isPractice, firstTime,isIgnore, oinputkeyPress );
+                                        let savedquestion = configdata[currentScreen - 1].question;                               
+                                        let savedanswer = configdata[currentScreen - 1].answer.name;  
+                                        let savedanswerOccuupation = configdata[currentScreen - 1].answer.occupation;
+                                        let savedEndDuration = configdata[currentScreen-1].endDuration;
+                                        let savedIsPractice = configdata[currentScreen - 1].isPractice; 
+                                        let savedResultName = result.name;  
+                                        let savedresultOccuupation = result.occupation; 
+                                        let savedInputDataName = inputDat.name;
+                                        let savedOccupation = inputDat.occupation;
+                                        let savedpinputkeyPress = pinputkeyPress;
+                                        let savedoinputkeyPress = oinputkeyPress;
+                                        let savedFirstTime = firstTime;
+                                        let savedIsIgnore = isIgnore;
+                                        saveData('facename', savedquestion+'a', savedInputDataName,savedanswer,savedResultName,savedEndDuration,savedIsPractice, savedFirstTime,savedIsIgnore,  savedpinputkeyPress);
+                                        setTimeout(function() {
+                                            saveData('facename', savedquestion+'b', savedOccupation,savedanswerOccuupation,savedresultOccuupation,savedEndDuration, savedIsPractice, savedFirstTime,savedIsIgnore, savedoinputkeyPress ); 
+                                        }, 1000);                                        
                                         //console.log("sunil:after call save data "); 
                                         
                                    }
@@ -1164,9 +1183,22 @@
                                         }  
                                         else{
                                             result.occupation= false;
-                                        }          
-                                        saveData('facename', configdata[currentScreen - 1].question+'a', inputDat.name,configdata[currentScreen - 1].answer.name,result.name,configdata[currentScreen-1].endDuration,configdata[currentScreen - 1].isPractice, firstTime,isIgnore );
-                                        saveData('facename', configdata[currentScreen - 1].question+'b', inputDat.occupation,configdata[currentScreen - 1].answer.occupation,result.occupation,configdata[currentScreen-1].endDuration, configdata[currentScreen - 1].isPractice, firstTime,isIgnore );
+                                        }
+                                        let savedquestion = configdata[currentScreen - 1].question;                               
+                                        let savedanswer = configdata[currentScreen - 1].answer.name;  
+                                        let savedanswerOccuupation = configdata[currentScreen - 1].answer.occupation;
+                                        let savedEndDuration = configdata[currentScreen-1].endDuration;
+                                        let savedIsPractice = configdata[currentScreen - 1].isPractice; 
+                                        let savedResultName = result.name;  
+                                        let savedresultOccuupation = result.occupation; 
+                                        let savedInputDataName = inputDat.name;
+                                        let savedOccupation = inputDat.occupation;
+                                        let savedFirstTime = firstTime;
+                                        let savedIsIgnore = isIgnore;          
+                                        saveData('facename', savedquestion+'a', savedInputDataName,savedanswer,savedResultName,savedEndDuration,savedIsPractice, savedFirstTime,savedIsIgnore );
+                                        setTimeout(function() {
+                                            saveData('facename', savedquestion+'b', savedOccupation,savedanswerOccuupation,savedresultOccuupation,savedEndDuration, savedIsPractice, savedFirstTime,savedIsIgnore );    
+                                        }, 1000);                                        
                              
                                         }else{
                                             inputDat=inputString;
@@ -1390,8 +1422,21 @@
                                                 resultData[configdata[currentScreen - 1].screen]["solution"] = solution;
                                                 lastdatatitle="Result";
                                                //save output
-                                               saveData('facename', configdata[currentScreen - 1].question+'a', inputdata.name,configdata[currentScreen - 1].answer.name, result.name, result_time, configdata[currentScreen - 1].isPractice, firstTime ,isIgnore);
-                                               saveData('facename', configdata[currentScreen - 1].question+'b', inputdata.occupation,configdata[currentScreen - 1].answer.occupation, result.occupation, result_time, configdata[currentScreen - 1].isPractice, firstTime ,isIgnore);
+                                               let savedquestion = configdata[currentScreen - 1].question;                                
+                                               let savedanswer = configdata[currentScreen - 1].answer.name; 
+                                               let savedanswerOccuupation = configdata[currentScreen - 1].answer.occupation;                                             
+                                               let savedIsPractice = configdata[currentScreen - 1].isPractice;
+                                               let savedInputDataName = inputdata.name;
+                                               let savedOccupation = inputdata.occupation; 
+                                               let savedResultName = result.name;  
+                                               let savedresultOccuupation = result.occupation;  
+                                               let savedResult_time = result_time;
+                                               let savedFirstTime = firstTime;
+                                               let savedIsIgnore = isIgnore;     
+                                               saveData('facename', savedquestion+'a', savedInputDataName,savedanswer, savedResultName, savedResult_time, savedIsPractice, savedFirstTime ,savedIsIgnore);
+                                               setTimeout(function() {
+                                                saveData('facename',savedquestion+'b', savedOccupation,savedanswerOccuupation, savedresultOccuupation, savedResult_time, savedIsPractice, savedFirstTime ,savedIsIgnore);
+                                               }, 1000);                                               
                                                
                                                setTimeout(clearResult,1000);
                                                
@@ -1445,8 +1490,19 @@
                                            lastdatatitle="Result";               
                                        //save output
                                            if(!configdata[currentScreen - 1].answer.selected){
-                                               saveData('facename', configdata[currentScreen - 1].question+'a', inputdata.name,configdata[currentScreen - 1].answer.name, result.name, result_time, configdata[currentScreen - 1].isPractice);
-                                               saveData('facename', configdata[currentScreen - 1].question+'b', inputdata.occupation,configdata[currentScreen - 1].answer.occupation, result.occupation, result_time, configdata[currentScreen - 1].isPractice);   
+                                               let savedquestion = configdata[currentScreen - 1].question;                                
+                                               let savedanswer = configdata[currentScreen - 1].answer.name; 
+                                               let savedanswerOccuupation = configdata[currentScreen - 1].answer.occupation;                                             
+                                               let savedIsPractice = configdata[currentScreen - 1].isPractice;
+                                               let savedInputDataName = inputdata.name;
+                                               let savedOccupation = inputdata.occupation; 
+                                               let savedResultName = result.name;  
+                                               let savedresultOccuupation = result.occupation;  
+                                               let savedResult_time = result_time;  
+                                               saveData('facename', savedquestion+'a', savedInputDataName,savedanswer, savedResultName, savedResult_time, savedIsPractice);
+                                               setTimeout(function() {
+                                                saveData('facename', savedquestion+'b', savedOccupation,savedanswerOccuupation, savedresultOccuupation, savedResult_time, savedIsPractice);   
+                                               }, 1000);                                               
                                            }else{
                                                saveData('facename', configdata[currentScreen - 1].question, input, resultData[configdata[currentScreen - 1].screen]["solution"],resultData[configdata[currentScreen - 1].screen]["result"], result_time, configdata[currentScreen - 1].isPractice);
                                            }

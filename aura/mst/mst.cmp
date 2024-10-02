@@ -29,8 +29,8 @@
                 <div class="game_block" id="game_block">
                     <div class="datablock" id="datablock_mst"></div>
                     <p id="nextBtton" class="centers magenta-btn  btn-xlarge marginT20 slds-hide">
-                        <button class="slds-button"  onclick="{!c.goToMyResultsPage }">My Results</button>
-                        <button class="slds-button"  onclick="{!c.goToNextPage }">My Games</button>
+                        <button class="slds-button" label="OK" title="OK" onclick="{!c.goToMyResultsPage }">My Results</button>
+                        <button class="slds-button" label="OK" title="OK" onclick="{!c.goToNextPage }">My Games</button>
                     </p>
                     <div class="duration">
                         <div class="d_title" id="d_title"></div>

@@ -581,7 +581,7 @@
                                     function addingItemsToConfigData(arr, toArray, isBlankScreen, isStudy) {
                                         let screenCount = toArray.length;
                                         let blankScreen = {
-                                            screen: "blank", startDuration: 0, endDuration: 500, content: '<p  class="centers"></p>' +
+                                            screen: "blank", startDuration: 0, endDuration: 1000, content: '<p  class="centers"></p>' +
                                                 '<div class="objque">' +
                                                 '<div class="objbox" ></div>' +
                                                 '<div class="btninputbox"><ul class="btninputbx two-button-set">' +
@@ -592,7 +592,7 @@
                                         };
                                         if (!isStudy) {
                                             blankScreen = {
-                                                screen: "blank", startDuration: 0, endDuration: 500, content: '<p  class="centers"></p>' +
+                                                screen: "blank", startDuration: 0, endDuration: 1000, content: '<p  class="centers"></p>' +
                                                     '<div class="objque">' +
                                                     '<div class="objbox" ></div>' +
                                                     '<div class="btninputbox"><ul class="btninputbx two-button-set">' +

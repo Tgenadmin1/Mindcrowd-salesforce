@@ -24,7 +24,8 @@ public with sharing class PassShippingIdToVF
             System.debug('--selected shipping id are--'+selShipLst);
              //LIST to fetch contact address(look up) for the selected shipping records.
             labelgenerationList=[Select Id,Barcode__c,Campaign__r.Name,Campaign__r.Usps_Service_Type__c,
-                                Campaign__r.Weight_in_Ounces__c,Contact_Id__c,Campaign__r.isReturnLabelNeeded__c,
+                                Campaign__r.Weight_in_Ounces__c,Campaign__r.Length_in_Inches__c,Campaign__r.Width_in_Inches__c,Campaign__r.Height_in_Inches__c,Campaign__r.Shape__c,
+                                Contact_Id__c,Campaign__r.isReturnLabelNeeded__c,
                                 Contact_Id__r.Name,Contact_Id__r.MailingCountry, Contact_Id__r.MailingStateCode,Address__c,
                                 Contact_Id__r.MailingCity,Contact_Id__r.MailingStreet,Contact_Id__r.MailingPostalCode
                                 from Shipping_Detail__c where Id IN:selShipLst];

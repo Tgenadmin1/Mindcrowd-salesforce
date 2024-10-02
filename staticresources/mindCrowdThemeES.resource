@@ -5,7 +5,7 @@
         font-weight: 100;
         src: local("Whitney"), local("Whitney"), url("/sfsites/c/resource/mindcrowd_style/fonts/whitney.ttf") format("opentype");
       } */
-          @font-face {
+      @font-face {
         font-family: 'whitneylight';
         font-style: normal;
         font-weight: 300;
@@ -2418,6 +2418,7 @@
     .game-tiles.game6,
     .game-tiles.game7,
     .game-tiles.game8,
+    .game-tiles.game17,
 .game-tiles.survey1,
 .game-tiles.survey2,
 .game-tiles.survey3,
@@ -2434,7 +2435,8 @@
 .game-tiles.survey14,
 .game-tiles.survey15,
 .game-tiles.survey16,
-.game-tiles.survey17{
+.game-tiles.survey17,
+.game-tiles.survey18{
         position: relative;
     }
     .game-tiles.game1::before{
@@ -2550,6 +2552,50 @@
         opacity: 0.4;
         width: 150px;
     }
+
+    .game-tiles.game17::before {
+        background-image: url(/s/sfsites/c/resource/1619780842000/mindcrowd_style/images/digitSymbol.svg?test=1);
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: -50px center;
+        content: ' ';
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 10px;
+        height: 90%;
+        opacity: 0.4;
+        width: 300px;
+    }
+    .game-tiles.game18::before {
+        background-image: url(/s/sfsites/c/resource/1619780842000/mindcrowd_style/images/cactus.svg?test=1);
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: -42px center;
+        content: ' ';
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 14px;
+        height: 80%;
+        opacity: 0.4;
+        width: 300px;
+    }
+    .game-tiles.game14::before {
+        background-image: url(/s/sfsites/c/resource/1619780842000/mindcrowd_style/images/FakeNews.svg?test=1);
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: -20px center;
+        content: ' ';
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 14px;
+        height: 80%;
+        opacity: 0.4;
+        width: 180px;
+    }
+    
 	
 	.game-tiles.survey1::before,
     .game-tiles.survey2::before,
@@ -2567,7 +2613,8 @@
     .game-tiles.survey14::before,
     .game-tiles.survey15::before,
     .game-tiles.survey16::before,
-    .game-tiles.survey17::before {
+    .game-tiles.survey17::before,
+    .game-tiles.survey18::before {
         background-image: url(/s/sfsites/c/resource/1619780842000/mindcrowd_style/images/Survey.svg?test=1);
         background-repeat: no-repeat;
         background-size: contain;
@@ -3334,6 +3381,12 @@
     .mb10{
         margin-bottom: 10px !important;
     }
+    .mt30 {
+        margin-top: 30px !important;
+    }
+    .mt50 {
+        margin-top: 50px !important;
+    }
     .mb15 {
         margin-bottom: 15px !important;
     }
@@ -3342,6 +3395,12 @@
     }
     .mt35 {
         margin-top: 35px !important;
+    }
+    .mr10 {
+        margin-right: 10px !important;
+    }
+    .ml30 {
+        margin-left: 30px !important;
     }
     .box4 {
         width: 100%;
@@ -4454,7 +4513,7 @@
         font-size: 34px !important;
     }
     .keep-track-ul  .slds-button{
-        font-size: 24px !important;
+        font-size: 20px !important;
         padding: 15px 5px 15px !important;
         min-width: 100%;
         text-align: center;
@@ -4490,7 +4549,12 @@
     .comm-page-custom-numberletter,
     .comm-page-custom-keeptrack,
     .comm-page-custom-me-objects-temporal,
-    .comm-page-custom-me-objects-space
+    .comm-page-custom-me-objects-space,
+    .comm-page-custom-me-fakenews,
+    .comm-page-custom-me-cameland-cactus,
+    .comm-page-custom-me-digitsymbol,
+	.comm-page-custom-me-speech-tasks,
+	.comm-page-custom-pme-tellmemore
     {
         padding-top: 46px;
     }
@@ -4501,7 +4565,12 @@
     .comm-page-custom-me-concentracion .slds-builder-header_container,
     .comm-page-custom-me-nombresycaras .slds-builder-header_container,
     .comm-page-custom-numberletter .slds-builder-header_container,
-    .comm-page-custom-keeptrack .slds-builder-header_container
+    .comm-page-custom-keeptrack .slds-builder-header_container,
+    .comm-page-custom-me-fakenews .slds-builder-header_container,
+    .comm-page-custom-me-cameland-cactus .slds-builder-header_container,
+    .comm-page-custom-me-digitsymbol .slds-builder-header_container,
+	.comm-page-custom-me-speech-tasks .slds-builder-header_container,
+	.comm-page-custom-pme-tellmemore .slds-builder-header_container
     {
         display: none;
         padding-top: 0;
@@ -4516,7 +4585,12 @@
     .comm-page-custom-numberletter .main-content-inner,
     .comm-page-custom-keeptrack .main-content-inner,
     .comm-page-custom-me-objects-temporal .main-content-inner,
-    .comm-page-custom-me-objects-space .main-content-inner
+    .comm-page-custom-me-objects-space .main-content-inner,
+    .comm-page-custom-me-cameland-cactus .main-content-inner,
+    .comm-page-custom-me-fakenews .main-content-inner,
+    .comm-page-custom-me-digitsymbol .main-content-inner,
+	.comm-page-custom-me-speech-tasks .main-content-inner,
+	.comm-page-custom-pme-tellmemore .main-content-inner
     {
         min-height: 90vh;
         width: auto;
@@ -5316,6 +5390,14 @@
         .faceImg{
             width: 220px !important;
         }
+        .camelImg {
+            width: 150px !important;
+            height: 100px !important;
+        }
+        
+        .camelBtn {
+            margin-right: 20px;
+        }
         .cFaceNameGame .face3Container .faceImg{
             width: 200px !important;
         }
@@ -5366,6 +5448,13 @@
             width: 150px;
         }
         .keep-track-ul .slds-button {
+            min-width: 100%;
+            text-align: center;
+            display: inline-block;
+            font-size: 20px !important;
+            padding: 15px 5px !important;
+        }
+        .camel-cactus-ul .slds-button {
             min-width: 100%;
             text-align: center;
             display: inline-block;
@@ -5620,7 +5709,7 @@
             margin-left: auto;
             margin-right: auto;
         }
-        .comm-page-custom-me-seguimiento .main-content-inner, .comm-page-custom-me-objetos .main-content-inner, .comm-page-custom-me-parespalabrasreglas .main-content-inner, .comm-page-custom-me-reaccion .main-content-inner, .comm-page-custom-me-concentracion .main-content-inner, .comm-page-custom-me-nombresycaras .main-content-inner, .comm-page-custom-numberletter .main-content-inner, .comm-page-custom-keeptrack .main-content-inner, .comm-page-custom-me-objects-temporal .main-content-inner, .comm-page-custom-me-objects-space .main-content-inner{
+        .comm-page-custom-me-seguimiento .main-content-inner, .comm-page-custom-me-objetos .main-content-inner, .comm-page-custom-me-parespalabrasreglas .main-content-inner, .comm-page-custom-me-reaccion .main-content-inner, .comm-page-custom-me-concentracion .main-content-inner, .comm-page-custom-me-nombresycaras .main-content-inner, .comm-page-custom-numberletter .main-content-inner, .comm-page-custom-keeptrack .main-content-inner, .comm-page-custom-me-objects-temporal .main-content-inner, .comm-page-custom-me-objects-space .main-content-inner, .comm-page-custom-me-digitsymbol .main-content-inner, .comm-page-custom-me-cameland-cactus .main-content-inner, .comm-page-custom-me-fakenews .main-content-inner, comm-page-custom-me-speech-tasks .main-content-inner, comm-page-custom-pme-tellmemore .main-content-inner  {
             min-height: 82vh;
         }
         .instractionb.box4 div, .box4 div, .btninput1, .comm-page-custom-me-reaccion .game_panel img {
@@ -6859,7 +6948,12 @@
             .comm-page-custom-numberletter .main-content-inner, 
             .comm-page-custom-keeptrack .main-content-inner, 
             .comm-page-custom-me-objects-temporal .main-content-inner, 
-            .comm-page-custom-me-objects-space .main-content-inner {
+            .comm-page-custom-me-objects-space .main-content-inner,
+            .comm-page-custom-me-cameland-cactus .main-content-inner,
+            .comm-page-custom-me-fakenews .main-content-inner,
+            .comm-page-custom-me-digitsymbol .main-content-inner,
+			.comm-page-custom-me-speech-tasks .main-content-inner,
+			.comm-page-custom-pme-tellmemore .main-content-inner  			{
                 min-height: 90vh;
             }
             }
@@ -6870,7 +6964,7 @@
             }
             
         @media (max-width: 767px) {
-            .comm-page-custom-me-seguimiento .main-content-inner, .comm-page-custom-me-objetos .main-content-inner, .comm-page-custom-me-parespalabrasreglas .main-content-inner, .comm-page-custom-me-reaccion .main-content-inner, .comm-page-custom-me-concentracion .main-content-inner, .comm-page-custom-me-nombresycaras .main-content-inner, .comm-page-custom-numberletter .main-content-inner, .comm-page-custom-keeptrack .main-content-inner, .comm-page-custom-me-objects-temporal .main-content-inner, .comm-page-custom-me-objects-space .main-content-inner{
+            .comm-page-custom-me-seguimiento .main-content-inner, .comm-page-custom-me-objetos .main-content-inner, .comm-page-custom-me-parespalabrasreglas .main-content-inner, .comm-page-custom-me-reaccion .main-content-inner, .comm-page-custom-me-concentracion .main-content-inner, .comm-page-custom-me-nombresycaras .main-content-inner, .comm-page-custom-numberletter .main-content-inner, .comm-page-custom-keeptrack .main-content-inner, .comm-page-custom-me-objects-temporal .main-content-inner, .comm-page-custom-me-objects-space .main-content-inner, .comm-page-custom-me-digitsymbol .main-content-inner, .comm-page-custom-me-cameland-cactus .main-content-inner, .comm-page-custom-me-fakenews .main-content-inner, comm-page-custom-me-speech-tasks .main-content-inner, comm-page-custom-pme-tellmemore .main-content-inner {
                 min-height: 72vh;
             }
 
@@ -6974,7 +7068,13 @@
            } */
     
         }
-
+@media (min-width: 900px) {
+        .mc-combobox.slds-form-element > div .slds-form-element__control .slds-combobox_container .slds-combobox_container, .age, .speakingLanguageAge, .otherGender {
+			width: 46vw !important;
+			max-width: 560px !important;
+			min-width: 380px !important;
+		}
+}
         body{ 
             opacity: 1; 
            /* animation: imageAnimation 2s ; */
@@ -6999,5 +7099,108 @@
         to {opacity: 1;}
         }
 
-       
+
+        .digit-symbol-ul {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            list-style: none;
+            padding: 0;
+        }
+        
+        .digit-symbol-ul li {
+            margin: 0 5px; /* Adjust the margin between buttons */
+        }
+        
+        .digit-symbol-ul li .slds-button {
+            border-radius: 3px !important;
+            box-shadow: rgb(0 0 0 / 30%) 0px 11px 12px -7px;
+            color: #163248 !important;
+            background-color: #fff !important;
+            font-weight: 200 !important;
+            border: 1px #bdbdbd solid !important;
+            max-width: 100%;
+            font-size: 24px; /* Increase the font size */
+            padding: 15px 10px; /* Adjust padding for button size */
+        }
+        
+        .digit-symbol-ul li .slds-button[disabled],
+        .digit-symbol-ul li .slds-button:disabled {
+            background-color: #fff !important;
+            border: 1px #bdbdbd solid !important;
+            color: #000305 !important;
+        }
+        
+        .digit-symbol-ul .inputbtn_lbl {
+            margin-bottom: 50px;
+            border: 1px #ccc solid;
+        }
+        
+        .digit-symbol-ul {
+            justify-content: center;
+            margin: auto;
+            margin-top: 10px;
+        }
+        
+        .digit-symbol-ul .slds-button {
+            font-size: 24px !important;
+            padding: 12px 5px 12px !important;
+            min-width: 100%;
+            text-align: center;
+            display: inline-block;
+            width : 80px;
+        }    
+        .camel-cactus-ul {
+            justify-content: center;
+            margin: auto;
+            margin-top: 16px;
+        }
+        
+        .camel-cactus-ul li,
+        .camel-cactus-ul div {
+            /* float:left; */
+            padding-right: 15px;
+            padding-bottom: 2px;
+            /* min-width: 234px; */
+            min-width: 210px;
+        
+            /* width: 16.66666%; */
+            width: 25%;
+            float: none;
+            display: inline-block;
+            vertical-align: middle;
+        }
+        
+        
+        .camel-cactus-ul li .slds-button {
+            border-radius: 3px !important;
+            box-shadow: rgb(0 0 0 / 30%) 0px 11px 12px -7px;
+            color: #163248 !important;
+            background-color: #fff !important;
+            font-weight: 200 !important;
+            border: 1px #bdbdbd solid !important;
+            max-width: 100%;
+        }
+        
+        .camel-cactus-ul .slds-button {
+            font-size: 24px !important;
+            padding: 15px 5px 15px !important;
+            min-width: 100%;
+            text-align: center;
+            display: inline-block;
+        }
+        
+            .camelImgtop {
+                width: 200px !important;
+                height: 200px !important;
+            }
+            .camelImgscrewdriver {
+                width: 300px !important;
+                height: 200px !important;
+            }
+            
+            .wine {
+                width: 160px !important;
+                height: 200px !important;
+            }
     

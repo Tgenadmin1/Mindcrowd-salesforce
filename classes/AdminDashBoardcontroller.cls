@@ -24,18 +24,31 @@ public class AdminDashBoardcontroller
                                    AND CreatedDate >= :startDateTime AND CreatedDate <= :endDateTime
                                    group by Shipment_Status__c])  
         {
+            System.debug('Shipment records are...'+ar);
             if(ar.get('Shipment_Status__c') != null)
                 mapGroupData.put(String.valueOf(ar.get('Shipment_Status__c')), Integer.valueOf(ar.get('expr0')));
             
         }
+        
+        if (mapGroupData.containsKey('Consented')) {
         mapOrdData.put('Consented', mapGroupData.get('Consented'));
+      }
+    if (mapGroupData.containsKey('Created')) {
         mapOrdData.put('Created', mapGroupData.get('Created'));
+    }
+    if (mapGroupData.containsKey('Sent')) {
         mapOrdData.put('Sent', mapGroupData.get('Sent'));
-        mapOrdData.put('Delivered', mapGroupData.get('Delivered')); 
+    }
+    if (mapGroupData.containsKey('Delivered')) {
+        mapOrdData.put('Delivered', mapGroupData.get('Delivered'));
+    }
+    if (mapGroupData.containsKey('Received')) {
         mapOrdData.put('Received', mapGroupData.get('Received'));
+    }
         
-        
+        System.debug('MapOrdData...'+mapOrdData);
         return mapOrdData;
+        
     }
     
     @AuraEnabled
@@ -64,12 +77,20 @@ public class AdminDashBoardcontroller
             mapGroupData.put('Enrolled People(Consents)', Integer.valueOf(lstResults[0].get('expr0')));
             mapGroupData.put('Email Addresses Collected', Integer.valueOf(lstResults[0].get('expr1')));
         }
-        // Re-arrange the Data in shorting order as below
-        mapRegData.put('Enrolled People(Consents)', mapGroupData.get('Enrolled People(Consents)'));
-        mapRegData.put('Not-Completed Game', mapGroupData.get('Not-Completed Game'));
-        mapRegData.put('Completed Game', mapGroupData.get('Completed Game'));
-        mapRegData.put('Email Addresses Collected', mapGroupData.get('Email Addresses Collected'));
         
+        // Re-arrange the Data in shorting order as below
+        if (mapGroupData.containsKey('Enrolled People(Consents)')) {
+        mapRegData.put('Enrolled People(Consents)', mapGroupData.get('Enrolled People(Consents)'));
+      }
+    if (mapGroupData.containsKey('Not-Completed Game')) {
+        mapRegData.put('Not-Completed Game', mapGroupData.get('Not-Completed Game'));
+    }
+    if (mapGroupData.containsKey('Completed Game')) {
+        mapRegData.put('Completed Game', mapGroupData.get('Completed Game'));
+    }
+    if (mapGroupData.containsKey('Email Addresses Collected')) {
+        mapRegData.put('Email Addresses Collected', mapGroupData.get('Email Addresses Collected'));
+    }
         return mapRegData;
     }
     

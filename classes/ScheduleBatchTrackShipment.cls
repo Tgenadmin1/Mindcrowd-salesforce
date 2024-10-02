@@ -10,7 +10,7 @@ global class ScheduleBatchTrackShipment implements Schedulable
     global void execute(SchedulableContext sc)
     {
         BatchTrackShipment b= new BatchTrackShipment();
-        database.executebatch(b,200);
+        database.executebatch(b,100);
   
     }
 }

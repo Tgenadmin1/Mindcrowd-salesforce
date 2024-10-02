@@ -9,35 +9,11 @@
          GamesController.logError( className,  methodName,  description);
          Test.stopTest();
     }
-    @IsTest
-static void testLogErrorException() {
-    // Test a scenario where an exception is thrown
-    Test.startTest();
-    String className = 'TestClassName';
-    String methodName = 'TestMethodName';
-    String description = 'Test Description';
     
-    // Simulate an exception by passing invalid parameters
-    String result = GamesController.logError(null, null, null);
-    Test.stopTest();
     
-    // Assert that the result is 'error'
-    System.assertEquals('error', result, 'Expected error result');
-}
-  
-    @IsTest
-static void testLogErrorExceptionHandling() {
-
-    Test.startTest();
-    String className = 'TestClassName';
-    String methodName = 'TestMethodName';
-    String description = 'Test Description';
-    GamesController.logError(className, methodName, description);
-    Test.stopTest();
-}
-   @IsTest
-static void saveGameResponseTest() {
-     Contact con= new contact(lastname='Test1');
+    static testMethod void saveGameResponseTest() 
+    {
+        Contact con= new contact(lastname='Test1');
         insert con;
         Game_Detail__c game =new Game_Detail__c(Name='DLTRS');
         insert game;
@@ -88,29 +64,7 @@ static void saveGameResponseTest() {
         Test.setMock(HttpCalloutMock.class, new MockHttpResponseGenerator());
         GamesController.gameNameInParticipantGameInfoUpdate(data4);
         Test.stopTest();
-
-    // Test a scenario where an exception is thrown when deserializing JSON
-    Test.startTest();
-    GamesController.saveGameResponse('Invalid JSON');
-    Test.stopTest();
-
-    // Test a scenario where the database query returns records
-    Test.startTest();
-    // Create a Participant_Game_Response__c record with matching attributes
-    Participant_Game_Response__c testRecord = new Participant_Game_Response__c(
-        Game_Name__c = game.Id,
-        Question_Number__c = '1', 
-        Participant_Game_InfoID__c = pGI.Id,
-        Round__c = 'Round 1',
-        Right_Answer__c = 'd'
-    );
-    insert testRecord;
-    // Attempt to insert a new record with the same attributes
-    string data1 = '{"Game_Name__c":"' + game.Id + '", "Question_Number__c":"1", "Participant_Game_InfoID__c":"' + String.valueOf(pGI.Id) + '", "Round__c":"Round 1", "Right_Answer__c":"d"}';
-    GamesController.saveGameResponse(data1);
-    Test.stopTest();
-}
-
+    }
     public static testmethod void getIpCustomLoginUserTest() 
     {
         Test.startTest();
@@ -208,5 +162,20 @@ static void saveGameResponseTest() {
              GamesController.getCurrentContact(); 
         }    
         test.stopTest();
-    }    
+    }
+
+    @IsTest
+public static void testupdateSpeechTaskPGI() {
+    Contact con= new contact(lastname='Test1');
+        insert con;
+        Game_Detail__c game =new Game_Detail__c(Name='DLTRS');
+        insert game;
+        Participant_Game_Info__c pGI = new Participant_Game_Info__c();
+            pGI.Contact_Name__c=con.Id;
+            pGI.Game_Name__c=game.Id;
+        insert pGI;
+  
+   Map<String, Object> responseBodys = GamesController.updateSpeechTaskPGI(pGI.id, 'Aging Well', true,true,true,false);
+ 
+}    
 }

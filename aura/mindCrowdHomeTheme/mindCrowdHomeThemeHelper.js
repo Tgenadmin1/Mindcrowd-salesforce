@@ -29,29 +29,13 @@
     $A.enqueueAction(ConList);
   },
   printBrowser: function (component, event, helper) {
-    
-    function getCookie(name) {
-      var cookieString = "; " + document.cookie;
-      cookieString = cookieString.replace('LSKey-c$', '');
-      var parts = cookieString.split("; " + name + "=");
-      if (parts.length === 2) {
-          return parts.pop().split(";").shift();
-      }
-      return null;
-  }
-
     navigator.sayswho = (function () {
       const userAgent = navigator.userAgent;
       var tempArray = $A.get("$Label.c.App_block_name").split(',');
       var mainURL = document.URL;
-      console.log('test',   getCookie('BrowserId'));
-     // alert('raj test = ' +  navigator.userAgent);
-     // var appinfo = document.cookie.search('BrowserId');
-     
-      
       for (var i = 0; i < tempArray.length; i++) {
         if (userAgent.search(tempArray[i].trim()) > 1 && mainURL.search($A.get("$Label.c.url_testlanguage")) > 1) {
-          component.set("v.isModalOpenFR", true);
+          //component.set("v.isModalOpenFR", true);
         }
 
         // if ((userAgent.search(tempArray[i].trim()) > 1  || mainURLref.search(tempArray[i].trim()) > 1) && mainURL.search($A.get("$Label.c.url_testlanguage")) > 1) {
@@ -70,6 +54,15 @@
       // }
     })();
   },
- 
-
+  fetchContact: function (component, participantcode) {     
+    var action = component.get("c.getParticipantContactID");
+    action.setParams({participantId:participantcode});
+    action.setCallback(this, function(a) {
+        var rtnValue = a.getReturnValue();
+        if (rtnValue != null) {
+            localStorage.setItem('utmmedium',rtnValue.Email);  
+        }
+   });
+    $A.enqueueAction(action);
+}
 })

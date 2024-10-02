@@ -1,6 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Flow xmlns="http://soap.sforce.com/2006/04/metadata">
     <apiVersion>56.0</apiVersion>
+    <decisions>
+        <description>IsP2Participant is true on Contact skip updating Survey Dashboard Status, otherwise update both Survey Dashboard Status and Survey Status.</description>
+        <name>IsP2Participant_is_True</name>
+        <label>IsP2Participant is True</label>
+        <locationX>182</locationX>
+        <locationY>323</locationY>
+        <defaultConnector>
+            <targetReference>update_contact</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Is_True</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Contact_Name__r.isProject2_Participant__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Update_only_Survey_Status</targetReference>
+            </connector>
+            <label>Is True</label>
+        </rules>
+    </decisions>
     <description>to check the checkbox on contact object.</description>
     <environments>Default</environments>
     <interviewLabel>Cancer Survey {!$Flow.CurrentDateTime}</interviewLabel>
@@ -27,8 +53,8 @@
     <recordUpdates>
         <name>update_contact</name>
         <label>update contact</label>
-        <locationX>176</locationX>
-        <locationY>323</locationY>
+        <locationX>314</locationX>
+        <locationY>431</locationY>
         <filterLogic>and</filterLogic>
         <filters>
             <field>Id</field>
@@ -51,11 +77,32 @@
         </inputAssignments>
         <object>Contact</object>
     </recordUpdates>
-    <start>
+    <recordUpdates>
+        <name>Update_only_Survey_Status</name>
+        <label>Update only Survey Status</label>
         <locationX>50</locationX>
+        <locationY>431</locationY>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.Contact__c</elementReference>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>Is_CANCER_Submitted__c</field>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </inputAssignments>
+        <object>Contact</object>
+    </recordUpdates>
+    <start>
+        <locationX>56</locationX>
         <locationY>0</locationY>
         <connector>
-            <targetReference>update_contact</targetReference>
+            <targetReference>IsP2Participant_is_True</targetReference>
         </connector>
         <filterLogic>and</filterLogic>
         <filters>

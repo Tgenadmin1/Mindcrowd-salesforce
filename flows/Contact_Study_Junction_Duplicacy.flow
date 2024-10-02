@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>60.0</apiVersion>
+    <assignments>
+        <name>Formula_for_Contact_Study</name>
+        <label>Formula for Contact Study</label>
+        <locationX>176</locationX>
+        <locationY>287</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.Compound_Key__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>CompoundKeyVerification</elementReference>
+            </value>
+        </assignmentItems>
+    </assignments>
+    <environments>Default</environments>
+    <formulas>
+        <name>CompoundKeyVerification</name>
+        <dataType>String</dataType>
+        <expression>{!$Record.Contact__c}&amp;&apos;_&apos;&amp;{!$Record.Studies__c}</expression>
+    </formulas>
+    <interviewLabel>Contact Study Junction Duplicacy {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Contact Study Junction Duplicacy</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <start>
+        <locationX>50</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Formula_for_Contact_Study</targetReference>
+        </connector>
+        <object>Contact_Study_Junction__c</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <triggerType>RecordBeforeSave</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>

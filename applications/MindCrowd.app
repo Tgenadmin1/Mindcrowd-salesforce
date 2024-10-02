@@ -47,6 +47,8 @@
     <tabs>Bean_Game__c</tabs>
     <tabs>Campaign_Participant__c</tabs>
     <tabs>AB_Testing__c</tabs>
+    <tabs>ECog_12__c</tabs>
+    <tabs>Glucosamine__c</tabs>
     <uiType>Lightning</uiType>
     <utilityBar>MindCrowd_UtilityBar</utilityBar>
 </CustomApplication>

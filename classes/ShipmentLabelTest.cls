@@ -22,6 +22,22 @@ public with sharing class ShipmentLabelTest
         ints1.MindCrowdState__c='AZ';
         ints1.MindCrowdZip5__c= 85004;
         //ints1.MindCrowdPhone__c='6023438400';
+        ints1.Image_Parameters__c = '4X6LABELP';
+        ints1.grant_type__c = 'client_credentials';
+        ints1.client_id__c = 'clientId';
+        ints1.client_secret__c = 'clientSecret';
+        ints1.AccessToken_url__c = 'https://test.access.token';
+        ints1.CRID__c = 'testCRID';
+        ints1.Role_Name_P__c = 'payerRole';
+        ints1.Role_Name_LO__c = 'labelOwnerRole';
+        ints1.MID__c = 'testMID';
+        ints1.Manifest_MID__c = 'testManifestMID';
+        ints1.Account_Type__c = 'Business';
+        ints1.Account_Number__c = '123456789';
+        ints1.Payment_Access_Token_URL__c = 'https://test.payment.token';
+        ints1.USPS_Label_API_URL__c = 'https://test.usps.label.api';
+        ints1.Packaging_Type__c = 'Package';
+        ints1.Processing_Category__c = 'Processing';
         insert ints1;
         ShipmentLabel.integrationsettings=ints1;
         
@@ -75,4 +91,23 @@ public with sharing class ShipmentLabelTest
         Test.StopTest();
     } 
 
+    @isTest
+    public static void testParseUSPSLabelResponseXML_Error() {
+        // Sample XML for an error response
+        String errorXML = '<?xml version="1.0"?>'
+            + '<Error>'
+            + '  <Number>123</Number>'
+            + '  <Description>Invalid address</Description>'
+            + '  <Source>AddressValidation</Source>'
+            + '</Error>';
+
+        // Call the method under test
+        USPSLabel parsedLabel = ShipmentLabel.parseUSPSLabelResponseXML(errorXML, false);
+
+        // Assertions
+        System.assertEquals('123', parsedLabel.USPS_ERROR_CODE, 'Error code should match.');
+        System.assertEquals('Invalid address', parsedLabel.USPS_ERROR_DESC, 'Error description should match.');
+        System.assertEquals('AddressValidation', parsedLabel.USPS_ERROR_SOURCE, 'Error source should match.');
+    }
+    
 }

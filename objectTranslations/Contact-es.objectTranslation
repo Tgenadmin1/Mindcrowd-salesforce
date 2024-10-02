@@ -57,6 +57,10 @@
         <name>Allow_Newsletters__c</name>
     </fields>
     <fields>
+        <label><!-- App Name --></label>
+        <name>App_Name__c</name>
+    </fields>
+    <fields>
         <label><!-- Are you Left or Right hand dominant? --></label>
         <name>Are_you_Left_or_Right_hand_dominant__c</name>
         <picklistValues>
@@ -137,22 +141,6 @@
         </picklistValues>
     </fields>
     <fields>
-        <label><!-- Camel and Cactus --></label>
-        <name>Camel_and_Cactus__c</name>
-        <picklistValues>
-            <masterLabel>Completed</masterLabel>
-            <translation><!-- Completed --></translation>
-        </picklistValues>
-        <picklistValues>
-            <masterLabel>Locked</masterLabel>
-            <translation><!-- Locked --></translation>
-        </picklistValues>
-        <picklistValues>
-            <masterLabel>Unlocked</masterLabel>
-            <translation><!-- Unlocked --></translation>
-        </picklistValues>
-    </fields>
-    <fields>
         <label><!-- Campaign Code --></label>
         <name>Campaign_Code__c</name>
     </fields>
@@ -217,6 +205,38 @@
         </picklistValues>
     </fields>
     <fields>
+        <label><!-- Digits --></label>
+        <name>Digits__c</name>
+        <picklistValues>
+            <masterLabel>Completed</masterLabel>
+            <translation><!-- Completed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Locked</masterLabel>
+            <translation><!-- Locked --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Unlocked</masterLabel>
+            <translation><!-- Unlocked --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- ECog12 --></label>
+        <name>ECog12__c</name>
+        <picklistValues>
+            <masterLabel>Completed</masterLabel>
+            <translation><!-- Completed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Locked</masterLabel>
+            <translation><!-- Locked --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Unlocked</masterLabel>
+            <translation><!-- Unlocked --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
         <label><!-- Education Attainment --></label>
         <name>Education_Attainment__c</name>
     </fields>
@@ -234,6 +254,10 @@
         <help><!-- Email reminder after 1 day --></help>
         <label><!-- Email trigger point --></label>
         <name>Email_trigger_point__c</name>
+    </fields>
+    <fields>
+        <label><!-- Enrolled in Paid Campaign --></label>
+        <name>Enrolled_in_Paid_Campaign__c</name>
     </fields>
     <fields>
         <label><!-- Event Id --></label>
@@ -276,8 +300,8 @@
         <name>Fake_News_Test_Consent__c</name>
     </fields>
     <fields>
-        <label><!-- Fake News Test --></label>
-        <name>Fake_News_Test__c</name>
+        <label><!-- Fake News --></label>
+        <name>Fake_News__c</name>
         <picklistValues>
             <masterLabel>Completed</masterLabel>
             <translation><!-- Completed --></translation>
@@ -463,6 +487,10 @@
             <translation><!-- Türkçe --></translation>
         </picklistValues>
         <picklistValues>
+            <masterLabel>bosanski</masterLabel>
+            <translation><!-- bosanski --></translation>
+        </picklistValues>
+        <picklistValues>
             <masterLabel>Íslenska</masterLabel>
             <translation><!-- Íslenska --></translation>
         </picklistValues>
@@ -584,6 +612,22 @@
         <name>Full_Name__c</name>
     </fields>
     <fields>
+        <label><!-- GLUCOSAMINE --></label>
+        <name>GLUCOSAMINE__c</name>
+        <picklistValues>
+            <masterLabel>Completed</masterLabel>
+            <translation><!-- Completed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Locked</masterLabel>
+            <translation><!-- Locked --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Unlocked</masterLabel>
+            <translation><!-- Unlocked --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
         <label><!-- Gender --></label>
         <name>Gender__c</name>
         <picklistValues>
@@ -616,8 +660,32 @@
         </picklistValues>
     </fields>
     <fields>
+        <label><!-- Gift Card already sent? --></label>
+        <name>Gift_Card_already_sent__c</name>
+    </fields>
+    <fields>
+        <label><!-- Glucosamine Survey --></label>
+        <name>Glucosamine_Survey__c</name>
+    </fields>
+    <fields>
         <label><!-- HEALTH MEDICAL --></label>
         <name>HEALTH_MEDICAL__c</name>
+        <picklistValues>
+            <masterLabel>Completed</masterLabel>
+            <translation><!-- Completed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Locked</masterLabel>
+            <translation><!-- Locked --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Unlocked</masterLabel>
+            <translation><!-- Unlocked --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- HEAT --></label>
+        <name>HEAT__c</name>
         <picklistValues>
             <masterLabel>Completed</masterLabel>
             <translation><!-- Completed --></translation>
@@ -876,6 +944,10 @@
         <name>Is_DIET_Submitted__c</name>
     </fields>
     <fields>
+        <label><!-- ECog-12 Survey --></label>
+        <name>Is_ECog12_Submitted__c</name>
+    </fields>
+    <fields>
         <label><!-- FHAD Survey --></label>
         <name>Is_FHAD_Submitted__c</name>
     </fields>
@@ -924,6 +996,10 @@
         <name>Is_WOMENS_HEALTH_Submitted__c</name>
     </fields>
     <fields>
+        <label><!-- Is this Paid Campaign? --></label>
+        <name>Is_it_Paid_Campaign__c</name>
+    </fields>
+    <fields>
         <label><!-- Keep Track --></label>
         <name>Keep_Track__c</name>
         <picklistValues>
@@ -951,6 +1027,10 @@
             <masterLabel>Español</masterLabel>
             <translation><!-- Español --></translation>
         </picklistValues>
+        <picklistValues>
+            <masterLabel>Spanish</masterLabel>
+            <translation><!-- Spanish --></translation>
+        </picklistValues>
     </fields>
     <fields>
         <label><!-- Letter-Number Sequencing --></label>
@@ -971,6 +1051,10 @@
     <fields>
         <label><!-- Marker --></label>
         <name>Marker__c</name>
+    </fields>
+    <fields>
+        <label><!-- Medium --></label>
+        <name>Medium__c</name>
     </fields>
     <fields>
         <label><!-- Most fluent language --></label>
@@ -1956,6 +2040,10 @@
         </picklistValues>
     </fields>
     <fields>
+        <label><!-- Source --></label>
+        <name>Source__c</name>
+    </fields>
+    <fields>
         <label><!-- Speech Task Consent --></label>
         <name>Speech_Task_Consent__c</name>
     </fields>
@@ -2004,6 +2092,58 @@
         <help><!-- This record will sync to Marketing Cloud. --></help>
         <label><!-- Sync With MC --></label>
         <name>Sync_With_MC__c</name>
+    </fields>
+    <fields>
+        <label><!-- Tell Me More --></label>
+        <name>Tell_Me_More__c</name>
+        <picklistValues>
+            <masterLabel>Completed</masterLabel>
+            <translation><!-- Completed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Locked</masterLabel>
+            <translation><!-- Locked --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Unlocked</masterLabel>
+            <translation><!-- Unlocked --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Tell Me --></label>
+        <name>Tell_Me__c</name>
+        <picklistValues>
+            <masterLabel>Completed</masterLabel>
+            <translation><!-- Completed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Locked</masterLabel>
+            <translation><!-- Locked --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Unlocked</masterLabel>
+            <translation><!-- Unlocked --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- This and That --></label>
+        <name>This_That__c</name>
+        <picklistValues>
+            <masterLabel>Completed</masterLabel>
+            <translation><!-- Completed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Locked</masterLabel>
+            <translation><!-- Locked --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Unlocked</masterLabel>
+            <translation><!-- Unlocked --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Tremendous Award Sent --></label>
+        <name>Tremendous_Award_Sent__c</name>
     </fields>
     <fields>
         <label><!-- URL ID --></label>

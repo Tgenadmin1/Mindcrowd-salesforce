@@ -9,6 +9,22 @@
         <value>Integration Settings</value>
     </caseValues>
     <fields>
+        <label><!-- AccessToken_url --></label>
+        <name>AccessToken_url__c</name>
+    </fields>
+    <fields>
+        <label><!-- Account Number --></label>
+        <name>Account_Number__c</name>
+    </fields>
+    <fields>
+        <label><!-- Account Type --></label>
+        <name>Account_Type__c</name>
+    </fields>
+    <fields>
+        <label><!-- CRID --></label>
+        <name>CRID__c</name>
+    </fields>
+    <fields>
         <label><!-- Client Ip --></label>
         <name>Client_Ip__c</name>
     </fields>
@@ -19,6 +35,14 @@
     <fields>
         <label><!-- Label Service Api --></label>
         <name>Label_Service_Api__c</name>
+    </fields>
+    <fields>
+        <label><!-- MID --></label>
+        <name>MID__c</name>
+    </fields>
+    <fields>
+        <label><!-- Manifest MID --></label>
+        <name>Manifest_MID__c</name>
     </fields>
     <fields>
         <label><!-- MindCrowdAddress2 --></label>
@@ -49,8 +73,36 @@
         <name>MindCrowdZip5__c</name>
     </fields>
     <fields>
+        <label><!-- Packaging Type --></label>
+        <name>Packaging_Type__c</name>
+    </fields>
+    <fields>
+        <label><!-- Password --></label>
+        <name>Password__c</name>
+    </fields>
+    <fields>
+        <label><!-- Payment Access Token URL --></label>
+        <name>Payment_Access_Token_URL__c</name>
+    </fields>
+    <fields>
+        <label><!-- Processing Category --></label>
+        <name>Processing_Category__c</name>
+    </fields>
+    <fields>
+        <label><!-- Role Name LO --></label>
+        <name>Role_Name_LO__c</name>
+    </fields>
+    <fields>
+        <label><!-- Role Name P --></label>
+        <name>Role_Name_P__c</name>
+    </fields>
+    <fields>
         <label><!-- Source Id --></label>
         <name>Source_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- USPS Label API URL --></label>
+        <name>USPS_Label_API_URL__c</name>
     </fields>
     <fields>
         <label><!-- USPS URL --></label>
@@ -65,12 +117,24 @@
         <name>Weight__c</name>
     </fields>
     <fields>
+        <label><!-- client_id --></label>
+        <name>client_id__c</name>
+    </fields>
+    <fields>
+        <label><!-- client_secret --></label>
+        <name>client_secret__c</name>
+    </fields>
+    <fields>
         <label><!-- eVSLabelUrl --></label>
         <name>eVSLabelUrl__c</name>
     </fields>
     <fields>
         <label><!-- eVSLabel Service --></label>
         <name>eVSLabel_Service__c</name>
+    </fields>
+    <fields>
+        <label><!-- grant_type --></label>
+        <name>grant_type__c</name>
     </fields>
     <startsWith>Consonant</startsWith>
 </CustomObjectTranslation>

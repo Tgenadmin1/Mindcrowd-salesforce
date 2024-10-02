@@ -60,7 +60,7 @@
             var rtnValue = a.getReturnValue();
             if (rtnValue !== null) {
                 component.set('v.isUsernamePasswordEnabled', rtnValue);
-                console.log('rtn value :', rtnValue);
+                console.log('getIsUsernamePasswordEnabled rtn value :', rtnValue);
             }
         });
         $A.enqueueAction(action);
@@ -72,6 +72,7 @@
             var rtnValue = a.getReturnValue();
             if (rtnValue !== null) {
                 component.set('v.isSelfRegistrationEnabled', rtnValue);
+                console.log('getIsSelfRegistrationEnabled rtn value :', rtnValue);
             }
         });
         $A.enqueueAction(action);
@@ -83,6 +84,7 @@
             var rtnValue = a.getReturnValue();
             if (rtnValue !== null) {
                 component.set('v.communityForgotPasswordUrl', rtnValue);
+                console.log('getIsSelfRegistrationEnabled rtn value :', rtnValue);
             }
         });
         $A.enqueueAction(action);
@@ -94,6 +96,7 @@
             var rtnValue = a.getReturnValue();
             if (rtnValue !== null) {
                 component.set('v.communitySelfRegisterUrl', rtnValue);
+                console.log('getIsSelfRegistrationEnabled rtn value :', rtnValue);
             }
         });
         $A.enqueueAction(action);
