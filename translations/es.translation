@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Translations xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<Translations xmlns="http://soap.sforce.com/2006/04/metadata">
     <customApplications>
-        <description xsi:nil="true"/>
         <label><!-- MindCrowd --></label>
         <name>MindCrowd</name>
     </customApplications>
@@ -58,12 +57,28 @@
         <name>Banner_image_1</name>
     </customLabels>
     <customLabels>
-        <label><!-- Bean game intermediate --></label>
+        <label>adic/de-informacion-juegofrijol-vip</label>
         <name>Bean_game_intermediate</name>
     </customLabels>
     <customLabels>
         <label>Ver tus resultados</label>
         <name>Brain_Info_Results</name>
+    </customLabels>
+    <customLabels>
+        <label>Solo tienes que hacer clic o pulsar la imagen que encaje mejor con la de la parte superior.</label>
+        <name>CamelandCactus_game_text_2</name>
+    </customLabels>
+    <customLabels>
+        <label>La respuesta correcta es la escena del desierto porque los cactus se suelen encontrar en el desierto.</label>
+        <name>CamelandCactus_game_text_cactus</name>
+    </customLabels>
+    <customLabels>
+        <label>La respuesta correcta es el martillo porque se suele utilizar para clavar clavos.</label>
+        <name>CamelandCactus_game_text_nails</name>
+    </customLabels>
+    <customLabels>
+        <label>La respuesta correcta son las uvas porque se suelen utilizar para hacer vino.</label>
+        <name>CamelandCactus_game_text_wine</name>
     </customLabels>
     <customLabels>
         <label>Tu Puntaje</label>
@@ -164,6 +179,10 @@
     <customLabels>
         <label>Fecha</label>
         <name>Date</name>
+    </customLabels>
+    <customLabels>
+        <label>Digits</label>
+        <name>Digits_game_text_14</name>
     </customLabels>
     <customLabels>
         <label><!-- DltrsGamePart1v0.01 --></label>
@@ -466,207 +485,215 @@
         <name>FakeNewsTestForm_cents</name>
     </customLabels>
     <customLabels>
-        <label><!-- FakeNewsTestForm_days --></label>
+        <label>días</label>
         <name>FakeNewsTestForm_days</name>
     </customLabels>
     <customLabels>
-        <label><!-- FakeNewsTestForm_hours --></label>
+        <label>horas</label>
         <name>FakeNewsTestForm_hours</name>
     </customLabels>
     <customLabels>
-        <label><!-- FakeNewsTestForm_minutes --></label>
+        <label>minutos</label>
         <name>FakeNewsTestForm_minutes</name>
     </customLabels>
     <customLabels>
-        <label><!-- Fake News Test Form 1 --></label>
+        <label>segundos</label>
+        <name>FakeNewsTestForm_seconds</name>
+    </customLabels>
+    <customLabels>
+        <label>años</label>
+        <name>FakeNewsTestForm_years</name>
+    </customLabels>
+    <customLabels>
+        <label>Escribe tus respuestas en el recuadro que aparece debajo de cada pregunta. Por favor, no utilices la calculadora.</label>
         <name>Fake_News_Test_Form_1</name>
     </customLabels>
     <customLabels>
-        <label><!-- Fake_News_Test_Form_10 --></label>
+        <label>En la escala de orientación política que aparece a continuación, indica dónde te ubicarías.</label>
         <name>Fake_News_Test_Form_10</name>
     </customLabels>
     <customLabels>
-        <label><!-- Fake News Test Form 10 A1 --></label>
+        <label>Extremadamente liberal</label>
         <name>Fake_News_Test_Form_10_A1</name>
     </customLabels>
     <customLabels>
-        <label><!-- Fake News Test Form 10 A2 --></label>
+        <label>Liberal</label>
         <name>Fake_News_Test_Form_10_A2</name>
     </customLabels>
     <customLabels>
-        <label><!-- Fake News Test Form 10 A3 --></label>
+        <label>Liberal moderado</label>
         <name>Fake_News_Test_Form_10_A3</name>
     </customLabels>
     <customLabels>
-        <label><!-- Fake News Test Form 10 A4 --></label>
+        <label>Moderado</label>
         <name>Fake_News_Test_Form_10_A4</name>
     </customLabels>
     <customLabels>
-        <label><!-- Fake News Test Form 10 A5 --></label>
+        <label>Conservador moderado</label>
         <name>Fake_News_Test_Form_10_A5</name>
     </customLabels>
     <customLabels>
-        <label><!-- Fake News Test Form 10 A6 --></label>
+        <label>Conservador</label>
         <name>Fake_News_Test_Form_10_A6</name>
     </customLabels>
     <customLabels>
-        <label><!-- Fake News Test Form 10 A7 --></label>
+        <label>Extremadamente conservador</label>
         <name>Fake_News_Test_Form_10_A7</name>
     </customLabels>
     <customLabels>
-        <label><!-- Fake News Test Form 10 Error --></label>
+        <label>Selecciona tu orientación política.</label>
         <name>Fake_News_Test_Form_10_Error</name>
     </customLabels>
     <customLabels>
-        <label><!-- Fake News Test Form 2 --></label>
+        <label>Las edades de Mark y de Adam suman un total de 28 años. Mark es 20 años mayor que Adam. ¿Cuántos años tiene Adam? (Responde en años)</label>
         <name>Fake_News_Test_Form_2</name>
     </customLabels>
     <customLabels>
-        <label><!-- Fake News Test Form 2 Error --></label>
+        <label>Introduce la respuesta en años.</label>
         <name>Fake_News_Test_Form_2_Error</name>
     </customLabels>
     <customLabels>
-        <label><!-- Fake News Test Form 3 --></label>
+        <label>Si 10 impresoras tardan 10 segundos en imprimir 10 páginas de papel, ¿cuántos segundos tardarán 50 impresoras en imprimir 50 páginas de papel? (Responde en segundos)</label>
         <name>Fake_News_Test_Form_3</name>
     </customLabels>
     <customLabels>
-        <label><!-- Fake News Test Form 3 Error --></label>
+        <label>Introduce la respuesta en segundos.</label>
         <name>Fake_News_Test_Form_3_Error</name>
     </customLabels>
     <customLabels>
-        <label><!-- Fake News Test Form 4 --></label>
+        <label>En una barra de pan hay una mancha de moho. Cada día, la mancha duplica su tamaño. Si la mancha tarda 40 días en cubrir toda la barra de pan, ¿cuántos días tardaría la mancha en cubrir la mitad de la barra de pan? (Responde en días)</label>
         <name>Fake_News_Test_Form_4</name>
     </customLabels>
     <customLabels>
-        <label><!-- Fake News Test Form 4 Error --></label>
+        <label>Introduce la respuesta en días.</label>
         <name>Fake_News_Test_Form_4_Error</name>
     </customLabels>
     <customLabels>
-        <label><!-- Fake News Test Form 5 --></label>
+        <label>¿Cuántas horas a la semana dedicas a escuchar las noticias, a leerlas o a verlas? (Escribe tu respuesta en el siguiente recuadro).</label>
         <name>Fake_News_Test_Form_5</name>
     </customLabels>
     <customLabels>
-        <label><!-- Fake News Test Form 5 Error --></label>
+        <label>Selecciona un número de horas entre 0 y 168.</label>
         <name>Fake_News_Test_Form_5_Error</name>
     </customLabels>
     <customLabels>
-        <label><!-- Fake News Test Form 6 --></label>
+        <label>¿Con qué frecuencia participas de forma activa en cualquier red social? Por «participar» nos referimos a acciones como comentar, compartir, dar «me gusta» o volver a publicar.</label>
         <name>Fake_News_Test_Form_6</name>
     </customLabels>
     <customLabels>
-        <label><!-- Fake News Test Form 6 A1 --></label>
+        <label>Nunca</label>
         <name>Fake_News_Test_Form_6_A1</name>
     </customLabels>
     <customLabels>
-        <label><!-- Fake News Test Form 6 A2 --></label>
+        <label>Casi nunca</label>
         <name>Fake_News_Test_Form_6_A2</name>
     </customLabels>
     <customLabels>
-        <label><!-- Fake News Test Form 6 A3 --></label>
+        <label>A veces</label>
         <name>Fake_News_Test_Form_6_A3</name>
     </customLabels>
     <customLabels>
-        <label><!-- Fake News Test Form 6 A4 --></label>
+        <label>Muy a menudo</label>
         <name>Fake_News_Test_Form_6_A4</name>
     </customLabels>
     <customLabels>
-        <label><!-- Fake News Test Form 6 A5 --></label>
+        <label>Constantemente</label>
         <name>Fake_News_Test_Form_6_A5</name>
     </customLabels>
     <customLabels>
-        <label><!-- Fake News Test Form 6 Error --></label>
+        <label>Selecciona la frecuencia con la que participas en redes sociales.</label>
         <name>Fake_News_Test_Form_6_Error</name>
     </customLabels>
     <customLabels>
-        <label><!-- Fake News Test Form 7 --></label>
+        <label>¿Qué opinas del siguiente enunciado? «Confío en que mi Gobierno federal hará lo que sea mejor para sus ciudadanos».</label>
         <name>Fake_News_Test_Form_7</name>
     </customLabels>
     <customLabels>
-        <label><!-- Fake News Test Form 7 A1 --></label>
+        <label>Totalmente en desacuerdo</label>
         <name>Fake_News_Test_Form_7_A1</name>
     </customLabels>
     <customLabels>
-        <label><!-- Fake News Test Form 7 A2 --></label>
+        <label>En desacuerdo</label>
         <name>Fake_News_Test_Form_7_A2</name>
     </customLabels>
     <customLabels>
-        <label><!-- Fake News Test Form 7 A3 --></label>
+        <label>Neutro</label>
         <name>Fake_News_Test_Form_7_A3</name>
     </customLabels>
     <customLabels>
-        <label><!-- Fake News Test Form 7 A4 --></label>
+        <label>De acuerdo</label>
         <name>Fake_News_Test_Form_7_A4</name>
     </customLabels>
     <customLabels>
-        <label><!-- Fake News Test Form 7 A5 --></label>
+        <label>Totalmente de acuerdo</label>
         <name>Fake_News_Test_Form_7_A5</name>
     </customLabels>
     <customLabels>
-        <label><!-- Fake News Test Form 7 Error --></label>
+        <label>Selecciona si confías en el Gobierno federal.</label>
         <name>Fake_News_Test_Form_7_Error</name>
     </customLabels>
     <customLabels>
-        <label><!-- Fake News Test Form 8 --></label>
+        <label>Con respecto a la política estadounidense, se considera miembro o partidario de:</label>
         <name>Fake_News_Test_Form_8</name>
     </customLabels>
     <customLabels>
-        <label><!-- Fake News Test Form 8 A1 --></label>
+        <label>Partido demócrata</label>
         <name>Fake_News_Test_Form_8_A1</name>
     </customLabels>
     <customLabels>
-        <label><!-- Fake News Test Form 8 A2 --></label>
+        <label>Partido republicano</label>
         <name>Fake_News_Test_Form_8_A2</name>
     </customLabels>
     <customLabels>
-        <label><!-- Fake News Test Form 8 A3 --></label>
+        <label>Otro (especificar)</label>
         <name>Fake_News_Test_Form_8_A3</name>
     </customLabels>
     <customLabels>
-        <label><!-- Fake_News_Test_Form_8_A4 --></label>
+        <label>Prefiero no responder</label>
         <name>Fake_News_Test_Form_8_A4</name>
     </customLabels>
     <customLabels>
-        <label><!-- Fake News Test Form 8 Error --></label>
+        <label>En temas de política estadounidense, selecciona a quién apoyas.</label>
         <name>Fake_News_Test_Form_8_Error</name>
     </customLabels>
     <customLabels>
-        <label><!-- Fake News Test Form 9 --></label>
+        <label>¿Cuál de las siguientes opciones describe mejor la zona general en la que vives?</label>
         <name>Fake_News_Test_Form_9</name>
     </customLabels>
     <customLabels>
-        <label><!-- Fake News Test Form 9 A1 --></label>
+        <label>Zona urbana</label>
         <name>Fake_News_Test_Form_9_A1</name>
     </customLabels>
     <customLabels>
-        <label><!-- Fake News Test Form 9 A2 --></label>
+        <label>Zona suburbana</label>
         <name>Fake_News_Test_Form_9_A2</name>
     </customLabels>
     <customLabels>
-        <label><!-- Fake News Test Form 9 A3 --></label>
+        <label>Zona rural</label>
         <name>Fake_News_Test_Form_9_A3</name>
     </customLabels>
     <customLabels>
-        <label><!-- Fake_News_Test_Form_9_A4 --></label>
+        <label>Prefiero no responder</label>
         <name>Fake_News_Test_Form_9_A4</name>
     </customLabels>
     <customLabels>
-        <label><!-- Fake News Test Form 9 Error --></label>
+        <label>Selecciona dónde vives.</label>
         <name>Fake_News_Test_Form_9_Error</name>
     </customLabels>
     <customLabels>
-        <label><!-- Fake News Test Form Thanks A1 --></label>
+        <label>Gracias por jugar &lt;b&gt; Fake News&lt;/b&gt;</label>
         <name>Fake_News_Test_Form_Thanks_A1</name>
     </customLabels>
     <customLabels>
-        <label><!-- Fake News Test Form Thanks A2 --></label>
+        <label>Tus resultados han sido grabados</label>
         <name>Fake_News_Test_Form_Thanks_A2</name>
     </customLabels>
     <customLabels>
-        <label><!-- Fake News Test Form Thanks A3 --></label>
+        <label>Haz clic o toca el botón&lt;span&gt;Mis Resultados &lt;/span&gt;para ver tus resultados.</label>
         <name>Fake_News_Test_Form_Thanks_A3</name>
     </customLabels>
     <customLabels>
-        <label><!-- Fake News Test Form Thanks A4 --></label>
+        <label>O bien, haz clic o toca el botón &lt;b&gt;Mis Juegos &lt;/b&gt; para regresar al menú de juegos</label>
         <name>Fake_News_Test_Form_Thanks_A4</name>
     </customLabels>
     <customLabels>
@@ -682,7 +709,7 @@
         <name>GameControllerLockLabel</name>
     </customLabels>
     <customLabels>
-        <label><!-- Games Dashboard --></label>
+        <label>pme-panel-control</label>
         <name>Games_Dashboard</name>
     </customLabels>
     <customLabels>
@@ -1314,6 +1341,18 @@
         <name>Shapes_Game_Text_9</name>
     </customLabels>
     <customLabels>
+        <label>Tell Me More</label>
+        <name>SpeechTask_Tell_me_more_text</name>
+    </customLabels>
+    <customLabels>
+        <label>Tell Me</label>
+        <name>SpeechTask_Tell_me_text</name>
+    </customLabels>
+    <customLabels>
+        <label>Responde a todas las preguntas.</label>
+        <name>Speech_Task_Error</name>
+    </customLabels>
+    <customLabels>
         <label><!-- Submit --></label>
         <name>Submit</name>
     </customLabels>
@@ -1470,6 +1509,10 @@
         <name>beangameScorer</name>
     </customLabels>
     <customLabels>
+        <label>juegofrijol-vip</label>
+        <name>beangameviewformurl</name>
+    </customLabels>
+    <customLabels>
         <label>CUÉNTANOS UN POCO SOBRE TU CEREBRO</label>
         <name>brainInfo_text_1</name>
     </customLabels>
@@ -1548,6 +1591,14 @@
     <customLabels>
         <label>Todavía estamos a tiempo de enviarte tus resultados por correo electrónico, además de una invitación VIP para disfrutar de más juegos de ingenio gratuitos, y novedades sobre investigaciones sobre el cerebro y otros estudios en los que puede participar.</label>
         <name>braininfo02</name>
+    </customLabels>
+    <customLabels>
+        <label>/resource/CamelandCactus_Config/CamelandCactus_ES.json</label>
+        <name>camelandcactus_game_config_url</name>
+    </customLabels>
+    <customLabels>
+        <label>Camel &amp; Cactus</label>
+        <name>camelandcactus_game_text_14</name>
     </customLabels>
     <customLabels>
         <label>¿Eres diestro o zurdo?</label>
@@ -1918,6 +1969,10 @@
         <name>debugConsole</name>
     </customLabels>
     <customLabels>
+        <label>/resource/digitSymbol_Config/digitSymbol_Config_ES.json</label>
+        <name>digitSymbol_game_config_url</name>
+    </customLabels>
+    <customLabels>
         <label><!-- dlrts game text --></label>
         <name>dlrts_game_text</name>
     </customLabels>
@@ -2282,15 +2337,15 @@
         <name>facegame_config_url</name>
     </customLabels>
     <customLabels>
-        <label><!-- fakeNewsTest_game_config_url --></label>
+        <label>/resource/fakeNews_Config/fakeNews_Config_ES.json</label>
         <name>fakeNewsTest_game_config_url</name>
     </customLabels>
     <customLabels>
-        <label><!-- fakeNews_text_1 --></label>
+        <label>Fake News</label>
         <name>fakeNews_text</name>
     </customLabels>
     <customLabels>
-        <label><!-- fakenews_Continue --></label>
+        <label>Haz clic o pulsa aquí para continuar</label>
         <name>fakenews_Continue</name>
     </customLabels>
     <customLabels>
@@ -2684,6 +2739,14 @@
         <name>focus_game_config_url</name>
     </customLabels>
     <customLabels>
+        <label>Juego de las Alubias (Mano izquierda)</label>
+        <name>game_bean_title_left</name>
+    </customLabels>
+    <customLabels>
+        <label>Juego de las Alubias (Mano derecha)</label>
+        <name>game_bean_title_right</name>
+    </customLabels>
+    <customLabels>
         <label>MIS JUEGOS</label>
         <name>game_button_1</name>
     </customLabels>
@@ -2732,24 +2795,36 @@
         <name>game_name_10</name>
     </customLabels>
     <customLabels>
-        <label><!-- game_name_11 --></label>
+        <label>Juego de las Alubias</label>
         <name>game_name_11</name>
     </customLabels>
     <customLabels>
-        <label><!-- game_name_12 --></label>
+        <label>DBS</label>
         <name>game_name_12</name>
     </customLabels>
     <customLabels>
-        <label><!-- game_name_13 --></label>
+        <label>ApoE</label>
         <name>game_name_13</name>
     </customLabels>
     <customLabels>
-        <label><!-- game_name_14 --></label>
+        <label>Fake News</label>
         <name>game_name_14</name>
     </customLabels>
     <customLabels>
-        <label><!-- game_name_15 --></label>
+        <label>Tell Me</label>
         <name>game_name_15</name>
+    </customLabels>
+    <customLabels>
+        <label>Digits</label>
+        <name>game_name_17</name>
+    </customLabels>
+    <customLabels>
+        <label>Camello and Cactus</label>
+        <name>game_name_18</name>
+    </customLabels>
+    <customLabels>
+        <label>Tell Me More</label>
+        <name>game_name_19</name>
     </customLabels>
     <customLabels>
         <label>Reacción</label>
@@ -2784,7 +2859,7 @@
         <name>game_name_9</name>
     </customLabels>
     <customLabels>
-        <label><!-- game name c --></label>
+        <label>Próximamente...</label>
         <name>game_name_c</name>
     </customLabels>
     <customLabels>
@@ -2808,20 +2883,28 @@
         <name>game_thanks_text_2_c</name>
     </customLabels>
     <customLabels>
-        <label><!-- game_time_10_min --></label>
+        <label>10 minutos.</label>
         <name>game_time_10_min</name>
     </customLabels>
     <customLabels>
-        <label><!-- game_time_20_min --></label>
+        <label>20 minutos.</label>
         <name>game_time_20_min</name>
     </customLabels>
     <customLabels>
-        <label><!-- game_time_3_min --></label>
+        <label>3 minutos.</label>
         <name>game_time_3_min</name>
     </customLabels>
     <customLabels>
-        <label><!-- game_time_5_min --></label>
+        <label>4 minutos.</label>
+        <name>game_time_4_min</name>
+    </customLabels>
+    <customLabels>
+        <label>5 minutos.</label>
         <name>game_time_5_min</name>
+    </customLabels>
+    <customLabels>
+        <label>7 minutos.</label>
+        <name>game_time_7_min</name>
     </customLabels>
     <customLabels>
         <label>&lt;span class=&quot;n-g-box&quot;&gt;¡Comencemos!&lt;/span&gt;</label>
@@ -3363,7 +3446,7 @@
         <name>live_URL_8</name>
     </customLabels>
     <customLabels>
-        <label><!-- live URL 9 --></label>
+        <label>https://blog.mindcrowd.org/es/</label>
         <name>live_URL_9</name>
     </customLabels>
     <customLabels>
@@ -3371,7 +3454,7 @@
         <name>maillingAddress</name>
     </customLabels>
     <customLabels>
-        <label><!-- mc_done --></label>
+        <label>Listo</label>
         <name>mc_done</name>
     </customLabels>
     <customLabels>
@@ -4928,7 +5011,7 @@ Pulsa &lt;span class=&quot;n-g-box&quot;&gt;F&lt;/span&gt; para un objeto de int
         <name>rejection1</name>
     </customLabels>
     <customLabels>
-        <label><!-- Remote --></label>
+        <label>Remoto</label>
         <name>remote</name>
     </customLabels>
     <customLabels>
@@ -4980,7 +5063,11 @@ Pulsa &lt;span class=&quot;n-g-box&quot;&gt;F&lt;/span&gt; para un objeto de int
         <name>rule_2</name>
     </customLabels>
     <customLabels>
-        <label><!-- scientific_game_bean --></label>
+        <label>Camel &amp; Cactus</label>
+        <name>scientific_game_CamelandCactus</name>
+    </customLabels>
+    <customLabels>
+        <label>Juego De Las Alubias</label>
         <name>scientific_game_bean</name>
     </customLabels>
     <customLabels>
@@ -4988,11 +5075,15 @@ Pulsa &lt;span class=&quot;n-g-box&quot;&gt;F&lt;/span&gt; para un objeto de int
         <name>scientific_game_dearySimpleAndComplexReactionTime</name>
     </customLabels>
     <customLabels>
+        <label>Digits</label>
+        <name>scientific_game_digitsymbolmatchingtest</name>
+    </customLabels>
+    <customLabels>
         <label><!-- scientific game faceNameAssociates --></label>
         <name>scientific_game_faceNameAssociates</name>
     </customLabels>
     <customLabels>
-        <label><!-- scientific game fakeNewsTest --></label>
+        <label>Fake News</label>
         <name>scientific_game_fakeNewsTest</name>
     </customLabels>
     <customLabels>
@@ -5028,6 +5119,10 @@ Pulsa &lt;span class=&quot;n-g-box&quot;&gt;F&lt;/span&gt; para un objeto de int
         <name>scientific_game_verbalPairedAssociates</name>
     </customLabels>
     <customLabels>
+        <label><!-- scientific_speech_task2 --></label>
+        <name>scientific_speech_task2</name>
+    </customLabels>
+    <customLabels>
         <label><!-- scientific_speech_tasks --></label>
         <name>scientific_speech_tasks</name>
     </customLabels>
@@ -5052,7 +5147,11 @@ Pulsa &lt;span class=&quot;n-g-box&quot;&gt;F&lt;/span&gt; para un objeto de int
         <name>shrd_title</name>
     </customLabels>
     <customLabels>
-        <label><!-- speechTask_config_url --></label>
+        <label>/resource/speechTask2_Config/speechTask2_Config_ES.json</label>
+        <name>speechTask2_config_url</name>
+    </customLabels>
+    <customLabels>
+        <label>/resource/speechTask_Config/speechTask_Config_ES.json</label>
         <name>speechTask_config_url</name>
     </customLabels>
     <customLabels>
@@ -5084,39 +5183,39 @@ Pulsa &lt;span class=&quot;n-g-box&quot;&gt;F&lt;/span&gt; para un objeto de int
         <name>step_4a</name>
     </customLabels>
     <customLabels>
-        <label><!-- survey_name_1 --></label>
+        <label>Salud general</label>
         <name>survey_name_1</name>
     </customLabels>
     <customLabels>
-        <label><!-- survey_name_10 --></label>
+        <label>Nutrición</label>
         <name>survey_name_10</name>
     </customLabels>
     <customLabels>
-        <label><!-- survey_name_11 --></label>
+        <label>Estrés percibido</label>
         <name>survey_name_11</name>
     </customLabels>
     <customLabels>
-        <label><!-- survey_name_12 --></label>
+        <label>Satisfacción con la vida</label>
         <name>survey_name_12</name>
     </customLabels>
     <customLabels>
-        <label><!-- survey_name_13 --></label>
+        <label>Actividad física</label>
         <name>survey_name_13</name>
     </customLabels>
     <customLabels>
-        <label><!-- survey_name_14 --></label>
+        <label>Estrés</label>
         <name>survey_name_14</name>
     </customLabels>
     <customLabels>
-        <label><!-- survey_name_15 --></label>
+        <label>Ansiedad</label>
         <name>survey_name_15</name>
     </customLabels>
     <customLabels>
-        <label><!-- survey_name_16 --></label>
+        <label>Apoyo social</label>
         <name>survey_name_16</name>
     </customLabels>
     <customLabels>
-        <label><!-- survey_name_17 --></label>
+        <label>Cáncer</label>
         <name>survey_name_17</name>
     </customLabels>
     <customLabels>
@@ -5128,32 +5227,48 @@ Pulsa &lt;span class=&quot;n-g-box&quot;&gt;F&lt;/span&gt; para un objeto de int
         <name>survey_name_2</name>
     </customLabels>
     <customLabels>
-        <label><!-- survey_name_3 --></label>
+        <label>Historial de enfermedad cerebral</label>
         <name>survey_name_3</name>
     </customLabels>
     <customLabels>
-        <label><!-- survey_name_4 --></label>
+        <label>Situación económica</label>
         <name>survey_name_4</name>
     </customLabels>
     <customLabels>
-        <label><!-- survey_name_5 --></label>
+        <label>Antecedentes familiares de enfermedad de Alzheimer</label>
         <name>survey_name_5</name>
     </customLabels>
     <customLabels>
-        <label><!-- survey_name_6 --></label>
+        <label>Salud de la mujer</label>
         <name>survey_name_6</name>
     </customLabels>
     <customLabels>
-        <label><!-- survey_name_7 --></label>
+        <label>Idioma</label>
         <name>survey_name_7</name>
     </customLabels>
     <customLabels>
-        <label><!-- survey_name_8 --></label>
+        <label>Sueño</label>
         <name>survey_name_8</name>
     </customLabels>
     <customLabels>
-        <label><!-- survey_name_9 --></label>
+        <label>Actividades diarias</label>
         <name>survey_name_9</name>
+    </customLabels>
+    <customLabels>
+        <label>Próximamente...</label>
+        <name>survey_name_n</name>
+    </customLabels>
+    <customLabels>
+        <label>2 minutos</label>
+        <name>survey_time_2_min</name>
+    </customLabels>
+    <customLabels>
+        <label>3 minutos</label>
+        <name>survey_time_3_min</name>
+    </customLabels>
+    <customLabels>
+        <label>5 minutos</label>
+        <name>survey_time_5_min</name>
     </customLabels>
     <customLabels>
         <label><!-- tapjoy url --></label>
@@ -5238,75 +5353,79 @@ A continuación, haz &lt;span class=&quot;n-g-box&quot;&gt; toca en el lugar de 
         <name>tower_of_London_text_5</name>
     </customLabels>
     <customLabels>
-        <label><!-- url_ADL_Survey --></label>
+        <label>AdlSurvey</label>
         <name>url_ADL_Survey</name>
     </customLabels>
     <customLabels>
-        <label><!-- url_Anxiety_Survey --></label>
+        <label>AnxietySurvey</label>
         <name>url_Anxiety_Survey</name>
     </customLabels>
     <customLabels>
-        <label><!-- url_Brain_Disease_Survey --></label>
+        <label>PersonalandFamilyHistoryofBrainDisease</label>
         <name>url_Brain_Disease_Survey</name>
     </customLabels>
     <customLabels>
-        <label><!-- url_COVID_Survey --></label>
+        <label>COVIDSurvey</label>
         <name>url_COVID_Survey</name>
     </customLabels>
     <customLabels>
-        <label><!-- url_Cancer_Survey --></label>
+        <label>CancerSurvey</label>
         <name>url_Cancer_Survey</name>
     </customLabels>
     <customLabels>
-        <label><!-- url_Diet_Survey --></label>
+        <label>DietSurvey</label>
         <name>url_Diet_Survey</name>
     </customLabels>
     <customLabels>
-        <label><!-- url_FHAD_Survey --></label>
+        <label>FhadSurvey</label>
         <name>url_FHAD_Survey</name>
     </customLabels>
     <customLabels>
-        <label><!-- url_Health_Medical_Survey --></label>
+        <label>HealthMedicalSurvey</label>
         <name>url_Health_Medical_Survey</name>
+    </customLabels>
+    <customLabels>
+        <label>HeatStressSurvey</label>
+        <name>url_Heat_Survey</name>
     </customLabels>
     <customLabels>
         <label>pme-objetos-espacio</label>
         <name>url_Objects_Space</name>
     </customLabels>
     <customLabels>
-        <label><!-- url_Perceived_Stress_Survey --></label>
+        <label>PerceivedStressSurvey</label>
         <name>url_Perceived_Stress_Survey</name>
     </customLabels>
     <customLabels>
-        <label><!-- url_QPAR_Survey --></label>
+        <label>QPARSurvey</label>
         <name>url_QPAR_Survey</name>
     </customLabels>
     <customLabels>
-        <label><!-- url_SES_Survey --></label>
+        <label>SESSurvey</label>
         <name>url_SES_Survey</name>
     </customLabels>
     <customLabels>
-        <label><!-- url_SWLS_Survey --></label>
+        <label>SwlsSurvey</label>
         <name>url_SWLS_Survey</name>
     </customLabels>
     <customLabels>
-        <label><!-- url_Sleep_Survey --></label>
+        <label>SleepSurvey</label>
         <name>url_Sleep_Survey</name>
     </customLabels>
     <customLabels>
-        <label><!-- url_Social_Stress_Survey --></label>
+        <label>SocialStressorSurvey</label>
         <name>url_Social_Stress_Survey</name>
     </customLabels>
     <customLabels>
-        <label><!-- url_Social_Support_Survey --></label>
+        <label>SocialSupportSurvey</label>
         <name>url_Social_Support_Survey</name>
     </customLabels>
     <customLabels>
-        <label><!-- url_Subjective_English_Survey --></label>
+        <label>SubjectiveEnglishSurvey</label>
         <name>url_Subjective_English_Survey</name>
     </customLabels>
     <customLabels>
-        <label><!-- url_Women_Health_Survey --></label>
+        <label>WomenHealthSurvey</label>
         <name>url_Women_Health_Survey</name>
     </customLabels>
     <customLabels>
@@ -5378,11 +5497,23 @@ A continuación, haz &lt;span class=&quot;n-g-box&quot;&gt; toca en el lugar de 
         <name>url_login</name>
     </customLabels>
     <customLabels>
+        <label>me-CamelandCactus</label>
+        <name>url_me_CamelandCactus</name>
+    </customLabels>
+    <customLabels>
         <label>pme-objetos-tiempo</label>
         <name>url_me_Objects_Time</name>
     </customLabels>
     <customLabels>
-        <label><!-- url me-fakeNewsTest --></label>
+        <label><!-- url_me_This_and_That --></label>
+        <name>url_me_This_and_That</name>
+    </customLabels>
+    <customLabels>
+        <label>me-digitsymbol</label>
+        <name>url_me_digitSymbol</name>
+    </customLabels>
+    <customLabels>
+        <label>me-fakeNewsTest</label>
         <name>url_me_fakeNewsTest</name>
     </customLabels>
     <customLabels>
@@ -5410,8 +5541,12 @@ A continuación, haz &lt;span class=&quot;n-g-box&quot;&gt; toca en el lugar de 
         <name>url_me_shapesgame</name>
     </customLabels>
     <customLabels>
-        <label><!-- url_me_speechTask --></label>
+        <label>me-speechTasks</label>
         <name>url_me_speechTask</name>
+    </customLabels>
+    <customLabels>
+        <label>me-SpeechTaskTellmeMore</label>
+        <name>url_me_speechTaskTellMeMore</name>
     </customLabels>
     <customLabels>
         <label>pme-juegocambio</label>
@@ -5979,7 +6114,15 @@ A continuación, haz &lt;span class=&quot;n-g-box&quot;&gt; toca en el lugar de 
     </flowDefinitions>
     <flowDefinitions>
         <flows/>
+        <fullName>ECog_12_Survey</fullName>
+    </flowDefinitions>
+    <flowDefinitions>
+        <flows/>
         <fullName>FHAD_Survey</fullName>
+    </flowDefinitions>
+    <flowDefinitions>
+        <flows/>
+        <fullName>Glucosamine_Survey</fullName>
     </flowDefinitions>
     <flowDefinitions>
         <flows/>

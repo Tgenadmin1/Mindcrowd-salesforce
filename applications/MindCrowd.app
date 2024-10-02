@@ -46,6 +46,7 @@
     <tabs>Bean_Game__c</tabs>
     <tabs>Exception_Log__c</tabs>
     <tabs>Heat_Stress_Survey__c</tabs>
+    <tabs>ECog_12__c</tabs>
     <uiType>Lightning</uiType>
     <utilityBar>MindCrowd_UtilityBar</utilityBar>
 </CustomApplication>

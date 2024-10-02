@@ -37,16 +37,27 @@ public without sharing class ParticipantResultsController
         mapPlyAverageValuesData.put ('HighAverage', 0); 
         DashboardData objDashboardData = new DashboardData();
         
-        for(Participant_Game_Info__c objInfo:[SELECT 
+        List<Participant_Game_Info__c> pgis = [SELECT 
                                               /*Added three fields to remove dependency PGR from PGI*/
                                               /* Added on 27/07/2022 */
                                               Count_Of_No_Of_Correct_Answered__c, Count_Of_No_of_Question_Attempted__c,
                                               Count_Of_Total_Reaction_Time__c, No_Of_Correct_Answered__c,
-                                              No_of_Question_Attempted__c,Total_Reaction_Time__c, User_Device__c,Id
+                                              No_of_Question_Attempted__c,Total_Reaction_Time__c, User_Device__c,Id,CreatedDate
                                               FROM Participant_Game_Info__c 
                                               WHERE Contact_Name__c =: contactId  
-                                              AND Game_Name__r.Name =:gameName                           
-                                              ORDER BY CreatedDate DESC LIMIT 1])
+                                              AND Game_Name__r.Name =:gameName                                              
+                                              ORDER BY CreatedDate DESC LIMIT 1];
+        if(pgis.size()>0){
+            for(Participant_Game_Info__c pgi : pgis){
+                if(pgi.CreatedDate.Date() >= Date.Today()-1){
+                	pgi.Count_Of_No_of_Question_Attempted__c = pgi.No_of_Question_Attempted__c;
+                    pgi.Count_Of_No_Of_Correct_Answered__c = pgi.No_Of_Correct_Answered__c;
+                    pgi.Count_Of_Total_Reaction_Time__c = pgi.Total_Reaction_Time__c;
+            	}  
+            }                      
+        } 
+        
+        for(Participant_Game_Info__c objInfo:pgis)
         {
             userDevice = objInfo.User_Device__c;
             currPGIId= objInfo.Id;
@@ -94,7 +105,8 @@ public without sharing class ParticipantResultsController
                                            AND Contact_Name__r.Age__c <= :highage
                                            AND User_Device__c != ''
                                            AND Contact_Name__r.Sex__c != ''
-                                           AND Contact_Name__r.Education_Attainment__c != null
+                                           AND Contact_Name__r.Sex__c =:sex
+                                           AND Contact_Name__r.Education_Attainment__c =:edu_att
                                            AND Count_Of_No_Of_Correct_Answered__c >0
                                            AND Count_Of_No_of_Question_Attempted__c >0
                                            AND Count_Of_Total_Reaction_Time__c >0
@@ -103,6 +115,44 @@ public without sharing class ParticipantResultsController
                                            Order by CreatedDate DESC
                                            LIMIT 49990];
         List<Decimal> quartileValues = new List<Decimal>();
+        system.debug('First Query:'+peopleLikeYouPGIList.size());
+        if(peopleLikeYouPGIList !=null && peopleLikeYouPGIList.size() < 25){
+            peopleLikeYouPGIList = [SELECT Count_Of_Total_Reaction_Time__c ,Count_Of_No_of_Question_Attempted__c,Count_Of_No_Of_Correct_Answered__c
+                                           FROM Participant_Game_Info__c 
+                                           WHERE Contact_Name__r.Age__c > 0
+                                           AND Contact_Name__r.Age__c >= :lowage
+                                           AND Contact_Name__r.Age__c <= :highage
+                                           AND User_Device__c != ''
+                                           AND Contact_Name__r.Sex__c != ''
+                                    	   AND Contact_Name__r.Sex__c =:sex
+                                           AND Contact_Name__r.Education_Attainment__c != null
+                                           AND Count_Of_No_Of_Correct_Answered__c >0
+                                           AND Count_Of_No_of_Question_Attempted__c >0
+                                           AND Count_Of_Total_Reaction_Time__c >0
+                                           AND Game_Name__r.Name =: gameName
+                                           AND Id != :currPGIId
+                                           Order by CreatedDate DESC
+                                           LIMIT 49990];
+                    system.debug('Second Query:'+peopleLikeYouPGIList.size());
+                    if(peopleLikeYouPGIList !=null && peopleLikeYouPGIList.size() < 25){
+                    peopleLikeYouPGIList = [SELECT Count_Of_Total_Reaction_Time__c ,Count_Of_No_of_Question_Attempted__c,Count_Of_No_Of_Correct_Answered__c
+                                           FROM Participant_Game_Info__c 
+                                           WHERE Contact_Name__r.Age__c > 0
+                                           AND Contact_Name__r.Age__c >= :lowage
+                                           AND Contact_Name__r.Age__c <= :highage
+                                           AND User_Device__c != ''
+                                           AND Contact_Name__r.Sex__c != ''
+                                           AND Contact_Name__r.Education_Attainment__c != null
+                                           AND Count_Of_No_Of_Correct_Answered__c >0
+                                           AND Count_Of_No_of_Question_Attempted__c >0
+                                           AND Count_Of_Total_Reaction_Time__c >0
+                                           AND Game_Name__r.Name =: gameName
+                                           AND Id != :currPGIId
+                                           Order by CreatedDate DESC
+                                           LIMIT 49990];
+                        system.debug('Third Query:'+peopleLikeYouPGIList.size());
+        		}
+        }
         if(peopleLikeYouPGIList !=null && peopleLikeYouPGIList.size() >= 25){ 
             if(gameName == 'DLTRS' || gameName == 'Deary Simple And Complex Reaction Time' || gameName == 'Flanker'){
                         Decimal sumReationTime = 0;

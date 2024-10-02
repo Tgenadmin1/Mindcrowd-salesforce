@@ -45,6 +45,8 @@
     <aura:attribute name="Catcme_text_3" type="Boolean" default="false" access="global" />
     <aura:attribute name="Catcme_text_15" type="Boolean" default="false" access="global" />
 	<aura:attribute name="Catcme_text_17" type="Boolean" default="false" access="global" />
+    <aura:attribute name="showpeopleLikeYou" type="Boolean" default="true" />
+    <aura:attribute name="peopleLikeYouNoDataLabel" type="String" default="We currently don't have enough people like you to display 'People Like You' results. Check back in the future for an update." />
     
     
     <aura:attribute name="lstimg" type="Object[]"/>
@@ -88,10 +90,18 @@
                                                                                <div class="scoreBasedCaption title2c">{!v.scoreBasedCaption}</div>
                                                     </lightning:layoutItem>
                                                <lightning:layoutItem size="0" class="graph-double">
-                                               <c:ParticipantGaugeChart breakPoint ="{!v.peopleLikeYou}" gaugeColor="['#FF5833','#FFB833','#33FF38']" lowAverage ="{!v.lValue}" highAverage ="{!v.hValue}"
-                                                                         minValue = "0"  maxValue="{!v.mValue}" chartLabel =""  isPercentage="False" gaugeSize="30"></c:ParticipantGaugeChart>
-                                                                         <!-- {!$Label.c.Catcme_text_2} -->
-                                                                         <div class="scoreBasedCaption title2b">{!$Label.c.Catcme_text_16} </div>
+                                                <aura:if isTrue ="{!v.showpeopleLikeYou}">
+                                                    <c:ParticipantGaugeChart breakPoint ="{!v.peopleLikeYou}" gaugeColor="['#FF5833','#FFB833','#33FF38']" lowAverage ="{!v.lValue}" highAverage ="{!v.hValue}"
+                                                                              minValue = "0"  maxValue="{!v.mValue}" chartLabel =""  isPercentage="False" gaugeSize="30"></c:ParticipantGaugeChart>
+                                                                              <!-- {!$Label.c.Catcme_text_2} -->
+                                                                              <div class="scoreBasedCaption title2b">{!$Label.c.Catcme_text_16} </div>
+                                                    
+                                                    <aura:set attribute="else"> 
+                                     
+                                                         <lightning:formattedRichText value="{!v.peopleLikeYouNoDataLabel}"/>                                   
+                                       
+                                                   </aura:set> 
+                                                   </aura:if>
                                             </lightning:layoutItem>
                                                 <aura:set attribute="else"> 
                                                      <lightning:layoutItem size="0" class="graph-singel">
@@ -101,10 +111,18 @@
                                                                                  <div class="scoreBasedCaption title2c">{!v.scoreBasedCaption}	</div>
                                                         </lightning:layoutItem>
                                                     <lightning:layoutItem size="0" class="graph-double">
-                                                         <c:ParticipantGaugeChart breakPoint ="{!v.peopleLikeYou}" gaugeColor="['#33FF38','#FFB833','#FF5833']" lowAverage ="{!v.lValue}" highAverage ="{!v.hValue}"
-                                                                         minValue = "0"  maxValue="{!v.mValue}" chartLabel =""  isPercentage="False" gaugeSize="30"></c:ParticipantGaugeChart>
-                                                                         <!-- {!$Label.c.Catcme_text_2} -->
-                                                                         <div class="scoreBasedCaption title2b">{!$Label.c.Catcme_text_14}</div>
+                                                        <aura:if isTrue ="{!v.showpeopleLikeYou}">
+                                                            <c:ParticipantGaugeChart breakPoint ="{!v.peopleLikeYou}" gaugeColor="['#33FF38','#FFB833','#FF5833']" lowAverage ="{!v.lValue}" highAverage ="{!v.hValue}"
+                                                                            minValue = "0"  maxValue="{!v.mValue}" chartLabel =""  isPercentage="False" gaugeSize="30"></c:ParticipantGaugeChart>
+                                                                            <!-- {!$Label.c.Catcme_text_2} -->
+                                                                            <div class="scoreBasedCaption title2b">{!$Label.c.Catcme_text_14}</div>
+                                                  
+                                                  <aura:set attribute="else"> 
+                                            
+                                                       <lightning:formattedRichText value="{!v.peopleLikeYouNoDataLabel}"/>                                   
+                                         
+                                                 </aura:set> 
+                                                 </aura:if>
                                                 
                                             </lightning:layoutItem>
                                                     </aura:set> 

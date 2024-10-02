@@ -38,6 +38,12 @@
             </value>
         </filters>
         <inputAssignments>
+            <field>HEAT__c</field>
+            <value>
+                <stringValue>Completed</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
             <field>Is_Heat_Survey_Submitted__c</field>
             <value>
                 <booleanValue>true</booleanValue>
@@ -63,5 +69,5 @@
         <recordTriggerType>Create</recordTriggerType>
         <triggerType>RecordAfterSave</triggerType>
     </start>
-    <status>Active</status>
+    <status>Draft</status>
 </Flow>

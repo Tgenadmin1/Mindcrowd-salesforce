@@ -1,5 +1,5 @@
 ({
-    recorData: function (component, event, helper, userContactId, gameId, questionNumber, userInputData, isCorrect, reactionTime, isPracticeQuestion, correctAnswer, participantGameInfoId, totalTrialTime, orderOffUserInput, timeTest, round, imageNames) {
+    recorData: function (component, event, helper, userContactId, gameId, questionNumber, userInputData, isCorrect, reactionTime, isPracticeQuestion, correctAnswer, participantGameInfoId, totalTrialTime, orderOffUserInput, timeTest, round, imageNames, question) {
        // let timeForEachBoxs = JSON.stringify(timeForCategories);
         let answerOrder = JSON.stringify(orderOffUserInput);
         //let firstResponse = JSON.stringify(firstThreeKeys);
@@ -18,7 +18,8 @@
             Total_Time_for_All_Boxes__c: totalTrialTime,
             Order_of_Answers__c: answerOrder,
             Round__c: round,
-            ImageName__c: imageNames
+            ImageName__c: imageNames,
+            Question__c: question
         };
         //console.log('data is : ',data);
         var action = component.get("c.saveGameResponse");

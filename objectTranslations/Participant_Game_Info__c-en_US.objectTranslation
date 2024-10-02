@@ -9,6 +9,10 @@
         <value>Participant Game Infos</value>
     </caseValues>
     <fields>
+        <label><!-- Age Difference --></label>
+        <name>Age_Difference__c</name>
+    </fields>
+    <fields>
         <label><!-- Any loud noices recorded? --></label>
         <name>Aging_Well_Any_loud_noices_recorded__c</name>
     </fields>
@@ -150,11 +154,11 @@
         </picklistValues>
     </fields>
     <fields>
-        <label><!-- Ball Cost in Cents --></label>
+        <label><!-- Age Of Adam --></label>
         <name>Fake_News_Ball_Cost_in_Cents__c</name>
     </fields>
     <fields>
-        <label><!-- Days to Cover Half Lake --></label>
+        <label><!-- Days to Cover Bread --></label>
         <name>Fake_News_Days_to_Cover_Half_Lake__c</name>
     </fields>
     <fields>
@@ -234,7 +238,7 @@
         </picklistValues>
     </fields>
     <fields>
-        <label><!-- Time to Make 100 Widgets --></label>
+        <label><!-- Time to Print Pages --></label>
         <name>Fake_News_Time_to_Make_100_Widgets__c</name>
     </fields>
     <fields>
@@ -260,6 +264,10 @@
             <masterLabel>Strongly Disagree</masterLabel>
             <translation><!-- Strongly Disagree --></translation>
         </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Federal Gov Trust Feelings --></label>
+        <name>Federal_Gov_TrustFeelings__c</name>
     </fields>
     <fields>
         <label><!-- Game Name --></label>
@@ -295,6 +303,22 @@
         <name>IP_Data__c</name>
     </fields>
     <fields>
+        <label><!-- Is Loud Noises Recorded --></label>
+        <name>Is_Loud_Noises_Recorded__c</name>
+    </fields>
+    <fields>
+        <label><!-- Is Non English Usage --></label>
+        <name>Is_Non_English_Usage__c</name>
+    </fields>
+    <fields>
+        <label><!-- Is Other Voices Recorded --></label>
+        <name>Is_Other_Voices_Recorded__c</name>
+    </fields>
+    <fields>
+        <label><!-- Is Recording Usage Consent --></label>
+        <name>Is_Recording_Usage_Consent__c</name>
+    </fields>
+    <fields>
         <label><!-- Language --></label>
         <name>Language__c</name>
     </fields>
@@ -305,6 +329,10 @@
     <fields>
         <label><!-- Latitude --></label>
         <name>Latitude__c</name>
+    </fields>
+    <fields>
+        <label><!-- Living Location --></label>
+        <name>Living_Location__c</name>
     </fields>
     <fields>
         <label><!-- Longitude --></label>
@@ -319,6 +347,14 @@
         <name>Mic_Label__c</name>
     </fields>
     <fields>
+        <label><!-- Mold Spread Days --></label>
+        <name>Mold_Spread_Days__c</name>
+    </fields>
+    <fields>
+        <label><!-- News Consumption (hrs/wk) --></label>
+        <name>News_Consumption_hrs_wk__c</name>
+    </fields>
+    <fields>
         <label><!-- No. Of Correct Answered --></label>
         <name>No_Of_Correct_Answered__c</name>
     </fields>
@@ -331,12 +367,28 @@
         <name>Number_of_attempts_for_STACKS__c</name>
     </fields>
     <fields>
+        <label><!-- Political Affiliation --></label>
+        <name>Political_Affiliation__c</name>
+    </fields>
+    <fields>
+        <label><!-- Political Orientation --></label>
+        <name>Political_Orientation__c</name>
+    </fields>
+    <fields>
+        <label><!-- Printing Time Pages --></label>
+        <name>Printing_Time_Pages__c</name>
+    </fields>
+    <fields>
         <label><!-- ReactionTime --></label>
         <name>ReactionTime__c</name>
     </fields>
     <fields>
         <label><!-- Region --></label>
         <name>Region__c</name>
+    </fields>
+    <fields>
+        <label><!-- Social Media Engagement --></label>
+        <name>Social_Media_Engagement__c</name>
     </fields>
     <fields>
         <label><!-- Speech Task 1 Recording --></label>
@@ -357,6 +409,14 @@
     <fields>
         <label><!-- Sync With MC --></label>
         <name>Sync_With_MC__c</name>
+    </fields>
+    <fields>
+        <label><!-- Tell Me More Recording File Link --></label>
+        <name>Tell_Me_More_Recording_File_Link__c</name>
+    </fields>
+    <fields>
+        <label><!-- Tell Me Recording File Link --></label>
+        <name>Tell_Me_Recording_File_Link__c</name>
     </fields>
     <fields>
         <label><!-- Test Session --></label>

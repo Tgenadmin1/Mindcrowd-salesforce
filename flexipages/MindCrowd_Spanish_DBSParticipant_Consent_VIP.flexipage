@@ -1,0 +1,646 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlexiPage xmlns="http://soap.sforce.com/2006/04/metadata">
+    <flexiPageRegions>
+        <appendable>enabled</appendable>
+        <name>header</name>
+        <prependable>enabled</prependable>
+        <replaceable>enabled</replaceable>
+        <type>Region</type>
+    </flexiPageRegions>
+    <flexiPageRegions>
+        <appendable>enabled</appendable>
+        <itemInstances>
+            <componentInstance>
+                <componentInstanceProperties>
+                    <name>APOE_text_1</name>
+                    <value>APOE Form for Participation in Research</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>APOE_text_2</name>
+                    <value>Please enter your mailing address below. The sample collection kit will be sent to this address.</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>APOE_text_3</name>
+                    <value>Enter First Name Here</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>APOE_text_4</name>
+                    <value>Enter Last Name Here</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>APOE_text_all</name>
+                    <value>APOE_text_all</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>Bean_text_1</name>
+                    <value>Bean Game Form for Participation in Research</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>Bean_text_10</name>
+                    <value>The  study  staff  may  be  required  to  share  the  records  generated  from  this  research  with  the  sponsor, regulatory agencies such as the US Food and Drug Administration, Health and Human Services, and the IRB.  This  information  is  shared  so  the  research  can  be  conducted  and  properly  monitored.  The  people receiving  this  information  may  not  be  required  to  protect  it  and  your  information  may  be  re-disclosed without your permission. If you do not provide permission to use your information, you cannot be in the study.</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>Bean_text_11</name>
+                    <value>All  information  collected  about  you  during  the  course  of  this  study  will  be  kept  confidential.  When  the results  of  this  research  are  published  or  discussed  at  scientific  conferences,  no  information  will  be included that would reveal your identity.</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>Bean_text_12</name>
+                    <value>Your  participation  in  this  study  is  completely  voluntary.  You  may  choose  not  to  participate  or  you  may stop  participation  at  any  time  during  the  research  activity  without  penalty.  You  can  contact  the  Study Coordinator at MindCrowdQuestion@tgen.org to withdraw from the study.</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>Bean_text_13</name>
+                    <value>This consent information sheet addendum has more information about the research study.  It may add to or change the information in the consent form you signed at the start of this study.</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>Bean_text_14</name>
+                    <value>You will not be paid for being in this study.</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>Bean_text_15</name>
+                    <value>If you have questions about your participation in this study, you feel you have had a research-related injury, or you have questions, concerns, or complaints about the research, you may contact the study coordinator at MindCrowdQuestion@tgen.org or 602-343-8653 (24 hours). Contact the WCG IRB if you have questions about your rights as a research subject, concerns, complaints or input: 855-818-2289. WCG IRB is a group of people who perform independent review of research.</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>Bean_text_16</name>
+                    <value>All information collected about you during the course of this study will be kept confidential. When the results of this research are published or discussed at scientific conferences, no information will be included that would reveal your identity. To help protect your privacy, we have obtained a Certificate of Confidentiality from the National Institutes of Health. This means researchers may refuse to give out study information that identifies you. For example, if there were a court order requesting your study records, TGen would not give out information that identifies you, unless you have consented for this use. The Certificate &lt;u&gt;does&lt;/u&gt; permit TGen to disclose your information when:</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>Bean_text_17</name>
+                    <value>Required by Federal, State, or local laws. This excludes instances of Federal, State, or local civil, criminal, administrative, legislative, or other proceedings;</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>Bean_text_18</name>
+                    <value>You have consented to the disclosure, including for your medical treatment;</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>Bean_text_19</name>
+                    <value>Done as part of other approved research studies.</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>Bean_text_2</name>
+                    <value>Enter your code here</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>Bean_text_20</name>
+                    <value>A Certificate of Confidentiality does not prevent you or someone else, like a member of your family, from voluntarily sharing information about yourself or your involvement in this research. If you want your research information released to an insurer, medical care provider, or any other person not connected with the research, you must provide consent to allow the researchers to release it.</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>Bean_text_21</name>
+                    <value>Your participation in this study is completely voluntary. You may choose not to participate or you may stop participation at any time during the research activity without penalty or loss of benefits to which you are otherwise entitled. You can contact the Study Coordinator at MindCrowdQuestion@tgen.org to withdraw from the study.</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>Bean_text_22</name>
+                    <value>How do I agree to participate?</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>Bean_text_23</name>
+                    <value>Comprendo que si no deseo participar en este estudio, no debo completar esta página.</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>Bean_text_24</name>
+                    <value>Comprendo que si tengo preguntas, debo comunicarme con el coordinador de investigaciones clínicas llamando al 602-343-8653 (24 horas) o enviando un correo electrónico a MindCrowdQuestion@tgen.org antes de completar este consentimiento.</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>Bean_text_25</name>
+                    <value>Nombre</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>Bean_text_25a</name>
+                    <value>Enter First Name Here</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>Bean_text_26</name>
+                    <value>Apellido</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>Bean_text_26a</name>
+                    <value>Enter Last Name Here</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>Bean_text_27</name>
+                    <value>Email Address</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>Bean_text_27a</name>
+                    <value>Enter Email Address</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>Bean_text_28</name>
+                    <value>Please enter your mailing address below. The motor activity kit will be sent to this address. Please note we can only ship to participants in the United States at this time.</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>Bean_text_29</name>
+                    <value>Escriba el Nombre de la Ciudad Aquí</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>Bean_text_3</name>
+                    <value>País seleccionado</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>Bean_text_30</name>
+                    <value>--Ninguno--</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>Bean_text_31</name>
+                    <value>Escriba su Código Postal Aquí</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>Bean_text_32</name>
+                    <value>Street Address (including STE/APT)</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>Bean_text_33</name>
+                    <value>Escriba el Nombre de la Calle Aquí (incluyendo Ste./Apto.)</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>Bean_text_4</name>
+                    <value>Estado seleccionado</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>Bean_text_5</name>
+                    <value>Validate</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>Bean_text_6</name>
+                    <value>You are being invited to participate in a research study that is being carried out by Dr. Matt Huentelman at  the  non-profit  Translational  Genomic  Research  Institute  (TGen)  in  Phoenix,  Arizona.              This  study  will measure the time that it takes you to play a movement game.</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>Bean_text_7</name>
+                    <value>Your participation will involve timing yourself, or asking a friend to time you, as you complete a game. We will send you a game kit including all of the materials that you will need to complete the game. You will need to self-record your results and return the results to TGen. The amount of time that it takes you to complete the game will vary between people, but we expect it to take you approximately 20 minutes.</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>Bean_text_8</name>
+                    <value>There are no known risks associated with being in this research. There is no direct benefit to you being in this study. However, what we learn from this study may help others in the future.             Your alternative is to not participate in this study.</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>Bean_text_9</name>
+                    <value>If  you  have  questions  about  your  participation  in  this  study,  you  feel  you  have  had  a  research-related injury,  or  you  have  questions,  concerns,  or  complaints  about  the  research,  you  may  contact  the  study coordinator  at MindCrowdQuestion@tgen.org  or  602-343-8653.  Contact  the  Western  Institutional Review Board (WIRB) if you have questions about your rights as a research subject, concerns, complaints or input: 1-800-562-4789. WIRB is a group of people who perform independent review of research</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>Bean_text_all</name>
+                    <value>Bean Consent Text</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>DBS_text_1</name>
+                    <value>Formulario DBS para la participación en la investigación</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>DBS_text_10</name>
+                    <value>VALIDAR DIRECCIÓN</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>DBS_text_11</name>
+                    <value>Código de estado no válido.</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>DBS_text_12</name>
+                    <value>Ciudad no válida.</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>DBS_text_13</name>
+                    <value>Dirección no encontrada.</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>DBS_text_14</name>
+                    <value>Dirección verificada.</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>DBS_text_15</name>
+                    <value>Lea la siguiente información detenidamente antes de decidir si quiere participar en este subestudio de investigación. Su participación es voluntaria.</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>DBS_text_16</name>
+                    <value>Se lo invita a participar en un estudio de investigación. El propósito de este estudio es comprender la forma en que el cerebro humano recuerda cosas.</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>DBS_text_17</name>
+                    <value>Para participar en esta fase del estudio, se le pedirá que recoja muestras de sangre seca  utilizando un dispositivo de punción digital (lanceta) y un kit que le proporcionaremos. Luego le  pediremos que envíe sus muestras por correo a los investigadores de TGen en un sobre de  retorno prefranqueado. Los investigadores analizarán el ADN, el ARN y los biomarcadores de  proteínas de su sangre y combinarán las mediciones con los resultados de su puntuación en  la prueba MindCrowd y la información que haya proporcionado a través de los cuestionarios.</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>DBS_text_18</name>
+                    <value>¿QUÉ ES EL ADN Y QUÉ SON LOS GENES Y LA GENÉTICA?</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>DBS_text_19</name>
+                    <value>El ADN es una sustancia que se encuentra en todas las células del cuerpo humano. Su ADN  contiene &quot;genes&quot; que predicen cosas como características físicas (color de ojos, color del  pelo, altura, etc.) o riesgo de enfermedades.</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>DBS_text_2</name>
+                    <value>Obligatorio</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>DBS_text_20</name>
+                    <value>¿QUÉ ES EL ARN Y LA PROTEÍNA?</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>DBS_text_21</name>
+                    <value>El ARN entrega el mensaje genético del ADN a la parte de una célula que produce proteínas.  El ARN brinda información sobre qué genes se activan o desactivan en un momento dado.</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>DBS_text_22</name>
+                    <value>Las proteínas son moléculas grandes que juegan muchos papeles críticos en el cuerpo.  Hacen la mayor parte del trabajo en las células y son necesarios para la estructura y función  de los tejidos y órganos del cuerpo.</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>DBS_text_23</name>
+                    <value>¿CUÁNTAS PERSONAS PARTICIPARÁN EN EL ESTUDIO?</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>DBS_text_24</name>
+                    <value>Se espera que hasta 5000 personas participen en el estudio.</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>DBS_text_25</name>
+                    <value>¿QUÉ TENDRÉ QUE HACER?</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>DBS_text_26</name>
+                    <value>Se le pedirá que complete este formulario de consentimiento si decide participar. Si decide participar, el equipo del estudio le proporcionará un kit de recogida de muestras de sangre  seca. Se le darán instrucciones sobre cómo recoger muestras de sangre seca de su dedo. Si  no puede donar una muestra de sangre seca, entonces se puede recoger una muestra de  saliva o un hisopo bucal. Su muestra será analizada y almacenada en TGen.</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>DBS_text_27</name>
+                    <value>Además, la información demográfica, médica y de estilo de vida que ya se recopiló cuando  completó el estudio MindCrowd por primera vez se vinculará a su muestra. El coordinador del  estudio codificará esta información y su muestra con un número específico de investigación  para proteger su identidad.</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>DBS_text_28</name>
+                    <value>¿QUÉ EDAD DEBO TENER PARA PARTICIPAR?</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>DBS_text_29</name>
+                    <value>Debe tener al menos 18 años para participar en este estudio.</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>DBS_text_3</name>
+                    <value>Dirección</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>DBS_text_30</name>
+                    <value>¿MIS MUESTRAS SE ALMACENARÁN Y UTILIZARÁN  PARA OTROS ESTUDIOS?</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>DBS_text_31</name>
+                    <value>Sus muestras se almacenarán en TGen indefinidamente. Los investigadores pueden decidir  más tarde que quieren realizar pruebas adicionales en sus muestras. Si sus muestras se  utilizan en investigaciones futuras, es posible que se compartan con investigadores que no  forman parte de TGen. Los investigadores del estudio aprobarán el uso de las muestras para  futuras investigaciones. Todas las muestras se almacenarán sin información de identificación  adjunta a la muestra.</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>DBS_text_32</name>
+                    <value>¿COMPARTIRÁN MI INFORMACIÓN CON OTRAS PERSONAS?</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>DBS_text_33</name>
+                    <value>No compartiremos ninguna información identificativa que nos proporcione. Toda su  información se almacena en una base de datos. Todas nuestras bases de datos están  protegidas con contraseña y son seguras. Nadie puede identificarle sin acceso a estas dos  fuentes de datos.</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>DBS_text_34</name>
+                    <value>¿QUIÉN MÁS TENDRÁ ACCESO A MI  INFORMACIÓN GENÉTICA?</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>DBS_text_35</name>
+                    <value>Los investigadores pueden decidir compartir los datos recopilados de sus muestras para  ayudar a investigaciones futuras. Una forma de hacer esto es poniendo información en  bases de datos científicas, donde se almacena junto con información de otros estudios.  Luego, los investigadores pueden estudiar la información combinada para aprender aún  más sobre las enfermedades. Si acepta participar en el estudio, parte de su información  genética y de salud podría colocarse en una o más bases de datos científicas. Hay muchos tipos diferentes de bases de datos científicas; algunos son mantenidos por  empresas privadas o los Institutos Nacionales de Salud (una agencia del gobierno federal). Un  investigador que quiera estudiar la información debe solicitar acceso a la base de datos.  Diferentes bases de datos pueden tener diferentes formas de revisar dichas solicitudes. Los  investigadores autorizados pueden ver y usar su información anonimizada, junto con la  información de muchas otras personas.</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>DBS_text_36</name>
+                    <value>Su nombre ni ninguna otra información que puede identificarle directamente se incluye nunca  en una base de datos científica. Sin embargo, debido a que cada información genética es  única, existe una pequeña posibilidad de que alguien pueda rastrearla hasta usted. El riesgo  de que esto suceda es muy pequeño, pero puede aumentar en el futuro. Existen muchas  medidas de seguridad para proteger su información mientras se almacena en repositorios y  se utiliza para la investigación.</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>DBS_text_37</name>
+                    <value>¿LOS INVESTIGADORES NECESITARÁN CONTACTARME  EN EL FUTURO?</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>DBS_text_38</name>
+                    <value>Los investigadores pueden decidir más tarde que quieren más información sobre usted y su  salud. Al completar este formulario de consentimiento, autoriza al equipo de investigación a  contactar con usted en el futuro. Si el equipo de investigación se pone en contacto con usted,  puede negarse a proporcionar cualquier información.</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>DBS_text_39</name>
+                    <value>¿CUÁNTO TIEMPO ESTARÉ EN EL ESTUDIO?</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>DBS_text_4</name>
+                    <value>Número de apartamento</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>DBS_text_40</name>
+                    <value>Su parte en esta fase del estudio incluye completar el consentimiento del estudio  (generalmente menos de 15 minutos) y una sola recogida de muestras de sangre seca, una  muestra de saliva o un hisopo bucal (generalmente menos de 15 minutos).</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>DBS_text_41</name>
+                    <value>¿CUÁLES SON LOS RIESGOS?</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>DBS_text_42</name>
+                    <value>Riesgo físico</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>DBS_text_43</name>
+                    <value>Existe un ligero riesgo de exceso de sangrado, hematomas o infección después de la  extracción de una muestra de sangre seca; sin embargo, este riesgo es muy bajo. Se  tomarán medidas para ayudarle a evitar estos problemas. No existen riesgos físicos  relacionados con la recogida de muestras de saliva ni de hisopos bucales.</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>DBS_text_44</name>
+                    <value>Riesgo de privacidad</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>DBS_text_45</name>
+                    <value>Tomaremos muchas medidas para proteger su privacidad, pero debido a que cada ADN es  único, es posible que alguien pueda rastrearla hasta usted. También existe el riesgo de que  alguien pueda acceder a los datos que tenemos almacenados sobre usted. Si esos datos  sugieren algo serio sobre su salud, se les podría dar un mal uso. Por ejemplo, podrían usarse  para dificultarle obtener o mantener un trabajo o un seguro. Existen leyes contra este tipo de  uso indebido, pero es posible que no proporcionen una protección completa. También puede  haber otros riesgos de privacidad imprevistos.</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>DBS_text_46</name>
+                    <value>Creemos que la posibilidad de que sucedan estas cosas es pequeña, pero no podemos  garantizarlo. Su privacidad y la confidencialidad de sus datos son muy importantes para  nosotros y haremos todo lo posible para protegerlos. Estos esfuerzos se describen a  continuación, en la sección &quot;¿Cómo se protegerá mi privacidad?&quot;</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>DBS_text_47</name>
+                    <value>¿CÓMO SE PROTEGERÁ MI PRIVACIDAD?</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>DBS_text_48</name>
+                    <value>Las reglas federales de privacidad proporcionan garantías para la privacidad, la seguridad y  el acceso autorizado. No proporcionaremos información que le identifique a nadie sin su  permiso, excepto cuando lo exija la ley. Este estudio toma muchas medidas para proteger la  privacidad de los participantes.</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>DBS_text_49</name>
+                    <value>Las reglas federales de privacidad proporcionan garantías para la privacidad, la seguridad y  el acceso autorizado. No proporcionaremos información que le identifique a nadie sin su  permiso, excepto cuando lo exija la ley. Este estudio toma muchas medidas para proteger la  privacidad de los participantes.</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>DBS_text_5</name>
+                    <value>Ciudad</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>DBS_text_50</name>
+                    <value>Mantendremos las muestras en congeladores cerrados en edificios cerrados. Mantendremos la  información de salud y los datos de investigación en ordenadores seguros. Estos equipos tienen  muchos niveles de protección.</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>DBS_text_51</name>
+                    <value>Existe una ley federal llamada Ley de No Discriminación por Información Genética (GINA). En general, esta ley establece que es ilegal que las empresas de seguros de salud, los planes de  salud colectivos y la mayoría de empleadores le discriminen en función de su información  genética. Sin embargo, no le protege contra la discriminación por parte de empresas que  venden seguros de vida, seguros por discapacidad o seguros de asistencia a largo plazo.</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>DBS_text_52</name>
+                    <value>¿HAY ALGUNOS BENEFICIOS?</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>DBS_text_53</name>
+                    <value>No recibirá ningún resultado de ninguna prueba de la muestra que dona para este estudio.  No hay ningún beneficio directo para usted por participar en este estudio. Sin embargo, lo  que aprendemos de este estudio puede ayudar a otros en el futuro.</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>DBS_text_54</name>
+                    <value>¿CUÁLES SON MIS ALTERNATIVAS SI NO QUIERO  PARTICIPAR EN LA INVESTIGACIÓN?</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>DBS_text_55</name>
+                    <value>Este no es un estudio de tratamiento. Su otra opción es no dar sus muestras a TGen.</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>DBS_text_56</name>
+                    <value>¿PUEDO ABANDONAR EL ESTUDIO UNA VEZ QUE ESTOY EN  ÉL?</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>DBS_text_57</name>
+                    <value>Su participación en este estudio es voluntaria. Puede decidir no participar o abandonar el  estudio en cualquier momento. Su decisión no dará lugar a ninguna sanción ni pérdida de los  beneficios a los que tiene derecho.</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>DBS_text_58</name>
+                    <value>Si completa este formulario, pero luego cambia de opinión, tendrá que contactar con el  coordinador del estudio en MindCrowdQuestion@tgen.org o en el 602-343-8653.</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>DBS_text_59</name>
+                    <value>Si abandona el estudio, TGen conservará sus muestras, pero borrará por completo toda la  información de identificación y los códigos de sus muestras para que no se puedan rastrear  hasta usted de ninguna manera. Esto significa que las muestras se anonimizarán.</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>DBS_text_6</name>
+                    <value>Código postal</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>DBS_text_60</name>
+                    <value>¿QUÉ HAY DE MI PRIVACIDAD Y CONFIDENCIALIDAD?</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>DBS_text_61</name>
+                    <value>Su privacidad es muy importante para nosotros y utilizaremos muchas medidas de seguridad  para proteger su privacidad. Sin embargo, a pesar de todas las medidas de seguridad que  utilizaremos, no podemos garantizar que nunca se conozca su identidad. Aunque su  información genética es única, esta comparte cierta información genética con sus familiares  consanguíneos. En consecuencia, es posible que la información genética de ellos pueda  usarse para ayudar a identificarle. Del mismo modo, es posible que su información genética  se pueda utilizar para ayudar a identificarles a ellos.</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>DBS_text_62</name>
+                    <value>Toda la información recopilada sobre usted durante el curso de este estudio se mantendrá  confidencial en la medida en que lo permita la ley. Se le identificará en los registros de la  investigación mediante un nombre en clave o un número. La información que le identifique  personalmente no se divulgará sin su autorización por escrito. Sin embargo, el Translational  Genomics Research Institute (TGen) o las agencias federales con la supervisión regulatoria  adecuada, como la Administración de Alimentos y Medicamentos (FDA), la Oficina para la  Protección de la Investigación Humana (OHRP), la Oficina de Derechos Civiles (OCR), los  Institutos Nacionales de Salud (NIH), Western Institutional Review Board® (WIRB®), puede  revisar o copiar sus registros con fines de investigación.</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>DBS_text_63</name>
+                    <value>Cuando los resultados de esta investigación se publiquen o discutan en conferencias, no se  incluirá información que revele su identidad.</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>DBS_text_64</name>
+                    <value>¿CUÁLES SON LOS COSTES?</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>DBS_text_65</name>
+                    <value>Participar en este estudio no conlleva ningún coste para usted.</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>DBS_text_66</name>
+                    <value>¿ME PAGARÁN?</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>DBS_text_67</name>
+                    <value>No se le pagará por participar en este estudio.</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>DBS_text_68</name>
+                    <value>¿ME PAGARÁN SI EL PATROCINADOR GANA DINERO O  BENEFICIOS DE MIS MUESTRAS?</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>DBS_text_69</name>
+                    <value>Es posible que surjan resultados de este estudio que puedan ayudar a desarrollar nuevos  tratamientos o pruebas. Esto puede dar lugar a productos comerciales que se venderán con  fines de lucro. No hay planes para pagarle por ningún producto desarrollado a partir de este  estudio.</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>DBS_text_7</name>
+                    <value>País</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>DBS_text_70</name>
+                    <value>¿QUÉ PASA SI SE VIOLA LA PRIVACIDAD O SUFRO ALGÚN  DAÑO?</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>DBS_text_71</name>
+                    <value>No hay planes para pagarle en caso de haber una violación de la privacidad ni en caso de  que sufra algún daño como resultado de su participación en este estudio. Esto no elimina ni  rescinde ninguno de sus derechos legales en caso de negligencia o mala conducta.</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>DBS_text_72</name>
+                    <value>¿A QUIÉN LLAMO SI TENGO ALGUNA PREGUNTA O PROBLEMA?</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>DBS_text_73</name>
+                    <value>Si tiene preguntas sobre su participación en este estudio, cree que ha sufrido algún daño relacionado con la investigación o tiene preguntas, inquietudes o quejas sobre la  investigación, puede contactar con el coordinador del estudio en el 602-343-8653.</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>DBS_text_74</name>
+                    <value>Si tiene preguntas sobre sus derechos como participante de la investigación en este  estudio o si tiene preguntas, inquietudes o quejas sobre la investigación, puede contactar  con:</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>DBS_text_75</name>
+                    <value>Western Institutional Review Board® (WIRB®)</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>DBS_text_75_a</name>
+                    <value>1019 39th Avenue SE Suite 120</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>DBS_text_75_b</name>
+                    <value>Puyallup, Washington 98374-2115</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>DBS_text_75_c</name>
+                    <value>Teléfono: 1-800-562-4789 o 360-252- 2500</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>DBS_text_76</name>
+                    <value>Help@wirb.com</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>DBS_text_77</name>
+                    <value>WIRB es un grupo de personas que realizan una revisión  independiente de la investigación.</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>DBS_text_78</name>
+                    <value>WIRB no podrá responder a ciertas preguntas específicas del estudio, como preguntas sobre  los horarios de las citas. Sin embargo, puede contactar con la WIRB si no puede contactar  con el personal de investigación o si desea hablar con alguien que no sea el personal de  investigación.</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>DBS_text_79</name>
+                    <value>No rellene este formulario de consentimiento a menos que haya tenido la oportunidad de  hacer preguntas y haya recibido respuestas satisfactorias a todas sus preguntas.</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>DBS_text_8</name>
+                    <value>--Ninguno--</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>DBS_text_80</name>
+                    <value>Si acepta participar en este estudio, tendrá acceso a una copia completa de este formulario  de consentimiento para sus archivos.</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>DBS_text_81</name>
+                    <value>¿CÓMO ACEPTO PARTICIPAR?</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>DBS_text_82</name>
+                    <value>Habrá preguntas y casillas de verificación al final de este formulario. Una vez que haya  revisado todas las declaraciones, marque el botón que dice: &quot;Doy mi consentimiento&quot; o el  botón que dice &quot;Rechazo&quot;.</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>DBS_text_83</name>
+                    <value>Marcando esta casilla:</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>DBS_text_84</name>
+                    <value>Entiendo que si tengo preguntas debo contactar con el Coordinador de  Investigación Clínica en el 602-343-8653 o en MindCrowdQuestion@tgen.org antes de completar esta página.</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>DBS_text_85</name>
+                    <value>Sí autorizo</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>DBS_text_86</name>
+                    <value>Por favor, rellene los campos obligatorios</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>DBS_text_87</name>
+                    <value>Enviar</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>DBS_text_88</name>
+                    <value>Por favor, rellene los campos obligatorios.</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>DBS_text_89</name>
+                    <value>Por favor, introduzca su dirección postal a continuación. El kit de recolección de muestras de sangre se enviará a esta dirección.</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>DBS_text_9</name>
+                    <value>Estado</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>DBS_text_90</name>
+                    <value>Dirección</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>DBS_text_91</name>
+                    <value>Número de teléfono</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>DBS_text_92</name>
+                    <value>Ingrese el número de teléfono aquí</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>DBS_text_93</name>
+                    <value>NO autorizo</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>DBS_text_all</name>
+                    <value>tbd</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>strTitle</name>
+                    <value>Welcome in Salesforce</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>textValue</name>
+                    <value>Dirección verificada.</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>url_acceptance</name>
+                    <value>adic/aprobacionescrita</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>url_acceptance_vip</name>
+                    <value>adic/aprobacionescrita-vip</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>url_alreadysubmitted</name>
+                    <value>adic/direccion-ya-ingresada</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>url_alreadysubmitted_vip</name>
+                    <value>adic/direccion-ya-ingresada-vip</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>url_decline</name>
+                    <value>https://blog.mindcrowd.org/es</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>url_decline_vip</name>
+                    <value>pme-panel-control</value>
+                </componentInstanceProperties>
+                <componentName>participantconsentform</componentName>
+                <identifier>participantconsentform</identifier>
+            </componentInstance>
+        </itemInstances>
+        <name>content</name>
+        <prependable>enabled</prependable>
+        <replaceable>enabled</replaceable>
+        <type>Region</type>
+    </flexiPageRegions>
+    <flexiPageRegions>
+        <appendable>enabled</appendable>
+        <name>footer</name>
+        <prependable>enabled</prependable>
+        <replaceable>enabled</replaceable>
+        <type>Region</type>
+    </flexiPageRegions>
+    <flexiPageRegions>
+        <appendable>enabled</appendable>
+        <itemInstances>
+            <componentInstance>
+                <componentInstanceProperties>
+                    <name>customHeadTags</name>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>description</name>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>title</name>
+                    <value>DBSParticipant Consent VIP</value>
+                </componentInstanceProperties>
+                <componentName>forceCommunity:seoAssistant</componentName>
+                <identifier>forceCommunity_seoAssistant</identifier>
+            </componentInstance>
+        </itemInstances>
+        <name>sfdcHiddenRegion</name>
+        <prependable>enabled</prependable>
+        <replaceable>enabled</replaceable>
+        <type>Region</type>
+    </flexiPageRegions>
+    <masterLabel>DBSParticipant Consent VIP</masterLabel>
+    <template>
+        <name>siteforce:sldsOneColLayout</name>
+    </template>
+    <type>CommAppPage</type>
+</FlexiPage>

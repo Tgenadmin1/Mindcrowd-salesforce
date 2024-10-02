@@ -161,6 +161,18 @@
     <enableStreamingApi>true</enableStreamingApi>
     <externalSharingModel>Private</externalSharingModel>
     <fields>
+        <fullName>Age_Difference__c</fullName>
+        <externalId>false</externalId>
+        <label>Age Difference</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
         <fullName>Aging_Well_Any_loud_noices_recorded__c</fullName>
         <defaultValue>false</defaultValue>
         <externalId>false</externalId>
@@ -548,7 +560,7 @@
         <fullName>Fake_News_Ball_Cost_in_Cents__c</fullName>
         <description>How much does the ball cost? (Answer in cents)</description>
         <externalId>false</externalId>
-        <label>Ball Cost in Cents</label>
+        <label>Age Of Adam</label>
         <precision>18</precision>
         <required>false</required>
         <scale>2</scale>
@@ -560,7 +572,7 @@
     <fields>
         <fullName>Fake_News_Days_to_Cover_Half_Lake__c</fullName>
         <externalId>false</externalId>
-        <label>Days to Cover Half Lake</label>
+        <label>Days to Cover Bread</label>
         <precision>18</precision>
         <required>false</required>
         <scale>2</scale>
@@ -628,9 +640,13 @@
         <trackTrending>false</trackTrending>
         <type>Picklist</type>
         <valueSet>
-            <restricted>true</restricted>
             <valueSetDefinition>
                 <sorted>false</sorted>
+                <value>
+                    <fullName>Always</fullName>
+                    <default>false</default>
+                    <label>Always</label>
+                </value>
                 <value>
                     <fullName>Never</fullName>
                     <default>false</default>
@@ -650,11 +666,6 @@
                     <fullName>Very often</fullName>
                     <default>false</default>
                     <label>Very often</label>
-                </value>
-                <value>
-                    <fullName>Always</fullName>
-                    <default>false</default>
-                    <label>Always</label>
                 </value>
             </valueSetDefinition>
         </valueSet>
@@ -703,7 +714,7 @@
     <fields>
         <fullName>Fake_News_Time_to_Make_100_Widgets__c</fullName>
         <externalId>false</externalId>
-        <label>Time to Make 100 Widgets</label>
+        <label>Time to Print Pages</label>
         <precision>18</precision>
         <required>false</required>
         <scale>2</scale>
@@ -721,13 +732,12 @@
         <trackTrending>false</trackTrending>
         <type>Picklist</type>
         <valueSet>
-            <restricted>true</restricted>
             <valueSetDefinition>
                 <sorted>false</sorted>
                 <value>
-                    <fullName>Strongly Disagree</fullName>
+                    <fullName>Agree</fullName>
                     <default>false</default>
-                    <label>Strongly Disagree</label>
+                    <label>Agree</label>
                 </value>
                 <value>
                     <fullName>Disagree</fullName>
@@ -740,17 +750,28 @@
                     <label>Neutral</label>
                 </value>
                 <value>
-                    <fullName>Agree</fullName>
-                    <default>false</default>
-                    <label>Agree</label>
-                </value>
-                <value>
                     <fullName>Strongly Agree</fullName>
                     <default>false</default>
                     <label>Strongly Agree</label>
                 </value>
+                <value>
+                    <fullName>Strongly Disagree</fullName>
+                    <default>false</default>
+                    <label>Strongly Disagree</label>
+                </value>
             </valueSetDefinition>
         </valueSet>
+    </fields>
+    <fields>
+        <fullName>Federal_Gov_TrustFeelings__c</fullName>
+        <externalId>false</externalId>
+        <label>Federal Gov Trust Feelings</label>
+        <length>30</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
     </fields>
     <fields>
         <fullName>Game_Name__c</fullName>
@@ -836,6 +857,42 @@
         <visibleLines>5</visibleLines>
     </fields>
     <fields>
+        <fullName>Is_Loud_Noises_Recorded__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Is Loud Noises Recorded</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Is_Non_English_Usage__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Is Non English Usage</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Is_Other_Voices_Recorded__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Is Other Voices Recorded</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Is_Recording_Usage_Consent__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Is Recording Usage Consent</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
         <fullName>Language__c</fullName>
         <description>test language get from consent page. ( Language selected by test-taker at public application.)</description>
         <externalId>false</externalId>
@@ -872,6 +929,17 @@
         <unique>false</unique>
     </fields>
     <fields>
+        <fullName>Living_Location__c</fullName>
+        <externalId>false</externalId>
+        <label>Living Location</label>
+        <length>30</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
         <fullName>Longitude__c</fullName>
         <externalId>false</externalId>
         <label>Longitude</label>
@@ -903,6 +971,30 @@
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Mold_Spread_Days__c</fullName>
+        <externalId>false</externalId>
+        <label>Mold Spread Days</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>News_Consumption_hrs_wk__c</fullName>
+        <externalId>false</externalId>
+        <label>News Consumption (hrs/wk)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
         <unique>false</unique>
     </fields>
     <fields>
@@ -958,6 +1050,40 @@
         <type>Summary</type>
     </fields>
     <fields>
+        <fullName>Political_Affiliation__c</fullName>
+        <externalId>false</externalId>
+        <label>Political Affiliation</label>
+        <length>50</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Political_Orientation__c</fullName>
+        <externalId>false</externalId>
+        <label>Political Orientation</label>
+        <length>30</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Printing_Time_Pages__c</fullName>
+        <externalId>false</externalId>
+        <label>Printing Time Pages</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
         <fullName>ReactionTime__c</fullName>
         <externalId>false</externalId>
         <formula>Count_Of_Total_Reaction_Time__c / Count_Of_No_of_Question_Attempted__c</formula>
@@ -976,6 +1102,17 @@
         <externalId>false</externalId>
         <label>Region</label>
         <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Social_Media_Engagement__c</fullName>
+        <externalId>false</externalId>
+        <label>Social Media Engagement</label>
+        <length>30</length>
         <required>false</required>
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
@@ -1030,6 +1167,24 @@
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Tell_Me_More_Recording_File_Link__c</fullName>
+        <externalId>false</externalId>
+        <label>Tell Me More Recording File Link</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Url</type>
+    </fields>
+    <fields>
+        <fullName>Tell_Me_Recording_File_Link__c</fullName>
+        <externalId>false</externalId>
+        <label>Tell Me Recording File Link</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Url</type>
     </fields>
     <fields>
         <fullName>Test_Session__c</fullName>

@@ -18,3 +18,8 @@ input.slds-input {
     border-radius: 5px;
     height: 50%;
 }
+input[type="number"].zipcode::-webkit-inner-spin-button,
+input[type="number"].zipcode::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}

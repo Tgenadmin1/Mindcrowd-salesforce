@@ -72,6 +72,18 @@
                  else{
                     delete graphData.gamedataList.fakenewsdataList;
                  }
+                 if(graphData.gamedataList.digitSymboldataList.length>0){
+                  chartNames.push($A.get("$Label.c.game_name_17"));
+                 }
+                 else{
+                  delete graphData.gamedataList.digitSymboldataList;
+                 }
+                 if(graphData.gamedataList.camelandcactusdataList.length>0){
+                  chartNames.push($A.get("$Label.c.game_name_18"));
+                 }
+                 else{
+                  delete graphData.gamedataList.camelandcactusdataList;
+                 }
                  if(graphData.gamedataList.beangamerightdataList.length>0 && graphData.gamedataList.beangameleftdataList.length>0){
                     chartNames.push($A.get("$Label.c.game_name_11"));
                  }

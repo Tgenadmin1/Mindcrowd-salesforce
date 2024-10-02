@@ -1,12 +1,12 @@
 ({    
-   saveAudioToSalesforce: function(component, participantGameInfoId, binaryData, taskNum,otherlanguage,othervoices,
+   saveAudioToSalesforce: function(component, participantGameInfoId, binaryData, taskName,otherlanguage,othervoices,
         loudnoices,isdelete) {
         var action = component.get("c.createAudioContentVersion");
         //const binaryDataStr = JSON.stringify(binaryData);
         action.setParams({
             "parentId": participantGameInfoId, // The ID of your custom object record
             "speechTaskrec": binaryData,
-            "taskNum" : taskNum,
+            "taskName" : taskName,
             "otherlanguage" : otherlanguage,
             "othervoices" : othervoices,
             "loudnoices" : loudnoices,

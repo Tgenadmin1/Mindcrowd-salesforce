@@ -133,6 +133,22 @@
         </picklistValues>
     </fields>
     <fields>
+        <label><!-- Camel and Cactus --></label>
+        <name>Camel_and_Cactus__c</name>
+        <picklistValues>
+            <masterLabel>Completed</masterLabel>
+            <translation><!-- Completed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Locked</masterLabel>
+            <translation><!-- Locked --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Unlocked</masterLabel>
+            <translation><!-- Unlocked --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
         <label><!-- Campaign Code --></label>
         <name>Campaign_Code__c</name>
     </fields>
@@ -181,6 +197,38 @@
         </picklistValues>
     </fields>
     <fields>
+        <label><!-- Digit Symbol Matching Test --></label>
+        <name>Digit_Symbol_Matching_Test__c</name>
+        <picklistValues>
+            <masterLabel>Completed</masterLabel>
+            <translation><!-- Completed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Locked</masterLabel>
+            <translation><!-- Locked --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Unlocked</masterLabel>
+            <translation><!-- Unlocked --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Digits --></label>
+        <name>Digits__c</name>
+        <picklistValues>
+            <masterLabel>Completed</masterLabel>
+            <translation><!-- Completed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Locked</masterLabel>
+            <translation><!-- Locked --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Unlocked</masterLabel>
+            <translation><!-- Unlocked --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
         <label><!-- Education Attainment --></label>
         <name>Education_Attainment__c</name>
     </fields>
@@ -198,6 +246,14 @@
         <help><!-- Email reminder after 1 day --></help>
         <label><!-- Email trigger point --></label>
         <name>Email_trigger_point__c</name>
+    </fields>
+    <fields>
+        <label><!-- Enrolled in Paid Campaign (ECog-12) --></label>
+        <name>Enrolled_in_Paid_Campaign_ECog_12__c</name>
+    </fields>
+    <fields>
+        <label><!-- Enrolled in Paid Campaign --></label>
+        <name>Enrolled_in_Paid_Campaign__c</name>
     </fields>
     <fields>
         <label><!-- Event Id --></label>
@@ -242,6 +298,22 @@
     <fields>
         <label><!-- Fake News Test --></label>
         <name>Fake_News_Test__c</name>
+        <picklistValues>
+            <masterLabel>Completed</masterLabel>
+            <translation><!-- Completed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Locked</masterLabel>
+            <translation><!-- Locked --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Unlocked</masterLabel>
+            <translation><!-- Unlocked --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Fake News --></label>
+        <name>Fake_News__c</name>
         <picklistValues>
             <masterLabel>Completed</masterLabel>
             <translation><!-- Completed --></translation>
@@ -427,6 +499,10 @@
             <translation><!-- Türkçe --></translation>
         </picklistValues>
         <picklistValues>
+            <masterLabel>bosanski</masterLabel>
+            <translation><!-- bosanski --></translation>
+        </picklistValues>
+        <picklistValues>
             <masterLabel>Íslenska</masterLabel>
             <translation><!-- Íslenska --></translation>
         </picklistValues>
@@ -548,6 +624,22 @@
         <name>Full_Name__c</name>
     </fields>
     <fields>
+        <label><!-- GLUCOSAMINE --></label>
+        <name>GLUCOSAMINE__c</name>
+        <picklistValues>
+            <masterLabel>Completed</masterLabel>
+            <translation><!-- Completed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Locked</masterLabel>
+            <translation><!-- Locked --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Unlocked</masterLabel>
+            <translation><!-- Unlocked --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
         <label><!-- Gender --></label>
         <name>Gender__c</name>
         <picklistValues>
@@ -580,8 +672,28 @@
         </picklistValues>
     </fields>
     <fields>
+        <label><!-- Glucosamine Survey --></label>
+        <name>Glucosamine_Survey__c</name>
+    </fields>
+    <fields>
         <label><!-- HEALTH MEDICAL --></label>
         <name>HEALTH_MEDICAL__c</name>
+        <picklistValues>
+            <masterLabel>Completed</masterLabel>
+            <translation><!-- Completed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Locked</masterLabel>
+            <translation><!-- Locked --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Unlocked</masterLabel>
+            <translation><!-- Unlocked --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- HEAT --></label>
+        <name>HEAT__c</name>
         <picklistValues>
             <masterLabel>Completed</masterLabel>
             <translation><!-- Completed --></translation>
@@ -824,8 +936,72 @@
         <name>Is_ANXIETY_Submitted__c</name>
     </fields>
     <fields>
+        <label><!-- BRAIN DISEASE Survey --></label>
+        <name>Is_BRAIN_DISEASE_Submitted__c</name>
+    </fields>
+    <fields>
+        <label><!-- CANCER Survey --></label>
+        <name>Is_CANCER_Submitted__c</name>
+    </fields>
+    <fields>
+        <label><!-- COVID Survey --></label>
+        <name>Is_COVID_Submitted__c</name>
+    </fields>
+    <fields>
+        <label><!-- DIET Survey --></label>
+        <name>Is_DIET_Submitted__c</name>
+    </fields>
+    <fields>
+        <label><!-- ECog-12 Survey --></label>
+        <name>Is_ECog12_Submitted__c</name>
+    </fields>
+    <fields>
+        <label><!-- FHAD Survey --></label>
+        <name>Is_FHAD_Submitted__c</name>
+    </fields>
+    <fields>
+        <label><!-- HEALTH MEDICAL Survey --></label>
+        <name>Is_HEALTH_MEDICAL_Submitted__c</name>
+    </fields>
+    <fields>
         <label><!-- Heat Survey --></label>
         <name>Is_Heat_Survey_Submitted__c</name>
+    </fields>
+    <fields>
+        <label><!-- PERCEIVED STRESS Survey --></label>
+        <name>Is_PERCEIVED_STRESS_Submitted__c</name>
+    </fields>
+    <fields>
+        <label><!-- QPAR Survey --></label>
+        <name>Is_QPAR_Submitted__c</name>
+    </fields>
+    <fields>
+        <label><!-- SES Survey --></label>
+        <name>Is_SES_Submitted__c</name>
+    </fields>
+    <fields>
+        <label><!-- SLEEP Survey --></label>
+        <name>Is_SLEEP_Submitted__c</name>
+    </fields>
+    <fields>
+        <label><!-- SOCIAL STRESSOR Survey --></label>
+        <name>Is_SOCIAL_STRESSOR_Submitted__c</name>
+    </fields>
+    <fields>
+        <label><!-- SOCIAL SUPPORT Survey --></label>
+        <name>Is_SOCIAL_SUPPORT_Submitted__c</name>
+    </fields>
+    <fields>
+        <label><!-- SUBJECTIVE ENGLISH Survey --></label>
+        <name>Is_SUBJECTIVE_ENGLISH_Submitted__c</name>
+    </fields>
+    <fields>
+        <label><!-- SWLS Survey --></label>
+        <name>Is_SWLS_Submitted__c</name>
+    </fields>
+    <fields>
+        <label><!-- WOMENS HEALTH Survey --></label>
+        <name>Is_WOMENS_HEALTH_Submitted__c</name>
     </fields>
     <fields>
         <label><!-- Keep Track --></label>
@@ -875,6 +1051,10 @@
     <fields>
         <label><!-- Marker --></label>
         <name>Marker__c</name>
+    </fields>
+    <fields>
+        <label><!-- Medium --></label>
+        <name>Medium__c</name>
     </fields>
     <fields>
         <label><!-- Most fluent language --></label>
@@ -1844,6 +2024,10 @@
         </picklistValues>
     </fields>
     <fields>
+        <label><!-- Source --></label>
+        <name>Source__c</name>
+    </fields>
+    <fields>
         <label><!-- Speech Task --></label>
         <name>Speech_Task__c</name>
         <picklistValues>
@@ -1888,6 +2072,62 @@
         <help><!-- This record will sync to Marketing Cloud. --></help>
         <label><!-- Sync With MC --></label>
         <name>Sync_With_MC__c</name>
+    </fields>
+    <fields>
+        <label><!-- Tell Me More --></label>
+        <name>Tell_Me_More__c</name>
+        <picklistValues>
+            <masterLabel>Completed</masterLabel>
+            <translation><!-- Completed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Locked</masterLabel>
+            <translation><!-- Locked --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Unlocked</masterLabel>
+            <translation><!-- Unlocked --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Tell Me --></label>
+        <name>Tell_Me__c</name>
+        <picklistValues>
+            <masterLabel>Completed</masterLabel>
+            <translation><!-- Completed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Locked</masterLabel>
+            <translation><!-- Locked --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Unlocked</masterLabel>
+            <translation><!-- Unlocked --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- This and That --></label>
+        <name>This_That__c</name>
+        <picklistValues>
+            <masterLabel>Completed</masterLabel>
+            <translation><!-- Completed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Locked</masterLabel>
+            <translation><!-- Locked --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Unlocked</masterLabel>
+            <translation><!-- Unlocked --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Tremendous Award Sent (ECog-12) --></label>
+        <name>Tremendous_Award_Sent_ECog_12__c</name>
+    </fields>
+    <fields>
+        <label><!-- Tremendous Award Sent --></label>
+        <name>Tremendous_Award_Sent__c</name>
     </fields>
     <fields>
         <label><!-- URL ID --></label>
@@ -2966,6 +3206,10 @@
         <sections>
             <label><!-- Survey Dashboard Status --></label>
             <section>Survey Dashboard Status</section>
+        </sections>
+        <sections>
+            <label><!-- Survey Status --></label>
+            <section>Survey Status</section>
         </sections>
     </layouts>
     <webLinks>

@@ -27,7 +27,7 @@
     <aura:attribute name="delete" type="Boolean" default=""/>
     <aura:attribute name="MicId" type="String" default=""/>
     <aura:attribute name="MicLabel" type="String" default=""/>
-
+    
     <ltng:require scripts="{!$Resource.RecordRTC}" afterScriptsLoaded="{!c.myAction}" />
     <div
         class="main-content-outer slds-size_12-of-12 slds-small-size_12-of-12 slds-medium-size_12-of-12 slds-large-size_12-of-12 test">
@@ -35,11 +35,11 @@
             <div class="logo-game">
                 <img src="{!$Resource.mindcrowd_style + '/images/MindCrowd-Logo-Color-White-Text.png'}"/>
               </div>
-            <div class="game-title">Speech Task</div>
+            <div class="game-title">{!$Label.c.SpeechTask_Tell_me_text}</div>
             <div class="game_panel pairedgame" id="gameMainContent">
                 <div class="game_block_speechtask " id="game_block">
                     <div class="datablock" id="datablock"></div>
-                    <div id ="errormessage" class="title slds-hide" style="color: red;">Please answer all the questions</div>
+                    <div id ="errormessage" class="title slds-hide" style="color: red;">{!$Label.c.Speech_Task_Error}</div>
                     <p id="nextBtton" class="centers magenta-btn  btn-xlarge marginT20 slds-hide">
                         <button class="slds-button"  onclick="{!c.goToNextPage }">{!$Label.c.flanker_myGames}</button>
                     </p> 
@@ -49,6 +49,7 @@
                         <div class="d_status" id="d_status"></div>
                     </div>
                 </div>  
+                <div id="imgContainer" style="height: 1px; width: 1px; position: absolute; top:-10px; left:-10px; overflow: hidden;"></div>
             </div>
         </div>
     </div>

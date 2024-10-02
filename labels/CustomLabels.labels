@@ -1,116 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomLabels xmlns="http://soap.sforce.com/2006/04/metadata">
     <labels>
-        <fullName>CamelandCactus_game_text_2</fullName>
-        <categories>CamelandCactusGame</categories>
-        <language>en_US</language>
-        <protected>false</protected>
-        <shortDescription>CamelandCactus game text 2</shortDescription>
-        <value>Just click or tap on the picture that goes best with the one at the top.</value>
-    </labels>
-    <labels>
-        <fullName>CamelandCactus_game_text_cactus</fullName>
-        <categories>CamelandCactusGame</categories>
-        <language>en_US</language>
-        <protected>false</protected>
-        <shortDescription>CamelandCactus game text cactus</shortDescription>
-        <value>The desert scene is the correct answer since cactus are usually found in the desert</value>
-    </labels>
-    <labels>
-        <fullName>CamelandCactus_game_text_nails</fullName>
-        <categories>CamelandCactusGame</categories>
-        <language>en_US</language>
-        <protected>false</protected>
-        <shortDescription>CamelandCactus game text nails</shortDescription>
-        <value>The hammer is the correct answer since a hammer is usually used to drive nails</value>
-    </labels>
-    <labels>
-        <fullName>CamelandCactus_game_text_wine</fullName>
-        <categories>CamelandCactusGame</categories>
-        <language>en_US</language>
-        <protected>false</protected>
-        <shortDescription>CamelandCactus game text wine</shortDescription>
-        <value>The grapes are the correct answer since they are commonly used to make wine</value>
-    </labels>
-    <labels>
-        <fullName>Digits_game_text_14</fullName>
-        <categories>Digits game</categories>
-        <language>en_US</language>
-        <protected>false</protected>
-        <shortDescription>Digits game text 14</shortDescription>
-        <value>Digits</value>
-    </labels>
-    <labels>
-        <fullName>camelandcactus_game_config_url</fullName>
-        <categories>Game Config Url</categories>
-        <language>en_US</language>
-        <protected>false</protected>
-        <shortDescription>camelandcactus game config url</shortDescription>
-        <value>/resource/CamelandCactus_Config/CamelandCactus_EN.json</value>
-    </labels>
-    <labels>
-        <fullName>camelandcactus_game_text_14</fullName>
-        <categories>CamelandCactus Game</categories>
-        <language>en_US</language>
-        <protected>false</protected>
-        <shortDescription>camelandcactus game text 14</shortDescription>
-        <value>Camel &amp; Cactus</value>
-    </labels>
-    <labels>
-        <fullName>digitSymbol_game_config_url</fullName>
-        <language>en_US</language>
-        <protected>false</protected>
-        <shortDescription>digitSymbol game config url</shortDescription>
-        <value>/resource/digitSymbol_Config/digitSymbol_Config_EN.json</value>
-    </labels>
-    <labels>
-        <fullName>game_name_17</fullName>
-        <language>en_US</language>
-        <protected>false</protected>
-        <shortDescription>game name 17</shortDescription>
-        <value>Digits</value>
-    </labels>
-    <labels>
-        <fullName>game_name_18</fullName>
-        <language>en_US</language>
-        <protected>false</protected>
-        <shortDescription>game name 18</shortDescription>
-        <value>Camel and Cactus</value>
-    </labels>
-    <labels>
-        <fullName>scientific_game_CamelandCactus</fullName>
-        <language>en_US</language>
-        <protected>false</protected>
-        <shortDescription>scientific game CamelandCactus</shortDescription>
-        <value>Camel &amp; Cactus</value>
-    </labels>
-    <labels>
-        <fullName>scientific_game_digitsymbolmatchingtest</fullName>
-        <language>en_US</language>
-        <protected>false</protected>
-        <shortDescription>scientific game digitsymbolmatchingtest</shortDescription>
-        <value>Digits</value>
-    </labels>
-    <labels>
-        <fullName>url_me_CamelandCactus</fullName>
-        <language>en_US</language>
-        <protected>false</protected>
-        <shortDescription>url_me_ CamelandCactus</shortDescription>
-        <value>me-CamelandCactus</value>
-    </labels>
-    <labels>
-        <fullName>url_me_digitSymbol</fullName>
-        <language>en_US</language>
-        <protected>false</protected>
-        <shortDescription>url me digitSymbol</shortDescription>
-        <value>me-digitsymbol</value>
-    </labels>
-    <labels>
         <fullName>APOE_intermediate_form</fullName>
         <language>en_US</language>
         <protected>false</protected>
         <shortDescription>APOE_intermediate_form</shortDescription>
-        <value>add-apoeIntermediateForm</value>
+        <value>add-apoe-info-form-vip</value>
     </labels>
     <labels>
         <fullName>App_block_name</fullName>
@@ -213,7 +108,7 @@
         <language>en_US</language>
         <protected>false</protected>
         <shortDescription>Bean game intermediate</shortDescription>
-        <value>add-beangameform</value>
+        <value>add-beangame-info-form-vip</value>
     </labels>
     <labels>
         <fullName>Brain_Info_Results</fullName>
@@ -222,6 +117,38 @@
         <protected>false</protected>
         <shortDescription>Brain Info Results</shortDescription>
         <value>View Your Results</value>
+    </labels>
+    <labels>
+        <fullName>CamelandCactus_game_text_2</fullName>
+        <categories>CamelandCactusGame</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CamelandCactus game text 2</shortDescription>
+        <value>Just click or tap on the picture that goes best with the one at the top.</value>
+    </labels>
+    <labels>
+        <fullName>CamelandCactus_game_text_cactus</fullName>
+        <categories>CamelandCactusGame</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CamelandCactus game text cactus</shortDescription>
+        <value>The desert scene is the correct answer since cactus are usually found in the desert</value>
+    </labels>
+    <labels>
+        <fullName>CamelandCactus_game_text_nails</fullName>
+        <categories>CamelandCactusGame</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CamelandCactus game text nails</shortDescription>
+        <value>The hammer is the correct answer since a hammer is usually used to drive nails</value>
+    </labels>
+    <labels>
+        <fullName>CamelandCactus_game_text_wine</fullName>
+        <categories>CamelandCactusGame</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CamelandCactus game text wine</shortDescription>
+        <value>The grapes are the correct answer since they are commonly used to make wine</value>
     </labels>
     <labels>
         <fullName>Catcme_text_1</fullName>
@@ -401,7 +328,7 @@
         <language>en_US</language>
         <protected>false</protected>
         <shortDescription>DBS intermediate form</shortDescription>
-        <value>add-dbsIntermediateForm</value>
+        <value>adic/de-informacion-dbs-vip</value>
     </labels>
     <labels>
         <fullName>DataAPIKey</fullName>
@@ -417,6 +344,14 @@
         <protected>false</protected>
         <shortDescription>Date</shortDescription>
         <value>Date</value>
+    </labels>
+    <labels>
+        <fullName>Digits_game_text_14</fullName>
+        <categories>Digits game</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Digits game text 14</shortDescription>
+        <value>Digits</value>
     </labels>
     <labels>
         <fullName>DltrsGamePart1v0_01</fullName>
@@ -1039,6 +974,20 @@ Are you ready?</value>
         <value>minutes</value>
     </labels>
     <labels>
+        <fullName>FakeNewsTestForm_seconds</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>FakeNewsTestForm_seconds</shortDescription>
+        <value>seconds</value>
+    </labels>
+    <labels>
+        <fullName>FakeNewsTestForm_years</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>FakeNewsTestForm_years</shortDescription>
+        <value>years</value>
+    </labels>
+    <labels>
         <fullName>Fake_News_Test_Form_1</fullName>
         <language>en_US</language>
         <protected>false</protected>
@@ -1114,42 +1063,42 @@ Please do not use a calculator.</value>
         <language>en_US</language>
         <protected>false</protected>
         <shortDescription>Fake News Test Form 2</shortDescription>
-        <value>A bat and a ball cost $1.10 in total. The bat costs $1.00 more than the ball. How much does the ball cost? (Answer in cents)</value>
+        <value>The ages of Mark and Adam add up to 28 years total. Mark is 20 years older than Adam. How many years old is Adam?(Answer in years)</value>
     </labels>
     <labels>
         <fullName>Fake_News_Test_Form_2_Error</fullName>
         <language>en_US</language>
         <protected>false</protected>
         <shortDescription>Fake News Test Form 2 Error</shortDescription>
-        <value>Please enter ball cost.</value>
+        <value>Please enter answer in years.</value>
     </labels>
     <labels>
         <fullName>Fake_News_Test_Form_3</fullName>
         <language>en_US</language>
         <protected>false</protected>
         <shortDescription>Fake News Test Form 3</shortDescription>
-        <value>If it takes 5 machines 5 minutes to make 5 widgets, how long would it take 100 machines to make 100 widgets? (Answer in minutes)</value>
+        <value>If it takes 10 seconds for 10 printers to print out 10 pages of paper, how many seconds will it take 50 printers to print out 50 pages of paper? (Answer in seconds)</value>
     </labels>
     <labels>
         <fullName>Fake_News_Test_Form_3_Error</fullName>
         <language>en_US</language>
         <protected>false</protected>
         <shortDescription>Fake News Test Form 3 Error</shortDescription>
-        <value>Please enter widget time.</value>
+        <value>Please enter answer in seconds.</value>
     </labels>
     <labels>
         <fullName>Fake_News_Test_Form_4</fullName>
         <language>en_US</language>
         <protected>false</protected>
         <shortDescription>Fake News Test Form 4</shortDescription>
-        <value>In a lake, there is a patch of lily pads. Every day, the patch doubles in size. If it takes 48 days for the patch to cover the entire lake, how long would it take for the patch to cover half of the lake? (Answer in days)</value>
+        <value>On a loaf of bread, there is a patch of mold. Every day, the patch doubles in size. If it takes 40 days for the patch to cover the entire loaf of bread, how many days would it take for the patch to cover half of the loaf of bread? (Answer in days)</value>
     </labels>
     <labels>
         <fullName>Fake_News_Test_Form_4_Error</fullName>
         <language>en_US</language>
         <protected>false</protected>
         <shortDescription>Fake News Test Form 4 Error</shortDescription>
-        <value>Please enter days to cover half of the lake.</value>
+        <value>Please enter answer in days.</value>
     </labels>
     <labels>
         <fullName>Fake_News_Test_Form_5</fullName>
@@ -1352,7 +1301,7 @@ Please do not use a calculator.</value>
         <language>en_US</language>
         <protected>false</protected>
         <shortDescription>Fake News Test Form Thanks A1</shortDescription>
-        <value>Thank you for playing &lt;b&gt;News Task&lt;/b&gt;.</value>
+        <value>Thank you for playing &lt;b&gt;Fake News&lt;/b&gt;.</value>
     </labels>
     <labels>
         <fullName>Fake_News_Test_Form_Thanks_A2</fullName>
@@ -2646,6 +2595,27 @@ Please do not use a calculator.</value>
         <value>To begin, press the &lt;span class=&quot;n-g-box&quot;&gt;Spacebar&lt;/span&gt; or &lt;span class=&quot;n-g-box&quot;&gt;Tap&lt;/span&gt; your touch screen.</value>
     </labels>
     <labels>
+        <fullName>SpeechTask_Tell_me_more_text</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>SpeechTask_Tell_me_more_text</shortDescription>
+        <value>Tell Me More</value>
+    </labels>
+    <labels>
+        <fullName>SpeechTask_Tell_me_text</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>SpeechTask_Tell_me_text</shortDescription>
+        <value>Tell Me</value>
+    </labels>
+    <labels>
+        <fullName>Speech_Task_Error</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Speech_Task_Error</shortDescription>
+        <value>Please answer all the questions</value>
+    </labels>
+    <labels>
         <fullName>Submit</fullName>
         <categories>login</categories>
         <language>en_US</language>
@@ -2964,6 +2934,13 @@ Please do not use a calculator.</value>
         <value>Be sure to record as minutes:seconds up to two decimal places. For example, 1 minute and 45.03 &lt;br/&gt; seconds would be entered as 1:45.03. If your score was less than a minute, please enter your score starting with 0: (e.g., 0:52.31)</value>
     </labels>
     <labels>
+        <fullName>beangameviewformurl</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>beangameviewformurl</shortDescription>
+        <value>add-beangame-vip</value>
+    </labels>
+    <labels>
         <fullName>brainInfo_text_1</fullName>
         <categories>Brain Info</categories>
         <language>en_US</language>
@@ -3120,6 +3097,22 @@ Please do not use a calculator.</value>
         <protected>false</protected>
         <shortDescription>braininfo02</shortDescription>
         <value>We can still email you your results plus a VIP invitation to play more free brain games, and updates about brain research and other studies you can join.</value>
+    </labels>
+    <labels>
+        <fullName>camelandcactus_game_config_url</fullName>
+        <categories>Game Config Url</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>camelandcactus game config url</shortDescription>
+        <value>/resource/CamelandCactus_Config/CamelandCactus_EN.json</value>
+    </labels>
+    <labels>
+        <fullName>camelandcactus_game_text_14</fullName>
+        <categories>CamelandCactus Game</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>camelandcactus game text 14</shortDescription>
+        <value>Camel &amp; Cactus</value>
     </labels>
     <labels>
         <fullName>campylete2</fullName>
@@ -3846,6 +3839,13 @@ Please do not use a calculator.</value>
         <protected>false</protected>
         <shortDescription>debugConsole</shortDescription>
         <value>true</value>
+    </labels>
+    <labels>
+        <fullName>digitSymbol_game_config_url</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>digitSymbol game config url</shortDescription>
+        <value>/resource/digitSymbol_Config/digitSymbol_Config_EN.json</value>
     </labels>
     <labels>
         <fullName>dlrts_game_text</fullName>
@@ -5374,6 +5374,20 @@ Please do not use a calculator.</value>
         <value>/resource/focus_Config/focus_EN.json</value>
     </labels>
     <labels>
+        <fullName>game_bean_title_left</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>game_bean_title_left</shortDescription>
+        <value>Bean Game (Left Hand)</value>
+    </labels>
+    <labels>
+        <fullName>game_bean_title_right</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>game_bean_title_right</shortDescription>
+        <value>Bean Game (Right Hand)</value>
+    </labels>
+    <labels>
         <fullName>game_button_1</fullName>
         <language>en_US</language>
         <protected>false</protected>
@@ -5501,7 +5515,28 @@ Please do not use a calculator.</value>
         <language>en_US</language>
         <protected>false</protected>
         <shortDescription>game_name_15</shortDescription>
-        <value>Speech Task</value>
+        <value>Tell Me</value>
+    </labels>
+    <labels>
+        <fullName>game_name_17</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>game name 17</shortDescription>
+        <value>Digits</value>
+    </labels>
+    <labels>
+        <fullName>game_name_18</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>game name 18</shortDescription>
+        <value>This &amp; That</value>
+    </labels>
+    <labels>
+        <fullName>game_name_19</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>game_name_19</shortDescription>
+        <value>Tell Me More</value>
     </labels>
     <labels>
         <fullName>game_name_2</fullName>
@@ -5636,11 +5671,25 @@ Please do not use a calculator.</value>
         <value>3 min</value>
     </labels>
     <labels>
+        <fullName>game_time_4_min</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>game_time_4_min</shortDescription>
+        <value>4 min</value>
+    </labels>
+    <labels>
         <fullName>game_time_5_min</fullName>
         <language>en_US</language>
         <protected>false</protected>
         <shortDescription>game_time_5_min</shortDescription>
         <value>5 min</value>
+    </labels>
+    <labels>
+        <fullName>game_time_7_min</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>game_time_7_min</shortDescription>
+        <value>7 min</value>
     </labels>
     <labels>
         <fullName>games_get_started_text_1</fullName>
@@ -6733,7 +6782,7 @@ Your task is to &lt;span&gt;name the last items presented from each of the four 
         <language>en_US</language>
         <protected>false</protected>
         <shortDescription>live URL 9</shortDescription>
-        <value>https://staging-mindcrowd.kinsta.cloud/</value>
+        <value>https://blog.mindcrowd.org/</value>
     </labels>
     <labels>
         <fullName>maillingAddress</fullName>
@@ -9963,6 +10012,13 @@ Research Coordinator at mindcrowdquestion@tgen.org</value>
         <value>* Your password must include letters and numbers</value>
     </labels>
     <labels>
+        <fullName>scientific_game_CamelandCactus</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>scientific game CamelandCactus</shortDescription>
+        <value>Camel &amp; Cactus</value>
+    </labels>
+    <labels>
         <fullName>scientific_game_bean</fullName>
         <language>en_US</language>
         <protected>false</protected>
@@ -9975,6 +10031,13 @@ Research Coordinator at mindcrowdquestion@tgen.org</value>
         <protected>false</protected>
         <shortDescription>scientific game dearySimpleAndComplexReactionTime</shortDescription>
         <value>Deary Simple And Complex Reaction Time</value>
+    </labels>
+    <labels>
+        <fullName>scientific_game_digitsymbolmatchingtest</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>scientific game digitsymbolmatchingtest</shortDescription>
+        <value>Digits</value>
     </labels>
     <labels>
         <fullName>scientific_game_faceNameAssociates</fullName>
@@ -10047,11 +10110,18 @@ Research Coordinator at mindcrowdquestion@tgen.org</value>
         <value>Verbal Paired Associates</value>
     </labels>
     <labels>
+        <fullName>scientific_speech_task2</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>scientific_speech_task2</shortDescription>
+        <value>Speech Task Tell Me More</value>
+    </labels>
+    <labels>
         <fullName>scientific_speech_tasks</fullName>
         <language>en_US</language>
         <protected>false</protected>
         <shortDescription>scientific_speech_tasks</shortDescription>
-        <value>Speech Tasks</value>
+        <value>Speech Task Tell Me</value>
     </labels>
     <labels>
         <fullName>shapes_game_config_url</fullName>
@@ -10092,6 +10162,13 @@ Research Coordinator at mindcrowdquestion@tgen.org</value>
         <protected>false</protected>
         <shortDescription>shrd title</shortDescription>
         <value>My Personal Test Score</value>
+    </labels>
+    <labels>
+        <fullName>speechTask2_config_url</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>speechTask2_config_url</shortDescription>
+        <value>/resource/speechTask2_Config/speechTask2_Config_EN.json</value>
     </labels>
     <labels>
         <fullName>speechTask_config_url</fullName>
@@ -10224,7 +10301,7 @@ Research Coordinator at mindcrowdquestion@tgen.org</value>
         <language>en_US</language>
         <protected>false</protected>
         <shortDescription>survey_name_18</shortDescription>
-        <value>Coming Soon...</value>
+        <value>Heat</value>
     </labels>
     <labels>
         <fullName>survey_name_2</fullName>
@@ -10281,6 +10358,34 @@ Research Coordinator at mindcrowdquestion@tgen.org</value>
         <protected>false</protected>
         <shortDescription>survey_name_9</shortDescription>
         <value>Daily Activities</value>
+    </labels>
+    <labels>
+        <fullName>survey_name_n</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>survey name n</shortDescription>
+        <value>Coming Soon...</value>
+    </labels>
+    <labels>
+        <fullName>survey_time_2_min</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>survey_time_2_min</shortDescription>
+        <value>2 min</value>
+    </labels>
+    <labels>
+        <fullName>survey_time_3_min</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>survey_time_3_min</shortDescription>
+        <value>3 min</value>
+    </labels>
+    <labels>
+        <fullName>survey_time_5_min</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>survey_time_5_min</shortDescription>
+        <value>5 min</value>
     </labels>
     <labels>
         <fullName>tapjoy_url</fullName>
@@ -10499,6 +10604,13 @@ Research Coordinator at mindcrowdquestion@tgen.org</value>
         <value>HealthMedicalSurvey</value>
     </labels>
     <labels>
+        <fullName>url_Heat_Survey</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>url Heat Survey</shortDescription>
+        <value>HeatStressSurvey</value>
+    </labels>
+    <labels>
         <fullName>url_Objects_Space</fullName>
         <categories>Page URL</categories>
         <language>en_US</language>
@@ -10706,12 +10818,33 @@ Research Coordinator at mindcrowdquestion@tgen.org</value>
         <value>vipaccess</value>
     </labels>
     <labels>
+        <fullName>url_me_CamelandCactus</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>url_me_ CamelandCactus</shortDescription>
+        <value>me-CamelandCactus</value>
+    </labels>
+    <labels>
         <fullName>url_me_Objects_Time</fullName>
         <categories>Page URL</categories>
         <language>en_US</language>
         <protected>false</protected>
         <shortDescription>url me Objects - Time</shortDescription>
         <value>me-objects-time</value>
+    </labels>
+    <labels>
+        <fullName>url_me_This_and_That</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>url_me_This_and_That</shortDescription>
+        <value>url_me_This_and_That</value>
+    </labels>
+    <labels>
+        <fullName>url_me_digitSymbol</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>url me digitSymbol</shortDescription>
+        <value>me-digitsymbol</value>
     </labels>
     <labels>
         <fullName>url_me_fakeNewsTest</fullName>
@@ -10775,6 +10908,13 @@ Research Coordinator at mindcrowdquestion@tgen.org</value>
         <protected>false</protected>
         <shortDescription>url_me_speechTask</shortDescription>
         <value>me-speechTasks</value>
+    </labels>
+    <labels>
+        <fullName>url_me_speechTaskTellMeMore</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>url_me_speechTaskTellMeMore</shortDescription>
+        <value>me-SpeechTaskTellmeMore</value>
     </labels>
     <labels>
         <fullName>url_me_switchinggame</fullName>

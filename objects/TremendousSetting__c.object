@@ -2,8 +2,6 @@
 <CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
     <customSettingsType>List</customSettingsType>
     <enableFeeds>false</enableFeeds>
-    <label>TremendousSettings</label>
-    <visibility>Public</visibility>
     <fields>
         <fullName>AuthToken__c</fullName>
         <externalId>false</externalId>
@@ -15,9 +13,9 @@
         <unique>false</unique>
     </fields>
     <fields>
-        <fullName>CampaignId__c</fullName>
+        <fullName>Authorization__c</fullName>
         <externalId>false</externalId>
-        <label>CampaignId</label>
+        <label>Authorization</label>
         <length>80</length>
         <required>false</required>
         <trackTrending>false</trackTrending>
@@ -25,9 +23,9 @@
         <unique>false</unique>
     </fields>
     <fields>
-        <fullName>RestMethod__c</fullName>
+        <fullName>CampaignId__c</fullName>
         <externalId>false</externalId>
-        <label>RestMethod</label>
+        <label>CampaignId</label>
         <length>80</length>
         <required>false</required>
         <trackTrending>false</trackTrending>
@@ -45,19 +43,19 @@
         <unique>false</unique>
     </fields>
     <fields>
-        <fullName>EndpointURL__c</fullName>
+        <fullName>CurrencyCode__c</fullName>
         <externalId>false</externalId>
-        <label>EndpointURL</label>
-        <length>255</length>
+        <label>CurrencyCode</label>
+        <length>80</length>
         <required>false</required>
         <trackTrending>false</trackTrending>
         <type>Text</type>
         <unique>false</unique>
     </fields>
     <fields>
-        <fullName>CurrencyCode__c</fullName>
+        <fullName>DeliveryMethod__c</fullName>
         <externalId>false</externalId>
-        <label>CurrencyCode</label>
+        <label>DeliveryMethod</label>
         <length>80</length>
         <required>false</required>
         <trackTrending>false</trackTrending>
@@ -76,20 +74,10 @@
         <unique>false</unique>
     </fields>
     <fields>
-        <fullName>Authorization__c</fullName>
+        <fullName>EndpointURL__c</fullName>
         <externalId>false</externalId>
-        <label>Authorization</label>
-        <length>80</length>
-        <required>false</required>
-        <trackTrending>false</trackTrending>
-        <type>Text</type>
-        <unique>false</unique>
-    </fields>
-    <fields>
-        <fullName>DeliveryMethod__c</fullName>
-        <externalId>false</externalId>
-        <label>DeliveryMethod</label>
-        <length>80</length>
+        <label>EndpointURL</label>
+        <length>255</length>
         <required>false</required>
         <trackTrending>false</trackTrending>
         <type>Text</type>
@@ -106,6 +94,16 @@
         <unique>false</unique>
     </fields>
     <fields>
+        <fullName>RestMethod__c</fullName>
+        <externalId>false</externalId>
+        <label>RestMethod</label>
+        <length>80</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
         <fullName>Spanish_CampaignId__c</fullName>
         <externalId>false</externalId>
         <label>Spanish CampaignId</label>
@@ -115,4 +113,6 @@
         <type>Text</type>
         <unique>false</unique>
     </fields>
+    <label>TremendousSettings</label>
+    <visibility>Public</visibility>
 </CustomObject>

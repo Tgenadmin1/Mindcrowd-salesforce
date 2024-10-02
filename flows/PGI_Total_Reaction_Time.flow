@@ -4,8 +4,8 @@
     <assignments>
         <name>Assign_Reaction_Time_In_Variable</name>
         <label>Assign Reaction Time In Variable</label>
-        <locationX>264</locationX>
-        <locationY>575</locationY>
+        <locationX>571</locationX>
+        <locationY>518</locationY>
         <assignmentItems>
             <assignToReference>TotalReactionTime</assignToReference>
             <operator>Add</operator>
@@ -23,8 +23,8 @@
     <loops>
         <name>Loop_Through_PGR_Records</name>
         <label>Loop Through PGR Records</label>
-        <locationX>176</locationX>
-        <locationY>455</locationY>
+        <locationX>424</locationX>
+        <locationY>527</locationY>
         <collectionReference>TotalReactionTimeInMS</collectionReference>
         <iterationOrder>Asc</iterationOrder>
         <nextValueConnector>
@@ -43,7 +43,7 @@
     <processMetadataValues>
         <name>CanvasMode</name>
         <value>
-            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+            <stringValue>FREE_FORM_CANVAS</stringValue>
         </value>
     </processMetadataValues>
     <processMetadataValues>
@@ -56,8 +56,8 @@
     <recordLookups>
         <name>Get_Total_Reaction_Time</name>
         <label>Get Total Reaction Time</label>
-        <locationX>176</locationX>
-        <locationY>335</locationY>
+        <locationX>423</locationX>
+        <locationY>383</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
             <targetReference>Loop_Through_PGR_Records</targetReference>
@@ -85,8 +85,8 @@
     <recordUpdates>
         <name>Update_PGI_Total_Reaction_Time</name>
         <label>Update PGI Total Reaction Time</label>
-        <locationX>176</locationX>
-        <locationY>791</locationY>
+        <locationX>424</locationX>
+        <locationY>720</locationY>
         <filterLogic>and</filterLogic>
         <filters>
             <field>Id</field>
@@ -104,16 +104,28 @@
         <object>Participant_Game_Info__c</object>
     </recordUpdates>
     <start>
-        <locationX>50</locationX>
-        <locationY>0</locationY>
-        <connector>
-            <targetReference>Get_Total_Reaction_Time</targetReference>
-        </connector>
+        <locationX>298</locationX>
+        <locationY>53</locationY>
+        <doesRequireRecordChangedToMeetCriteria>true</doesRequireRecordChangedToMeetCriteria>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Participant_Game_InfoID__c</field>
+            <operator>IsNull</operator>
+            <value>
+                <booleanValue>false</booleanValue>
+            </value>
+        </filters>
         <object>Participant_Game_Response__c</object>
         <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <scheduledPaths>
+            <connector>
+                <targetReference>Get_Total_Reaction_Time</targetReference>
+            </connector>
+            <pathType>AsyncAfterCommit</pathType>
+        </scheduledPaths>
         <triggerType>RecordAfterSave</triggerType>
     </start>
-    <status>Active</status>
+    <status>Obsolete</status>
     <variables>
         <name>TotalReactionTime</name>
         <dataType>Number</dataType>

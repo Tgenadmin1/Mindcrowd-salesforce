@@ -31,6 +31,7 @@
     <forgotPasswordTemplate>unfiled$public/CommunityForgotPasswordEmailTemplateSpanish</forgotPasswordTemplate>
     <gatherCustomerSentimentData>true</gatherCustomerSentimentData>
     <headlessForgotPasswordTemplate>unfiled$public/CommunityHeadlessForgotPasswordTemplate</headlessForgotPasswordTemplate>
+    <headlessRegistrationTemplate>unfiled$public/CommunityHeadlessRegistrationTemplate</headlessRegistrationTemplate>
     <logoutUrl>https://mindcrowd2--uat.sandbox.my.site.com/MindCrowdES/s/accesovip</logoutUrl>
     <networkMemberGroups>
         <profile>Customer Community Login User Custom</profile>
@@ -46,7 +47,7 @@
     </networkPageOverrides>
     <picassoSite>MindCrowd_Spanish1</picassoSite>
     <selfRegistration>false</selfRegistration>
-    <sendWelcomeEmail>false</sendWelcomeEmail>
+    <sendWelcomeEmail>true</sendWelcomeEmail>
     <site>MindCrowd_Spanish</site>
     <siteArchiveStatus>NotArchived</siteArchiveStatus>
     <status>Live</status>

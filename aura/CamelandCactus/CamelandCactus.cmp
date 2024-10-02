@@ -14,24 +14,17 @@
               </div>
             <div class="game-title">{!$Label.c.camelandcactus_game_text_14}</div>
             <div class="game_panel" id="gameMainContent">
-                <div class="game_block" id="game_block">  
-                    <div class="errorblock" id="errorblock">
-                        <p class="centers">{!$Label.c.keep_track_game_text_28}</p>
-                        <p class="centers mb10">{!$Label.c.keep_track_game_text_29}</p>
-                    </div>  
-                    <div class="errorblock" id="errorblock2">
-                        <p class="centers">{!$Label.c.CamelandCactus_game_text_wine}</p>
-                        
+                <div class="game_block" id="game_block">
+                    <div class="errorblock mb35" id="errorblock2">
+                        <p class="centers mb35">{!$Label.c.CamelandCactus_game_text_wine}</p>                        
                     </div>
-                    <div class="errorblock" id="errorblock3">
-                        <p class="centers">{!$Label.c.CamelandCactus_game_text_cactus}</p>
-                        
+                    <div class="errorblock mb35" id="errorblock3">
+                        <p class="centers mb35">{!$Label.c.CamelandCactus_game_text_cactus}</p>                        
                     </div>
-                    <div class="errorblock" id="errorblock4">
-                        <p class="centers">{!$Label.c.CamelandCactus_game_text_nails}</p>
-                        
+                    <div class="errorblock mb35" id="errorblock4">
+                        <p class="centers mb35">{!$Label.c.CamelandCactus_game_text_nails}</p>                        
                     </div>
-                <div class="datablock" id="datablock_keepTrackGame"></div> 
+                <div class="datablock" id="datablock_camel_cact_Game"></div> 
                 <div id="imgContainer" style="height: 1px; width: 1px; position: absolute; top:-10px; left:-10px; overflow: hidden;"></div>                 
                 <div id="divcontainer" style="height: 10px; width: 10px; position: absolute; top:-10px; left:-10px; overflow: hidden;"></div>   
                 <p id="nextBtton" class="centers magenta-btn  btn-xlarge marginT20 slds-hide">

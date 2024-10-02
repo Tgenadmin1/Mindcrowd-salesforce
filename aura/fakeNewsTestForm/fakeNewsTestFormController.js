@@ -14,6 +14,8 @@
             "Fake_News_Political_Orientation__c": ""
         }; 
         component.set("v.partGameInfo", pgiObj);
+        component.set("v.currentDate",  new Date());
+        console.log('init date: '+ component.get("v.currentDate"));
         helper.preventLeaving();
     },
 
@@ -59,16 +61,16 @@
         component.set("v.sliderValue", newValue);
     },
     
-
     handlePolAffiliation: function(component, event, helper) {
         let fieldvalue = event.target.value;
         let pgiObj = component.get("v.partGameInfo"); 
         if(fieldvalue =="Other (please specify)"){
+            component.set('v.isInputVisible', true); 
             component.set('v.isInputDisabled', false);
             pgiObj.Fake_News_Supporting_Political_Allaince__c='';
-        }        
-        else {
-            component.set('v.isInputDisabled', true);
+        } else {
+            component.set('v.isInputVisible', false);
+            component.set('v.isInputDisabled', true); 
             pgiObj.Fake_News_Supporting_Political_Allaince__c=fieldvalue;
         }   
         component.set("v.partGameInfo", pgiObj);
@@ -125,21 +127,25 @@
         console.log("Value of pgiObj :", JSON.stringify(pgiObj));
 
         if (!pgiObj.Fake_News_Supporting_Political_Allaince__c ) {
-            errors["handlePolAffiliation"] = "In American politics, Please select support of.";
+            errors["handlePolAffiliation"] = $A.get("$Label.c.Fake_News_Test_Form_8_Error");
         }
         if (!pgiObj.Fake_News_Area_Type_Lives__c) {
-            errors["handleArea"] = "Please select where you live.";
+            errors["handleArea"] = $A.get("$Label.c.Fake_News_Test_Form_9_Error");
         }
         if (!pgiObj.Fake_News_Political_Orientation__c) {
-            errors["handlePolOrientation"] = "Please select political orientation.";
+            errors["handlePolOrientation"] = $A.get("$Label.c.Fake_News_Test_Form_10_Error");
         }
 
         if (Object.keys(errors).length > 0) {
             // Set errors attribute to display error messages
             component.set("v.errors", errors);
-        } else {
-
+        } else {            
+            const reactiontime = new Date() - component.get("v.currentDate");
+            helper.recorData(component, event, helper, reactiontime, 49);
             component.set("v.currentScreen", "screen2");
+            component.set("v.currentDate",  new Date());
+            console.log('new date Screen 1: '+ component.get("v.currentDate"));
+            console.log('Reaction Time Screen 1: '+ reactiontime);
     }
     },
 
@@ -153,13 +159,13 @@
         if (!pgiObj.Fake_News_Spending_Hours_for_News_Week__c ||
             pgiObj.Fake_News_Spending_Hours_for_News_Week__c < 0 ||
             pgiObj.Fake_News_Spending_Hours_for_News_Week__c > 168) {
-            errors["handleNews"] = "Please select hours between 0 to 168.";
+            errors["handleNews"] = $A.get("$Label.c.Fake_News_Test_Form_5_Error");
         }
         if (!pgiObj.Fake_News_Social_Media_Engagement__c) {
-            errors["handleSocialMedia"] = "Please select social media engagement.";
+            errors["handleSocialMedia"] = $A.get("$Label.c.Fake_News_Test_Form_6_Error");
         }
         if (!pgiObj.Fake_News_Trust_in_Federal_Government__c) {
-            errors["handleTrustGovernment"] = "Please select trust in the federal government.";
+            errors["handleTrustGovernment"] = $A.get("$Label.c.Fake_News_Test_Form_7_Error");
         }
     
         // Set errors if any found
@@ -169,7 +175,12 @@
         } else {
             // Reset errors if no validation errors
             component.set("v.errors", {});
+            const reactiontime = new Date() - component.get("v.currentDate");
+            helper.recorData(component, event, helper, reactiontime, 50);
             component.set("v.currentScreen", "screen3");
+            component.set("v.currentDate",  new Date());
+            console.log('new date Screen 2: '+ component.get("v.currentDate"));
+            console.log('Reaction Time Screen 2: '+ reactiontime);
         }
     },
 
@@ -180,22 +191,27 @@
         // Perform validation for required fields
         if (!pgiObj.Fake_News_Ball_Cost_in_Cents__c || 
             pgiObj.Fake_News_Ball_Cost_in_Cents__c < 0) {
-            errors["ballcost"] = "Please enter ball cost.";
+            errors["ballcost"] = $A.get("$Label.c.Fake_News_Test_Form_2_Error");
         }
         if (!pgiObj.Fake_News_Time_to_Make_100_Widgets__c || 
             pgiObj.Fake_News_Time_to_Make_100_Widgets__c < 0) {
-            errors["widget"] = "Please enter widget time.";
+            errors["widget"] = $A.get("$Label.c.Fake_News_Test_Form_3_Error");
         }
         if (!pgiObj.Fake_News_Days_to_Cover_Half_Lake__c || 
             pgiObj.Fake_News_Days_to_Cover_Half_Lake__c < 0) {
-            errors["halflake"] = "Please enter days.";
+            errors["halflake"] = $A.get("$Label.c.Fake_News_Test_Form_4_Error");
         }
     
         // Set errors if any found
         if (Object.keys(errors).length > 0) {
             component.set("v.errors", errors);
         } else {
+            const reactiontime = new Date() - component.get("v.currentDate");
+            helper.recorData(component, event, helper, reactiontime, 51);
             component.set("v.currentScreen", "screen4");
+            component.set("v.currentDate",  new Date());
+            console.log('new date Screen 3: '+ component.get("v.currentDate"));
+            console.log('Reaction Time Screen 3: '+ reactiontime);
         }
     },
 

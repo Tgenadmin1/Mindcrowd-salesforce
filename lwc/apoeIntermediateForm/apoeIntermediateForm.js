@@ -12,7 +12,7 @@ export default class BeanGameForm1 extends NavigationMixin(LightningElement) {
     @api APOE_Game_Form_Text_5;
     @api APOE_Game_Form_Text_6;
     @api APOE_Game_Form_Text_7;
-    @api APOE_Game_VIP_URL ='apoe-participant-consent-form-vip';
+    @api APOE_Game_VIP_URL ='add-apoeparticipant-consent-vip';
     lstcon;
     formattedDate;
 

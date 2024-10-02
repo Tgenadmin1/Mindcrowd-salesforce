@@ -161,6 +161,86 @@
     <enableStreamingApi>true</enableStreamingApi>
     <externalSharingModel>Private</externalSharingModel>
     <fields>
+        <fullName>Girth_in_Inches__c</fullName>
+        <externalId>false</externalId>
+        <label>Girth in Inches</label>
+        <precision>7</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Height_in_Inches__c</fullName>
+        <externalId>false</externalId>
+        <label>Height in Inches</label>
+        <precision>7</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Length_in_Inches__c</fullName>
+        <externalId>false</externalId>
+        <label>Length in Inches</label>
+        <precision>7</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Packaging_Type__c</fullName>
+        <externalId>false</externalId>
+        <label>Packaging Type</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>CUBIC_SOFT_PACK</fullName>
+                    <default>false</default>
+                    <label>CUBIC_SOFT_PACK</label>
+                </value>
+                <value>
+                    <fullName>PADDED_FLAT_RATE_ENVELOPE</fullName>
+                    <default>false</default>
+                    <label>PADDED_FLAT_RATE_ENVELOPE</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Shape__c</fullName>
+        <externalId>false</externalId>
+        <label>Shape</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>NON_RECTANGULAR</fullName>
+                    <default>false</default>
+                    <label>NON_RECTANGULAR</label>
+                </value>
+                <value>
+                    <fullName>RECTANGULAR</fullName>
+                    <default>false</default>
+                    <label>RECTANGULAR</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
         <fullName>Usps_Service_Type__c</fullName>
         <description>service which the Mindcrowd team uses TO send their parcels through USPS</description>
         <externalId>false</externalId>
@@ -177,6 +257,11 @@
                     <default>false</default>
                     <label>FIRST CLASS</label>
                 </value>
+                <value>
+                    <fullName>USPS_GROUND_ADVANTAGE</fullName>
+                    <default>false</default>
+                    <label>USPS_GROUND_ADVANTAGE</label>
+                </value>
             </valueSetDefinition>
         </valueSet>
     </fields>
@@ -185,9 +270,20 @@
         <description>It consists of weight of each campaign type</description>
         <externalId>false</externalId>
         <label>Weight in Ounces</label>
-        <precision>5</precision>
+        <precision>7</precision>
         <required>false</required>
-        <scale>0</scale>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Width_in_Inches__c</fullName>
+        <externalId>false</externalId>
+        <label>Width in Inches</label>
+        <precision>7</precision>
+        <required>false</required>
+        <scale>2</scale>
         <trackTrending>false</trackTrending>
         <type>Number</type>
         <unique>false</unique>

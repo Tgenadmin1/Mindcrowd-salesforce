@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Translations xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<Translations xmlns="http://soap.sforce.com/2006/04/metadata">
     <customApplications>
-        <description xsi:nil="true"/>
         <label><!-- MindCrowd --></label>
         <name>MindCrowd</name>
     </customApplications>
@@ -64,6 +63,22 @@
     <customLabels>
         <label><!-- Brain Info Results --></label>
         <name>Brain_Info_Results</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CamelandCactus game text 2 --></label>
+        <name>CamelandCactus_game_text_2</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CamelandCactus game text cactus --></label>
+        <name>CamelandCactus_game_text_cactus</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CamelandCactus game text nails --></label>
+        <name>CamelandCactus_game_text_nails</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CamelandCactus game text wine --></label>
+        <name>CamelandCactus_game_text_wine</name>
     </customLabels>
     <customLabels>
         <label><!-- Catcme text 1 --></label>
@@ -164,6 +179,10 @@
     <customLabels>
         <label><!-- Date --></label>
         <name>Date</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Digits game text 14 --></label>
+        <name>Digits_game_text_14</name>
     </customLabels>
     <customLabels>
         <label><!-- DltrsGamePart1v0.01 --></label>
@@ -476,6 +495,14 @@
     <customLabels>
         <label><!-- FakeNewsTestForm_minutes --></label>
         <name>FakeNewsTestForm_minutes</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- FakeNewsTestForm_seconds --></label>
+        <name>FakeNewsTestForm_seconds</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- FakeNewsTestForm_years --></label>
+        <name>FakeNewsTestForm_years</name>
     </customLabels>
     <customLabels>
         <label><!-- Fake News Test Form 1 --></label>
@@ -1314,6 +1341,18 @@
         <name>Shapes_Game_Text_9</name>
     </customLabels>
     <customLabels>
+        <label><!-- SpeechTask_Tell_me_more_text --></label>
+        <name>SpeechTask_Tell_me_more_text</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- SpeechTask_Tell_me_text --></label>
+        <name>SpeechTask_Tell_me_text</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Speech_Task_Error --></label>
+        <name>Speech_Task_Error</name>
+    </customLabels>
+    <customLabels>
         <label><!-- Submit --></label>
         <name>Submit</name>
     </customLabels>
@@ -1470,6 +1509,10 @@
         <name>beangameScorer</name>
     </customLabels>
     <customLabels>
+        <label><!-- beangameviewformurl --></label>
+        <name>beangameviewformurl</name>
+    </customLabels>
+    <customLabels>
         <label><!-- brainInfo text 1 --></label>
         <name>brainInfo_text_1</name>
     </customLabels>
@@ -1548,6 +1591,14 @@
     <customLabels>
         <label><!-- braininfo02 --></label>
         <name>braininfo02</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- camelandcactus game config url --></label>
+        <name>camelandcactus_game_config_url</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- camelandcactus game text 14 --></label>
+        <name>camelandcactus_game_text_14</name>
     </customLabels>
     <customLabels>
         <label><!-- complete2 --></label>
@@ -1916,6 +1967,10 @@
     <customLabels>
         <label><!-- debugConsole --></label>
         <name>debugConsole</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- digitSymbol game config url --></label>
+        <name>digitSymbol_game_config_url</name>
     </customLabels>
     <customLabels>
         <label><!-- dlrts game text --></label>
@@ -2682,6 +2737,14 @@
         <name>focus_game_config_url</name>
     </customLabels>
     <customLabels>
+        <label><!-- game_bean_title_left --></label>
+        <name>game_bean_title_left</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- game_bean_title_right --></label>
+        <name>game_bean_title_right</name>
+    </customLabels>
+    <customLabels>
         <label><!-- game button 1 --></label>
         <name>game_button_1</name>
     </customLabels>
@@ -2748,6 +2811,18 @@
     <customLabels>
         <label><!-- game_name_15 --></label>
         <name>game_name_15</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- game name 17 --></label>
+        <name>game_name_17</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- game name 18 --></label>
+        <name>game_name_18</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- game_name_19 --></label>
+        <name>game_name_19</name>
     </customLabels>
     <customLabels>
         <label><!-- game name 2 --></label>
@@ -2818,8 +2893,16 @@
         <name>game_time_3_min</name>
     </customLabels>
     <customLabels>
+        <label><!-- game_time_4_min --></label>
+        <name>game_time_4_min</name>
+    </customLabels>
+    <customLabels>
         <label><!-- game_time_5_min --></label>
         <name>game_time_5_min</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- game_time_7_min --></label>
+        <name>game_time_7_min</name>
     </customLabels>
     <customLabels>
         <label><!-- games get started text 1 --></label>
@@ -4974,12 +5057,20 @@
         <name>rule_2</name>
     </customLabels>
     <customLabels>
+        <label><!-- scientific game CamelandCactus --></label>
+        <name>scientific_game_CamelandCactus</name>
+    </customLabels>
+    <customLabels>
         <label><!-- scientific_game_bean --></label>
         <name>scientific_game_bean</name>
     </customLabels>
     <customLabels>
         <label><!-- scientific game dearySimpleAndComplexReactionTime --></label>
         <name>scientific_game_dearySimpleAndComplexReactionTime</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- scientific game digitsymbolmatchingtest --></label>
+        <name>scientific_game_digitsymbolmatchingtest</name>
     </customLabels>
     <customLabels>
         <label><!-- scientific game faceNameAssociates --></label>
@@ -5022,6 +5113,10 @@
         <name>scientific_game_verbalPairedAssociates</name>
     </customLabels>
     <customLabels>
+        <label><!-- scientific_speech_task2 --></label>
+        <name>scientific_speech_task2</name>
+    </customLabels>
+    <customLabels>
         <label><!-- scientific_speech_tasks --></label>
         <name>scientific_speech_tasks</name>
     </customLabels>
@@ -5044,6 +5139,10 @@
     <customLabels>
         <label><!-- shrd title --></label>
         <name>shrd_title</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- speechTask2_config_url --></label>
+        <name>speechTask2_config_url</name>
     </customLabels>
     <customLabels>
         <label><!-- speechTask_config_url --></label>
@@ -5148,6 +5247,22 @@
     <customLabels>
         <label><!-- survey_name_9 --></label>
         <name>survey_name_9</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- survey name n --></label>
+        <name>survey_name_n</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- survey_time_2_min --></label>
+        <name>survey_time_2_min</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- survey_time_3_min --></label>
+        <name>survey_time_3_min</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- survey_time_5_min --></label>
+        <name>survey_time_5_min</name>
     </customLabels>
     <customLabels>
         <label><!-- tapjoy url --></label>
@@ -5262,6 +5377,10 @@
         <name>url_Health_Medical_Survey</name>
     </customLabels>
     <customLabels>
+        <label><!-- url Heat Survey --></label>
+        <name>url_Heat_Survey</name>
+    </customLabels>
+    <customLabels>
         <label><!-- url Objects Space --></label>
         <name>url_Objects_Space</name>
     </customLabels>
@@ -5370,8 +5489,20 @@
         <name>url_login</name>
     </customLabels>
     <customLabels>
+        <label><!-- url_me_ CamelandCactus --></label>
+        <name>url_me_CamelandCactus</name>
+    </customLabels>
+    <customLabels>
         <label><!-- url me Objects - Time --></label>
         <name>url_me_Objects_Time</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- url_me_This_and_That --></label>
+        <name>url_me_This_and_That</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- url me digitSymbol --></label>
+        <name>url_me_digitSymbol</name>
     </customLabels>
     <customLabels>
         <label><!-- url me-fakeNewsTest --></label>
@@ -5404,6 +5535,10 @@
     <customLabels>
         <label><!-- url_me_speechTask --></label>
         <name>url_me_speechTask</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- url_me_speechTaskTellMeMore --></label>
+        <name>url_me_speechTaskTellMeMore</name>
     </customLabels>
     <customLabels>
         <label><!-- url me-switchinggame --></label>
@@ -5971,7 +6106,15 @@
     </flowDefinitions>
     <flowDefinitions>
         <flows/>
+        <fullName>ECog_12_Survey</fullName>
+    </flowDefinitions>
+    <flowDefinitions>
+        <flows/>
         <fullName>FHAD_Survey</fullName>
+    </flowDefinitions>
+    <flowDefinitions>
+        <flows/>
+        <fullName>Glucosamine_Survey</fullName>
     </flowDefinitions>
     <flowDefinitions>
         <flows/>

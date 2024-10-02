@@ -6,9 +6,9 @@
     <changePasswordTemplate>unfiled$public/Reminder_VF_Email_to_Join_Expanded</changePasswordTemplate>
     <communityRoles/>
     <disableReputationRecordConversations>false</disableReputationRecordConversations>
-    <emailSenderAddress>pramod.kumar@girikon.com</emailSenderAddress>
+    <emailSenderAddress>sfadmin2@tgen.org</emailSenderAddress>
     <emailSenderName>MindCrowd</emailSenderName>
-    <enableApexCDNCaching>true</enableApexCDNCaching>
+    <enableApexCDNCaching>false</enableApexCDNCaching>
     <enableCustomVFErrorPageOverrides>false</enableCustomVFErrorPageOverrides>
     <enableDirectMessages>true</enableDirectMessages>
     <enableExperienceBundleBasedSnaOverrideEnabled>true</enableExperienceBundleBasedSnaOverrideEnabled>
@@ -32,6 +32,7 @@
     <forgotPasswordTemplate>unfiled$public/CommunityForgotPasswordEmailTemplate</forgotPasswordTemplate>
     <gatherCustomerSentimentData>true</gatherCustomerSentimentData>
     <headlessForgotPasswordTemplate>unfiled$public/CommunityHeadlessForgotPasswordTemplate</headlessForgotPasswordTemplate>
+    <headlessRegistrationTemplate>unfiled$public/CommunityHeadlessRegistrationTemplate</headlessRegistrationTemplate>
     <logoutUrl>https://mindcrowd2--uat.sandbox.my.site.com/MindCrowd/s/vipaccess</logoutUrl>
     <maxFileSizeKb>5120</maxFileSizeKb>
     <networkMemberGroups>

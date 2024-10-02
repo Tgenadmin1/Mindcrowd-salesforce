@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlexiPage xmlns="http://soap.sforce.com/2006/04/metadata">
+    <flexiPageRegions>
+        <appendable>enabled</appendable>
+        <name>header</name>
+        <prependable>enabled</prependable>
+        <replaceable>enabled</replaceable>
+        <type>Region</type>
+    </flexiPageRegions>
+    <flexiPageRegions>
+        <appendable>enabled</appendable>
+        <itemInstances>
+            <componentInstance>
+                <componentInstanceProperties>
+                    <name>acceptancePage02</name>
+                    <value>Thank you for participating in our research study! A kit will be mailed to the address you provided soon. If you have any questions please email the study coordinator at mindcrowdquestion@tgen.org</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>acceptancePage03</name>
+                    <value>Ir a la página web de MindCrowd</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>acceptancePage04</name>
+                    <value>Deseo más información sobre esta investigación</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>acceptancePage05</name>
+                    <value>Nuestros registros indican que ya has completado el formulario de consentimiento. Gracias por tu tiempo.</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>acceptancePage06</name>
+                    <value>My Games</value>
+                </componentInstanceProperties>
+                <componentName>alreadysubmitted</componentName>
+                <identifier>alreadysubmitted</identifier>
+            </componentInstance>
+        </itemInstances>
+        <name>content</name>
+        <prependable>enabled</prependable>
+        <replaceable>enabled</replaceable>
+        <type>Region</type>
+    </flexiPageRegions>
+    <flexiPageRegions>
+        <appendable>enabled</appendable>
+        <name>footer</name>
+        <prependable>enabled</prependable>
+        <replaceable>enabled</replaceable>
+        <type>Region</type>
+    </flexiPageRegions>
+    <flexiPageRegions>
+        <appendable>enabled</appendable>
+        <itemInstances>
+            <componentInstance>
+                <componentInstanceProperties>
+                    <name>customHeadTags</name>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>description</name>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>title</name>
+                    <value>alreadysubmitted VIP</value>
+                </componentInstanceProperties>
+                <componentName>forceCommunity:seoAssistant</componentName>
+                <identifier>forceCommunity_seoAssistant</identifier>
+            </componentInstance>
+        </itemInstances>
+        <name>sfdcHiddenRegion</name>
+        <prependable>enabled</prependable>
+        <replaceable>enabled</replaceable>
+        <type>Region</type>
+    </flexiPageRegions>
+    <masterLabel>alreadysubmitted VIP</masterLabel>
+    <template>
+        <name>siteforce:sldsOneColLayout</name>
+    </template>
+    <type>CommAppPage</type>
+</FlexiPage>

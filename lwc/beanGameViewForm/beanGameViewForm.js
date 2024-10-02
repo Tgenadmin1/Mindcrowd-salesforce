@@ -24,6 +24,7 @@ import { CurrentPageReference } from 'lightning/navigation';
 import community_url from '@salesforce/label/c.Community_Url';
 import Games_Dashboard from '@salesforce/label/c.Games_Dashboard';
 import {NavigationMixin} from 'lightning/navigation';
+import beangameviewformurl from '@salesforce/label/c.beangameviewformurl';
 
 export default class BeanGameViewForm extends NavigationMixin(LightningElement) {
     logoimage =  images + '/images/MindCrowd+Logo+FORM.png';
@@ -142,7 +143,7 @@ export default class BeanGameViewForm extends NavigationMixin(LightningElement) 
                     this.ErrorModalOpen=true;
                    // alert('Please fill the required fields.');
                 }
-                if (window.location.pathname.indexOf('beangameviewform-vip') > -1) {		
+                if (window.location.pathname.indexOf(beangameviewformurl) > -1) {		
                     this.showButton = true; 
                 } 
     }

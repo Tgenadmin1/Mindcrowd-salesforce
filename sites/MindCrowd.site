@@ -18,7 +18,7 @@
     <enableAuraRequests>true</enableAuraRequests>
     <favoriteIcon>favicon</favoriteIcon>
     <fileNotFoundPage>SetCampaignCodeByVFPage</fileNotFoundPage>
-    <forgotPasswordPage>CustomSetPassword</forgotPasswordPage>
+    <forgotPasswordPage>ForgotPassWordExiredLink</forgotPasswordPage>
     <genericErrorPage>Exception</genericErrorPage>
     <inMaintenancePage>InMaintenance</inMaintenancePage>
     <indexPage>CommunitiesLanding</indexPage>
@@ -29,7 +29,7 @@
     <selfRegPage>CommunitiesSelfReg</selfRegPage>
     <serverIsDown>SNA_MindCrowd1_sf_default_cdn_a0qfk</serverIsDown>
     <siteAdmin>ssathyan@miraclesoft.com</siteAdmin>
-    <siteGuestRecordDefaultOwner>ssathyan@miraclesoft.com</siteGuestRecordDefaultOwner>
+    <siteGuestRecordDefaultOwner>sfadmin2@tgen.org</siteGuestRecordDefaultOwner>
     <siteRedirectMappings>
         <action>Permanent</action>
         <isActive>true</isActive>

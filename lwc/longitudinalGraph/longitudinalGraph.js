@@ -74,6 +74,7 @@ export default class ChartExample extends LightningElement {
           };
       
       if (this.chartName == 'Focus' || this.chartName == 'Concéntrate') {
+        console.log('configdata: '+ JSON.stringify(this.graphData));
         const flankdata = [...this.graphData.gamedataList.flankerdataList]
         configdata.data.datasets[0].data = flankdata;
         configdata.options.scales.xAxes[0].labels =[...this.graphData.xAxisLabelsflanker];
@@ -300,10 +301,54 @@ export default class ChartExample extends LightningElement {
           configdata.options.scales.yAxes[0].ticks.stepSize =2;
           configdata.options.scales.yAxes[0].ticks.suggestedMax =maxscore+2;
         } 
+      }
+
+      if (this.chartName == 'Digits' || this.chartName == 'Dígitos') {
+        const digitSymboldata =[...this.graphData.gamedataList.digitSymboldataList];
+        configdata.data.datasets[0].data = digitSymboldata;
+        configdata.options.scales.xAxes[0].labels =[...this.graphData.xAxisLabelsdigitSymbol];
+        const maxscore = digitSymboldata.reduce(function(acc, current) {
+          if (current.y > acc) {
+            return current.y;
+          }
+          return acc;
+        }, "");        
+        if(maxscore <= 50 )
+        {
+          configdata.options.scales.yAxes[0].ticks.stepSize = 5;
+          configdata.options.scales.yAxes[0].ticks.suggestedMax =maxscore+1;
+        } 
+        else{
+          configdata.options.scales.yAxes[0].ticks.stepSize = 10;
+          configdata.options.scales.yAxes[0].ticks.suggestedMax =maxscore+2;
+        } 
       } 
-      if (this.chartName == 'Bean Game' || this.chartName == 'Bean Game') {                    
+
+      if (this.chartName == 'Camel and Cactus' || this.chartName == 'Camello and Cactus') {
+        const camelandcactusdata =[...this.graphData.gamedataList.camelandcactusdataList];
+        configdata.data.datasets[0].data = camelandcactusdata;
+        configdata.options.scales.xAxes[0].labels =[...this.graphData.xAxisLabelscamelandcactus];
+        const maxscore = camelandcactusdata.reduce(function(acc, current) {
+          if (current.y > acc) {
+            return current.y;
+          }
+          return acc;
+        }, "");        
+        if(maxscore <= 16 )
+        {
+          configdata.options.scales.yAxes[0].ticks.stepSize = 2;
+          configdata.options.scales.yAxes[0].ticks.suggestedMax =maxscore+1;
+        } 
+        else{
+          configdata.options.scales.yAxes[0].ticks.stepSize = 4;
+          configdata.options.scales.yAxes[0].ticks.suggestedMax =maxscore+2;
+        } 
+      } 
+
+      if (this.chartName == 'Bean Game' || this.chartName == 'Juego De Las Alubias') {                    
         const beangameleftdata =[...this.graphData.gamedataList.beangameleftdataList];
-        const beangamerightdata =[...this.graphData.gamedataList.beangamerightdataList];        
+        const beangamerightdata =[...this.graphData.gamedataList.beangamerightdataList];  
+        console.log('beangameleftdata: '+ JSON.stringify(beangameleftdata));      
         configdata.data.datasets[0].data = beangameleftdata;
         configdata.data.datasets[0].label='Left Hand';
         configdata.options.legend.display=true;
@@ -332,7 +377,7 @@ export default class ChartExample extends LightningElement {
         configdata.options.scales.yAxes.forEach((yAxis) => {
           delete yAxis.ticks;
         });*/
-        console.log(JSON.stringify(configdata));      
+        console.log('configdata: '+ JSON.stringify(configdata));      
         const leftmaxscore = beangameleftdata.reduce(function(acc, current) {
           if (current.y > acc) {
             return current.y;

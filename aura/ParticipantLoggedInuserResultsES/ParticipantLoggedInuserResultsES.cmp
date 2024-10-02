@@ -1,92 +1,58 @@
 <!--
-  @description       : This 
-  @author            : Manikumar Meruva(Girikon Solutions Pvt Ltd)
-  @UI author         : Mani
-  @last modified on  : 09-09-2021
-  @last modified by  : ManiKumar
+  @description             : 
+  @author(Controller)      : Sibi Sathyan
+  @UI author               : Sibi Sathyan
+  @last Updated by         : Sibi Sathyan
+  @last modified by        : Sibi Sathyan
   Modifications Log 
-  Ver   Date         Author         Modification
-  1.0   18-08-2021   Manikumar      Initial Version
+  Ver   Date         Author                  Modification
+  1.0   20-05-2023   Sibi Sathyan       Initial Version
 -->
-
-
-
-
-<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" controller="ParticipantResultsControllerES" >
-    <aura:attribute name="gameNames" type="List"  access="global" />
+<aura:component implements="forceCommunity:availableForAllPageTypes,lightning:isUrlAddressable,lightning:hasPageReference"
+    access="global">    
     <aura:attribute name="results_text" type="String" default = "Welcome to your personal MindCrowd results page" access="global" />
     <aura:attribute name="results_text_1" type="String" default = "The gauges below show your results. The first gauge is your personal result. The second gauge shows results for people like you. The third gauge is the average for all MindCrowd participants." access="global" />
     <aura:attribute name="results_text_2" type="String" default = "Gauges update as more people participate in MindCrowd. You can come back and see your results at any time." access="global" />
     <aura:attribute name="results_text_3" type="String" default = "Gauges represent the percent correct for the game, except for the React game, which shows your speed in milliseconds." access="global" />
     <aura:attribute name="results_text_4" type="String" default = "Remember that these games are not designed to predict your future for brain problems or disease. Some people are good at certain games but not at others – that is normal. Each game you finish helps to give a more complete picture of your brain performance. Keep playing the games and you may find the ones that you are best at." access="global" />
+    <aura:attribute name="results_text_5" type="String" default = "Welcome to your most recent game results" access="global" />
+    <aura:attribute name="results_text_6" type="String" default = "The gauges below show your results." access="global" />
+    <aura:attribute name="results_text_7" type="String" default = "The gauges below show your results." access="global" />
+    <aura:attribute name="results_text_8" type="String" default = "The gauges below show your results." access="global" />
+    <aura:attribute name="results_text_9" type="String" default = "The gauges below show your results." access="global" />
+    <aura:attribute name="results_text_10" type="String" default = "The gauges below show your results." access="global" />
+    <aura:attribute name="isInit" type="Boolean" default = "false"/>
+    <aura:attribute name="isLongGraph" type="Boolean" default = "false"/>    
+    <aura:attribute name="isRecResults" type="Boolean" default = "false"/>   
     <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
-    <!-- <h1 class=" text-center marginT30"><p class="title">{!$Label.c.paired_game_results_text1}</p> </h1> -->
-    <div class="l-title text-center text-normal">{!v.results_text}</div>
-    <p>{!v.results_text_1}</p>
-    <p>{!v.results_text_2}</p>
-    <p>{!v.results_text_3}</p>
-    <p>{!v.results_text_4}</p>
-   <lightning:layout multipleRows="true">
-        
-        <lightning:layoutItem class="remove-Padding" size ="12">
-            <c:ParticipantLoggedInUserGameDashboardES gameName ="{!$Label.c.scientific_game_verbalPairedAssociates}"  
-                                                    gameDesc1="{!$Label.c.Expan_wordpair_game_user_text_1}" gameDesc2="{!$Label.c.Expan_wordpair_game_user_text_2}"                                  
-                                                    isScoreReactionTime="false"  gameTitle="{!$Label.c.Expan_game_user_text_2}"></c:ParticipantLoggedInUserGameDashboardES>
-        </lightning:layoutItem>
-        <lightning:layoutItem class="remove-Padding" size ="12">
-            <c:ParticipantLoggedInUserGameDashboardES gameName ="{!$Label.c.scientific_game_dearySimpleAndComplexReactionTime}" 
-                                                    gameDesc1="{!$Label.c.Expan_react_game_user_text_1}" gameDesc2="{!$Label.c.Expan_react_game_user_text_2}"
-                                                    isScoreReactionTime="true" gameTitle="{!$Label.c.Expan_game_user_text_1}"></c:ParticipantLoggedInUserGameDashboardES>
-        </lightning:layoutItem>
-        <lightning:layoutItem class="remove-Padding" size ="12">
-            <c:ParticipantLoggedInUserGameDashboardES gameName ="{!$Label.c.scientific_game_objectRecognitionAndSimilarity}" 
-                                                    gameDesc1="{!$Label.c.Expan_objects_game_user_text_1}" gameDesc2="{!$Label.c.Expan_objects_game_user_text_2}"
-                                                    isScoreReactionTime="false"  gameTitle="{!$Label.c.Expan_game_user_text_6}"></c:ParticipantLoggedInUserGameDashboardES>
-        </lightning:layoutItem>
-        <!-- <lightning:layoutItem class="remove-Padding" size ="12">
-            <c:ParticipantLoggedInUserGameDashboardES gameName ="Object Discrimination" 
-                                                    gameDesc1="{!$Label.c.Expan_shapes_game_user_text_1}" gameDesc2="{!$Label.c.Expan_shapes_game_user_text_2}"
-                                                    isScoreReactionTime="false" gameTitle="{!$Label.c.Expan_game_user_text_6}"></c:ParticipantLoggedInUserGameDashboardES>
-        </lightning:layoutItem> -->
-        
-        
-        <lightning:layoutItem class="remove-Padding" size ="12">
-            <c:ParticipantLoggedInUserGameDashboardES gameName ="{!$Label.c.scientific_game_flanker}" 
-                                                    gameDesc1="{!$Label.c.Expan_focus_game_user_text_1}" gameDesc2="{!$Label.c.Expan_focus_game_user_text_2}"
-                                                    isScoreReactionTime="false" gameTitle="{!$Label.c.Expan_game_user_text_4}"></c:ParticipantLoggedInUserGameDashboardES>
-        </lightning:layoutItem>
-        <lightning:layoutItem class="remove-Padding" size ="12">
-            <c:ParticipantLoggedInUserGameDashboardES gameName ="{!$Label.c.scientific_game_faceNameAssociates}"
-                                                    gameDesc1="{!$Label.c.Expan_names_faces_game_user_text_1}" gameDesc2="{!$Label.c.Expan_names_faces_game_user_text_2}"
-                                                    isScoreReactionTime="false" gameTitle="{!$Label.c.Expan_game_user_text_3}"></c:ParticipantLoggedInUserGameDashboardES>
-        </lightning:layoutItem> 
-        <lightning:layoutItem class="remove-Padding" size ="12"> 
-            <c:ParticipantLoggedInUserGameDashboardES gameName ="{!$Label.c.scientific_game_letterNumberSequencing}" 
-                                                    gameDesc1="{!$Label.c.Expan_switching_game_user_text_1}" gameDesc2="{!$Label.c.Expan_switching_game_user_text_2}"
-                                                    isScoreReactionTime="false"  gameTitle="{!$Label.c.Expan_game_user_text_5}"></c:ParticipantLoggedInUserGameDashboardES>
-        </lightning:layoutItem>
-        <lightning:layoutItem class="remove-Padding" size ="12">
-            <c:ParticipantLoggedInUserGameDashboardES gameName ="{!$Label.c.scientific_game_keepTrack}" 
-                                                    gameDesc1="{!$Label.c.Expan_keeptrack_game_user_text_1}" gameDesc2="{!$Label.c.Expan_keeptrack_game_user_text_2}"
-                                                    isScoreReactionTime="false"  gameTitle="{!$Label.c.Expan_game_user_text_8}"></c:ParticipantLoggedInUserGameDashboardES>
-        </lightning:layoutItem>
-        <!-- object games -->
-        <lightning:layoutItem class="remove-Padding" size ="12">
-            <c:ParticipantLoggedInUserGameDashboardES gameName ="{!$Label.c.scientific_game_objectDiscrimination}" 
-                                                    gameDesc1="{!$Label.c.Expan_objects_game_user_text_1}" gameDesc2="{!$Label.c.Expan_objects_game_user_text_2}"
-                                                    isScoreReactionTime="false"  gameTitle="{!$Label.c.game_name_8}"></c:ParticipantLoggedInUserGameDashboardES>
-        </lightning:layoutItem>
-        <lightning:layoutItem class="remove-Padding" size ="12">
-            <c:ParticipantLoggedInUserGameDashboardES gameName ="{!$Label.c.scientific_game_objectTemporal}" 
-                                                    gameDesc1="{!$Label.c.Expan_objects_game_user_text_1}" gameDesc2="{!$Label.c.Expan_objects_game_user_text_2}"
-                                                    isScoreReactionTime="false"  gameTitle="{!$Label.c.game_name_9}"></c:ParticipantLoggedInUserGameDashboardES>
-        </lightning:layoutItem>
-        <lightning:layoutItem class="remove-Padding" size ="12">
-            <c:ParticipantLoggedInUserGameDashboardES gameName ="{!$Label.c.scientific_game_objectSpatial}" 
-                                                    gameDesc1="{!$Label.c.Expan_objects_game_user_text_1}" gameDesc2="{!$Label.c.Expan_objects_game_user_text_2}"
-                                                    isScoreReactionTime="false"  gameTitle="{!$Label.c.game_name_10}"></c:ParticipantLoggedInUserGameDashboardES>
-        </lightning:layoutItem>
-
-    </lightning:layout>
-    
+    <aura:if isTrue="{!v.isInit}"> 
+        <div class="l-title text-center text-normal">{!v.results_text}</div>
+        <p>{!v.results_text_1}</p>
+        <lightning:formattedRichText value="{!v.results_text_2}"/>
+        <div class="text-center text-normal"><b>{!v.results_text_3}</b></div>   
+            <p id="nextBtton" class="centers magenta-btn btn-xlarge marginT20">
+                <button style="margin: 10px;" class="slds-button"  onclick="{!c.goToRecentResult }">{!$Label.c.Result_button_text_1}</button>
+                <!--div style="margin-right: 10px; padding: 10px"></div-->
+                <button style="margin: 10px;"  class="slds-button"  onclick="{!c.goToLongGraph }">{!$Label.c.Result_button_text_2}</button>                  
+            </p>
+        <p>{!v.results_text_4}</p>    
+    </aura:if>
+    <aura:if isTrue="{!v.isLongGraph}"> 
+        <div class="l-title text-center text-normal">{!v.results_text_5}</div>
+        <lightning:formattedRichText value="{!v.results_text_6}"/>
+        <div class="text-center text-normal"><b>{!v.results_text_7}</b></div> 
+        <p id="nextBtton" class="centers magenta-btn  btn-xlarge marginT20">
+            <button class="slds-button"  onclick="{!c.goToRecentResult }">{!$Label.c.Result_button_text_1}</button>
+        </p>   
+        <c:ParticipantLoggedInUserLongitudinal></c:ParticipantLoggedInUserLongitudinal>
+    </aura:if>    
+    <aura:if isTrue="{!v.isRecResults}"> 
+        <div class="l-title text-center text-normal">{!v.results_text_8}</div>
+        <lightning:formattedRichText value="{!v.results_text_9}"/>
+        <div class="text-center text-normal"><b>{!v.results_text_10}</b></div>
+        <p id="nextBtton" class="centers magenta-btn  btn-xlarge marginT20">
+            <button class="slds-button"  onclick="{!c.goToLongGraph }">{!$Label.c.Result_button_text_2}</button>
+        </p>
+        <c:ParticipantLoggedInUserRecentResult></c:ParticipantLoggedInUserRecentResult>
+    </aura:if> 
 </aura:component>

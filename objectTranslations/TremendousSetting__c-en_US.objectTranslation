@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>TremendousSettings</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>TremendousSettings</value>
+    </caseValues>
+    <fields>
+        <label><!-- AuthToken --></label>
+        <name>AuthToken__c</name>
+    </fields>
+    <fields>
+        <label><!-- Authorization --></label>
+        <name>Authorization__c</name>
+    </fields>
+    <fields>
+        <label><!-- CampaignId --></label>
+        <name>CampaignId__c</name>
+    </fields>
+    <fields>
+        <label><!-- ContentType --></label>
+        <name>ContentType__c</name>
+    </fields>
+    <fields>
+        <label><!-- CurrencyCode --></label>
+        <name>CurrencyCode__c</name>
+    </fields>
+    <fields>
+        <label><!-- DeliveryMethod --></label>
+        <name>DeliveryMethod__c</name>
+    </fields>
+    <fields>
+        <label><!-- Denomination --></label>
+        <name>Denomination__c</name>
+    </fields>
+    <fields>
+        <label><!-- EndpointURL --></label>
+        <name>EndpointURL__c</name>
+    </fields>
+    <fields>
+        <label><!-- FundingSourceId --></label>
+        <name>FundingSourceId__c</name>
+    </fields>
+    <fields>
+        <label><!-- RestMethod --></label>
+        <name>RestMethod__c</name>
+    </fields>
+    <fields>
+        <label><!-- Spanish CampaignId --></label>
+        <name>Spanish_CampaignId__c</name>
+    </fields>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

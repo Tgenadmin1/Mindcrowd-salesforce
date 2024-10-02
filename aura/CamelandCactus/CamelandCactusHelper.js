@@ -1,9 +1,5 @@
 ({
-    recorData: function (component, event, helper, userContactId, gameId, questionNumber, userInputData, isCorrect, reactionTime, isPracticeQuestion, correctAnswer, participantGameInfoId, totalTrialTime, orderOffUserInput, timeTest, round, firstThreeKeys) {
-       // let timeForEachBoxs = JSON.stringify(timeForCategories);
-        let answerOrder = JSON.stringify(orderOffUserInput);
-        let firstResponse = JSON.stringify(firstThreeKeys);
-        //console.log('vaues for bossss:',totalTrialTime, orderOffUserInput, timeForCategories,round);
+    recorData: function (component, event, helper, userContactId, gameId, questionNumber, userInputData, isCorrect, reactionTime, isPracticeQuestion, correctAnswer, participantGameInfoId, round) {
         let data = {
             Contact_Name__c: userContactId,
             Game_Name__c: gameId,
@@ -14,16 +10,10 @@
             Is_Practice_Question__c: isPracticeQuestion,
             Right_Answer__c: correctAnswer,
             Participant_Game_InfoID__c: participantGameInfoId,
-            Time_for_Each_Box__c: timeTest,
-            Total_Time_for_All_Boxes__c: totalTrialTime,
-            Order_of_Answers__c: answerOrder,
-            Round__c: round,
-            Participant_First_Response__c: firstResponse
-        };
-        console.log('data is : ',data);
+            Round__c: round
+        };  
         var action = component.get("c.saveGameResponse");
-        action.setParams({ "sobj": JSON.stringify(data) });
-        //console.log('question: ' + questionNumber +' responce: '+ userInputData +' correct: '+ isCorrect +'time: '+reactionTime);
+        action.setParams({ "sobj": JSON.stringify(data) });        
         action.setCallback(this, function (a) {
             var state = a.getState();
             if (state === "SUCCESS") {
@@ -32,55 +22,43 @@
             else if (state === "ERROR") {
                 let message = '';
                 let errors = response.getError();
-                //console.log('record data value',errors);
                 if (errors && Array.isArray(errors) && errors.length > 0) {
                     message = errors[0].message;
                 }
-                //console.error(message);
             }
-        });
-        // $A.enqueueAction(action);  
+        }); 
         $A.getCallback(function () {
             $A.enqueueAction(action);
         })();
     },
-
-    //this function get the game id from the server.
-    gameDetails: function (component, event, helper, gameNameScientific) {
-        console.log('gameNameScientific : ',gameNameScientific);
+    gameDetails: function (component, event, helper, gameNameScientific) {   
         var ConList = component.get("c.getGameId");
         ConList.setParams({ "gameName": gameNameScientific });
         ConList.setCallback(this, function (a) {
             var state = a.getState();
             if (state === "SUCCESS") {
-                var name = a.getReturnValue();
-                //console.log('gameDetails is : ',name);
-                component.set("v.myAttribute", name);
-                console.log('game name:', component.get("v.myAttribute"));  
+                var name = a.getReturnValue(); 
+                component.set("v.myAttribute", name);                
             }
             else if (state === "ERROR") {
                 let message = '';
                 let errors = response.getError();
                 if (errors && Array.isArray(errors) && errors.length > 0) {
                     message = errors[0].message;
-                }
-                //console.error(message);
+                } 
             }
         });
-        // $A.enqueueAction(ConList);
         $A.getCallback(function () {
             $A.enqueueAction(ConList);
         })();
     },
-
     userDetails: function (component, event, helper, currentUserId) {
         var ConList = component.get("c.getContactId");
         ConList.setParams({ "currentUserid": currentUserId });
         ConList.setCallback(this, function (a) {
             var state = a.getState();
             if (state === "SUCCESS") {
-                var name = a.getReturnValue();
-                //console.log('userDetails is : ',name);
+                var name = a.getReturnValue();  
                 component.set("v.mycontactId", name);
             }
             else if (state === "ERROR") {
@@ -89,16 +67,12 @@
                 if (errors && Array.isArray(errors) && errors.length > 0) {
                     message = errors[0].message;
                 }
-                //console.error(message);
             }
         });
-        // $A.enqueueAction(ConList);
         $A.getCallback(function () {
             $A.enqueueAction(ConList);
         })();
     },
-
-    //this function create the participantgameinfo record.
     participantGameInfo: function (component, event, helper, contactId,language, gameId, startDateTime, gamePlayStatus,ipAddress,browserName,device,screenResolution) {
         let data = {
             Contact_Name__c: contactId,
@@ -112,18 +86,15 @@
             User_Agent__c: navigator.userAgent,
             Device_Screen_Size__c: JSON.stringify(screenResolution)
         };
-        //console.log('participantGameInfo is : ',data);
         var action = component.get("c.participantGameInfoDetail");
         action.setParams({ "sobj": JSON.stringify(data) });
         action.setCallback(this, function (a) {
             var state = a.getState();
             if (state === "SUCCESS") {
                 var name = a.getReturnValue();
-                //console.log('participantGameInfo is : ',name);
                 component.set("v.participantGameid", name);
                 var participantGameInfoId=name;
-                this.gameNameInParticipantGameInfo(component,event,helper,contactId,gameId,participantGameInfoId,ipAddress,browserName,device);
-                       
+                this.gameNameInParticipantGameInfo(component,event,helper,contactId,gameId,participantGameInfoId,ipAddress,browserName,device);                       
             }
             else if (state === "ERROR") {
                 let message = '';
@@ -131,28 +102,20 @@
                 if (errors && Array.isArray(errors) && errors.length > 0) {
                     message = errors[0].message;
                 }
-                //console.error(message);
             }
             else {
-                //console.log('else part');
             }
         });
         try {
-            // $A.enqueueAction(action);
             $A.getCallback(function () {
                 $A.enqueueAction(action);
             })();
 
         }
         catch (e) {
-            //console.log(e.message);
         }
-
     },
-
-    //this function update the gameid into the participantGameinfo object.
     gameNameInParticipantGameInfo: function (component, event, helper, contactId, gameId, participantGameInfoId, ipAddress, browserName, device) {
-
         let data = {
             Contact_Name__c: contactId,
             Game_Name__c: gameId,
@@ -161,23 +124,17 @@
             IP_Address__c: ipAddress,
             User_Device__c: device,
             User_Agent__c: navigator.userAgent
-
-        };
-        //console.log('gameNameInParticipantGameInfo is--------- : ',data);
+        };   
         var action = component.get("c.gameNameInParticipantGameInfoUpdate");
         action.setParams({ "sobj": JSON.stringify(data) });
-        try {
-            // $A.enqueueAction(action);
+        try {   
             $A.getCallback(function () {
                 $A.enqueueAction(action);
             })();
         }
         catch (e) {
-            //console.log(e.message);
         }
     },
-
-    //this fucntion update the participantgameinfo record's field like as endDatetime.
     participantGameInfoUpdate: function (component, event, helper, contactId, language,gameId, endDateTime, gamePlayStatus, participantGameInfoId,screenResolution) {
         let data = {
             Contact_Name__c: contactId,
@@ -188,15 +145,12 @@
             Id: participantGameInfoId,
             Device_Screen_Size__c: JSON.stringify(screenResolution)	
         };
-        //console.log('participantGameInfoUpdate is : ',data);
         var action = component.get("c.participantGameInfoUpdate");
-        action.setParams({ "sobj": JSON.stringify(data) });
-        ////console.log('gameId: ' + gameId +' startDateTime: '+ startDateTime +' gamePlayStatus: '+ gamePlayStatus +'endDateTime: '+endDateTime);
+        action.setParams({ "sobj": JSON.stringify(data) });        
         action.setCallback(this, function (a) {
             var state = a.getState();
             if (state === "SUCCESS") {
-                var name = a.getReturnValue();
-                //console.log('participantGameInfoUpdate is : ',name);
+                var name = a.getReturnValue();                
                 component.set("v.participantGameid", name);
             }
             else if (state === "ERROR") {
@@ -204,21 +158,17 @@
                 let errors = response.getError();
                 if (errors && Array.isArray(errors) && errors.length > 0) {
                     message = errors[0].message;
-                }
-                //console.error(message);
+                }                
             }
-            else {
-                //console.log('error');
+            else {           
             }
         });
-        try {
-            // $A.enqueueAction(action);
+        try {       
             $A.getCallback(function () {
                 $A.enqueueAction(action);
             })();
         }
-        catch (e) {
-            //console.log(e.message);
+        catch (e) {         
         }
     },
     getIpAddress: function (component, event, helper) {
@@ -229,49 +179,25 @@
                 var ipAdd = response.getReturnValue();
                 component.set("v.ipAddress", ipAdd);
             }
-            else if (state === "INCOMPLETE") {
-                //console.log("Unknown error");
+            else if (state === "INCOMPLETE") {          
             }
             else if (state === "ERROR") {
                 var errors = response.getError();
                 if (errors) {
-                    if (errors[0] && errors[0].message) {
-                        //console.log("Error message: " + errors[0].message);
+                    if (errors[0] && errors[0].message) {                        
                     }
-                } else {
-                    //console.log("Unknown error");
+                } else {                   
                 }
             }
         });
-        // $A.enqueueAction(action);
         $A.getCallback(function () {
             $A.enqueueAction(action);
         })();
     },
     printBrowser: function (component, event, helper) {
-        // navigator.sayswho = (function () {
-        //     var ua = navigator.userAgent,
-        //         tem,
-        //         M = ua.match(/(opera|chrome|safari|firefox|msie|trident(?=\/))\/?\s*(\d+)/i) || [];
-        //     if (/trident/i.test(M[1])) {
-        //         tem = /\brv[ :]+(\d+)/g.exec(ua) || [];
-        //         return 'IE ' + (tem[1] || '');
-        //     }
-        //     if (M[1] === 'Chrome') {
-        //         tem = ua.match(/\b(OPR|Edge)\/(\d+)/);
-        //         if (tem != null) return tem.slice(1).join(' ').replace('OPR', 'Opera');
-        //     }
-        //     M = M[2] ? [M[1], M[2]] : [navigator.appName, navigator.appVersion, '-?'];
-        //     if ((tem = ua.match(/version\/(\d+)/i)) != null) M.splice(1, 1, tem[1]);
-        //     return M.join(' ');
-        // })();
-
-        // //alert(navigator.sayswho);
-        // component.set("v.browser", navigator.sayswho);
         navigator.sayswho = (function() {
             const userAgent = navigator.userAgent;
             let browser = "unkown";
-            // Detect browser name
             browser = (/ucbrowser/i).test(userAgent) ? 'UCBrowser' : browser;
             browser = (/edg/i).test(userAgent) ? 'Edge' : browser;
             browser = (/googlebot/i).test(userAgent) ? 'GoogleBot' : browser;
@@ -292,82 +218,7 @@
     },
     allowLeaving: function () {
         window.removeEventListener("beforeunload", this.leaveHandler);
-    },
-    //this fucntion is updating some fields like "Total_Time_for_Round_1__c"  in "participantGameInfo" object.
-    participantGameInfoUpdateTotalTimeRoundOne: function (component, event, helper, userContactId, gameId, participantGameInfoId, roundTotalTime, currentScreent) {
-        let data = {};
-
-        if (currentScreent == '73') {
-            data = {
-                Contact_Name__c: userContactId,
-                Game_Name__c: gameId,
-                Id: participantGameInfoId,
-                Total_Time_for_Round_0__c: roundTotalTime
-            };
-        }
-        else if (currentScreent == '210') {
-            data = {
-                Contact_Name__c: userContactId,
-                Game_Name__c: gameId,
-                Id: participantGameInfoId,
-                Total_Time_for_Round_1__c: roundTotalTime
-            };
-        }
-        else if (currentScreent == '306') {
-            data = {
-                Contact_Name__c: userContactId,
-                Game_Name__c: gameId,
-                Id: participantGameInfoId,
-                Total_Time_for_Round_2__c: roundTotalTime
-            };
-        }
-        else if (currentScreent == '402') {
-            data = {
-                Contact_Name__c: userContactId,
-                Game_Name__c: gameId,
-                Id: participantGameInfoId,
-                Total_Time_for_Round_3__c: roundTotalTime
-            };
-        }
-        else if (currentScreent == '498') {
-            data = {
-                Contact_Name__c: userContactId,
-                Game_Name__c: gameId,
-                Id: participantGameInfoId,
-                Total_Time_for_Round_4__c: roundTotalTime
-            };
-        }
-        var action = component.get("c.participantGameInfoUpdate");
-        action.setParams({ "sobj": JSON.stringify(data) });
-        action.setCallback(this, function (a) {
-            var state = a.getState();
-            if (state === "SUCCESS") {
-                var name = a.getReturnValue();
-                component.set("v.participantGameid", name);
-            }
-            else if (state === "ERROR") {
-                let message = '';
-                let errors = response.getError();
-                if (errors && Array.isArray(errors) && errors.length > 0) {
-                    message = errors[0].message;
-                }
-                //console.error(message);
-            }
-            else {
-                //console.log('error');
-            }
-        });
-        try {
-            // $A.enqueueAction(action);
-            $A.getCallback(function () {
-                $A.enqueueAction(action);
-            })();
-        }
-        catch (e) {
-            //console.log(e.message);
-        }
-    },
-
+    }, 
     getDeviceType: function(component, event, helper) {
         const ua = navigator.userAgent;
         if (/(tablet|ipad|playbook|silk)|(android(?!.*mobi))/i.test(ua)) {
@@ -382,5 +233,4 @@
         }
         return "DESKTOP";
       }
-
 })

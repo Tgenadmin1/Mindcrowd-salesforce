@@ -414,6 +414,10 @@
                 <behavior>Edit</behavior>
                 <field>HEAT__c</field>
             </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>GLUCOSAMINE__c</field>
+            </layoutItems>
         </layoutColumns>
         <style>TwoColumnsLeftToRight</style>
     </layoutSections>
@@ -500,6 +504,10 @@
             <layoutItems>
                 <behavior>Edit</behavior>
                 <field>Is_Heat_Survey_Submitted__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Glucosamine_Survey__c</field>
             </layoutItems>
         </layoutColumns>
         <style>TwoColumnsLeftToRight</style>
@@ -694,6 +702,11 @@
     <relatedLists>
         <fields>NAME</fields>
         <relatedList>ECog_12__c.Contact__c</relatedList>
+    </relatedLists>
+    <relatedLists>
+        <fields>NAME</fields>
+        <fields>Email__c</fields>
+        <relatedList>Glucosamine__c.Contact__c</relatedList>
     </relatedLists>
     <relatedObjects>AccountId</relatedObjects>
     <showEmailCheckbox>false</showEmailCheckbox>

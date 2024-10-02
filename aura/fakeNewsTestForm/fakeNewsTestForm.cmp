@@ -2,10 +2,14 @@
     implements="forceCommunity:availableForAllPageTypes,lightning:isUrlAddressable,lightning:hasPageReference,force:appHostable"
     access="global">
     <aura:attribute name="participantGameid" type="String" access="global"/>   
+    <aura:attribute name="userContactId" type="String" access="global"/>   
+    <aura:attribute name="gameId" type="String" access="global"/>  
     <aura:attribute name="currentScreen" type="String" default="screen1" />
+    <aura:attribute name="currentDate" type="Date" />
     <aura:handler name="init" value="{!this}" action="{!c.myAction}" />
     <aura:attribute name="partGameInfo" type="Object" access="global"/>   
     <aura:attribute name="isInputDisabled" type="Boolean" default="true"/>
+    <aura:attribute name="isInputVisible" type="Boolean" default="false" />
     <aura:attribute name="sliderValue" type="Integer" default="1" />
     <aura:attribute name="newsHours" type="Decimal" default="" />
     <aura:attribute name="ballCost" type="Decimal" default="" />
@@ -19,7 +23,7 @@
 <aura:if isTrue="{!v.currentScreen == 'screen1'}">
 
 <lightning:card>
-        <p class="card-title">{!$Label.c.Fake_News_Test_Form_8}<abbr style="color: red;">*</abbr></p>
+        <p class="card-title1">{!$Label.c.Fake_News_Test_Form_8}<abbr style="color: red;">*</abbr></p>
         <fieldset class="slds-form-element">
             <div class="slds-form-element__control">
                 <div style="display: inline-block; padding-left: 10px">
@@ -59,9 +63,11 @@
                     </span>
                 </div>
 
-                <div class="input-container" style="display: inline-block; margin-left: 10px;">
-                    <lightning:input type="text" label="" min="0" placeholder="{!$Label.c.catchment_placeholder}" name="other" disabled="{!v.isInputDisabled}" onchange="{!c.handlePolAffiliationOther}"/>
-                </div>
+                <aura:if isTrue="{!v.isInputVisible}">
+                    <div class="input-container" style="display: inline-block;">
+                    <lightning:input type="text" placeholder="{!$Label.c.catchment_placeholder}" name="other" disabled="{!v.isInputDisabled}" onchange="{!c.handlePolAffiliationOther}"/>
+                    </div>
+                </aura:if>
 
                                 
             </div>
@@ -186,7 +192,16 @@
                 </label>
                 </span>
             </div>
+        <div style="display: inline-block; margin-left: 10px; ">
+                <span class="slds-radio">
+                <input type="radio" id="radio-8" value="I prefer not to answer" name="Survey 10" onchange="{!c.handlePolOrientation}"/>
+                <label class="slds-radio__label" for="radio-8">
+                <span class="slds-radio_faux"></span>
+                <span class="slds-form-element__label radio-label">{!$Label.c.Fake_News_Test_Form_8_A4}</span>
+                </label>
+            </span>
         </div>
+        </div>   
     </fieldset>
     <aura:if isTrue="{!not(empty(v.errors.handlePolOrientation))}">
             <p class="error-message">{!v.errors.handlePolOrientation}</p>

@@ -79,6 +79,66 @@
                 <behavior>Edit</behavior>
                 <field>Fake_News_Time_to_Make_100_Widgets__c</field>
             </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Is_Loud_Noises_Recorded__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Is_Other_Voices_Recorded__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Is_Non_English_Usage__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Is_Recording_Usage_Consent__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Political_Affiliation__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Age_Difference__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Printing_Time_Pages__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Mold_Spread_Days__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Social_Media_Engagement__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>News_Consumption_hrs_wk__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Living_Location__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Political_Orientation__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Federal_Gov_TrustFeelings__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Tell_Me_Recording_File_Link__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Tell_Me_More_Recording_File_Link__c</field>
+            </layoutItems>
         </layoutColumns>
         <layoutColumns>
             <layoutItems>
@@ -458,6 +518,10 @@
         <fields>Question_Number__c</fields>
         <fields>Is_Practice_Question__c</fields>
         <fields>CREATED_DATE</fields>
+        <fields>Is_Correct__c</fields>
+        <fields>Participant_Response__c</fields>
+        <fields>Right_Answer__c</fields>
+        <fields>Reaction_Time_in_ms__c</fields>
         <relatedList>Participant_Game_Response__c.Participant_Game_InfoID__c</relatedList>
     </relatedLists>
     <showEmailCheckbox>false</showEmailCheckbox>

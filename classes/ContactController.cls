@@ -392,12 +392,4 @@ public without sharing class ContactController
     System.debug('customSettingValues: ' + customSettingValues);
     return customSettingValues;
 }
-
-
-    // @AuraEnabled(cacheable=true)
-    // Public static string getCustomSettingValues(){
-    //     List<CurrRunnCamp__c> existingRecords = CurrRunnCamp__c.getall().values();
-    //     system.debug('existingRecords ' + existingRecords);
-    //     return 'true';
-    // } 
 }

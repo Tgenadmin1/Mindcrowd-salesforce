@@ -1,6 +1,6 @@
 ({
     doInit: function(component, event, helper) {
-          
+    component.set('v.peopleLikeYouNoDataLabel',$A.get("$Label.c.PeopleLikeYouNoDataLabel"));
         let action = component.get('c.getDashboardData');
        // alert(component.get("v.gameName"));
         action.setParams({
@@ -56,6 +56,13 @@
                 component.set('v.userDevice', temp.mapOtherData['UserDevice']);
                 //if(isScoreReactionTime)
                 component.set('v.scoreBasedCaption', ' ');
+                if(temp.mapOtherData['People Like You'] == 0){
+                    component.set('v.showpeopleLikeYou', false);
+                    console.log('inside plu check');
+                }
+                else{
+                    component.set('v.showpeopleLikeYou', true);
+                }
  
                     
                 // if(temp.mapOtherData['UserDevice']==1 && component.get('v.isScoreReactionTime')){

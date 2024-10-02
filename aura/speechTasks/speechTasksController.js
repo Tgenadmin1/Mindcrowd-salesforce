@@ -1,8 +1,9 @@
 ({
     myAction: function (component, event, helper) {
         var timeS = new Date().getTime();
-        const url = new URL(window.location.href); 
+        const url = new URL(window.location.href);
         const resourceUrl = $A.get("$Label.c.Community_Url")+ $A.get("$Label.c.speechTask_config_url")+'?test='+timeS;
+       
         window.fetch(resourceUrl)
             .then($A.getCallback((response) => {
                 if (!response.ok) {
@@ -95,6 +96,23 @@
                         return null;
                     }
 
+                    let bgimages = [];
+                    var imgContainer = document.getElementById('imgContainer');
+                    function preloadImage(imgdata) {
+                        for (var i = 0; i < imgdata.length; i++) {
+                            bgimages[i] = new Image();
+                            bgimages[i].src = '../s/sfsites/c/resource/mindGamesImages/speechtask/' + imgdata[i];
+                            imgContainer.appendChild(bgimages[i]);
+                        }
+                    }
+                    //Loading Game related Images.
+                    preloadImage([
+                        "Mic_click.png",
+                        "Mic_error.png",
+                        "Mic_success.png"
+                    ]
+                    );
+
                    function endGame(gameId, participantGameInfoId) {
                         var endDateTime = new Date();
                         var gamePlayStatus = "Completed";
@@ -111,13 +129,13 @@
                         browserName = component.get("v.browser");
                         participantGameInfoId = component.get("v.participantGameid");//participantGameInfoId holds the participantgameinfo record id.
                         timedata = new Date();                       
-                        if (currentScreent-1 == 4 || currentScreent-1 == 7 ) { 
+                        if (currentScreent-1 == 4) { 
                             console.log('otherlanguage: ' + document.querySelector('input[name="otherlanguage"]').checked);
                             component.set('v.otherlanguage',document.querySelector('input[name="otherlanguage"]').checked);
                             component.set('v.othervoices',document.querySelector('input[name="othervoices"]').checked);
                             component.set('v.loudnoices',document.querySelector('input[name="loudnoices"]').checked);
                         }
-                        if (currentScreent-1 == 5 || currentScreent-1 == 8 ) { 
+                        if (currentScreent-1 == 5) { 
                             component.set('v.delete',document.querySelector('input[name="delete"]').checked);
                         }                        
                         document.getElementById("datablock").innerHTML = configdata[currentScreent].content;
@@ -140,17 +158,21 @@
                         if (currentScreent == 0 ) {                            
                             let nextBtton2 = document.getElementById('nextBtton2');
                             const checkbox = document.getElementById('checkbox-unique-id-83');
-                            nextBtton2.classList.add("slds-hide");
+                            //nextBtton2.style.display = "none";
+                            //nextBtton2.classList.add("slds-hide");
+                            nextBtton2.classList.toggle("hidden", true);
                             console.log('inside currentScreent0');
-                            checkbox.addEventListener('click', function() {                                             
-                                if (checkbox.checked) {
+                            checkbox.addEventListener('click', function() { 
+                                nextBtton2.classList.toggle("hidden", !checkbox.checked);
+                                //nextBtton2.style.display = checkbox.checked ? "block" : "none";                                            
+                               /* if (checkbox.checked) {
                                     nextBtton2.classList.remove("slds-hide");
                                 } else {
                                     nextBtton2.classList.add("slds-hide");
-                                }
+                                }*/
                             });   
                         }                     
-                        if(currentScreent == 1 || currentScreent == 3 || currentScreent == 6){
+                        if(currentScreent == 1 || currentScreent == 3){
                             console.log('inside 136');  
                             let startButton= document.getElementById("startButton");
                              if(typeof(startButton) != 'undefined' && startButton != null){                       
@@ -159,7 +181,7 @@
                             } 
                             let nextBtton2 = document.getElementById('nextBtton2');
                             nextBtton2.classList.add("slds-hide");
-                            if(currentScreent == 3 || currentScreent == 6){
+                            if(currentScreent == 3){
                                 let startrecording= document.getElementById("Startrecording");
                                 console.log(startrecording);
                                 if(typeof(startrecording) != 'undefined' && startrecording != null){   
@@ -179,14 +201,9 @@
                             console.log('inside speech task html');   
                         }
                         if (currentScreent == 6 ) {                   
-                            helper.saveAudioToSalesforce(component,component.get("v.participantGameid"), component.get("v.speechTaskRec"),1, 
+                            helper.saveAudioToSalesforce(component,component.get("v.participantGameid"), component.get("v.speechTaskRec"),'Aging Well', 
                             component.get('v.otherlanguage'),component.get('v.othervoices'),component.get('v.loudnoices'),component.get('v.delete'));
                         }
-                        if (currentScreent == 9 ) {
-                            helper.saveAudioToSalesforce(component,component.get("v.participantGameid"), component.get("v.speechTaskRec"),2, 
-                            component.get('v.otherlanguage'),component.get('v.othervoices'),component.get('v.loudnoices'),component.get('v.delete'));
-                        }
-                        // end game function is updating the record of participant gameInfo like endDateTime.
                         if ((configdata.length - 1) == currentScreent) {   
                             endGame(gameId, participantGameInfoId);
                             clearInterval(intervalTime);
@@ -228,7 +245,7 @@
                             if (configdata[currentScreent - 1].hasOwnProperty("command") && command_value >= configdata[currentScreent - 1].command[0] && command_value <= configdata[currentScreent - 1].command[1]) {
                                 clearInterval(intervalTime);
 
-                                if(currentScreent == 5 || currentScreent == 6 || currentScreent == 8 || currentScreent == 9){
+                                if(currentScreent == 5 || currentScreent == 6){
                                     if(validateRadio(currentScreent)){
                                         document.getElementById("errormessage").classList.add("slds-hide");
                                         changeScreen();
@@ -313,14 +330,18 @@
                                                 // Set up an interval to update the volume level periodically
                                                 const intervalId = setInterval(updateVolume, 1000);
                                                 setTimeout(() => {
-                                                    clearInterval(intervalId); // Clear interval after 10 seconds
-                                                  }, 10000) 
+                                                    clearInterval(intervalId); // Clear interval after 5 seconds
+                                                  }, 5000) 
                            
                                                 const canvas = document.createElement('canvas');
                                                 canvas.width = 200;
                                                 canvas.height = 100;
                                 
                                                 const canvasCtx = canvas.getContext('2d');
+                                                const micImage = document.getElementById('micImage');
+                                                if(typeof(micImage) != 'undefined' && micImage != null &&  micImage.src !='../resource/mindGamesImages/speechtask/Mic_click.png'){                       
+                                                    micImage.src = '../resource/mindGamesImages/speechtask/Mic_click.png';  
+                                                }                                                 
                                                 document.getElementById("canvas").appendChild(canvas);
     
                                             function draw() {
@@ -352,7 +373,7 @@
                                                 draw(); // Start the visualization
                                                 // end of new code for recording visualizer
                                             }
-                                            let time = 11000;
+                                            let time = 5000;
                                             if(document.getElementById("timer") != null){
                                                 time = 90000;
                                                 startTimer();
@@ -390,7 +411,7 @@
                                                             component.set("v.speechTaskRec", base64Audio);
                                                         };
                                                         let nextBtton2 = document.getElementById('nextBtton2');
-                                                        nextBtton2.classList.remove("slds-hide");    
+                                                        nextBtton2.classList.remove("slds-hide");                                                          
                                                 }
                                                 else{
                                                         let canvas = document.getElementById('canvas');   
@@ -398,7 +419,7 @@
                                                             canvas.removeChild(canvas.firstChild);
                                                         }
                                                         console.log(volumesuff);
-                                                        if(volumesuff<5){
+                                                        if(volumesuff<3){
                                                             errorRecording("You weren't loud enough, please move closer to your device and speak louder");
                                                         }
                                                         else{
@@ -407,7 +428,7 @@
                                                                 micImage.src = '../resource/mindGamesImages/speechtask/Mic_success.png';  
                                                             } 
                                                             let nextBtton2 = document.getElementById('nextBtton2');
-                                                            nextBtton2.classList.remove("slds-hide");    
+                                                            nextBtton2.classList.remove("slds-hide");                                                               
                                                         }
 
                                                 }
@@ -483,7 +504,7 @@
                             isValid = false;                                      
                         }
 
-                        if(currScreent == 5 || currScreent == 8){
+                        if(currScreent == 5){
                             const radio73 = document.getElementById("radio-73");
                             const radio74 = document.getElementById("radio-74");
                             const radio75 = document.getElementById("radio-75");

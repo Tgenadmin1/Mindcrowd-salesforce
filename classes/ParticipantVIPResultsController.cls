@@ -33,22 +33,37 @@ public without sharing class ParticipantVIPResultsController
         mapPlyAverageValuesData.put ('HighAverage', 0); 
         DashboardData objDashboardData = new DashboardData();
         
-        for(Participant_Game_Info__c objInfo:[SELECT 
-                                              /*Added three fields to remove dependency PGR from PGI*/
-                                              /* Added on 27/07/2022 */
-                                              Count_Of_No_Of_Correct_Answered__c, Count_Of_No_of_Question_Attempted__c,
+        List<Participant_Game_Info__c> pgis = [SELECT Count_Of_No_Of_Correct_Answered__c, Count_Of_No_of_Question_Attempted__c,
                                               Count_Of_Total_Reaction_Time__c, No_Of_Correct_Answered__c,
-                                              No_of_Question_Attempted__c,Total_Reaction_Time__c, User_Device__c,Id
+                                              No_of_Question_Attempted__c,Total_Reaction_Time__c, User_Device__c,Id,CreatedDate
                                               FROM Participant_Game_Info__c 
                                               WHERE Contact_Name__c =: contactId  
                                               AND Game_Name__r.Name =:gameName
-                                              AND Count_Of_No_Of_Correct_Answered__c != null
+                                              AND ((Count_Of_No_Of_Correct_Answered__c != null
                                               AND Count_Of_No_of_Question_Attempted__c != null
                                               AND Count_Of_Total_Reaction_Time__c != null
                                               AND Count_Of_No_Of_Correct_Answered__c >0
                                               AND Count_Of_No_of_Question_Attempted__c >0
-                                              AND Count_Of_Total_Reaction_Time__c >0
-                                              ORDER BY CreatedDate DESC LIMIT 1])
+                                              AND Count_Of_Total_Reaction_Time__c >0) 
+                                              OR (No_Of_Correct_Answered__c != null
+                                              AND No_of_Question_Attempted__c != null
+                                              AND Total_Reaction_Time__c != null
+                                              AND No_Of_Correct_Answered__c >0
+                                              AND No_of_Question_Attempted__c >0
+                                              AND Total_Reaction_Time__c >0))
+                                              AND Game_Play_Status__c = 'Completed'
+                                              ORDER BY CreatedDate DESC LIMIT 1];
+        if(pgis.size()>0){
+            for(Participant_Game_Info__c pgi : pgis){
+                if(pgi.CreatedDate.Date() >= Date.Today()-1){
+                	pgi.Count_Of_No_of_Question_Attempted__c = pgi.No_of_Question_Attempted__c;
+                    pgi.Count_Of_No_Of_Correct_Answered__c = pgi.No_Of_Correct_Answered__c;
+                    pgi.Count_Of_Total_Reaction_Time__c = pgi.Total_Reaction_Time__c;
+            	}  
+            }                      
+        } 
+        
+        for(Participant_Game_Info__c objInfo:pgis)
         {
             userDevice = objInfo.User_Device__c;
             currPGIId= objInfo.Id;
@@ -103,7 +118,7 @@ public without sharing class ParticipantVIPResultsController
                                            AND Game_Name__r.Name =: gameName
                                            AND Id != :currPGIId
                                            Order by CreatedDate DESC
-                                           LIMIT 48990];
+                                           LIMIT 49990];
         List<Decimal> quartileValues = new List<Decimal>();
         if(peopleLikeYouPGIList !=null && peopleLikeYouPGIList.size() >= 25){ 
             if(gameName == 'DLTRS' || gameName == 'Deary Simple And Complex Reaction Time' || gameName == 'Flanker'){
@@ -264,7 +279,7 @@ public without sharing class ParticipantVIPResultsController
                                            			AND Contact__r.Education_Attainment__c != null
                                                     AND  Id !=: bean[0].Id
                                                     Order by CreatedDate DESC
-                                             	    LIMIT 48990];
+                                             	    LIMIT 49990];
             
              List<Decimal> quartileValues = new List<Decimal>();
              Decimal sumReationTime = 0;
