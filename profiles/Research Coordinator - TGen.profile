@@ -799,6 +799,11 @@
     <custom>true</custom>
     <fieldPermissions>
         <editable>false</editable>
+        <field>Contact.DBS_Email_Opt_Out__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
         <field>AB_Testing__c.A_B_Variant__c</field>
         <readable>false</readable>
     </fieldPermissions>
