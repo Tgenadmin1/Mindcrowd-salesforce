@@ -343,15 +343,6 @@
         <label>No data</label>
     </fieldSets>
     <fields>
-        <fullName>DBS_Email_Opt_Out__c</fullName>
-        <defaultValue>false</defaultValue>
-        <externalId>false</externalId>
-        <label>DBS Email Opt Out</label>
-        <trackFeedHistory>false</trackFeedHistory>
-        <trackHistory>false</trackHistory>
-        <type>Checkbox</type>
-    </fields>
-    <fields>
         <fullName>ADL__c</fullName>
         <externalId>false</externalId>
         <label>ADL</label>
@@ -683,6 +674,15 @@
         <trackHistory>false</trackHistory>
     </fields>
     <fields>
+        <fullName>DBS_Email_Opt_Out__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>DBS Email Opt Out</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
         <fullName>DIET__c</fullName>
         <externalId>false</externalId>
         <label>DIET</label>
@@ -864,6 +864,7 @@
         <fullName>Education_Attainment__c</fullName>
         <externalId>false</externalId>
         <formula>IF( OR(ISPICKVAL( Highest_level_of_education_completed__c , &apos;Up to 8 Years&apos;), ISPICKVAL( Highest_level_of_education_completed__c , &apos;Completed 8th Grade (Elementary or Primary School Graduate)&apos;), ISPICKVAL( Highest_level_of_education_completed__c , &apos;Some High School&apos;) ) , 1,
+
  IF(ISPICKVAL( Highest_level_of_education_completed__c , &apos;High School Diploma (Baccalaureate)&apos;), 2,  IF(ISPICKVAL( Highest_level_of_education_completed__c , &apos;Some College (Some University)&apos;), 3,  IF(ISPICKVAL( Highest_level_of_education_completed__c , &apos;College Degree (University Graduate)&apos;), 4,  IF(ISPICKVAL( Highest_level_of_education_completed__c , &apos;Post Graduate Degree (Masters or Doctorate)&apos;), 5, 0) ) ) ) 
  )</formula>
         <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
@@ -1366,6 +1367,11 @@
                     <fullName>Swedish</fullName>
                     <default>false</default>
                     <label>Svenska</label>
+                </value>
+                <value>
+                    <fullName>Tagalog</fullName>
+                    <default>false</default>
+                    <label>Tagalog</label>
                 </value>
                 <value>
                     <fullName>Tamil</fullName>

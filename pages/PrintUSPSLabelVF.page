@@ -47,8 +47,8 @@
   
                 }
                             @page {
-                    size: portrait; /* Force portrait mode */
-                    margin: 10mm; /* Adjust margins to avoid cutting off content */
+                    size: landscape; /* Force portrait mode */
+                    margin: 0mm; /* Adjust margins to avoid cutting off content */
                 }
                 .content {
                     width: 100%;

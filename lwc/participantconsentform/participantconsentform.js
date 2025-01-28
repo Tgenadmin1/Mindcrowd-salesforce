@@ -86,6 +86,7 @@ export default class Participantconsentform extends NavigationMixin(LightningEle
   @track error;
   @track ErrorModalOpen = false;
   @track pCode; 
+  @track isLoading = false;
   controlValues;
   totalDependentValues = [];
   participantcode;
@@ -104,6 +105,8 @@ export default class Participantconsentform extends NavigationMixin(LightningEle
   input_shipmentconsent;
   input_shipmentconsent1;
   phoneNumber;
+  firstName;
+  lastName;
   showText = false;
   error1 = false;
   @api textValue = " Your address information is verified!";
@@ -236,8 +239,12 @@ export default class Participantconsentform extends NavigationMixin(LightningEle
   @api Bean_text_25 = "First Name";
   @api Bean_text_25a = "Enter First Name Here";
   @api Bean_text_firstNameValue;
+  @api firstName_EmptyCheck;
   @api Bean_text_lastNameValue;
+  @api lastName_EmptyCheck;
   @api Bean_text_emailValue;
+  @api Bean_text_userIdValue;
+  @api isEditable = false;
   @api Bean_text_26 = "Last Name";
   @api Bean_text_26a = "Enter Last Name Here";
   @api Bean_text_27 = "Email Address";
@@ -263,6 +270,7 @@ export default class Participantconsentform extends NavigationMixin(LightningEle
   // @track options = [];
   value='';
   isAgreeVisible= true;
+  vipbeangame=false;
 
   connectedCallback(){
     const queryString = window.location.search;
@@ -271,6 +279,10 @@ export default class Participantconsentform extends NavigationMixin(LightningEle
     console.log('ConnectedCall back>>'+participantcode);
     this.pCode=participantcode;
     console.log('ConnectedCall back1>>'+this.pCode);
+    const urlPath = window.location.pathname;
+    if(urlPath.indexOf('beangameparticipant-consent-vip')>-1 || urlPath.indexOf('aceptajuegofrijol-vip')>-1){
+      this.vipbeangame =true;
+    }
 } 
  
   // Contact object info
@@ -310,6 +322,10 @@ export default class Participantconsentform extends NavigationMixin(LightningEle
       this.Bean_text_firstNameValue = data.FirstName;
       this.Bean_text_lastNameValue = data.LastName;
       this.Bean_text_emailValue = data.Email;
+      this.Bean_text_userIdValue=data.User_Id__c;
+      if(this.Bean_text_userIdValue==null){
+        this.isEditable = !this.isEditable;
+      }
     }
    else if(error) {
        window.console.log('error test 2 ===> '+JSON.stringify(error));
@@ -333,6 +349,37 @@ export default class Participantconsentform extends NavigationMixin(LightningEle
     }
     //this.rec.Phone = event.target.value;
     this.phoneNumber = event.target.value;
+  }
+  setFirstName(event) {
+    this.firstName_EmptyCheck = event.target.value;
+    this.Bean_text_firstNameValue = '';
+    if(event.currentTarget.value=='' || event.currentTarget.value == null || this.firstName_EmptyCheck.trim() ===''){
+      console.log('Text Field is empty');
+      event.currentTarget.setCustomValidity("Please select Consents!");
+      event.currentTarget.reportValidity();
+    }else{
+      event.currentTarget.setCustomValidity("");
+      event.currentTarget.reportValidity();
+      this.firstName = this.firstName_EmptyCheck;
+      console.log('FirstName'+this.firstName);
+    }   
+  }
+
+  setLastName(event) {
+    //this.lastName = event.target.value;
+    this.lastName_EmptyCheck = event.target.value;
+    this.Bean_text_lastNameValue = '';
+    console.log('Current target value'+event.currentTarget.value);
+    if(event.currentTarget.value=='' || event.currentTarget.value == null || this.lastName_EmptyCheck.trim() ===''){
+      console.log('LastName Field is empty');
+      event.currentTarget.setCustomValidity("Please select Consents!");
+      event.currentTarget.reportValidity();
+    }else{
+      event.currentTarget.setCustomValidity("");
+      event.currentTarget.reportValidity();
+      this.lastName = this.lastName_EmptyCheck;
+      console.log('LastName '+this.lastName);
+    }    
   }
 
     
@@ -372,7 +419,14 @@ export default class Participantconsentform extends NavigationMixin(LightningEle
 
       // let countyOptions = [{label:'--None--', value:'--None--'}];
       // let countyOptions = [{label:'--us--', value:'--us--'}];
-      let countyOptions = [{ label: "United States", value: "US" }];
+      //let countyOptions = [{ label: "United States", value: "US" }];
+      let countyOptions;
+      if (document.getElementsByTagName("html")[0].getAttribute("lang") == 'es') {
+        countyOptions = [{ label: "Estados Unidos", value: "US" }];
+      }
+      else {
+        countyOptions = [{ label: "United States", value: "US" }];
+      }   
 
       //         // Account Country Control Field Picklist values
       data.picklistFieldValues.MailingCountryCode.values.forEach((key) => {
@@ -809,6 +863,7 @@ export default class Participantconsentform extends NavigationMixin(LightningEle
                 console.log('shipping consent value>>>>',this.input_shipmentconsent);
                 console.log('shipping consent value--5555555555555555555-------------------->',isInputsCorrect);
                 console.log('shipping consent value 1--5555555555555555555---mailingstreet----------------->',this.participantcode,mailingstreet,this.input_shipmentconsent,this.campaign);
+                this.isLoading = true;
                 event.target.disabled = true;
                 console.log('phoneNumber>>>>'+this.phoneNumber);
                 console.log('participantcode:'+ this.participantcode,
@@ -820,7 +875,9 @@ export default class Participantconsentform extends NavigationMixin(LightningEle
                 'mailingzipcode4:'+ this.zip4,
                 'phoneNumber:'+ this.phoneNumber,
                 'shipmentconsent:'+ this.input_shipmentconsent,
-                'campaigntype:'+this.campaign);
+                'campaigntype:'+this.campaign,
+                'FirstName:'+this.firstName,
+                'LastName:'+this.lastName);
                 if(this.selectedState == false){this.selectedState = ' '}
                 updateContactFields({
                   participantcode: this.participantcode,
@@ -832,14 +889,18 @@ export default class Participantconsentform extends NavigationMixin(LightningEle
                   mailingzipcode4: this.zip4,
                   phoneNumber: this.phoneNumber,
                   shipmentconsent: this.input_shipmentconsent,
-                  campaigntype:this.campaign
+                  campaigntype:this.campaign,
+                  vipbeangame: this.vipbeangame,
+                  firstName: this.firstName,
+                  lastName: this.lastName
                 }).then((result) => {
                   
+                    this.isLoading = false;
                     console.log("result is----", result);
                     if (result=='success') {
                       // this.fireSuccessToast();
                       this.accept();
-                    } 
+                    }
                     else if(result=='DuplicateSD'){
                       this.alreadysubmitted();
                     }                    
@@ -850,11 +911,13 @@ export default class Participantconsentform extends NavigationMixin(LightningEle
                   }) //then close
                   .catch((error) => {
                     event.target.disabled = false;
+                    this.isLoading = false;
                     console.log("error: ", error);
-                  }); //CATCH CLOSE
+                });
               } 
               else {
                 console.log("error:------------- ");
+                this.isLoading = false;
                 this.fireErrorToast();
               }
         }
@@ -873,6 +936,10 @@ export default class Participantconsentform extends NavigationMixin(LightningEle
         }
      }
     // shippingconsent.reportValidity();
+  }
+
+  disconnectedCallback() {
+    this.isLoading = false;
   }
   //Function which runs when participant clicks on I agree.
   accept() {

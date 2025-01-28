@@ -33,7 +33,7 @@ public class ContactControllertest
         Test.setMock(HttpCalloutMock.class, new  USPSHttpCalloutMock());
         Test.startTest();        
         
-        ContactController.updateContactFields(con.ParticipantCode__c,'TEST', '6406 IVY LN', 'Greenbelt','MD' , '20770','1234','1234567890','','Covid');
+        ContactController.updateContactFields(con.ParticipantCode__c,'TEST', '6406 IVY LN', 'Greenbelt','MD' , '20770','1234','1234567890','','Covid',false);
             
         Test.stopTest(); 
         }
@@ -64,7 +64,7 @@ public class ContactControllertest
         Test.setMock(HttpCalloutMock.class, new  USPSHttpCalloutMock());
         Test.startTest();        
         
-        ContactController.updateContactFields(con.ParticipantCode__c,'Error', '6406 IVY LN1', 'Greenbelt','MD' , '20770','1234','1234567890','','Covid');
+        ContactController.updateContactFields(con.ParticipantCode__c,'Error', '6406 IVY LN1', 'Greenbelt','MD' , '20770','1234','1234567890','','Covid',false);
         Test.stopTest(); 
         }
         catch(Exception e) 
@@ -245,7 +245,7 @@ public class ContactControllertest
         Test.setMock(HttpCalloutMock.class, new  USPSHttpCalloutMock());
         Test.startTest();        
         
-        ContactController.updateContactFields(con.ParticipantCode__c,'NULL', '6406 IVY LN1', 'Greenbelt','MD' , '20770','1234','1234567890','','Covid');
+        ContactController.updateContactFields(con.ParticipantCode__c,'NULL', '6406 IVY LN1', 'Greenbelt','MD' , '20770','1234','1234567890','','Covid',false);
         Test.stopTest(); 
         }
         catch(Exception e) 

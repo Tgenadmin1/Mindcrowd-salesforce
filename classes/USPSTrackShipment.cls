@@ -37,7 +37,7 @@ public class USPSTrackShipment {
             return null;
         }
     }
-    public static void trackingDetails() {
+    public static USPSTrackResponse trackingDetails(String trackId) {
     USPSTrackResponse response = USPSTrackShipment.getTrackingDetails('https://api-cat.usps.com/tracking/v3/tracking/{420890749200190306026099990572}');
         System.debug('Response url...:'+response);
     if(response != null){
@@ -48,6 +48,7 @@ public class USPSTrackShipment {
     System.debug('eventSummaries ' + response.eventSummaries);
 
     }
+        return response;
     }
 
 }

@@ -207,6 +207,7 @@
             //console.log(e.message);
         }
     },
+    
     getIpAddress: function (component, event, helper) {
         var action = component.get('c.getIpCustomLoginUser');
         action.setCallback(this, function (response) {
@@ -234,6 +235,57 @@
             $A.enqueueAction(action);
         })();
     },
+
+    //this fucntion is updating some fields like "Total_Time_for_Round_1__c"  in "participantGameInfo" object.
+    participantGameInfoUpdateTotalTimeRoundOne: function (component, event, helper, userContactId, gameId, participantGameInfoId, totalTimeForRound, totalKeyStrokesInRound, currentScreent) {
+        let data = {};
+
+        if (currentScreent == '8') {
+            data = {
+                Contact_Name__c: userContactId,
+                Game_Name__c: gameId,
+                Id: participantGameInfoId,
+                Total_Time_for_Round_0__c: totalTimeForRound,
+                Total_KeyStrokes_In_Round_0__c: totalKeyStrokesInRound
+            };
+        }
+        else if (currentScreent == '191') {
+            data = {
+                Contact_Name__c: userContactId,
+                Game_Name__c: gameId,
+                Id: participantGameInfoId,
+                Total_Time_for_Round_1__c: totalTimeForRound,
+                Total_KeyStrokes_In_Round_1__c: totalKeyStrokesInRound
+            };
+        }
+        var action = component.get("c.participantGameInfoUpdate");
+        action.setParams({ "sobj": JSON.stringify(data) });
+        action.setCallback(this, function (a) {
+            var state = a.getState();
+            if (state === "SUCCESS") {
+                var name = a.getReturnValue();
+                component.set("v.participantGameid", name);
+            }
+            else if (state === "ERROR") {
+                let message = '';
+                let errors = response.getError();
+                if (errors && Array.isArray(errors) && errors.length > 0) {
+                    message = errors[0].message;
+                }
+                //console.error(message);
+            }
+            else {
+                //console.log('error');
+            }
+        });
+        try {
+            $A.enqueueAction(action);
+        }
+        catch (e) {
+            //console.log(e.message);
+        }
+    },
+
     printBrowser: function (component, event, helper) {
         navigator.sayswho = (function() {
             const userAgent = navigator.userAgent;

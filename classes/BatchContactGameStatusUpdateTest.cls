@@ -5,7 +5,7 @@
 @class        	   : BatchContactGameStatusUpdate
 *  
 */
-
+ 
 @isTest
 public class BatchContactGameStatusUpdateTest {
     @testSetup
@@ -16,11 +16,11 @@ public class BatchContactGameStatusUpdateTest {
     List<Participant_Game_Response__c> participantGameResponses = new List<Participant_Game_Response__c>();
 
     Datetime oneYearAgo = Datetime.now().addDays(-365);
+    Datetime nineMonthsAgo = Datetime.now().addDays(-274);
     Datetime sixMonthsAgo = Datetime.now().addDays(-183);
     Datetime threeMonthsAgo = Datetime.now().addDays(-91);
 
-    // Create contacts
-    for(Integer i = 0; i < 13; i++) {
+    for(Integer i = 0; i < 15; i++) {
         Contact c = new Contact();
         c.LastName = 'test contact' + i;
         c.Email = 'Test' + i + '@test.com'; 
@@ -41,12 +41,16 @@ public class BatchContactGameStatusUpdateTest {
         c.Fake_News__c = 'Completed';
         c.Digits__c = 'Completed';
         c.This_That__c= 'Completed';
+        c.Tell_Me__c = 'Completed';
+        c.Tell_Me_More__c = 'Completed';
         contacts.add(c);
     }
     insert contacts;
 
-    // Create game details
-    List<String> gameNames = new List<String>{'Flanker', 'Letter-Number Sequencing', 'Keep Track', 'Deary Simple And Complex Reaction Time','Object Discrimination', 'Object Temporal', 'Face-Name Associates', 'Object Spatial', 'Digits','Verbal Paired Associates', 'Object Recognition And Similarity', 'Fake News', 'Camel & Cactus'};
+    List<String> gameNames = new List<String>{'Flanker', 'Letter-Number Sequencing', 'Keep Track', 'Deary Simple And Complex Reaction Time',
+        									 	'Object Discrimination', 'Object Temporal', 'Face-Name Associates', 'Object Spatial', 'Digits', 
+        										'This & That', 'Verbal Paired Associates', 'Object Recognition And Similarity', 'Fake News', 
+        										'Tell Me', 'Tell Me More' };
     for(String name : gameNames) {
         Game_Detail__c gd = new Game_Detail__c();
         gd.Name = name;
@@ -54,8 +58,7 @@ public class BatchContactGameStatusUpdateTest {
     }
     insert gameDetails;
 
-    // Create participant game infos
-    for(Integer i = 0; i < 13; i++) {
+    for(Integer i = 0; i < 15; i++) {
         Participant_Game_Info__c pgi = new Participant_Game_Info__c();
         pgi.Contact_Name__c = contacts[i].Id;
         pgi.Game_Name__c = gameDetails[i].Id;
@@ -64,6 +67,8 @@ public class BatchContactGameStatusUpdateTest {
             pgi.CreatedDate = threeMonthsAgo;
         } else if (i >= 4 && i < 9) {
             pgi.CreatedDate = sixMonthsAgo;
+        } else if (i == 9) {
+            pgi.CreatedDate = nineMonthsAgo;            
         } else {
             pgi.CreatedDate = oneYearAgo;
         }
@@ -72,7 +77,6 @@ public class BatchContactGameStatusUpdateTest {
     }
     insert participantGameInfos;
 
-    // Create participant game responses
     for(Integer i = 0; i < 13; i++) {
         Participant_Game_Response__c pgr = new Participant_Game_Response__c();
         pgr.Contact_Name__c = contacts[i].Id; 
@@ -88,7 +92,6 @@ public class BatchContactGameStatusUpdateTest {
     }
     insert participantGameResponses;
 
-    // Debugging
     for(Integer i = 0; i < 3; i++) {
         system.debug('Contact ' + i + ': ' + contacts[i]);
         system.debug('PGI ' + i + ': ' + participantGameInfos[i]);
@@ -122,9 +125,9 @@ public class BatchContactGameStatusUpdateTest {
  
         
         List<Contact> updatedContacts = [SELECT Id, Flanker__c, Letter_Number_Sequencing__c, Keep_Track__c, Deary_Simple_And_Complex_Reaction_Time__c,
-                                        Object_Discrimination__c, Object_Temporal__c, Face_Name_Associates__c, Object_Spatial__c,
-                                        Verbal_Paired_Associates__c, Object_Recognition_And_Similarity__c,Fake_News__c, Digits__c,This_That__c FROM Contact];
-        System.assertEquals(13, updatedContacts.size());
+                                        Object_Discrimination__c, Object_Temporal__c, Face_Name_Associates__c, Object_Spatial__c, Digits__c,This_That__c,
+                                        Verbal_Paired_Associates__c, Object_Recognition_And_Similarity__c, Fake_News__c, Tell_Me__c, Tell_Me_More__c FROM Contact];
+        System.assertEquals(15, updatedContacts.size());
     
         Test.stopTest();
 }

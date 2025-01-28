@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>HEAT_2.0</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>HEATs_2.0</value>
+    </caseValues>
+    <fields>
+        <label><!-- HS_v2.0.24 --></label>
+        <name>Awareness_public_health_Impact__c</name>
+    </fields>
+    <fields>
+        <label><!-- HS_v2.0.22 --></label>
+        <name>Brain_Impact_exposed_summer_heat__c</name>
+    </fields>
+    <fields>
+        <label><!-- HS_v2.0.25 --></label>
+        <name>Brain_health_Impact__c</name>
+    </fields>
+    <fields>
+        <label><!-- Contact --></label>
+        <name>Contact__c</name>
+        <relationshipLabel><!-- HEATs_2.0 --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- HS_v2.0.17 --></label>
+        <name>During_summer_heat_related_issues__c</name>
+    </fields>
+    <fields>
+        <label><!-- HS_v2.0.6 --></label>
+        <name>During_summer_physical_activity__c</name>
+    </fields>
+    <fields>
+        <label><!-- HS_v2.0.5 --></label>
+        <name>During_summer_reason_outside_for_exercis__c</name>
+    </fields>
+    <fields>
+        <label><!-- HS_v2.0.4 --></label>
+        <name>During_summer_reason_outside_for_leisure__c</name>
+    </fields>
+    <fields>
+        <label><!-- HS_v2.0.3 --></label>
+        <name>During_summer_reason_outside_for_work__c</name>
+    </fields>
+    <fields>
+        <label><!-- HS_v2.0.2 --></label>
+        <name>During_summer_time_spend_out_each_day__c</name>
+    </fields>
+    <fields>
+        <label><!-- Email --></label>
+        <name>Email__c</name>
+    </fields>
+    <fields>
+        <label><!-- HS_v2.0.19 --></label>
+        <name>Feeling_overheated_symptoms__c</name>
+    </fields>
+    <fields>
+        <label><!-- HS_v2.0.16 --></label>
+        <name>Heat_Related_Emergency__c</name>
+    </fields>
+    <fields>
+        <label><!-- HS_v2.0.28 --></label>
+        <name>Heat_stress_Increase_coming_decade__c</name>
+    </fields>
+    <fields>
+        <label><!-- HS_v2.0.8 --></label>
+        <name>Heat_stress_medical_condition__c</name>
+    </fields>
+    <fields>
+        <label><!-- HS_v2.0.12 --></label>
+        <name>Heat_stress_personal_affect__c</name>
+    </fields>
+    <fields>
+        <label><!-- HS_v2.0.10 --></label>
+        <name>Heat_stress_training__c</name>
+    </fields>
+    <fields>
+        <label><!-- HS_v2.0.18 --></label>
+        <name>High_heat_risk_factors__c</name>
+    </fields>
+    <fields>
+        <label><!-- HS_v2.0.11 --></label>
+        <name>How_serious_health_concern__c</name>
+    </fields>
+    <fields>
+        <label><!-- HS_v2.0.21 --></label>
+        <name>Important_factors_to_consider__c</name>
+    </fields>
+    <fields>
+        <label><!-- HS_v2.0.27 --></label>
+        <name>Learn_more_about_heat_stress__c</name>
+    </fields>
+    <fields>
+        <label><!-- HS_v2.0.20 --></label>
+        <name>Measures_to_prevent_heat_stress__c</name>
+    </fields>
+    <fields>
+        <label><!-- HS_v2.0.7 --></label>
+        <name>Outside_job_2_hours__c</name>
+    </fields>
+    <fields>
+        <label><!-- HS_v2.0.9 --></label>
+        <name>Public_health_guidelines__c</name>
+    </fields>
+    <fields>
+        <label><!-- HS_v2.0.15 --></label>
+        <name>Symptoms_associated__c</name>
+    </fields>
+    <fields>
+        <label><!-- HS_v2.0.26 --></label>
+        <name>Taking_preventative_steps__c</name>
+    </fields>
+    <fields>
+        <label><!-- HS_v2.0.23 --></label>
+        <name>Vulnerable_populations_effect__c</name>
+    </fields>
+    <fields>
+        <label><!-- HS_v2.0.1 --></label>
+        <name>What_zipcode_live_during_majority_summer__c</name>
+    </fields>
+    <fields>
+        <label><!-- HS_v2.0.14 --></label>
+        <name>Work_outside_breaks_permitted__c</name>
+    </fields>
+    <fields>
+        <label><!-- HS_v2.0.13 --></label>
+        <name>Work_outside_employee_volunteer__c</name>
+    </fields>
+    <layouts>
+        <layout>Heat_2.0 Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

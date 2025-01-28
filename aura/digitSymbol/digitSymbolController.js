@@ -57,8 +57,13 @@
                     }                  
                     let resultData = {};
                     let intervalTime = null;
+                    let inputValue = "";
                     let round = 0;
                     let timedata = new Date();
+                    let roundTotalTime = null;
+                    let totalKeyCount = [];
+                    let roundStartTime = null;
+                    let totalKeyStrokesInRound = 0;
                     let result_time = 0;
                     let command_value = 0;
                     let lastdatatitle = "";
@@ -159,6 +164,23 @@
                         if (typeof (userinputbtn) != 'undefined' && userinputbtn != null) {
                             userinputbtn.forEach(item => { item.addEventListener('click', userInputResponse, false); });
                         }
+
+                        if (currentScreent == '0' || currentScreent == '9') {
+                            roundStartTime = timedata;
+                            totalKeyStrokesInRound = 0;
+                        }
+
+                        if (currentScreent == '8' || currentScreent == '191') {
+                            roundTotalTime = timedata - roundStartTime;
+                            if (currentScreent == '8') {
+                                let totalTimeForRoundZero = roundTotalTime;
+                                helper.participantGameInfoUpdateTotalTimeRoundOne(component, event, helper, userContactId, gameId, participantGameInfoId, totalTimeForRoundZero, totalKeyStrokesInRound, currentScreent);
+                            }
+                            else if (currentScreent == '191') {
+                                let totalTimeForRoundOne = roundTotalTime;
+                                helper.participantGameInfoUpdateTotalTimeRoundOne(component, event, helper, userContactId, gameId, participantGameInfoId, totalTimeForRoundOne, totalKeyStrokesInRound, currentScreent);
+                            }
+                        }
                         if (currentScreent == 1) {
                             var startDateTime = new Date();
                             var gamePlayStatus = "Not-Completed";
@@ -246,6 +268,9 @@
                     changeScreen();
                     function gamePlay(e) {                        
                         command_value = e.keyCode;
+                        inputValue = e.key;
+                        totalKeyCount.push(inputValue);
+                        totalKeyStrokesInRound = totalKeyCount.length;
                         let startDurations = configdata[currentScreent - 1].startDuration;
                         if (startDurations == -1) {
                             if (configdata[currentScreent - 1].hasOwnProperty("command") && command_value >= configdata[currentScreent - 1].command[0] && command_value <= configdata[currentScreent - 1].command[1]) {

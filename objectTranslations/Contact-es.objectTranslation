@@ -153,6 +153,10 @@
         <name>Consent_Signed_On__c</name>
     </fields>
     <fields>
+        <label><!-- DBS Email Opt Out --></label>
+        <name>DBS_Email_Opt_Out__c</name>
+    </fields>
+    <fields>
         <label><!-- DIET --></label>
         <name>DIET__c</name>
         <picklistValues>
@@ -477,6 +481,10 @@
         <picklistValues>
             <masterLabel>Svenska</masterLabel>
             <translation><!-- Svenska --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Tagalog</masterLabel>
+            <translation><!-- Tagalog --></translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Tiếng Việt</masterLabel>

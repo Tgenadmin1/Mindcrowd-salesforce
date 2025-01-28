@@ -1,1 +1,1 @@
-Barcode__c,APOE_Genotype__c
+Barcode__c,APOE_Genotype__c,Apoe_Clia__c,Apoe_Taqman__c,Apoe_Imputed__c

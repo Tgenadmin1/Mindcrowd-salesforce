@@ -80,12 +80,12 @@
 
           <!-- <div class="slds-grid slds-gutters"> -->
             <div class="slds-col slds-size_12-of-12">
-              <lightning-input type="text" read-only="true" name="firstName" label={Bean_text_25} placeholder={Bean_text_firstNameValue} ></lightning-input>
+              <lightning-input type="text" read-only={isEditable} name="firstName" label={Bean_text_25} placeholder={Bean_text_firstNameValue} onchange={setFirstName}></lightning-input>  
             </div>
           <!-- </div> -->
           
             <div class="slds-col slds-size_12-of-12">
-              <lightning-input type="text" read-only="true" name="lastName" label={Bean_text_26} placeholder={Bean_text_lastNameValue}></lightning-input>
+              <lightning-input type="text" read-only={isEditable} name="lastName" label={Bean_text_26} placeholder={Bean_text_lastNameValue} onchange={setLastName}></lightning-input>
             </div>
           
 
@@ -182,6 +182,9 @@
         </lightning-button>
       </template>
       
+      <template if:true={isLoading}>
+        <lightning-spinner alternative-text="Loading..." size="large" variant="brand" class="slds-m-right_medium"></lightning-spinner>
+      </template>
       
       <lightning-button variant="brand" label={DBS_text_93} title={DBS_text_93} onclick={decline}
         class="magenta-btn slds-float_left slds-m-left_small m-paddingLR20">

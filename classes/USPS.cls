@@ -20,7 +20,13 @@ public with sharing class USPS
     }
     public static String userid=integrationsettings.UserId__c;
     public static String uspsurl=integrationsettings.USPS_URL__c;
-    private static string BuildAddressQueryURLString(USPSAddress AddressToQuery,String USPS_UID) 
+    public static String grantType= ShipmentLabel.integrationsettings.grant_type__c;
+    public static String clientId= ShipmentLabel.integrationsettings.client_id__c;
+    public static String clientSecret= ShipmentLabel.integrationsettings.client_secret__c;
+    public static String endPointAccessToken= ShipmentLabel.integrationsettings.AccessToken_url__c;
+    public static String addressURL= ShipmentLabel.integrationsettings.addressUrl__c;
+    public static String addressZipcodeURL= ShipmentLabel.integrationsettings.AddressZipCodeURL__c;
+    /*private static string BuildAddressQueryURLString(USPSAddress AddressToQuery,String USPS_UID) 
     {   
         //String BaseURL = 'https://secure.shippingapis.com/ShippingAPI.dll?API=Verify&XML=';
         String BaseURL = uspsurl+'?API=Verify&XML=';
@@ -208,7 +214,7 @@ public with sharing class USPS
         return ReturnAddress;		
         
         
-    } 
+    }*/ 
     // @AuraEnabled
     
     // public static USPSAddress CheckAddress(USPSAddress Address2Check,String USERID) {
@@ -273,33 +279,139 @@ public with sharing class USPS
         Address2Check.State=State;
         Address2Check.Zip5=Zip5;
         Address2Check.Zip4 = Zip4;
+        System.debug('value of State is '+State);
         
+        // Fetch access token
+        String accessToken = USPSLabelAccessToken.requestAccessToken(grantType, clientId, clientSecret, endPointAccessToken);
+        System.debug('AccessToken: ' + accessToken);
         
-        string USPSURL = BuildAddressQueryURLString(Address2Check, USERID);
-        System.debug('uspsurl-------'+USPSURL);
-        
+        if((State == null || State =='' || State == 'false') && Zip5 !=null && Zip5 !=''){
+            USPSAddress ResponseGetStateAPI = new USPSAddress();
+            HttpResponse httpzipcoderesp;
+            try{ 
+            	httpzipcoderesp = USPSGetStateAPI(Address2Check,accessToken);
+            }
+            catch(Exception e){    
+            }
+            if (httpzipcoderesp != null && httpzipcoderesp.getStatusCode() == 200) {
+                Map<String, Object> responseMAp = (Map<String, Object>)JSON.deserializeUntyped(httpzipcoderesp.getBody());
+                Address2Check.City = (String)responseMAp.get('city');
+                Address2Check.State = (String)responseMAp.get('state');
+                System.debug('responseMAp: ' + responseMAp);
+                System.debug('Address2Check: ' + Address2Check);
+            }
+        }
+        /*if(Address2Check.Address2 ==null || Address2Check.Address2 ==''){
+            ResponseAddress.USPS_Returned_Error = true;
+            ResponseAddress.USPS_ERROR_DESC = 'Address Not Found.';
+            ResponseAddress.USPS_ERROR_SOURCE = 'User';
+            ResponseAddress.USPS_ERROR_CODE = '-1';
+        }
+        else*/ if((Address2Check.State ==null || Address2Check.State =='')){
+            ResponseAddress.USPS_Returned_Error = true;
+            ResponseAddress.USPS_ERROR_DESC = 'Invalid State Code.';
+            ResponseAddress.USPS_ERROR_SOURCE = 'User';
+            ResponseAddress.USPS_ERROR_CODE = '-1';
+        }
+        else{
+        /*string USPSURL = BuildAddressQueryURLString(Address2Check, USERID);
+        System.debug('uspsurl-------'+USPSURL);*/
+        HttpResponse httpaddressAPIresp;
+        try{ 
+            httpaddressAPIresp = USPSGetAddressAPI(Address2Check,accessToken);
+        }
+        catch(Exception e){
+            ResponseAddress.USPS_Returned_Error = true;
+            ResponseAddress.USPS_ERROR_DESC = 'Address Not Found.';
+            ResponseAddress.USPS_ERROR_SOURCE = 'Unknown';
+            ResponseAddress.USPS_ERROR_CODE = '-1';
+        }
+       
+        //System.debug('uspsurl-------'+USPSURL);
+        if (httpaddressAPIresp != null && httpaddressAPIresp.getStatusCode() == 200) {
+           System.debug('uspsAddResp: ' + httpaddressAPIresp.getBody());
+           USPSAPIAddressResp uspsAddResp = (USPSAPIAddressResp)JSON.deserialize(httpaddressAPIresp.getBody(), USPSAPIAddressResp.class);
+           System.debug('USPSAPIAddressResp:' +uspsAddResp);
+           ResponseAddress.Address1 = uspsAddResp.Address.streetAddress;
+           ResponseAddress.City = uspsAddResp.Address.city;
+           ResponseAddress.State = uspsAddResp.Address.state;
+           ResponseAddress.Zip5 = uspsAddResp.Address.ZIPCode;
+           ResponseAddress.Zip4 = uspsAddResp.Address.ZIPPlus4;
+       }
+      else{
+           System.debug('uspsAddErrResp: ' + httpaddressAPIresp.getBody());
+           Map<String, Object> uspsAddErrRespm =  (Map<String, Object>) JSON.deserializeUntyped(httpaddressAPIresp.getBody());
+           Map<String, Object> error =  (Map<String, Object>)uspsAddErrRespm.get('error');
+           ResponseAddress.USPS_Returned_Error = true;
+           ResponseAddress.USPS_ERROR_DESC =  'Address Not Found.';
+           ResponseAddress.USPS_ERROR_SOURCE = 'API';
+           ResponseAddress.USPS_ERROR_CODE = (String)error.get('code');
+        }
         // call the API and pullback the XML as a string
-        string XMLResponse = GetStandardizedAddressFromUSPS(USPSURL);
+        //string XMLResponse = GetStandardizedAddressFromUSPS(USPSURL);
         
         // send the XML reponse to the parser
-        ResponseAddress = ParseUSPSResponseXML(XMLResponse);
+        //ResponseAddress = ParseUSPSResponseXML(XMLResponse);
         // system.debug('-=-=-=-=-=-=- Results -=-=-=-=-=-=-');
         // system.debug('Address1: ' + ResponseAddress.Address1);
         // system.debug('Address2: ' + ResponseAddress.Address2);
         
         
-        if (ResponseAddress.USPS_Returned_Error == true) 
+        /*if (ResponseAddress.USPS_Returned_Error == true) 
         {
             system.debug('USPS_ERROR_CODE: ' + ResponseAddress.USPS_ERROR_CODE);
             system.debug('USPS_ERROR_DESC: ' + ResponseAddress.USPS_ERROR_DESC);
             system.debug('USPS_ERROR_SOURCE: ' + ResponseAddress.USPS_ERROR_SOURCE);
-        } 
+        }*/ 
         // system.debug('-=-=-=-=-=-=- Searched -=-=-=-=-=-=-');
         // system.debug('Address1: ' + Address2Check.Address1);
         
         
-        return ResponseAddress;
         
+        }
+		return ResponseAddress;
     } 
+    
+    private static HttpResponse USPSGetAddressAPI(USPSAddress AddressToQuery,String accessToken) 
+    {   
+        String streetAddress;
+        if(AddressToQuery.Address1 ==null ||AddressToQuery.Address1 =='null' || AddressToQuery.Address1 =='' ){
+            streetAddress =AddressToQuery.Address2;
+        }
+        else{
+            streetAddress =AddressToQuery.Address1;
+        }
+        addressURL=addressURL+'?streetAddress='+EncodingUtil.urlEncode(streetAddress, 'UTF-8')+'&state='+EncodingUtil.urlEncode(AddressToQuery.State, 'UTF-8');
+        if(AddressToQuery.City !=null && AddressToQuery.City !=''){
+            addressURL = addressURL+'&city='+EncodingUtil.urlEncode(AddressToQuery.City, 'UTF-8');
+        }
+        if(AddressToQuery.Zip5 !=null && AddressToQuery.Zip5 !=''){
+            addressURL = addressURL+'&ZIPCode='+EncodingUtil.urlEncode(AddressToQuery.Zip5, 'UTF-8');
+        }
+        if(AddressToQuery.Zip4 !=null && AddressToQuery.Zip4 !=''){
+            addressURL = addressURL+'&ZIPPlus4='+EncodingUtil.urlEncode(AddressToQuery.Zip4, 'UTF-8');
+        }
+        
+     	HttpRequest USPSRequest = new HttpRequest();
+        Http USPSHttp = new Http();
+        USPSRequest.setMethod('GET');
+        USPSRequest.setEndpoint(addressURL);
+        USPSRequest.setHeader('Accept','application/json');
+        USPSRequest.setHeader('Authorization','Bearer ' + accessToken);
+        HttpResponse USPSResponse = USPSHttp.send(USPSRequest);
+        return USPSResponse;
+    } 
+    
+    private static HttpResponse USPSGetStateAPI(USPSAddress AddressToQuery,String accessToken){ 
+        addressZipcodeURL=addressZipcodeURL+EncodingUtil.urlEncode(AddressToQuery.Zip5, 'UTF-8');
+		HttpRequest USPSRequest = new HttpRequest();
+        Http USPSHttp = new Http();
+        USPSRequest.setMethod('GET');
+        USPSRequest.setEndpoint(addressZipcodeURL);
+        USPSRequest.setHeader('Accept','application/json');
+        USPSRequest.setHeader('Authorization','Bearer ' + accessToken);
+        HttpResponse USPSResponse = USPSHttp.send(USPSRequest);
+        return USPSResponse;
+    }
     
 }

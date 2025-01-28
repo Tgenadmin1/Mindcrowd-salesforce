@@ -180,6 +180,39 @@
         <type>Address</type>
     </fields>
     <fields>
+        <fullName>Apoe_Clia__c</fullName>
+        <externalId>false</externalId>
+        <label>Apoe Clia</label>
+        <length>100</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Apoe_Imputed__c</fullName>
+        <externalId>false</externalId>
+        <label>Apoe Imputed</label>
+        <length>100</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Apoe_Taqman__c</fullName>
+        <externalId>false</externalId>
+        <label>Apoe Taqman</label>
+        <length>100</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
         <fullName>Barcode__c</fullName>
         <externalId>false</externalId>
         <formula>IF(DATEVALUE(CreatedDate) &lt; DATEVALUE( &quot;2022-09-01&quot; ), &apos;SM&apos;+ MID( Id ,10,2)+ &apos;BA&apos;+RIGHT(Id,4)+&apos;CD&apos;,   Name )</formula>

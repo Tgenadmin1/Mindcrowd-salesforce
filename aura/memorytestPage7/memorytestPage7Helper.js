@@ -44,14 +44,15 @@
         window.removeEventListener("beforeunload", this.leaveHandler);
     },
     //this fucntion is updating some fields like "Total_Time_for_Round_1__c"  in "participantGameInfo" object.
-    participantGameInfoUpdateTotalTimeRoundOne: function (component, event, helper, contactId, gameId, participantGameInfoId, totalTimeForRoundZero, currentScreent) {
+    participantGameInfoUpdateTotalTimeRoundOne: function (component, event, helper, contactId, gameId, participantGameInfoId, totalTimeForRoundZero, totalKeyStrokesInRound, currentScreent) {
         let data = {};
         if (currentScreent == '69') {
             data = {
                 Contact_Name__c: contactId,
                 Game_Name__c: gameId,
                 Id: participantGameInfoId,
-                Total_Time_for_Round_1__c: totalTimeForRoundZero
+                Total_Time_for_Round_1__c: totalTimeForRoundZero,
+                Total_KeyStrokes_In_Round_1__c: totalKeyStrokesInRound
             };
         }
         var action = component.get("c.participantGameInfoUpdate");

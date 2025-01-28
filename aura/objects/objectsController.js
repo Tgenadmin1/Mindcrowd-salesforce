@@ -552,6 +552,7 @@
                                     let intervalTime = null;
                                     let roundTotalTime = null;
                                     let roundStartTime = null;
+                                    let totalKeyStrokesInRound = 0;
                                     let blockevents = 0;
                                     let timedata = new Date();
                                     let result_time = 0;
@@ -654,17 +655,18 @@
                                         //alert("screen size: "+ screenHeight+ " "+ screenWidth);
                                         if (configdata[currentScreent].screen == '1' || configdata[currentScreent].screen == '43') {
                                             roundStartTime = timedata;
+                                            totalKeyStrokesInRound = 0;
                                         }
                                         if (configdata[currentScreent].screen == '42' || configdata[currentScreent].screen == '243') {
                                             roundTotalTime = timedata - roundStartTime;
                                             //console.log('round total time: ', roundTotalTime);
                                             if (configdata[currentScreent].screen == '42') {
                                                 let totalTimeForRoundZero = roundTotalTime;
-                                                helper.participantGameInfoUpdateTotalTimeRoundOne(component, event, helper, userContactId, gameId, participantGameInfoId, totalTimeForRoundZero, configdata[currentScreent].screen);
+                                                helper.participantGameInfoUpdateTotalTimeRoundOne(component, event, helper, userContactId, gameId, participantGameInfoId, totalTimeForRoundZero,totalKeyStrokesInRound, configdata[currentScreent].screen);
                                             }
                                             else if (configdata[currentScreent].screen == '243') {
                                                 let totalTimeForRoundOne = roundTotalTime;
-                                                helper.participantGameInfoUpdateTotalTimeRoundOne(component, event, helper, userContactId, gameId, participantGameInfoId, totalTimeForRoundOne, configdata[currentScreent].screen);
+                                                helper.participantGameInfoUpdateTotalTimeRoundOne(component, event, helper, userContactId, gameId, participantGameInfoId, totalTimeForRoundOne,totalKeyStrokesInRound, configdata[currentScreent].screen);
                                             }
                                         }
                                         document.getElementById("datablock_object").innerHTML = configdata[currentScreent].content;
@@ -811,6 +813,7 @@
 
                                         command_value = e.keyCode;
                                         inputdata = e.key;
+                                        totalKeyStrokesInRound = totalKeyStrokesInRound + 1;
                                         let startDurations = configdata[currentScreent - 1].startDuration;
                                         //Press spacific key command
                                         if (startDurations == -1) {

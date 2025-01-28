@@ -3,5 +3,5 @@
     <description>Request Acess Token from USPS Label</description>
     <disableProtocolSecurity>false</disableProtocolSecurity>
     <isActive>true</isActive>
-    <url>https://api-cat.usps.com</url>
+    <url>https://api.usps.com</url>
 </RemoteSiteSetting>

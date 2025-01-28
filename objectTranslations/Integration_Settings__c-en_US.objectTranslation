@@ -21,6 +21,10 @@
         <name>Account_Type__c</name>
     </fields>
     <fields>
+        <label><!-- AddressZipCodeURL --></label>
+        <name>AddressZipCodeURL__c</name>
+    </fields>
+    <fields>
         <label><!-- CRID --></label>
         <name>CRID__c</name>
     </fields>
@@ -101,6 +105,10 @@
         <name>Source_Id__c</name>
     </fields>
     <fields>
+        <label><!-- TrackingURL --></label>
+        <name>TrackingURL__c</name>
+    </fields>
+    <fields>
         <label><!-- USPS Label API URL --></label>
         <name>USPS_Label_API_URL__c</name>
     </fields>
@@ -115,6 +123,10 @@
     <fields>
         <label><!-- Weight --></label>
         <name>Weight__c</name>
+    </fields>
+    <fields>
+        <label><!-- addressUrl --></label>
+        <name>addressUrl__c</name>
     </fields>
     <fields>
         <label><!-- client_id --></label>

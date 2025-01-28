@@ -27,7 +27,10 @@ global class BatchTrackShipment implements Database.Batchable<SObject>,Database.
             // String recordid= (String)scope.get(i).get('Shipping_Details__r.Id');
             // System.debug('record id in batchof shipping detail record--'+recordid);
            USPSTrack ResponseTrack= new USPSTrack();
+            USPSTrackResponse uspsTrack = new USPSTrackResponse();
            ResponseTrack= TrackShipment.GetTrackingDetails(sd.Tracking_Id__c);
+            uspsTrack = USPSTrackShipment.trackingDetails(sd.Tracking_Id__c);
+            System.debug('Tracking Id..'+uspsTrack);
 			Shipping_Detail__c shipDetails=new Shipping_Detail__c();
             system.debug('RESPONSE IS---'+ResponseTrack);
             shipDetails=BatchTrackShipmentHandler.UpdateTrackingDetails(ResponseTrack.TrackID,ResponseTrack.TrackID,ResponseTrack.StatusCategory,ResponseTrack.EventCode,ResponseTrack.TrackSummary,sd.id);

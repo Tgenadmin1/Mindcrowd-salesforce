@@ -17,6 +17,18 @@
         <name>Address__c</name>
     </fields>
     <fields>
+        <label><!-- Apoe Clia --></label>
+        <name>Apoe_Clia__c</name>
+    </fields>
+    <fields>
+        <label><!-- Apoe Imputed --></label>
+        <name>Apoe_Imputed__c</name>
+    </fields>
+    <fields>
+        <label><!-- Apoe Taqman --></label>
+        <name>Apoe_Taqman__c</name>
+    </fields>
+    <fields>
         <label><!-- Barcode --></label>
         <name>Barcode__c</name>
     </fields>

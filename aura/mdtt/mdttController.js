@@ -82,6 +82,9 @@
                     let intervalTime = null;
                     let intervalImageTime = null;
                     let blockevents = 0;
+                    let roundTotalTime = null;
+                    let roundStartTime = null;
+                    let totalKeyStrokesInRound = 0;                    
                     let timedata = new Date();
                     let result_time = 0;
                     let command_value = 0;
@@ -784,6 +787,69 @@
 
                         timedata = new Date();
 
+                        if (currentScreent == '1' || currentScreent == '12' || currentScreent == '23' || currentScreent == '32' 
+                            || currentScreent == '43' || currentScreent == '52' || currentScreent == '63' || currentScreent == '130' 
+                            || currentScreent == '162' || currentScreent == '229' || currentScreent == '261' || currentScreent == '328' || currentScreent == '360') {
+                            
+                            roundStartTime = timedata;
+                            totalKeyStrokesInRound = 0;
+                        }
+                        if (currentScreent == '11' || currentScreent == '21' || currentScreent == '31' || currentScreent == '41' 
+                            || currentScreent == '51' || currentScreent == '61' || currentScreent == '127' || currentScreent == '161' 
+                            || currentScreent == '226' || currentScreent == '260' || currentScreent == '325' || currentScreent == '359' ) {
+                            
+                            roundTotalTime = timedata - roundStartTime;
+                            
+                            if (currentScreent == '11') {
+                                let totalTimeForRoundZero = roundTotalTime;
+                                helper.participantGameInfoUpdateTotalTimeRoundOne(component, event, helper, userContactId, gameId, participantGameInfoId, totalTimeForRoundZero,totalKeyStrokesInRound,currentScreent);
+                            }
+                            else if (currentScreent == '21') {
+                                let totalTimeForRoundOne = roundTotalTime;
+                                helper.participantGameInfoUpdateTotalTimeRoundOne(component, event, helper, userContactId, gameId, participantGameInfoId, totalTimeForRoundOne,totalKeyStrokesInRound,currentScreent);
+                            }
+                            else if (currentScreent == '31') {
+                                let totalTimeForRoundTwo = roundTotalTime;
+                                helper.participantGameInfoUpdateTotalTimeRoundOne(component, event, helper, userContactId, gameId, participantGameInfoId, totalTimeForRoundTwo,totalKeyStrokesInRound,currentScreent);
+                            }
+                            else if (currentScreent == '41') {
+                                let totalTimeForRoundThree = roundTotalTime;
+                                helper.participantGameInfoUpdateTotalTimeRoundOne(component, event, helper, userContactId, gameId, participantGameInfoId, totalTimeForRoundThree,totalKeyStrokesInRound,currentScreent);
+                            }
+                            else if (currentScreent == '51') {
+                                let totalTimeForRoundFour = roundTotalTime;
+                                helper.participantGameInfoUpdateTotalTimeRoundOne(component, event, helper, userContactId, gameId, participantGameInfoId, totalTimeForRoundFour,totalKeyStrokesInRound,currentScreent);
+                            }
+                            else if (currentScreent == '61') {
+                                let totalTimeForRoundFive = roundTotalTime;
+                                helper.participantGameInfoUpdateTotalTimeRoundOne(component, event, helper, userContactId, gameId, participantGameInfoId, totalTimeForRoundFive,totalKeyStrokesInRound,currentScreent);
+                            }
+                            else if (currentScreent == '127') {
+                                let totalTimeForRoundSix = roundTotalTime;
+                                helper.participantGameInfoUpdateTotalTimeRoundOne(component, event, helper, userContactId, gameId, participantGameInfoId, totalTimeForRoundSix,totalKeyStrokesInRound,currentScreent);
+                            }
+                            else if (currentScreent == '161') {
+                                let totalTimeForRoundSeven = roundTotalTime;
+                                helper.participantGameInfoUpdateTotalTimeRoundOne(component, event, helper, userContactId, gameId, participantGameInfoId, totalTimeForRoundSeven,totalKeyStrokesInRound,currentScreent);
+                            }
+                            else if (currentScreent == '226') {
+                                let totalTimeForRoundEight = roundTotalTime;
+                                helper.participantGameInfoUpdateTotalTimeRoundOne(component, event, helper, userContactId, gameId, participantGameInfoId, totalTimeForRoundEight,totalKeyStrokesInRound,currentScreent);
+                            }
+                            else if (currentScreent == '260') {
+                                let totalTimeForRoundNine = roundTotalTime;
+                                helper.participantGameInfoUpdateTotalTimeRoundOne(component, event, helper, userContactId, gameId, participantGameInfoId, totalTimeForRoundNine,totalKeyStrokesInRound,currentScreent);
+                            }
+                            else if (currentScreent == '325') {
+                                let totalTimeForRoundTen = roundTotalTime;
+                                helper.participantGameInfoUpdateTotalTimeRoundOne(component, event, helper, userContactId, gameId, participantGameInfoId, totalTimeForRoundTen,totalKeyStrokesInRound,currentScreent);
+                            }
+                            else if (currentScreent == '359') {
+                                let totalTimeForRoundEleven = roundTotalTime;
+                                helper.participantGameInfoUpdateTotalTimeRoundOne(component, event, helper, userContactId, gameId, participantGameInfoId, totalTimeForRoundEleven,totalKeyStrokesInRound,currentScreent);
+                            }
+                        }
+
                         //Remove below after prScore made dynamic.
                         //if(prTestResultscreen1 == currentScreent){
                         //  prScore = 60;
@@ -1020,6 +1086,7 @@
 
                         command_value = e.keyCode;
                         inputdata = e.key;
+                        totalKeyStrokesInRound = totalKeyStrokesInRound + 1;
                         let startDurations = configdata[currentScreent - 1].startDuration;
 
                         //console.log(inputdata);

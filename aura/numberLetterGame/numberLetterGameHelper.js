@@ -280,55 +280,61 @@
     window.removeEventListener("beforeunload", this.leaveHandler);
     },
     //this fucntion is updating some fields like "Total_Time_for_Round_1__c"  in "participantGameInfo" object.
-    participantGameInfoUpdateTotalTimeRoundOne: function(component,event,helper,userContactId,gameId,participantGameInfoId,totalTimeForRound,currentScreent) {
+    participantGameInfoUpdateTotalTimeRoundOne: function(component,event,helper,userContactId,gameId,participantGameInfoId,totalTimeForRound,totalKeyStrokesInRound, currentScreent) {
         let data = {};
 
-        if(currentScreent=='22'){
+        if(currentScreent=='23'){
             data = {
                 Contact_Name__c:userContactId,
                 Game_Name__c:gameId,
                 Id:participantGameInfoId,
-                Total_Time_for_Round_0__c:totalTimeForRound
+                Total_Time_for_Round_0__c:totalTimeForRound,
+                Total_KeyStrokes_In_Round_0__c:totalKeyStrokesInRound
             };
         }
-        else if(currentScreent=='87'){
+        else if(currentScreent=='88'){
             data = {
                 Contact_Name__c:userContactId,
                 Game_Name__c:gameId,
                 Id:participantGameInfoId,
-                Total_Time_for_Round_1__c:totalTimeForRound
+                Total_Time_for_Round_1__c:totalTimeForRound,
+                Total_KeyStrokes_In_Round_1__c:totalKeyStrokesInRound
             };
         }
-        else if(currentScreent=='110'){
+        else if(currentScreent=='111'){
             data = {
                 Contact_Name__c:userContactId,
                 Game_Name__c:gameId,
                 Id:participantGameInfoId,
-                Total_Time_for_Round_2__c:totalTimeForRound
+                Total_Time_for_Round_2__c:totalTimeForRound,
+                Total_KeyStrokes_In_Round_2__c:totalKeyStrokesInRound
             };
         }
-        else if(currentScreent=='175'){
+        else if(currentScreent=='176'){
             data = {
                 Contact_Name__c:userContactId,
                 Game_Name__c:gameId,
                 Id:participantGameInfoId,
-                Total_Time_for_Round_3__c:totalTimeForRound
+                Total_Time_for_Round_3__c:totalTimeForRound,
+                Total_KeyStrokes_In_Round_3__c:totalKeyStrokesInRound
             };
         }
-        else if(currentScreent=='201'){
+        else if(currentScreent=='202'){
             data = {
                 Contact_Name__c:userContactId,
                 Game_Name__c:gameId,
                 Id:participantGameInfoId,
-                Total_Time_for_Round_4__c:totalTimeForRound
+                Total_Time_for_Round_4__c:totalTimeForRound,
+                Total_KeyStrokes_In_Round_4__c:totalKeyStrokesInRound
             };
         }
-        else if(currentScreent=='459'){
+        else if(currentScreent=='460'){
             data = {
                 Contact_Name__c:userContactId,
                 Game_Name__c:gameId,
                 Id:participantGameInfoId,
-                Total_Time_for_Round_5__c:totalTimeForRound
+                Total_Time_for_Round_5__c:totalTimeForRound,
+                Total_KeyStrokes_In_Round_5__c:totalKeyStrokesInRound
             };
         }
         var action = component.get("c.participantGameInfoUpdate");
