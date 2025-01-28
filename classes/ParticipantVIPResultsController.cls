@@ -111,7 +111,8 @@ public without sharing class ParticipantVIPResultsController
                                            AND Contact_Name__r.Age__c <= :highage
                                            AND User_Device__c != ''
                                            AND Contact_Name__r.Sex__c != ''
-                                           AND Contact_Name__r.Education_Attainment__c != null
+                                           AND Contact_Name__r.Sex__c =:sex
+                                           AND Contact_Name__r.Education_Attainment__c =:edu_att
                                            AND Count_Of_No_Of_Correct_Answered__c >0
                                            AND Count_Of_No_of_Question_Attempted__c >0
                                            AND Count_Of_Total_Reaction_Time__c >0
@@ -120,6 +121,44 @@ public without sharing class ParticipantVIPResultsController
                                            Order by CreatedDate DESC
                                            LIMIT 48990];
         List<Decimal> quartileValues = new List<Decimal>();
+        system.debug('First Query:'+peopleLikeYouPGIList.size());
+        if(peopleLikeYouPGIList !=null && peopleLikeYouPGIList.size() < 25){
+            peopleLikeYouPGIList = [SELECT Count_Of_Total_Reaction_Time__c ,Count_Of_No_of_Question_Attempted__c,Count_Of_No_Of_Correct_Answered__c
+                                           FROM Participant_Game_Info__c 
+                                           WHERE Contact_Name__r.Age__c > 0
+                                           AND Contact_Name__r.Age__c >= :lowage
+                                           AND Contact_Name__r.Age__c <= :highage
+                                           AND User_Device__c != ''
+                                           AND Contact_Name__r.Sex__c != ''
+                                    	   AND Contact_Name__r.Sex__c =:sex
+                                           AND Contact_Name__r.Education_Attainment__c != null
+                                           AND Count_Of_No_Of_Correct_Answered__c >0
+                                           AND Count_Of_No_of_Question_Attempted__c >0
+                                           AND Count_Of_Total_Reaction_Time__c >0
+                                           AND Game_Name__r.Name =: gameName
+                                           AND Id != :currPGIId
+                                           Order by CreatedDate DESC
+                                           LIMIT 48990];
+                    system.debug('Second Query:'+peopleLikeYouPGIList.size());
+                    if(peopleLikeYouPGIList !=null && peopleLikeYouPGIList.size() < 25){
+                    peopleLikeYouPGIList = [SELECT Count_Of_Total_Reaction_Time__c ,Count_Of_No_of_Question_Attempted__c,Count_Of_No_Of_Correct_Answered__c
+                                           FROM Participant_Game_Info__c 
+                                           WHERE Contact_Name__r.Age__c > 0
+                                           AND Contact_Name__r.Age__c >= :lowage
+                                           AND Contact_Name__r.Age__c <= :highage
+                                           AND User_Device__c != ''
+                                           AND Contact_Name__r.Sex__c != ''
+                                           AND Contact_Name__r.Education_Attainment__c != null
+                                           AND Count_Of_No_Of_Correct_Answered__c >0
+                                           AND Count_Of_No_of_Question_Attempted__c >0
+                                           AND Count_Of_Total_Reaction_Time__c >0
+                                           AND Game_Name__r.Name =: gameName
+                                           AND Id != :currPGIId
+                                           Order by CreatedDate DESC
+                                           LIMIT 48990];
+                        system.debug('Third Query:'+peopleLikeYouPGIList.size());
+        		}
+        }
         if(peopleLikeYouPGIList !=null && peopleLikeYouPGIList.size() >= 25){ 
             if(gameName == 'DLTRS' || gameName == 'Deary Simple And Complex Reaction Time' || gameName == 'Flanker'){
                         Decimal sumReationTime = 0;

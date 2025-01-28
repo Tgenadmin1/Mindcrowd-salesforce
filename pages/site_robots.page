@@ -10,9 +10,7 @@ Disallow: /es/s/sss/
 
 Sitemap: https://mindcrowd.org/sitemap.xml
 Sitemap: https://mindcrowd.org/es/sitemap.xml
-Sitemap: https://blog.mindcrowd.org/sitemap.xml
-Sitemap: https://blog.mindcrowd.org/es/sitemap.xml
 Sitemap: https://project.mindcrowd.org/s/sitemap.xml
-Sitemap: https://project.mindcrowd.org/es/sitemap.xml
+Sitemap: https://project.mindcrowd.org/es/s/sitemap.xml
 
 </apex:page>

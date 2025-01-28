@@ -93,6 +93,7 @@
                            let isIgnore=false;
                            let intervalTime = null;
                            let timedata = new Date();
+                           let totalKeyStrokesInRound = 0;
                           // let currentScreen = 0;
                            let image_path = $A.get("$Label.c.Community_Url")+"/resource/mindcrowdGameImages/faceName/";
                            let image_path2 = $A.get("$Label.c.Community_Url")+"/resource/";
@@ -975,6 +976,7 @@
                           || configdata[currentScreen].screen == '80' || configdata[currentScreen].screen == '82'){
                               roundStartTime = timedata;
                               //console.log('round start time: ', roundStartTime);
+                              totalKeyStrokesInRound = 0;
                               if(configdata[currentScreen].screen == '3'){
                                   round = 0;
                               }else if(configdata[currentScreen].screen == '28'){
@@ -997,32 +999,32 @@
                               if(configdata[currentScreen].screen == '27'){
                                   let totalTimeForRound=roundTotalTime;
                                   //console.log('totalTimeForRoundOne: ', totalTimeForRound);
-                                  helper.participantGameInfoUpdateTotalTimeRoundOne(component,event,helper,userContactId,gameId,participantGameInfoId,totalTimeForRound,configdata[currentScreen].screen);
+                                  helper.participantGameInfoUpdateTotalTimeRoundOne(component,event,helper,userContactId,gameId,participantGameInfoId,totalTimeForRound,totalKeyStrokesInRound,configdata[currentScreen].screen);
                               }
                               else if(configdata[currentScreen].screen == '53'){
                                   let totalTimeForRound=roundTotalTime;
                                   //console.log('totalTimeForRoundTwo: ', totalTimeForRound);
-                                  helper.participantGameInfoUpdateTotalTimeRoundOne(component,event,helper,userContactId,gameId,participantGameInfoId,totalTimeForRound,configdata[currentScreen].screen);
+                                  helper.participantGameInfoUpdateTotalTimeRoundOne(component,event,helper,userContactId,gameId,participantGameInfoId,totalTimeForRound,totalKeyStrokesInRound,configdata[currentScreen].screen);
                               }
                               else if(configdata[currentScreen].screen == '66'){
                                   let totalTimeForRound=roundTotalTime;
                                   //console.log('totalTimeForRoundThree: ', totalTimeForRound);
-                                  helper.participantGameInfoUpdateTotalTimeRoundOne(component,event,helper,userContactId,gameId,participantGameInfoId,totalTimeForRound,configdata[currentScreen].screen);
+                                  helper.participantGameInfoUpdateTotalTimeRoundOne(component,event,helper,userContactId,gameId,participantGameInfoId,totalTimeForRound,totalKeyStrokesInRound,configdata[currentScreen].screen);
                               }
                               else if(configdata[currentScreen].screen == '79'){
                                   let totalTimeForRound=roundTotalTime;
                                   //console.log('totalTimeForRoundFour: ', totalTimeForRound);
-                                  helper.participantGameInfoUpdateTotalTimeRoundOne(component,event,helper,userContactId,gameId,participantGameInfoId,totalTimeForRound,configdata[currentScreen].screen);
+                                  helper.participantGameInfoUpdateTotalTimeRoundOne(component,event,helper,userContactId,gameId,participantGameInfoId,totalTimeForRound,totalKeyStrokesInRound,configdata[currentScreen].screen);
                               }
                               else if(configdata[currentScreen].screen == '81'){
                                 let totalTimeForRound=roundTotalTime;
                                 //console.log('totalTimeForRoundstacks: ', totalTimeForRound);
-                                helper.participantGameInfoUpdateTotalTimeRoundOne(component,event,helper,userContactId,gameId,participantGameInfoId,totalTimeForRound,configdata[currentScreen].screen);
+                                helper.participantGameInfoUpdateTotalTimeRoundOne(component,event,helper,userContactId,gameId,participantGameInfoId,totalTimeForRound,null,configdata[currentScreen].screen);
                             }
                               else if(configdata[currentScreen].screen == '118'){
                                   let totalTimeForRound=roundTotalTime;
                                   //console.log('totalTimeForRoundFinal: ', totalTimeForRound);
-                                  helper.participantGameInfoUpdateTotalTimeRoundOne(component,event,helper,userContactId,gameId,participantGameInfoId,totalTimeForRound,configdata[currentScreen].screen);
+                                  helper.participantGameInfoUpdateTotalTimeRoundOne(component,event,helper,userContactId,gameId,participantGameInfoId,totalTimeForRound,totalKeyStrokesInRound,configdata[currentScreen].screen);
                               }
                           } 
 
@@ -1322,7 +1324,7 @@
                    
                        function gamePlay(e) {
                            command_value = e.keyCode;
-                           
+                           totalKeyStrokesInRound = totalKeyStrokesInRound + 1;					   
                            if(command_value == 13){
                             if(document.getElementById("personname")){ 
                                 FieldOnFocus.blur();

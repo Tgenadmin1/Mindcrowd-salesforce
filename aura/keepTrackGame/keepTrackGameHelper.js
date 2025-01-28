@@ -293,7 +293,7 @@
         window.removeEventListener("beforeunload", this.leaveHandler);
     },
     //this fucntion is updating some fields like "Total_Time_for_Round_1__c"  in "participantGameInfo" object.
-    participantGameInfoUpdateTotalTimeRoundOne: function (component, event, helper, userContactId, gameId, participantGameInfoId, roundTotalTime, currentScreent) {
+    participantGameInfoUpdateTotalTimeRoundOne: function (component, event, helper, userContactId, gameId, participantGameInfoId, roundTotalTime, totalKeyStrokesInRound, currentScreent) {
         let data = {};
 
         if (currentScreent == '73') {
@@ -309,7 +309,8 @@
                 Contact_Name__c: userContactId,
                 Game_Name__c: gameId,
                 Id: participantGameInfoId,
-                Total_Time_for_Round_1__c: roundTotalTime
+                Total_Time_for_Round_1__c: roundTotalTime,
+                Total_KeyStrokes_In_Round_0__c: totalKeyStrokesInRound
             };
         }
         else if (currentScreent == '306') {
@@ -317,7 +318,8 @@
                 Contact_Name__c: userContactId,
                 Game_Name__c: gameId,
                 Id: participantGameInfoId,
-                Total_Time_for_Round_2__c: roundTotalTime
+                Total_Time_for_Round_2__c: roundTotalTime,
+                Total_KeyStrokes_In_Round_1__c: totalKeyStrokesInRound
             };
         }
         else if (currentScreent == '402') {
@@ -325,7 +327,8 @@
                 Contact_Name__c: userContactId,
                 Game_Name__c: gameId,
                 Id: participantGameInfoId,
-                Total_Time_for_Round_3__c: roundTotalTime
+                Total_Time_for_Round_3__c: roundTotalTime,
+                Total_KeyStrokes_In_Round_2__c: totalKeyStrokesInRound
             };
         }
         else if (currentScreent == '498') {
@@ -333,7 +336,8 @@
                 Contact_Name__c: userContactId,
                 Game_Name__c: gameId,
                 Id: participantGameInfoId,
-                Total_Time_for_Round_4__c: roundTotalTime
+                Total_Time_for_Round_4__c: roundTotalTime,
+                Total_KeyStrokes_In_Round_3__c: totalKeyStrokesInRound
             };
         }
         var action = component.get("c.participantGameInfoUpdate");

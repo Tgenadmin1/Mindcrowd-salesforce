@@ -187,6 +187,10 @@
         <name>Print_Labels</name>
     </webLinks>
     <webLinks>
+        <label><!-- Print_Labels_Old --></label>
+        <name>Print_Labels_Old</name>
+    </webLinks>
+    <webLinks>
         <label><!-- Print_QRcode --></label>
         <name>Print_QRcode</name>
     </webLinks>

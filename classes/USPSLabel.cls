@@ -16,6 +16,7 @@ public with sharing class USPSLabel
         RDC='';
         CarrierRoute='';
         BarcodeNumber='';
+        trackingNumber='';
         Postage='' ;
         LabelImage='';
         USPS_Returned_Error= false ;
@@ -33,6 +34,7 @@ public with sharing class USPSLabel
     @AuraEnabled public String RDC {get;set;}
     @AuraEnabled public String CarrierRoute {get;set;}   
     @AuraEnabled public String BarcodeNumber {get;set;}
+    @AuraEnabled public String trackingNumber {get;set;}
     @AuraEnabled public String Postage {get;set;}
     @AuraEnabled public String LabelImage {get;set;}
     @AuraEnabled public boolean USPS_Returned_Error {get; set;}

@@ -8,7 +8,7 @@ public with sharing class USPS_Test {
         Test.StartTest();
 		
 	USPS.CheckAddress('TEST', '6406 IVY LN', 'Greenbelt','MD' , '20770','1234');
-	USPS.CheckAddress('ERROR', '6406 IVY LN', 'Greenbelt','MD' , '20770','1234');
+        USPS.CheckAddress('TEST', '6406 IVY LN', 'Greenbelt','' , '20770','1234');
 	
 		Test.StopTest();
 	} // TestUSPS

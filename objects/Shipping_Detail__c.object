@@ -418,7 +418,7 @@
         <description>This field will store the StatusSummary returned by USPS Tracking API. It will tell us where the packet is located along with other info like date and time in a single line.</description>
         <externalId>false</externalId>
         <label>Track Summary</label>
-        <length>32768</length>
+        <length>131072</length>
         <trackFeedHistory>false</trackFeedHistory>
         <trackTrending>false</trackTrending>
         <type>LongTextArea</type>
@@ -429,7 +429,7 @@
         <description>This field comprises of the tracking number provided by USPS for tracking the shipments</description>
         <externalId>false</externalId>
         <label>Tracking Id</label>
-        <length>30</length>
+        <length>50</length>
         <required>false</required>
         <trackFeedHistory>false</trackFeedHistory>
         <trackTrending>false</trackTrending>
@@ -548,6 +548,7 @@
         <listViewButtons>Send_Shipment</listViewButtons>
         <listViewButtons>Print_QRcode</listViewButtons>
         <listViewButtons>Bulk_update</listViewButtons>
+        <listViewButtons>Print_Labels_Old</listViewButtons>
         <searchResultsCustomButtons>Send_Shipment</searchResultsCustomButtons>
         <searchResultsCustomButtons>Receive_Shipment</searchResultsCustomButtons>
     </searchLayouts>
@@ -597,6 +598,18 @@
         <linkType>page</linkType>
         <masterLabel>Print Labels</masterLabel>
         <openType>replace</openType>
+        <page>PrintUSPSLabelVF</page>
+        <protected>false</protected>
+        <requireRowSelection>true</requireRowSelection>
+    </webLinks>
+    <webLinks>
+        <fullName>Print_Labels_Old</fullName>
+        <availability>online</availability>
+        <displayType>massActionButton</displayType>
+        <height>600</height>
+        <linkType>page</linkType>
+        <masterLabel>Print Labels (Old)</masterLabel>
+        <openType>sidebar</openType>
         <page>PrintLabelVF</page>
         <protected>false</protected>
         <requireRowSelection>true</requireRowSelection>

@@ -98,6 +98,7 @@ export default class BrainInfo extends NavigationMixin(LightningElement) {
     subIdToContact="";
     medium="";
     source="";
+    appName="";
    
     currentPageReference = null;
     language = null;
@@ -204,6 +205,9 @@ export default class BrainInfo extends NavigationMixin(LightningElement) {
             }
             if(localStorage.getItem('utmsource')!=null){
                 this.source =localStorage.getItem('utmsource');
+            }
+            if(localStorage.getItem('utmappName')!=null){
+                this.appName =localStorage.getItem('utmappName');
             }
 
           // console.log('subId = ', localStorage.getItem('subIdToStoreLocal'));
@@ -556,6 +560,7 @@ export default class BrainInfo extends NavigationMixin(LightningElement) {
             this.rec.Sub_Id__c = this.subIdToContact;
             this.rec.Medium__c = this.medium;
             this.rec.Source__c = this.source;
+            this.rec.App_Name__c = this.appName;
             
             
             if(this.language=='en_US'){
@@ -585,6 +590,7 @@ export default class BrainInfo extends NavigationMixin(LightningElement) {
                  localStorage.removeItem('subIdToStoreLocal');
                  localStorage.removeItem('utmsource');
                  localStorage.removeItem('utmmedium');
+                 localStorage.removeItem('utmappName');
                  
 
                 let data = JSON.parse(JSON.stringify(result));

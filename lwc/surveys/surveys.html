@@ -67,6 +67,17 @@
           </div>
       </lightning-layout-item> 
     </template>
+    <template if:false={hideSurvey20}>
+      <lightning-layout-item size="12" small-device-size="12" medium-device-size="12" large-device-size="4" padding="around-small">
+        <div class="survey locked game-tiles" >
+            <div class="status">
+                <lightning-icon icon-name="utility:lock" class="game-tiles-lock-icon" alternative-text="check"></lightning-icon>
+            <div class="btn__game-time-center">{survey_five_min} </div>
+            </div>
+            <div class="title"><span>{game_name_c}</span></div>
+        </div>
+    </lightning-layout-item> 
+  </template>
     </lightning-layout>
     </lightning-layout>
 </lightning-card>

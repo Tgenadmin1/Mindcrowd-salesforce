@@ -901,6 +901,30 @@
         <unique>false</unique>
     </fields>
     <fields>
+        <fullName>Total_KeyStrokes_In_Round_10__c</fullName>
+        <externalId>false</externalId>
+        <label>Total KeyStrokes In Round 10</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Total_KeyStrokes_In_Round_11__c</fullName>
+        <externalId>false</externalId>
+        <label>Total KeyStrokes In Round 11</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
         <fullName>Total_KeyStrokes_In_Round_1__c</fullName>
         <externalId>false</externalId>
         <label>Total KeyStrokes In Round 1</label>
@@ -937,6 +961,78 @@
         <unique>false</unique>
     </fields>
     <fields>
+        <fullName>Total_KeyStrokes_In_Round_4__c</fullName>
+        <externalId>false</externalId>
+        <label>Total KeyStrokes In Round 4</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Total_KeyStrokes_In_Round_5__c</fullName>
+        <externalId>false</externalId>
+        <label>Total KeyStrokes In Round 5</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Total_KeyStrokes_In_Round_6__c</fullName>
+        <externalId>false</externalId>
+        <label>Total KeyStrokes In Round 6</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Total_KeyStrokes_In_Round_7__c</fullName>
+        <externalId>false</externalId>
+        <label>Total KeyStrokes In Round 7</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Total_KeyStrokes_In_Round_8__c</fullName>
+        <externalId>false</externalId>
+        <label>Total KeyStrokes In Round 8</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Total_KeyStrokes_In_Round_9__c</fullName>
+        <externalId>false</externalId>
+        <label>Total KeyStrokes In Round 9</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
         <fullName>Total_Reaction_Time__c</fullName>
         <description>This field represents, the total time taken by the participant.</description>
         <externalId>false</externalId>
@@ -957,6 +1053,30 @@
         <fullName>Total_Time_for_Round_0__c</fullName>
         <externalId>false</externalId>
         <label>Total Time for Round 0</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Total_Time_for_Round_10__c</fullName>
+        <externalId>false</externalId>
+        <label>Total Time for Round 10</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Total_Time_for_Round_11__c</fullName>
+        <externalId>false</externalId>
+        <label>Total Time for Round 11</label>
         <precision>18</precision>
         <required>false</required>
         <scale>0</scale>
@@ -1028,10 +1148,46 @@
         <unique>false</unique>
     </fields>
     <fields>
+        <fullName>Total_Time_for_Round_6__c</fullName>
+        <externalId>false</externalId>
+        <label>Total Time for Round 6</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
         <fullName>Total_Time_for_Round_7__c</fullName>
         <description>This field is created mainly for the FACENAME game, It is having the total round time for participants&apos; practice.</description>
         <externalId>false</externalId>
         <label>Total Time for Round 7</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Total_Time_for_Round_8__c</fullName>
+        <externalId>false</externalId>
+        <label>Total Time for Round 8</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Total_Time_for_Round_9__c</fullName>
+        <externalId>false</externalId>
+        <label>Total Time for Round 9</label>
         <precision>18</precision>
         <required>false</required>
         <scale>0</scale>

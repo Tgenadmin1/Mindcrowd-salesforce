@@ -4,6 +4,54 @@
     <description>This setting is used to keep the values for integration with USPS api</description>
     <enableFeeds>false</enableFeeds>
     <fields>
+        <fullName>AccessToken_url__c</fullName>
+        <externalId>false</externalId>
+        <label>AccessToken_url</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Url</type>
+    </fields>
+    <fields>
+        <fullName>Account_Number__c</fullName>
+        <externalId>false</externalId>
+        <label>Account Number</label>
+        <length>20</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Account_Type__c</fullName>
+        <externalId>false</externalId>
+        <label>Account Type</label>
+        <length>10</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>AddressZipCodeURL__c</fullName>
+        <externalId>false</externalId>
+        <label>AddressZipCodeURL</label>
+        <length>100</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CRID__c</fullName>
+        <externalId>false</externalId>
+        <label>CRID</label>
+        <length>20</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
         <fullName>Client_Ip__c</fullName>
         <description>stores client IP for tracking shipment.</description>
         <externalId>false</externalId>
@@ -29,6 +77,26 @@
         <fullName>Label_Service_Api__c</fullName>
         <externalId>false</externalId>
         <label>Label Service Api</label>
+        <length>20</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MID__c</fullName>
+        <externalId>false</externalId>
+        <label>MID</label>
+        <length>20</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Manifest_MID__c</fullName>
+        <externalId>false</externalId>
+        <label>Manifest MID</label>
         <length>20</length>
         <required>false</required>
         <trackTrending>false</trackTrending>
@@ -123,6 +191,44 @@
         <unique>false</unique>
     </fields>
     <fields>
+        <fullName>Payment_Access_Token_URL__c</fullName>
+        <externalId>false</externalId>
+        <label>Payment Access Token URL</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Url</type>
+    </fields>
+    <fields>
+        <fullName>Processing_Category__c</fullName>
+        <externalId>false</externalId>
+        <label>Processing Category</label>
+        <length>50</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Role_Name_LO__c</fullName>
+        <externalId>false</externalId>
+        <label>Role Name LO</label>
+        <length>20</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Role_Name_P__c</fullName>
+        <externalId>false</externalId>
+        <label>Role Name P</label>
+        <length>20</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
         <fullName>Source_Id__c</fullName>
         <externalId>false</externalId>
         <label>Source Id</label>
@@ -131,6 +237,24 @@
         <trackTrending>false</trackTrending>
         <type>Text</type>
         <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>TrackingURL__c</fullName>
+        <externalId>false</externalId>
+        <label>TrackingURL</label>
+        <length>100</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>USPS_Label_API_URL__c</fullName>
+        <externalId>false</externalId>
+        <label>USPS Label API URL</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Url</type>
     </fields>
     <fields>
         <fullName>USPS_URL__c</fullName>
@@ -165,6 +289,35 @@
         <unique>false</unique>
     </fields>
     <fields>
+        <fullName>addressUrl__c</fullName>
+        <description>USPS URL for address</description>
+        <externalId>false</externalId>
+        <label>addressUrl</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Url</type>
+    </fields>
+    <fields>
+        <fullName>client_id__c</fullName>
+        <externalId>false</externalId>
+        <label>client_id</label>
+        <length>50</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>client_secret__c</fullName>
+        <externalId>false</externalId>
+        <label>client_secret</label>
+        <length>30</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
         <fullName>eVSLabelUrl__c</fullName>
         <description>USPS URL for generating eVS Label</description>
         <externalId>false</externalId>
@@ -178,6 +331,16 @@
         <description>consists of service which mindcrowd avails from USPS EVS LABEL API</description>
         <externalId>false</externalId>
         <label>eVSLabel Service</label>
+        <length>30</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>grant_type__c</fullName>
+        <externalId>false</externalId>
+        <label>grant_type</label>
         <length>30</length>
         <required>false</required>
         <trackTrending>false</trackTrending>

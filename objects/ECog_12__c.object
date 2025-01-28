@@ -300,7 +300,7 @@
         <label>ECog-12 Name</label>
         <type>AutoNumber</type>
     </nameField>
-    <pluralLabel>ECogs-12&apos;s</pluralLabel>
+    <pluralLabel>ECog&apos;s-12</pluralLabel>
     <searchLayouts/>
     <sharingModel>ReadWrite</sharingModel>
     <visibility>Public</visibility>

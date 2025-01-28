@@ -78,6 +78,7 @@
                     let round = 0;
                     var keyCount = 0;
                     let timedata = new Date();
+                    let totalKeyStrokesInRound = 0;
                     let result_time = 0;
                     let command_value = 0;
                     let inputdata = {};
@@ -784,9 +785,10 @@
                             if (configdata[currentScreent].screen == '73') {
                                 //Practice Round 0
                                 roundTotalTime = timedata - roundStartTime;
-                                helper.participantGameInfoUpdateTotalTimeRoundOne(component, event, helper, userContactId, gameId, participantGameInfoId, roundTotalTime, configdata[currentScreent].screen);
+                                helper.participantGameInfoUpdateTotalTimeRoundOne(component, event, helper, userContactId, gameId, participantGameInfoId, roundTotalTime,null, configdata[currentScreent].screen);
                                 roundTotalTime = 0;
                                 //console.log("totalTimeForRoundZero : ", roundTotalTime);
+                                totalKeyStrokesInRound = 0;
                             } else if (configdata[currentScreent].screen == '114') {
                                 // Practice trial category 2
                                 //currently we are not capturing the total time for practice round. uncomment the helper method call if needed in future.
@@ -796,6 +798,7 @@
                                 //console.log("totalTimeForRound Practice trial category 2  : ", roundTotalTime);
                                // helper.participantGameInfoUpdateTotalTimeRoundOne(component, event, helper, userContactId, gameId, participantGameInfoId, roundTotalTime, configdata[currentScreent].screen);
                                 roundTotalTime = 0;
+                            	totalKeyStrokesInRound = 0;
                             } else if (configdata[currentScreent].screen == '146') {
                                 // category 1 trial 1
 
@@ -814,8 +817,9 @@
                                 let c1t3TotalTime = timedata - roundStartTime;
                                 roundTotalTime = roundTotalTime + c1t3TotalTime;
                                 //console.log("totalTimeForRound category 1  : ", roundTotalTime);
-                                helper.participantGameInfoUpdateTotalTimeRoundOne(component, event, helper, userContactId, gameId, participantGameInfoId, roundTotalTime, configdata[currentScreent].screen);
+                                helper.participantGameInfoUpdateTotalTimeRoundOne(component, event, helper, userContactId, gameId, participantGameInfoId, roundTotalTime, totalKeyStrokesInRound, configdata[currentScreent].screen);
                                 roundTotalTime = 0;
+                            	totalKeyStrokesInRound = 0;
                             } else if (configdata[currentScreent].screen == '242') {
                                 // category 2 trial 1
 
@@ -834,8 +838,9 @@
                                 let c2t3TotalTime = timedata - roundStartTime;
                                 roundTotalTime = roundTotalTime + c2t3TotalTime;
                                 //console.log("totalTimeForRound category 2 trial 3 : ", roundTotalTime);
-                                helper.participantGameInfoUpdateTotalTimeRoundOne(component, event, helper, userContactId, gameId, participantGameInfoId, roundTotalTime, configdata[currentScreent].screen);
+                                helper.participantGameInfoUpdateTotalTimeRoundOne(component, event, helper, userContactId, gameId, participantGameInfoId, roundTotalTime, totalKeyStrokesInRound, configdata[currentScreent].screen);
                                 roundTotalTime = 0;
+                            	totalKeyStrokesInRound = 0;
                             } else if (configdata[currentScreent].screen == '338') {
                                 // category 3 trial 1
 
@@ -854,8 +859,9 @@
                                 let c3t3TotalTime = timedata - roundStartTime;
                                 roundTotalTime = roundTotalTime + c3t3TotalTime;
                                 //console.log("totalTimeForRound category 3 trial 3 : ", roundTotalTime);
-                                helper.participantGameInfoUpdateTotalTimeRoundOne(component, event, helper, userContactId, gameId, participantGameInfoId, roundTotalTime, configdata[currentScreent].screen);
+                                helper.participantGameInfoUpdateTotalTimeRoundOne(component, event, helper, userContactId, gameId, participantGameInfoId, roundTotalTime, totalKeyStrokesInRound, configdata[currentScreent].screen);
                                 roundTotalTime = 0;
+                            	totalKeyStrokesInRound = 0;
                             } else if (configdata[currentScreent].screen == '434') {
                                 // category 4 trial 1
 
@@ -874,8 +880,9 @@
                                 let c4t3TotalTime = timedata - roundStartTime;
                                 roundTotalTime = roundTotalTime + c4t3TotalTime;
                                 //console.log("totalTimeForRound category 4 trial 3 : ", roundTotalTime);
-                                helper.participantGameInfoUpdateTotalTimeRoundOne(component, event, helper, userContactId, gameId, participantGameInfoId, roundTotalTime, configdata[currentScreent].screen);
+                                helper.participantGameInfoUpdateTotalTimeRoundOne(component, event, helper, userContactId, gameId, participantGameInfoId, roundTotalTime, totalKeyStrokesInRound, configdata[currentScreent].screen);
                                 roundTotalTime = 0;
+                            	totalKeyStrokesInRound = 0;
                             }
 
                             roundStartTime = timedata;
@@ -1101,7 +1108,7 @@
                     function gamePlayEnter(){ 
                         //console.log("clicked enter button");
                         //console.log('test 1');
-                       // keybuttonEvent = true;
+                       //keybuttonEvent = true;
                         gamePlay({keyCode:13});
                      
                        
@@ -1112,7 +1119,17 @@
                     function gamePlay(e) {
 
                         command_value = e.keyCode;
+                        console.log('Current Screen'+configdata[currentScreent].screen);
+                        if(configdata[currentScreent].screen == '145a' || configdata[currentScreent].screen == '241a'
+                        || configdata[currentScreent].screen == '337a' || configdata[currentScreent].screen == '433a'
+                        || configdata[currentScreent].screen == '177a' || configdata[currentScreent].screen == '209a'
+                        || configdata[currentScreent].screen == '273a' || configdata[currentScreent].screen == '305a'
+                        || configdata[currentScreent].screen == '369a' || configdata[currentScreent].screen == '401a'
+                        || configdata[currentScreent].screen == '465a' || configdata[currentScreent].screen == '497a'){
+                            totalKeyStrokesInRound = totalKeyStrokesInRound + 1;
+                        }
                         if (command_value == 13) {
+                        	                            
                             FieldOnFocus.blur();
                             if (configdata[currentScreent - 1].screen == '112' || configdata[currentScreent - 1].screen == '241'
                                 || configdata[currentScreent - 1].screen == '273' || configdata[currentScreent - 1].screen == '305') {

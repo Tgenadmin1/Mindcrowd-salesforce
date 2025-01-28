@@ -449,6 +449,17 @@
         <type>Checkbox</type>
     </fields>
     <fields>
+        <fullName>App_Name__c</fullName>
+        <externalId>false</externalId>
+        <label>App Name</label>
+        <length>50</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
         <fullName>Are_you_Left_or_Right_hand_dominant__c</fullName>
         <description>Hand dominancy of test-taker.</description>
         <externalId>false</externalId>
@@ -656,6 +667,15 @@
         <trackHistory>false</trackHistory>
     </fields>
     <fields>
+        <fullName>DBS_Email_Opt_Out__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>DBS Email Opt Out</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
         <fullName>DIET__c</fullName>
         <externalId>false</externalId>
         <label>DIET</label>
@@ -779,6 +799,36 @@
         <trackHistory>false</trackHistory>
     </fields>
     <fields>
+        <fullName>ECog_12__c</fullName>
+        <externalId>false</externalId>
+        <label>ECog-12</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Locked</fullName>
+                    <default>false</default>
+                    <label>Locked</label>
+                </value>
+                <value>
+                    <fullName>Completed</fullName>
+                    <default>false</default>
+                    <label>Completed</label>
+                </value>
+                <value>
+                    <fullName>Opened</fullName>
+                    <default>true</default>
+                    <label>Unlocked</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
         <fullName>Education_Attainment__c</fullName>
         <externalId>false</externalId>
         <formula>IF( OR(ISPICKVAL( Highest_level_of_education_completed__c , &apos;Up to 8 Years&apos;), ISPICKVAL( Highest_level_of_education_completed__c , &apos;Completed 8th Grade (Elementary or Primary School Graduate)&apos;), ISPICKVAL( Highest_level_of_education_completed__c , &apos;Some High School&apos;) ) , 1,
@@ -837,6 +887,15 @@
         <trackHistory>false</trackHistory>
         <type>Text</type>
         <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Enrolled_in_Paid_Campaign_ECog_12__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Enrolled in Paid Campaign (ECog-12)</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
     </fields>
     <fields>
         <fullName>Enrolled_in_Paid_Campaign__c</fullName>
@@ -1279,6 +1338,11 @@
                     <label>Svenska</label>
                 </value>
                 <value>
+                    <fullName>Tagalog</fullName>
+                    <default>false</default>
+                    <label>Tagalog</label>
+                </value>
+                <value>
                     <fullName>Tamil</fullName>
                     <default>false</default>
                     <label>தமிழ்</label>
@@ -1396,6 +1460,36 @@
         <unique>false</unique>
     </fields>
     <fields>
+        <fullName>GLUCOSAMINE__c</fullName>
+        <externalId>false</externalId>
+        <label>GLUCOSAMINE</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Opened</fullName>
+                    <default>true</default>
+                    <label>Unlocked</label>
+                </value>
+                <value>
+                    <fullName>Locked</fullName>
+                    <default>false</default>
+                    <label>Locked</label>
+                </value>
+                <value>
+                    <fullName>Completed</fullName>
+                    <default>false</default>
+                    <label>Completed</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
         <fullName>GenderIdentity</fullName>
         <trackFeedHistory>false</trackFeedHistory>
         <trackHistory>false</trackHistory>
@@ -1463,6 +1557,15 @@
                 </value>
             </valueSetDefinition>
         </valueSet>
+    </fields>
+    <fields>
+        <fullName>Glucosamine_Survey__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Glucosamine Survey</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
     </fields>
     <fields>
         <fullName>HEALTH_MEDICAL__c</fullName>
@@ -3897,7 +4000,7 @@
         <fullName>Sync_With_MC__c</fullName>
         <description>This field is used to make the record which should be synced to marketing cloud.</description>
         <externalId>false</externalId>
-        <formula>AND(NOT(ISBLANK(Activation_Date__c)), NOT(ISBLANK(Email)))</formula>
+        <formula>AND(NOT(ISBLANK(Activation_Date__c)), NOT(ISBLANK(Email)),Unsubscribe__c = FALSE)</formula>
         <inlineHelpText>This record will sync to Marketing Cloud.</inlineHelpText>
         <label>Sync With MC</label>
         <trackHistory>false</trackHistory>
@@ -3917,12 +4020,12 @@
                 <sorted>false</sorted>
                 <value>
                     <fullName>Locked</fullName>
-                    <default>true</default>
+                    <default>false</default>
                     <label>Locked</label>
                 </value>
                 <value>
                     <fullName>Opened</fullName>
-                    <default>false</default>
+                    <default>true</default>
                     <label>Unlocked</label>
                 </value>
                 <value>
@@ -3947,7 +4050,7 @@
                 <sorted>false</sorted>
                 <value>
                     <fullName>Opened</fullName>
-                    <default>false</default>
+                    <default>true</default>
                     <label>Unlocked</label>
                 </value>
                 <value>
@@ -3957,7 +4060,7 @@
                 </value>
                 <value>
                     <fullName>Locked</fullName>
-                    <default>true</default>
+                    <default>false</default>
                     <label>Locked</label>
                 </value>
             </valueSetDefinition>
@@ -4002,6 +4105,15 @@
         <fullName>TitleType</fullName>
         <trackFeedHistory>false</trackFeedHistory>
         <trackHistory>false</trackHistory>
+    </fields>
+    <fields>
+        <fullName>Tremendous_Award_Sent_ECog_12__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Tremendous Award Sent (ECog-12)</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
     </fields>
     <fields>
         <fullName>Tremendous_Award_Sent__c</fullName>

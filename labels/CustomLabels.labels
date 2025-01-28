@@ -5919,7 +5919,7 @@ Please do not use a calculator.</value>
         <language>en_US</language>
         <protected>false</protected>
         <shortDescription>info faq text 12b</shortDescription>
-        <value>The cognitive tests utilized for &lt;a href=&quot;https://blog.mindcrowd.org/how-is-alzheimers-diagnosed-tests/&quot;&gt;Alzheimer’s disease diagnosis&lt;/a&gt; should be administered in person by a certified examiner. If you are interested in learning more about Alzheimer’s disease and how it is diagnosed please visit the &lt;a href=&quot;https://www.alz.org/?utm_expid=.eKJFoPf0Qy61mHQXRUieeg.1&amp;amp;utm_referrer=&quot; target=&quot;_blank&quot; rel=&quot;noreferrer noopener&quot;&gt;Alzheimer’s Association&lt;/a&gt; website or &lt;a href=&quot;https://blog.mindcrowd.org/how-is-alzheimers-diagnosed-tests/&quot;&gt;read this article by Dr. Huentelman&lt;/a&gt;.</value>
+        <value>The cognitive tests utilized for &lt;a href=&quot;https://mindcrowd.org/how-is-alzheimers-diagnosed-tests/&quot;&gt;Alzheimer’s disease diagnosis&lt;/a&gt; should be administered in person by a certified examiner. If you are interested in learning more about Alzheimer’s disease and how it is diagnosed please visit the &lt;a href=&quot;https://www.alz.org/?utm_expid=.eKJFoPf0Qy61mHQXRUieeg.1&amp;amp;utm_referrer=&quot; target=&quot;_blank&quot; rel=&quot;noreferrer noopener&quot;&gt;Alzheimer’s Association&lt;/a&gt; website or &lt;a href=&quot;https://mindcrowd.org/how-is-alzheimers-diagnosed-tests/&quot;&gt;read this article by Dr. Huentelman&lt;/a&gt;.</value>
     </labels>
     <labels>
         <fullName>info_faq_text_13</fullName>
@@ -6496,7 +6496,7 @@ Your task is to &lt;span&gt;name the last items presented from each of the four 
         <language>en_US</language>
         <protected>false</protected>
         <shortDescription>live_URL_2</shortDescription>
-        <value>https://blog.mindcrowd.org/</value>
+        <value>https://mindcrowd.org/</value>
     </labels>
     <labels>
         <fullName>live_URL_3</fullName>
@@ -6504,7 +6504,7 @@ Your task is to &lt;span&gt;name the last items presented from each of the four 
         <language>en_US</language>
         <protected>false</protected>
         <shortDescription>live_URL_3</shortDescription>
-        <value>https://blog.mindcrowd.org/faq/</value>
+        <value>https://mindcrowd.org/faq/</value>
     </labels>
     <labels>
         <fullName>live_URL_4</fullName>
@@ -6512,7 +6512,7 @@ Your task is to &lt;span&gt;name the last items presented from each of the four 
         <language>en_US</language>
         <protected>false</protected>
         <shortDescription>live_URL_4</shortDescription>
-        <value>https://blog.mindcrowd.org/</value>
+        <value>https://mindcrowd.org/</value>
     </labels>
     <labels>
         <fullName>live_URL_5</fullName>
@@ -6528,7 +6528,7 @@ Your task is to &lt;span&gt;name the last items presented from each of the four 
         <language>en_US</language>
         <protected>false</protected>
         <shortDescription>live_URL_6</shortDescription>
-        <value>https://blog.mindcrowd.org/feed/</value>
+        <value>https://mindcrowd.org/feed/</value>
     </labels>
     <labels>
         <fullName>live_URL_7</fullName>
@@ -6544,7 +6544,7 @@ Your task is to &lt;span&gt;name the last items presented from each of the four 
         <language>en_US</language>
         <protected>false</protected>
         <shortDescription>live URL 8</shortDescription>
-        <value>https://blog.mindcrowd.org/the-aging-brain/</value>
+        <value>https://mindcrowd.org/the-aging-brain/</value>
     </labels>
     <labels>
         <fullName>live_URL_9</fullName>
@@ -6552,7 +6552,7 @@ Your task is to &lt;span&gt;name the last items presented from each of the four 
         <language>en_US</language>
         <protected>false</protected>
         <shortDescription>live URL 9</shortDescription>
-        <value>https://blog.mindcrowd.org/</value>
+        <value>https://mindcrowd.org/</value>
     </labels>
     <labels>
         <fullName>maillingAddress</fullName>
@@ -10327,11 +10327,25 @@ Research Coordinator at mindcrowdquestion@tgen.org</value>
         <value>Heat</value>
     </labels>
     <labels>
+        <fullName>survey_name_19</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>survey_name_19</shortDescription>
+        <value>Glucosamine</value>
+    </labels>
+    <labels>
         <fullName>survey_name_2</fullName>
         <language>en_US</language>
         <protected>false</protected>
         <shortDescription>survey_name_2</shortDescription>
         <value>COVID</value>
+    </labels>
+    <labels>
+        <fullName>survey_name_20</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>survey_name_20</shortDescription>
+        <value>Ecog-12</value>
     </labels>
     <labels>
         <fullName>survey_name_3</fullName>
@@ -10620,11 +10634,25 @@ Research Coordinator at mindcrowdquestion@tgen.org</value>
         <value>DietSurvey</value>
     </labels>
     <labels>
+        <fullName>url_Ecog12</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>url_Ecog12</shortDescription>
+        <value>ECog-12</value>
+    </labels>
+    <labels>
         <fullName>url_FHAD_Survey</fullName>
         <language>en_US</language>
         <protected>false</protected>
         <shortDescription>url_FHAD_Survey</shortDescription>
         <value>FhadSurvey</value>
+    </labels>
+    <labels>
+        <fullName>url_Glucosamine</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>url_Glucosamine</shortDescription>
+        <value>GlucosamineSurvey</value>
     </labels>
     <labels>
         <fullName>url_Health_Medical_Survey</fullName>

@@ -13,7 +13,7 @@
     <processMetadataValues>
         <name>CanvasMode</name>
         <value>
-            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+            <stringValue>FREE_FORM_CANVAS</stringValue>
         </value>
     </processMetadataValues>
     <processMetadataValues>
@@ -26,8 +26,8 @@
     <recordUpdates>
         <name>update_contact</name>
         <label>update contact</label>
-        <locationX>176</locationX>
-        <locationY>323</locationY>
+        <locationX>527</locationX>
+        <locationY>371</locationY>
         <filterLogic>and</filterLogic>
         <filters>
             <field>Id</field>
@@ -37,6 +37,12 @@
             </value>
         </filters>
         <inputAssignments>
+            <field>ECog_12__c</field>
+            <value>
+                <stringValue>Completed</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
             <field>Is_ECog12_Submitted__c</field>
             <value>
                 <booleanValue>true</booleanValue>
@@ -45,8 +51,8 @@
         <object>Contact</object>
     </recordUpdates>
     <start>
-        <locationX>50</locationX>
-        <locationY>0</locationY>
+        <locationX>401</locationX>
+        <locationY>48</locationY>
         <connector>
             <targetReference>update_contact</targetReference>
         </connector>

@@ -134,6 +134,38 @@
                 <behavior>Edit</behavior>
                 <field>Total_KeyStrokes_In_Round_3__c</field>
             </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Total_KeyStrokes_In_Round_4__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Total_KeyStrokes_In_Round_5__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Total_KeyStrokes_In_Round_6__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Total_KeyStrokes_In_Round_7__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Total_KeyStrokes_In_Round_8__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Total_KeyStrokes_In_Round_9__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Total_KeyStrokes_In_Round_10__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Total_KeyStrokes_In_Round_11__c</field>
+            </layoutItems>
         </layoutColumns>
         <layoutColumns>
             <layoutItems>
@@ -162,7 +194,27 @@
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
+                <field>Total_Time_for_Round_6__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
                 <field>Total_Time_for_Round_7__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Total_Time_for_Round_8__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Total_Time_for_Round_9__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Total_Time_for_Round_10__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Total_Time_for_Round_11__c</field>
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
@@ -449,6 +501,8 @@
         <fields>Game_Name__c</fields>
         <fields>Is_Practice_Question__c</fields>
         <fields>Question_Number__c</fields>
+        <fields>Right_Answer__c</fields>
+        <fields>Participant_Response__c</fields>
         <fields>CREATED_DATE</fields>
         <fields>Reaction_Time_in_ms__c</fields>
         <relatedList>Participant_Game_Response__c.Participant_Game_InfoID__c</relatedList>

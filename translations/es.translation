@@ -1353,11 +1353,11 @@
         <name>Shapes_Game_Text_9</name>
     </customLabels>
     <customLabels>
-        <label>Tell Me More</label>
+        <label>Cuéntame Más</label>
         <name>SpeechTask_Tell_me_more_text</name>
     </customLabels>
     <customLabels>
-        <label>Tell Me</label>
+        <label>Cuéntame</label>
         <name>SpeechTask_Tell_me_text</name>
     </customLabels>
     <customLabels>
@@ -3306,11 +3306,11 @@
         <name>live_URL_10</name>
     </customLabels>
     <customLabels>
-        <label>https://blog.mindcrowd.org/es/</label>
+        <label>https://mindcrowd.org/es/</label>
         <name>live_URL_2</name>
     </customLabels>
     <customLabels>
-        <label>https://blog.mindcrowd.org/es/preguntas-frecuentes/</label>
+        <label>https://mindcrowd.org/es/preguntas-frecuentes/</label>
         <name>live_URL_3</name>
     </customLabels>
     <customLabels>
@@ -3334,7 +3334,7 @@
         <name>live_URL_8</name>
     </customLabels>
     <customLabels>
-        <label>https://blog.mindcrowd.org/es</label>
+        <label>https://mindcrowd.org/es</label>
         <name>live_URL_9</name>
     </customLabels>
     <customLabels>
@@ -5245,8 +5245,16 @@ Pulsa &lt;span class=&quot;n-g-box&quot;&gt;F&lt;/span&gt; para un objeto de int
         <name>survey_name_18</name>
     </customLabels>
     <customLabels>
+        <label><!-- survey_name_19 --></label>
+        <name>survey_name_19</name>
+    </customLabels>
+    <customLabels>
         <label><!-- survey_name_2 --></label>
         <name>survey_name_2</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- survey_name_20 --></label>
+        <name>survey_name_20</name>
     </customLabels>
     <customLabels>
         <label>Historial de enfermedad cerebral</label>
@@ -5403,8 +5411,16 @@ A continuación, haz &lt;span class=&quot;n-g-box&quot;&gt; toca en el lugar de 
         <name>url_Diet_Survey</name>
     </customLabels>
     <customLabels>
+        <label><!-- url_Ecog12 --></label>
+        <name>url_Ecog12</name>
+    </customLabels>
+    <customLabels>
         <label>FhadSurvey</label>
         <name>url_FHAD_Survey</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- url_Glucosamine --></label>
+        <name>url_Glucosamine</name>
     </customLabels>
     <customLabels>
         <label>HealthMedicalSurvey</label>
@@ -6156,6 +6172,10 @@ A continuación, haz &lt;span class=&quot;n-g-box&quot;&gt; toca en el lugar de 
     </flowDefinitions>
     <flowDefinitions>
         <flows/>
+        <fullName>Contact_Study_Update</fullName>
+    </flowDefinitions>
+    <flowDefinitions>
+        <flows/>
         <fullName>Covid_Survey</fullName>
     </flowDefinitions>
     <flowDefinitions>
@@ -6169,6 +6189,10 @@ A continuación, haz &lt;span class=&quot;n-g-box&quot;&gt; toca en el lugar de 
     <flowDefinitions>
         <flows/>
         <fullName>FHAD_Survey</fullName>
+    </flowDefinitions>
+    <flowDefinitions>
+        <flows/>
+        <fullName>Glucosamine_Survey</fullName>
     </flowDefinitions>
     <flowDefinitions>
         <flows/>

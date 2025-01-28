@@ -49,6 +49,10 @@
         <name>Allow_Newsletters__c</name>
     </fields>
     <fields>
+        <label><!-- App Name --></label>
+        <name>App_Name__c</name>
+    </fields>
+    <fields>
         <label><!-- Are you Left or Right hand dominant? --></label>
         <name>Are_you_Left_or_Right_hand_dominant__c</name>
         <picklistValues>
@@ -141,6 +145,10 @@
         <name>Consent_Signed_On__c</name>
     </fields>
     <fields>
+        <label><!-- DBS Email Opt Out --></label>
+        <name>DBS_Email_Opt_Out__c</name>
+    </fields>
+    <fields>
         <label><!-- DIET --></label>
         <name>DIET__c</name>
         <picklistValues>
@@ -193,6 +201,22 @@
         </picklistValues>
     </fields>
     <fields>
+        <label><!-- ECog-12 --></label>
+        <name>ECog_12__c</name>
+        <picklistValues>
+            <masterLabel>Completed</masterLabel>
+            <translation><!-- Completed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Locked</masterLabel>
+            <translation><!-- Locked --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Unlocked</masterLabel>
+            <translation><!-- Unlocked --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
         <label><!-- Education Attainment --></label>
         <name>Education_Attainment__c</name>
     </fields>
@@ -210,6 +234,10 @@
         <help><!-- Email reminder after 1 day --></help>
         <label><!-- Email trigger point --></label>
         <name>Email_trigger_point__c</name>
+    </fields>
+    <fields>
+        <label><!-- Enrolled in Paid Campaign (ECog-12) --></label>
+        <name>Enrolled_in_Paid_Campaign_ECog_12__c</name>
     </fields>
     <fields>
         <label><!-- Enrolled in Paid Campaign --></label>
@@ -431,6 +459,10 @@
             <translation><!-- Svenska --></translation>
         </picklistValues>
         <picklistValues>
+            <masterLabel>Tagalog</masterLabel>
+            <translation><!-- Tagalog --></translation>
+        </picklistValues>
+        <picklistValues>
             <masterLabel>Tiếng Việt</masterLabel>
             <translation><!-- Tiếng Việt --></translation>
         </picklistValues>
@@ -564,6 +596,22 @@
         <name>Full_Name__c</name>
     </fields>
     <fields>
+        <label><!-- GLUCOSAMINE --></label>
+        <name>GLUCOSAMINE__c</name>
+        <picklistValues>
+            <masterLabel>Completed</masterLabel>
+            <translation><!-- Completed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Locked</masterLabel>
+            <translation><!-- Locked --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Unlocked</masterLabel>
+            <translation><!-- Unlocked --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
         <label><!-- Gender --></label>
         <name>Gender__c</name>
         <picklistValues>
@@ -594,6 +642,10 @@
             <masterLabel>Transgender Male</masterLabel>
             <translation><!-- Transgender Male --></translation>
         </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Glucosamine Survey --></label>
+        <name>Glucosamine_Survey__c</name>
     </fields>
     <fields>
         <label><!-- HEALTH MEDICAL --></label>
@@ -2044,6 +2096,10 @@
             <masterLabel>Unlocked</masterLabel>
             <translation><!-- Unlocked --></translation>
         </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Tremendous Award Sent (ECog-12) --></label>
+        <name>Tremendous_Award_Sent_ECog_12__c</name>
     </fields>
     <fields>
         <label><!-- Tremendous Award Sent --></label>

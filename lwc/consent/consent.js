@@ -162,7 +162,7 @@ connectedCallback(){
         for (let i = 0; i < localStorage.length; i++){  
         
             if(localStorage.key(i)=='ipdata' || localStorage.key(i)=='campaigncode' || localStorage.key(i)=='eventId' || localStorage.key(i)=='studiesId' || localStorage.key(i)=='subIdToStoreLocal'
-             || localStorage.key(i)=='utmsource' || localStorage.key(i)=='utmmedium') {
+             || localStorage.key(i)=='utmsource' || localStorage.key(i)=='utmmedium' || localStorage.key(i)=='utmappName') {
                 
                 // Do nothing
                 //console.log('in store local',localStorage.key(i));

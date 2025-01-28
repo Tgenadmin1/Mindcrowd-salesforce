@@ -44,6 +44,9 @@
     <tabs>Swls_Survey__c</tabs>
     <tabs>Receive_Shipment</tabs>
     <tabs>Bean_Game__c</tabs>
+    <tabs>ECog_12__c</tabs>
+    <tabs>Glucosamine__c</tabs>
+    <tabs>Heat_Stress_Survey_2__c</tabs>
     <uiType>Lightning</uiType>
     <utilityBar>MindCrowd_UtilityBar</utilityBar>
 </CustomApplication>

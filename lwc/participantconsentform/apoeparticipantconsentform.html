@@ -90,11 +90,11 @@
           <!-- <legend class="slds-form-element__label">Address</legend> -->
           <div class="form-element__group">
             <div class="slds-col slds-size_12-of-12">
-              <lightning-input type="text" read-only="true" name="firstName" label={Bean_text_25} placeholder={Bean_text_firstNameValue} ></lightning-input>
+              <lightning-input type="text" read-only={isEditable} name="firstName" label={Bean_text_25} placeholder={Bean_text_firstNameValue} onchange={setFirstName}></lightning-input>
             </div>
           
             <div class="slds-col slds-size_12-of-12">
-              <lightning-input type="text" read-only="true" name="lastName" label={Bean_text_26} placeholder={Bean_text_lastNameValue}></lightning-input>
+              <lightning-input type="text" read-only={isEditable} name="lastName" label={Bean_text_26} placeholder={Bean_text_lastNameValue} onchange={setLastName}></lightning-input>  
             </div>
   
             <div class="slds-col slds-size_12-of-12">
@@ -183,6 +183,12 @@
         <lightning-button variant="brand" label={DBS_text_85} title={DBS_text_87} onclick={updateContactFields}
           class="magenta-btn slds-float_left">
         </lightning-button>
+
+        <template if:true={isLoading}>
+          <div class="spinnerIsLoadingApoe">
+            <lightning-spinner alternative-text="Loading..." size="large" variant="brand" class="slds-m-right_medium"></lightning-spinner>
+          </div>
+        </template>
         <!-- <lightning-button variant="brand" label="I Decline" title="Submit" onclick={decline}
           class="magenta-btn slds-float_right">
         </lightning-button> -->

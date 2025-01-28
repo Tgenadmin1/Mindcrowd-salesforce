@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Glucosamine</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Glucosamines</value>
+    </caseValues>
+    <fields>
+        <label><!-- Contact --></label>
+        <name>Contact__c</name>
+        <relationshipLabel><!-- Glucosamines --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- GSM_v1.0.6 --></label>
+        <name>Current_Duration_Taking_Glucosamine__c</name>
+    </fields>
+    <fields>
+        <label><!-- GSM_v1.0.5 --></label>
+        <name>Current_Frequency_of_Glucosamine_Intake__c</name>
+    </fields>
+    <fields>
+        <label><!-- GSM_v1.0.7 --></label>
+        <name>Dosage_Glucosamine__c</name>
+    </fields>
+    <fields>
+        <label><!-- GSM_v1.0.3 --></label>
+        <name>Duration_Took_Glucosamine__c</name>
+    </fields>
+    <fields>
+        <label><!-- Email  --></label>
+        <name>Email__c</name>
+    </fields>
+    <fields>
+        <label><!-- GSM_v1.0.1 --></label>
+        <name>Ever_Taken_Glucosamine__c</name>
+    </fields>
+    <fields>
+        <label><!-- GSM_v1.0.4 --></label>
+        <name>Past_Frequency_of_Glucosamine_Intake__c</name>
+    </fields>
+    <fields>
+        <label><!-- GSM_v1.0.8 --></label>
+        <name>Primary_Reason_for_Taking_Glucosamine__c</name>
+    </fields>
+    <fields>
+        <label><!-- GSM_v1.0.2 --></label>
+        <name>Time_Since_Stopped_Taking_Glucosamine__c</name>
+    </fields>
+    <layouts>
+        <layout>Glucosamine Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>
