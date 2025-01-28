@@ -351,24 +351,9 @@ export default class GamesPage extends NavigationMixin(LightningElement) {
                     finalLockedArray.push(gameLockedArray[3]);
                 }
 
-                if(lang=='es' || this.lstcon.isProject2_Participant__c){
-                    finalLockedArray.push(gameLockedArray[11]);
-                }
-                else{
-                
-                    if (this.lstcon.Fake_News__c == "Opened") {
-                        this.gameItems.push(gamesOpenArray[11]);
-                    } 
-                    else if (this.lstcon.Fake_News__c == "Completed") {
-                        finalCompletedArray.push(gameCompletedArray[11]);
-                    } 
-                    else if (this.lstcon.Fake_News__c == "Locked") {
-                        finalLockedArray.push(gameLockedArray[11]);
-                    }
-                }
-
                 if(this.lstcon.isProject2_Participant__c){
                         finalLockedArray.push(gameLockedArray[10]);
+                        finalLockedArray.push(gameLockedArray[11]);
                         finalLockedArray.push(gameLockedArray[12]);
                         finalLockedArray.push(gameLockedArray[13]);
                         finalLockedArray.push(gameLockedArray[14]);
@@ -402,6 +387,16 @@ export default class GamesPage extends NavigationMixin(LightningElement) {
                         } 
                         else if (this.lstcon.Digits__c == "Locked") {
                             finalLockedArray.push(gameLockedArray[10]);
+                        }
+
+                        if (this.lstcon.Fake_News__c == "Opened") {
+                            this.gameItems.push(gamesOpenArray[11]);
+                        } 
+                        else if (this.lstcon.Fake_News__c == "Completed") {
+                            finalCompletedArray.push(gameCompletedArray[11]);
+                        } 
+                        else if (this.lstcon.Fake_News__c == "Locked") {
+                            finalLockedArray.push(gameLockedArray[11]);
                         }
                         
                         if (this.lstcon.This_That__c == "Opened") {

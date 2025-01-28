@@ -4,7 +4,7 @@
     <description>To update contact field when survey is submitted</description>
     <environments>Default</environments>
     <interviewLabel>Heat Survey {!$Flow.CurrentDateTime}</interviewLabel>
-    <label>Heat Survey</label>
+    <label>Heat Survey 2.0</label>
     <processMetadataValues>
         <name>BuilderType</name>
         <value>
@@ -14,7 +14,7 @@
     <processMetadataValues>
         <name>CanvasMode</name>
         <value>
-            <stringValue>FREE_FORM_CANVAS</stringValue>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
         </value>
     </processMetadataValues>
     <processMetadataValues>
@@ -27,8 +27,8 @@
     <recordUpdates>
         <name>update_checkbox_on_contact</name>
         <label>update checkbox on contact</label>
-        <locationX>517</locationX>
-        <locationY>358</locationY>
+        <locationX>176</locationX>
+        <locationY>323</locationY>
         <filterLogic>and</filterLogic>
         <filters>
             <field>Id</field>
@@ -52,8 +52,8 @@
         <object>Contact</object>
     </recordUpdates>
     <start>
-        <locationX>374</locationX>
-        <locationY>48</locationY>
+        <locationX>50</locationX>
+        <locationY>0</locationY>
         <connector>
             <targetReference>update_checkbox_on_contact</targetReference>
         </connector>
@@ -65,7 +65,7 @@
                 <booleanValue>false</booleanValue>
             </value>
         </filters>
-        <object>Heat_Stress_Survey__c</object>
+        <object>Heat_Stress_Survey_2__c</object>
         <recordTriggerType>Create</recordTriggerType>
         <triggerType>RecordAfterSave</triggerType>
     </start>

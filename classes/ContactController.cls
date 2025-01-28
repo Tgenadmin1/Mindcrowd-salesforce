@@ -17,7 +17,10 @@ public without sharing class ContactController
                                               String mailingzipcode4,
                                               String phoneNumber,
                                               String shipmentconsent,
-                                              String campaigntype)
+                                              String campaigntype,
+                                              Boolean vipbeangame,
+                                              String firstName,
+                                              String lastName)
     {
         try 
         {  
@@ -64,13 +67,26 @@ public without sharing class ContactController
             
             if(con.size()>0)
             { 
-                system.debug('phoneNumber>>'+phoneNumber);
-                if(phoneNumber != null && phoneNumber !='' ){
-                    con[0].Phone=phoneNumber;
-                }
+                if(((ContactController.hasDuplicateRecord(conID,campaigntype)) && !vipbeangame) ||
+                 (campaigntype == 'bean game' && BeanGameStat !='Opened')){
+                     System.debug('Duplicate');
+                 }else{
+                	system.debug('phoneNumber>>'+phoneNumber);
+                	if(phoneNumber != null && phoneNumber !='' ){
+                    	con[0].Phone=phoneNumber;
+                	}
+                	system.debug('Contact Controller FirstName'+firstName);
+                	if(firstName != null && firstName != ''){
+                    	con[0].FirstName=firstName;
+                	}
+                	system.debug('Contact Controller LastName'+lastName);
+                	if(lastName != null && lastName != ''){
+                    	con[0].LastName=lastName;
+                	}
+               }
                 con[0].Shipping_Consent__c=shipmentconsent;
                 update con;
-                if ((ContactController.hasDuplicateRecord(conID,campaigntype) && campaigntype != 'bean game')) {
+                if ((ContactController.hasDuplicateRecord(conID,campaigntype)) && !vipbeangame) {
                     return 'DuplicateSD';
                   }
                 else if(campaigntype == 'bean game' && BeanGameStat !='Opened'){
@@ -319,7 +335,7 @@ public without sharing class ContactController
     @AuraEnabled(cacheable=true)
     public static Contact fetchContactFields1(String participantcode){
     	
-        	Contact con = [SELECT Id,FirstName,LastName,Email,ParticipantCode__c,Bean_Game__c,Consent_signed_on__c FROM Contact 
+        	Contact con = [SELECT Id,FirstName,LastName,Email,ParticipantCode__c,Bean_Game__c,Consent_signed_on__c,User_Id__c FROM Contact 
                                  where ParticipantCode__c=:participantcode limit 1];
         return con;
     }
@@ -408,12 +424,4 @@ public without sharing class ContactController
         }        
         return statuscode;
     }
-
-    @AuraEnabled(cacheable=true)
-    public static Contact contactHistorical(String participantcode) {
-
-    Contact conh = [SELECT Id, Campaign_Code__c FROM Contact where ParticipantCode__c =:participantcode];
-    return conh;
-    }
-
 }

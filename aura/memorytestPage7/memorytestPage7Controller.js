@@ -76,6 +76,7 @@
         // let currentScreent = 0;
         let intervalTime = null
         let timedata = new Date();
+        let totalKeyStrokesInRound = 0;
         let pageLoadStartTime = null;
         let result_time = 0;
         let command_value = 0;
@@ -355,13 +356,14 @@
             }
             if (currentScreent == 22) {
                 roundStartTime = timedata;
+                totalKeyStrokesInRound = 0;
             }
             if (currentScreent == 69) {
                 helper.allowLeaving();
                 roundTotalTime = timedata - roundStartTime;
                 let roundTotalTimeNext = localStorage.getItem('roundTotalTime');//.split('=');
                 let totalTimeForRoundZero = parseInt(roundTotalTime) + parseInt(roundTotalTimeNext);
-                helper.participantGameInfoUpdateTotalTimeRoundOne(component, event, helper, contactId, gameId, participantGameInfoId, totalTimeForRoundZero, currentScreent);
+                helper.participantGameInfoUpdateTotalTimeRoundOne(component, event, helper, contactId, gameId, participantGameInfoId, totalTimeForRoundZero, totalKeyStrokesInRound, currentScreent);
 
             }
             if (currentScreent != 69) {
@@ -512,6 +514,7 @@
         function gamePlay(e) {
             command_value = e.keyCode;
             console.log('command_value = ', command_value);
+            totalKeyStrokesInRound = totalKeyStrokesInRound + 1;
             if(command_value === undefined && inputkeyPress.length <3){
                 inputkeyPress = inputkeyPress + '{Tap}';
             }

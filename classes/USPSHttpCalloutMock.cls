@@ -40,18 +40,21 @@ global class USPSHttpCalloutMock implements HttpCalloutMock
 		} else {
 			// Default response . . . .
 			// starting XML tags
-			XMLValue = '<?xml version=\"1.0\"?><AddressValidateResponse><Address ID=\"0\">';
+			//XMLValue = '<?xml version=\"1.0\"?><AddressValidateResponse><Address ID=\"0\">';
 			
 			// return the offical Test Request 1 from the USPS (with address1 added)
-			XMLValue += '<Address1>Test</Address1>';
+			/*XMLValue += '<Address1>Test</Address1>';
 			XMLValue += '<Address2>6406 IVY LN</Address2>';
-			XMLValue += '<City>GREENBELT</City><State>MD</State><Zip5>20770</Zip5><Zip4>1441</Zip4>';
+			XMLValue += '<City>GREENBELT</City><State>MD</State><Zip5>20770</Zip5><Zip4>1441</Zip4>';*/
 			
 			// closing XML tags
-			XMLValue += '</Address></AddressValidateResponse>';
+			//XMLValue += '</Address></AddressValidateResponse>';
+            ReturnValue.setStatusCode(200);
+            // Set the response body
+            ReturnValue.setBody('{"address": {"streetAddress": "35145 DRAKESHIRE PL","city": "FARMINGTON HILLS","state": "MI","ZIPCode": "48335","ZIPPlus4": "3230"}}');
 		} // IncomingRequest.contains('ERROR')
 			
-		ReturnValue.setBody(XMLValue);
+		//ReturnValue.setBody(XMLValue);
 		return ReturnValue;
 
 	} 

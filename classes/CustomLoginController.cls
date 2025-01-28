@@ -94,7 +94,7 @@ public with sharing class CustomLoginController {
                      Health_Lifestyle_and_Medical__c ,Highest_level_of_education_completed__c,ParticipantCode__c,Fake_News__c,
                      Tell_Me__c,Digits__c,Tell_Me_More__c,This_That__c,Bean_Game__c,HEALTH_MEDICAL__c, COVID__c, BRAIN_DISEASE__c,SES__c, 
                      FHAD__c, WOMENS_HEALTH__c,SUBJECTIVE_ENGLISH__c, SLEEP__c, ADL__c, DIET__c, PERCEIVED_STRESS__c,SWLS__c,
-                     QPAR__c, SOCIAL_STRESSOR__c, ANXIETY__c, SOCIAL_SUPPORT__c,CANCER__c,consent_signed_on__c,isProject2_Participant__c,GLUCOSAMINE__c,ECog12__c FROM Contact where id=:u.ContactId];
+                     QPAR__c, SOCIAL_STRESSOR__c, ANXIETY__c, SOCIAL_SUPPORT__c,CANCER__c,consent_signed_on__c,isProject2_Participant__c,GLUCOSAMINE__c,ECog_12__c FROM Contact where id=:u.ContactId];
             
             List<Participant_Game_Info__c> pgi = [SELECT Country__c FROM Participant_Game_Info__c 
                                                   WHERE Country__c = 'United States' and Contact_Name__c = :u.ContactId];

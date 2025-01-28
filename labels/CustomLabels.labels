@@ -10751,7 +10751,7 @@ Research Coordinator at mindcrowdquestion@tgen.org</value>
         <language>en_US</language>
         <protected>false</protected>
         <shortDescription>url_Ecog12</shortDescription>
-        <value>ECog-12-Paid</value>
+        <value>ECog-12</value>
     </labels>
     <labels>
         <fullName>url_FHAD_Survey</fullName>

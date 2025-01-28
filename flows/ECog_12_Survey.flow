@@ -37,7 +37,7 @@
             </value>
         </filters>
         <inputAssignments>
-            <field>ECog12__c</field>
+            <field>ECog_12__c</field>
             <value>
                 <stringValue>Completed</stringValue>
             </value>

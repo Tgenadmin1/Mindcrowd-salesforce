@@ -14,6 +14,10 @@
         <relationshipLabel><!-- Participant Game Responses --></relationshipLabel>
     </fields>
     <fields>
+        <label><!-- Created Date (PGR) --></label>
+        <name>Created_Date_PGR__c</name>
+    </fields>
+    <fields>
         <label><!-- Don&apos;t Know --></label>
         <name>Don_t_Know__c</name>
     </fields>

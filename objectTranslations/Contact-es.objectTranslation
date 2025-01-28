@@ -157,6 +157,10 @@
         <name>Consent_Signed_On__c</name>
     </fields>
     <fields>
+        <label><!-- DBS Email Opt Out --></label>
+        <name>DBS_Email_Opt_Out__c</name>
+    </fields>
+    <fields>
         <label><!-- DIET --></label>
         <name>DIET__c</name>
         <picklistValues>
@@ -217,8 +221,8 @@
         <name>Dizzy_Spells__c</name>
     </fields>
     <fields>
-        <label><!-- ECog12 --></label>
-        <name>ECog12__c</name>
+        <label><!-- ECog 12 --></label>
+        <name>ECog_12__c</name>
         <picklistValues>
             <masterLabel>Completed</masterLabel>
             <translation><!-- Completed --></translation>
@@ -469,6 +473,10 @@
         <picklistValues>
             <masterLabel>Svenska</masterLabel>
             <translation><!-- Svenska --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Tagalog</masterLabel>
+            <translation><!-- Tagalog --></translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Tiếng Việt</masterLabel>

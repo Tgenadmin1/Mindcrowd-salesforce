@@ -653,6 +653,10 @@
         <enabled>false</enabled>
     </classAccesses>
     <classAccesses>
+        <apexClass>USPSAPIAddressResp</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
         <apexClass>USPSAddress</apexClass>
         <enabled>false</enabled>
     </classAccesses>
@@ -2284,6 +2288,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
+        <field>CommSubscription.CommunicationSubscriptionCode</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
         <field>CommSubscription.DataUsePurposeId</field>
         <readable>false</readable>
     </fieldPermissions>
@@ -2429,6 +2438,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
+        <field>Contact.DBS_Email_Opt_Out__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
         <field>Contact.DIET__c</field>
         <readable>false</readable>
     </fieldPermissions>
@@ -2474,7 +2488,7 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
-        <field>Contact.ECog12__c</field>
+        <field>Contact.ECog_12__c</field>
         <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -4159,6 +4173,156 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
+        <field>Heat_Stress_Survey_2__c.Awareness_public_health_Impact__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Heat_Stress_Survey_2__c.Brain_Impact_exposed_summer_heat__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Heat_Stress_Survey_2__c.Brain_health_Impact__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Heat_Stress_Survey_2__c.Contact__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Heat_Stress_Survey_2__c.During_summer_heat_related_issues__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Heat_Stress_Survey_2__c.During_summer_physical_activity__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Heat_Stress_Survey_2__c.During_summer_reason_outside_for_exercis__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Heat_Stress_Survey_2__c.During_summer_reason_outside_for_leisure__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Heat_Stress_Survey_2__c.During_summer_reason_outside_for_work__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Heat_Stress_Survey_2__c.During_summer_time_spend_out_each_day__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Heat_Stress_Survey_2__c.Email__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Heat_Stress_Survey_2__c.Feeling_overheated_symptoms__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Heat_Stress_Survey_2__c.Heat_Related_Emergency__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Heat_Stress_Survey_2__c.Heat_stress_Increase_coming_decade__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Heat_Stress_Survey_2__c.Heat_stress_medical_condition__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Heat_Stress_Survey_2__c.Heat_stress_personal_affect__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Heat_Stress_Survey_2__c.Heat_stress_training__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Heat_Stress_Survey_2__c.High_heat_risk_factors__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Heat_Stress_Survey_2__c.How_serious_health_concern__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Heat_Stress_Survey_2__c.Important_factors_to_consider__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Heat_Stress_Survey_2__c.Learn_more_about_heat_stress__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Heat_Stress_Survey_2__c.Measures_to_prevent_heat_stress__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Heat_Stress_Survey_2__c.Outside_job_2_hours__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Heat_Stress_Survey_2__c.Public_health_guidelines__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Heat_Stress_Survey_2__c.Symptoms_associated__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Heat_Stress_Survey_2__c.Taking_preventative_steps__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Heat_Stress_Survey_2__c.Vulnerable_populations_effect__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Heat_Stress_Survey_2__c.What_zipcode_live_during_majority_summer__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Heat_Stress_Survey_2__c.Work_outside_breaks_permitted__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Heat_Stress_Survey_2__c.Work_outside_employee_volunteer__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
         <field>Heat_Stress_Survey__c.Activity_during_overheat_easy_access_to__c</field>
         <readable>false</readable>
     </fieldPermissions>
@@ -5244,6 +5408,16 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
+        <field>Participant_Game_Info__c.Total_KeyStrokes_In_Round_10__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Participant_Game_Info__c.Total_KeyStrokes_In_Round_11__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
         <field>Participant_Game_Info__c.Total_KeyStrokes_In_Round_1__c</field>
         <readable>false</readable>
     </fieldPermissions>
@@ -5259,12 +5433,52 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
+        <field>Participant_Game_Info__c.Total_KeyStrokes_In_Round_4__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Participant_Game_Info__c.Total_KeyStrokes_In_Round_5__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Participant_Game_Info__c.Total_KeyStrokes_In_Round_6__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Participant_Game_Info__c.Total_KeyStrokes_In_Round_7__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Participant_Game_Info__c.Total_KeyStrokes_In_Round_8__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Participant_Game_Info__c.Total_KeyStrokes_In_Round_9__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
         <field>Participant_Game_Info__c.Total_Reaction_Time__c</field>
         <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
         <field>Participant_Game_Info__c.Total_Time_for_Round_0__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Participant_Game_Info__c.Total_Time_for_Round_10__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Participant_Game_Info__c.Total_Time_for_Round_11__c</field>
         <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -5294,7 +5508,22 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
+        <field>Participant_Game_Info__c.Total_Time_for_Round_6__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
         <field>Participant_Game_Info__c.Total_Time_for_Round_7__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Participant_Game_Info__c.Total_Time_for_Round_8__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Participant_Game_Info__c.Total_Time_for_Round_9__c</field>
         <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -5395,6 +5624,11 @@
     <fieldPermissions>
         <editable>false</editable>
         <field>Participant_Game_Response__c.Contact_Name__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Participant_Game_Response__c.Created_Date_PGR__c</field>
         <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -7785,6 +8019,10 @@
     </flowAccesses>
     <flowAccesses>
         <enabled>false</enabled>
+        <flow>Contact_Study_Update</flow>
+    </flowAccesses>
+    <flowAccesses>
+        <enabled>false</enabled>
         <flow>Covid_Survey</flow>
     </flowAccesses>
     <flowAccesses>
@@ -8031,6 +8269,9 @@
     </layoutAssignments>
     <layoutAssignments>
         <layout>HealthMedical_Survey__c-HealthMedical Survey Layout</layout>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>Heat_Stress_Survey_2__c-Heat_2%2E0 Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
         <layout>Heat_Stress_Survey__c-HEAT Layout</layout>
@@ -8860,6 +9101,10 @@
     <tabVisibilities>
         <tab>HealthMedical_Survey__c</tab>
         <visibility>DefaultOn</visibility>
+    </tabVisibilities>
+    <tabVisibilities>
+        <tab>Heat_Stress_Survey_2__c</tab>
+        <visibility>Hidden</visibility>
     </tabVisibilities>
     <tabVisibilities>
         <tab>Heat_Stress_Survey__c</tab>

@@ -24,8 +24,13 @@ public without sharing class TrackShipment
      public static String uspsurl=integrationsettings.USPS_URL__c;  
      public static String clientip=integrationsettings.Client_Ip__c;
      public static String sourceid=integrationsettings.Source_Id__c;
+     public static String grantType= ShipmentLabel.integrationsettings.grant_type__c;
+     public static String clientId= ShipmentLabel.integrationsettings.client_id__c;
+     public static String clientSecret= ShipmentLabel.integrationsettings.client_secret__c;
+     public static String endPointAccessToken= ShipmentLabel.integrationsettings.AccessToken_url__c;
+     public static String trackingURL= ShipmentLabel.integrationsettings.TrackingURL__c;
    //METHOD created to build a URL
-    public static string BuildTrackShipmentURLString(USPSTrack ShipmentToTrack,String USPS_UID,String trackId) 
+    /*public static string BuildTrackShipmentURLString(USPSTrack ShipmentToTrack,String USPS_UID,String trackId) 
     { 
         
         //String BaseURL = 'https://secure.shippingapis.com/ShippingAPI.dll?API=TrackV2&XML=';
@@ -197,7 +202,7 @@ public without sharing class TrackShipment
 
         return ReturnTracking;      
 
-    } // ParserUSPSTrackErrorXML
+    }*/ // ParserUSPSTrackErrorXML
 @AuraEnabled
 public static USPSTrack GetTrackingDetails(String trackId) 
 {
@@ -231,16 +236,72 @@ public static USPSTrack GetTrackingDetails(String trackId)
         //Always keep it commented to avoid to move un-commented code to Production.
         //trackId='9400111298370071281345';
     
-        string USPSURL = BuildTrackShipmentURLString(ShipmentToTrack,userid,trackId);
+        /*string USPSURL = BuildTrackShipmentURLString(ShipmentToTrack,userid,trackId);
         string XMLResponse = GetTrackStatusFromUSPS(USPSURL);
-        ResponseTrack = ParseUSPSResponseXML(XMLResponse);
+        ResponseTrack = ParseUSPSResponseXML(XMLResponse);*/
+    
+        // Fetch access token
+        String accessToken = USPSLabelAccessToken.requestAccessToken(grantType, clientId, clientSecret, endPointAccessToken);
+        System.debug('AccessToken: ' + accessToken);
+    
+        HttpResponse httpTrackingAPIresp;
+        try{ 
+            httpTrackingAPIresp = USPSTrackingAPI(trackId,accessToken);
+        }
+        catch(Exception e){
+            ResponseTrack.USPS_Returned_Error = true;
+            ResponseTrack.USPS_ERROR_DESC = 'Error in Tracking';
+            ResponseTrack.USPS_ERROR_SOURCE = 'Tracking Error';
+            ResponseTrack.USPS_ERROR_CODE = '-1';
+        }
+    
+           if (httpTrackingAPIresp != null && httpTrackingAPIresp.getStatusCode() == 200) {
+               System.debug('uspsAddResp: ' + httpTrackingAPIresp.getBody());
+               Map<String, Object> uspsTrackRespm =  (Map<String, Object>) JSON.deserializeUntyped(httpTrackingAPIresp.getBody());
+               String statusCategory =  (String)uspsTrackRespm.get('statusCategory');
+               String trackingNumber =  (String)uspsTrackRespm.get('trackingNumber');
+               String statusSummary =  (String)uspsTrackRespm.get('statusSummary');
+               //List<Map<String, Object>> trackingEvents=  (List<Map<String, Object>>)uspsTrackRespm.get('trackingEvents');
+               List<Object> trackingEventsRaw = (List<Object>)uspsTrackRespm.get('trackingEvents');
+               ResponseTrack.StatusCategory = statusCategory;
+               ResponseTrack.TrackID = trackingNumber;
+               ResponseTrack.StatusSummary = statusSummary; 
+               ResponseTrack.TrackSummary = statusSummary; 
+               String eventCode = '';
+               if (trackingEventsRaw != null && trackingEventsRaw.size() > 0) {
+                    Map<String, Object> firstEvent = (Map<String, Object>) trackingEventsRaw[0];
+                    eventCode = (String)firstEvent.get('eventCode');
+                }
+               ResponseTrack.EventCode = eventCode;
+               System.debug('ResponseTrack: ' + ResponseTrack);
+           }
+      else{
+           System.debug('uspsAddErrResp: ' + httpTrackingAPIresp.getBody());
+           Map<String, Object> uspsAddErrRespm =  (Map<String, Object>) JSON.deserializeUntyped(httpTrackingAPIresp.getBody());
+           Map<String, Object> error =  (Map<String, Object>)uspsAddErrRespm.get('error');
+           ResponseTrack.USPS_Returned_Error = true;
+           ResponseTrack.USPS_ERROR_DESC =  (String)error.get('message');
+           ResponseTrack.USPS_ERROR_SOURCE = 'API';
+           ResponseTrack.USPS_ERROR_CODE = (String)error.get('code');
         
-            if (ResponseTrack.USPS_Returned_Error == true) {
+            /*if (ResponseTrack.USPS_Returned_Error == true) {
                 system.debug('USPS_ERROR_CODE: ' + ResponseTrack.USPS_ERROR_CODE);
                 system.debug('USPS_ERROR_DESC: ' + ResponseTrack.USPS_ERROR_DESC);
                 system.debug('USPS_ERROR_SOURCE: ' + ResponseTrack.USPS_ERROR_SOURCE);
-            } // check for error code
+            }*/ // check for error code
+      }
        return ResponseTrack;
     } 
-
+    
+    private static HttpResponse USPSTrackingAPI(String trackId,String accessToken){ 
+        trackingURL=trackingURL+EncodingUtil.urlEncode(trackId, 'UTF-8')+'?expand=DETAIL';
+		HttpRequest USPSRequest = new HttpRequest();
+        Http USPSHttp = new Http();
+        USPSRequest.setMethod('GET');
+        USPSRequest.setEndpoint(trackingURL);
+        USPSRequest.setHeader('Accept','application/json');
+        USPSRequest.setHeader('Authorization','Bearer ' + accessToken);
+        HttpResponse USPSResponse = USPSHttp.send(USPSRequest);
+        return USPSResponse;
+    }
 }

@@ -407,7 +407,7 @@
         <description>This field comprises of the tracking number provided by USPS for tracking the shipments</description>
         <externalId>false</externalId>
         <label>Tracking Id</label>
-        <length>30</length>
+        <length>50</length>
         <required>false</required>
         <trackFeedHistory>false</trackFeedHistory>
         <trackTrending>false</trackTrending>

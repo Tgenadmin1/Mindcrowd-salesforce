@@ -1,5 +1,4 @@
 <apex:page standardController="Shipping_Detail__c" applyHtmlTag="false" showHeader="false" recordSetVar="Shipping" extensions="PrintLabelController">
-
     <head>
         <apex:includeScript value="{!$Resource.jquery_min}"/>
         <style>
@@ -12,14 +11,24 @@
                 padding: 0;
                 margin: 0;
                 word-break: break-word;
+                overflow: hidden; /* Prevent overflow */
             }
-            .content { width: 100%; }
-            .main-label-box { width: 100%; }
-            .label-box {
-                margin: 5px;
+            .content {
                 width: 100%;
-                float: left;
+                padding: 0;
+                margin: 0;
+            }
+            .main-label-box {
+                width: 100%;
+            }
+            .label-box {
+                margin: 0; /* Removed margin */
+                padding: 0; /* Removed padding */
+                width: 100%;
+                float: none; /* Removed float */
+                display: block; /* Ensure it is a block-level element */
                 box-sizing: border-box;
+                page-break-inside: avoid; /* Ensure no page breaks within */
             }
             .print {
                 background-color: #0176d3;
@@ -32,33 +41,30 @@
                 margin: 5px;
                 display: inline-block;
             }
-            
             .print:hover {
                 text-decoration: none;
                 color: #fff;
                 background-color: #01569c;
             }
-           @media print {
-                .print { display: none; }
-                .label-box {
-                    margin: 0;
-                    width: 100%;
-                    height: 100vh; /* Full height for each label */
-  
+            @media print {
+                .print {
+                    display: none;
                 }
-                            @page {
-                    size: portrait; /* Force portrait mode */
-                    margin: 10mm; /* Adjust margins to avoid cutting off content */
+                @page {
+                    size: Landscape;
+                    margin: 0; /* Tighten margins to prevent empty pages */
                 }
                 .content {
                     width: 100%;
-                    height: auto; /* Adjust height automatically */
+                    height: auto;
                     text-align: center;
+                    padding: 0;
+                    margin: 0;
                 }
                 svg {
-                    height: auto; /* Adjust height */
-                    width: auto; /* Adjust width */
-                    margin: auto; /* Center horizontally */
+                    height: auto;
+                    width: auto;
+                    margin: 0 auto; /* Center horizontally */
                 }
             }
         </style>
@@ -69,11 +75,8 @@
 
         <script>
             function base64ToSVG(base64) {
-                // Decode base64 to raw SVG data
                 var rawData = window.atob(base64);
-                // Construct the SVG element
                 var svgElement = $('<div class="label-box"></div>').html(rawData);
-                // Append to the content container
                 $('.content').append(svgElement);
             }
 

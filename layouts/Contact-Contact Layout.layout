@@ -116,6 +116,10 @@
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
+                <field>App_Name__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
                 <field>Study_Participant_Id__c</field>
             </layoutItems>
             <layoutItems>
@@ -295,15 +299,11 @@
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
-                <field>Fake_News__c</field>
+                <field>This_That__c</field>
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
-                <field>Digits__c</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
-                <field>Tell_Me_More__c</field>
+                <field>Tell_Me__c</field>
             </layoutItems>
         </layoutColumns>
         <layoutColumns>
@@ -329,11 +329,15 @@
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
-                <field>This_That__c</field>
+                <field>Fake_News__c</field>
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
-                <field>Tell_Me__c</field>
+                <field>Digits__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Tell_Me_More__c</field>
             </layoutItems>
         </layoutColumns>
         <style>TwoColumnsLeftToRight</style>
@@ -382,7 +386,7 @@
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
-                <field>ECog12__c</field>
+                <field>ECog_12__c</field>
             </layoutItems>
         </layoutColumns>
         <layoutColumns>
@@ -628,6 +632,7 @@
     </relatedLists>
     <relatedLists>
         <fields>NAME</fields>
+        <fields>Campaign__c</fields>
         <fields>Shipment_Status__c</fields>
         <fields>Price__c</fields>
         <fields>Tracking_Id__c</fields>

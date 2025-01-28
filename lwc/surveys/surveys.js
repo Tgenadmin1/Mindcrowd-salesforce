@@ -21,6 +21,8 @@ import url_Social_Support_Survey from '@salesforce/label/c.url_Social_Support_Su
 import url_Cancer_Survey from '@salesforce/label/c.url_Cancer_Survey';
 import url_Heat_Survey from '@salesforce/label/c.url_Heat_Survey';
 import Health_Medical from '@salesforce/label/c.survey_name_1';
+import url_Glucosamine from '@salesforce/label/c.url_Glucosamine';
+import url_Ecog12 from '@salesforce/label/c.url_Ecog12';
 import COVID from '@salesforce/label/c.survey_name_2';
 import Brain_Disease from '@salesforce/label/c.survey_name_3';
 import SES from '@salesforce/label/c.survey_name_4';
@@ -38,6 +40,8 @@ import Anxiety from '@salesforce/label/c.survey_name_15';
 import Social_Support from '@salesforce/label/c.survey_name_16';
 import Cancer from '@salesforce/label/c.survey_name_17';
 import Heat from '@salesforce/label/c.survey_name_18';
+import Glucosamine from '@salesforce/label/c.survey_name_19';
+import Ecog12 from '@salesforce/label/c.survey_name_20';
 import game_name_c from '@salesforce/label/c.game_name_c';
 import survey_time_2_min from '@salesforce/label/c.survey_time_2_min';
 import survey_time_3_min from '@salesforce/label/c.survey_time_3_min';
@@ -57,6 +61,7 @@ export default class surveys extends NavigationMixin(LightningElement) {
     game_name_c =  game_name_c;
     hideSurvey18 = false;
     hideSurvey19 = false;
+    hideSurvey20 = false;
 
     connectedCallback() {
         getCurrentContact()
@@ -74,15 +79,16 @@ export default class surveys extends NavigationMixin(LightningElement) {
                 let surveyNames = [];
                 let surveyClasses = [];
                 let surveyTimes = [];
+                const lang= document.getElementsByTagName("html")[0].getAttribute("lang");
                 if(this.lstcon.Sex__c == 'Female' && this.lstcon.Gender__c == 'Female'){
-                    surveyNames = [Health_Medical,COVID,Brain_Disease,SES,FHAD,English,Sleep,ADL,Diet,Perceived_Stress,SWLS,QPAR,Social_Stress,Anxiety,Social_Support,Cancer,Women_Health];
-                    surveyClasses = ['survey1','survey2','survey3','survey4','survey5','survey7','survey8','survey9','survey10','survey11','survey12','survey13','survey14','survey15','survey16','survey17','survey6'];
-                    surveyTimes = [survey_time_5_min,survey_time_5_min,survey_time_5_min,survey_time_3_min,survey_time_3_min,survey_time_2_min,survey_time_5_min,survey_time_3_min,survey_time_3_min,survey_time_3_min,survey_time_2_min,survey_time_3_min,survey_time_3_min,survey_time_3_min,survey_time_3_min,survey_time_5_min,survey_time_3_min];
+                    surveyNames = [Health_Medical,COVID,Brain_Disease,SES,FHAD,English,Sleep,ADL,Diet,Perceived_Stress,SWLS,QPAR,Social_Stress,Anxiety,Social_Support,Glucosamine,Ecog12,Cancer,Women_Health];
+                    surveyClasses = ['survey1','survey2','survey3','survey4','survey5','survey7','survey8','survey9','survey10','survey11','survey12','survey13','survey14','survey15','survey16','survey19','survey20','survey17','survey6'];
+                    surveyTimes = [survey_time_5_min,survey_time_5_min,survey_time_5_min,survey_time_3_min,survey_time_3_min,survey_time_2_min,survey_time_5_min,survey_time_3_min,survey_time_3_min,survey_time_3_min,survey_time_2_min,survey_time_3_min,survey_time_3_min,survey_time_3_min,survey_time_3_min,survey_time_3_min,survey_time_5_min,survey_time_5_min,survey_time_3_min];
                 }
                 else{
-                    surveyNames = [Health_Medical,COVID,Brain_Disease,SES,FHAD,English,Sleep,ADL,Diet,Perceived_Stress,SWLS,QPAR,Social_Stress,Anxiety,Social_Support,Cancer];
-                    surveyClasses = ['survey1','survey2','survey3','survey4','survey5','survey7','survey8','survey9','survey10','survey11','survey12','survey13','survey14','survey15','survey16','survey17'];
-                    surveyTimes = [survey_time_5_min,survey_time_5_min,survey_time_5_min,survey_time_3_min,survey_time_3_min,survey_time_2_min,survey_time_5_min,survey_time_3_min,survey_time_3_min,survey_time_3_min,survey_time_2_min,survey_time_3_min,survey_time_3_min,survey_time_3_min,survey_time_3_min,survey_time_5_min];
+                    surveyNames = [Health_Medical,COVID,Brain_Disease,SES,FHAD,English,Sleep,ADL,Diet,Perceived_Stress,SWLS,QPAR,Social_Stress,Anxiety,Social_Support,Glucosamine,Ecog12,Cancer];
+                    surveyClasses = ['survey1','survey2','survey3','survey4','survey5','survey7','survey8','survey9','survey10','survey11','survey12','survey13','survey14','survey15','survey16','survey19','survey20','survey17'];
+                    surveyTimes = [survey_time_5_min,survey_time_5_min,survey_time_5_min,survey_time_3_min,survey_time_3_min,survey_time_2_min,survey_time_5_min,survey_time_3_min,survey_time_3_min,survey_time_3_min,survey_time_2_min,survey_time_3_min,survey_time_3_min,survey_time_3_min,survey_time_3_min,survey_time_3_min,survey_time_5_min,survey_time_5_min];
                 }               
                 const surveysOpenArray = [];
                 const surveyLockedArray = [];
@@ -284,25 +290,52 @@ export default class surveys extends NavigationMixin(LightningElement) {
                 }
 
                 if(this.lstcon.CANCER__c == "Opened") {
-                    this.surveyItems.push(surveysOpenArray[15]);            
+                    this.surveyItems.push(surveysOpenArray[17]);            
                 } 
                 else if (this.lstcon.CANCER__c == "Completed") {
-                    finalCompletedArray.push(surveyCompletedArray[15]);
+                    finalCompletedArray.push(surveyCompletedArray[17]);
                 } 
                 else if (this.lstcon.CANCER__c == "Locked") {
+                    finalLockedArray.push(surveyLockedArray[17]);
+                }
+
+                if(lang=='en-US'){
+                    if (this.lstcon.GLUCOSAMINE__c == "Opened") {
+                        this.surveyItems.push(surveysOpenArray[15]);            
+                    }
+                    else if (this.lstcon.GLUCOSAMINE__c == "Completed") {
+                        finalCompletedArray.push(surveyCompletedArray[15]);
+                    } 
+                    else if (this.lstcon.GLUCOSAMINE__c == "Locked") {
+                        finalLockedArray.push(surveyLockedArray[15]);
+                    }
+                    
+                    if(this.lstcon.Bean_Game__c == 'Completed' && this.lstcon.ECog_12__c == "Opened"){
+                        this.surveyItems.push(surveysOpenArray[16]);
+                    }
+                    else if (this.lstcon.ECog_12__c == "Completed") {
+                        finalCompletedArray.push(surveyCompletedArray[16]);
+                    } 
+                    else {
+                        finalLockedArray.push(surveyLockedArray[16]);
+                    }
+
+                }
+                else{
                     finalLockedArray.push(surveyLockedArray[15]);
+                    finalLockedArray.push(surveyLockedArray[16]);
                 }
 
                 if(this.lstcon.Sex__c == 'Female' && this.lstcon.Gender__c == 'Female'){
-                    this.hideSurvey19 = true;
+                    this.hideSurvey20 = true;
                     if (this.lstcon.WOMENS_HEALTH__c == "Opened") {
-                        this.surveyItems.push(surveysOpenArray[16]);
+                        this.surveyItems.push(surveysOpenArray[18]);
                     }
                     else if (this.lstcon.WOMENS_HEALTH__c == "Completed") {
-                        finalCompletedArray.push(surveyCompletedArray[16]);
+                        finalCompletedArray.push(surveyCompletedArray[18]);
                     }
                     else if (this.lstcon.WOMENS_HEALTH__c == "Locked") {
-                        finalLockedArray.push(surveyLockedArray[16]);
+                        finalLockedArray.push(surveyLockedArray[18]);
                     }
                 }
 				const surveyItemsSorted = this.sortByOrder(this.surveyItems, 'surveyname', elementPositionMap);
@@ -381,6 +414,12 @@ export default class surveys extends NavigationMixin(LightningElement) {
         else if(clickedElement.classList.contains('survey18')){
             url = `${Community_Url_MC_Cloud}${url_Heat_Survey}?Email=${this.lstcon.Email}&Contact=${this.lstcon.Id}`;
         } 
+        else if(clickedElement.classList.contains('survey19')){
+            url = `${Community_Url_MC_Cloud}${url_Glucosamine}?Email=${this.lstcon.Email}&Contact=${this.lstcon.Id}`;
+        } 
+        else if(clickedElement.classList.contains('survey20')){
+            url = `${Community_Url_MC_Cloud}${url_Ecog12}?Email=${this.lstcon.Email}&Contact=${this.lstcon.Id}`;
+		}
 		this.navigateToUrl(url);
     }   
 

@@ -44,7 +44,7 @@
                     localStorage.setItem('campaigncode', urlParams.utm_campaign ? urlParams.utm_campaign : '');
                     localStorage.setItem('utmsource', urlParams.utm_source ? urlParams.utm_source : '');
                     localStorage.setItem('utmmedium', urlParams.utm_medium ? urlParams.utm_medium : '');
-                    localStorage.setItem('utmappName', urlParams.appname ? urlParams.appname : '');
+                    localStorage.setItem('utmappName', urlParams.appname ?  urlParams.appname.substring(0, 50) : '');
             }            
         }       
         

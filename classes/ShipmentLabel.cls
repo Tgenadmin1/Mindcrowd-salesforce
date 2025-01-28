@@ -604,7 +604,7 @@ public with sharing class ShipmentLabel
                 ResponseLabel.ToState=labelAddress.state;
                 ResponseLabel.ToZip5=labelAddress.ZIPCode;
                 ResponseLabel.ToZip4=labelAddress.ZIPPlus4;
-                ResponseLabel.BarcodeNumber=labelRresponse.routingInformation;
+                ResponseLabel.BarcodeNumber=labelRresponse.routingInformation+labelRresponse.trackingNumber;
                 ResponseLabel.Postage=String.valueof(labelRresponse.postage);
                 ResponseLabel.LabelImage=labelRresponse.labelImage;
                 return ResponseLabel;            

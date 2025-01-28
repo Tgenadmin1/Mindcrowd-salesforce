@@ -105,6 +105,12 @@ global class BatchSurveyStatusUpdate implements Database.Batchable<SObject>, Sch
         
         BatchSurveyStatusUpdate surveyANXIETY = new BatchSurveyStatusUpdate('Anxiety_Survey__c', 'Contact__c', 'ANXIETY__c');
 		Database.executeBatch(surveyANXIETY);
+		
+		BatchSurveyStatusUpdate surveyGLUCOSAMINE = new BatchSurveyStatusUpdate('Glucosamine__c', 'Contact__c', 'GLUCOSAMINE__c');
+		Database.executeBatch(surveyGLUCOSAMINE);
+		
+		BatchSurveyStatusUpdate surveyECOG12 = new BatchSurveyStatusUpdate('ECog_12__c', 'Contact__c', 'ECog_12__c');
+		Database.executeBatch(surveyECOG12);
 
     }
 }

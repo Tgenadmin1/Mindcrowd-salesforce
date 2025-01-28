@@ -292,6 +292,150 @@
           return "PHONE";
         }
         return "DESKTOP";
-      }
+    }, 
+
+    participantGameInfoUpdateTotalTimeRoundOne: function(component,event,helper,userContactId,gameId,participantGameInfoId,totalTimeForRound,totalKeyStrokesInRound,currentScreent) {
+        let data = {};
+
+        if(currentScreent=='11'){
+            data = {
+                Contact_Name__c:userContactId,
+                Game_Name__c:gameId,
+                Id:participantGameInfoId,
+                Total_Time_for_Round_0__c:totalTimeForRound,
+                Total_KeyStrokes_In_Round_0__c: totalKeyStrokesInRound
+            };
+        }
+        else if(currentScreent=='21'){
+            data = {
+                Contact_Name__c:userContactId,
+                Game_Name__c:gameId,
+                Id:participantGameInfoId,
+                Total_Time_for_Round_1__c:totalTimeForRound,
+                Total_KeyStrokes_In_Round_1__c: totalKeyStrokesInRound
+            };
+        }
+        else if(currentScreent=='31'){
+            data = {
+                Contact_Name__c:userContactId,
+                Game_Name__c:gameId,
+                Id:participantGameInfoId,
+                Total_Time_for_Round_2__c:totalTimeForRound,
+                Total_KeyStrokes_In_Round_2__c: totalKeyStrokesInRound
+            };
+        }
+        else if(currentScreent=='41'){
+            data = {
+                Contact_Name__c:userContactId,
+                Game_Name__c:gameId,
+                Id:participantGameInfoId,
+                Total_Time_for_Round_3__c:totalTimeForRound,
+                Total_KeyStrokes_In_Round_3__c: totalKeyStrokesInRound
+            };
+        }
+        else if(currentScreent=='51'){
+            data = {
+                Contact_Name__c:userContactId,
+                Game_Name__c:gameId,
+                Id:participantGameInfoId,
+                Total_Time_for_Round_4__c:totalTimeForRound,
+                Total_KeyStrokes_In_Round_4__c: totalKeyStrokesInRound
+            };
+        }
+        else if(currentScreent=='61'){
+            data = {
+                Contact_Name__c:userContactId,
+                Game_Name__c:gameId,
+                Id:participantGameInfoId,
+                Total_Time_for_Round_5__c:totalTimeForRound,
+                Total_KeyStrokes_In_Round_5__c: totalKeyStrokesInRound
+            };
+        }
+        else if(currentScreent=='127'){
+            data = {
+                Contact_Name__c:userContactId,
+                Game_Name__c:gameId,
+                Id:participantGameInfoId,
+                Total_Time_for_Round_6__c:totalTimeForRound,
+                Total_KeyStrokes_In_Round_6__c: totalKeyStrokesInRound
+            };
+        }
+        else if(currentScreent=='161'){
+            data = {
+                Contact_Name__c:userContactId,
+                Game_Name__c:gameId,
+                Id:participantGameInfoId,
+                Total_Time_for_Round_7__c:totalTimeForRound,
+                Total_KeyStrokes_In_Round_7__c: totalKeyStrokesInRound
+            };
+        }
+        else if(currentScreent=='226'){
+            data = {
+                Contact_Name__c:userContactId,
+                Game_Name__c:gameId,
+                Id:participantGameInfoId,
+                Total_Time_for_Round_8__c:totalTimeForRound,
+                Total_KeyStrokes_In_Round_8__c: totalKeyStrokesInRound
+            };
+        }
+        else if(currentScreent=='260'){
+            data = {
+                Contact_Name__c:userContactId,
+                Game_Name__c:gameId,
+                Id:participantGameInfoId,
+                Total_Time_for_Round_9__c:totalTimeForRound,
+                Total_KeyStrokes_In_Round_9__c: totalKeyStrokesInRound
+            };
+        }
+        else if(currentScreent=='325'){
+            data = {
+                Contact_Name__c:userContactId,
+                Game_Name__c:gameId,
+                Id:participantGameInfoId,
+                Total_Time_for_Round_10__c:totalTimeForRound,
+                Total_KeyStrokes_In_Round_10__c: totalKeyStrokesInRound
+            };
+        }
+        else if(currentScreent=='359'){
+            data = {
+                Contact_Name__c:userContactId,
+                Game_Name__c:gameId,
+                Id:participantGameInfoId,
+                Total_Time_for_Round_11__c:totalTimeForRound,
+                Total_KeyStrokes_In_Round_11__c: totalKeyStrokesInRound
+            };
+        }
+
+        var action = component.get("c.participantGameInfoUpdate");
+        action.setParams({"sobj":JSON.stringify(data)});
+        action.setCallback(this,function(a) 
+            {      
+            var state = a.getState();
+                    if (state === "SUCCESS") {
+                        var name = a.getReturnValue(); 
+                        component.set("v.participantGameid",name);            
+                    }
+                    else if(state==="ERROR"){
+                        let message='';
+                        let errors = a.getError();
+                        if (errors && Array.isArray(errors) && errors.length > 0) {
+                            message = errors[0].message;
+                        }
+                        //console.error(message);
+                    }
+                    else{
+                        //console.log('error');
+                    }
+        });
+        try{
+            $A.getCallback(function() {
+                $A.enqueueAction(action);
+            })();
+            // $A.enqueueAction(action);
+        }
+        catch( e){
+            //console.log(e.message);
+        }
+    }
 
 })

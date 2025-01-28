@@ -338,15 +338,6 @@
     <enableHistory>true</enableHistory>
     <externalSharingModel>ControlledByParent</externalSharingModel>
     <fields>
-        <fullName>DBS_Email_Opt_Out__c</fullName>
-        <defaultValue>false</defaultValue>
-        <externalId>false</externalId>
-        <label>DBS Email Opt Out</label>
-        <trackFeedHistory>false</trackFeedHistory>
-        <trackHistory>false</trackHistory>
-        <type>Checkbox</type>
-    </fields>
-    <fields>
         <fullName>ADL__c</fullName>
         <externalId>false</externalId>
         <label>ADL</label>
@@ -696,6 +687,15 @@
         <trackHistory>false</trackHistory>
     </fields>
     <fields>
+        <fullName>DBS_Email_Opt_Out__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>DBS Email Opt Out</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
         <fullName>DIET__c</fullName>
         <externalId>false</externalId>
         <label>DIET</label>
@@ -832,9 +832,9 @@
         <trackHistory>false</trackHistory>
     </fields>
     <fields>
-        <fullName>ECog12__c</fullName>
+        <fullName>ECog_12__c</fullName>
         <externalId>false</externalId>
-        <label>ECog12</label>
+        <label>ECog 12</label>
         <required>false</required>
         <trackFeedHistory>false</trackFeedHistory>
         <trackHistory>false</trackHistory>
@@ -1358,6 +1358,11 @@
                     <fullName>Swedish</fullName>
                     <default>false</default>
                     <label>Svenska</label>
+                </value>
+                <value>
+                    <fullName>Tagalog</fullName>
+                    <default>false</default>
+                    <label>Tagalog</label>
                 </value>
                 <value>
                     <fullName>Tamil</fullName>

@@ -91,6 +91,9 @@
                                     let intervalTime = null;
                                     let intervalImageTime = null;
                                     let blockevents = 0;
+                                    let roundTotalTime = null;
+                                    let roundStartTime = null;
+                                    let totalKeyStrokesInRound = 0;
                                     let timedata = new Date();
                                     let result_time = 0;
                                     let command_value = "";
@@ -751,6 +754,51 @@
                                         timedata = new Date();
                                         //console.log('prSuccessCount : ', prSuccessCount);
 
+                                        if (currentScreent == '1' || currentScreent == '10'  || currentScreent == '21' || currentScreent == '28' || currentScreent == '39' 
+                                            || currentScreent == '46' || currentScreent == '57' || currentScreent == '132' || currentScreent == '229') {
+                                             
+                                            roundStartTime = timedata;
+                                            totalKeyStrokesInRound = 0;
+                                        }
+                                        
+                                        
+                                        if (currentScreent == '9' || currentScreent == '20' || currentScreent == '27' || currentScreent == '37' 
+                                            || currentScreent == '45' || currentScreent == '56' || currentScreent == '129' || currentScreent == '228') {
+                                            roundTotalTime = timedata - roundStartTime;
+                                            if (currentScreent == '9') {
+                                            let totalTimeForRoundZero = roundTotalTime;
+                                            helper.participantGameInfoUpdateTotalTimeRoundOne(component, event, helper, userContactId, gameId, participantGameInfoId, totalTimeForRoundZero,totalKeyStrokesInRound,currentScreent);
+                                            }
+                                            else if (currentScreent == '20') {
+                                            let totalTimeForRoundOne = roundTotalTime;
+                                            helper.participantGameInfoUpdateTotalTimeRoundOne(component, event, helper, userContactId, gameId, participantGameInfoId, totalTimeForRoundOne,totalKeyStrokesInRound,currentScreent);
+                                            }
+                                            else if (currentScreent == '27') {
+                                            let totalTimeForRoundTwo = roundTotalTime;
+                                            helper.participantGameInfoUpdateTotalTimeRoundOne(component, event, helper, userContactId, gameId, participantGameInfoId, totalTimeForRoundTwo,totalKeyStrokesInRound,currentScreent);
+                                            }
+                                            else if (currentScreent == '37') {
+                                            let totalTimeForRoundThree = roundTotalTime;
+                                            helper.participantGameInfoUpdateTotalTimeRoundOne(component, event, helper, userContactId, gameId, participantGameInfoId, totalTimeForRoundThree,totalKeyStrokesInRound,currentScreent);
+                                            }
+                                            else if (currentScreent == '45') {
+                                            let totalTimeForRoundFour = roundTotalTime;
+                                            helper.participantGameInfoUpdateTotalTimeRoundOne(component, event, helper, userContactId, gameId, participantGameInfoId, totalTimeForRoundFour,totalKeyStrokesInRound,currentScreent);
+                                            }
+                                            else if (currentScreent == '56') {
+                                            let totalTimeForRoundFive = roundTotalTime;
+                                            helper.participantGameInfoUpdateTotalTimeRoundOne(component, event, helper, userContactId, gameId, participantGameInfoId, totalTimeForRoundFive,totalKeyStrokesInRound,currentScreent);
+                                            }
+                                            else if (currentScreent == '129') {
+                                            let totalTimeForRoundSix = roundTotalTime;
+                                            helper.participantGameInfoUpdateTotalTimeRoundOne(component, event, helper, userContactId, gameId, participantGameInfoId, totalTimeForRoundSix,totalKeyStrokesInRound,currentScreent);
+                                            }
+                                            else if (currentScreent == '228') {
+                                            let totalTimeForRoundSeven = roundTotalTime;
+                                            helper.participantGameInfoUpdateTotalTimeRoundOne(component, event, helper, userContactId, gameId, participantGameInfoId, totalTimeForRoundSeven,totalKeyStrokesInRound,currentScreent);
+                                            }
+                                        }
+
                                         if (prTestResultscreen1 == currentScreent || prTestResultscreen2 == currentScreent ||
                                             prTestResultscreen3 == currentScreent) {
                                             // prScore = (prSuccessCount/4)*100;
@@ -953,6 +1001,8 @@
 
                                         command_value = e.keyCode;
                                         inputdata = e.key;
+                                        totalKeyStrokesInRound = totalKeyStrokesInRound + 1;
+
                                         let startDurations = configdata[currentScreent - 1].startDuration;
 
                                         ////console.log('document.getElementById("imgf") = ', document.getElementById('imgf'));
