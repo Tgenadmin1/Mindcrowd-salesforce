@@ -96,6 +96,9 @@
                                     let timedata = new Date();
                                     let result_time = 0;
                                     let command_value = "";
+                                    let roundTotalTime = null;
+                                    let roundStartTime = null;
+                                    let totalKeyStrokesInRound = 0;
                                     let inputdata = null;
                                     let lastdatatitle = "";
                                     let image_path = $A.get("$Label.c.Community_Url") + "/resource/mindGamesImagesMST/mst/";
@@ -581,7 +584,7 @@
                                     function addingItemsToConfigData(arr, toArray, isBlankScreen, isStudy) {
                                         let screenCount = toArray.length;
                                         let blankScreen = {
-                                            screen: "blank", startDuration: 0, endDuration: 500, content: '<p  class="centers"></p>' +
+                                            screen: "blank", startDuration: 0, endDuration: 1000, content: '<p  class="centers"></p>' +
                                                 '<div class="objque">' +
                                                 '<div class="objbox" ></div>' +
                                                 '<div class="btninputbox"><ul class="btninputbx two-button-set">' +
@@ -592,7 +595,7 @@
                                         };
                                         if (!isStudy) {
                                             blankScreen = {
-                                                screen: "blank", startDuration: 0, endDuration: 500, content: '<p  class="centers"></p>' +
+                                                screen: "blank", startDuration: 0, endDuration: 1000, content: '<p  class="centers"></p>' +
                                                     '<div class="objque">' +
                                                     '<div class="objbox" ></div>' +
                                                     '<div class="btninputbox"><ul class="btninputbx two-button-set">' +
@@ -884,6 +887,8 @@
                                     //this function works for initialize processing.
                                     function changeScreen() {
 
+                                        console.log('currentScreent : ', currentScreent);
+
                                         gameId = component.get("v.myAttribute");
                                         userContactId = component.get("v.mycontactId");
                                         ipAddress = component.get("v.ipAddress");
@@ -909,6 +914,51 @@
                                         //        // prSuccessCount = 0; 
                                         // }
 
+                                        if (currentScreent == '1' || currentScreent == '12'  || currentScreent == '23' || currentScreent == '32' 
+                                            || currentScreent == '43' || currentScreent == '52' || currentScreent == '63' || currentScreent == '162' 
+                                            || currentScreent == '259') {
+                                            
+                                            roundStartTime = timedata;
+                                            totalKeyStrokesInRound = 0;
+                                        }
+                                        
+                                        
+                                        if (currentScreent == '11' || currentScreent == '21' || currentScreent == '31' || currentScreent == '42' 
+                                            || currentScreent == '51' || currentScreent == '61' || currentScreent == '159' || currentScreent == '258') {
+                                            roundTotalTime = timedata - roundStartTime;
+                                            if (currentScreent == '11') {
+                                            let totalTimeForRoundZero = roundTotalTime;
+                                            helper.participantGameInfoUpdateTotalTimeRoundOne(component, event, helper, userContactId, gameId, participantGameInfoId, totalTimeForRoundZero,totalKeyStrokesInRound,currentScreent);
+                                            }
+                                            else if (currentScreent == '21') {
+                                            let totalTimeForRoundOne = roundTotalTime;
+                                            helper.participantGameInfoUpdateTotalTimeRoundOne(component, event, helper, userContactId, gameId, participantGameInfoId, totalTimeForRoundOne,totalKeyStrokesInRound,currentScreent);
+                                            }
+                                            else if (currentScreent == '31') {
+                                            let totalTimeForRoundTwo = roundTotalTime;
+                                            helper.participantGameInfoUpdateTotalTimeRoundOne(component, event, helper, userContactId, gameId, participantGameInfoId, totalTimeForRoundTwo,totalKeyStrokesInRound,currentScreent);
+                                            }
+                                            else if (currentScreent == '42') {
+                                            let totalTimeForRoundThree = roundTotalTime;
+                                            helper.participantGameInfoUpdateTotalTimeRoundOne(component, event, helper, userContactId, gameId, participantGameInfoId, totalTimeForRoundThree,totalKeyStrokesInRound,currentScreent);
+                                            }
+                                            else if (currentScreent == '51') {
+                                            let totalTimeForRoundFour = roundTotalTime;
+                                            helper.participantGameInfoUpdateTotalTimeRoundOne(component, event, helper, userContactId, gameId, participantGameInfoId, totalTimeForRoundFour,totalKeyStrokesInRound,currentScreent);
+                                            }
+                                            else if (currentScreent == '61') {
+                                            let totalTimeForRoundFive = roundTotalTime;
+                                            helper.participantGameInfoUpdateTotalTimeRoundOne(component, event, helper, userContactId, gameId, participantGameInfoId, totalTimeForRoundFive,totalKeyStrokesInRound,currentScreent);
+                                            }
+                                            else if (currentScreent == '159') {
+                                            let totalTimeForRoundSix = roundTotalTime;
+                                            helper.participantGameInfoUpdateTotalTimeRoundOne(component, event, helper, userContactId, gameId, participantGameInfoId, totalTimeForRoundSix,totalKeyStrokesInRound,currentScreent);
+                                            }
+                                            else if (currentScreent == '258') {
+                                            let totalTimeForRoundSeven = roundTotalTime;
+                                            helper.participantGameInfoUpdateTotalTimeRoundOne(component, event, helper, userContactId, gameId, participantGameInfoId, totalTimeForRoundSeven,totalKeyStrokesInRound,currentScreent);
+                                            }
+                                        }
 
                                         if (prTestResultscreen1 == currentScreent || prTestResultscreen2 == currentScreent ||
                                             prTestResultscreen3 == currentScreent) {
@@ -1113,6 +1163,7 @@
 
                                         command_value = e.keyCode;
                                         inputdata = e.key;
+                                        totalKeyStrokesInRound = totalKeyStrokesInRound + 1;
                                         let startDurations = configdata[currentScreent - 1].startDuration;
 
                                         ////console.log('document.getElementById("imgf") = ', document.getElementById('imgf'));

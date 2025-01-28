@@ -1,3 +1,9 @@
+/*
+@author            : Santhosh Nookilla
+@description       : Test Class for Unlocking Surveys
+@class        	   : BatchSurveyStatusUpdate
+*/
+
 @isTest
 public class BatchSurveyStatusUpdateTest {
 

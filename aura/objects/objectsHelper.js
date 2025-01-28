@@ -315,7 +315,7 @@
         window.removeEventListener("beforeunload", this.leaveHandler);
     },
     //this fucntion is updating some fields like "Total_Time_for_Round_1__c"  in "participantGameInfo" object.
-    participantGameInfoUpdateTotalTimeRoundOne: function(component,event,helper,userContactId,gameId,participantGameInfoId,totalTimeForRound,currentScreent) {
+    participantGameInfoUpdateTotalTimeRoundOne: function(component,event,helper,userContactId,gameId,participantGameInfoId,totalTimeForRound,totalKeyStrokesInRound,currentScreent) {
         let data = {};
 
         if(currentScreent=='42'){
@@ -323,7 +323,8 @@
                 Contact_Name__c:userContactId,
                 Game_Name__c:gameId,
                 Id:participantGameInfoId,
-                Total_Time_for_Round_0__c:totalTimeForRound
+                Total_Time_for_Round_0__c:totalTimeForRound,
+                Total_KeyStrokes_In_Round_0__c: totalKeyStrokesInRound
             };
         }
         else if(currentScreent=='243'){
@@ -332,7 +333,8 @@
                 Contact_Name__c:userContactId,
                 Game_Name__c:gameId,
                 Id:participantGameInfoId,
-                Total_Time_for_Round_1__c:totalTimeForRound
+                Total_Time_for_Round_1__c:totalTimeForRound,
+                Total_KeyStrokes_In_Round_1__c: totalKeyStrokesInRound
             };
         }
         var action = component.get("c.participantGameInfoUpdate");

@@ -80,6 +80,7 @@
                                     //let currentScreent = 0;
                                     let intervalTime = null
                                     let timedata = new Date();
+                                    let totalKeyStrokesInRound = 0;
                                     let result_time = 0;
                                     let command_value = 0;
                                     let clicked = false;
@@ -90,7 +91,6 @@
                                     var gameTime = $A.get("$Label.c.numberLetterGame_time");
                                     let roundTotalTime = null;
                                     let roundStartTime = null;
-                                    let totalKeyStrokesInRound = 0;
                                     let endGameTrue = false;
 
 
@@ -336,36 +336,41 @@
                                             }
                                         }
                                         // this is finding totalTimeForRound as per screenwise.
-                                        if (configdata[currentScreent].screen == '-1' || configdata[currentScreent].screen == '23' || configdata[currentScreent].screen == '88'
-                                            || configdata[currentScreent].screen == '111' || configdata[currentScreent].screen == '176' || configdata[currentScreent].screen == '202') {
+                                        if (configdata[currentScreent].screen == '-1' || configdata[currentScreent].screen == '24' || configdata[currentScreent].screen == '89'
+                                            || configdata[currentScreent].screen == '112' || configdata[currentScreent].screen == '177' || configdata[currentScreent].screen == '203') {
                                             roundStartTime = timedata;
+                                            totalKeyStrokesInRound = 0;
                                         }
-                                        if (configdata[currentScreent].screen == '22' || configdata[currentScreent].screen == '87' || configdata[currentScreent].screen == '110'
-                                            || configdata[currentScreent].screen == '175' || configdata[currentScreent].screen == '201' || configdata[currentScreent].screen == '459') {
+                                        if (configdata[currentScreent].screen == '23' || configdata[currentScreent].screen == '88' || configdata[currentScreent].screen == '111'
+                                            || configdata[currentScreent].screen == '176' || configdata[currentScreent].screen == '202' || configdata[currentScreent].screen == '460') {
                                             roundTotalTime = timedata - roundStartTime;
-                                            if (configdata[currentScreent].screen == '22') {
+                                            if (configdata[currentScreent].screen == '23') {
                                                 let totalTimeForRound = roundTotalTime;
-                                                helper.participantGameInfoUpdateTotalTimeRoundOne(component, event, helper, userContactId, gameId, participantGameInfoId, totalTimeForRound, configdata[currentScreent].screen);
+                                                console.log('Time'+totalTimeForRound);
+                                                helper.participantGameInfoUpdateTotalTimeRoundOne(component, event, helper, userContactId, gameId, participantGameInfoId, totalTimeForRound, totalKeyStrokesInRound, configdata[currentScreent].screen);
                                             }
-                                            else if (configdata[currentScreent].screen == '87') {
+                                            else if (configdata[currentScreent].screen == '88') {
                                                 let totalTimeForRound = roundTotalTime;
-                                                helper.participantGameInfoUpdateTotalTimeRoundOne(component, event, helper, userContactId, gameId, participantGameInfoId, totalTimeForRound, configdata[currentScreent].screen);
+                                                console.log('Time'+totalTimeForRound);
+                                                console.log('Real R1'+totalKeyStrokesInRound);
+                                                helper.participantGameInfoUpdateTotalTimeRoundOne(component, event, helper, userContactId, gameId, participantGameInfoId, totalTimeForRound, totalKeyStrokesInRound, configdata[currentScreent].screen);
                                             }
-                                            else if (configdata[currentScreent].screen == '110') {
+                                            else if (configdata[currentScreent].screen == '111') {
                                                 let totalTimeForRound = roundTotalTime;
-                                                helper.participantGameInfoUpdateTotalTimeRoundOne(component, event, helper, userContactId, gameId, participantGameInfoId, totalTimeForRound, configdata[currentScreent].screen);
+                                                helper.participantGameInfoUpdateTotalTimeRoundOne(component, event, helper, userContactId, gameId, participantGameInfoId, totalTimeForRound, totalKeyStrokesInRound, configdata[currentScreent].screen);
                                             }
-                                            else if (configdata[currentScreent].screen == '175') {
+                                            else if (configdata[currentScreent].screen == '176') {
                                                 let totalTimeForRound = roundTotalTime;
-                                                helper.participantGameInfoUpdateTotalTimeRoundOne(component, event, helper, userContactId, gameId, participantGameInfoId, totalTimeForRound, configdata[currentScreent].screen);
+                                                console.log('Real R2'+totalKeyStrokesInRound);
+                                                helper.participantGameInfoUpdateTotalTimeRoundOne(component, event, helper, userContactId, gameId, participantGameInfoId, totalTimeForRound, totalKeyStrokesInRound, configdata[currentScreent].screen);
                                             }
-                                            else if (configdata[currentScreent].screen == '201') {
+                                            else if (configdata[currentScreent].screen == '202') {
                                                 let totalTimeForRound = roundTotalTime;
-                                                helper.participantGameInfoUpdateTotalTimeRoundOne(component, event, helper, userContactId, gameId, participantGameInfoId, totalTimeForRound, configdata[currentScreent].screen);
+                                                helper.participantGameInfoUpdateTotalTimeRoundOne(component, event, helper, userContactId, gameId, participantGameInfoId, totalTimeForRound, totalKeyStrokesInRound, configdata[currentScreent].screen);
                                             }
-                                            else if (configdata[currentScreent].screen == '459') {
+                                            else if (configdata[currentScreent].screen == '460') {
                                                 let totalTimeForRoundOne = roundTotalTime;
-                                                helper.participantGameInfoUpdateTotalTimeRoundOne(component, event, helper, userContactId, gameId, participantGameInfoId, totalTimeForRoundOne, configdata[currentScreent].screen);
+                                                helper.participantGameInfoUpdateTotalTimeRoundOne(component, event, helper, userContactId, gameId, participantGameInfoId, totalTimeForRoundOne, totalKeyStrokesInRound, configdata[currentScreent].screen);
                                             }
                                         }
                                         //creating participant game info record.
@@ -415,6 +420,16 @@
                                     function gamePlay(e) {
 
                                         command_value = e.keyCode;//Changed this from "Which" to "KeyCode" 
+    									if ((configdata[currentScreent].screen >4 && configdata[currentScreent].screen <=23) ||
+    										(configdata[currentScreent].screen >25 && configdata[currentScreent].screen <=88) ||
+    										(configdata[currentScreent].screen >92 && configdata[currentScreent].screen <=111) ||
+    										(configdata[currentScreent].screen >113 && configdata[currentScreent].screen <=176) ||
+    										(configdata[currentScreent].screen >179 && configdata[currentScreent].screen <=202) ||
+    										(configdata[currentScreent].screen >204 && configdata[currentScreent].screen <=331) ||
+                                       		(configdata[currentScreent].screen >334 && configdata[currentScreent].screen <=460)){
+    											totalKeyStrokesInRound = totalKeyStrokesInRound + 1;
+										}
+    									
                                         userInput = e.key;
                                         let startDurations = configdata[currentScreent - 1].startDuration;
                                         let endDurations = configdata[currentScreent - 1].endDuration;

@@ -17,7 +17,8 @@ public without sharing class ContactController
                                               String mailingzipcode4,
                                               String phoneNumber,
                                               String shipmentconsent,
-                                              String campaigntype)
+                                              String campaigntype,
+                                              Boolean vipbeangame)
     {
         try 
         {  
@@ -70,12 +71,12 @@ public without sharing class ContactController
                 }
                 con[0].Shipping_Consent__c=shipmentconsent;
                 update con;
-                if ((ContactController.hasDuplicateRecord(conID,campaigntype) && campaigntype != 'bean game')) {
+                if ((ContactController.hasDuplicateRecord(conID,campaigntype)) && !vipbeangame) {
                     return 'DuplicateSD';
                   }
                 else if(campaigntype == 'bean game' && BeanGameStat !='Opened'){
                     return 'DuplicateSD';
-                }
+                  }
                 else{
                 if(ResponseAddress.Address1==''){
                     Shipping_Detail__c shiprecordcreate = new Shipping_Detail__c(
@@ -319,7 +320,7 @@ public without sharing class ContactController
     @AuraEnabled(cacheable=true)
     public static Contact fetchContactFields1(String participantcode){
     	
-        	Contact con = [SELECT Id,FirstName,LastName,Email,ParticipantCode__c,Bean_Game__c FROM Contact 
+        	Contact con = [SELECT Id,FirstName,LastName,Email,ParticipantCode__c,Bean_Game__c,Consent_signed_on__c FROM Contact 
                                  where ParticipantCode__c=:participantcode limit 1];
         return con;
     }
@@ -392,4 +393,20 @@ public without sharing class ContactController
     System.debug('customSettingValues: ' + customSettingValues);
     return customSettingValues;
 }
+    @AuraEnabled
+    public static String updateConsent(String participantcode) {
+        String statuscode='';
+        try{
+            List<Contact> Cont = [select Id from Contact where ParticipantCode__c =: participantcode];
+            if(Cont.size()>0){
+                Cont[0].Consent_Signed_on__c = system.today();
+                update Cont[0];
+                statuscode='Success';            
+           }       
+        }
+        catch(Exception e){
+            statuscode='Failed';
+        }        
+        return statuscode;
+    }
 }

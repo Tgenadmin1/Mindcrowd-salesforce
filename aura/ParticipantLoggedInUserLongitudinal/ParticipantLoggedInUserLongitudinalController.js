@@ -78,11 +78,11 @@
                  else{
                   delete graphData.gamedataList.digitSymboldataList;
                  }
-                 if(graphData.gamedataList.camelandcactusdataList.length>0){
+                 if(graphData.gamedataList.thisandthatdatalist.length>0){
                   chartNames.push($A.get("$Label.c.game_name_18"));
                  }
                  else{
-                  delete graphData.gamedataList.camelandcactusdataList;
+                  delete graphData.gamedataList.thisandthatdatalist;
                  }
                  if(graphData.gamedataList.beangamerightdataList.length>0 && graphData.gamedataList.beangameleftdataList.length>0){
                     chartNames.push($A.get("$Label.c.game_name_11"));
@@ -93,6 +93,7 @@
                  }
                  component.set('v.chartNames',chartNames);
                  component.set('v.graphData',graphData);
+                 console.log(component.get('v.chartNames'));
             }
             else{
                let errors = response.getError();

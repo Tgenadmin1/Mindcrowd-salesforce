@@ -10,7 +10,11 @@ export default class EmailPageCheck extends LightningElement {
 
     
      renderedCallback() {
+        // const urlParams = new URLSearchParams(document.location.search.substring(1));
+        // const skip = urlParams.get('skip');
+        //console.log('skip = ', skip);
         if(!window.location.toString().includes("live-preview")){
+          //  if (skip != 'true') {
         if(localStorage.getItem('consent') != "true"){
             window.location = Community_Url + "/s/" + consent_URL;
         }else if((localStorage.getItem('c__id') == '' || localStorage.getItem('c__id') ==undefined) && localStorage.getItem('consent') == "true"){
@@ -29,5 +33,8 @@ export default class EmailPageCheck extends LightningElement {
             }
         }
     }
+// }   else{
+//         localStorage.setItem('LastPage',  document.URL);
+//     }
     }
     }

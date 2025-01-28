@@ -297,10 +297,10 @@ public without sharing class GamesController
        {
         if(obj!=null && obj.Contact__c!=null){
             System.debug('beanGame is created with id: '+obj.id);
-            insert obj;
+            insert obj;   
             Contact cont = [select Bean_Game__c from Contact where Id=:obj.Contact__c];
             cont.Bean_Game__c='Completed';
-            update cont;			   
+            update cont;
         }
         else{
             System.debug('BeanGame OBJ is null.');
@@ -336,109 +336,19 @@ public without sharing class GamesController
             con=[SELECT Email,FirstName,LastName,Language__c,Deary_Simple_And_Complex_Reaction_Time__c
                      ,Verbal_Paired_Associates__c
                      ,Object_Recognition_And_Similarity__c
-                     ,Flanker__c,Fake_News_Test__c,Speech_Task__c,Tell_Me_More__c,Digit_Symbol_Matching_Test__c,
-                     Camel_and_Cactus__c, Number_of_daily_medications__c,Gender__c
+                     ,Flanker__c,Number_of_daily_medications__c,Gender__c
                      ,Face_Name_Associates__c,Most_fluent_language__c
                      ,Letter_Number_Sequencing__c,Number_of_fluent_languages_written__c
                      ,Keep_Track__c,Number_of_fluent_languages_spoken__c,
                      Object_Discrimination__c,Object_Temporal__c,Object_Spatial__c ,MailingCity,MailingCountryCode,
                      MailingStreet,MailingStateCode,MailingPostalCode,Sex__c,Second_degree_family_history_of_AD__c,
                      First_degree_family_history_of_AD__c,First_degree_family_history_of_EO_AD__c,
-                     Health_Lifestyle_and_Medical__c ,Highest_level_of_education_completed__c FROM Contact where id=:u.ContactId];
+                     Health_Lifestyle_and_Medical__c ,Highest_level_of_education_completed__c,Fake_News__c,
+                     Tell_Me__c,Digits__c,Tell_Me_More__c,This_That__c FROM Contact where id=:u.ContactId];
         }
         return con;
     }
-
-    @AuraEnabled
-    public static String createAudioContentVersion(String parentId, String speechTaskrec, String taskName, Boolean otherlanguage,
-                                                  Boolean othervoices,Boolean loudnoices,Boolean isdelete) {
-
-   		 System.debug('inside createAudioContentVersion');
-    	 HttpResponse response = new HttpResponse();
-         Map<String, Object> responseData = new Map<String, Object>();
-         String authUrl = 'https://api.pcloud.com/userinfo?getauth=1&logout=1&{AUTHENTICATION}&username=sibisathyanks@gmail.com&password=Wolkswagon@007';
-		 String uploadUrl = 'https://api.pcloud.com/uploadfile';
-         String message='success';
-
-        try {
-            Participant_Game_Info__c pgi = [Select Id,Speech_Task_1_Recording__c, Speech_Task_2_Recording__c,Contact_Name__c,
-                                              Aging_Well_Used_languages_other_than_Eng__c,Aging_Well_Anyone_elses_voice_recorded__c,
-                                              Aging_Well_Any_loud_noices_recorded__c,Aging_Well_Would_you_like_to_delete_reco__c,
-                                              Episodic_memory_Used_languges_other_than__c,Episodic_memory_Anyone_elses_voices__c,
-                                              Episodic_memory_Any_loud_noices_recorded__c,Episodic_memory_Would_you_like_to_delete__c
-                                               from Participant_Game_Info__c where Id =: parentId];
-            if(!isdelete){            
-            response = sendHttpRequest('',authUrl,'GET','','',false,'','');
-            if (response.getStatusCode() == 200) {
-                responseData = (Map<String, Object>) JSON.deserializeUntyped(response.getBody());
-                System.debug('responseData: ' + responseData);
-                String authToken = (String) responseData.get('auth');
-                System.debug('Authentication Token: ' + authToken);
-                /*Participant_Game_Info__c pgi = [Select Speech_Task_1_Recording__c, Speech_Task_2_Recording__c,Contact_Name__c from 
-                    							Participant_Game_Info__c where Id =: parentId];*/
-                String filename;                        
-                    if(taskName == 'Aging Well'){
-                        filename = pgi.Contact_Name__c+'_'+pgi.Id+'_Aging_Well.wav';
-                    }
-                    if(taskName == 'Memory'){
-                   		filename = pgi.Contact_Name__c+'_'+pgi.Id+'_Episodic_Memory.wav';
-               		 }   
-                     response = sendHttpRequest(speechTaskrec, uploadUrl,'POST','audio/wav',authToken,true,filename,parentId);
-                            if (response.getStatusCode() == 200) {
-                         		//responseData = (Map<String, Object>) JSON.deserializeUntyped(response.getBody());
-                        		System.debug('Upload response: ' + response.getBody());
-                       		 } else {
-                             System.debug('Error uploading file. Status code: ' + response.getStatusCode());
-                             message = 'failure';
-                        }
-            
-                pgi.Speech_Task_1_Recording__c = 'http://u.pc.cd/GlfrtalK';  
-
-            }
-            else {
-                System.debug('Error obtaining authentication token. Status code: ' + response.getStatusCode());
-                message = 'failure';
-            }
-        	}
-              	pgi.Aging_Well_Used_languages_other_than_Eng__c = otherlanguage;
-                pgi.Aging_Well_Anyone_elses_voice_recorded__c = othervoices;
-                pgi.Aging_Well_Any_loud_noices_recorded__c = loudnoices;
-                pgi.Aging_Well_Would_you_like_to_delete_reco__c = isdelete;
-                update pgi;
-        }
-         catch (System.CalloutException e) {
-            // Handle the callout exception, e.g., log the error message
-            System.debug('Callout Error: ' + e.getMessage());
-        }        return message;
-    }
     
-   public static HttpResponse sendHttpRequest(String payload, String endpoint, String method, String contentType,
-                                    String authtoken, Boolean isBlob, String filename, String parentId) { 
-        Http http = new Http();
-        HttpRequest request = new HttpRequest();
-        HttpResponse response = new HttpResponse();        
-        request.setMethod(method);
-        if(authtoken !='' && authtoken !=null){            
-            endpoint = endpoint+'?auth='+authtoken+'&'+'filename='+filename+'&path=/Mindcrowd';
-            //endpoint = endpoint+'?auth='+authtoken+'&'+'filename='+filename+'&path=/Mindcrowd/'+parentId;            
-            System.debug(endpoint);
-            //https://api.pcloud.com/uploadfile?auth=9rOHoZzBEQ7ZlBwhVnFCShkNJqznB1eAsVgLeH77
-            //request.setHeader('Authorization', 'Bearer ' + authtoken);
-        }
-        if(contentType !='' && contentType !=null){System.debug(contentType);request.setHeader('Content-Type', contentType);}        
-        if(isBlob){
-            System.debug(EncodingUtil.base64Decode(payload));
-        	request.setBodyAsBlob(EncodingUtil.base64Decode(payload)); 
-        }
-        else if(payload !='' && payload !=null){
-            System.debug(request);
-            request.setBody(payload);
-        }else{}
-        request.setEndpoint(endpoint);
-        response = http.send(request);     
-        return response;                             
-    }
-
     @AuraEnabled
     public static void participantGameInfoUpdate1(Participant_Game_Info__c sobj) {
         try {      
@@ -451,5 +361,35 @@ public without sharing class GamesController
             logError('GamesController', 'update_PGI()', ex.getMessage() + ', Data: ' + sobj);
             System.Debug('participantGameInfoUpdate1 AuraHandledException: ' + ex.getMessage());
         }
+    }
+    
+    @AuraEnabled
+    public static Map<String, Object> updateSpeechTaskPGI(String parentId, String taskName, Boolean otherlanguage, 
+                                                          Boolean othervoices,Boolean loudnoices,Boolean isconsent){
+	   try {
+            Participant_Game_Info__c pgi = [Select Id,Recording_File_Name__c,Contact_Name__c,Is_Loud_Noises_Recorded__c,
+                                            Is_Non_English_Usage__c,Is_Other_Voices_Recorded__c,Is_Recording_Usage_Consent__c
+                                            from Participant_Game_Info__c where Id =: parentId];
+           String filename = pgi.Contact_Name__c+'_'+pgi.Id+'.weba';
+           Map<String, Object> responseBody = new Map<String, Object>();
+           system.debug(isconsent);
+           
+           if(isconsent){
+                String bucketName = (taskName == 'Aging Well') ? 'tellme-mindcrowd' : (taskName == 'Memory') ? 'tellmemore-mindcrowd' : null;
+                responseBody  = AWSLambdaService.getUploadURL(bucketName, fileName,'callout:AWS_S3');
+                pgi.Recording_File_Name__c = filename;
+           }     
+           
+           pgi.Is_Non_English_Usage__c = otherlanguage;
+           pgi.Is_Other_Voices_Recorded__c = othervoices;
+           pgi.Is_Loud_Noises_Recorded__c = loudnoices;
+           pgi.Is_Recording_Usage_Consent__c = isconsent;           
+           update pgi;    
+           return responseBody;
+        }
+         catch (System.Exception e) {
+            System.debug('Exception: ' + e.getMessage());
+            return null;
+        }    
     }
 }

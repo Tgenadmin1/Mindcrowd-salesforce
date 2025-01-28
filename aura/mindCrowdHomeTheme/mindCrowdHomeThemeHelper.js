@@ -53,7 +53,16 @@
       //   component.set("v.appError", $A.get("$Label.c.app_Error_Android"));
       // }
     })();
-  }
-
-
+  },
+  fetchContact: function (component, participantcode) {     
+    var action = component.get("c.getParticipantContactID");
+    action.setParams({participantId:participantcode});
+    action.setCallback(this, function(a) {
+        var rtnValue = a.getReturnValue();
+        if (rtnValue != null) {
+            localStorage.setItem('utmmedium',rtnValue.Email);  
+        }
+   });
+    $A.enqueueAction(action);
+}
 })

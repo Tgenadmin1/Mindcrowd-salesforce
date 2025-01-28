@@ -41,7 +41,7 @@ public class SendRewardsToUsersECog12Batch implements Database.Batchable<SObject
             }
             System.debug('contsEligible: '+contsEligible);
            
-            TremendousSetting__c trmAPI = TremendousSetting__c.getValues('RewardsSetting');
+            TremendousSetting__c trmAPI = TremendousSetting__c.getValues('RewardsSettingEcog');
             for (Contact con : contsEligible) {
                 contListUpd.add(con);
                 system.debug('count--->' + contsEligible.size());

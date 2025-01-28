@@ -3,7 +3,7 @@
   @author            : Raj
   @UI author         : Raj
   @last modified on  : 07-12-2021
-  @last modified by  : ChangeMeIn@UserSettingsUnder.SFDoc
+  @last modified by  : (Raj //Date-Sept 20-2022)
   Modifications Log 
   Ver   Date         Author         Modification
   1.0   07-12-2021   Raj      Initial Version
@@ -18,30 +18,11 @@
     <aura:attribute name="showConfirmDialog" type="boolean" default="false"/>
     <ltng:require scripts="" afterScriptsLoaded="{!c.myAction}"  />
     <div class="main-content-outer marginB30 test opacity" id="mainContent">
-        <!-- <div id="steps" class="steps opacity0" style="opacity: 0;">
-            <div class="step-grid slds-grid slds-gutters text-center">
-                <div class="slds-col current tick">
-                    <div class="step-number">{!$Label.c.step_1}</div>
-                </div>
-                <div class="slds-col current tick">
-                    <div class="step-number">{!$Label.c.step_2}</div>
-                </div>
-                <div class="slds-col current">
-                    <div class="step-number">{!$Label.c.step_3}</div>
-                </div>
-                <div class="slds-col">
-                    <div class="step-number">{!$Label.c.step_4a}</div>
-                </div>
-                <div class="slds-col">
-                    <div class="step-number">{!$Label.c.step_4}</div>
-                  </div>
-              </div>
-        </div> -->
-        <div class="main-content-inner marginB90" id="mainContent1">
+               <div class="main-content-inner marginB90" id="mainContent1">
             <div class="game_panel instructionsLeft">
                 <div class="game_block" id="game_block">      
                 <div class="datablock" aura:id="datablock" id="datablock"></div>   
-                <p id="nextBtton" class="centers magenta-btn  btn-xlarge marginT20 slds-hide"><button class="slds-button" label="Skip Game" title="Next" onclick="{!c.goToNextPage }">Next</button> </p>    
+                <p id="nextBtton" class="centers magenta-btn  btn-xlarge marginT20 slds-hide"><button class="slds-button"  onclick="{!c.goToNextPage }">Next</button> </p>    
             </div>
             </div>     
         </div>
@@ -57,8 +38,6 @@
                             </p>
                             <p><img src="{!$Resource.mindcrowd_style + '/images/orientationchange.png'}"  width="250" /></p>
                         </div>
-                       
-                        
                     </div>
                 </div>
             </div>

@@ -20,22 +20,31 @@
 		// console.log(queryString);
         //var tapjoyUrl = $A.get("$Label.c.tapjoy_url");
         //var urlParams = new URLSearchParams(queryString);
+        //console.log('tjcookieurl: '+tjcookieurl);
         const urlParams1 =new URLSearchParams(window.location.search);
         const campaign = urlParams1.get('campaign');
-        if(campaign){
+        if(campaign=='historical'){
             localStorage.setItem('campaigncode',campaign);
+            localStorage.setItem('utmsource','Email'); 
+            let email = urlParams1.get('Email');               
+            if(email){
+                localStorage.setItem('utmmedium',email);        
+            }
+            else {
+                const participantcode = urlParams1.get('participantcode');
+                if(participantcode){
+                        helper.fetchContact(component,participantcode);
+                }
+            }         
         }
-        //console.log('tjcookieurl: '+tjcookieurl);
         if(tjcookieurl){
             const urlParams = getURLParameters(tjcookieurl);
             if(urlParams){
-                /*const trnsIdToStoreLocal = urlParams.utm_term;
-                if(trnsIdToStoreLocal){*/
-                    localStorage.setItem('subIdToStoreLocal', urlParams.utm_term);
-                    localStorage.setItem('campaigncode', urlParams.utm_campaign);
-                    localStorage.setItem('utmsource', urlParams.utm_source);
-                    localStorage.setItem('utmmedium', urlParams.utm_medium);
-                //}
+                    localStorage.setItem('subIdToStoreLocal', urlParams.utm_term ? urlParams.utm_term : '');
+                    localStorage.setItem('campaigncode', urlParams.utm_campaign ? urlParams.utm_campaign : '');
+                    localStorage.setItem('utmsource', urlParams.utm_source ? urlParams.utm_source : '');
+                    localStorage.setItem('utmmedium', urlParams.utm_medium ? urlParams.utm_medium : '');
+                    localStorage.setItem('utmappName', urlParams.appname ?  urlParams.appname.substring(0, 50) : '');
             }            
         }       
         
@@ -57,7 +66,7 @@
 
         function getURLParameters(url) {
             let decodeurl = decodeURIComponent(url);
-            console.log('decodeurl: '+decodeurl);            
+            //console.log('decodeurl: '+decodeurl);            
             const urlParts = decodeurl.split('?');
             if (urlParts.length < 2) {
               return {}; // No query string parameters

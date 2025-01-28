@@ -93,6 +93,7 @@
                            let isIgnore=false;
                            let intervalTime = null;
                            let timedata = new Date();
+                           let totalKeyStrokesInRound = 0;
                           // let currentScreen = 0;
                            let image_path = $A.get("$Label.c.Community_Url")+"/resource/mindcrowdGameImages/faceName/";
                            let image_path2 = $A.get("$Label.c.Community_Url")+"/resource/";
@@ -975,6 +976,7 @@
                           || configdata[currentScreen].screen == '80' || configdata[currentScreen].screen == '82'){
                               roundStartTime = timedata;
                               //console.log('round start time: ', roundStartTime);
+                              totalKeyStrokesInRound = 0;
                               if(configdata[currentScreen].screen == '3'){
                                   round = 0;
                               }else if(configdata[currentScreen].screen == '28'){
@@ -997,32 +999,32 @@
                               if(configdata[currentScreen].screen == '27'){
                                   let totalTimeForRound=roundTotalTime;
                                   //console.log('totalTimeForRoundOne: ', totalTimeForRound);
-                                  helper.participantGameInfoUpdateTotalTimeRoundOne(component,event,helper,userContactId,gameId,participantGameInfoId,totalTimeForRound,configdata[currentScreen].screen);
+                                  helper.participantGameInfoUpdateTotalTimeRoundOne(component,event,helper,userContactId,gameId,participantGameInfoId,totalTimeForRound,totalKeyStrokesInRound,configdata[currentScreen].screen);
                               }
                               else if(configdata[currentScreen].screen == '53'){
                                   let totalTimeForRound=roundTotalTime;
                                   //console.log('totalTimeForRoundTwo: ', totalTimeForRound);
-                                  helper.participantGameInfoUpdateTotalTimeRoundOne(component,event,helper,userContactId,gameId,participantGameInfoId,totalTimeForRound,configdata[currentScreen].screen);
+                                  helper.participantGameInfoUpdateTotalTimeRoundOne(component,event,helper,userContactId,gameId,participantGameInfoId,totalTimeForRound,totalKeyStrokesInRound,configdata[currentScreen].screen);
                               }
                               else if(configdata[currentScreen].screen == '66'){
                                   let totalTimeForRound=roundTotalTime;
                                   //console.log('totalTimeForRoundThree: ', totalTimeForRound);
-                                  helper.participantGameInfoUpdateTotalTimeRoundOne(component,event,helper,userContactId,gameId,participantGameInfoId,totalTimeForRound,configdata[currentScreen].screen);
+                                  helper.participantGameInfoUpdateTotalTimeRoundOne(component,event,helper,userContactId,gameId,participantGameInfoId,totalTimeForRound,totalKeyStrokesInRound,configdata[currentScreen].screen);
                               }
                               else if(configdata[currentScreen].screen == '79'){
                                   let totalTimeForRound=roundTotalTime;
                                   //console.log('totalTimeForRoundFour: ', totalTimeForRound);
-                                  helper.participantGameInfoUpdateTotalTimeRoundOne(component,event,helper,userContactId,gameId,participantGameInfoId,totalTimeForRound,configdata[currentScreen].screen);
+                                  helper.participantGameInfoUpdateTotalTimeRoundOne(component,event,helper,userContactId,gameId,participantGameInfoId,totalTimeForRound,totalKeyStrokesInRound,configdata[currentScreen].screen);
                               }
                               else if(configdata[currentScreen].screen == '81'){
                                 let totalTimeForRound=roundTotalTime;
                                 //console.log('totalTimeForRoundstacks: ', totalTimeForRound);
-                                helper.participantGameInfoUpdateTotalTimeRoundOne(component,event,helper,userContactId,gameId,participantGameInfoId,totalTimeForRound,configdata[currentScreen].screen);
+                                helper.participantGameInfoUpdateTotalTimeRoundOne(component,event,helper,userContactId,gameId,participantGameInfoId,totalTimeForRound,null,configdata[currentScreen].screen);
                             }
                               else if(configdata[currentScreen].screen == '118'){
                                   let totalTimeForRound=roundTotalTime;
                                   //console.log('totalTimeForRoundFinal: ', totalTimeForRound);
-                                  helper.participantGameInfoUpdateTotalTimeRoundOne(component,event,helper,userContactId,gameId,participantGameInfoId,totalTimeForRound,configdata[currentScreen].screen);
+                                  helper.participantGameInfoUpdateTotalTimeRoundOne(component,event,helper,userContactId,gameId,participantGameInfoId,totalTimeForRound,totalKeyStrokesInRound,configdata[currentScreen].screen);
                               }
                           } 
 
@@ -1144,8 +1146,23 @@
                                             result.occupation= false;
                                         }
                                         //console.log("sunil:before call save data ");
-                                        saveData('facename', configdata[currentScreen - 1].question+'a', inputDat.name,configdata[currentScreen - 1].answer.name,result.name,configdata[currentScreen-1].endDuration,configdata[currentScreen - 1].isPractice, firstTime,isIgnore,  pinputkeyPress);
-                                        saveData('facename', configdata[currentScreen - 1].question+'b', inputDat.occupation,configdata[currentScreen - 1].answer.occupation,result.occupation,configdata[currentScreen-1].endDuration, configdata[currentScreen - 1].isPractice, firstTime,isIgnore, oinputkeyPress );
+                                        let savedquestion = configdata[currentScreen - 1].question;                               
+                                        let savedanswer = configdata[currentScreen - 1].answer.name;  
+                                        let savedanswerOccuupation = configdata[currentScreen - 1].answer.occupation;
+                                        let savedEndDuration = configdata[currentScreen-1].endDuration;
+                                        let savedIsPractice = configdata[currentScreen - 1].isPractice; 
+                                        let savedResultName = result.name;  
+                                        let savedresultOccuupation = result.occupation; 
+                                        let savedInputDataName = inputDat.name;
+                                        let savedOccupation = inputDat.occupation;
+                                        let savedpinputkeyPress = pinputkeyPress;
+                                        let savedoinputkeyPress = oinputkeyPress;
+                                        let savedFirstTime = firstTime;
+                                        let savedIsIgnore = isIgnore;
+                                        saveData('facename', savedquestion+'a', savedInputDataName,savedanswer,savedResultName,savedEndDuration,savedIsPractice, savedFirstTime,savedIsIgnore,  savedpinputkeyPress);
+                                        setTimeout(function() {
+                                            saveData('facename', savedquestion+'b', savedOccupation,savedanswerOccuupation,savedresultOccuupation,savedEndDuration, savedIsPractice, savedFirstTime,savedIsIgnore, savedoinputkeyPress ); 
+                                        }, 1000);                                        
                                         //console.log("sunil:after call save data "); 
                                         
                                    }
@@ -1168,9 +1185,22 @@
                                         }  
                                         else{
                                             result.occupation= false;
-                                        }          
-                                        saveData('facename', configdata[currentScreen - 1].question+'a', inputDat.name,configdata[currentScreen - 1].answer.name,result.name,configdata[currentScreen-1].endDuration,configdata[currentScreen - 1].isPractice, firstTime,isIgnore );
-                                        saveData('facename', configdata[currentScreen - 1].question+'b', inputDat.occupation,configdata[currentScreen - 1].answer.occupation,result.occupation,configdata[currentScreen-1].endDuration, configdata[currentScreen - 1].isPractice, firstTime,isIgnore );
+                                        }
+                                        let savedquestion = configdata[currentScreen - 1].question;                               
+                                        let savedanswer = configdata[currentScreen - 1].answer.name;  
+                                        let savedanswerOccuupation = configdata[currentScreen - 1].answer.occupation;
+                                        let savedEndDuration = configdata[currentScreen-1].endDuration;
+                                        let savedIsPractice = configdata[currentScreen - 1].isPractice; 
+                                        let savedResultName = result.name;  
+                                        let savedresultOccuupation = result.occupation; 
+                                        let savedInputDataName = inputDat.name;
+                                        let savedOccupation = inputDat.occupation;
+                                        let savedFirstTime = firstTime;
+                                        let savedIsIgnore = isIgnore;          
+                                        saveData('facename', savedquestion+'a', savedInputDataName,savedanswer,savedResultName,savedEndDuration,savedIsPractice, savedFirstTime,savedIsIgnore );
+                                        setTimeout(function() {
+                                            saveData('facename', savedquestion+'b', savedOccupation,savedanswerOccuupation,savedresultOccuupation,savedEndDuration, savedIsPractice, savedFirstTime,savedIsIgnore );    
+                                        }, 1000);                                        
                              
                                         }else{
                                             inputDat=inputString;
@@ -1294,7 +1324,7 @@
                    
                        function gamePlay(e) {
                            command_value = e.keyCode;
-                           
+                           totalKeyStrokesInRound = totalKeyStrokesInRound + 1;					   
                            if(command_value == 13){
                             if(document.getElementById("personname")){ 
                                 FieldOnFocus.blur();
@@ -1394,8 +1424,21 @@
                                                 resultData[configdata[currentScreen - 1].screen]["solution"] = solution;
                                                 lastdatatitle="Result";
                                                //save output
-                                               saveData('facename', configdata[currentScreen - 1].question+'a', inputdata.name,configdata[currentScreen - 1].answer.name, result.name, result_time, configdata[currentScreen - 1].isPractice, firstTime ,isIgnore);
-                                               saveData('facename', configdata[currentScreen - 1].question+'b', inputdata.occupation,configdata[currentScreen - 1].answer.occupation, result.occupation, result_time, configdata[currentScreen - 1].isPractice, firstTime ,isIgnore);
+                                               let savedquestion = configdata[currentScreen - 1].question;                                
+                                               let savedanswer = configdata[currentScreen - 1].answer.name; 
+                                               let savedanswerOccuupation = configdata[currentScreen - 1].answer.occupation;                                             
+                                               let savedIsPractice = configdata[currentScreen - 1].isPractice;
+                                               let savedInputDataName = inputdata.name;
+                                               let savedOccupation = inputdata.occupation; 
+                                               let savedResultName = result.name;  
+                                               let savedresultOccuupation = result.occupation;  
+                                               let savedResult_time = result_time;
+                                               let savedFirstTime = firstTime;
+                                               let savedIsIgnore = isIgnore;     
+                                               saveData('facename', savedquestion+'a', savedInputDataName,savedanswer, savedResultName, savedResult_time, savedIsPractice, savedFirstTime ,savedIsIgnore);
+                                               setTimeout(function() {
+                                                saveData('facename',savedquestion+'b', savedOccupation,savedanswerOccuupation, savedresultOccuupation, savedResult_time, savedIsPractice, savedFirstTime ,savedIsIgnore);
+                                               }, 1000);                                               
                                                
                                                setTimeout(clearResult,1000);
                                                
@@ -1449,8 +1492,19 @@
                                            lastdatatitle="Result";               
                                        //save output
                                            if(!configdata[currentScreen - 1].answer.selected){
-                                               saveData('facename', configdata[currentScreen - 1].question+'a', inputdata.name,configdata[currentScreen - 1].answer.name, result.name, result_time, configdata[currentScreen - 1].isPractice);
-                                               saveData('facename', configdata[currentScreen - 1].question+'b', inputdata.occupation,configdata[currentScreen - 1].answer.occupation, result.occupation, result_time, configdata[currentScreen - 1].isPractice);   
+                                               let savedquestion = configdata[currentScreen - 1].question;                                
+                                               let savedanswer = configdata[currentScreen - 1].answer.name; 
+                                               let savedanswerOccuupation = configdata[currentScreen - 1].answer.occupation;                                             
+                                               let savedIsPractice = configdata[currentScreen - 1].isPractice;
+                                               let savedInputDataName = inputdata.name;
+                                               let savedOccupation = inputdata.occupation; 
+                                               let savedResultName = result.name;  
+                                               let savedresultOccuupation = result.occupation;  
+                                               let savedResult_time = result_time;  
+                                               saveData('facename', savedquestion+'a', savedInputDataName,savedanswer, savedResultName, savedResult_time, savedIsPractice);
+                                               setTimeout(function() {
+                                                saveData('facename', savedquestion+'b', savedOccupation,savedanswerOccuupation, savedresultOccuupation, savedResult_time, savedIsPractice);   
+                                               }, 1000);                                               
                                            }else{
                                                saveData('facename', configdata[currentScreen - 1].question, input, resultData[configdata[currentScreen - 1].screen]["solution"],resultData[configdata[currentScreen - 1].screen]["result"], result_time, configdata[currentScreen - 1].isPractice);
                                            }

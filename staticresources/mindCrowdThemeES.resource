@@ -4606,8 +4606,11 @@
     .comm-page-custom-keeptrack,
     .comm-page-custom-me-objects-temporal,
     .comm-page-custom-me-objects-space,
-    .comm-page-custom-me-cameland-cactus,
-    .comm-page-custom-me-digitsymbol
+    .comm-page-custom-pme-esto-y-aquello,
+    .comm-page-custom-me-digitos,
+	.comm-page-custom-pme-noticias-falsas,
+	.comm-page-custom-pme-cuentame,
+	.comm-page-custom-pme-cuentame-mas
     {
         padding-top: 46px;
     }
@@ -4619,8 +4622,11 @@
     .comm-page-custom-me-nombresycaras .slds-builder-header_container,
     .comm-page-custom-numberletter .slds-builder-header_container,
     .comm-page-custom-keeptrack .slds-builder-header_container,
-    .comm-page-custom-me-cameland-cactus .slds-builder-header_container,
-    .comm-page-custom-me-digitsymbol .slds-builder-header_container
+    .comm-page-custom-pme-esto-y-aquello .slds-builder-header_container,
+    .comm-page-custom-me-digitos .slds-builder-header_container,
+	.comm-page-custom-pme-noticias-falsas .slds-builder-header_container,
+	.comm-page-custom-pme-cuentame .slds-builder-header_container,
+	.comm-page-custom-pme-cuentame-mas .slds-builder-header_container
     {
         display: none;
         padding-top: 0;
@@ -4636,8 +4642,11 @@
     .comm-page-custom-keeptrack .main-content-inner,
     .comm-page-custom-me-objects-temporal .main-content-inner,
     .comm-page-custom-me-objects-space .main-content-inner,
-    .comm-page-custom-me-cameland-cactus .main-content-inner,
-    .comm-page-custom-me-digitsymbol .main-content-inner
+    .comm-page-custom-pme-esto-y-aquello .main-content-inner,
+    .comm-page-custom-me-digitos .main-content-inner,
+	.comm-page-custom-pme-noticias-falsas .main-content-inner,
+	.comm-page-custom-pme-cuentame .main-content-inner,
+	.comm-page-custom-pme-cuentame-mas .main-content-inner
     {
         min-height: 90vh;
         width: auto;
@@ -5437,10 +5446,6 @@
         .faceImg{
             width: 220px !important;
         }
-        .camelImg {
-            width: 150px !important;
-            height: 100px !important;
-        }
         .camelBtn {
             margin-right: 20px;
         }
@@ -5755,7 +5760,7 @@
             margin-left: auto;
             margin-right: auto;
         }
-        .comm-page-custom-me-seguimiento .main-content-inner, .comm-page-custom-me-objetos .main-content-inner, .comm-page-custom-me-parespalabrasreglas .main-content-inner, .comm-page-custom-me-reaccion .main-content-inner, .comm-page-custom-me-concentracion .main-content-inner, .comm-page-custom-me-nombresycaras .main-content-inner, .comm-page-custom-numberletter .main-content-inner, .comm-page-custom-keeptrack .main-content-inner, .comm-page-custom-me-objects-temporal .main-content-inner, .comm-page-custom-me-objects-space .main-content-inner,  .comm-page-custom-me-digitsymbol .main-content-inner, .comm-page-custom-me-cameland-cactus .main-content-inner {
+        .comm-page-custom-me-seguimiento .main-content-inner, .comm-page-custom-me-objetos .main-content-inner, .comm-page-custom-me-parespalabrasreglas .main-content-inner, .comm-page-custom-me-reaccion .main-content-inner, .comm-page-custom-me-concentracion .main-content-inner, .comm-page-custom-me-nombresycaras .main-content-inner, .comm-page-custom-numberletter .main-content-inner, .comm-page-custom-keeptrack .main-content-inner, .comm-page-custom-me-objects-temporal .main-content-inner, .comm-page-custom-me-objects-space .main-content-inner,  .comm-page-custom-me-digitos .main-content-inner, .comm-page-custom-pme-esto-y-aquello .main-content-inner,comm-page-custom-pme-noticias-falsas .main-content-inner,comm-page-custom-pme-cuentame .main-content-inner,comm-page-custom-pme-cuentame-mas .main-content-inner {
             min-height: 82vh;
         }
         .instractionb.box4 div, .box4 div, .btninput1, .comm-page-custom-me-reaccion .game_panel img {
@@ -7003,8 +7008,11 @@
             .comm-page-custom-keeptrack .main-content-inner, 
             .comm-page-custom-me-objects-temporal .main-content-inner, 
             .comm-page-custom-me-objects-space .main-content-inner,
-            .comm-page-custom-me-cameland-cactus .main-content-inner,
-            .comm-page-custom-me-digitsymbol .main-content-inner {
+            .comm-page-custom-pme-esto-y-aquello .main-content-inner,
+            .comm-page-custom-me-digitos .main-content-inner,
+			.comm-page-custom-pme-noticias-falsas .main-content-inner,
+			.comm-page-custom-pme-cuentame .main-content-inner,
+			.comm-page-custom-pme-cuentame-mas .main-content-inner			{
                 min-height: 90vh;
             }
             }
@@ -7015,7 +7023,7 @@
             }
             
         @media (max-width: 767px) {
-            .comm-page-custom-me-seguimiento .main-content-inner, .comm-page-custom-me-objetos .main-content-inner, .comm-page-custom-me-parespalabrasreglas .main-content-inner, .comm-page-custom-me-reaccion .main-content-inner, .comm-page-custom-me-concentracion .main-content-inner, .comm-page-custom-me-nombresycaras .main-content-inner, .comm-page-custom-numberletter .main-content-inner, .comm-page-custom-keeptrack .main-content-inner, .comm-page-custom-me-objects-temporal .main-content-inner, .comm-page-custom-me-objects-space .main-content-inner, .comm-page-custom-me-digitsymbol .main-content-inner, .comm-page-custom-me-cameland-cactus .main-content-inner{
+            .comm-page-custom-me-seguimiento .main-content-inner, .comm-page-custom-me-objetos .main-content-inner, .comm-page-custom-me-parespalabrasreglas .main-content-inner, .comm-page-custom-me-reaccion .main-content-inner, .comm-page-custom-me-concentracion .main-content-inner, .comm-page-custom-me-nombresycaras .main-content-inner, .comm-page-custom-numberletter .main-content-inner, .comm-page-custom-keeptrack .main-content-inner, .comm-page-custom-me-objects-temporal .main-content-inner, .comm-page-custom-me-objects-space .main-content-inner, .comm-page-custom-me-digitos .main-content-inner, .comm-page-custom-pme-esto-y-aquello .main-content-inner,comm-page-custom-pme-noticias-falsas .main-content-inner,comm-page-custom-pme-cuentame .main-content-inner,comm-page-custom-pme-cuentame-mas .main-content-inner{
                 min-height: 72vh;
             }
 
@@ -7244,21 +7252,7 @@
             min-width: 100%;
             text-align: center;
             display: inline-block;
-        }
-        
-        .camelImgtop {
-                width: 200px !important;
-                height: 134px !important;
-            }
-            
-            .wine {
-                width: 160px !important;
-                height: 200px !important;
-            }
-        .camelImgscrewdriver {
-            width: 300px !important;
-            height: 200px !important;
-        }
+        }      
         
         @media (max-width: 600px) {
             .camel-cactus-ul li{	
@@ -7279,6 +7273,87 @@
                 display: inline-block;
                 vertical-align: middle;
             } 
+        }
 
-       
-    
+            .fake-news-ul {
+                justify-content: center;
+                margin: auto;
+                margin-top: 14px;
+            }
+            
+            .fake-news-ul li,
+            .fake-news-ul div {
+                /* float:left; */
+                padding: 2px;
+                /* min-width: 234px; */
+                min-width: 210px;
+            
+                /* width: 16.66666%; */
+                width: 25%;
+                float: none;
+                display: inline-block;
+                vertical-align: middle;
+            }
+            
+            .fake-news-ul li .slds-button {
+                border-radius: 2px !important;
+                box-shadow: rgb(0 0 0 / 30%) 0px 11px 12px -7px;
+                color: #163248 !important;
+                background-color: #fff !important;
+                font-weight: 200 !important;
+                border: 1px #bdbdbd solid !important;
+                max-width: 100%;
+            }
+            
+            .fake-news-ul li .slds-button[disabled],
+            .fake-news-ul li .slds-button:disabled {
+                background-color: #fff !important;
+                border: 1px #bdbdbd solid !important;
+                color: #000305 !important;
+            
+            }
+            
+            .fake-news-ul .slds-button {
+                font-size: 22px !important;
+                padding: 15px 5px 15px !important;
+                min-width: 100%;
+                text-align: center;
+                display: inline-block;
+            }
+            
+            .fake-news-ul li .slds-button:hover {
+                background-color: rgb(233, 233, 233) !important;
+                color: #1e4463;
+            }
+            
+            .fake-news-ul .slds-button {
+                    min-width: 100%;
+                    text-align: center;
+                    display: inline-block;
+                    font-size: 18px !important;
+                    padding: 15px 5px !important;
+            }
+            
+            .fake-news-ul li .slds-button:hover {
+                    background-color: #fff !important;
+                    color: #1e4463;
+            }
+            
+            .fake-news-ul li .slds-button {
+                    width: 100%;
+                    text-align: center;
+                    float: none;
+                    justify-content: center;
+                    margin-bottom: 3px;
+            }
+
+            @media (max-width: 600px) {
+                .fake-news-ul .slds-button {
+                    min-width: 100%;
+                    text-align: center;
+                    display: inline-block;
+                    font-size: 18px !important;
+                    padding: 7px 4px !important;
+                }
+            }
+            

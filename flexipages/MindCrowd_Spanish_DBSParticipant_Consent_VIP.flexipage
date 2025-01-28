@@ -580,24 +580,8 @@
                     <value>adic/aprobacionescrita</value>
                 </componentInstanceProperties>
                 <componentInstanceProperties>
-                    <name>url_acceptance_vip</name>
-                    <value>adic/aprobacionescrita-vip</value>
-                </componentInstanceProperties>
-                <componentInstanceProperties>
                     <name>url_alreadysubmitted</name>
                     <value>adic/direccion-ya-ingresada</value>
-                </componentInstanceProperties>
-                <componentInstanceProperties>
-                    <name>url_alreadysubmitted_vip</name>
-                    <value>adic/direccion-ya-ingresada-vip</value>
-                </componentInstanceProperties>
-                <componentInstanceProperties>
-                    <name>url_decline</name>
-                    <value>https://blog.mindcrowd.org/es</value>
-                </componentInstanceProperties>
-                <componentInstanceProperties>
-                    <name>url_decline_vip</name>
-                    <value>pme-panel-control</value>
                 </componentInstanceProperties>
                 <componentName>participantconsentform</componentName>
                 <identifier>participantconsentform</identifier>

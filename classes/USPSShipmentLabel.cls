@@ -105,6 +105,8 @@ public with sharing class USPSShipmentLabel
     
     public static USPSLabel CreateUSPSLabel(String Ids,Address addr,Research_Campaign__c campaign,String contactName, String endPoint, String authToken,
                                            String paymentToken) {
+			try
+			{
             USPSLabel ResponseLabel = new USPSLabel(); 
             if(addr.Postalcode!=null){
                ZipCode = addr.Postalcode;
@@ -171,7 +173,7 @@ public with sharing class USPSShipmentLabel
             packageDescription.packagingType = campaign.Packaging_Type__c;
             packageDescription.processingCategory = processingCategory;
             DateTime dt = DateTime.now();
-            DateTime dtAdd7 = dt.addDays(7);
+            DateTime dtAdd7 = dt.addDays(6);
 			String formattedDate = dtAdd7.format('yyyy-MM-dd');
             packageDescription.mailingDate = formattedDate;
             packageDescription.destinationEntryFacilityType = 'NONE';
@@ -179,7 +181,7 @@ public with sharing class USPSShipmentLabel
             httpRequest.setBody(JSON.serialize(uspsLabelrequest));
             HttpResponse httpresponse = http.send(httpRequest);
             if (httpresponse.getStatusCode() != 200) {
-                USPSApiErrorResponse response = (USPSApiErrorResponse)JSON.deserialize(httpresponse.getBody(), USPSApiErrorResponse.class);            
+                /*USPSApiErrorResponse response = (USPSApiErrorResponse)JSON.deserialize(httpresponse.getBody(), USPSApiErrorResponse.class);            
                 USPSApiErrorResponse.Error errorDetails = response.error;
                 ResponseLabel.USPS_ERROR_CODE = errorDetails.code;
                 ResponseLabel.USPS_ERROR_DESC = errorDetails.message;
@@ -187,7 +189,16 @@ public with sharing class USPSShipmentLabel
                 List<USPSApiErrorResponse.Errors> errorList = errorDetails.errors;            
                 if (errorList.size()>0) {
                     ResponseLabel.USPS_ERROR_SOURCE = errorList[0].source;
+                }*/
+				ResponseLabel.USPS_Returned_Error = true;
+                if(httpresponse.getBody().length()>2000){
+                    ResponseLabel.USPS_ERROR_DESC = httpresponse.getBody().substring(0, 2000);
                 }
+                else{
+                    ResponseLabel.USPS_ERROR_DESC = httpresponse.getBody();
+                }
+                ResponseLabel.USPS_ERROR_CODE = 'INTERFACE_ERROR';
+                ResponseLabel.USPS_ERROR_SOURCE = 'USPS Label API';
                 return ResponseLabel;
             } 
             else {
@@ -204,5 +215,13 @@ public with sharing class USPSShipmentLabel
                 ResponseLabel.LabelImage=labelRresponse.labelImage;
                 return ResponseLabel;            
         	}
+			}
+			catch(Exception e){
+              USPSLabel ResponseLabel = new USPSLabel();
+              ResponseLabel.USPS_ERROR_DESC = e.getMessage();
+              ResponseLabel.USPS_ERROR_CODE = 'INTERFACE_ERROR';
+              ResponseLabel.USPS_ERROR_SOURCE = 'USPS Label API';
+              return ResponseLabel;                                               
+        }
       }
 }

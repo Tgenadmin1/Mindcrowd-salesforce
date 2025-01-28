@@ -31,6 +31,8 @@
             <property name="Hispanic_Latino" type="String" default="Do you consider yourself Hispanic or Latino?" label="Hispanic_Latino"/>
             <property name="campylete2" type="String" default="Are you left or right hand dominant?" label="campylete2"/>  
             <property name="strTitle" type="String" default="Welcome in Salesforce" label="Enter the title"/> 
+            <property name="brainInfo_text_error" type="String" default="Please fill out the fields marked with an asterisk." label="brainInfo_text_error"/>
+            <property name="brainInfo_text_required" type="String" default="Required Field" label="Required Field"/>
         </targetConfig>
     </targetConfigs>
 </LightningComponentBundle>

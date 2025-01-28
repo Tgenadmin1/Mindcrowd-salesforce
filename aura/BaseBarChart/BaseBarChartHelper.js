@@ -1,10 +1,10 @@
 ({
     createGraph : function(cmp, temp) {
         
-        if (!temp || typeof temp !== 'object') {
+      if (!temp || typeof temp !== 'object') {
             console.error('Invalid temp data:', temp);
             return;
-        }
+        } 
         
         var dataMap = {"chartLabels": Object.keys(temp),
                        "chartData": Object.values(temp)

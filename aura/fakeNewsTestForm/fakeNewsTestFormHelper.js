@@ -1,6 +1,6 @@
 ({    
-    participantGameInfo: function (component) { 
-        console.log('pgi: '+ JSON.stringify(component.get("v.partGameInfo")));        
+    participantGameInfo: function (component,reactionTime, questionnum) { 
+        //console.log('pgi: '+ JSON.stringify(component.get("v.partGameInfo")));        
         var action = component.get("c.participantGameInfoUpdate1");
         action.setParams({
             "sobj": component.get("v.partGameInfo")
@@ -9,7 +9,8 @@
             var state = a.getState();
             if (state === "SUCCESS") {
                 var name = a.getReturnValue();
-                component.set("v.participantGameid", name);
+                this.recorData(component, reactionTime, questionnum);
+                //component.set("v.participantGameid", name);
             } else if (state === "ERROR") {
                 let message = '';
                 let errors = a.getError();
@@ -22,7 +23,7 @@
 
         $A.enqueueAction(action);
     },
-    recorData: function (component, event, helper, reactionTime, questionnum) {
+    recorData: function (component, reactionTime, questionnum) {
          let data = {
              Contact_Name__c: component.get('v.userContactId'),
              Game_Name__c: component.get('v.gameId'),
@@ -57,15 +58,15 @@
          })();
      },
     preventLeaving: function () {      
-        console.log('inside preventLeaving');  
+        //console.log('inside preventLeaving');  
         window.addEventListener("beforeunload", this.leaveHandler);
     },
     leaveHandler: function (event) {
-        console.log('inside leavehandler');
+        //console.log('inside leavehandler');
         event.returnValue = "Are you sure you want to leave? All changes will be lost!";
     },
     allowLeaving: function () {
-        console.log('inside allowLeaving');
+        //console.log('inside allowLeaving');
         window.removeEventListener("beforeunload", this.leaveHandler);
     }
 })

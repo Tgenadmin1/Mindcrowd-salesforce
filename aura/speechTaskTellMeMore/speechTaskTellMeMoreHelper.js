@@ -1,38 +1,67 @@
 ({    
-    saveAudioToSalesforce: function(component, participantGameInfoId, binaryData, taskName,otherlanguage,othervoices,
-         loudnoices,isdelete) {
-         var action = component.get("c.createAudioContentVersion");
-         //const binaryDataStr = JSON.stringify(binaryData);
+    updateSpeechTaskPGI: function(component, participantGameInfoId, taskName,otherlanguage,othervoices,
+         loudnoices,isconsent,binaryData,configdata) {
+         if(isconsent){
+            const file_upload_msg = $A.get("$Label.c.file_upload_msg"); 
+            document.getElementById("datablock").innerHTML = '<div class="title">'+file_upload_msg+'</div>';
+            component.set("v.isLoading", true);                       
+            //console.log(binaryData);
+            //console.log(binaryData.type);
+         }         
+         var action = component.get("c.updateSpeechTaskPGI");
          action.setParams({
              "parentId": participantGameInfoId, // The ID of your custom object record
-             "speechTaskrec": binaryData,
              "taskName" : taskName,
              "otherlanguage" : otherlanguage,
              "othervoices" : othervoices,
              "loudnoices" : loudnoices,
-             "isdelete" : !isdelete
-         });
-         console.log('othervoices: '+othervoices);   
-         console.log('otherlanguage: '+otherlanguage);   
-         console.log('loudnoices: '+loudnoices);    
-         console.log('isdelete: '+isdelete);              
+             "isconsent" : isconsent
+         });     
          action.setCallback(this, function(response) {
-             console.log('inside');
              var state = response.getState();
              if (state == "SUCCESS") {
-                 // ContentVersion created successfully
-                 var contentVersionId = response.getReturnValue();
-                 console.log("Audio ContentVersion ID:", contentVersionId);
+                 var response = response.getReturnValue();
+                 //console.log("response:", JSON.stringify(response));
+                 if(isconsent && response!=null){
+                    uploadToS3PresignedUrl(response.uploadURL, binaryData);
+                 } 
+                 else{
+                    component.set("v.isLoading", false);
+                    document.getElementById("datablock").innerHTML = configdata[6].content;
+                 }  
              } else {
-                 // Handle errors
-                 console.error("Error creating audio ContentVersion:", response.getError());
+                 console.error("Error");
+                 component.set("v.isLoading", false);
+                 document.getElementById("datablock").innerHTML = configdata[6].content;
              }
          });
          $A.getCallback(function () {
              $A.enqueueAction(action);
          })();
          
-         console.log('after');
+         function uploadToS3PresignedUrl(presignedUrl, binaryData) {
+            fetch(presignedUrl, {
+                method: 'PUT',
+                body: binaryData,
+                /*headers: {
+                    'Content-Type': 'audio/wav',
+                    //'Content-Length': binaryData.length.toString()
+                }*/
+             })
+            .then(response => {
+                if (!response.ok) {
+                    //console.log('Failed to upload file');
+                }
+                //console.log(response);
+                component.set("v.isLoading", false);
+                document.getElementById("datablock").innerHTML = configdata[6].content;
+            })
+            .catch(error => {
+                console.error('Error uploading file:', error);
+                component.set("v.isLoading", false);
+                document.getElementById("datablock").innerHTML = configdata[6].content;
+            });
+        }
      },
      
  
@@ -44,8 +73,13 @@
              var state = a.getState();
              if (state === "SUCCESS") {
                  var name = a.getReturnValue();
-                 console.log(name);
-                 component.set("v.myAttribute", name);
+                 //console.log(name);
+                 if(name){
+                    component.set("v.myAttribute", name);
+                 }
+                 else{
+                    component.set("v.myAttribute", 'Tell Me More');
+                 }
              }
              else if (state === "ERROR") {
                  let message = '';
@@ -68,7 +102,7 @@
              if (state === "SUCCESS") {
                  var name = a.getReturnValue();
                  component.set("v.mycontactId", name);
-                 console.log('name: '+name);
+                 //console.log('name: '+name);
              }
              else if (state === "ERROR") {
                  let message = '';
@@ -244,9 +278,9 @@
          window.removeEventListener("beforeunload", this.leaveHandler);
      },
      ristrictAutoRun: function (component, event, helper) {
-         console.log('beforerefresh');
+         //console.log('beforerefresh');
          $A.get('event.force:refreshView'); 
-         console.log('afterrefresh');
+         //console.log('afterrefresh');
      },
  
      getDeviceType: function(component, event, helper) {

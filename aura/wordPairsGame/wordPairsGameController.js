@@ -85,6 +85,7 @@
                     let roundTotalTime = null;
                     let roundStartTime = null;
                     let timedata = new Date();
+                    let totalKeyStrokesInRound = 0;
                     let result_time = 0;
                     let command_value = 0;
                     let inputdata = "";
@@ -209,6 +210,7 @@
             if(configdata[currentScreent].screen == '0' || configdata[currentScreent].screen == '19'
                 || configdata[currentScreent].screen == '70' || configdata[currentScreent].screen == '120'){
                     roundStartTime = timedata;
+                    totalKeyStrokesInRound = 0;
                     //console.log('round start time: ', roundStartTime);
                 }
             if(configdata[currentScreent].screen == '18' || configdata[currentScreent].screen == '69'
@@ -217,19 +219,19 @@
 
                     if(configdata[currentScreent].screen == '18'){
                         let totalTimeForRoundZero=roundTotalTime;
-                        helper.participantGameInfoUpdateTotalTimeRoundOne(component,event,helper,userContactId,gameId,participantGameInfoId,totalTimeForRoundZero,configdata[currentScreent].screen);
+                        helper.participantGameInfoUpdateTotalTimeRoundOne(component,event,helper,userContactId,gameId,participantGameInfoId,totalTimeForRoundZero,totalKeyStrokesInRound,configdata[currentScreent].screen);
                     }
                     else if(configdata[currentScreent].screen == '69'){
                         let totalTimeForRoundOne=roundTotalTime;
-                        helper.participantGameInfoUpdateTotalTimeRoundOne(component,event,helper,userContactId,gameId,participantGameInfoId,totalTimeForRoundOne,configdata[currentScreent].screen);
+                        helper.participantGameInfoUpdateTotalTimeRoundOne(component,event,helper,userContactId,gameId,participantGameInfoId,totalTimeForRoundOne,totalKeyStrokesInRound,configdata[currentScreent].screen);
                     }
                     else if(configdata[currentScreent].screen == '119'){
                         let totalTimeForRoundTwo=roundTotalTime;
-                        helper.participantGameInfoUpdateTotalTimeRoundOne(component,event,helper,userContactId,gameId,participantGameInfoId,totalTimeForRoundTwo,configdata[currentScreent].screen);
+                        helper.participantGameInfoUpdateTotalTimeRoundOne(component,event,helper,userContactId,gameId,participantGameInfoId,totalTimeForRoundTwo,totalKeyStrokesInRound,configdata[currentScreent].screen);
                     }
                     else if(configdata[currentScreent].screen == '168'){
                         let totalTimeForRoundThree=roundTotalTime;
-                        helper.participantGameInfoUpdateTotalTimeRoundOne(component,event,helper,userContactId,gameId,participantGameInfoId,totalTimeForRoundThree,configdata[currentScreent].screen);
+                        helper.participantGameInfoUpdateTotalTimeRoundOne(component,event,helper,userContactId,gameId,participantGameInfoId,totalTimeForRoundThree,totalKeyStrokesInRound,configdata[currentScreent].screen);
                     }
                 }    
             
@@ -453,6 +455,7 @@
         function gamePlay(e) {
             command_value = e.keyCode;
             console.log('sssssssssssssss');
+            totalKeyStrokesInRound = totalKeyStrokesInRound + 1;
             //alert(e.key);
             //command_value=e.key.charCodeAt(0);
            

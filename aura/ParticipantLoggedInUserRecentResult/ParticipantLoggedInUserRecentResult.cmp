@@ -89,7 +89,7 @@
                                                     isScoreReactionTime="false" gameTitle="{!$Label.c.game_name_17}"></c:ParticipantLoggedInUserGameDashboard>
         </lightning:layoutItem> 
         <lightning:layoutItem class="remove-Padding" size ="12">
-            <c:ParticipantLoggedInUserGameDashboard gameName ="{!$Label.c.scientific_game_CamelandCactus}"
+            <c:ParticipantLoggedInUserGameDashboard gameName ="{!$Label.c.scientific_game_This_That}"
                                                     gameDesc1="{!$Label.c.Expan_names_faces_game_user_text_1}" gameDesc2="{!$Label.c.Expan_names_faces_game_user_text_2}"
                                                     isScoreReactionTime="false" gameTitle="{!$Label.c.game_name_18}"></c:ParticipantLoggedInUserGameDashboard>
         </lightning:layoutItem>

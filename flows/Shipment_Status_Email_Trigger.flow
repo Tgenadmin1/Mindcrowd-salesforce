@@ -15,7 +15,6 @@
             </value>
         </inputParameters>
         <nameSegment>Shipping_Detail__c.Shipment_status_Invalid_Address</nameSegment>
-        <versionSegment>1</versionSegment>
     </actionCalls>
     <actionCalls>
         <name>Invalid_Address_Spanish</name>
@@ -32,7 +31,6 @@
             </value>
         </inputParameters>
         <nameSegment>Shipping_Detail__c.Shipment_status_Invalid_Address_Spanish</nameSegment>
-        <versionSegment>1</versionSegment>
     </actionCalls>
     <actionCalls>
         <name>Kit_Sent_English</name>
@@ -49,7 +47,6 @@
             </value>
         </inputParameters>
         <nameSegment>Shipping_Detail__c.Shipment_Status_sent_email_alert</nameSegment>
-        <versionSegment>1</versionSegment>
     </actionCalls>
     <actionCalls>
         <name>Kit_Sent_Spanish</name>
@@ -66,7 +63,6 @@
             </value>
         </inputParameters>
         <nameSegment>Shipping_Detail__c.Shipment_Status_sent_email_Spanish</nameSegment>
-        <versionSegment>1</versionSegment>
     </actionCalls>
     <actionCalls>
         <name>Received_English</name>
@@ -83,7 +79,6 @@
             </value>
         </inputParameters>
         <nameSegment>Shipping_Detail__c.Sample_Received_email_alert</nameSegment>
-        <versionSegment>1</versionSegment>
     </actionCalls>
     <actionCalls>
         <name>Received_Spanish</name>
@@ -100,7 +95,6 @@
             </value>
         </inputParameters>
         <nameSegment>Shipping_Detail__c.Sample_Received_email_alert_Spanish</nameSegment>
-        <versionSegment>1</versionSegment>
     </actionCalls>
     <apiVersion>58.0</apiVersion>
     <decisions>

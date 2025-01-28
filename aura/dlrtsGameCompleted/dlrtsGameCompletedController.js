@@ -30,10 +30,10 @@
                 }
 
             } else {
+                console.log('ssss');
                 localStorage.setItem('LastPage', $A.get("$Label.c.Community_Url") + "/s/" + $A.get("$Label.c.url_attentiontestcomplete"));
-                if (elMainContent) {
-                    elMainContent.classList.remove('opacity');
-                }
+               // localStorage.setItem('LastPage', document.URL);
+               document.getElementById('mainContent').classList.remove('opacity');
             }
         }
 

@@ -102,8 +102,13 @@ public without sharing class ParticipantVIPResultsControllerES
         Decimal edu_att = objCon.Education_Attainment__c;
         edu_att = edu_att == null ? 1 : edu_att;
         String sex = objCon.Sex__c;
+        if(gameName == 'Flanker'){
+            mapPlyAverageValuesData.put ('MaxValue',50);
+        }
+        else{
+            mapPlyAverageValuesData.put ('MaxValue', Integer.valueOf([SELECT Max_Score__c FROM Game_Detail__c where Name=:gameName LIMIT 1].Max_Score__c) );
+        }
         
-        mapPlyAverageValuesData.put ('MaxValue', Integer.valueOf([SELECT Max_Score__c FROM Game_Detail__c where Name=:gameName LIMIT 1].Max_Score__c) );
         List<Participant_Game_Info__c> peopleLikeYouPGIList = [SELECT Count_Of_Total_Reaction_Time__c ,Count_Of_No_of_Question_Attempted__c,Count_Of_No_Of_Correct_Answered__c
                                            FROM Participant_Game_Info__c 
                                            WHERE Contact_Name__r.Age__c > 0
@@ -121,7 +126,7 @@ public without sharing class ParticipantVIPResultsControllerES
                                            LIMIT 49990];
         List<Decimal> quartileValues = new List<Decimal>();
         if(peopleLikeYouPGIList !=null && peopleLikeYouPGIList.size() >= 25){ 
-            if(gameName == 'DLTRS' || gameName == 'Deary Simple And Complex Reaction Time' || gameName == 'Flanker'){
+            if(gameName == 'DLTRS' || gameName == 'Deary Simple And Complex Reaction Time'){
                         Decimal sumReationTime = 0;
                         List<Decimal> reacttimeList = new List<Decimal>();
                         for (Participant_Game_Info__c peopleLikeYouPGI : peopleLikeYouPGIList) {
@@ -173,30 +178,20 @@ public without sharing class ParticipantVIPResultsControllerES
             WHERE Game_Name__r.Name =:gameName 
             AND Sex__c =:objCon.Sex__c AND Education__c>=: edu_att
             AND Age__c =:pluage Order BY Education__c ASC LIMIT 1];
-                if(objLikeYouList.size()>0){
-                    for(People_Like_You_Data__c peopleLikeYouData : objLikeYouList){
-                        if(gameName=='Flanker'){
-                            mapPlyAverageValuesData.put ('LowAverage', 564);
-                            mapPlyAverageValuesData.put ('HighAverage', 963);    
-                        }
-                        else
-                        {
-                            mapPlyAverageValuesData.put ('LowAverage', Integer.valueOf(peopleLikeYouData.Low_Average__c));
-                            mapPlyAverageValuesData.put ('HighAverage', Integer.valueOf(peopleLikeYouData.High_Average__c)); 
-                        }  
-                    }
-                }
-                else{
-                    if(gameName=='Fake News') {
-                        mapPlyAverageValuesData.put ('LowAverage', 8);
-                        mapPlyAverageValuesData.put ('HighAverage', 16);   
-                    }                   
-                }
-             
+            for(People_Like_You_Data__c peopleLikeYouData : objLikeYouList){        
+                    mapPlyAverageValuesData.put ('LowAverage', Integer.valueOf(peopleLikeYouData.Low_Average__c));
+                    mapPlyAverageValuesData.put ('HighAverage', Integer.valueOf(peopleLikeYouData.High_Average__c));
+               } 
            }
       List<Participant_Dashboard__c> partDashboard = [SELECT Data_Value__c FROM Participant_Dashboard__c WHERE Game_Detail__r.Name=:gameName LIMIT 1];
             if(partDashboard !=null && partDashboard.size()>0){
-            	mapOtherData.put('Overall Average', Integer.valueOf(partDashboard[0].Data_Value__c));
+                if(gameName == 'Flanker'){
+                    mapOtherData.put('Overall Average', 48);
+                }
+                else{
+                    mapOtherData.put('Overall Average', Integer.valueOf(partDashboard[0].Data_Value__c));
+                }
+            	
             }
             else{
                 mapOtherData.put('Overall Average', 0);
@@ -205,126 +200,6 @@ public without sharing class ParticipantVIPResultsControllerES
         objDashboardData.mapPlyAverageValuesData = mapPlyAverageValuesData;
         return objDashboardData;
     }
-    
-    @AuraEnabled(cacheable=true)
-    public static DashboardDataBean getDashboardDataBeanGame(String handSide){
-        List<User> lstUsers = [SELECT Id,ContactId From User where Id =: UserInfo.getUserId() AND ContactId != null];
-        String contactId = lstUsers[0].ContactId;
-        //String contactId='0038G00000YESnyQAH';//Hardcoding for testing purpose
-        String gameName = 'Bean Game';
-        DashboardDataBean objDashboardData = new DashboardDataBean();
-        Map<String, Decimal> mapOtherData = new Map<String, Decimal>();
-        Map<String, Decimal> mapWhatHappendWithAgeData = new Map<String, Decimal>();
-        Map<String, Decimal> mapPlyAverageValuesData = new Map<String, Decimal>();
-        mapOtherData.put('YourScore',0);
-        mapOtherData.put('isGamePlayed',0); 
-        mapOtherData.put('CorrectAnswers',0); 
-        mapOtherData.put('ReactionTime',0); 
-        mapOtherData.put ('People Like You', 0);
-        mapPlyAverageValuesData.put ('LowAverage', 0);
-        mapPlyAverageValuesData.put ('HighAverage', 0); 
-        
-        List<Bean_Game__c> bean = [SELECT Right_Hand_Average__c,Left_Hand_Average__c,Contact__c 
-            					  FROM Bean_Game__c where Contact__c = :contactId Order by CreatedDate DESC LIMIT 1];         
-        if(bean.size()>0){
-        	mapOtherData.put('isGamePlayed',1);  
-            List<Participant_Dashboard__c> partDashboard;
-            if(handSide == 'left'){
-                mapOtherData.put('ReactionTime',bean[0].Left_Hand_Average__c);
-                partDashboard = [SELECT Data_Value__c FROM Participant_Dashboard__c 
-                                                        WHERE Game_Detail__r.Name=:gameName and 	
-                                                        Data_Name__c='Overall Average Left Hand' LIMIT 1];
-                mapPlyAverageValuesData.put('MaxValue', Integer.valueOf([SELECT Max_Score__c FROM Game_Detail__c 
-                                                                         where Name=:gameName LIMIT 1].Max_Score__c));
-            }
-            else{
-                mapOtherData.put('ReactionTime',bean[0].Right_Hand_Average__c);
-                partDashboard = [SELECT Data_Value__c FROM Participant_Dashboard__c 
-                                                        WHERE Game_Detail__r.Name=:gameName and 	
-                                                        Data_Name__c='Overall Average Right Hand' LIMIT 1];
-                mapPlyAverageValuesData.put('MaxValue', Integer.valueOf([SELECT Max_Score_2__c FROM Game_Detail__c 
-                                                                         where Name=:gameName LIMIT 1].Max_Score_2__c));
-            } 
-            mapOtherData.put('Overall Average', Integer.valueOf(partDashboard[0].Data_Value__c)); 
-            //Quartile calcualtion starts from here
-            Contact objCon = [SELECT Sex__c,Age__c FROM Contact WHERE Id=:bean[0].Contact__c ];
-            Decimal age = objCon.Age__c;
-            Decimal pluage,lowage,highage; 
-            if(age>85){
-                lowage = 80;
-                highage = 115;
-            }
-            else if(age<18){
-                lowage = 18;
-                highage = 28;
-            }
-            else if(age<28){
-                lowage = 18;
-                highage = age+10;
-            }
-            else{
-                lowage = age-10;
-                highage = age+10;
-            }        
-            pluage = age == null ? 18 : age;
-            pluage = pluage < 18 ? 18 : pluage;
-            pluage = pluage > 90 ? 90 : pluage;
-            
-            List<Bean_Game__c> beanPeopleLikeYou = [SELECT Right_Hand_Average__c,Left_Hand_Average__c 
-                                                    FROM Bean_Game__c 
-                                                    WHERE Contact__r.Age__c > 0
-                                          			AND Contact__r.Age__c >= :lowage
-                                           			AND Contact__r.Age__c <= :highage                                        
-                                           			AND Contact__r.Sex__c != ''
-                                           			AND Contact__r.Education_Attainment__c != null
-                                                    AND  Id !=: bean[0].Id
-                                                    Order by CreatedDate DESC
-                                             	    LIMIT 49990];
-            
-             List<Decimal> quartileValues = new List<Decimal>();
-             Decimal sumReationTime = 0;
-             if(beanPeopleLikeYou !=null && beanPeopleLikeYou.size() > 0){//Check if 0 or 25                 
-                  for (Bean_Game__c beangame : beanPeopleLikeYou) {
-                      if(handSide == 'left'){
-                        quartileValues.add(beangame.Left_Hand_Average__c);
-                        sumReationTime += beangame.Left_Hand_Average__c;
-                        
-                    }
-                    else{
-                        quartileValues.add(beangame.Right_Hand_Average__c);
-                        sumReationTime += beangame.Right_Hand_Average__c;
-                    }
-                  }
-					mapOtherData.put ('People Like You', sumReationTime / beanPeopleLikeYou.size());                 
-              }
-              else {
-                //Need to add if less numbers
-              }        
-        quartileValues.sort();                
-        Decimal dataSize = quartileValues.size();
-        Integer q1Index = Math.ceil((dataSize + 1) / 4.0).intValue();
-        Integer q2Index = Math.ceil((dataSize + 1) / 2.0).intValue();
-        Integer q3Index = Math.ceil(3 * (dataSize + 1) / 4.0).intValue();
-        System.debug('q1Index: '+q1Index);
-        System.debug('q2Index: '+q2Index);
-        System.debug('q3Index: '+q3Index);
-        System.debug('quartileValues: '+quartileValues);
-          if (dataSize > 0) {
-                            Decimal lowAverage = quartileValues[q1Index - 1].setScale(2, System.RoundingMode.HALF_UP);
-                            Decimal highAverage = quartileValues[q3Index - 1].setScale(2, System.RoundingMode.HALF_UP);
-                            if(lowAverage != null){
-                                mapPlyAverageValuesData.put ('LowAverage', lowAverage);
-                            }
-                            if(highAverage != null){
-                                mapPlyAverageValuesData.put ('HighAverage', highAverage);                                      
-                            }
-                        }
-        }
-		objDashboardData.mapOtherData = mapOtherData;    
-        objDashboardData.mapPlyAverageValuesData = mapPlyAverageValuesData;
-        return objDashboardData;
-    }
-    
     public class DashboardData
     {
         @AuraEnabled
@@ -335,13 +210,6 @@ public without sharing class ParticipantVIPResultsControllerES
         public Map<String, Integer> mapWhatHappendWithAgeData; */
         @AuraEnabled
         public Map<String,Integer> mapPlyAverageValuesData;     
-    }  
-    
-        public class DashboardDataBean
-    {
-        @AuraEnabled
-        public Map<String, Decimal> mapOtherData;
-        @AuraEnabled
-        public Map<String,Decimal> mapPlyAverageValuesData;     
-    }  
+    }
+  
 }

@@ -78,6 +78,7 @@
                     let round = 0;
                     var keyCount = 0;
                     let timedata = new Date();
+                    let totalKeyStrokesInRound = 0;
                     let result_time = 0;
                     let command_value = 0;
                     let inputdata = {};
@@ -170,6 +171,9 @@
                         timedata = new Date();
                         pageLoadStartTime = timedata;
                         document.getElementById("datablock_keepTrackGame").innerHTML = configdata[currentScreent].content;
+                        if (currentScreent == 547) {
+                            document.getElementById("nextBtton").classList.remove("slds-hide");
+                        }
                         //adding event listeners fields in trial pages. 
                         if(!isKeyboad){
                             let userenterbtn= document.getElementById("enterBtn");
@@ -781,9 +785,10 @@
                             if (configdata[currentScreent].screen == '73') {
                                 //Practice Round 0
                                 roundTotalTime = timedata - roundStartTime;
-                                helper.participantGameInfoUpdateTotalTimeRoundOne(component, event, helper, userContactId, gameId, participantGameInfoId, roundTotalTime, configdata[currentScreent].screen);
+                                helper.participantGameInfoUpdateTotalTimeRoundOne(component, event, helper, userContactId, gameId, participantGameInfoId, roundTotalTime,null, configdata[currentScreent].screen);
                                 roundTotalTime = 0;
                                 //console.log("totalTimeForRoundZero : ", roundTotalTime);
+                                totalKeyStrokesInRound = 0;
                             } else if (configdata[currentScreent].screen == '114') {
                                 // Practice trial category 2
                                 //currently we are not capturing the total time for practice round. uncomment the helper method call if needed in future.
@@ -793,6 +798,7 @@
                                 //console.log("totalTimeForRound Practice trial category 2  : ", roundTotalTime);
                                // helper.participantGameInfoUpdateTotalTimeRoundOne(component, event, helper, userContactId, gameId, participantGameInfoId, roundTotalTime, configdata[currentScreent].screen);
                                 roundTotalTime = 0;
+                            	totalKeyStrokesInRound = 0;
                             } else if (configdata[currentScreent].screen == '146') {
                                 // category 1 trial 1
 
@@ -811,8 +817,9 @@
                                 let c1t3TotalTime = timedata - roundStartTime;
                                 roundTotalTime = roundTotalTime + c1t3TotalTime;
                                 //console.log("totalTimeForRound category 1  : ", roundTotalTime);
-                                helper.participantGameInfoUpdateTotalTimeRoundOne(component, event, helper, userContactId, gameId, participantGameInfoId, roundTotalTime, configdata[currentScreent].screen);
+                                helper.participantGameInfoUpdateTotalTimeRoundOne(component, event, helper, userContactId, gameId, participantGameInfoId, roundTotalTime, totalKeyStrokesInRound, configdata[currentScreent].screen);
                                 roundTotalTime = 0;
+                            	totalKeyStrokesInRound = 0;
                             } else if (configdata[currentScreent].screen == '242') {
                                 // category 2 trial 1
 
@@ -831,8 +838,9 @@
                                 let c2t3TotalTime = timedata - roundStartTime;
                                 roundTotalTime = roundTotalTime + c2t3TotalTime;
                                 //console.log("totalTimeForRound category 2 trial 3 : ", roundTotalTime);
-                                helper.participantGameInfoUpdateTotalTimeRoundOne(component, event, helper, userContactId, gameId, participantGameInfoId, roundTotalTime, configdata[currentScreent].screen);
+                                helper.participantGameInfoUpdateTotalTimeRoundOne(component, event, helper, userContactId, gameId, participantGameInfoId, roundTotalTime, totalKeyStrokesInRound, configdata[currentScreent].screen);
                                 roundTotalTime = 0;
+                            	totalKeyStrokesInRound = 0;
                             } else if (configdata[currentScreent].screen == '338') {
                                 // category 3 trial 1
 
@@ -851,8 +859,9 @@
                                 let c3t3TotalTime = timedata - roundStartTime;
                                 roundTotalTime = roundTotalTime + c3t3TotalTime;
                                 //console.log("totalTimeForRound category 3 trial 3 : ", roundTotalTime);
-                                helper.participantGameInfoUpdateTotalTimeRoundOne(component, event, helper, userContactId, gameId, participantGameInfoId, roundTotalTime, configdata[currentScreent].screen);
+                                helper.participantGameInfoUpdateTotalTimeRoundOne(component, event, helper, userContactId, gameId, participantGameInfoId, roundTotalTime, totalKeyStrokesInRound, configdata[currentScreent].screen);
                                 roundTotalTime = 0;
+                            	totalKeyStrokesInRound = 0;
                             } else if (configdata[currentScreent].screen == '434') {
                                 // category 4 trial 1
 
@@ -871,8 +880,9 @@
                                 let c4t3TotalTime = timedata - roundStartTime;
                                 roundTotalTime = roundTotalTime + c4t3TotalTime;
                                 //console.log("totalTimeForRound category 4 trial 3 : ", roundTotalTime);
-                                helper.participantGameInfoUpdateTotalTimeRoundOne(component, event, helper, userContactId, gameId, participantGameInfoId, roundTotalTime, configdata[currentScreent].screen);
+                                helper.participantGameInfoUpdateTotalTimeRoundOne(component, event, helper, userContactId, gameId, participantGameInfoId, roundTotalTime, totalKeyStrokesInRound, configdata[currentScreent].screen);
                                 roundTotalTime = 0;
+                            	totalKeyStrokesInRound = 0;
                             }
 
                             roundStartTime = timedata;
@@ -929,16 +939,24 @@
                                 //Save Output Events
                                 let currentgamedata = resultData[configdata[currentScreent - 1].screen];
                                 Object.keys(currentgamedata.status).forEach((vv, kk) => {
-                                    //console.log('count:--------',vv,kk);
-                                    saveData(
-                                        "KEEPTRACK",
-                                        currentgamedata.question,
-                                        currentgamedata.data["fld" + (kk + 1)],
-                                        currentgamedata.status["res_sts" + (kk + 1)],
-                                        currentgamedata.duration,
-                                        currentgamedata.isPractice,
-                                        currentgamedata.correctAnswer["fld" + (kk + 1)]
-                                    );
+                                    console.log('count1:--------',vv,kk);
+                                    let questionSaved =  currentgamedata.question;
+                                    let dataSaved = currentgamedata.data["fld" + (kk + 1)];
+                                    let resSaved = currentgamedata.status["res_sts" + (kk + 1)];
+                                    let durationSaved = currentgamedata.duration;
+                                    let ispracticeSaved = currentgamedata.isPractice;
+                                    let answerSaved = currentgamedata.correctAnswer["fld" + (kk + 1)];                                    
+                                    setTimeout(function() {
+                                        saveData(
+                                            "KEEPTRACK",
+                                            questionSaved,
+                                            dataSaved,
+                                            resSaved,
+                                            durationSaved,
+                                            ispracticeSaved,
+                                            answerSaved
+                                        );        
+                                    }, 1000);                                    
                                 });
 
                                 //Front Result Output Data Intigration time comment or Remove 3 lines
@@ -1017,15 +1035,24 @@
                             //Save Output Events
                             let currentgamedata = resultData[configdata[currentScreent - 1].screen];
                             Object.keys(currentgamedata.status).forEach((vv, kk) => {
-                                saveData(
-                                    "KEEPTRACK",
-                                    currentgamedata.question,
-                                    currentgamedata.data["fld" + (kk + 1)],
-                                    currentgamedata.status["res_sts" + (kk + 1)],
-                                    currentgamedata.duration,
-                                    currentgamedata.isPractice,
-                                    currentgamedata.correctAnswer["fld" + (kk + 1)]
-                                );
+                                console.log('count2:--------',vv,kk);
+                                let questionSaved =  currentgamedata.question;
+                                let dataSaved = currentgamedata.data["fld" + (kk + 1)];
+                                let resSaved = currentgamedata.status["res_sts" + (kk + 1)];
+                                let durationSaved = currentgamedata.duration;
+                                let ispracticeSaved = currentgamedata.isPractice;
+                                let answerSaved = currentgamedata.correctAnswer["fld" + (kk + 1)]; 
+                                setTimeout(function() {
+                                    saveData(
+                                        "KEEPTRACK",
+                                        questionSaved,
+                                        dataSaved,
+                                        resSaved,
+                                        durationSaved,
+                                        ispracticeSaved,
+                                        answerSaved
+                                    );        
+                                }, 1000);
                             });
 
                             //Front Result Output Data Intigration time comment or Remove 3 lines
@@ -1081,7 +1108,7 @@
                     function gamePlayEnter(){ 
                         //console.log("clicked enter button");
                         //console.log('test 1');
-                       // keybuttonEvent = true;
+                       //keybuttonEvent = true;
                         gamePlay({keyCode:13});
                      
                        
@@ -1092,7 +1119,17 @@
                     function gamePlay(e) {
 
                         command_value = e.keyCode;
+                        console.log('Current Screen'+configdata[currentScreent].screen);
+                        if(configdata[currentScreent].screen == '145a' || configdata[currentScreent].screen == '241a'
+                        || configdata[currentScreent].screen == '337a' || configdata[currentScreent].screen == '433a'
+                        || configdata[currentScreent].screen == '177a' || configdata[currentScreent].screen == '209a'
+                        || configdata[currentScreent].screen == '273a' || configdata[currentScreent].screen == '305a'
+                        || configdata[currentScreent].screen == '369a' || configdata[currentScreent].screen == '401a'
+                        || configdata[currentScreent].screen == '465a' || configdata[currentScreent].screen == '497a'){
+                            totalKeyStrokesInRound = totalKeyStrokesInRound + 1;
+                        }
                         if (command_value == 13) {
+                        	                            
                             FieldOnFocus.blur();
                             if (configdata[currentScreent - 1].screen == '112' || configdata[currentScreent - 1].screen == '241'
                                 || configdata[currentScreent - 1].screen == '273' || configdata[currentScreent - 1].screen == '305') {
@@ -1283,32 +1320,73 @@
                                             //Save Output Events
                                             let currentgamedata = resultData[configdata[currentScreent - 1].screen];
                                             Object.keys(currentgamedata.status).forEach((vv, kk) => {
+                                                console.log('count3:--------',vv,kk);
+                                                let questionSaved =  currentgamedata.question;
+                                                let dataSaved = currentgamedata.data["fld" + (kk + 1)];
+                                                let resSaved = currentgamedata.status["res_sts" + (kk + 1)];
+                                                let durationSaved = currentgamedata.duration;
+                                                let ispracticeSaved = currentgamedata.isPractice;
+                                                let answerSaved = currentgamedata.correctAnswer["fld" + (kk + 1)];
+                                                let firstresponseSaved = configdata[currentScreent - 1].firstResponse["inp"+ (kk + 1)];                                                
                                                 if(kk==0){
                                                     timeTest=timeForCategories.fieldTotalTime1;
+                                                    saveData(
+                                                        "KEEPTRACK",
+                                                        questionSaved,
+                                                        dataSaved,
+                                                        resSaved,
+                                                        durationSaved,
+                                                        ispracticeSaved,
+                                                        answerSaved,
+                                                        firstresponseSaved
+                                                    );
             
                                                 }
                                                 if(kk==1){
                                                     timeTest=timeForCategories.fieldTotalTime2;
-            
+                                                    setTimeout(function() {
+                                                        saveData(
+                                                            "KEEPTRACK",
+                                                            questionSaved,
+                                                            dataSaved,
+                                                            resSaved,
+                                                            durationSaved,
+                                                            ispracticeSaved,
+                                                            answerSaved,
+                                                            firstresponseSaved
+                                                        );
+                                                    }, 1000);
                                                 }
                                                 if(kk==2){
                                                     timeTest=timeForCategories.fieldTotalTime3;
-            
+                                                    setTimeout(function() {
+                                                        saveData(
+                                                            "KEEPTRACK",
+                                                            questionSaved,
+                                                            dataSaved,
+                                                            resSaved,
+                                                            durationSaved,
+                                                            ispracticeSaved,
+                                                            answerSaved,
+                                                            firstresponseSaved
+                                                        );
+                                                    }, 2000);
                                                 }
                                                 if(kk==3){
                                                     timeTest=timeForCategories.fieldTotalTime4;
-            
-                                                }
-                                                saveData(
-                                                    "KEEPTRACK",
-                                                    currentgamedata.question,
-                                                    currentgamedata.data["fld" + (kk + 1)],
-                                                    currentgamedata.status["res_sts" + (kk + 1)],
-                                                    currentgamedata.duration,
-                                                    currentgamedata.isPractice,
-                                                    currentgamedata.correctAnswer["fld" + (kk + 1)],
-                                                    configdata[currentScreent - 1].firstResponse["inp"+ (kk + 1)]
-                                                );
+                                                    setTimeout(function() {
+                                                        saveData(
+                                                            "KEEPTRACK",
+                                                            questionSaved,
+                                                            dataSaved,
+                                                            resSaved,
+                                                            durationSaved,
+                                                            ispracticeSaved,
+                                                            answerSaved,
+                                                            firstresponseSaved
+                                                        );
+                                                    }, 3000);
+                                                }                                                
                                             });
 
                                             //Out put result Intigration time comment or Remove 3 lines
@@ -1360,9 +1438,9 @@
                         
                         helper.recorData(component, event, helper, userContactId, gameId, questionNumber, userInput, isCorrect, reactionTime, isPracticeQuestion, correctAnswer, participantGameInfoId, totalTrialTime, orderOffUserInput, timeTest, round, firstResponse);
                         //questionNumber
-                        if (questionNumber == 49) {
+                        /*if (questionNumber == 49) {
                             document.getElementById("nextBtton").classList.remove("slds-hide");
-                        }
+                        }*/
                         console.log("Input Results", gameName, questionNumber, userInput, isCorrect, reactionTime, isPracticeQuestion,correctAnswer,correctAnswer,participantGameInfoId, totalTrialTime, orderOffUserInput, timeForCategories, round, firstThreeKeys);
 
                     }

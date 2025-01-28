@@ -1,4 +1,4 @@
-global with sharing class LightningVIPAccessFormController {
+global without sharing class LightningVIPAccessFormController {
     
    
     @AuraEnabled
@@ -7,6 +7,7 @@ global with sharing class LightningVIPAccessFormController {
             	
             	PageReference lgn;
             	lgn = site.login(username,password,'/userDashboardRedirect');
+            	//lgn = site.login(username,password,startUrl);
             	aura.redirect(lgn);
             	return null;
             
@@ -92,5 +93,11 @@ global with sharing class LightningVIPAccessFormController {
         } catch (Exception ex) {
             return ex.getMessage();            
         }        
-    } 
+    }
+    
+    @AuraEnabled
+    public static Contact fetchContactFields(String participantcode){    	
+        Contact con = [SELECT Id,Email FROM Contact where ParticipantCode__c=:participantcode limit 1];
+        return con;
+    }
 }

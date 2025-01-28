@@ -104,6 +104,20 @@
         <value>home_compare_graphic.png</value>
     </labels>
     <labels>
+        <fullName>BeanGame_Left_Hand</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>BeanGame Left Hand</shortDescription>
+        <value>Left Hand</value>
+    </labels>
+    <labels>
+        <fullName>BeanGame_Right_Hand</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>BeanGame Right Hand</shortDescription>
+        <value>Right Hand</value>
+    </labels>
+    <labels>
         <fullName>Bean_game_intermediate</fullName>
         <language>en_US</language>
         <protected>false</protected>
@@ -10019,6 +10033,27 @@ Research Coordinator at mindcrowdquestion@tgen.org</value>
         <value>Camel &amp; Cactus</value>
     </labels>
     <labels>
+        <fullName>scientific_game_Tell_me</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>scientific_game_Tell_me</shortDescription>
+        <value>Tell Me</value>
+    </labels>
+    <labels>
+        <fullName>scientific_game_Tell_me_more</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>scientific_game_Tell_me_more</shortDescription>
+        <value>Tell Me More</value>
+    </labels>
+    <labels>
+        <fullName>scientific_game_This_That</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>scientific_game_This &amp; That</shortDescription>
+        <value>This &amp; That</value>
+    </labels>
+    <labels>
         <fullName>scientific_game_bean</fullName>
         <language>en_US</language>
         <protected>false</protected>
@@ -10168,14 +10203,35 @@ Research Coordinator at mindcrowdquestion@tgen.org</value>
         <language>en_US</language>
         <protected>false</protected>
         <shortDescription>speechTask2_config_url</shortDescription>
-        <value>/resource/speechTask2_Config/speechTask2_Config_EN.json</value>
+        <value>/resource/speechTaskTellMeMore_Config/speechTaskTellMeMore_Config_EN.json</value>
     </labels>
     <labels>
         <fullName>speechTask_config_url</fullName>
         <language>en_US</language>
         <protected>false</protected>
         <shortDescription>speechTask_config_url</shortDescription>
-        <value>/resource/speechTask_Config/speechTask_Config_EN.json</value>
+        <value>/resource/speechTaskTellMe_Config/speechTaskTellMe_Config_EN.json</value>
+    </labels>
+    <labels>
+        <fullName>speechTask_error_label</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>speechTask_error_label</shortDescription>
+        <value>You weren&apos;t loud enough, please move closer to your device and speak louder</value>
+    </labels>
+    <labels>
+        <fullName>speechTask_label_1</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>speechTask_label_1</shortDescription>
+        <value>RECORDING IN PROGRESS!</value>
+    </labels>
+    <labels>
+        <fullName>speechTask_label_2</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>speechTask_label_2</shortDescription>
+        <value>RECORDING COMPLETE</value>
     </labels>
     <labels>
         <fullName>stack_image</fullName>
@@ -10907,14 +10963,14 @@ Research Coordinator at mindcrowdquestion@tgen.org</value>
         <language>en_US</language>
         <protected>false</protected>
         <shortDescription>url_me_speechTask</shortDescription>
-        <value>me-speechTasks</value>
+        <value>me-tell-me</value>
     </labels>
     <labels>
         <fullName>url_me_speechTaskTellMeMore</fullName>
         <language>en_US</language>
         <protected>false</protected>
         <shortDescription>url_me_speechTaskTellMeMore</shortDescription>
-        <value>me-SpeechTaskTellmeMore</value>
+        <value>me-tell-me-more</value>
     </labels>
     <labels>
         <fullName>url_me_switchinggame</fullName>

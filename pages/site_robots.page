@@ -1,7 +1,16 @@
-<apex:page contentType="text/plain" showHeader="false">
-    # See http://www.robotstxt.org/robotstxt.html for documentation on how to use the robots.txt file
-    #
-    # To ban all spiders from the entire site uncomment the next two lines:
-    User-agent: *
-    Disallow: /
+<apex:page contentType="text/plain" showHeader="false"># See http://www.robotstxt.org/robotstxt.html for documentation on how to use the robots.txt file
+#
+# To ban all spiders from the entire site uncomment the next two lines:
+# User-agent: *
+# Disallow: /
+
+User-agent: *
+Disallow: /s/rrr/
+Disallow: /es/s/sss/
+
+Sitemap: https://mindcrowd.org/sitemap.xml
+Sitemap: https://mindcrowd.org/es/sitemap.xml
+Sitemap: https://project.mindcrowd.org/s/sitemap.xml
+Sitemap: https://project.mindcrowd.org/es/s/sitemap.xml
+
 </apex:page>

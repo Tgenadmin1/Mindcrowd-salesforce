@@ -120,13 +120,6 @@ export default class BeanGameViewForm extends NavigationMixin(LightningElement) 
     @wire(getPicklistValues,{recordTypeId:'$beanGameInfo.data.defaultRecordTypeId',fieldApiName: oneLastThing}) oneLastThingBeanForm;;
 
     formSubmit1(){
-        console.log('formSubmit1: '+ JSON.stringify(this.left_2_BeanExerciseGoing.data));
-        console.log('formSubmit1: '+ JSON.stringify(this.left_3_BeanExerciseGoing.data));
-        console.log('formSubmit1: '+ JSON.stringify(this.left_4_BeanExerciseGoing.data));
-        console.log('formSubmit1: '+ JSON.stringify(this.right_1_BeanExerciseGoing.data));
-        console.log('formSubmit1: '+ JSON.stringify(this.right_2_BeanExerciseGoing.data));
-        console.log('formSubmit1: '+ JSON.stringify(this.right_3_BeanExerciseGoing.data));
-        console.log('formSubmit1: '+ JSON.stringify(this.right_4_BeanExerciseGoing.data));
         const isInputsCorrect = [...this.template.querySelectorAll('.require')]
             .reduce((validSoFar, inputField) => {
                 inputField.reportValidity();

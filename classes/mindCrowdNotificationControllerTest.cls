@@ -61,6 +61,12 @@ public class mindCrowdNotificationControllerTest {
              Game_Detail__c game10=new Game_Detail__c(Name='Object Spatial',Reactivation_Days__c=10,Dependency__c='');
              insert game10;
              lgame.add(game10);
+        Game_Detail__c game11=new Game_Detail__c(Name='Digits',Reactivation_Days__c=10,Dependency__c='');
+             insert game11;
+             lgame.add(game11);
+           Game_Detail__c game12=new Game_Detail__c(Name='Bean Game',Reactivation_Days__c=10,Dependency__c='');
+             insert game12;
+             lgame.add(game12);
         for(Game_Detail__c lgameCheck:lgame){
              mindCrowdCustomNotificationController.notifyUserOtherGames(con.Id,lgameCheck.Name);
         }
@@ -89,6 +95,9 @@ public class mindCrowdNotificationControllerTest {
         notification2.setTitle('Apex Custom Notification');
         notification2.setBody('The notifications are coming from INSIDE the Apex!');
        mindCrowdCustomNotificationController.notifyUserfrombatch(recipientsIds);
+		Contact cont = [select Id from Contact][0];
+        mindCrowdCustomNotificationController.notifyUserActivatedGames(cont.Id, 'Flanker');
+        mindCrowdCustomNotificationController.notifyUserActivatedGames(cont.Id, 'Keep Track');
     }
         
         

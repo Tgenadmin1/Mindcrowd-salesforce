@@ -53,6 +53,10 @@
         <name>Allow_Newsletters__c</name>
     </fields>
     <fields>
+        <label><!-- App Name --></label>
+        <name>App_Name__c</name>
+    </fields>
+    <fields>
         <label><!-- Are you Left or Right hand dominant? --></label>
         <name>Are_you_Left_or_Right_hand_dominant__c</name>
         <picklistValues>
@@ -161,6 +165,10 @@
         <name>Consent_Signed_On__c</name>
     </fields>
     <fields>
+        <label><!-- DBS Email Opt Out --></label>
+        <name>DBS_Email_Opt_Out__c</name>
+    </fields>
+    <fields>
         <label><!-- DIET --></label>
         <name>DIET__c</name>
         <picklistValues>
@@ -215,6 +223,22 @@
     <fields>
         <label><!-- Digits --></label>
         <name>Digits__c</name>
+        <picklistValues>
+            <masterLabel>Completed</masterLabel>
+            <translation><!-- Completed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Locked</masterLabel>
+            <translation><!-- Locked --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Unlocked</masterLabel>
+            <translation><!-- Unlocked --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- ECog-12 --></label>
+        <name>ECog_12__c</name>
         <picklistValues>
             <masterLabel>Completed</masterLabel>
             <translation><!-- Completed --></translation>
@@ -489,6 +513,10 @@
         <picklistValues>
             <masterLabel>Svenska</masterLabel>
             <translation><!-- Svenska --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Tagalog</masterLabel>
+            <translation><!-- Tagalog --></translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Tiếng Việt</masterLabel>

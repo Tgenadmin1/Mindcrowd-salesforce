@@ -37,9 +37,10 @@
                     conUser=[SELECT Id,Object_Temporal__c,Verbal_Paired_Associates__c,Deary_Simple_And_Complex_Reaction_Time__c,
                              Object_Spatial__c,Object_Discrimination__c, Keep_Track__c, Face_Name_Associates__c, 
                              Object_Recognition_And_Similarity__c, Flanker__c, 
-                             Letter_Number_Sequencing__c FROM Contact Where Id=:ur1[0].ContactId];         
+                             Letter_Number_Sequencing__c,Digits__c,Bean_Game__c,Fake_News__c,This_That__c,Tell_Me_More__c,Tell_Me__c,Language__c,isProject2_Participant__c FROM Contact Where Id=:ur1[0].ContactId];         
                 }   
                 System.debug('I am in conUser'+conUser);
+                System.debug('I am in ur1'+ur1);
                 If(conUser.Flanker__c=='Opened'){
                     body=System.Label.notification_Body_Focus;
                     url=System.Label.url_me_flankergame;
@@ -251,6 +252,138 @@
                         System.debug('Problem sending notification: ' + e.getMessage()+ ' at line number '+e.getLineNumber());
                     }
                 }
+                /*If(conUser.Digits__c=='Opened' && conUser.Language__c != 'Español' && conUser.isProject2_Participant__c != true){
+                    body=System.Label.notification_Body_Digit_Symbol_Matching_Test;
+                    url=System.Label.url_me_digitSymbol;
+                    addressTest = 
+                    '' +
+                    '    {' +
+                    '        type: \'standard__webPage\', ' +
+                    '        attributes: {' +
+                    '          "url":"'+'/'+url+'"' +
+                    '        }'+
+                    '   }'+
+                    ''; 
+                    notification.setBody(body);
+                    notification.setTargetPageRef(addressTest);
+                    notification.setBody(body); 
+                    try {
+                        notification.send(recipientsIds);              
+                    }
+                    catch (Exception e) {
+                        System.debug('Problem sending notification: ' + e.getMessage()+ ' at line number '+e.getLineNumber());
+                    }
+                }
+                If(conUser.Bean_Game__c=='Opened' && conUser.isProject2_Participant__c != true){
+                    body=System.Label.notification_Body_Bean_Game;
+                    url=System.Label.Bean_game_intermediate;
+                    addressTest = 
+                    '' +
+                    '    {' +
+                    '        type: \'standard__webPage\', ' +
+                    '        attributes: {' +
+                    '          "url":"'+'/'+url+'"' +
+                    '        }'+
+                    '   }'+
+                    ''; 
+                    notification.setBody(body);
+                    notification.setTargetPageRef(addressTest);
+                    notification.setBody(body); 
+                    try {
+                        notification.send(recipientsIds);              
+                    }
+                    catch (Exception e) {
+                        System.debug('Problem sending notification: ' + e.getMessage()+ ' at line number '+e.getLineNumber());
+                    }
+                }
+                If(conUser.Fake_News__c=='Opened' && conUser.Language__c != 'Español' && conUser.isProject2_Participant__c != true){
+                    body=System.Label.notification_Body_Fake_News;
+                    url=System.Label.url_me_fakeNewsTest;
+                    addressTest = 
+                    '' +
+                    '    {' +
+                    '        type: \'standard__webPage\', ' +
+                    '        attributes: {' +
+                    '          "url":"'+'/'+url+'"' +
+                    '        }'+
+                    '   }'+
+                    ''; 
+                    notification.setBody(body);
+                    notification.setTargetPageRef(addressTest);
+                    notification.setBody(body); 
+                    try {
+                        notification.send(recipientsIds);              
+                    }
+                    catch (Exception e) {
+                        System.debug('Problem sending notification: ' + e.getMessage()+ ' at line number '+e.getLineNumber());
+                    }
+                }
+                If(conUser.This_That__c=='Opened' && conUser.Language__c != 'Español' && conUser.isProject2_Participant__c != true){
+                    body=System.Label.notification_Body_This_That;
+                    url=System.Label.url_This_and_That;
+                    addressTest = 
+                    '' +
+                    '    {' +
+                    '        type: \'standard__webPage\', ' +
+                    '        attributes: {' +
+                    '          "url":"'+'/'+url+'"' +
+                    '        }'+
+                    '   }'+
+                    ''; 
+                    notification.setBody(body);
+                    notification.setTargetPageRef(addressTest);
+                    notification.setBody(body); 
+                    try {
+                        notification.send(recipientsIds);              
+                    }
+                    catch (Exception e) {
+                        System.debug('Problem sending notification: ' + e.getMessage()+ ' at line number '+e.getLineNumber());
+                    }
+                }
+                If(conUser.Tell_Me__c=='Opened' && conUser.Language__c != 'Español' && conUser.isProject2_Participant__c != true){
+                    body=System.Label.notification_Body_Speech_Task;
+                    url=System.Label.url_me_speechTask;
+                    addressTest = 
+                    '' +
+                    '    {' +
+                    '        type: \'standard__webPage\', ' +
+                    '        attributes: {' +
+                    '          "url":"'+'/'+url+'"' +
+                    '        }'+
+                    '   }'+
+                    ''; 
+                    notification.setBody(body);
+                    notification.setTargetPageRef(addressTest);
+                    notification.setBody(body); 
+                    try {
+                        notification.send(recipientsIds);              
+                    }
+                    catch (Exception e) {
+                        System.debug('Problem sending notification: ' + e.getMessage()+ ' at line number '+e.getLineNumber());
+                    }
+                }
+                If(conUser.Tell_Me_More__c=='Opened' && conUser.Language__c != 'Español' && conUser.isProject2_Participant__c != true){
+                    body=System.Label.notification_Body_Speech_Task2;
+                    url=System.Label.url_me_speechTaskTellMeMore	;
+                    addressTest = 
+                    '' +
+                    '    {' +
+                    '        type: \'standard__webPage\', ' +
+                    '        attributes: {' +
+                    '          "url":"'+'/'+url+'"' +
+                    '        }'+
+                    '   }'+
+                    ''; 
+                    notification.setBody(body);
+                    notification.setTargetPageRef(addressTest);
+                    notification.setBody(body); 
+                    try {
+                        notification.send(recipientsIds);              
+                    }
+                    catch (Exception e) {
+                        System.debug('Problem sending notification: ' + e.getMessage()+ ' at line number '+e.getLineNumber());
+                    }
+                }*/
             }      
         }  
         public static void notifyUserOtherGames(Id contactid, String gameName)
@@ -559,5 +692,261 @@
                     }
                 }  
             }      
-        }    
+        }  
+        
+        public static void notifyUserActivatedGames(Id contactid, String gameName)
+        {
+            if(contactid!=null && gameName!=null)
+            {
+                system.debug('contact>>>>'+contactid+'>>>GameName?>>>>>'+gameName);
+                Set<String>  recipientsIds=new Set<String>();
+                List<User> currUser =[SELECT Username, ContactId, Id FROM User Where ContactId=:contactid];
+                System.debug('currUser=================== : '+currUser);
+                if(currUser!=null && currUser.size()>0){
+                    for(User ur:currUser){
+                        recipientsIds.Add(ur.Id);  
+                        System.debug('recipientsIds=================== : '+recipientsIds);    
+                    }
+                }
+               
+                String url='';
+                String title=System.Label.notification_Games_Title;
+                String body='';
+                String addressTest = 
+                    '' +
+                    '    {' +
+                    '        type: \'standard__webPage\', ' +
+                    '        attributes: {' +
+                    '          "url":"'+'/'+url+'"' +
+                    '        }'+
+                    '   }'+
+                    ''; 
+                
+                // Get the Id for our custom notification type
+                CustomNotificationType notificationType =  [SELECT Id, DeveloperName FROM CustomNotificationType WHERE DeveloperName='Custom_Notification'];
+                
+                // Create a new custom notification
+                Messaging.CustomNotification notification = new Messaging.CustomNotification();        
+                // Set the notification type and target
+                notification.setTitle(title);
+                if(notificationType!=null){
+                    notification.setNotificationTypeId(notificationType.Id);
+                }
+                notification.setTargetPageRef(addressTest);
+                Contact conUser=[SELECT Object_Temporal__c,Verbal_Paired_Associates__c,Deary_Simple_And_Complex_Reaction_Time__c,Object_Spatial__c,Object_Discrimination__c, Keep_Track__c, Face_Name_Associates__c, Object_Recognition_And_Similarity__c, Flanker__c, Letter_Number_Sequencing__c, Id, Name FROM Contact Where Id=:contactid];
+                
+                System.debug('I am in gameName'+gameName);
+                If(gameName==System.Label.scientific_game_keepTrack){
+                    body=System.Label.notification_Body_KeepTrack;
+                    url=System.Label.url_me_keeptrackgame;
+                    addressTest = 
+                    '' +
+                    '    {' +
+                    '        type: \'standard__webPage\', ' +
+                    '        attributes: {' +
+                    '          "url":"'+'/'+url+'"' +
+                    '        }'+
+                    '   }'+
+                    ''; 
+                    notification.setBody(body);
+                    notification.setTargetPageRef(addressTest);
+                    try {
+                        notification.send(recipientsIds);
+                    }
+                    catch (Exception e) {
+                        System.debug('Problem sending notification: ' + e.getMessage()+ ' at line number '+e.getLineNumber());
+                    }
+                }
+                If(gameName==System.Label.scientific_game_faceNameAssociates){
+                    body=System.Label.notification_Body_FacesNames;
+                    url=System.Label.url_me_namesandfacesgame;
+                    addressTest = 
+                    '' +
+                    '    {' +
+                    '        type: \'standard__webPage\', ' +
+                    '        attributes: {' +
+                    '          "url":"'+'/'+url+'"' +
+                    '        }'+
+                    '   }'+
+                    ''; 
+                    notification.setBody(body);
+                    notification.setTargetPageRef(addressTest);
+                    try {
+                        notification.send(recipientsIds);              
+                    }
+                    catch (Exception e) {
+                        System.debug('Problem sending notification: ' + e.getMessage()+ ' at line number '+e.getLineNumber());
+                    }
+                }
+                If(gameName==System.Label.scientific_game_verbalPairedAssociates){
+                    body=System.Label.notification_Body_Word_Pairs;
+                    url=System.Label.url_me_wordpairsgame;
+                    addressTest = 
+                    '' +
+                    '    {' +
+                    '        type: \'standard__webPage\', ' +
+                    '        attributes: {' +
+                    '          "url":"'+'/'+url+'"' +
+                    '        }'+
+                    '   }'+
+                    ''; 
+                    notification.setBody(body);
+                    notification.setTargetPageRef(addressTest);      
+                    try {
+                        notification.send(recipientsIds);              
+                    }
+                    catch (Exception e) {
+                        System.debug('Problem sending notification: ' + e.getMessage()+ ' at line number '+e.getLineNumber());
+                    }
+                }       
+                If(gameName==System.Label.scientific_game_dearySimpleAndComplexReactionTime){
+                    body=System.Label.notification_Body_React;
+                    url=System.Label.url_me_reactgame;
+                    addressTest = 
+                    '' +
+                    '    {' +
+                    '        type: \'standard__webPage\', ' +
+                    '        attributes: {' +
+                    '          "url":"'+'/'+url+'"' +
+                    '        }'+
+                    '   }'+
+                    ''; 
+                    notification.setBody(body);
+                    notification.setTargetPageRef(addressTest);
+                    try {
+                        notification.send(recipientsIds);
+                    }
+                    catch (Exception e) {
+                        System.debug('Problem sending notification: ' + e.getMessage()+ ' at line number '+e.getLineNumber());
+                    }
+                }      
+                If(gameName==System.Label.scientific_game_letterNumberSequencing){
+                    body=System.Label.notification_Body_Switching;
+                    url=System.Label.url_me_switchinggame;
+                    addressTest = 
+                    '' +
+                    '    {' +
+                    '        type: \'standard__webPage\', ' +
+                    '        attributes: {' +
+                    '          "url":"'+'/'+url+'"' +
+                    '        }'+
+                    '   }'+
+                    ''; 
+                    notification.setBody(body);
+                    notification.setTargetPageRef(addressTest);
+                    try {
+                        notification.send(recipientsIds);
+                    }
+                    catch (Exception e) {
+                        System.debug('Problem sending notification: ' + e.getMessage()+ ' at line number '+e.getLineNumber());
+                    }
+                }   
+                If(gameName==System.Label.scientific_game_objectRecognitionAndSimilarity){
+                    body=System.Label.notification_Body_Shapes;
+                    url=System.Label.url_me_shapesgame;
+                    addressTest = 
+                    '' +
+                    '    {' +
+                    '        type: \'standard__webPage\', ' +
+                    '        attributes: {' +
+                    '          "url":"'+'/'+url+'"' +
+                    '        }'+
+                    '   }'+
+                    ''; 
+                    notification.setBody(body);
+                    notification.setTargetPageRef(addressTest);
+                    try {
+                        notification.send(recipientsIds);
+                    }
+                    catch (Exception e) {
+                        System.debug('Problem sending notification: ' + e.getMessage()+ ' at line number '+e.getLineNumber());
+                    }
+                }
+                If(gameName==System.Label.scientific_game_flanker){
+                    body=System.Label.notification_Body_Focus;
+                    url=System.Label.url_me_flankergame;
+                    addressTest = 
+                    '' +
+                    '    {' +
+                    '        type: \'standard__webPage\', ' +
+                    '        attributes: {' +
+                    '          "url":"'+'/'+url+'"' +
+                    '        }'+
+                    '   }'+
+                    ''; 
+                    notification.setBody(body);
+                    notification.setTargetPageRef(addressTest);
+                    try {
+                        notification.send(recipientsIds);              
+                    }
+                    catch (Exception e) {
+                        System.debug('Problem sending notification: ' + e.getMessage()+ ' at line number '+e.getLineNumber());
+                    }
+                }
+                If(gameName==System.Label.scientific_game_objectDiscrimination){
+                    body=System.Label.notification_Body_Objects;
+                    url=System.Label.url_me_objects;
+                    addressTest = 
+                    '' +
+                    '    {' +
+                    '        type: \'standard__webPage\', ' +
+                    '        attributes: {' +
+                    '          "url":"'+'/'+url+'"' +
+                    '        }'+
+                    '   }'+
+                    ''; 
+                    notification.setBody(body);
+                    notification.setTargetPageRef(addressTest);
+                    try {
+                        notification.send(recipientsIds);              
+                    }
+                    catch (Exception e) {
+                        System.debug('Problem sending notification: ' + e.getMessage()+ ' at line number '+e.getLineNumber());
+                    }
+                }
+                If(gameName==System.Label.scientific_game_objectTemporal){
+                    body=System.Label.notification_Body_ObjectsTime;
+                    url=System.Label.url_me_Objects_Time;
+                    addressTest = 
+                    '' +
+                    '    {' +
+                    '        type: \'standard__webPage\', ' +
+                    '        attributes: {' +
+                    '          "url":"'+'/'+url+'"' +
+                    '        }'+
+                    '   }'+
+                    ''; 
+                    notification.setBody(body);
+                    notification.setTargetPageRef(addressTest);
+                    try {
+                        notification.send(recipientsIds);              
+                    }
+                    catch (Exception e) {
+                        System.debug('Problem sending notification: ' + e.getMessage()+ ' at line number '+e.getLineNumber());
+                    }
+                }
+                If(gameName==System.Label.scientific_game_objectSpatial){
+                    body=System.Label.notification_Body_ObjectsSpace;
+                    url=System.Label.url_Objects_Space;
+                    addressTest = 
+                    '' +
+                    '    {' +
+                    '        type: \'standard__webPage\', ' +
+                    '        attributes: {' +
+                    '          "url":"'+'/'+url+'"' +
+                    '        }'+
+                    '   }'+
+                    ''; 
+                    notification.setBody(body);
+                    notification.setTargetPageRef(addressTest);
+                    notification.setBody(body); 
+                    try { 
+                        notification.send(recipientsIds);              
+                    }
+                    catch (Exception e) {
+                        System.debug('Problem sending notification: ' + e.getMessage()+ ' at line number '+e.getLineNumber());
+                    }
+                }
+            }    
+        }
     }

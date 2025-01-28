@@ -1,7 +1,6 @@
 ({
     myAction: function (component, event, helper) {
         //Error handling---------------
-        console.log("here====================>>");
         window.addEventListener('error', function (e) {
             let stacktrace = e.stack;
             if (!stacktrace && e.error) {
@@ -97,19 +96,12 @@
         }, false);
 
         //-----Gettung gameId from the apex function------------------
-        let image_path = $A.get("$Label.c.Community_Url") + "/resource/mindcrowd_style/images/";
         var gameName = $A.get("$Label.c.Memory_Game_Text_00");
         var gameTime = '5';
 
         //---configdata start here----------------------
         const configdata = [
             {
-                // screen: "1", startDuration: -1, endDuration: 9999920000, isTouch: true, content: '<div class="title">' + $A.get("$Label.c.game_first_screen_text") + ' <span> ' + gameName + ' </span> ' + '</div>'
-                //     + '<div class="title">' + $A.get("$Label.c.game_first_screen_text_2") + ' <span> ' + gameTime + ' </span> ' + $A.get("$Label.c.game_first_screen_text_3_a") + '</div>'
-                //     + '<div class="title">' + $A.get("$Label.c.game_first_screen_text_3_b") + ' </div>'
-                //     + '<div class="title">' + $A.get("$Label.c.games_get_started_text_1") + ' </div>'
-                //     + '<p class="centers mb10 s-b-instraction">' + $A.get("$Label.c.games_spacebar_text_1") + ' </p>'
-                //     + '<span class="game-lang">English</span> ', command: [32, 32]
                 screen: "1", startDuration: -1, endDuration: 9999920000, isTouch: true, content: '<div class="title">' + $A.get("$Label.c.Memory_Game_Text_001") + ' <span> ' + gameName + ' </span> ' + '</div>'
                     + '<div class="title">' + $A.get("$Label.c.Memory_Game_Text_002") + ' <span> ' + gameTime + ' </span> ' + $A.get("$Label.c.Memory_Game_Text_003") + '</div>'
                     + '<div class="title">' + $A.get("$Label.c.Memory_Game_Text_004") + ' </div>'

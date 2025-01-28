@@ -118,7 +118,7 @@ public without sharing class ParticipantVIPResultsController
                                            AND Game_Name__r.Name =: gameName
                                            AND Id != :currPGIId
                                            Order by CreatedDate DESC
-                                           LIMIT 49990];
+                                           LIMIT 48990];
         List<Decimal> quartileValues = new List<Decimal>();
         if(peopleLikeYouPGIList !=null && peopleLikeYouPGIList.size() >= 25){ 
             if(gameName == 'DLTRS' || gameName == 'Deary Simple And Complex Reaction Time' || gameName == 'Flanker'){
@@ -173,26 +173,17 @@ public without sharing class ParticipantVIPResultsController
             WHERE Game_Name__r.Name =:gameName 
             AND Sex__c =:objCon.Sex__c AND Education__c>=: edu_att
             AND Age__c =:pluage Order BY Education__c ASC LIMIT 1];
-                if(objLikeYouList.size()>0){
-                    for(People_Like_You_Data__c peopleLikeYouData : objLikeYouList){
-                        if(gameName=='Flanker'){
-                            mapPlyAverageValuesData.put ('LowAverage', 564);
-                            mapPlyAverageValuesData.put ('HighAverage', 963);    
-                        }
-                        else
-                        {
-                            mapPlyAverageValuesData.put ('LowAverage', Integer.valueOf(peopleLikeYouData.Low_Average__c));
-                            mapPlyAverageValuesData.put ('HighAverage', Integer.valueOf(peopleLikeYouData.High_Average__c)); 
-                        }  
-                    }
+            for(People_Like_You_Data__c peopleLikeYouData : objLikeYouList){
+                if(gameName=='Flanker'){
+                	mapPlyAverageValuesData.put ('LowAverage', 564);
+                	mapPlyAverageValuesData.put ('HighAverage', 963);    
                 }
-                else{
-                    if(gameName=='Fake News') {
-                        mapPlyAverageValuesData.put ('LowAverage', 8);
-                        mapPlyAverageValuesData.put ('HighAverage', 16);   
-                    }                   
-                }
-             
+                else
+                {
+                    mapPlyAverageValuesData.put ('LowAverage', Integer.valueOf(peopleLikeYouData.Low_Average__c));
+                    mapPlyAverageValuesData.put ('HighAverage', Integer.valueOf(peopleLikeYouData.High_Average__c)); 
+                }  
+            } 
            }
       List<Participant_Dashboard__c> partDashboard = [SELECT Data_Value__c FROM Participant_Dashboard__c WHERE Game_Detail__r.Name=:gameName LIMIT 1];
             if(partDashboard !=null && partDashboard.size()>0){
@@ -279,11 +270,21 @@ public without sharing class ParticipantVIPResultsController
                                            			AND Contact__r.Education_Attainment__c != null
                                                     AND  Id !=: bean[0].Id
                                                     Order by CreatedDate DESC
-                                             	    LIMIT 49990];
+                                             	    LIMIT 48990];
             
              List<Decimal> quartileValues = new List<Decimal>();
              Decimal sumReationTime = 0;
-             if(beanPeopleLikeYou !=null && beanPeopleLikeYou.size() > 0){//Check if 0 or 25                 
+             if(beanPeopleLikeYou.size()==0){
+                beanPeopleLikeYou = [SELECT Right_Hand_Average__c,Left_Hand_Average__c 
+                                                    FROM Bean_Game__c 
+                                                    WHERE Contact__r.Age__c > 0                                      
+                                           			AND Contact__r.Sex__c != ''
+                                           			AND Contact__r.Education_Attainment__c != null
+                                                    AND  Id !=: bean[0].Id
+                                                    Order by CreatedDate DESC
+                                             	    LIMIT 48990];
+             }
+            
                   for (Bean_Game__c beangame : beanPeopleLikeYou) {
                       if(handSide == 'left'){
                         quartileValues.add(beangame.Left_Hand_Average__c);
@@ -296,10 +297,7 @@ public without sharing class ParticipantVIPResultsController
                     }
                   }
 					mapOtherData.put ('People Like You', sumReationTime / beanPeopleLikeYou.size());                 
-              }
-              else {
-                //Need to add if less numbers
-              }        
+  
         quartileValues.sort();                
         Decimal dataSize = quartileValues.size();
         Integer q1Index = Math.ceil((dataSize + 1) / 4.0).intValue();

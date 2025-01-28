@@ -351,60 +351,63 @@ export default class GamesPage extends NavigationMixin(LightningElement) {
                     finalLockedArray.push(gameLockedArray[3]);
                 }
 
-                if (this.lstcon.Tell_Me__c == "Opened") {
-                    this.gameItems.push(gamesOpenArray[13]);
-                }
-                else if (this.lstcon.Tell_Me__c == "Completed") {
-                    finalCompletedArray.push(gameCompletedArray[13]);
-                }   
-                else if (this.lstcon.Tell_Me__c == "Locked") {
-                    finalLockedArray.push(gameLockedArray[13]);
-                }
-
-                if (this.lstcon.Tell_Me_More__c == "Opened") {
-                    this.gameItems.push(gamesOpenArray[14]);
-                }
-                else if (this.lstcon.Tell_Me_More__c == "Completed") {
-                    finalCompletedArray.push(gameCompletedArray[14]);
-                }   
-                else if (this.lstcon.Tell_Me_More__c == "Locked") {
-                    finalLockedArray.push(gameLockedArray[14]);
-                }
-                
-                if(lang=='es' || this.lstcon.isProject2_Participant__c){
-                    finalLockedArray.push(gameLockedArray[11]);
+                if(this.lstcon.isProject2_Participant__c){
+                        finalLockedArray.push(gameLockedArray[10]);
+                        finalLockedArray.push(gameLockedArray[11]);
+                        finalLockedArray.push(gameLockedArray[12]);
+                        finalLockedArray.push(gameLockedArray[13]);
+                        finalLockedArray.push(gameLockedArray[14]);
                 }
                 else{
-                
-                    if (this.lstcon.Fake_News__c == "Opened") {
-                        this.gameItems.push(gamesOpenArray[11]);
-                    } 
-                    else if (this.lstcon.Fake_News__c == "Completed") {
-                        finalCompletedArray.push(gameCompletedArray[11]);
-                    } 
-                    else if (this.lstcon.Fake_News__c == "Locked") {
-                        finalLockedArray.push(gameLockedArray[11]);
-                    }
-                }
+                        if (this.lstcon.Tell_Me__c == "Opened") {
+                            this.gameItems.push(gamesOpenArray[13]);
+                        }
+                        else if (this.lstcon.Tell_Me__c == "Completed") {
+                            finalCompletedArray.push(gameCompletedArray[13]);
+                        }   
+                        else if (this.lstcon.Tell_Me__c == "Locked") {
+                            finalLockedArray.push(gameLockedArray[13]);
+                        }
 
-                if (this.lstcon.Digits__c == "Opened") {
-                    this.gameItems.push(gamesOpenArray[10]);            
-                } 
-                else if (this.lstcon.Digits__c == "Completed") {
-                    finalCompletedArray.push(gameCompletedArray[10]);
-                } 
-                else if (this.lstcon.Digits__c == "Locked") {
-                    finalLockedArray.push(gameLockedArray[10]);
-                }
-                
-                if (this.lstcon.This_That__c == "Opened") {
-                    this.gameItems.push(gamesOpenArray[12]);            
-                } 
-                else if (this.lstcon.This_That__c == "Completed") {
-                    finalCompletedArray.push(gameCompletedArray[12]);
-                } 
-                else if (this.lstcon.This_That__c == "Locked") {
-                    finalLockedArray.push(gameLockedArray[12]);
+                        if (this.lstcon.Tell_Me_More__c == "Opened") {
+                            this.gameItems.push(gamesOpenArray[14]);
+                        }
+                        else if (this.lstcon.Tell_Me_More__c == "Completed") {
+                            finalCompletedArray.push(gameCompletedArray[14]);
+                        }   
+                        else if (this.lstcon.Tell_Me_More__c == "Locked") {
+                            finalLockedArray.push(gameLockedArray[14]);
+                        }
+
+                        if (this.lstcon.Digits__c == "Opened") {
+                            this.gameItems.push(gamesOpenArray[10]);            
+                        } 
+                        else if (this.lstcon.Digits__c == "Completed") {
+                            finalCompletedArray.push(gameCompletedArray[10]);
+                        } 
+                        else if (this.lstcon.Digits__c == "Locked") {
+                            finalLockedArray.push(gameLockedArray[10]);
+                        }
+
+                        if (this.lstcon.Fake_News__c == "Opened") {
+                            this.gameItems.push(gamesOpenArray[11]);
+                        } 
+                        else if (this.lstcon.Fake_News__c == "Completed") {
+                            finalCompletedArray.push(gameCompletedArray[11]);
+                        } 
+                        else if (this.lstcon.Fake_News__c == "Locked") {
+                            finalLockedArray.push(gameLockedArray[11]);
+                        }
+                        
+                        if (this.lstcon.This_That__c == "Opened") {
+                            this.gameItems.push(gamesOpenArray[12]);            
+                        } 
+                        else if (this.lstcon.This_That__c == "Completed") {
+                            finalCompletedArray.push(gameCompletedArray[12]);
+                        } 
+                        else if (this.lstcon.This_That__c == "Locked") {
+                            finalLockedArray.push(gameLockedArray[12]);
+                        }
                 }               
 
                 if(this.lstcon.MailingCountry=='United States'){
@@ -431,7 +434,7 @@ export default class GamesPage extends NavigationMixin(LightningElement) {
                                 const finalCompletedArraySorted = this.sortByOrder(finalCompletedArray, 'gamename', elementPositionMap);
                                 const finalLockedArraySorted = this.sortByOrder(finalLockedArray, 'gamename', elementPositionMap);
                                 this.gameItems = [...gameItemsSorted, ...finalCompletedArraySorted, ...finalLockedArraySorted];
-                                //console.log('Both DBS & APOE');
+                                console.log('Both DBS & APOE');
                             }
                             else if (result[campaigns[0]]=="Y" && result[campaigns[1]]=="N") {
                                 finalCompletedArray.push(gameCompletedArray[15]);

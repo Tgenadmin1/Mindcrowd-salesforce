@@ -24,13 +24,16 @@
     <aura:attribute name="otherlanguage" type="Boolean" default=""/>
     <aura:attribute name="othervoices" type="Boolean" default=""/>
     <aura:attribute name="loudnoices" type="Boolean" default=""/>
-    <aura:attribute name="delete" type="Boolean" default=""/>
     <aura:attribute name="MicId" type="String" default=""/>
     <aura:attribute name="MicLabel" type="String" default=""/>
+    <aura:attribute name="isLoading" type="Boolean" default="false"/>
+    <aura:attribute name="spinnerMessage" type="String" default=""/>
     
     <ltng:require scripts="{!$Resource.RecordRTC}" afterScriptsLoaded="{!c.myAction}" />
-    <div
-        class="main-content-outer slds-size_12-of-12 slds-small-size_12-of-12 slds-medium-size_12-of-12 slds-large-size_12-of-12 test">
+    <div class="main-content-outer slds-size_12-of-12 slds-small-size_12-of-12 slds-medium-size_12-of-12 slds-large-size_12-of-12 test">
+          <aura:if isTrue="{!v.isLoading}">
+            <lightning:spinner alternativeText="Loading" size="medium" />
+          </aura:if>        
           <div class="main-content-inner" id="touchEvent">
             <div class="logo-game">
                 <img src="{!$Resource.mindcrowd_style + '/images/MindCrowd-Logo-Color-White-Text.png'}"/>
@@ -48,8 +51,8 @@
                         <div class="d_txt" id="d_txt"></div>
                         <div class="d_status" id="d_status"></div>
                     </div>
-                    <div id="imgContainer" style="height: 1px; width: 1px; position: absolute; top:-10px; left:-10px; overflow: hidden;"></div>
                 </div>  
+                <div id="imgContainer" style="height: 1px; width: 1px; position: absolute; top:-10px; left:-10px; overflow: hidden;"></div>
             </div>
         </div>
     </div>

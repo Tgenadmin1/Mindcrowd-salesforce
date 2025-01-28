@@ -457,6 +457,17 @@
         <type>Checkbox</type>
     </fields>
     <fields>
+        <fullName>App_Name__c</fullName>
+        <externalId>false</externalId>
+        <label>App Name</label>
+        <length>50</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
         <fullName>Are_you_Left_or_Right_hand_dominant__c</fullName>
         <description>Hand dominancy of test-taker.</description>
         <externalId>false</externalId>
@@ -688,6 +699,15 @@
         <trackHistory>false</trackHistory>
     </fields>
     <fields>
+        <fullName>DBS_Email_Opt_Out__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>DBS Email Opt Out</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
         <fullName>DIET__c</fullName>
         <externalId>false</externalId>
         <label>DIET</label>
@@ -834,6 +854,36 @@
         <fullName>DoNotCall</fullName>
         <trackFeedHistory>false</trackFeedHistory>
         <trackHistory>false</trackHistory>
+    </fields>
+    <fields>
+        <fullName>ECog_12__c</fullName>
+        <externalId>false</externalId>
+        <label>ECog-12</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Locked</fullName>
+                    <default>false</default>
+                    <label>Locked</label>
+                </value>
+                <value>
+                    <fullName>Completed</fullName>
+                    <default>false</default>
+                    <label>Completed</label>
+                </value>
+                <value>
+                    <fullName>Opened</fullName>
+                    <default>true</default>
+                    <label>Unlocked</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
     </fields>
     <fields>
         <fullName>Education_Attainment__c</fullName>
@@ -1380,6 +1430,11 @@
                     <fullName>Swedish</fullName>
                     <default>false</default>
                     <label>Svenska</label>
+                </value>
+                <value>
+                    <fullName>Tagalog</fullName>
+                    <default>false</default>
+                    <label>Tagalog</label>
                 </value>
                 <value>
                     <fullName>Tamil</fullName>

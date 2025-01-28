@@ -15,7 +15,7 @@ public without sharing class GamesPageDependencyController {
              Game1 = gameReffrence.name;
         }
         List <Contact> upConList = new List <Contact>();
-        For (Contact con: [SELECT Id, Object_Temporal__c, Object_Spatial__c, Object_Discrimination__c, Keep_Track__c, Letter_Number_Sequencing__c, Face_Name_Associates__c, Flanker__c, Object_Recognition_And_Similarity__c, Verbal_Paired_Associates__c, Deary_Simple_And_Complex_Reaction_Time__c, Fake_News_Test__c,Speech_Task__c,Tell_Me_More__c,Digit_Symbol_Matching_Test__c,Camel_and_Cactus__c FROM Contact WHERE id=:obj.Contact_Name__c]) 
+        For (Contact con: [SELECT Id, Object_Temporal__c, Object_Spatial__c, Object_Discrimination__c, Keep_Track__c, Letter_Number_Sequencing__c, Face_Name_Associates__c, Flanker__c, Object_Recognition_And_Similarity__c, Verbal_Paired_Associates__c, Deary_Simple_And_Complex_Reaction_Time__c,Fake_News__c,Tell_Me__c,Tell_Me_More__c,Digits__c,This_That__c FROM Contact WHERE id=:obj.Contact_Name__c]) 
             {      
                 if(Game1 == System.Label.scientific_game_dearySimpleAndComplexReactionTime)
                 {
@@ -69,27 +69,27 @@ public without sharing class GamesPageDependencyController {
                 }  
                 if(Game1 == System.Label.scientific_game_fakeNewsTest)
                 {
-                    con.Fake_News_Test__c ='Completed';
+                    con.Fake_News__c ='Completed';
              
                 } 
-                if(Game1 == System.Label.game_name_15)
+                if(Game1 == System.Label.scientific_game_Tell_me)
                 {
-                    con.Speech_Task__c ='Completed';
+                    con.Tell_Me__c ='Completed';
              
                 } 
-                if(Game1 == System.Label.game_name_19)
+                if(Game1 == System.Label.scientific_game_Tell_me_more)
                 {
                     con.Tell_Me_More__c ='Completed';
              
                 } 
                 if(Game1 == System.Label.scientific_game_digitsymbolmatchingtest)
                 {
-                    con.Digit_Symbol_Matching_Test__c ='Completed';
+                    con.Digits__c ='Completed';
              
                 } 
-                if(Game1 == System.Label.scientific_game_CamelandCactus)
+                if(Game1 == System.Label.scientific_game_This_That)
                 {
-                    con.Camel_and_Cactus__c ='Completed';
+                    con.This_That__c ='Completed';
              
                 }
                upConList.add(con); 
@@ -225,37 +225,7 @@ public without sharing class GamesPageDependencyController {
                             con.Object_Spatial__c ='Opened';
                             update con; 
                             mindCrowdCustomNotificationController.notifyUserOtherGames(obj.Contact_Name__c,strGame);
-                        }    
-                        if(strGame == System.Label.scientific_game_fakeNewsTest)
-                        {
-                            con.Fake_News_Test__c ='Opened';
-                            update con; 
-                            mindCrowdCustomNotificationController.notifyUserOtherGames(obj.Contact_Name__c,strGame);
-                        } 
-                        if(strGame == System.Label.game_name_15)
-                        {
-                            con.Speech_Task__c ='Opened';
-                            update con; 
-                            mindCrowdCustomNotificationController.notifyUserOtherGames(obj.Contact_Name__c,strGame);
-                        } 
-                        if(strGame == System.Label.game_name_19)
-                        {
-                            con.Tell_Me_More__c ='Opened';
-                            update con; 
-                            mindCrowdCustomNotificationController.notifyUserOtherGames(obj.Contact_Name__c,strGame);
-                        } 
-                        if(strGame == System.Label.scientific_game_CamelandCactus)
-                        {
-                            con.Camel_and_Cactus__c ='Opened';
-                            update con; 
-                            mindCrowdCustomNotificationController.notifyUserOtherGames(obj.Contact_Name__c,strGame);
-                        }
-                         if(strGame == System.Label.scientific_game_digitsymbolmatchingtest)
-                        {
-                            con.Digit_Symbol_Matching_Test__c ='Opened';
-                            update con; 
-                            mindCrowdCustomNotificationController.notifyUserOtherGames(obj.Contact_Name__c,strGame);
-                        }
+                        }           
                         //update con; 
             }                
         }        

@@ -32,6 +32,16 @@
         <unique>false</unique>
     </fields>
     <fields>
+        <fullName>AddressZipCodeURL__c</fullName>
+        <externalId>false</externalId>
+        <label>AddressZipCodeURL</label>
+        <length>100</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
         <fullName>CRID__c</fullName>
         <externalId>false</externalId>
         <label>CRID</label>
@@ -229,6 +239,16 @@
         <unique>false</unique>
     </fields>
     <fields>
+        <fullName>TrackingURL__c</fullName>
+        <externalId>false</externalId>
+        <label>TrackingURL</label>
+        <length>100</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
         <fullName>USPS_Label_API_URL__c</fullName>
         <externalId>false</externalId>
         <label>USPS Label API URL</label>
@@ -267,6 +287,15 @@
         <trackTrending>false</trackTrending>
         <type>Number</type>
         <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>addressUrl__c</fullName>
+        <description>USPS URL for address</description>
+        <externalId>false</externalId>
+        <label>addressUrl</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Url</type>
     </fields>
     <fields>
         <fullName>client_id__c</fullName>

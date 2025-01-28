@@ -4,6 +4,8 @@ import { loadScript } from 'lightning/platformResourceLoader';
 import { ShowToastEvent } from 'lightning/platformShowToastEvent';
 import Date from '@salesforce/label/c.Date';
 import Score from '@salesforce/label/c.Score';
+import BeanGame_Left_Hand from '@salesforce/label/c.BeanGame_Left_Hand';
+import BeanGame_Right_Hand from '@salesforce/label/c.BeanGame_Right_Hand';
 
 export default class ChartExample extends LightningElement {
     isChartJsInitialized;
@@ -74,7 +76,6 @@ export default class ChartExample extends LightningElement {
           };
       
       if (this.chartName == 'Focus' || this.chartName == 'Concéntrate') {
-        console.log('configdata: '+ JSON.stringify(this.graphData));
         const flankdata = [...this.graphData.gamedataList.flankerdataList]
         configdata.data.datasets[0].data = flankdata;
         configdata.options.scales.xAxes[0].labels =[...this.graphData.xAxisLabelsflanker];
@@ -282,7 +283,7 @@ export default class ChartExample extends LightningElement {
         //configdata.options.scales.yAxes[0].ticks.stepSize =4;
         //configdata.options.scales.yAxes[0].ticks.suggestedMax =36;
       }
-      if (this.chartName == 'Fake News' || this.chartName == 'Fake News') {
+      if (this.chartName == 'Fake News' || this.chartName == 'Noticias Falsas') {
         const fakenewsdata =[...this.graphData.gamedataList.fakenewsdataList];
         configdata.data.datasets[0].data = fakenewsdata;
         configdata.options.scales.xAxes[0].labels =[...this.graphData.xAxisLabelsfakenews];
@@ -324,11 +325,11 @@ export default class ChartExample extends LightningElement {
         } 
       } 
 
-      if (this.chartName == 'Camel and Cactus' || this.chartName == 'Camello and Cactus') {
-        const camelandcactusdata =[...this.graphData.gamedataList.camelandcactusdataList];
-        configdata.data.datasets[0].data = camelandcactusdata;
-        configdata.options.scales.xAxes[0].labels =[...this.graphData.xAxisLabelscamelandcactus];
-        const maxscore = camelandcactusdata.reduce(function(acc, current) {
+      if (this.chartName == 'This & That' || this.chartName == 'Esto y Aquello') {
+        const thisandthatdata =[...this.graphData.gamedataList.thisandthatdatalist];
+        configdata.data.datasets[0].data = thisandthatdata;
+        configdata.options.scales.xAxes[0].labels =[...this.graphData.xAxisLabelsthisandthat];
+        const maxscore = thisandthatdata.reduce(function(acc, current) {
           if (current.y > acc) {
             return current.y;
           }
@@ -345,17 +346,16 @@ export default class ChartExample extends LightningElement {
         } 
       } 
 
-      if (this.chartName == 'Bean Game' || this.chartName == 'Juego De Las Alubias') {                    
+      if (this.chartName == 'Bean Game' || this.chartName == 'Juego de las Alubias') {                    
         const beangameleftdata =[...this.graphData.gamedataList.beangameleftdataList];
-        const beangamerightdata =[...this.graphData.gamedataList.beangamerightdataList];  
-        console.log('beangameleftdata: '+ JSON.stringify(beangameleftdata));      
+        const beangamerightdata =[...this.graphData.gamedataList.beangamerightdataList];        
         configdata.data.datasets[0].data = beangameleftdata;
-        configdata.data.datasets[0].label='Left Hand';
+        configdata.data.datasets[0].label= BeanGame_Left_Hand;
         configdata.options.legend.display=true;
         let newDataset = {...configdata.data.datasets[0]};        
         newDataset.data = beangamerightdata; 
-        newDataset.label='Right Hand'; 
-        console.log(JSON.stringify(newDataset));
+        newDataset.label=BeanGame_Right_Hand; 
+        //console.log(JSON.stringify(newDataset));
         newDataset.pointBackgroundColor='rgba(30,144,255, 0.2)';     
         newDataset.pointBorderColor='rgba(30,144,255, 1)'; 
         newDataset.backgroundColor.filter(item => item !== 'rgba(18,35,62, 0.2)');  
@@ -377,7 +377,7 @@ export default class ChartExample extends LightningElement {
         configdata.options.scales.yAxes.forEach((yAxis) => {
           delete yAxis.ticks;
         });*/
-        console.log('configdata: '+ JSON.stringify(configdata));      
+        //console.log(JSON.stringify(configdata));      
         const leftmaxscore = beangameleftdata.reduce(function(acc, current) {
           if (current.y > acc) {
             return current.y;
@@ -402,7 +402,7 @@ export default class ChartExample extends LightningElement {
         }
         //configdata.options.scales.yAxes[0].ticks.stepSize =4;
         //configdata.options.scales.yAxes[0].ticks.suggestedMax =36;
-      }        
+      }   
     
       if (this.isChartJsInitialized) {
           return;

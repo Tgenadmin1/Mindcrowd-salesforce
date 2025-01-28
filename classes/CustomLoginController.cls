@@ -81,21 +81,30 @@ public with sharing class CustomLoginController {
         Contact con= new Contact();
         if(u!=null && u.ContactId!=null)
         {
-            con=[SELECT Email,Age__c,Phone,FirstName,LastName,Language__c,ParticipantCode__c,Activation_Date__c,Deary_Simple_And_Complex_Reaction_Time__c
+            con=[SELECT Email,Age__c,Phone,FirstName,LastName,Language__c,Deary_Simple_And_Complex_Reaction_Time__c
                      ,Verbal_Paired_Associates__c
                      ,Object_Recognition_And_Similarity__c
                      ,Flanker__c,Number_of_daily_medications__c,Gender__c
                      ,Face_Name_Associates__c,Most_fluent_language__c
                      ,Letter_Number_Sequencing__c,Number_of_fluent_languages_written__c
                      ,Keep_Track__c,Number_of_fluent_languages_spoken__c
-                     ,Object_Discrimination__c,Object_Temporal__c,Object_Spatial__c,MailingCity,MailingCountryCode,
+                     ,Object_Discrimination__c,Object_Temporal__c,Object_Spatial__c,MailingCity,MailingCountryCode,MailingCountry,
                      MailingStreet,MailingStateCode,MailingPostalCode,Sex__c,Second_degree_family_history_of_AD__c,
                      First_degree_family_history_of_AD__c,First_degree_family_history_of_EO_AD__c,Age_at_second_spoken_language__c,
-                     Health_Lifestyle_and_Medical__c ,Highest_level_of_education_completed__c,Bean_Game__c,Speech_Task__c,
-                     Tell_Me_More__c,Fake_News_Test__c,Digit_Symbol_Matching_Test__c,Camel_and_Cactus__c,HEALTH_MEDICAL__c, 
-                     COVID__c, BRAIN_DISEASE__c,SES__c, FHAD__c, WOMENS_HEALTH__c, SUBJECTIVE_ENGLISH__c, SLEEP__c, ADL__c, 
-                     DIET__c, PERCEIVED_STRESS__c, SWLS__c, QPAR__c, SOCIAL_STRESSOR__c, ANXIETY__c, SOCIAL_SUPPORT__c, 
-                     CANCER__c,HEAT__c  FROM Contact where id=:u.ContactId];
+                     Health_Lifestyle_and_Medical__c ,Highest_level_of_education_completed__c,ParticipantCode__c,Fake_News__c,
+                     Tell_Me__c,Digits__c,Tell_Me_More__c,This_That__c,Bean_Game__c,HEALTH_MEDICAL__c, COVID__c, BRAIN_DISEASE__c,SES__c, 
+                     FHAD__c, WOMENS_HEALTH__c,SUBJECTIVE_ENGLISH__c, SLEEP__c, ADL__c, DIET__c, PERCEIVED_STRESS__c,SWLS__c,
+                     QPAR__c, SOCIAL_STRESSOR__c, ANXIETY__c, SOCIAL_SUPPORT__c,CANCER__c,consent_signed_on__c,isProject2_Participant__c,GLUCOSAMINE__c,ECog_12__c FROM Contact where id=:u.ContactId];
+            
+            //List<Participant_Game_Info__c> pgi = [SELECT Country__c FROM Participant_Game_Info__c 
+                                                  //WHERE Country__c = 'United States' and Contact_Name__c = :u.ContactId];
+            CustomLoginControllerSuppl clsupp = new CustomLoginControllerSuppl();
+            if(clsupp.getPGICountry(u.ContactId)>0){
+                con.MailingCountry = 'United States';
+            }
+            else{
+                con.MailingCountry = '';
+            }
         }
         return con;
     }
@@ -112,5 +121,13 @@ public with sharing class CustomLoginController {
             }
         }     
         return restrictGames;
+    }
+
+    public without sharing class CustomLoginControllerSuppl {
+        public Decimal getPGICountry(Id ContactId) {
+            List<Participant_Game_Info__c> pgi = [SELECT Id FROM Participant_Game_Info__c 
+                                                  WHERE Country__c = 'United States' and Contact_Name__c = :ContactId];
+            return pgi.size();
+        }
     }
 }

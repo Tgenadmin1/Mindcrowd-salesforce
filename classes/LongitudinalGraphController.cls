@@ -3,7 +3,7 @@ public without sharing class LongitudinalGraphController {
     public static ChartData getGraphdData ()
     {        
         try{
-            Id contactId = [SELECT ContactId From User where Id =: UserInfo.getUserId() AND ContactId != null].ContactId;             
+            Id contactId = [SELECT ContactId From User where Id =: UserInfo.getUserId() AND ContactId != null].ContactId;           
             List<Map<String, Object>> flankerdataList = new List<Map<String, Object>>();
             List<Map<String, Object>> keepTrackdataList = new List<Map<String, Object>>();
             List<Map<String, Object>> FaceNameList = new List<Map<String, Object>>();
@@ -18,7 +18,7 @@ public without sharing class LongitudinalGraphController {
             List<Map<String, Object>> beangameleftdataList = new List<Map<String, Object>>();
             List<Map<String, Object>> beangamerightdataList = new List<Map<String, Object>>();
             List<Map<String, Object>> digitSymboldataList = new List<Map<String, Object>>();
-            List<Map<String, Object>> camelandcactusdataList = new List<Map<String, Object>>();
+            List<Map<String, Object>> thisandthatdatalist = new List<Map<String, Object>>();
             List<String> xAxisLabelsflanker = new List<String>(); 
             List<String> xAxisLabelskeepTrack = new List<String>(); 
             List<String> xAxisLabelsFaceName = new List<String>(); 
@@ -32,11 +32,11 @@ public without sharing class LongitudinalGraphController {
             List<String> xAxisLabelsfakenews = new List<String>(); 
             List<String> xAxisLabelsbeangame = new List<String>();
             List<String> xAxisLabelsdigitSymbol = new List<String>();
-            List<String> xAxisLabelscamelandcactus = new List<String>();
+            List<String> xAxisLabelsthisandthat = new List<String>();
 
             Map<String, Object> scoreData = new Map<String, Object>();
             Integer flkAtt=1,keeptrackAtt=1,faceNameAtt=1,objectsAtt=1,objectSpaceAtt=1,objectTimeAtt=1,reactAtt=1,shapesAtt=1,
-                    switchingAtt=1,wordPairAtt=1,fakenewsAtt=1,beangameAtt=1,digitSymbolAtt=1,camelcactusAtt=1;
+                    switchingAtt=1,wordPairAtt=1,fakenewsAtt=1,beangameAtt=1,digitSymbolAtt=1,thisandthatAtt=1;
             Decimal yourScore,correctAnswers,reactionTime;
        
             List<Participant_Game_Info__c> recordsPGI =  [SELECT Count_Of_No_Of_Correct_Answered__c, Count_Of_Total_Reaction_Time__c,
@@ -123,7 +123,8 @@ public without sharing class LongitudinalGraphController {
                             }
                        		else{
                             xAxisLabelsflanker.add(recPG.CreatedDate.format('MMM-dd-yyyy'));
-                            dataItem.put('x', recPG.CreatedDate.format('MMM-dd-yyyy'));                            
+                            dataItem.put('x', recPG.CreatedDate.format('MMM-dd-yyyy'));
+                            //dataItem.put('y', correctAnswers);
                             dataItem.put('y', reactionTime);
                        		}                       
                        		flankerdataList.add(dataItem);                       
@@ -403,29 +404,29 @@ public without sharing class LongitudinalGraphController {
                                 digitSymboldataList.add(dataItem);                         
                             } 
 
-                            if(recPG.Game_Name__r.Name =='Camel & Cactus' )
+                            if(recPG.Game_Name__r.Name =='This & That' )
                             {
                                 Map<String, Object> dataItem = new Map<String, Object>{'x' => recPG.CreatedDate.format('MMM-dd-yyyy'),'y' => correctAnswers};              
-                                if(xAxisLabelscamelandcactus.size()>0){
-                                    if(xAxisLabelscamelandcactus.contains(recPG.CreatedDate.format('MMM-dd-yyyy')) ){
-                                        camelcactusAtt=camelcactusAtt+1;
-                                        xAxisLabelscamelandcactus.add(recPG.CreatedDate.format('MMM-dd-yyyy')+'('+camelcactusAtt+')');
-                                        dataItem.put('x', recPG.CreatedDate.format('MMM-dd-yyyy')+'('+camelcactusAtt+')');
+                                if(xAxisLabelsthisandthat.size()>0){
+                                    if(xAxisLabelsthisandthat.contains(recPG.CreatedDate.format('MMM-dd-yyyy')) ){
+                                        thisandthatAtt=thisandthatAtt+1;
+                                        xAxisLabelsthisandthat.add(recPG.CreatedDate.format('MMM-dd-yyyy')+'('+thisandthatAtt+')');
+                                        dataItem.put('x', recPG.CreatedDate.format('MMM-dd-yyyy')+'('+thisandthatAtt+')');
                                         dataItem.put('y', correctAnswers);
                                     }
                                     else{
-                                        camelcactusAtt=1;
-                                        xAxisLabelscamelandcactus.add(recPG.CreatedDate.format('MMM-dd-yyyy'));
+                                        thisandthatAtt=1;
+                                        xAxisLabelsthisandthat.add(recPG.CreatedDate.format('MMM-dd-yyyy'));
                                         dataItem.put('x', recPG.CreatedDate.format('MMM-dd-yyyy'));
                                         dataItem.put('y', correctAnswers);
                                     }
                                 }
                                 else{
-                                    xAxisLabelscamelandcactus.add(recPG.CreatedDate.format('MMM-dd-yyyy'));
+                                    xAxisLabelsthisandthat.add(recPG.CreatedDate.format('MMM-dd-yyyy'));
                                     dataItem.put('x', recPG.CreatedDate.format('MMM-dd-yyyy'));
                                     dataItem.put('y', correctAnswers);
                                 }                                       
-                                camelandcactusdataList.add(dataItem);                         
+                                thisandthatdatalist.add(dataItem);                         
                             } 
                     }
             } 
@@ -469,7 +470,7 @@ public without sharing class LongitudinalGraphController {
                 'FaceNameList'=>FaceNameList,'objectsdataList'=>objectsdataList,'objectSpacedataList'=>objectSpacedataList,
                 'objectTimedataList'=>objectTimedataList,'reactdataList'=>reactdataList,'shapesdataList'=>shapesdataList,
                 'switchingdataList'=>switchingdataList,'wordPairsdataList'=>wordPairsdataList,'fakenewsdataList'=>fakenewsdataList,
-               'beangameleftdataList'=>beangameleftdataList,'beangamerightdataList'=>beangamerightdataList,'digitSymboldataList'=>digitSymboldataList,'camelandcactusdataList'=>camelandcactusdataList};
+               'beangameleftdataList'=>beangameleftdataList,'beangamerightdataList'=>beangamerightdataList,'digitSymboldataList'=>digitSymboldataList,'thisandthatdatalist'=>thisandthatdatalist};
            chartData.xAxisLabelsflanker = xAxisLabelsflanker;
            chartData.xAxisLabelskeepTrack = xAxisLabelskeepTrack;
            chartData.xAxisLabelsFaceName = xAxisLabelsFaceName;
@@ -482,7 +483,7 @@ public without sharing class LongitudinalGraphController {
            chartData.xAxisLabelswordPairs = xAxisLabelswordPairs;
            chartData.xAxisLabelsfakenews = xAxisLabelsfakenews;
            chartData.xAxisLabelsdigitSymbol = xAxisLabelsdigitSymbol;
-           chartData.xAxisLabelscamelandcactus = xAxisLabelscamelandcactus;
+           chartData.xAxisLabelsthisandthat = xAxisLabelsthisandthat;
            chartData.xAxisLabelsbeangame = xAxisLabelsbeangame;
            return chartData;           
         }
@@ -524,6 +525,6 @@ public without sharing class LongitudinalGraphController {
         @AuraEnabled
         public List<String> xAxisLabelsdigitSymbol;
         @AuraEnabled
-        public List<String> xAxisLabelscamelandcactus;
+        public List<String> xAxisLabelsthisandthat;
         }
 }

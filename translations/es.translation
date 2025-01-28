@@ -57,6 +57,14 @@
         <name>Banner_image_1</name>
     </customLabels>
     <customLabels>
+        <label><!-- BeanGame Left Hand --></label>
+        <name>BeanGame_Left_Hand</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- BeanGame Right Hand --></label>
+        <name>BeanGame_Right_Hand</name>
+    </customLabels>
+    <customLabels>
         <label>adic/de-informacion-juegofrijol-vip</label>
         <name>Bean_game_intermediate</name>
     </customLabels>
@@ -577,7 +585,7 @@
         <name>Fake_News_Test_Form_5_Error</name>
     </customLabels>
     <customLabels>
-        <label>¿Con qué frecuencia participas de forma activa en cualquier red social? Por «participar» nos referimos a acciones como comentar, compartir, dar «me gusta» o volver a publicar.</label>
+        <label>¿Con qué frecuencia participas de forma activa en cualquier red social? Por &quot;participar&quot; nos referimos a acciones como comentar, compartir, dar &quot;me gusta&quot; o volver a publicar.</label>
         <name>Fake_News_Test_Form_6</name>
     </customLabels>
     <customLabels>
@@ -605,7 +613,7 @@
         <name>Fake_News_Test_Form_6_Error</name>
     </customLabels>
     <customLabels>
-        <label>¿Qué opinas del siguiente enunciado? «Confío en que mi Gobierno federal hará lo que sea mejor para sus ciudadanos».</label>
+        <label>¿Qué opinas del siguiente enunciado? &quot;Confío en que mi Gobierno federal hará lo que sea mejor para sus ciudadanos&quot;.</label>
         <name>Fake_News_Test_Form_7</name>
     </customLabels>
     <customLabels>
@@ -681,19 +689,19 @@
         <name>Fake_News_Test_Form_9_Error</name>
     </customLabels>
     <customLabels>
-        <label>Gracias por jugar &lt;b&gt; Fake News&lt;/b&gt;</label>
+        <label>Gracias por jugar &lt;b&gt; Noticias Falsas&lt;/b&gt;</label>
         <name>Fake_News_Test_Form_Thanks_A1</name>
     </customLabels>
     <customLabels>
-        <label>Tus resultados han sido grabados</label>
+        <label>Tus resultados han sido grabados.</label>
         <name>Fake_News_Test_Form_Thanks_A2</name>
     </customLabels>
     <customLabels>
-        <label>Haz clic o toca el botón&lt;span&gt;Mis Resultados &lt;/span&gt;para ver tus resultados.</label>
+        <label>Haz clic o toca el botón &lt;b&gt;Mis Resultados &lt;/b&gt; para ver tus resultados.</label>
         <name>Fake_News_Test_Form_Thanks_A3</name>
     </customLabels>
     <customLabels>
-        <label>O bien, haz clic o toca el botón &lt;b&gt;Mis Juegos &lt;/b&gt; para regresar al menú de juegos</label>
+        <label>O bien, haz clic o toca el botón &lt;b&gt;Mis Juegos &lt;/b&gt; para regresar al menú de juegos.</label>
         <name>Fake_News_Test_Form_Thanks_A4</name>
     </customLabels>
     <customLabels>
@@ -1341,11 +1349,11 @@
         <name>Shapes_Game_Text_9</name>
     </customLabels>
     <customLabels>
-        <label>Tell Me More</label>
+        <label>Cuéntame Más</label>
         <name>SpeechTask_Tell_me_more_text</name>
     </customLabels>
     <customLabels>
-        <label>Tell Me</label>
+        <label>Cuéntame</label>
         <name>SpeechTask_Tell_me_text</name>
     </customLabels>
     <customLabels>
@@ -2341,7 +2349,7 @@
         <name>fakeNewsTest_game_config_url</name>
     </customLabels>
     <customLabels>
-        <label>Fake News</label>
+        <label>Noticias Falsas</label>
         <name>fakeNews_text</name>
     </customLabels>
     <customLabels>
@@ -2807,23 +2815,23 @@
         <name>game_name_13</name>
     </customLabels>
     <customLabels>
-        <label>Fake News</label>
+        <label>Noticias Falsas</label>
         <name>game_name_14</name>
     </customLabels>
     <customLabels>
-        <label>Tell Me</label>
+        <label>Cuéntame</label>
         <name>game_name_15</name>
     </customLabels>
     <customLabels>
-        <label>Digits</label>
+        <label>Dígitos</label>
         <name>game_name_17</name>
     </customLabels>
     <customLabels>
-        <label>Camello and Cactus</label>
+        <label>Esto y Aquello</label>
         <name>game_name_18</name>
     </customLabels>
     <customLabels>
-        <label>Tell Me More</label>
+        <label>Cuéntame Más</label>
         <name>game_name_19</name>
     </customLabels>
     <customLabels>
@@ -5067,6 +5075,18 @@ Pulsa &lt;span class=&quot;n-g-box&quot;&gt;F&lt;/span&gt; para un objeto de int
         <name>scientific_game_CamelandCactus</name>
     </customLabels>
     <customLabels>
+        <label><!-- scientific_game_Tell_me --></label>
+        <name>scientific_game_Tell_me</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- scientific_game_Tell_me_more --></label>
+        <name>scientific_game_Tell_me_more</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- scientific_game_This &amp; That --></label>
+        <name>scientific_game_This_That</name>
+    </customLabels>
+    <customLabels>
         <label>Juego De Las Alubias</label>
         <name>scientific_game_bean</name>
     </customLabels>
@@ -5147,12 +5167,24 @@ Pulsa &lt;span class=&quot;n-g-box&quot;&gt;F&lt;/span&gt; para un objeto de int
         <name>shrd_title</name>
     </customLabels>
     <customLabels>
-        <label>/resource/speechTask2_Config/speechTask2_Config_ES.json</label>
+        <label>/resource/speechTaskTellMeMore_Config/speechTaskTellMeMore_Config_ES.json</label>
         <name>speechTask2_config_url</name>
     </customLabels>
     <customLabels>
-        <label>/resource/speechTask_Config/speechTask_Config_ES.json</label>
+        <label>/resource/speechTaskTellMe_Config/speechTaskTellMe_Config_ES.json</label>
         <name>speechTask_config_url</name>
+    </customLabels>
+    <customLabels>
+        <label>No hablaste lo suficientemente alto, acércate a tu dispositivo y al altavoz.</label>
+        <name>speechTask_error_label</name>
+    </customLabels>
+    <customLabels>
+        <label>GRABACIÓN EN CURSO!</label>
+        <name>speechTask_label_1</name>
+    </customLabels>
+    <customLabels>
+        <label>GRABACIÓN FINALIZADA</label>
+        <name>speechTask_label_2</name>
     </customLabels>
     <customLabels>
         <label>towerGame/stack-img_ES.png?t=2</label>
@@ -5505,15 +5537,15 @@ A continuación, haz &lt;span class=&quot;n-g-box&quot;&gt; toca en el lugar de 
         <name>url_me_Objects_Time</name>
     </customLabels>
     <customLabels>
-        <label><!-- url_me_This_and_That --></label>
+        <label>pme-esto-y-aquello</label>
         <name>url_me_This_and_That</name>
     </customLabels>
     <customLabels>
-        <label>me-digitsymbol</label>
+        <label>me-digitos</label>
         <name>url_me_digitSymbol</name>
     </customLabels>
     <customLabels>
-        <label>me-fakeNewsTest</label>
+        <label>pme-noticias-falsas</label>
         <name>url_me_fakeNewsTest</name>
     </customLabels>
     <customLabels>
@@ -5541,11 +5573,11 @@ A continuación, haz &lt;span class=&quot;n-g-box&quot;&gt; toca en el lugar de 
         <name>url_me_shapesgame</name>
     </customLabels>
     <customLabels>
-        <label>me-speechTasks</label>
+        <label>pme-cuentame</label>
         <name>url_me_speechTask</name>
     </customLabels>
     <customLabels>
-        <label>me-SpeechTaskTellmeMore</label>
+        <label>pme-cuentame-mas</label>
         <name>url_me_speechTaskTellMeMore</name>
     </customLabels>
     <customLabels>
@@ -6103,6 +6135,10 @@ A continuación, haz &lt;span class=&quot;n-g-box&quot;&gt; toca en el lugar de 
     <flowDefinitions>
         <flows/>
         <fullName>Cancer_Survey</fullName>
+    </flowDefinitions>
+    <flowDefinitions>
+        <flows/>
+        <fullName>Contact_Study_Update</fullName>
     </flowDefinitions>
     <flowDefinitions>
         <flows/>

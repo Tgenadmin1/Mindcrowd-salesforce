@@ -24,7 +24,7 @@
     <aura:attribute name="url_login" type="String" default="vipaccess" access="global" />
     <aura:attribute name="url_passwordrecovery" type="String" default="passwordrecovery" access="global" />
     <aura:attribute name="Password" type="String" default="Password" access="global" />
-    <aura:attribute name="Forgot_Password" type="String" default="Click here if you are a new user or need to reset your password" access="global" />
+    <aura:attribute name="Forgot_Password" type="String" default="Forgot Password?" access="global" />
     <aura:attribute name="MindCrowd_VIP_Access" type="String" default="MindCrowd VIP Access" access="global" />
     <aura:attribute name="additional_brain_games" type="String" default="Play additional brain games for a more complete picture of how your brain performs compared to others like you." access="global" />
     <aura:attribute name="Want_VIP_access" type="String" default="Want VIP access to more brain games and a personalized dashboard to track your brain performance?" access="global" />

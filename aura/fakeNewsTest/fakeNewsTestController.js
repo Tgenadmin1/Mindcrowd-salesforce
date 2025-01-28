@@ -14,13 +14,11 @@
                         let fakenewsButton = data.fakenewsButtons;
                         let realHeadLines =  data.realHeadLines;
                         let fakeHeadLines =  data.fakeHeadLines; 
-                        //let accuracyinstrpage =  data.fakenewsInstrPage.accuracyinstrpage;
-                        //let sharinginstrpage =  data.fakenewsInstrPage.sharinginstrpage;
                         let generalinstrs =  data.fakenewsInstrPage.genericinstructions;
                 let firstset; 
                 let secondset; 
                 let firstSetType;
-                const intermedcontent = '<div id="imgContainer" class="centers fakenewsimage" ></div></p>';
+                const intermedcontent = '<div id="imgContainer" class="centers fakenewsimage" ><img src="../resource/fakeNewsTaskSR/blank.jpg?" alt="blank"></img></div>';
                 if(Math.random() < 0.5){
                     firstset = fakenewsButton.accuracybuttons;
                     secondset = fakenewsButton.sharingbuttons;
@@ -86,27 +84,27 @@
                 let headllinesFirstSet = [...realHeadLinesRandomFirstSet, ...fakeHeadLinesRandomFirstSet];
                 let headllinesSecondSet = [...realHeadLinesRandomSecondSet, ...fakeHeadLinesRandomSecondSet];
 
-                console.log('headllinesFirstSet: ' + headllinesFirstSet);
-                console.log('headllinesSecondSet: ' + headllinesSecondSet);
+                //console.log('headllinesFirstSet: ' + headllinesFirstSet);
+                //console.log('headllinesSecondSet: ' + headllinesSecondSet);
 
                 let headllinesFirstSetRandom = shuffleArray(headllinesFirstSet);
                 let headllinesSecondSetRandom = shuffleArray(headllinesSecondSet);
 
                 let headllinesRandom = [...headllinesFirstSetRandom, ...headllinesSecondSetRandom];                
                 let j=0;
-                for (let i = 2; i < configdata.length; i++) {
-                    if(i==50){
+                for (let i = 4; i < configdata.length; i++) {
+                    if(i==52){
                         configdata[i].content = generalinstrs;
                     }
                     else if(i % 2 == 0){
                         configdata[i].content = headllinesRandom[j].content;
                         configdata[i].answer = headllinesRandom[j].answer; 
                         j++;
-                    } else if(i==51 || i==99){
+                    } else if(i==53 || i==101){
 
                     }
                     else{
-                        if(firstSetType == 'accuracy' && i<51 || firstSetType != 'accuracy' && i>51){
+                        if(firstSetType == 'accuracy' && i<53 || firstSetType != 'accuracy' && i>53){
                             configdata[i].content = intermedcontent+fakenewsButton.accuracybuttons;  
                         }
                         else{
@@ -114,8 +112,8 @@
                         }
                     }                                     
                 }    
-        console.log('configdata: ' + JSON.stringify(configdata));
-        for(let i=2; i<=98; i=i+2){
+        //console.log('configdata: ' + JSON.stringify(configdata));
+        for(let i=2; i<=101; i=i+2){
             document.getElementById("divcontainer").innerHTML = configdata[i].content;
         }
         document.getElementById("divcontainer").innerHTML = '';
@@ -140,10 +138,10 @@
             if (state === "SUCCESS") {
                 var name = a.getReturnValue();
                  var language = name['Language__c'];     
-                if (name['Fake_News_Test__c'] == 'Locked' && pageUrl[1] == $A.get("$Label.c.url_me_fakeNewsTest")) {
+                if (name['Fake_News__c'] == 'Locked' && pageUrl[1] == $A.get("$Label.c.url_me_fakeNewsTest")) {
                     component.set('v.showConfirmDialog', true);
                 }
-                else if (name['Fake_News_Test__c'] == 'Completed' && pageUrl[1] == $A.get("$Label.c.url_me_fakeNewsTest")) {
+                else if (name['Fake_News__c'] == 'Completed' && pageUrl[1] == $A.get("$Label.c.url_me_fakeNewsTest")) {
                     component.set('v.showConfirmDialog', true);
                 }
                 else {
@@ -255,7 +253,7 @@
                             
                         }
 
-                       if (currentScreent == 0) {                          
+                       if (currentScreent == 1) {                          
                             var startDateTime = new Date();
                             var gamePlayStatus = "Not-Completed";
                             var screenResolution = {"height" :screenHeight, "width" :screenWidth };                           
@@ -266,7 +264,7 @@
 
                         // end game function is updating the record of participant gameInfo like endDateTime.
                         if ((configdata.length - 1) == currentScreent) {
-                            endGame(gameId, participantGameInfoId);
+                            //endGame(gameId, participantGameInfoId);
                             clearTimeout(intervalTime);
                             return false;
                         }
@@ -362,7 +360,7 @@
                    }
 
                     function gamePlay(e) {
-                        console.log('inside gamePlay');
+                        //console.log('inside gamePlay');
                         let startDurations = configdata[currentScreent - 1].startDuration;
                         let command_value = e.keyCode;
                         if (startDurations == -1) {

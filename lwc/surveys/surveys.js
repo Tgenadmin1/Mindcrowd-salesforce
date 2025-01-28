@@ -55,22 +55,35 @@ export default class surveys extends NavigationMixin(LightningElement) {
     @track macTouch = false;
     @track surveyItems = [];  
     game_name_c =  game_name_c;
+    hideSurvey18 = false;
+    hideSurvey19 = false;
 
     connectedCallback() {
         getCurrentContact()
             .then(result => {
                 if(this.getCookie('macTouch') == 'true'){
                     this.macTouch = true;
-                    console.log('macTouch1 =' + this.macTouch );
+                    //console.log('macTouch1 =' + this.macTouch );
                 }else{
                     this.macTouch = false;
-                    console.log('macTouch2 =' + this.macTouch );
+                    //console.log('macTouch2 =' + this.macTouch );
                 }
                 this.lstcon = result;
+                //console.log('contact: '+JSON.stringify(this.lstcon) );
                 this.error = undefined;
-                const surveyNames = [Health_Medical,COVID,Brain_Disease,SES,FHAD,Women_Health,English,Sleep,ADL,Diet,Perceived_Stress,SWLS,QPAR,Social_Stress,Anxiety,Social_Support,Cancer,Heat];
-                const surveyClasses = ['survey1','survey2','survey3','survey4','survey5','survey6','survey7','survey8','survey9','survey10','survey11','survey12','survey13','survey14','survey15','survey16','survey17','survey18'];
-                const surveyTimes = [survey_time_5_min,survey_time_5_min,survey_time_5_min,survey_time_3_min,survey_time_3_min,survey_time_3_min,survey_time_2_min,survey_time_5_min,survey_time_3_min,survey_time_3_min,survey_time_3_min,survey_time_2_min,survey_time_3_min,survey_time_3_min,survey_time_3_min,survey_time_3_min,survey_time_5_min,survey_time_5_min,];                
+                let surveyNames = [];
+                let surveyClasses = [];
+                let surveyTimes = [];
+                if(this.lstcon.Sex__c == 'Female' && this.lstcon.Gender__c == 'Female'){
+                    surveyNames = [Health_Medical,COVID,Brain_Disease,SES,FHAD,English,Sleep,ADL,Diet,Perceived_Stress,SWLS,QPAR,Social_Stress,Anxiety,Social_Support,Cancer,Women_Health];
+                    surveyClasses = ['survey1','survey2','survey3','survey4','survey5','survey7','survey8','survey9','survey10','survey11','survey12','survey13','survey14','survey15','survey16','survey17','survey6'];
+                    surveyTimes = [survey_time_5_min,survey_time_5_min,survey_time_5_min,survey_time_3_min,survey_time_3_min,survey_time_2_min,survey_time_5_min,survey_time_3_min,survey_time_3_min,survey_time_3_min,survey_time_2_min,survey_time_3_min,survey_time_3_min,survey_time_3_min,survey_time_3_min,survey_time_5_min,survey_time_3_min];
+                }
+                else{
+                    surveyNames = [Health_Medical,COVID,Brain_Disease,SES,FHAD,English,Sleep,ADL,Diet,Perceived_Stress,SWLS,QPAR,Social_Stress,Anxiety,Social_Support,Cancer];
+                    surveyClasses = ['survey1','survey2','survey3','survey4','survey5','survey7','survey8','survey9','survey10','survey11','survey12','survey13','survey14','survey15','survey16','survey17'];
+                    surveyTimes = [survey_time_5_min,survey_time_5_min,survey_time_5_min,survey_time_3_min,survey_time_3_min,survey_time_2_min,survey_time_5_min,survey_time_3_min,survey_time_3_min,survey_time_3_min,survey_time_2_min,survey_time_3_min,survey_time_3_min,survey_time_3_min,survey_time_3_min,survey_time_5_min];
+                }               
                 const surveysOpenArray = [];
                 const surveyLockedArray = [];
                 const surveyCompletedArray = [];
@@ -85,8 +98,8 @@ export default class surveys extends NavigationMixin(LightningElement) {
                        complete: false,
                        lock: false,
                        surveytime: surveyTimes[i],
-                       surveyname: surveyNames[i],                      
-                       classname: 'opened game-tiles '+surveyClasses[i],
+                       surveyname: surveyNames[i],
+                       classname: `opened game-tiles ${surveyClasses[i]} ${i < 15 && this.lstcon.isProject2_Participant__c  ? 'p2' : ''}`,
                        titleclass: i == 4 ? 'title1' : 'title'
                    };
                 surveysOpenArray.push(survey);
@@ -99,7 +112,7 @@ export default class surveys extends NavigationMixin(LightningElement) {
                     lock: false,
                     surveytime: surveyTimes[i],                   
                     surveyname: surveyNames[i],
-                    classname: 'completed game-tiles '+surveyClasses[i],
+                    classname: `${i < 15 && this.lstcon.isProject2_Participant__c ? 'completed1' : 'completed'} game-tiles ${surveyClasses[i]} ${i < 15 && this.lstcon.isProject2_Participant__c ? 'p2' : ''}`,
                     titleclass: i == 4 ? 'title1' : 'title'
                 };
                 surveyCompletedArray.push(survey);
@@ -112,13 +125,13 @@ export default class surveys extends NavigationMixin(LightningElement) {
                         lock: true,
                         surveytime: surveyTimes[i],                    
                         surveyname: surveyNames[i],
-                        classname: 'locked game-tiles '+ surveyClasses[i],
+                        classname: `locked game-tiles ${surveyClasses[i]} ${i < 15 && this.lstcon.isProject2_Participant__c  ? 'p2' : ''}`,
                         titleclass: i == 4 ? 'title1' : 'title'
                     };
                 surveyLockedArray.push(survey);
                 }
                 const finalLockedArray = [];
-                const finalCompletedArray = [];
+                const finalCompletedArray = [];     
 
                 if (this.lstcon.HEALTH_MEDICAL__c == "Opened") {
                     this.surveyItems.push(surveysOpenArray[0]);
@@ -170,136 +183,128 @@ export default class surveys extends NavigationMixin(LightningElement) {
                     finalLockedArray.push(surveyLockedArray[4]);
                 }
 
-                if (this.lstcon.WOMENS_HEALTH__c == "Opened") {
+                if (this.lstcon.SUBJECTIVE_ENGLISH__c == "Opened") {
                     this.surveyItems.push(surveysOpenArray[5]);
                 }
-                else if (this.lstcon.WOMENS_HEALTH__c == "Completed") {
+                else if (this.lstcon.SUBJECTIVE_ENGLISH__c == "Completed") {
                     finalCompletedArray.push(surveyCompletedArray[5]);
                 }
-                else if (this.lstcon.WOMENS_HEALTH__c == "Locked") {
+                else if (this.lstcon.SUBJECTIVE_ENGLISH__c == "Locked") {
                     finalLockedArray.push(surveyLockedArray[5]);
                 }
 
-                if (this.lstcon.SUBJECTIVE_ENGLISH__c == "Opened") {
+                if (this.lstcon.SLEEP__c == "Opened") {
                     this.surveyItems.push(surveysOpenArray[6]);
                 }
-                else if (this.lstcon.SUBJECTIVE_ENGLISH__c == "Completed") {
+                else if (this.lstcon.SLEEP__c == "Completed") {
                     finalCompletedArray.push(surveyCompletedArray[6]);
                 }
-                else if (this.lstcon.SUBJECTIVE_ENGLISH__c == "Locked") {
+                else if (this.lstcon.SLEEP__c == "Locked") {
                     finalLockedArray.push(surveyLockedArray[6]);
                 }
 
-                if (this.lstcon.SLEEP__c == "Opened") {
+                if (this.lstcon.ADL__c == "Opened") {
                     this.surveyItems.push(surveysOpenArray[7]);
                 }
-                else if (this.lstcon.SLEEP__c == "Completed") {
+                else if (this.lstcon.ADL__c == "Completed") {
                     finalCompletedArray.push(surveyCompletedArray[7]);
                 }
-                else if (this.lstcon.SLEEP__c == "Locked") {
+                else if (this.lstcon.ADL__c == "Locked") {
                     finalLockedArray.push(surveyLockedArray[7]);
                 }
 
-                if (this.lstcon.ADL__c == "Opened") {
+                if (this.lstcon.DIET__c== "Opened") {
                     this.surveyItems.push(surveysOpenArray[8]);
                 }
-                else if (this.lstcon.ADL__c == "Completed") {
+                else if (this.lstcon.DIET__c == "Completed") {
                     finalCompletedArray.push(surveyCompletedArray[8]);
                 }
-                else if (this.lstcon.ADL__c == "Locked") {
+                else if (this.lstcon.DIET__c == "Locked") {
                     finalLockedArray.push(surveyLockedArray[8]);
                 }
 
-                if (this.lstcon.DIET__c== "Opened") {
+                if (this.lstcon.PERCEIVED_STRESS__c == "Opened") {
                     this.surveyItems.push(surveysOpenArray[9]);
                 }
-                else if (this.lstcon.DIET__c == "Completed") {
+                else if (this.lstcon.PERCEIVED_STRESS__c == "Completed") {
                     finalCompletedArray.push(surveyCompletedArray[9]);
-                }
-                else if (this.lstcon.DIET__c == "Locked") {
+                }   
+                else if (this.lstcon.PERCEIVED_STRESS__c == "Locked") {
                     finalLockedArray.push(surveyLockedArray[9]);
                 }
 
-                if (this.lstcon.PERCEIVED_STRESS__c == "Opened") {
+                if (this.lstcon.SWLS__c == "Opened") {
                     this.surveyItems.push(surveysOpenArray[10]);
                 }
-                else if (this.lstcon.PERCEIVED_STRESS__c == "Completed") {
+                else if (this.lstcon.SWLS__c == "Completed") {
                     finalCompletedArray.push(surveyCompletedArray[10]);
                 }   
-                else if (this.lstcon.PERCEIVED_STRESS__c == "Locked") {
-                    finalLockedArray.push(surveyLockedArray[10]);
-                }
-
-                if (this.lstcon.SWLS__c == "Opened") {
-                    this.surveyItems.push(surveysOpenArray[11]);
-                }
-                else if (this.lstcon.SWLS__c == "Completed") {
-                    finalCompletedArray.push(surveyCompletedArray[11]);
-                }   
                 else if (this.lstcon.SWLS__c == "Locked") {
-                    finalLockedArray.push(surveyLockedArray[11]);
+                    finalLockedArray.push(surveyLockedArray[10]);
                 }
                 
                 if (this.lstcon.QPAR__c == "Opened") {
-                    this.surveyItems.push(surveysOpenArray[12]);
+                    this.surveyItems.push(surveysOpenArray[11]);
                 } 
                 else if (this.lstcon.QPAR__c == "Completed") {
-                    finalCompletedArray.push(surveyCompletedArray[12]);
+                    finalCompletedArray.push(surveyCompletedArray[11]);
                 } 
                 else if (this.lstcon.QPAR__c == "Locked") {
-                    finalLockedArray.push(surveyLockedArray[12]);
+                    finalLockedArray.push(surveyLockedArray[11]);
                 }
                 
                 if (this.lstcon.SOCIAL_STRESSOR__c == "Opened") {
-                    this.surveyItems.push(surveysOpenArray[13]);            
+                    this.surveyItems.push(surveysOpenArray[12]);            
                 } 
                 else if (this.lstcon.SOCIAL_STRESSOR__c == "Completed") {
-                    finalCompletedArray.push(surveyCompletedArray[13]);
+                    finalCompletedArray.push(surveyCompletedArray[12]);
                 } 
                 else if (this.lstcon.SOCIAL_STRESSOR__c == "Locked") {
-                    finalLockedArray.push(surveyLockedArray[13]);
+                    finalLockedArray.push(surveyLockedArray[12]);
                 }
 
                 if (this.lstcon.ANXIETY__c == "Opened") {
-                    this.surveyItems.push(surveysOpenArray[14]);            
+                    this.surveyItems.push(surveysOpenArray[13]);            
                 } 
                 else if (this.lstcon.ANXIETY__c == "Completed") {
-                    finalCompletedArray.push(surveyCompletedArray[14]);
+                    finalCompletedArray.push(surveyCompletedArray[13]);
                 } 
                 else if (this.lstcon.ANXIETY__c == "Locked") {
-                    finalLockedArray.push(surveyLockedArray[14]);
+                    finalLockedArray.push(surveyLockedArray[13]);
                 }
 
                 if (this.lstcon.SOCIAL_SUPPORT__c == "Opened") {
-                    this.surveyItems.push(surveysOpenArray[15]);            
+                    this.surveyItems.push(surveysOpenArray[14]);            
                 } 
                 else if (this.lstcon.SOCIAL_SUPPORT__c == "Completed") {
-                    finalCompletedArray.push(surveyCompletedArray[15]);
+                    finalCompletedArray.push(surveyCompletedArray[14]);
                 } 
                 else if (this.lstcon.SOCIAL_SUPPORT__c == "Locked") {
+                    finalLockedArray.push(surveyLockedArray[14]);
+                }
+
+                if(this.lstcon.CANCER__c == "Opened") {
+                    this.surveyItems.push(surveysOpenArray[15]);            
+                } 
+                else if (this.lstcon.CANCER__c == "Completed") {
+                    finalCompletedArray.push(surveyCompletedArray[15]);
+                } 
+                else if (this.lstcon.CANCER__c == "Locked") {
                     finalLockedArray.push(surveyLockedArray[15]);
                 }
 
-				if (this.lstcon.CANCER__c == "Opened") {
-                    this.surveyItems.push(surveysOpenArray[16]);            
-                } 
-                else if (this.lstcon.CANCER__c == "Completed") {
-                    finalCompletedArray.push(surveyCompletedArray[16]);
-                } 
-                else if (this.lstcon.CANCER__c == "Locked") {
-                    finalLockedArray.push(surveyLockedArray[16]);
+                if(this.lstcon.Sex__c == 'Female' && this.lstcon.Gender__c == 'Female'){
+                    this.hideSurvey19 = true;
+                    if (this.lstcon.WOMENS_HEALTH__c == "Opened") {
+                        this.surveyItems.push(surveysOpenArray[16]);
+                    }
+                    else if (this.lstcon.WOMENS_HEALTH__c == "Completed") {
+                        finalCompletedArray.push(surveyCompletedArray[16]);
+                    }
+                    else if (this.lstcon.WOMENS_HEALTH__c == "Locked") {
+                        finalLockedArray.push(surveyLockedArray[16]);
+                    }
                 }
-
-				if (this.lstcon.HEAT__c == "Opened") {
-                    this.surveyItems.push(surveysOpenArray[17]);            
-                } 
-                else if (this.lstcon.HEAT__c == "Completed") {
-                    finalCompletedArray.push(surveyCompletedArray[17]);
-                } 
-                else if (this.lstcon.HEAT__c == "Locked") {
-                    finalLockedArray.push(surveyLockedArray[17]);
-                }
-
 				const surveyItemsSorted = this.sortByOrder(this.surveyItems, 'surveyname', elementPositionMap);
                 const finalCompletedArraySorted = this.sortByOrder(finalCompletedArray, 'surveyname', elementPositionMap);
                 const finalLockedArraySorted = this.sortByOrder(finalLockedArray, 'surveyname', elementPositionMap);

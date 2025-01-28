@@ -5,7 +5,10 @@
     <excludeButtons>Clone</excludeButtons>
     <excludeButtons>ContactHierarchy</excludeButtons>
     <excludeButtons>CreateCallList</excludeButtons>
+    <excludeButtons>DataDotComClean</excludeButtons>
+    <excludeButtons>OpenSlackRecordChannel</excludeButtons>
     <excludeButtons>RecordShareHierarchy</excludeButtons>
+    <excludeButtons>RequestUseSfdc</excludeButtons>
     <excludeButtons>Share</excludeButtons>
     <excludeButtons>StartOutboundConversation</excludeButtons>
     <excludeButtons>Submit</excludeButtons>
@@ -141,6 +144,14 @@
             <layoutItems>
                 <behavior>Edit</behavior>
                 <field>Tremendous_Award_Sent__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Enrolled_in_Paid_Campaign_ECog_12__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Tremendous_Award_Sent_ECog_12__c</field>
             </layoutItems>
         </layoutColumns>
         <style>TwoColumnsTopToBottom</style>
@@ -297,10 +308,6 @@
                 <behavior>Edit</behavior>
                 <field>Digits__c</field>
             </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
-                <field>Tell_Me_More__c</field>
-            </layoutItems>
         </layoutColumns>
         <layoutColumns>
             <layoutItems>
@@ -330,6 +337,10 @@
             <layoutItems>
                 <behavior>Edit</behavior>
                 <field>Tell_Me__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Tell_Me_More__c</field>
             </layoutItems>
         </layoutColumns>
         <style>TwoColumnsLeftToRight</style>
@@ -375,6 +386,10 @@
             <layoutItems>
                 <behavior>Edit</behavior>
                 <field>CANCER__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>ECog_12__c</field>
             </layoutItems>
         </layoutColumns>
         <layoutColumns>

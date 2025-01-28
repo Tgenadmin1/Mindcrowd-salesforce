@@ -45,8 +45,10 @@ public without sharing class ParticipantResultsControllerES
                                               No_of_Question_Attempted__c,Total_Reaction_Time__c, User_Device__c,Id,CreatedDate
                                               FROM Participant_Game_Info__c 
                                               WHERE Contact_Name__c =: contactId  
-                                              AND Game_Name__r.Name =:gameName                                              
+                                              AND Game_Name__r.Name =:gameName
+                                              AND Game_Play_Status__c = 'Completed'
                                               ORDER BY CreatedDate DESC LIMIT 1];
+        
         if(pgis.size()>0){
             for(Participant_Game_Info__c pgi : pgis){
                 if(pgi.CreatedDate.Date() >= Date.Today()-1){
@@ -96,8 +98,13 @@ public without sharing class ParticipantResultsControllerES
         Decimal edu_att = objCon.Education_Attainment__c;
         edu_att = edu_att == null ? 1 : edu_att;
         String sex = objCon.Sex__c;
+        if(gameName == 'Flanker'){
+            mapPlyAverageValuesData.put ('MaxValue',50);
+        }
+        else{
+            mapPlyAverageValuesData.put ('MaxValue', Integer.valueOf([SELECT Max_Score__c FROM Game_Detail__c where Name=:gameName LIMIT 1].Max_Score__c) );
+        }
         
-        mapPlyAverageValuesData.put ('MaxValue', Integer.valueOf([SELECT Max_Score__c FROM Game_Detail__c where Name=:gameName LIMIT 1].Max_Score__c) );
         List<Participant_Game_Info__c> peopleLikeYouPGIList = [SELECT Count_Of_Total_Reaction_Time__c ,Count_Of_No_of_Question_Attempted__c,Count_Of_No_Of_Correct_Answered__c
                                            FROM Participant_Game_Info__c 
                                            WHERE Contact_Name__r.Age__c > 0
@@ -154,7 +161,7 @@ public without sharing class ParticipantResultsControllerES
         		}
         }
         if(peopleLikeYouPGIList !=null && peopleLikeYouPGIList.size() >= 25){ 
-            if(gameName == 'DLTRS' || gameName == 'Deary Simple And Complex Reaction Time' || gameName == 'Flanker'){
+            if(gameName == 'DLTRS' || gameName == 'Deary Simple And Complex Reaction Time'){
                         Decimal sumReationTime = 0;
                         List<Decimal> reacttimeList = new List<Decimal>();
                         for (Participant_Game_Info__c peopleLikeYouPGI : peopleLikeYouPGIList) {
@@ -206,21 +213,20 @@ public without sharing class ParticipantResultsControllerES
             WHERE Game_Name__r.Name =:gameName 
             AND Sex__c =:objCon.Sex__c AND Education__c>=: edu_att
             AND Age__c =:pluage Order BY Education__c ASC LIMIT 1];
-            for(People_Like_You_Data__c peopleLikeYouData : objLikeYouList){
-                if(gameName=='Flanker'){
-                	mapPlyAverageValuesData.put ('LowAverage', 564);
-                	mapPlyAverageValuesData.put ('HighAverage', 963);    
-                }
-                else
-                {
+            for(People_Like_You_Data__c peopleLikeYouData : objLikeYouList){        
                     mapPlyAverageValuesData.put ('LowAverage', Integer.valueOf(peopleLikeYouData.Low_Average__c));
-                    mapPlyAverageValuesData.put ('HighAverage', Integer.valueOf(peopleLikeYouData.High_Average__c)); 
-                }  
-            } 
+                    mapPlyAverageValuesData.put ('HighAverage', Integer.valueOf(peopleLikeYouData.High_Average__c));
+               } 
            }
       List<Participant_Dashboard__c> partDashboard = [SELECT Data_Value__c FROM Participant_Dashboard__c WHERE Game_Detail__r.Name=:gameName LIMIT 1];
             if(partDashboard !=null && partDashboard.size()>0){
-            	mapOtherData.put('Overall Average', Integer.valueOf(partDashboard[0].Data_Value__c));
+                if(gameName == 'Flanker'){
+                    mapOtherData.put('Overall Average', 48);
+                }
+                else{
+                    mapOtherData.put('Overall Average', Integer.valueOf(partDashboard[0].Data_Value__c));
+                }
+            	
             }
             else{
                 mapOtherData.put('Overall Average', 0);

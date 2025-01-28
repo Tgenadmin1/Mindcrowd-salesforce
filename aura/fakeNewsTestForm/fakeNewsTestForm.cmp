@@ -355,7 +355,7 @@
     <div class="input-container" style="position: relative;">
         <div style="display: flex; align-items: center;">
             <lightning:input type="number" label="" min="0" value="{!v.ballCost}" placeholder="{!$Label.c.catchment_placeholder}" onchange="{!c.handleInputChange}" name="ballcost" />
-            <span class="input-label">{!$Label.c.FakeNewsTestForm_cents}</span>
+            <span class="input-label">{!$Label.c.FakeNewsTestForm_years}</span>
         </div>
     </div>
     <aura:if isTrue="{!not(empty(v.errors.ballcost))}">
@@ -369,7 +369,7 @@
     <div class="input-container" style="position: relative;">
         <div style="display: flex; align-items: center;">
             <lightning:input type="number" label="" min="0" value="{!v.widget}" placeholder="{!$Label.c.catchment_placeholder}" onchange="{!c.handleInputChange}" name="widget" />
-            <span class="input-label1">{!$Label.c.FakeNewsTestForm_minutes}</span>
+            <span class="input-label1">{!$Label.c.FakeNewsTestForm_seconds}</span>
             
         </div>
     </div>

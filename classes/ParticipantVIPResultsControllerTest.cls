@@ -19,7 +19,6 @@ public class ParticipantVIPResultsControllerTest
         c.Sex__c = 'Male';
         c.Age__c = 34;
         c.Highest_level_of_education_completed__c = 'High School Diploma (Baccalaureate)';
-        c.Language__c='English';
         Insert c;
         
         Contact c1 = new Contact();
@@ -29,7 +28,6 @@ public class ParticipantVIPResultsControllerTest
         c1.Sex__c = 'Male';
         c1.Age__c = 15;
         c1.Highest_level_of_education_completed__c = 'High School Diploma (Baccalaureate)';
-        c1.Language__c='English';
         Insert c1;
         
         Contact c2 = new Contact();
@@ -39,7 +37,6 @@ public class ParticipantVIPResultsControllerTest
         c2.Sex__c = 'Male';
         c2.Age__c = 95;
         c2.Highest_level_of_education_completed__c = 'High School Diploma (Baccalaureate)';
-        c2.Language__c='English';
         Insert c2;
         
           
@@ -175,7 +172,7 @@ public class ParticipantVIPResultsControllerTest
     {     
         User tempUser = [Select Id,ContactId From User Where Username Like '%sfdc%' limit 1];
         Id contId = tempUser.ContactId;
-        List<String> gameNames = new List<String>{'Face-Name Associates','Flanker','Keep Track','Object Discrimination','Object Spatial','Object Temporal','Deary Simple And Complex Reaction Time','Object Recognition And Similarity','Letter-Number Sequencing','Verbal Paired Associates'};
+        List<String> gameNames = new List<String>{'Face-Name Associates','Flanker','Keep Track','Object Discrimination','Object Spatial','Object Temporal','Deary Simple And Complex Reaction Time','Object Recognition And Similarity','Letter-Number Sequencing','Verbal Paired Associates','Digits','Fake News','This & That'};
 		List<Game_Detail__c> games = new List<Game_Detail__c>();
 		List<People_Like_You_Data__c> plys = new List<People_Like_You_Data__c>();
 		List<Participant_Game_Info__c> pgis = new List<Participant_Game_Info__c>();
@@ -214,40 +211,12 @@ public class ParticipantVIPResultsControllerTest
                 pgi.Count_Of_No_Of_Correct_Answered__c = 20;
                 pgi.Count_Of_No_of_Question_Attempted__c =30 ;
                 pgi.Count_Of_Total_Reaction_Time__c =1000 ;
-                pgi.CreatedDate = Date.today()-91;
                 pgis.add(pgi);
             }
 
 		}
         insert plys; 
 		insert pgis; 
-        for(Participant_Game_Info__c pgi : [SELECT Id, CreatedDate,Game_Name__r.Name  from Participant_Game_Info__c ] ){
-            if(pgi.Game_Name__r.Name == 'Flanker'){
-                Test.setCreatedDate(pgi.Id,DateTime.newInstance(2023,04,24));
-            }
-            else if(pgi.Game_Name__r.Name == 'Object Discrimination'){
-                Test.setCreatedDate(pgi.Id, DateTime.newInstance(2023,01,22));
-            }
-            else {
-                Test.setCreatedDate(pgi.Id, DateTime.newInstance(2022,07,24));
-            }
-                   pgi.Count_Of_No_Of_Correct_Answered__c = 20;
-                pgi.Count_Of_No_of_Question_Attempted__c =30 ;
-                pgi.Count_Of_Total_Reaction_Time__c =1000 ;
-            
-        }
-                     /*System.debug([Select id, Game_Name__r.Name,Contact_Name__r.Id, Contact_Name__c, Game_Name__c,createddate
-										FROM Participant_Game_Info__c 
-										WHERE
-										Game_Name__r.Name IN ('Flanker')												
-										AND CreatedDate >= N_DAYS_AGO:91
-													AND Count_Of_No_Of_Correct_Answered__c != null
-                                                  	AND Count_Of_No_of_Question_Attempted__c != null
-                                                  	AND Count_Of_Total_Reaction_Time__c != null
-                                                  	AND Count_Of_No_Of_Correct_Answered__c >0
-                                                  	AND Count_Of_No_of_Question_Attempted__c >0
-                                                  	AND Count_Of_Total_Reaction_Time__c >0
-                                                    AND Contact_Name__r.Language__c='English'][0].createddate);*/
         for(Game_Detail__c game: [select Id from Game_Detail__c where name in  : gameNames] )	
 		{
 			Participant_Game_Info__c pgi = new Participant_Game_Info__c();
@@ -273,14 +242,78 @@ public class ParticipantVIPResultsControllerTest
 			res1.Right_Answer__c = 'Test';
 			pgrs.add(res1);
 		}
-			insert pgrs;   
+			insert pgrs;       
+        
+        // Create a list of contact IDs for use in creating Bean_Game__c instances
+List<Id> contactIds = new List<Id> {contId };
+
+// Create a list to hold Bean_Game__c instances
+List<Bean_Game__c> beans = new List<Bean_Game__c>();
+
+// Define exercise time variables
+String rightHandTime = '1:40';
+String leftHandTime = '2:40';
+
+// Loop through the list of contact IDs to create Bean_Game__c instances
+for (Id contactId : contactIds) {
+    // Create 5 instances per contactId
+    for (Integer i = 0; i < 5; i++) {
+        Bean_Game__c bean = new Bean_Game__c(
+            RightHand_1_ExerciseTime__c = rightHandTime,
+            RightHand_2_ExerciseTime__c = rightHandTime,
+            RightHand_3_ExerciseTime__c = rightHandTime,
+            RightHand_4_ExerciseTime__c = rightHandTime,
+            LeftHand_1_ExerciseTime__c = leftHandTime,
+            LeftHand_2_ExerciseTime__c = leftHandTime,
+            LeftHand_3_ExerciseTime__c = leftHandTime,
+            LeftHand_4_ExerciseTime__c = leftHandTime,
+            Contact__c = contactId
+        );
+        beans.add(bean);
+    }
+}
+
+// Insert all Bean_Game__c instances in a single operation
+insert beans;
+
+// Create a list to hold Participant_Dashboard__c instances
+List<Participant_Dashboard__c> dashboards = new List<Participant_Dashboard__c>();
+Game_Detail__c beangame = new Game_Detail__c();
+        beangame.Name = 'Bean Game';
+        insert beangame;
+// Define common properties for dashboards
+Integer dataValue = 20;
+String dataCategory = 'Other';
+
+// Create instances of Participant_Dashboard__c
+Participant_Dashboard__c objDashboard1 = new Participant_Dashboard__c(
+    Data_Value__c = dataValue,
+    Game_Detail__c = beangame.id,
+    Data_Category__c = dataCategory,
+    Data_Name__c = 'Overall Average Right Hand'
+);
+dashboards.add(objDashboard1);
+
+Participant_Dashboard__c objDashboard2 = new Participant_Dashboard__c(
+    Data_Value__c = dataValue,
+    Game_Detail__c = beangame.id,
+    Data_Category__c = dataCategory,
+    Data_Name__c = 'Overall Average Left Hand'
+);
+dashboards.add(objDashboard2);
+
+// Insert all Participant_Dashboard__c instances in a single operation
+insert dashboards;
+
         System.runAs(tempUser)
         {
             LongitudinalGraphController.getGraphdData();
             ParticipantVIPResultsController.getDashboardDataForloggedInUser('Flanker');
             ParticipantVIPResultsController.getDashboardDataForloggedInUser('Keep Track');
-            ParticipantResultsController.getDashboardDataForloggedInUser('Flanker');
-            ParticipantResultsController.getDashboardDataForloggedInUser('Keep Track'); 
+            //ParticipantResultsController.getDashboardDataForloggedInUser('Fake News');
+            //ParticipantResultsController.getDashboardDataForloggedInUser('Keep Track');
+            ParticipantVIPResultsController.getDashboardDataBeanGame('left');
+            ParticipantVIPResultsController.getDashboardDataBeanGame('right');
         }       
     }
 }

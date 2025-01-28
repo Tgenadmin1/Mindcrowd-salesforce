@@ -57,6 +57,14 @@
         <name>Banner_image_1</name>
     </customLabels>
     <customLabels>
+        <label><!-- BeanGame Left Hand --></label>
+        <name>BeanGame_Left_Hand</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- BeanGame Right Hand --></label>
+        <name>BeanGame_Right_Hand</name>
+    </customLabels>
+    <customLabels>
         <label><!-- Bean game intermediate --></label>
         <name>Bean_game_intermediate</name>
     </customLabels>
@@ -5061,6 +5069,18 @@
         <name>scientific_game_CamelandCactus</name>
     </customLabels>
     <customLabels>
+        <label><!-- scientific_game_Tell_me --></label>
+        <name>scientific_game_Tell_me</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- scientific_game_Tell_me_more --></label>
+        <name>scientific_game_Tell_me_more</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- scientific_game_This &amp; That --></label>
+        <name>scientific_game_This_That</name>
+    </customLabels>
+    <customLabels>
         <label><!-- scientific_game_bean --></label>
         <name>scientific_game_bean</name>
     </customLabels>
@@ -5147,6 +5167,18 @@
     <customLabels>
         <label><!-- speechTask_config_url --></label>
         <name>speechTask_config_url</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- speechTask_error_label --></label>
+        <name>speechTask_error_label</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- speechTask_label_1 --></label>
+        <name>speechTask_label_1</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- speechTask_label_2 --></label>
+        <name>speechTask_label_2</name>
     </customLabels>
     <customLabels>
         <label><!-- stack image --></label>
@@ -6095,6 +6127,10 @@
     <flowDefinitions>
         <flows/>
         <fullName>Cancer_Survey</fullName>
+    </flowDefinitions>
+    <flowDefinitions>
+        <flows/>
+        <fullName>Contact_Study_Update</fullName>
     </flowDefinitions>
     <flowDefinitions>
         <flows/>

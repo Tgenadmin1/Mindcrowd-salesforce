@@ -4945,7 +4945,7 @@ p {
 .fake-news-ul {
     justify-content: center;
     margin: auto;
-    margin-top: 16px;
+    margin-top: 15px;
 }
 
 .keep-track-ul.tow-buttons,
@@ -5014,7 +5014,7 @@ p {
 }
 
 .fake-news-ul li .slds-button {
-    border-radius: 3px !important;
+    border-radius: 2px !important;
     box-shadow: rgb(0 0 0 / 30%) 0px 11px 12px -7px;
     color: #163248 !important;
     background-color: #fff !important;
@@ -6272,11 +6272,11 @@ div.title .n-g-box {
 .comm-page-custom-keeptrack,
 .comm-page-custom-me-objects-temporal,
 .comm-page-custom-me-objects-spatial,
-.comm-page-custom-me-speech-tasks,
-.comm-page-custom-me-speech-task-tellme-more,
-.comm-page-custom-news-task,
-.comm-page-custom-me-digitsymbol,
-.comm-page-custom-me-cameland-cactus {
+.comm-page-custom-me-tell-me,
+.comm-page-custom-me-tell-me-more,
+.comm-page-custom-me-fakenews,
+.comm-page-custom-me-digits,
+.comm-page-custom-me-this-and-that {
     padding-top: 46px;
 }
 
@@ -6288,11 +6288,11 @@ div.title .n-g-box {
 .comm-page-custom-facenamegame .slds-builder-header_container,
 .comm-page-custom-numberletter .slds-builder-header_container,
 .comm-page-custom-keeptrack .slds-builder-header_container,
-.comm-page-custom-news-task .slds-builder-header_container,
-.comm-page-custom-me-speech-tasks .slds-builder-header_container,
-.comm-page-custom-me-speech-task-tellme-more .slds-builder-header_container,
-.comm-page-custom-me-digitsymbol .slds-builder-header_container,
-.comm-page-custom-me-cameland-cactus .slds-builder-header_container {
+.comm-page-custom-me-fakenews .slds-builder-header_container,
+.comm-page-custom-me-tell-me .slds-builder-header_container,
+.comm-page-custom-me-tell-me-more .slds-builder-header_container,
+.comm-page-custom-me-digits .slds-builder-header_container,
+.comm-page-custom-me-this-and-that .slds-builder-header_container {
     display: none;
     padding-top: 0;
 }
@@ -6307,11 +6307,11 @@ div.title .n-g-box {
 .comm-page-custom-keeptrack .main-content-inner,
 .comm-page-custom-me-objects-temporal .main-content-inner,
 .comm-page-custom-me-objects-spatial .main-content-inner,
-.comm-page-custom-me-speech-tasks .main-content-inner,
-.comm-page-custom-me-speech-task-tellme-more .main-content-inner,
-.comm-page-custom-news-task .main-content-inner,
-.comm-page-custom-me-digitsymbol .main-content-inner,
-.comm-page-custom-me-cameland-cactus .main-content-inner  {
+.comm-page-custom-me-tell-me .main-content-inner,
+.comm-page-custom-me-tell-me-more .main-content-inner,
+.comm-page-custom-me-fakenews .main-content-inner,
+.comm-page-custom-me-digits .main-content-inner,
+.comm-page-custom-me-this-and-that .main-content-inner  {
     min-height: 90vh;
     width: auto;
 }
@@ -7437,10 +7437,6 @@ c-donate .dark-blue-btn:hover {
         width: 220px !important;
     }
 	
-	.camelImg {
-        width: 150px !important;
-        height: 100px !important;
-    }
     .camelBtn {
         margin-right: 20px;
     }
@@ -7558,7 +7554,7 @@ c-donate .dark-blue-btn:hover {
         min-width: 100%;
         text-align: center;
         display: inline-block;
-        font-size: 20px !important;
+        font-size: 18px !important;
         padding: 15px 5px !important;
     }
 	
@@ -7978,11 +7974,11 @@ c-donate .dark-blue-btn:hover {
     .comm-page-custom-keeptrack .main-content-inner,
     .comm-page-custom-me-objects-temporal .main-content-inner,
     .comm-page-custom-me-objects-spatial .main-content-inner,
-	.comm-page-custom-me-speech-tasks .main-content-inner,
-	.comm-page-custom-me-speech-task-tellme-more .main-content-inner,
-	.comm-page-custom-news-task .main-content-inner,
-	.comm-page-custom-me-digitsymbol .main-content-inner,
-	.comm-page-custom-me-cameland-cactus .main-content-inner	{
+	.comm-page-custom-me-tell-me .main-content-inner,
+	.comm-page-custom-me-tell-me-more .main-content-inner,
+	.comm-page-custom-me-fakenews .main-content-inner,
+	.comm-page-custom-me-digits .main-content-inner,
+	.comm-page-custom-me-this-and-that .main-content-inner	{
         min-height: 82vh;
     }
 
@@ -9391,7 +9387,7 @@ c-donate .dark-blue-btn:hover {
         text-align: center;
         float: none;
         justify-content: center;
-        margin-bottom: 10px;
+        margin-bottom: 3px;
     }
 
     .mainCrowd-outer-box {
@@ -9882,11 +9878,11 @@ c-donate .dark-blue-btn:hover {
     .comm-page-custom-me-objects-temporal .main-content-inner,
     .comm-page-custom-me-objects-spatial .main-content-inner,
     .comm-page-custom-me-objects-temporal .main-content-inner,
-    .comm-page-custom-me-speech-tasks .main-content-inner,
-	.comm-page-custom-me-speech-task-tellme-more .main-content-inner,
-    .comm-page-custom-news-task .main-content-inner,
-	.comm-page-custom-me-digitsymbol .main-content-inner	,
-	.comm-page-custom-me-cameland-cactus .main-content-inner		{
+    .comm-page-custom-me-tell-me .main-content-inner,
+	.comm-page-custom-me-tell-me-more .main-content-inner,
+    .comm-page-custom-me-fakenews .main-content-inner,
+	.comm-page-custom-me-digits .main-content-inner	,
+	.comm-page-custom-me-this-and-that .main-content-inner		{
         min-height: 90vh;
     }
 }
@@ -9917,11 +9913,11 @@ c-donate .dark-blue-btn:hover {
     .comm-page-custom-keeptrack .main-content-inner,
     .comm-page-custom-me-objects-temporal .main-content-inner,
     .comm-page-custom-me-objects-spatial .main-content-inner,
-	.comm-page-custom-me-speech-tasks .main-content-inner,
-	.comm-page-custom-me-speech-task-tellme-more .main-content-inner,
-	.comm-page-custom-news-task .main-content-inner,
-	.comm-page-custom-me-digitsymbol .main-content-inner,
-	.comm-page-custom-me-cameland-cactus .main-content-inner
+	.comm-page-custom-me-tell-me .main-content-inner,
+	.comm-page-custom-me-tell-me-more .main-content-inner,
+	.comm-page-custom-me-fakenews .main-content-inner,
+	.comm-page-custom-me-digits .main-content-inner,
+	.comm-page-custom-me-this-and-that .main-content-inner
 	{
         min-height: 72vh;
     }
@@ -10302,20 +10298,6 @@ body {
     display: inline-block;
 }
 
-.camelImgtop {
-        width: 200px !important;
-        height: 134px !important;
-    }
-	
-	.wine {
-        width: 160px !important;
-        height: 200px !important;
-    }
-.camelImgscrewdriver {
-	width: 300px !important;
-	height: 200px !important;
-}
-
 @media (max-width: 600px) {
 	.camel-cactus-ul li{	
 		padding-right: 15px;
@@ -10335,4 +10317,14 @@ body {
 		display: inline-block;
 		vertical-align: middle;
 	}
+}
+
+@media (max-width: 600px) {
+    .fake-news-ul .slds-button {
+        min-width: 100%;
+        text-align: center;
+        display: inline-block;
+        font-size: 18px !important;
+        padding: 7px 4px !important;
+    }
 }

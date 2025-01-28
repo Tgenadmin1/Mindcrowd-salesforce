@@ -1,0 +1,5 @@
+.spinner-container {
+    display: inline-block; /* Makes the spinner sit inline with the button */
+    margin-left: 10px; /* Adds a little space between the button and the spinner */
+    vertical-align: middle; /* Vertically aligns the spinner with the button */
+  }
